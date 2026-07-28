@@ -307,6 +307,18 @@ section.reveal>.wrap{position:relative;}
 .pd{color:var(--paper70);font-size:clamp(14px,1.5vw,17px);max-width:42ch;}
 .pm{width:100%;display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin-top:8px;}
 @media(min-width:820px){.proj{grid-template-columns:1.5fr 1fr;gap:clamp(30px,4vw,64px);}.proj:nth-child(even) .media{order:2;}}.footseal{width:76px;height:76px;color:var(--accent);flex:none;}.footseal text{font-family:var(--mono);font-size:8.4px;letter-spacing:1.2px;fill:currentColor;}.footseal .stb{font-size:7px;letter-spacing:2.2px;}
+
+/* offerings rate card */
+.offers .offer{grid-template-columns:34px 1fr auto;align-items:center;gap:clamp(16px,3vw,50px);}
+.offer .oi{font-family:var(--mono);font-size:12px;color:var(--dim);align-self:center;}
+.offer .ob{min-width:0;}
+.offer .on{font-size:clamp(22px,3vw,40px);font-variation-settings:"wght" 600,"opsz" 32;line-height:1;}
+.offer .os{margin-top:9px;max-width:52ch;}
+.offer .op{font-family:var(--raveo);font-variation-settings:"wght" 440,"opsz" 32;font-size:clamp(24px,3vw,42px);letter-spacing:-.02em;color:var(--paper);line-height:1;text-align:right;}
+.offer .op small{font-family:var(--mono);font-size:10.5px;color:var(--grey);letter-spacing:.06em;display:block;margin-top:8px;font-variant-numeric:normal;text-transform:uppercase;}
+@media(max-width:640px){.offers .offer{grid-template-columns:26px 1fr;}.offer .op{grid-column:1/-1;text-align:left;margin-top:8px;}}
+.jall{display:inline-block;margin-top:clamp(28px,4vw,44px);font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);border-bottom:1px solid var(--accent);padding-bottom:5px;transition:color .2s;}
+.jall:hover{color:var(--paper);}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -365,11 +377,11 @@ section.reveal>.wrap{position:relative;}
     <div class="reel">
       <a class="proj" href="work-granite.html">
         <div class="media" data-reel><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src=""></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Reel 01 &middot; Loop</span><span class="mgo">View case &rarr;</span></div>
-        <div class="pinfo"><div class="pn">Granite<em>.</em></div><div class="pd">A native strength coach that rewrites your training every week.</div><div class="pm"><span>iOS &middot; SwiftUI</span><span>On-device AI</span><span>2026</span></div></div>
+        <div class="pinfo"><div class="pn" style="view-transition-name:t-granite">Granite<em>.</em></div><div class="pd">A native strength coach that rewrites your training every week.</div><div class="pm"><span>iOS &middot; SwiftUI</span><span>On-device AI</span><span>2026</span></div></div>
       </a>
       <a class="proj" href="work-frame.html">
         <div class="media" data-reel><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src=""></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Reel 02 &middot; Loop</span><span class="mgo">View case &rarr;</span></div>
-        <div class="pinfo"><div class="pn">Frame<em>.</em></div><div class="pd">A BJJ training journal built against the forgetting curve.</div><div class="pm"><span>iOS &middot; Native</span><span>Belt-accent identity</span><span>2026</span></div></div>
+        <div class="pinfo"><div class="pn" style="view-transition-name:t-frame">Frame<em>.</em></div><div class="pd">A BJJ training journal built against the forgetting curve.</div><div class="pm"><span>iOS &middot; Native</span><span>Belt-accent identity</span><span>2026</span></div></div>
       </a>
       <a class="proj" href="#contact" aria-label="Brand engine (in progress)">
         <div class="media" data-reel><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src=""></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Reel 03 &middot; In progress</span><span class="mgo">Enquire &rarr;</span></div>
@@ -387,11 +399,11 @@ section.reveal>.wrap{position:relative;}
     <h2 class="h2" style="--c:var(--paper)">Service offerings</h2>
     <p class="lead">You're not buying hours. You're buying the shipped result &mdash; in weeks, not quarters. Fixed scope, fixed price.</p>
     <div class="offers">
-      <div class="offer"><div class="on">The Design Block</div><div class="os"><span class="sub">Design shipped in a week.</span>Brand to interface to the technical surfaces most designers can't touch.</div><div class="op">&pound;<span data-count="5000">5,000</span> / week</div></div>
-      <div class="offer"><div class="on">The Rebuild</div><div class="os"><span class="sub">Your app, rebuilt for the Liquid Glass era.</span>One person, whole job, fixed price.</div><div class="op">&pound;<span data-count="25000">25,000</span> / 4 wks</div></div>
-      <div class="offer"><div class="on">The AI Feature</div><div class="os"><span class="sub">One native AI feature, in production.</span>Personalised loops, model orchestration &mdash; design and build included.</div><div class="op">&pound;<span data-count="30000">30,000</span> / 4 wks</div></div>
-      <div class="offer"><div class="on">The Build</div><div class="os"><span class="sub">A live product in your users' hands.</span>A complete native product, taken from nothing to live.</div><div class="op">from &pound;<span data-count="50000">50,000</span></div></div>
-      <div class="offer"><div class="on">The Partnership</div><div class="os"><span class="sub">Embedded, not engaged.</span>A senior partner in the room, two to three days a week.</div><div class="op">from &pound;<span data-count="12000">12,000</span> / mo</div></div>
+      <div class="offer"><div class="oi">01</div><div class="ob"><div class="on">The Design Block</div><div class="os"><span class="sub">Design shipped in a week.</span>Brand to interface to the technical surfaces most designers can't touch.</div></div><div class="op">&pound;<span data-count="5000">5,000</span><small>per week</small></div></div>
+      <div class="offer"><div class="oi">02</div><div class="ob"><div class="on">The Rebuild</div><div class="os"><span class="sub">Your app, rebuilt for the Liquid Glass era.</span>One person, whole job, fixed price.</div></div><div class="op">&pound;<span data-count="25000">25,000</span><small>/ 4 weeks</small></div></div>
+      <div class="offer"><div class="oi">03</div><div class="ob"><div class="on">The AI Feature</div><div class="os"><span class="sub">One native AI feature, in production.</span>Personalised loops, model orchestration &mdash; design and build included.</div></div><div class="op">&pound;<span data-count="30000">30,000</span><small>/ 4 weeks</small></div></div>
+      <div class="offer"><div class="oi">04</div><div class="ob"><div class="on">The Build</div><div class="os"><span class="sub">A live product in your users' hands.</span>A complete native product, taken from nothing to live.</div></div><div class="op">&pound;<span data-count="50000">50,000</span><small>from &middot; complete build</small></div></div>
+      <div class="offer"><div class="oi">05</div><div class="ob"><div class="on">The Partnership</div><div class="os"><span class="sub">Embedded, not engaged.</span>A senior partner in the room, two to three days a week.</div></div><div class="op">&pound;<span data-count="12000">12,000</span><small>from &middot; per month</small></div></div>
     </div>
   </div></section>
 
@@ -428,6 +440,7 @@ section.reveal>.wrap{position:relative;}
       <a href="journal-building.html"><span class="jt">Building cyber:cyber</span><span class="jk">Article</span><span class="jd">May 10, 2026</span></a>
       <a href="journal-why.html"><span class="jt">Why cyber:cyber exists</span><span class="jk">Article</span><span class="jd">Mar 1, 2026</span></a>
     </div>
+    <a class="jall" href="journal.html">All notes &rarr;</a>
   </div></section>
 
   <section id="contact" class="reveal cta"><div class="wrap">
