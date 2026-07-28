@@ -282,6 +282,30 @@ section.reveal>.wrap{position:relative;}
 }
 .word.glitch{animation:glitch .42s steps(2,end) 1;}
 @media(prefers-reduced-motion:reduce){.vf i{animation:none;opacity:1;}.word.glitch{animation:none;}}
+
+/* --- video-led work reel --- */
+.statl{transition:color .2s;position:relative;}
+.statl:hover{color:var(--paper);}
+.reel{margin-top:clamp(34px,5vw,64px);display:flex;flex-direction:column;gap:clamp(30px,5vw,80px);}
+.proj{display:grid;grid-template-columns:1fr;gap:clamp(16px,2vw,26px);align-items:center;}
+.media{position:relative;aspect-ratio:16/10;background:#0e0d12;border:1px solid var(--line);overflow:hidden;}
+.media .rv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s;}
+.media.playing .rv{opacity:1;}
+.media .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:46px 46px;background-position:center;}
+.media .pp{width:62px;height:62px;border:1px solid var(--paper45);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--paper);font-size:15px;padding-left:3px;transition:transform .35s var(--e1),border-color .3s;}
+.proj:hover .pp{transform:scale(1.14);border-color:var(--accent);}
+.media .mtag{position:absolute;top:15px;left:15px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--paper45);}
+.media .mgo{position:absolute;bottom:15px;right:15px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--paper);opacity:0;transform:translateY(6px);transition:.3s var(--e1);}
+.proj:hover .mgo{opacity:1;transform:none;}
+.media::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px transparent;transition:box-shadow .3s;pointer-events:none;}
+.proj:hover .media::after{box-shadow:inset 0 0 0 1px var(--accent);}
+.pinfo{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 22px;}
+.pn{font-family:var(--raveo);font-variation-settings:"wght" 640,"opsz" 32;font-size:clamp(30px,4.6vw,68px);letter-spacing:-.025em;line-height:.98;transition:font-variation-settings .3s var(--e1);}
+.proj:hover .pn{font-variation-settings:"wght" 840,"opsz" 32;}
+.pn em{font-style:normal;color:var(--paper);}
+.pd{color:var(--paper70);font-size:clamp(14px,1.5vw,17px);max-width:42ch;}
+.pm{width:100%;display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin-top:8px;}
+@media(min-width:820px){.proj{grid-template-columns:1.5fr 1fr;gap:clamp(30px,4vw,64px);}.proj:nth-child(even) .media{order:2;}}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -303,7 +327,7 @@ section.reveal>.wrap{position:relative;}
   <nav class="menu" aria-label="Primary" id="menu">
     <a href="#top"><i>01</i>Home</a><a href="#work"><i>02</i>Work</a><a href="manifesto.html"><i>03</i>Manifesto</a><a href="#journal"><i>04</i>Journal</a><a href="#contact"><i>05</i>Contact</a>
   </nav>
-  <div class="status"><span class="dot" aria-hidden="true"></span>OPEN &middot; Q4 <span class="clock" id="clk">LDN --:--:--</span>
+  <div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="#offerings" title="Services & pricing">OPEN &middot; Q4</a> <span class="clock" id="clk">LDN --:--:--</span>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </div></header>
@@ -319,9 +343,9 @@ section.reveal>.wrap{position:relative;}
     <div class="wrap inner">
       <h1 class="word" id="word" aria-label="cyber:cyber"></h1>
       <div class="herobar" id="herobar">
-        <div class="heroline">Everything you imagined, actually built.</div>
+        <div class="heroline">Everything you imagined. Actually built.</div>
         <div class="herometa">
-          <div class="r"><span class="dot" aria-hidden="true"></span><span>OPEN FOR Q4</span></div>
+          <div class="r"><span class="dot" aria-hidden="true"></span><a href="#offerings" class="statl">OPEN FOR Q4 &rarr;</a></div>
           <div style="margin-top:7px">Now: a brand engine for a<br>decentralised AI network.</div>
         </div>
       </div>
@@ -337,10 +361,19 @@ section.reveal>.wrap{position:relative;}
     <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Selected work<span class="ix">01 / INDEX</span></div>
     <h2 class="h2" style="--c:var(--paper)">The proof</h2>
     <p class="lead">We don't just design for clients. We design, brand and build our own products &mdash; and ship them into the world.</p>
-    <div class="rows">
-      <div class="row" style="--rc:var(--accent)"><span class="rbar"></span><span class="ri">01</span><span class="rt">Granite<em>.</em></span><span class="rd">A native strength coach that rewrites your training every week.</span><span class="rm">On-device<br>Coaching</span></div>
-      <div class="row" style="--rc:var(--accent)"><span class="rbar"></span><span class="ri">02</span><span class="rt">Frame<em>.</em></span><span class="rd">A BJJ training journal built against the forgetting curve.</span><span class="rm">Native<br>Journal</span></div>
-      <div class="row" style="--rc:var(--accent)"><span class="rbar"></span><span class="ri">03</span><span class="rt">Brand engine<em>.</em></span><span class="rd">A generative brand engine for a decentralised AI network.</span><span class="rm">Generative<br>In&nbsp;progress</span></div>
+    <div class="reel">
+      <a class="proj" href="work-granite.html">
+        <div class="media" data-reel><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src=""></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Reel 01 &middot; Loop</span><span class="mgo">View case &rarr;</span></div>
+        <div class="pinfo"><div class="pn">Granite<em>.</em></div><div class="pd">A native strength coach that rewrites your training every week.</div><div class="pm"><span>iOS &middot; SwiftUI</span><span>On-device AI</span><span>2026</span></div></div>
+      </a>
+      <a class="proj" href="work-frame.html">
+        <div class="media" data-reel><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src=""></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Reel 02 &middot; Loop</span><span class="mgo">View case &rarr;</span></div>
+        <div class="pinfo"><div class="pn">Frame<em>.</em></div><div class="pd">A BJJ training journal built against the forgetting curve.</div><div class="pm"><span>iOS &middot; Native</span><span>Belt-accent identity</span><span>2026</span></div></div>
+      </a>
+      <a class="proj" href="#contact" aria-label="Brand engine (in progress)">
+        <div class="media" data-reel><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src=""></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Reel 03 &middot; In progress</span><span class="mgo">Enquire &rarr;</span></div>
+        <div class="pinfo"><div class="pn">Brand engine<em>.</em></div><div class="pd">A generative brand engine for a decentralised AI network.</div><div class="pm"><span>Generative</span><span>Brand system</span><span>2026</span></div></div>
+      </a>
     </div>
     <div class="collab"><span class="lbl">Past collaborations</span></div>
     <div class="marquee" role="img" aria-label="Past collaborations: Dell, Spotify, Epic Games, Candyspace, Elsewhen">
@@ -416,7 +449,7 @@ section.reveal>.wrap{position:relative;}
 
   var word=document.getElementById("word");
   "CYBER:CYBER".split("").forEach(function(ch){var s=document.createElement("span");if(ch===":")s.className="colon";s.textContent=ch;word.appendChild(s);});
-  var spans=[].slice.call(word.children),REST=700,MIN=340,MAX=905,RAD=300;
+  var spans=[].slice.call(word.children),REST=790,MIN=380,MAX=910,RAD=300;
   function setAll(w){spans.forEach(function(s){s.style.fontVariationSettings="'wght' "+w.toFixed(0)+",'opsz' 32";});}
   var colon=word.querySelector(".colon");
   if(!reduce){var b0=performance.now();(function br(t){colon.style.opacity=(0.55+0.45*(0.5+0.5*Math.sin((t-b0)/560))).toFixed(2);requestAnimationFrame(br);})(b0);}
@@ -489,6 +522,7 @@ section.reveal>.wrap{position:relative;}
   document.querySelectorAll(".define w").forEach(function(w,i){w.style.transitionDelay=(i*0.028).toFixed(3)+"s";});
   if(!coarse&&!reduce){document.querySelectorAll(".mag").forEach(function(el){el.addEventListener("mousemove",function(e){var r=el.getBoundingClientRect();el.style.transform="translate("+((e.clientX-(r.left+r.width/2))*.22).toFixed(1)+"px,"+((e.clientY-(r.top+r.height/2))*.28).toFixed(1)+"px)";});el.addEventListener("mouseleave",function(){el.style.transform="";});});}
   if(!coarse&&!reduce){var spot=document.getElementById("spot");if(spot){addEventListener("mousemove",function(e){spot.style.transform="translate("+e.clientX+"px,"+e.clientY+"px) translate(-50%,-50%)";spot.style.opacity="1";},{passive:true});addEventListener("mouseleave",function(){spot.style.opacity="0";});}}
+  (function(){var media=document.querySelectorAll(".media[data-reel]");if(!media.length)return;var mo=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target.querySelector(".rv");if(!v)return;if(e.isIntersecting){if(v.dataset.src&&!v.getAttribute("src")){v.setAttribute("src",v.dataset.src);}if(v.getAttribute("src")&&!reduce){v.play().then(function(){e.target.classList.add("playing");}).catch(function(){});}}else if(v.getAttribute("src")){v.pause();}});},{threshold:.35});media.forEach(function(m){mo.observe(m);});})();
   boot();
 })();
 </script>
