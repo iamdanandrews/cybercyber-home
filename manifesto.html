@@ -26,7 +26,8 @@ a{color:inherit;text-decoration:none;} :focus-visible{outline:2px solid var(--ac
 body.cur,body.cur a,body.cur button{cursor:none;}
 @media (hover:none),(pointer:coarse){.reticle{display:none!important;}}
 
-header{position:fixed;top:0;left:0;right:0;z-index:200;transition:background .3s,border-color .3s;border-bottom:1px solid transparent;}
+@view-transition{navigation:auto;}
+header{view-transition-name:site-header;position:fixed;top:0;left:0;right:0;z-index:200;transition:background .3s,border-color .3s;border-bottom:1px solid transparent;}
 header.solid{background:rgba(10,10,11,.7);backdrop-filter:blur(10px);border-color:var(--line);}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 0;}
 .brand{font-size:13px;letter-spacing:.04em;}.brand sup{color:var(--paper60);}
