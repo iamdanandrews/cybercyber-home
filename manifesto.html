@@ -6,7 +6,7 @@
 <title>Manifesto — cyber:cyber</title>
 <meta name="description" content="Ten things a product design lab believes — on judgement, refusal, and what's worth building rather than just shipping fast.">
 <meta name="color-scheme" content="dark">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230B0B0D'/><circle cx='16' cy='11' r='2.7' fill='%23EA4E32'/><circle cx='16' cy='21' r='2.7' fill='%23EA4E32'/></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230B0B0D'/><circle cx='16' cy='11' r='2.7' fill='%2322D3EE'/><circle cx='16' cy='21' r='2.7' fill='%2322D3EE'/></svg>">
 <style>
 @font-face{font-family:"Raveo";src:url("RaveoVF.woff2") format("woff2");font-weight:100 900;font-stretch:normal;font-display:swap;}
 html{scroll-padding-top:84px;}
@@ -95,6 +95,17 @@ footer{border-top:1px solid var(--line);padding:28px 0;}
   *{transition:none!important;animation:none!important;scroll-behavior:auto;}
   .num{-webkit-text-stroke:1px var(--paper35);}.txt .st{font-variation-settings:"wght" 600,"opsz" 32;}.txt .rule{width:56px;}.txt .bd{opacity:1;transform:none;}
 }
+.ivlabel{position:fixed;right:12px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font-family:var(--mono);font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--paper35);z-index:120;pointer-events:none;}
+.mvf{position:absolute;top:66px;left:clamp(14px,3vw,40px);right:clamp(14px,3vw,40px);bottom:clamp(14px,3vw,40px);z-index:1;pointer-events:none;}
+.mvf i{position:absolute;width:20px;height:20px;border:1.5px solid var(--paper35);}
+.mvf i:nth-child(1){top:0;left:0;border-right:0;border-bottom:0;}
+.mvf i:nth-child(2){top:0;right:0;border-left:0;border-bottom:0;}
+.mvf i:nth-child(3){bottom:0;left:0;border-right:0;border-top:0;}
+.mvf i:nth-child(4){bottom:0;right:0;border-left:0;border-top:0;}
+.mseal{width:96px;height:96px;color:var(--accent);flex:none;}
+.mseal text{font-family:var(--mono);font-size:8.4px;letter-spacing:1.3px;fill:currentColor;}
+.mseal .stb{font-size:7px;letter-spacing:2.2px;}
+@media(max-width:820px){.ivlabel,.mvf{display:none;}}
 </style>
 </head>
 <body>
@@ -109,12 +120,13 @@ footer{border-top:1px solid var(--line);padding:28px 0;}
   </nav>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></header>
+<div class="ivlabel" aria-hidden="true">cyber:cyber &mdash; London &mdash; Est. MMXXVI</div>
 <div class="mobile" id="mobile"><a href="./">Home</a><a href="./#work">Work</a><a href="./manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a></div>
 
 <div class="rail" aria-hidden="true"><span class="n" id="railnum">01</span><span class="ln"><i id="railfill"></i></span><span>10</span></div>
 
 <main id="main">
-  <section class="hero"><div class="wrap" style="display:grid;grid-template-rows:1fr auto;height:100%">
+  <section class="hero"><div class="mvf" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div class="wrap" style="display:grid;grid-template-rows:1fr auto;height:100%">
     <div class="top">
       <div class="eye">Manifesto <span class="a">&mdash;</span> what we believe</div>
       <div class="idxnote">Ten beliefs<br>Judgement &middot; Refusal<br>Est. London</div>
@@ -145,7 +157,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;}
   </div></section>
 </main>
 
-<footer><div class="wrap foot"><span>&copy; 2026 CYBERCYBER LTD &middot; London</span><a href="./">Home &uarr;</a></div></footer>
+<footer><div class="wrap foot" style="align-items:center"><span>&copy; 2026 CYBERCYBER LTD &middot; London</span><svg class="mseal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="marc" d="M22,60 A38,38 0 0,1 98,60"/></defs><circle cx="60" cy="60" r="53" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/><text text-anchor="middle"><textPath href="#marc" startOffset="50%">CYBER:CYBER</textPath></text><circle cx="60" cy="53" r="5" fill="currentColor"/><circle cx="60" cy="67" r="5" fill="currentColor"/><text class="stb" x="60" y="88" text-anchor="middle">MMXXVI</text></svg><a href="./">Home &uarr;</a></div></footer>
 
 <script>
 (function(){

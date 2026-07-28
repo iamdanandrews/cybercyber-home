@@ -61,6 +61,16 @@ footer{border-top:1px solid var(--line);padding:26px 0;margin-top:clamp(60px,10v
 .next a:hover{padding-left:12px;}
 .next .l{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-bottom:14px;}
 .next .n{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:clamp(28px,5vw,60px);letter-spacing:-.02em;line-height:1;}
+.reticle{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;transform:translate(-50%,-50%);opacity:0;transition:opacity .3s,width .22s var(--e1),height .22s var(--e1);width:24px;height:24px;}
+.reticle .ring{position:absolute;inset:0;border:1px solid var(--paper);border-radius:50%;mix-blend-mode:difference;transition:border-radius .22s,border-color .22s;}
+.reticle b{position:absolute;background:var(--paper);mix-blend-mode:difference;}
+.reticle .h{width:7px;height:1px;top:50%;left:50%;transform:translate(-50%,-.5px);}
+.reticle .v{height:7px;width:1px;left:50%;top:50%;transform:translate(-.5px,-50%);}
+.reticle.lock .ring{border-radius:3px;border-color:var(--cyan);}
+.coord{position:fixed;z-index:9998;pointer-events:none;font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:var(--dim);opacity:0;transition:opacity .3s;font-variant-numeric:tabular-nums;}
+.ivlabel{position:fixed;right:12px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font-family:var(--mono);font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--dim);z-index:120;pointer-events:none;}
+body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cursor:none;}
+@media(hover:none),(pointer:coarse){.reticle,.coord,.ivlabel{display:none!important;}}
 </style>
 </head>
 <body>
@@ -69,6 +79,10 @@ footer{border-top:1px solid var(--line);padding:26px 0;margin-top:clamp(60px,10v
   <a class="brand" href="./">cyber:cyber<sup>&trade;</sup></a>
   <nav class="menu" aria-label="Primary"><a href="./">Home</a><a href="./#work">Work</a><a href="./manifesto.html">Manifesto</a><a href="journal.html" aria-current="page">Journal</a><a href="./#contact">Contact</a></nav>
 </div></header>
+<div class="reticle" id="iret" aria-hidden="true"><span class="ring"></span><b class="h"></b><b class="v"></b></div>
+<span class="coord" id="icoord" aria-hidden="true">0000 &middot; 0000</span>
+<div class="ivlabel" aria-hidden="true">cyber:cyber &mdash; London</div>
+
 <main id="c">
   <section class="ahero"><div class="wrap">
     <div class="eyebrow"><span class="tick"></span>Journal &#183; Note<span class="ix">03 / JOURNAL</span></div>
@@ -84,4 +98,5 @@ footer{border-top:1px solid var(--line);padding:26px 0;margin-top:clamp(60px,10v
 </main>
 <footer><div class="wrap foot"><span>&copy; 2026 CYBERCYBER LTD &#183; London</span><a href="./">Home &uarr;</a></div></footer>
 <script>(function(){var hdr=document.getElementById("hdr");addEventListener("scroll",function(){hdr.classList.toggle("solid",scrollY>40);},{passive:true});var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.14});document.querySelectorAll(".reveal").forEach(function(el){io.observe(el);});})();</script>
+<script>(function(){var reduce=matchMedia("(prefers-reduced-motion:reduce)").matches,coarse=matchMedia("(hover:none),(pointer:coarse)").matches;if(coarse||reduce)return;var ret=document.getElementById("iret"),coord=document.getElementById("icoord");if(!ret)return;document.body.classList.add("cursor-on");var rx=innerWidth/2,ry=innerHeight/2,tx=rx,ty=ry;addEventListener("mousemove",function(e){tx=e.clientX;ty=e.clientY;ret.style.opacity="1";coord.style.opacity="1";coord.style.left=(e.clientX+16)+"px";coord.style.top=(e.clientY+16)+"px";coord.textContent=("000"+e.clientX).slice(-4)+" \u00B7 "+("000"+e.clientY).slice(-4);});addEventListener("mouseleave",function(){ret.style.opacity="0";coord.style.opacity="0";});document.querySelectorAll("a,button,summary").forEach(function(el){el.addEventListener("mouseenter",function(){ret.classList.add("lock");ret.style.width="40px";ret.style.height="40px";});el.addEventListener("mouseleave",function(){ret.classList.remove("lock");ret.style.width="24px";ret.style.height="24px";});});(function tick(){rx+=(tx-rx)*.3;ry+=(ty-ry)*.3;var w=parseFloat(ret.style.width)||24,h=parseFloat(ret.style.height)||24;ret.style.transform="translate("+(rx-w/2)+"px,"+(ry-h/2)+"px)";requestAnimationFrame(tick);})();})();</script>
 </body></html>
