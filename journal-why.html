@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why cyber:cyber exists — cyber:cyber Journal</title>
+<meta name="description" content="Why cyber:cyber exists — a note from cyber:cyber, a product design lab in London.">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230B0B0D'/><circle cx='16' cy='11' r='2.7' fill='%2322D3EE'/><circle cx='16' cy='21' r='2.7' fill='%2322D3EE'/></svg>">
+<style>
+@font-face{font-family:"Raveo";src:url("RaveoVF.woff2") format("woff2");font-weight:100 900;font-stretch:normal;font-display:swap;}
+:root{--ground:#0B0B0D;--paper:#F2ECEF;--paper70:#C3BEC6;--paper45:#9E9BA6;--accent:#EA4E32;--accent-ink:#0B0B0D;--cyan:#22D3EE;--grey:#948FA0;--dim:#7A7784;--line:#211F27;--line2:#2C2A33;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;--sans:"Helvetica Neue",Helvetica,"Inter","Segoe UI",system-ui,Arial,sans-serif;--raveo:"Raveo","Helvetica Neue",Helvetica,Arial,sans-serif;--maxw:1180px;--e1:cubic-bezier(.2,.7,.2,1);}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%;}
+body{background:var(--ground);color:var(--paper);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{color:inherit;text-decoration:none;}::selection{background:var(--accent);color:var(--accent-ink);}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;}
+.eyebrow,.menu,.brand,.foot,.kick,.date,.cap,.tl,.seal text,.next .l{font-family:var(--mono);}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,64px);}
+.skip{position:fixed;top:8px;left:8px;z-index:2000;background:var(--paper);color:var(--ground);padding:10px 16px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;transform:translateY(-180%);transition:transform .25s var(--e1);}
+.skip:focus{transform:none;}
+@view-transition{navigation:auto;}
+header{view-transition-name:site-header;position:fixed;top:0;left:0;right:0;z-index:200;transition:background .3s,border-color .3s,backdrop-filter .3s;border-bottom:1px solid transparent;}
+header.solid{background:rgba(11,11,13,.72);backdrop-filter:blur(10px);border-color:var(--line);}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0;}
+.brand{font-size:13px;letter-spacing:.04em;view-transition-name:brand;}.brand sup{color:var(--grey);}
+.menu{display:flex;gap:22px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;}
+.menu a{color:var(--grey);transition:color .2s;}.menu a:hover,.menu a[aria-current]{color:var(--paper);}
+@media(max-width:760px){.menu{display:none;}}
+main{padding-top:96px;}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-bottom:22px;}
+.eyebrow .tick{width:9px;height:9px;background:var(--paper);}
+.eyebrow .ix{margin-left:auto;color:var(--dim);}
+.frame{position:relative;background:#0e0d12;border:1px solid var(--line);overflow:hidden;}
+.frame::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:48px 48px;opacity:.9;}
+.frame img,.frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);}
+.frame .cap{position:absolute;left:14px;bottom:12px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--paper45);z-index:2;}
+.frame .tl{position:absolute;top:12px;right:14px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);z-index:2;}
+.frame .bk{position:absolute;width:14px;height:14px;border:1px solid var(--paper45);z-index:2;}
+.frame .bk.a{top:8px;left:8px;border-right:0;border-bottom:0;}
+.frame .bk.b{bottom:8px;right:8px;border-left:0;border-top:0;}
+.seal{width:104px;height:104px;color:var(--accent);flex:none;}
+.seal text{font-size:8.4px;letter-spacing:1.4px;fill:currentColor;}
+.seal .stb{font-size:7px;letter-spacing:2.4px;}
+footer{border-top:1px solid var(--line);padding:26px 0;margin-top:clamp(60px,10vh,120px);}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11px;letter-spacing:.08em;color:var(--grey);text-transform:uppercase;align-items:center;}
+.foot a:hover{color:var(--paper);}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--e1),transform .7s var(--e1);}
+.reveal.in{opacity:1;transform:none;}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;}*{scroll-behavior:auto;transition:none!important;}}
+.ahero .wrap{padding-top:clamp(30px,7vh,70px);}
+.date{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;}
+.ah1{font-family:var(--raveo);font-variation-settings:"wght" 600,"opsz" 32;font-size:clamp(38px,7vw,92px);letter-spacing:-.03em;line-height:.98;text-wrap:balance;max-width:20ch;}
+.lede{font-family:var(--raveo);font-variation-settings:"wght" 340,"opsz" 32;font-size:clamp(20px,2.8vw,34px);line-height:1.16;letter-spacing:-.015em;max-width:30ch;margin-top:26px;color:var(--paper);}
+.ahero .frame{aspect-ratio:16/9;margin-top:clamp(34px,6vw,64px);}
+.prose{max-width:64ch;margin:clamp(56px,9vh,110px) auto 0;padding:0 clamp(20px,5vw,64px);}
+.prose p{font-size:clamp(16px,1.6vw,19px);line-height:1.7;color:var(--paper70);margin-bottom:26px;}
+.sealwrap{display:flex;justify-content:center;margin:clamp(56px,9vh,100px) 0 0;}
+.next{border-top:1px solid var(--line);margin-top:clamp(56px,9vh,110px);}
+.next a{display:block;padding:clamp(40px,7vh,80px) 0;transition:padding-left .3s var(--e1);}
+.next a:hover{padding-left:12px;}
+.next .l{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-bottom:14px;}
+.next .n{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:clamp(28px,5vw,60px);letter-spacing:-.02em;line-height:1;}
+</style>
+</head>
+<body>
+<a class="skip" href="#c">Skip to content</a>
+<header id="hdr"><div class="wrap nav">
+  <a class="brand" href="./">cyber:cyber<sup>&trade;</sup></a>
+  <nav class="menu" aria-label="Primary"><a href="./">Home</a><a href="./#work">Work</a><a href="./manifesto.html">Manifesto</a><a href="journal.html" aria-current="page">Journal</a><a href="./#contact">Contact</a></nav>
+</div></header>
+<main id="c">
+  <section class="ahero"><div class="wrap">
+    <div class="eyebrow"><span class="tick"></span>Journal &#183; Note<span class="ix">04 / JOURNAL</span></div>
+    <div class="date">Mar 1, 2026</div>
+    <h1 class="ah1">Why cyber:cyber exists</h1>
+    <p class="lede">Anyone can build it now. Almost nobody knows if they should.</p>
+  </div>
+  <div class="wrap"><div class="frame reveal" style="aspect-ratio:16/9"><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;NOTE&#12301;</span><span class="cap">Fig. 01 &mdash; judgement over execution</span></div></div>
+  </section>
+  <article class="prose"><p class="reveal">Execution stopped being the bottleneck. A founder with the right tools ships a working product in a weekend, which means the market is drowning in things that technically function and nobody remembers.</p><p class="reveal">The scarce thing is judgement: knowing what deserves to exist, what to cut, and what the thing should actually do. cyber:cyber exists to bring that to a small number of products a year &mdash; and to build them properly, brand and interface and the code underneath, in one pair of hands.</p><p class="reveal">[ Continue &mdash; Dan to expand: the founding decision. ]</p></article>
+  <div class="wrap"><div class="sealwrap reveal"><svg class="seal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="arc3" d="M22,60 A38,38 0 0,1 98,60"/></defs><circle cx="60" cy="60" r="53" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/><text text-anchor="middle"><textPath href="#arc3" startOffset="50%">CYBER:CYBER</textPath></text><circle cx="60" cy="53" r="5" fill="currentColor"/><circle cx="60" cy="67" r="5" fill="currentColor"/><text class="stb" x="60" y="88" text-anchor="middle">MMXXVI</text></svg></div></div>
+  <section class="next"><div class="wrap"><a href="journal-door.html"><div class="l">Next note</div><div class="n">Building before the door opens</div></a></div></section>
+</main>
+<footer><div class="wrap foot"><span>&copy; 2026 CYBERCYBER LTD &#183; London</span><a href="./">Home &uarr;</a></div></footer>
+<script>(function(){var hdr=document.getElementById("hdr");addEventListener("scroll",function(){hdr.classList.toggle("solid",scrollY>40);},{passive:true});var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.14});document.querySelectorAll(".reveal").forEach(function(el){io.observe(el);});})();</script>
+</body></html>
