@@ -76,8 +76,8 @@ header.solid{background:rgba(11,11,13,.72);backdrop-filter:blur(10px);border-col
 .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;padding-bottom:clamp(28px,6vh,64px);}
 .hero .grid{position:absolute;inset:-40px;z-index:0;opacity:.5;will-change:transform;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(120% 90% at 50% 42%,#000 30%,transparent 80%);-webkit-mask-image:radial-gradient(120% 90% at 50% 42%,#000 30%,transparent 80%);}
 .hero .glow{position:absolute;inset:0;z-index:0;background:radial-gradient(120% 80% at 76% 8%,#171220 0%,transparent 55%);}
-.hero .inner{position:relative;z-index:3;}
-.word{font-family:var(--raveo);line-height:.84;letter-spacing:-.04em;text-transform:uppercase;font-size:clamp(52px,13.5vw,230px);white-space:nowrap;cursor:default;}
+.hero .inner{position:relative;z-index:3;max-width:none;}
+.word{font-family:var(--raveo);line-height:.84;letter-spacing:-.045em;text-transform:uppercase;font-size:clamp(40px,10.6vw,340px);white-space:nowrap;cursor:default;text-align:center;}
 .word span{display:inline-block;font-variation-settings:"wght" 100,"opsz" 32;transition:font-variation-settings .16s ease-out;}
 .word .colon{color:var(--cyan);}
 .herobar{display:flex;flex-wrap:wrap;gap:clamp(16px,4vw,60px);align-items:flex-end;justify-content:space-between;margin-top:clamp(20px,4vh,44px);opacity:0;transform:translateY(14px);transition:opacity .7s .2s,transform .7s .2s;}
@@ -311,7 +311,7 @@ section.reveal>.wrap{position:relative;}
 <div class="loader" id="loader" aria-hidden="true">
   <div class="lgrid"></div>
   <div class="lpct"><span id="lpct">0</span></div>
-  <div class="lrow"><span class="lstat" id="lstat">INITIALISING</span><span>cyber:cyber &middot; instrument</span></div>
+  <div class="lrow"><span class="lstat" id="lstat">INITIALISING</span><span>Est. London</span></div>
 </div>
 
 <div class="reticle" id="ret" aria-hidden="true"><span class="ring"></span><b class="h"></b><b class="v"></b><span class="verb" id="verb">View</span></div>
@@ -422,10 +422,10 @@ section.reveal>.wrap{position:relative;}
     <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Journal<span class="ix">05 / NOTES</span></div>
     <h2 class="h2" style="--c:var(--paper)">Journal</h2>
     <div class="jrnl">
-      <a href="#journal"><span class="jt">Building before the door opens</span><span class="jk">Article</span><span class="jd">Jul 16, 2026</span></a>
-      <a href="#journal"><span class="jt">Nobody wrote it down</span><span class="jk">Article</span><span class="jd">Jul 10, 2026</span></a>
-      <a href="#journal"><span class="jt">Building cyber:cyber</span><span class="jk">Article</span><span class="jd">May 10, 2026</span></a>
-      <a href="#journal"><span class="jt">Why cyber:cyber exists</span><span class="jk">Article</span><span class="jd">Mar 1, 2026</span></a>
+      <a href="journal-door.html"><span class="jt">Building before the door opens</span><span class="jk">Article</span><span class="jd">Jul 16, 2026</span></a>
+      <a href="journal-undocumented.html"><span class="jt">Nobody wrote it down</span><span class="jk">Article</span><span class="jd">Jul 10, 2026</span></a>
+      <a href="journal-building.html"><span class="jt">Building cyber:cyber</span><span class="jk">Article</span><span class="jd">May 10, 2026</span></a>
+      <a href="journal-why.html"><span class="jt">Why cyber:cyber exists</span><span class="jk">Article</span><span class="jd">Mar 1, 2026</span></a>
     </div>
   </div></section>
 
