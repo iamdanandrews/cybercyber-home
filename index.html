@@ -258,6 +258,30 @@ section.reveal>.wrap{position:relative;}
   @keyframes numpar{from{transform:translateY(-46px);}to{transform:translateY(46px);}}
 }}
 @media(prefers-reduced-motion:reduce){.marquee .track{animation:none;}.reveal .h2{clip-path:inset(-2% 0 -16% 0);}}
+
+/* --- MAX: viewfinder framing + wordmark glitch + edge telemetry (GITS x Swiss) --- */
+.vf{position:absolute;top:66px;left:clamp(12px,2.4vw,26px);right:clamp(12px,2.4vw,26px);bottom:clamp(12px,2.4vw,26px);z-index:2;pointer-events:none;}
+.vf i{position:absolute;width:20px;height:20px;border:1.5px solid var(--dim);opacity:0;animation:vfin .6s var(--e1) forwards;}
+.vf i:nth-child(1){top:0;left:0;border-right:0;border-bottom:0;animation-delay:.10s;}
+.vf i:nth-child(2){top:0;right:0;border-left:0;border-bottom:0;animation-delay:.18s;}
+.vf i:nth-child(3){bottom:0;left:0;border-right:0;border-top:0;animation-delay:.26s;}
+.vf i:nth-child(4){bottom:0;right:0;border-left:0;border-top:0;animation-delay:.34s;}
+@keyframes vfin{from{opacity:0;transform:scale(1.5);}to{opacity:1;transform:none;}}
+.vf .tl{position:absolute;font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:var(--dim);text-transform:uppercase;white-space:nowrap;}
+.vf .tl.a{top:-1px;left:28px;}
+.vf .tl.b{bottom:-1px;right:28px;}
+.vlabel{position:fixed;right:12px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font-family:var(--mono);font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--dim);z-index:120;pointer-events:none;}
+@media(max-width:860px){.vlabel{display:none;}.vf{top:58px;left:10px;right:10px;bottom:10px;}.vf .tl{display:none;}}
+@keyframes glitch{
+ 0%,100%{text-shadow:none;clip-path:inset(0 0 0 0);transform:translateX(0);}
+ 15%{text-shadow:-3px 0 var(--cyan),3px 0 var(--accent);transform:translateX(2px);}
+ 30%{clip-path:inset(0 0 62% 0);text-shadow:3px 0 var(--cyan),-3px 0 var(--accent);}
+ 45%{clip-path:inset(56% 0 0 0);transform:translateX(-2px);}
+ 60%{clip-path:inset(0 0 0 0);text-shadow:-2px 0 var(--cyan),2px 0 var(--accent);}
+ 78%{text-shadow:2px 0 var(--cyan),-2px 0 var(--accent);transform:translateX(1px);}
+}
+.word.glitch{animation:glitch .42s steps(2,end) 1;}
+@media(prefers-reduced-motion:reduce){.vf i{animation:none;opacity:1;}.word.glitch{animation:none;}}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -272,6 +296,7 @@ section.reveal>.wrap{position:relative;}
 <div class="progress" id="progress" aria-hidden="true"></div>
 <div class="spot" id="spot" aria-hidden="true"></div>
 <div class="hud" id="hud" aria-hidden="true"><span class="sq"></span><span class="sec" id="hudSec">01 · The Proof</span><span class="pct" id="hudPct">0%</span></div>
+<div class="vlabel" aria-hidden="true">cyber:cyber &mdash; London &mdash; Est. MMXXVI</div>
 
 <header id="hdr"><div class="wrap nav">
   <a class="brand" href="#top">cyber:cyber<sup>&trade;</sup></a>
@@ -290,6 +315,7 @@ section.reveal>.wrap{position:relative;}
 <main id="top">
   <section class="hero" style="border-top:0;padding-top:0" id="hero">
     <div class="grid" id="hgrid"></div><div class="glow"></div>
+    <div class="vf" aria-hidden="true"><i></i><i></i><i></i><i></i><span class="tl a">51.5074&deg; N</span><span class="tl b">00.1278&deg; W</span></div>
     <div class="wrap inner">
       <h1 class="word" id="word" aria-label="cyber:cyber"></h1>
       <div class="herobar" id="herobar">
@@ -404,7 +430,7 @@ section.reveal>.wrap{position:relative;}
       if(p>.35)lstat.textContent="CALIBRATING"; if(p>.82)lstat.textContent="READY";
       setAll(100+ease*(REST-100));
       if(p<1)requestAnimationFrame(loop);
-      else{setTimeout(function(){loader.classList.add("done");herobar.classList.add("in");enableReactive();start();},170);}
+      else{setTimeout(function(){loader.classList.add("done");herobar.classList.add("in");enableReactive();start();if(!reduce){word.classList.add("glitch");setTimeout(function(){word.classList.remove("glitch");},460);}},170);}
     })(t0);
   }
   function enableReactive(){
