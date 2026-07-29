@@ -34,7 +34,7 @@ a{color:inherit;text-decoration:none;}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,64px);}
 .skip{position:fixed;top:8px;left:8px;z-index:2000;background:var(--paper);color:var(--ground);padding:10px 16px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;transform:translateY(-180%);transition:transform .25s var(--e1);}
 .skip:focus{transform:none;}
-.progress{position:fixed;top:0;left:0;height:2px;width:100%;transform:scaleX(0);transform-origin:0 50%;background:var(--accent);z-index:250;will-change:transform;}
+.progress{position:fixed;top:54px;left:0;height:2px;width:100%;transform:scaleX(0);transform-origin:0 50%;background:var(--cyan);z-index:190;will-change:transform;}
 /* Swiss: grotesque body, monospace reserved for data + labels */
 .eyebrow,.menu,.status,.clock,.rm,.jk,.jd,.op,.foot,.lrow,.lstat,.coord,.verb,.ix,.collab .lbl,.frontier,.cp,.scrollcue,.mobile a i,.ri,.brand,.herometa{font-family:var(--mono);}
 
@@ -300,12 +300,12 @@ section.reveal>.wrap{position:relative;}
 .proj:hover .mgo{opacity:1;transform:none;}
 .media::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px transparent;transition:box-shadow .3s;pointer-events:none;}
 .proj:hover .media::after{box-shadow:inset 0 0 0 1px var(--accent);}
-.pinfo{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 22px;}
+.pinfo{display:flex;flex-direction:column;align-items:flex-start;gap:14px;}
 .pn{font-family:var(--raveo);font-variation-settings:"wght" 640,"opsz" 32;font-size:clamp(30px,4.6vw,68px);letter-spacing:-.025em;line-height:.98;transition:font-variation-settings .3s var(--e1);}
 .proj:hover .pn{font-variation-settings:"wght" 840,"opsz" 32;}
 .pn em{font-style:normal;color:var(--paper);}
 .pd{color:var(--paper70);font-size:clamp(14px,1.5vw,17px);max-width:42ch;}
-.pm{width:100%;display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin-top:8px;}
+.pm{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin-top:2px;}
 @media(min-width:820px){.proj{grid-template-columns:1.5fr 1fr;gap:clamp(30px,4vw,64px);}.proj:nth-child(even) .media{order:2;}}.footseal{width:76px;height:76px;color:var(--accent);flex:none;view-transition-name:brand-seal;}.footseal text{font-family:var(--mono);font-size:8.4px;letter-spacing:1.2px;fill:currentColor;}.footseal .stb{font-size:7px;letter-spacing:2.2px;}
 
 /* offerings rate card */
