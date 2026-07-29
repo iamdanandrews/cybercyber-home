@@ -306,7 +306,7 @@ section.reveal>.wrap{position:relative;}
 .pn em{font-style:normal;color:var(--paper);}
 .pd{color:var(--paper70);font-size:clamp(14px,1.5vw,17px);max-width:42ch;}
 .pm{width:100%;display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin-top:8px;}
-@media(min-width:820px){.proj{grid-template-columns:1.5fr 1fr;gap:clamp(30px,4vw,64px);}.proj:nth-child(even) .media{order:2;}}.footseal{width:76px;height:76px;color:var(--accent);flex:none;}.footseal text{font-family:var(--mono);font-size:8.4px;letter-spacing:1.2px;fill:currentColor;}.footseal .stb{font-size:7px;letter-spacing:2.2px;}
+@media(min-width:820px){.proj{grid-template-columns:1.5fr 1fr;gap:clamp(30px,4vw,64px);}.proj:nth-child(even) .media{order:2;}}.footseal{width:76px;height:76px;color:var(--accent);flex:none;view-transition-name:brand-seal;}.footseal text{font-family:var(--mono);font-size:8.4px;letter-spacing:1.2px;fill:currentColor;}.footseal .stb{font-size:7px;letter-spacing:2.2px;}
 
 /* offerings rate card */
 .offers .offer{grid-template-columns:34px 1fr auto;align-items:center;gap:clamp(16px,3vw,50px);}
@@ -337,6 +337,19 @@ section.reveal>.wrap{position:relative;}
 @keyframes stamp{0%{opacity:0;transform:scale(1.45) rotate(-9deg);}55%{opacity:1;transform:scale(.93) rotate(2deg);}76%{transform:scale(1.03) rotate(-1deg);}100%{opacity:1;transform:scale(1) rotate(0);}}
 @media(max-width:760px){#about .aseal{position:static;margin-top:34px;display:block;}}
 @media(prefers-reduced-motion:reduce){#about .brush path{stroke-dashoffset:0;}#about .aseal{animation:none;opacity:1;transform:none;}}
+
+/* ambient 12-column grid (exposed Swiss structure) */
+.colgrid{position:fixed;inset:0;z-index:-1;pointer-events:none;max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,64px);opacity:.55;}
+.colgrid::before{content:"";display:block;height:100%;background-image:repeating-linear-gradient(90deg,var(--line2) 0 1px,transparent 1px calc(100%/12));-webkit-mask-image:linear-gradient(#000,#000);}
+@media(max-width:760px){.colgrid{display:none;}}
+/* index / colophon */
+.idx{border-top:1px solid var(--line);margin-top:clamp(30px,4vw,50px);}
+.irow{display:flex;align-items:baseline;gap:16px;padding:clamp(16px,2vw,26px) 0;border-bottom:1px solid var(--line);color:var(--paper70);transition:color .25s var(--e1),padding-left .25s var(--e1);}
+.irow:hover{color:var(--paper);padding-left:10px;}
+.irow .in{font-family:var(--mono);font-size:11px;color:var(--dim);}
+.irow .il{font-family:var(--raveo);font-variation-settings:"wght" 520,"opsz" 32;font-size:clamp(20px,2.6vw,34px);letter-spacing:-.02em;line-height:1;}
+.irow .dots{flex:1;border-bottom:1px dotted var(--dim);transform:translateY(-5px);min-width:24px;}
+.irow .iv{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);white-space:nowrap;}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -352,6 +365,7 @@ section.reveal>.wrap{position:relative;}
 <div class="spot" id="spot" aria-hidden="true"></div>
 <div class="hud" id="hud" aria-hidden="true"><span class="sq"></span><span class="sec" id="hudSec">01 · The Proof</span><span class="pct" id="hudPct">0%</span></div>
 <div class="vlabel" aria-hidden="true">cyber:cyber &mdash; London &mdash; Est. MMXXVI</div>
+<div class="colgrid" aria-hidden="true"></div>
 
 <header id="hdr"><div class="wrap nav">
   <a class="brand" href="#top">cyber:cyber<sup>&trade;</sup></a>
@@ -471,6 +485,16 @@ section.reveal>.wrap{position:relative;}
   </div></section>
 </main>
 
+<section class="index reveal"><div class="wrap">
+    <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Index<span class="ix">07 / SITE</span></div>
+    <div class="idx">
+      <a class="irow" href="#work"><span class="in">01</span><span class="il">Work</span><span class="dots"></span><span class="iv">Selected proof</span></a>
+      <a class="irow" href="#offerings"><span class="in">02</span><span class="il">Studio</span><span class="dots"></span><span class="iv">Rate card &middot; from &pound;5k</span></a>
+      <a class="irow" href="manifesto.html"><span class="in">03</span><span class="il">Manifesto</span><span class="dots"></span><span class="iv">Ten beliefs</span></a>
+      <a class="irow" href="journal.html"><span class="in">04</span><span class="il">Journal</span><span class="dots"></span><span class="iv">Notes</span></a>
+      <a class="irow" href="#contact"><span class="in">05</span><span class="il">Contact</span><span class="dots"></span><span class="iv">Open for Q4</span></a>
+    </div>
+  </div></section>
 <footer><div class="wrap foot" style="align-items:center"><span>&copy; 2026 CYBERCYBER LTD &middot; London</span><svg class="footseal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="arcF" d="M22,60 A38,38 0 0,1 98,60"/></defs><circle cx="60" cy="60" r="53" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/><text text-anchor="middle"><textPath href="#arcF" startOffset="50%">CYBER:CYBER</textPath></text><circle cx="60" cy="53" r="5" fill="currentColor"/><circle cx="60" cy="67" r="5" fill="currentColor"/><text class="stb" x="60" y="88" text-anchor="middle">MMXXVI</text></svg><a href="#top" id="recal">Recalibrate &uarr; top</a></div></footer>
 
 <script>
@@ -544,7 +568,7 @@ section.reveal>.wrap{position:relative;}
     var rx=innerWidth/2,ry=innerHeight/2,tx=rx,ty=ry;
     addEventListener("mousemove",function(e){tx=e.clientX;ty=e.clientY;ret.style.opacity="1";coord.style.opacity="1";coord.style.left=(e.clientX+16)+"px";coord.style.top=(e.clientY+16)+"px";coord.textContent=("000"+e.clientX).slice(-4)+" \u00B7 "+("000"+e.clientY).slice(-4);});
     addEventListener("mouseleave",function(){ret.style.opacity="0";coord.style.opacity="0";});
-    function label(el){if(el.closest(".jrnl")||el.closest(".faq"))return"Read";if(el.tagName==="SUMMARY")return"Open";if(el.id==="email")return"Copy";if(el.closest("#work"))return"View";return"Go";}
+    function label(el){if(el.closest(".proj"))return"Open case \u2197";if(el.closest(".jrnl")||el.closest(".jall"))return"Read \u2197";if(el.tagName==="SUMMARY"||el.closest(".faq"))return"Expand";if(el.id==="email")return"Copy";if(el.closest(".statl"))return"Rates \u2197";if(el.closest("header"))return"Go";return"Go \u2197";}
     document.querySelectorAll("a,button,summary,[role=button]").forEach(function(el){
       el.addEventListener("mouseenter",function(){ret.classList.add("lock");ret.style.width="42px";ret.style.height="42px";verb.textContent=label(el);});
       el.addEventListener("mouseleave",function(){ret.classList.remove("lock");ret.style.width="24px";ret.style.height="24px";});
