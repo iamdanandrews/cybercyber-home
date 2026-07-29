@@ -84,6 +84,9 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .media .ph,.csmedia .ph{background-image:none;}
 .shot.arted{position:relative;}
 .shot.arted::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,11,13,.6),transparent 45%);pointer-events:none;}
+.csintro{font-family:var(--raveo);font-variation-settings:"wght" 340,"opsz" 32;font-size:clamp(19px,2vw,27px);line-height:1.4;color:var(--paper);margin-bottom:6px;}
+.csmeta a{border-bottom:1px solid var(--accent);padding-bottom:2px;}
+.csmeta a:hover{color:var(--paper);}
 </style>
 </head>
 <body>
@@ -100,18 +103,18 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
   <section class="cshero"><div class="wrap">
     <div class="eyebrow"><span class="tick"></span>Case study<span class="ix">01 / GRANITE</span></div>
     <h1 class="csh1" style="view-transition-name:t-granite">Granite</h1>
-    <p class="premise">A native strength coach that rewrites your training every week.</p>
-    <div class="csmeta"><div><b>Role</b><span>Design + build</span></div><div><b>Platform</b><span>iOS &middot; SwiftUI</span></div><div><b>Year</b><span>2026</span></div><div><b>Status</b><span>In development</span></div></div>
+    <p class="premise">An engine that reasons &mdash; not a plan you follow.</p>
+    <div class="csmeta"><div><b>Services</b><span>Native &middot; Agentic &middot; On-device</span></div><div><b>Live</b><span><a href="https://granite.coach" target="_blank" rel="noopener">granite.coach &nearr;</a></span></div><div><b>Role</b><span>Design + build</span></div><div><b>Year</b><span>2026</span></div></div>
   </div>
   <div class="wrap"><div class="csmedia arted" data-reel style="background-image:url('media/work-granite-hero.svg')"><video muted loop playsinline preload="none" aria-hidden="true" data-src=""></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Showreel &middot; Loop</span></div></div>
   </section>
   <section class="csbody"><div class="wrap cs2">
     <div class="cslabel">The work<br>01 / GRANITE</div>
     <div>
-      <div class="block reveal"><h2>The problem</h2><p>Most training apps hand you a fixed plan and never look at it again. Real coaching does the opposite &mdash; it watches what you actually did, and changes what comes next. That judgement is the product; the plan is just its output.</p></div>
-      <div class="block reveal"><h2>The approach</h2><p>Granite reads your logged sessions on-device and rewrites next week&rsquo;s programme around them &mdash; load, fatigue, what you skipped, what you smashed. No cloud round-trip, no data leaving the phone. The coaching intelligence lives in the app, so it works on the gym floor with no signal.</p><div class="shot wide arted" style="background-image:url('media/work-granite-a.svg')"><span>Fig. 01 &mdash; Weekly rewrite &mdash; the coach engine adapting the programme</span></div></div>
-      <div class="block reveal"><h2>The work</h2><p>One pair of hands took it end to end: the deterministic coaching engine, the session-logging interface, the graded-effort and pain model, and the brand. Design and code with no handoff between them.</p><div class="shot arted" style="background-image:url('media/work-granite-b.svg')"><span>Fig. 02 &mdash; Session interface &mdash; logging on the gym floor</span></div></div>
-      <div class="block reveal"><h2>What shipped</h2><p>A native app that behaves like a coach, not a spreadsheet &mdash; on-device, private, and adaptive. [ Add real metrics / App Store status here. ]</p></div>
+      <div class="block reveal"><p class="csintro">Granite is a strength coach that runs entirely on your phone. Not a plan you follow, but an engine that reasons &mdash; building your training around the life you actually train through, rewriting it each week as things change. We built it deterministic and on-device on purpose: your training history never leaves your hands, and every decision it makes can be traced, tested, and trusted.</p></div>
+      <div class="block reveal"><h2>A coach, not a plan</h2><p>Most training apps hand you a fixed plan and hope you follow it. Granite works the other way round. It reasons &mdash; taking your goals, your experience, the days you actually have, your injuries, and the load you carry off the platform &mdash; and builds a week that fits your real life. When something changes, it rewrites, and tells you why. Not a plan you obey. A coach that adapts.</p></div>
+      <div class="block reveal"><h2>The engine is the product</h2><p>The intelligence in Granite is deterministic, not generative &mdash; and that&rsquo;s a deliberate choice, not a limitation. It means every plan is consistent, every decision can be traced, and the whole system can be tested against real coaching principles rather than hoping a black box got it right. Accountable intelligence beats impressive intelligence when it&rsquo;s your body on the line. We built the engine first, and everything else serves it.</p><div class="shot wide arted" style="background-image:url('media/work-granite-a.svg')"><span>Fig. 01 &mdash; The coach engine, adapting the week</span></div></div>
+      <div class="block reveal"><h2>On-device by decision</h2><p>Granite runs entirely on your phone. No account, no cloud, no data leaving your hands &mdash; the privacy isn&rsquo;t a policy you have to trust, it&rsquo;s the architecture. Running locally was the harder path, and it made the product sharper: an engine that can&rsquo;t lean on the cloud has to be deliberate about every decision. That constraint is the craft. Granite is the considered version of something most people build the easy way.</p><div class="shot arted" style="background-image:url('media/work-granite-b.svg')"><span>Fig. 02 &mdash; On-device: no cloud, no account</span></div></div>
     </div>
   </div></section>
   <section class="csnext"><div class="wrap"><a href="work-frame.html"><div class="l">Next case</div><div class="n">Frame<em>.</em></div></a></div></section>
