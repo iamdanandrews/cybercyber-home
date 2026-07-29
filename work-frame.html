@@ -78,6 +78,12 @@ footer{border-top:1px solid var(--line);padding:26px 0;}
 .ivlabel{position:fixed;right:12px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font-family:var(--mono);font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--dim);z-index:120;pointer-events:none;}
 body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cursor:none;}
 @media(hover:none),(pointer:coarse){.reticle,.coord,.ivlabel{display:none!important;}}
+
+.arted{background-size:cover;background-position:center;background-repeat:no-repeat;}
+.frame.arted::before{display:none;}
+.media .ph,.csmedia .ph{background-image:none;}
+.shot.arted{position:relative;}
+.shot.arted::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,11,13,.6),transparent 45%);pointer-events:none;}
 </style>
 </head>
 <body>
@@ -97,14 +103,14 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
     <p class="premise">A BJJ training journal built against the forgetting curve.</p>
     <div class="csmeta"><div><b>Role</b><span>Design + build</span></div><div><b>Platform</b><span>iOS &middot; Native</span></div><div><b>Year</b><span>2026</span></div><div><b>Status</b><span>Live</span></div></div>
   </div>
-  <div class="wrap"><div class="csmedia" data-reel><video muted loop playsinline preload="none" aria-hidden="true" data-src=""></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Showreel &middot; Loop</span></div></div>
+  <div class="wrap"><div class="csmedia arted" data-reel style="background-image:url('media/work-frame-hero.svg')"><video muted loop playsinline preload="none" aria-hidden="true" data-src=""></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Showreel &middot; Loop</span></div></div>
   </section>
   <section class="csbody"><div class="wrap cs2">
     <div class="cslabel">The work<br>02 / FRAME</div>
     <div>
       <div class="block reveal"><h2>The problem</h2><p>What you drill on the mats disappears within days. A notebook doesn&rsquo;t fight that &mdash; it just stores it, and storage isn&rsquo;t memory. The technique you learned last week is already fading while you write it down.</p></div>
-      <div class="block reveal"><h2>The approach</h2><p>Frame is built around recall, not storage &mdash; it surfaces what you&rsquo;re about to forget, when it matters, instead of burying it in a log. A belt-accent identity engine ties the whole interface to where you actually are on the journey, so the app grows up with the practitioner.</p><div class="shot wide"><span>Fig. 01 &mdash; Belt-accent identity &mdash; the interface shifts with rank</span></div></div>
-      <div class="block reveal"><h2>The work</h2><p>Designed and built as one native product: the fast post-session logging flow, the recall model that resurfaces technique, and the identity system that colours the app to your belt.</p><div class="shot"><span>Fig. 02 &mdash; Logging flow &mdash; capture in seconds, straight off the mats</span></div></div>
+      <div class="block reveal"><h2>The approach</h2><p>Frame is built around recall, not storage &mdash; it surfaces what you&rsquo;re about to forget, when it matters, instead of burying it in a log. A belt-accent identity engine ties the whole interface to where you actually are on the journey, so the app grows up with the practitioner.</p><div class="shot wide arted" style="background-image:url('media/work-frame-a.svg')"><span>Fig. 01 &mdash; Belt-accent identity &mdash; the interface shifts with rank</span></div></div>
+      <div class="block reveal"><h2>The work</h2><p>Designed and built as one native product: the fast post-session logging flow, the recall model that resurfaces technique, and the identity system that colours the app to your belt.</p><div class="shot arted" style="background-image:url('media/work-frame-b.svg')"><span>Fig. 02 &mdash; Logging flow &mdash; capture in seconds, straight off the mats</span></div></div>
       <div class="block reveal"><h2>What shipped</h2><p>A native journal people actually keep using, because it earns its place between sessions. [ Add real metrics / retention data here. ]</p></div>
     </div>
   </div></section>

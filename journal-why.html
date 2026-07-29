@@ -72,6 +72,12 @@ footer{border-top:1px solid var(--line);padding:26px 0;margin-top:clamp(60px,10v
 body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cursor:none;}
 @media(hover:none),(pointer:coarse){.reticle,.coord,.ivlabel{display:none!important;}}
 .prose p:first-of-type::first-letter{float:left;font-family:var(--raveo);font-variation-settings:"wght" 620,"opsz" 32;font-size:3.2em;line-height:.72;padding:8px 12px 0 0;color:var(--paper);}
+
+.arted{background-size:cover;background-position:center;background-repeat:no-repeat;}
+.frame.arted::before{display:none;}
+.media .ph,.csmedia .ph{background-image:none;}
+.shot.arted{position:relative;}
+.shot.arted::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,11,13,.6),transparent 45%);pointer-events:none;}
 </style>
 </head>
 <body>
@@ -91,7 +97,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
     <h1 class="ah1">Why cyber:cyber exists</h1>
     <p class="lede">Anyone can build it now. Almost nobody knows if they should.</p>
   </div>
-  <div class="wrap"><div class="frame reveal" style="aspect-ratio:16/9"><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;NOTE&#12301;</span><span class="cap">Fig. 01 &mdash; judgement over execution</span></div></div>
+  <div class="wrap"><div class="frame reveal arted" style="aspect-ratio:16/9;background-image:url('media/journal-why.svg')"><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;NOTE&#12301;</span><span class="cap">Fig. 01 &mdash; judgement over execution</span></div></div>
   </section>
   <article class="prose"><p class="reveal">Execution stopped being the bottleneck. A founder with the right tools ships a working product in a weekend, which means the market is drowning in things that technically function and nobody remembers.</p><p class="reveal">The scarce thing is judgement: knowing what deserves to exist, what to cut, and what the thing should actually do. cyber:cyber exists to bring that to a small number of products a year &mdash; and to build them properly, brand and interface and the code underneath, in one pair of hands.</p><p class="reveal">[ Continue &mdash; Dan to expand: the founding decision. ]</p></article>
   <div class="wrap"><div class="sealwrap reveal"><svg class="seal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="arc3" d="M22,60 A38,38 0 0,1 98,60"/></defs><circle cx="60" cy="60" r="53" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/><text text-anchor="middle"><textPath href="#arc3" startOffset="50%">CYBER:CYBER</textPath></text><circle cx="60" cy="53" r="5" fill="currentColor"/><circle cx="60" cy="67" r="5" fill="currentColor"/><text class="stb" x="60" y="88" text-anchor="middle">MMXXVI</text></svg></div></div>

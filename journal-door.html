@@ -72,6 +72,12 @@ footer{border-top:1px solid var(--line);padding:26px 0;margin-top:clamp(60px,10v
 body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cursor:none;}
 @media(hover:none),(pointer:coarse){.reticle,.coord,.ivlabel{display:none!important;}}
 .prose p:first-of-type::first-letter{float:left;font-family:var(--raveo);font-variation-settings:"wght" 620,"opsz" 32;font-size:3.2em;line-height:.72;padding:8px 12px 0 0;color:var(--paper);}
+
+.arted{background-size:cover;background-position:center;background-repeat:no-repeat;}
+.frame.arted::before{display:none;}
+.media .ph,.csmedia .ph{background-image:none;}
+.shot.arted{position:relative;}
+.shot.arted::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,11,13,.6),transparent 45%);pointer-events:none;}
 </style>
 </head>
 <body>
@@ -91,7 +97,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
     <h1 class="ah1">Building before the door opens</h1>
     <p class="lede">You should be building the thing before you&rsquo;re allowed to.</p>
   </div>
-  <div class="wrap"><div class="frame reveal" style="aspect-ratio:16/9"><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;NOTE&#12301;</span><span class="cap">Fig. 01 &mdash; work in progress</span></div></div>
+  <div class="wrap"><div class="frame reveal arted" style="aspect-ratio:16/9;background-image:url('media/journal-door.svg')"><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;NOTE&#12301;</span><span class="cap">Fig. 01 &mdash; work in progress</span></div></div>
   </section>
   <article class="prose"><p class="reveal">Permission is a trailing indicator. By the time the market, the platform, or the gatekeeper says yes, the interesting position is already taken. The people who own the next thing were building it quietly while everyone else waited to be told it was safe.</p><p class="reveal">That&rsquo;s the whole posture of this studio: build on the frontier before there&rsquo;s a paved road to it &mdash; agents, spatial, wearables &mdash; and bring the same standard we&rsquo;d bring to a shipped product. Not a demo. The real thing, at small scale, early.</p><p class="reveal">[ Continue &mdash; Dan to expand: a specific example of building ahead of the door opening. ]</p></article>
   <div class="wrap"><div class="sealwrap reveal"><svg class="seal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="arc0" d="M22,60 A38,38 0 0,1 98,60"/></defs><circle cx="60" cy="60" r="53" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/><text text-anchor="middle"><textPath href="#arc0" startOffset="50%">CYBER:CYBER</textPath></text><circle cx="60" cy="53" r="5" fill="currentColor"/><circle cx="60" cy="67" r="5" fill="currentColor"/><text class="stb" x="60" y="88" text-anchor="middle">MMXXVI</text></svg></div></div>

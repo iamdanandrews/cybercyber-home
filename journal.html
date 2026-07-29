@@ -72,6 +72,12 @@ footer{border-top:1px solid var(--line);padding:26px 0;margin-top:clamp(60px,10v
 .ivlabel{position:fixed;right:12px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font-family:var(--mono);font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--dim);z-index:120;pointer-events:none;}
 body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cursor:none;}
 @media(hover:none),(pointer:coarse){.reticle,.coord,.ivlabel{display:none!important;}}
+
+.arted{background-size:cover;background-position:center;background-repeat:no-repeat;}
+.frame.arted::before{display:none;}
+.media .ph,.csmedia .ph{background-image:none;}
+.shot.arted{position:relative;}
+.shot.arted::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,11,13,.6),transparent 45%);pointer-events:none;}
 </style>
 </head>
 <body>
@@ -95,22 +101,22 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
   </div></section>
   <section><div class="wrap"><div class="jlist">
       <a class="jrow reveal" href="journal-door.html">
-        <div class="frame"><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;01&#12301;</span><span class="cap">Fig. 01 &mdash; work in progress</span></div>
+        <div class="frame arted" style="background-image:url('media/journal-door.svg')"><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;01&#12301;</span><span class="cap">Fig. 01 &mdash; work in progress</span></div>
         <div><div class="jt">Building before the door opens</div><div class="jx">On building ahead of permission.</div></div>
         <div class="date">Jul 16, 2026</div>
       </a>
       <a class="jrow reveal" href="journal-undocumented.html">
-        <div class="frame"><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;02&#12301;</span><span class="cap">Fig. 01 &mdash; the undocumented layer</span></div>
+        <div class="frame arted" style="background-image:url('media/journal-undocumented.svg')"><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;02&#12301;</span><span class="cap">Fig. 01 &mdash; the undocumented layer</span></div>
         <div><div class="jt">Nobody wrote it down</div><div class="jx">On the tacit layer of product judgement.</div></div>
         <div class="date">Jul 10, 2026</div>
       </a>
       <a class="jrow reveal" href="journal-building.html">
-        <div class="frame"><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;03&#12301;</span><span class="cap">Fig. 01 &mdash; building in public</span></div>
+        <div class="frame arted" style="background-image:url('media/journal-building.svg')"><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;03&#12301;</span><span class="cap">Fig. 01 &mdash; building in public</span></div>
         <div><div class="jt">Building cyber:cyber</div><div class="jx">On building the studio in public.</div></div>
         <div class="date">May 10, 2026</div>
       </a>
       <a class="jrow reveal" href="journal-why.html">
-        <div class="frame"><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;04&#12301;</span><span class="cap">Fig. 01 &mdash; judgement over execution</span></div>
+        <div class="frame arted" style="background-image:url('media/journal-why.svg')"><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;04&#12301;</span><span class="cap">Fig. 01 &mdash; judgement over execution</span></div>
         <div><div class="jt">Why cyber:cyber exists</div><div class="jx">On judgement over execution.</div></div>
         <div class="date">Mar 1, 2026</div>
       </a>
