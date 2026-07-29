@@ -76,7 +76,7 @@ header.solid{background:rgba(11,11,13,.72);backdrop-filter:blur(10px);border-col
 
 .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;padding-bottom:clamp(28px,6vh,64px);}
 .hero .grid{position:absolute;inset:-40px;z-index:0;opacity:.5;will-change:transform;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(120% 90% at 50% 42%,#000 30%,transparent 80%);-webkit-mask-image:radial-gradient(120% 90% at 50% 42%,#000 30%,transparent 80%);}
-.hero .glow{position:absolute;inset:0;z-index:0;background:radial-gradient(120% 80% at 76% 8%,#171220 0%,transparent 55%);}
+.hero .glow{position:absolute;inset:0;z-index:0;background:radial-gradient(85% 52% at 50% 98%,color-mix(in srgb,var(--accent) 8%,transparent) 0%,transparent 62%);}
 .hero .inner{position:relative;z-index:3;max-width:none;}
 .word{font-family:var(--raveo);line-height:.84;letter-spacing:-.045em;text-transform:uppercase;font-size:clamp(40px,10.6vw,340px);white-space:nowrap;cursor:default;text-align:center;}
 .word span{display:inline-block;font-variation-settings:"wght" 100,"opsz" 32;transition:font-variation-settings .16s ease-out;}
@@ -339,7 +339,7 @@ section.reveal>.wrap{position:relative;}
 @media(prefers-reduced-motion:reduce){#about .brush path{stroke-dashoffset:0;}#about .aseal{animation:none;opacity:1;transform:none;}}
 
 /* ambient 12-column grid (exposed Swiss structure) */
-.colgrid{position:fixed;inset:0;z-index:-1;pointer-events:none;max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,64px);opacity:.55;}
+.colgrid{position:fixed;inset:0;z-index:-1;pointer-events:none;max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,64px);opacity:.3;-webkit-mask-image:linear-gradient(90deg,#000,transparent 26%,transparent 74%,#000);mask-image:linear-gradient(90deg,#000,transparent 26%,transparent 74%,#000);}
 .colgrid::before{content:"";display:block;height:100%;background-image:repeating-linear-gradient(90deg,var(--line2) 0 1px,transparent 1px calc(100%/12));-webkit-mask-image:linear-gradient(#000,#000);}
 @media(max-width:760px){.colgrid{display:none;}}
 /* index / colophon */
