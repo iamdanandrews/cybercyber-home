@@ -101,8 +101,8 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .decide h3{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:10px;}
 .decide .kept h3{color:var(--cyan);}.decide .cut h3{color:var(--accent);}
 .decide h3 .b{width:17px;height:17px;border:1px solid currentColor;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;line-height:1;}
-.decide ul{list-style:none;display:flex;flex-direction:column;gap:15px;}
-.decide li{font-family:var(--raveo);font-variation-settings:"wght" 460,"opsz" 32;font-size:clamp(18px,2.05vw,25px);letter-spacing:-.015em;line-height:1.12;color:var(--paper);}
+.decide ul{list-style:none;display:flex;flex-direction:column;gap:16px;counter-reset:dl;}
+.decide li{counter-increment:dl;display:grid;grid-template-columns:20px 1fr;gap:13px;align-items:baseline;font-family:var(--raveo);font-variation-settings:"wght" 460,"opsz" 32;font-size:clamp(18px,2.05vw,25px);letter-spacing:-.015em;line-height:1.12;color:var(--paper);}.decide li::before{content:counter(dl,decimal-leading-zero);font-family:var(--mono);font-variation-settings:normal;font-size:10px;letter-spacing:.08em;color:var(--dim);}
 .decide .cut li{color:var(--paper45);}
 .colophon{margin-top:clamp(50px,8vh,92px);padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:16px 44px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);}
 .colophon b{display:block;color:var(--dim);font-weight:400;margin-bottom:5px;font-size:10px;}
