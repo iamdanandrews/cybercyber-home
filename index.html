@@ -82,9 +82,15 @@ header.solid{background:rgba(11,11,13,.72);backdrop-filter:blur(10px);border-col
 .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;overflow:hidden;background:var(--ground);}
 .fold-bg{position:absolute;inset:0;z-index:0;background:var(--ground);}
 .fold-bg .grid{position:absolute;inset:-40px;z-index:0;opacity:.5;will-change:transform;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(120% 90% at 30% 50%,#000 30%,transparent 78%);-webkit-mask-image:radial-gradient(120% 90% at 30% 50%,#000 30%,transparent 78%);}
-.fold-bg .paper{position:absolute;top:clamp(58px,8vh,82px);right:0;bottom:clamp(52px,9vh,96px);left:50%;z-index:1;background:var(--paper);transform-origin:left center;transform:scaleX(1);transition:transform .9s var(--e1);}
+.fold-bg .paper{position:absolute;top:clamp(58px,8vh,82px);right:0;bottom:0;left:50%;z-index:1;background:var(--paper);transform-origin:left center;transform:scaleX(1);transition:transform .9s var(--e1);}
 .hero.wipe .fold-bg .paper{transform:scaleX(0);}
-.fold-bg .seam{position:absolute;top:clamp(58px,8vh,82px);bottom:clamp(52px,9vh,96px);left:50%;width:1px;z-index:2;background:var(--line2);transform:translateX(-.5px);}
+.fold-bg .seam{position:absolute;top:clamp(58px,8vh,82px);bottom:0;left:50%;width:1px;z-index:2;background:var(--line2);transform:translateX(-.5px);}
+/* labeled section-rule: the fold deliberately opens into the light About */
+.foldbreak{position:relative;z-index:5;background:var(--ground);border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);}
+.foldbreak .wrap{display:flex;justify-content:space-between;align-items:center;padding:15px clamp(20px,5vw,64px);font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;}
+.foldbreak .fa{color:var(--grey);display:flex;align-items:center;gap:12px;}
+.foldbreak .fa .tk{width:7px;height:7px;background:var(--accent);}
+.foldbreak .fb{color:var(--dim);}
 .hero .glow{position:absolute;inset:0;z-index:0;background:radial-gradient(55% 40% at 24% 94%,color-mix(in srgb,var(--accent) 8%,transparent) 0%,transparent 60%);pointer-events:none;}
 .hero .inner{position:relative;z-index:3;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;max-width:none;width:100%;text-align:center;}
 .word{position:relative;display:inline-block;font-family:var(--raveo);font-size:clamp(34px,13.2vw,196px);line-height:1;letter-spacing:-.05em;text-transform:uppercase;white-space:nowrap;cursor:default;}
@@ -433,6 +439,8 @@ section.reveal>.wrap{position:relative;}
     </div>
     <div class="scrollcue" aria-hidden="true">Scroll</div>
   </section>
+
+  <div class="foldbreak"><div class="wrap"><span class="fa"><span class="tk"></span>00 &mdash; The Lab</span><span class="fb">Enter &darr;</span></div></div>
 
   <section id="about" class="reveal light"><div class="wrap aboutwrap">
     <p class="define"><b>cyber:cyber is a <span class="ul">product design lab<svg class="brush" viewBox="0 0 400 22" preserveAspectRatio="none" aria-hidden="true"><path d="M4,15 C64,5 132,19 210,10 C282,2 342,17 396,10" fill="none" stroke="var(--accent)" stroke-width="4.5" stroke-linecap="round"/></svg></span>.</b> <span data-split>We design your product &mdash; the brand, the interface, the whole thing. <span class="mut">And we can build it, too. A few clients a year.</span></span></p>
