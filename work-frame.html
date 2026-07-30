@@ -24,7 +24,7 @@ a{color:inherit;text-decoration:none;}
 @view-transition{navigation:auto;}
 header{view-transition-name:site-header;position:fixed;top:0;left:0;right:0;z-index:200;transition:background .3s,border-color .3s,backdrop-filter .3s;border-bottom:1px solid transparent;}
 header.solid{background:rgba(11,11,13,.72);backdrop-filter:blur(10px);border-color:var(--line);}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0;}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px clamp(20px,5vw,64px);}
 .brand{font-size:13px;letter-spacing:.04em;view-transition-name:brand;}.brand sup{color:var(--grey);}
 .menu{display:flex;gap:22px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;}
 .menu a{color:var(--grey);transition:color .2s;}.menu a:hover{color:var(--paper);}
@@ -107,7 +107,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
     <p class="premise">A BJJ training journal built against the forgetting curve.</p>
     <div class="csmeta"><div><b>Services</b><span>Native &middot; On-device</span></div><div><b>Live</b><span><a href="https://www.framebjj.app" target="_blank" rel="noopener">framebjj.app &nearr;</a></span></div><div><b>Role</b><span>Design + build</span></div><div><b>Year</b><span>2026</span></div></div>
   </div>
-  <div class="wrap"><div class="csmedia arted" data-reel style="background-image:url('media/work-frame-hero.svg')"><video muted loop playsinline preload="none" aria-hidden="true" data-src=""></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Showreel &middot; Loop</span></div></div>
+  <div class="wrap"><div class="csmedia arted" data-reel style="background-image:url('media/work-frame-hero.svg')"><video muted loop playsinline preload="none" aria-hidden="true" data-src="media/frame-reel.mp4"></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Showreel &middot; Loop</span></div></div>
   </section>
   <section class="csbody"><div class="wrap cs2">
     <div class="cslabel">The work<br>02 / FRAME</div>
@@ -118,7 +118,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
       <div class="block reveal"><h2>The app wears your belt</h2><p>Frame is built for the belt journey and it shows it &mdash; the whole app takes on the colour of your rank and changes with you as you&rsquo;re promoted. It runs offline-first and keeps your training history yours: saved the instant you log it, private, exportable, never sold. The goal underneath every decision is simple and hard: make the progress you can&rsquo;t feel visible, so the belts who&rsquo;d otherwise quit have a reason to come back for the next stripe &mdash; not more features, but more people still on the mat a year from now.</p><div class="shot arted" style="background-image:url('media/work-frame-a.svg')"><span>Fig. 02 &mdash; The interface takes your belt colour</span></div></div>
     </div>
   </div></section>
-  <section class="csnext"><div class="wrap"><a href="work-granite.html"><div class="l">Next case</div><div class="n">Granite<em>.</em></div></a></div></section>
+  <section class="csnext"><div class="wrap"><a href="work-guide.html"><div class="l">Next case</div><div class="n">Guide<em>.</em></div></a></div></section>
 </main>
 <footer><div class="wrap foot"><span>&copy; 2026 CYBERCYBER LTD &middot; London</span><a href="./">Home &uarr;</a></div></footer>
 <script>

@@ -61,7 +61,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary,bod
 @view-transition{navigation:auto;}
 header{view-transition-name:site-header;position:fixed;top:0;left:0;right:0;z-index:200;border-bottom:1px solid transparent;transition:background .3s,border-color .3s,backdrop-filter .3s;}
 header.solid{background:rgba(11,11,13,.72);backdrop-filter:blur(10px);border-color:var(--line);}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0;}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px clamp(20px,5vw,64px);}
 .brand{font-size:13px;letter-spacing:.04em;}.brand sup{color:var(--grey);}
 .menu{display:flex;gap:22px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;}
 .menu a{display:flex;gap:6px;align-items:baseline;color:var(--grey);transition:color .2s;}
@@ -418,15 +418,19 @@ section.reveal>.wrap{position:relative;}
     <p class="lead">We don't just design for clients. We design, brand and build our own products &mdash; and ship them into the world.</p>
     <div class="reel">
       <a class="proj" href="work-granite.html">
-        <div class="media arted" data-reel style="background-image:url('media/work-granite-hero.svg')"><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src=""></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Reel 01 &middot; Loop</span><span class="mgo">View case &rarr;</span></div>
+        <div class="media arted" data-reel style="background-image:url('media/work-granite-hero.svg')"><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src="media/granite-reel.mp4"></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Reel 01 &middot; Loop</span><span class="mgo">View case &rarr;</span></div>
         <div class="pinfo"><div class="pn" style="view-transition-name:t-granite">Granite<em>.</em></div><div class="pd">A native strength coach that rewrites your training every week.</div><div class="pm"><span>iOS &middot; SwiftUI</span><span>On-device AI</span><span>2026</span></div></div>
       </a>
       <a class="proj" href="work-frame.html">
-        <div class="media arted" data-reel style="background-image:url('media/work-frame-hero.svg')"><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src=""></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Reel 02 &middot; Loop</span><span class="mgo">View case &rarr;</span></div>
+        <div class="media arted" data-reel style="background-image:url('media/work-frame-hero.svg')"><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src="media/frame-reel.mp4"></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Reel 02 &middot; Loop</span><span class="mgo">View case &rarr;</span></div>
         <div class="pinfo"><div class="pn" style="view-transition-name:t-frame">Frame<em>.</em></div><div class="pd">A BJJ training journal built against the forgetting curve.</div><div class="pm"><span>iOS &middot; Native</span><span>Belt-accent identity</span><span>2026</span></div></div>
       </a>
+      <a class="proj" href="work-guide.html">
+        <div class="media arted" style="background-image:url('media/work-guide-hero.svg')"><span class="mtag">Reel 03 &middot; Concept</span><span class="mgo">View case &rarr;</span></div>
+        <div class="pinfo"><div class="pn" style="view-transition-name:t-guide">Guide<em>.</em></div><div class="pd">A hands-free, on-device agent for smart glasses.</div><div class="pm"><span>Spatial &middot; On-device</span><span>Accessibility-first</span><span>2026</span></div></div>
+      </a>
       <a class="proj" href="#contact" aria-label="Brand engine (in progress)">
-        <div class="media arted" data-reel style="background-image:url('media/work-engine.svg')"><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src=""></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Reel 03 &middot; In progress</span><span class="mgo">Enquire &rarr;</span></div>
+        <div class="media arted" data-reel style="background-image:url('media/work-engine.svg')"><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src=""></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Reel 04 &middot; In progress</span><span class="mgo">Enquire &rarr;</span></div>
         <div class="pinfo"><div class="pn">Brand engine<em>.</em></div><div class="pd">A generative brand engine for a decentralised AI network.</div><div class="pm"><span>Generative</span><span>Brand system</span><span>2026</span></div></div>
       </a>
     </div>
