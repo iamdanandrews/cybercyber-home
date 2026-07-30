@@ -56,6 +56,11 @@ header.solid{background:rgba(10,10,11,.7);backdrop-filter:blur(10px);border-colo
 
 /* BELIEFS — big ghost numeral (Swiss/editorial) + generous ma; alternating */
 .beliefs{padding:clamp(20px,4vh,60px) 0 0;}
+.void{position:relative;min-height:clamp(170px,28vh,320px);border-top:1px solid var(--line);}
+.void .vline{position:absolute;left:33%;bottom:0;width:1px;height:46%;background:linear-gradient(to top,var(--line2),transparent);}
+.void .vnode{position:absolute;left:33%;bottom:46%;width:7px;height:7px;border:1px solid var(--paper35);border-radius:50%;transform:translate(-50%,50%);}
+.void .vcoord{position:absolute;right:clamp(22px,6vw,90px);top:clamp(22px,5vh,50px);font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--paper35);opacity:.72;font-variant-numeric:tabular-nums;}
+@media(max-width:600px){.void{min-height:clamp(120px,20vh,190px);}}
 .belief{position:relative;border-top:1px solid var(--line);padding:clamp(94px,19vh,240px) 0 clamp(50px,10vh,138px);display:grid;grid-template-columns:auto 1fr;gap:clamp(16px,2.6vw,52px);align-items:center;}
 .belief.rev{grid-template-columns:1fr auto;}
 .belief.rev .num{order:2;text-align:right;}
@@ -141,6 +146,8 @@ footer{border-top:1px solid var(--line);padding:28px 0;}
       <p class="lede">Anyone can build it now. Almost nobody knows if they should. What a product design lab believes about judgement, refusal, and what's worth building &mdash; rather than just shipping fast.</p>
     </div>
   </div></section>
+
+  <div class="void" aria-hidden="true"><span class="vline"></span><span class="vnode"></span><span class="vcoord">00 &rarr; 01</span></div>
 
   <div class="beliefs wrap">
     <article class="belief" data-n="1"><div class="num">01</div><div class="txt"><div class="st">Anyone can build it now. Almost nobody knows if they should.</div><div class="rule"></div><p class="bd">Execution stopped being the hard part. Deciding what deserves to exist, what to cut, and what the thing should actually do &mdash; that's where products are won and lost. It doesn't come from a model or a process. It comes from having been wrong enough times to see it early.</p></div></article>
