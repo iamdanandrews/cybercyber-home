@@ -15,18 +15,19 @@
 <body>
 <a class="skip" href="#top">Skip to content</a>
 <style>
-@font-face{font-family:"Raveo";src:url("RaveoVF.woff2") format("woff2");font-weight:100 900;font-stretch:normal;font-display:swap;}
+@font-face{font-family:"Raveo";src:url("RaveoVF.woff2") format("woff2");font-weight:100 900;font-stretch:normal;font-display:block;}
 :root{
   --ground:#0B0B0D; --paper:#F2ECEF; --paper70:#C3BEC6; --paper45:#9E9BA6;
   --accent:#EA4E32; --accent-ink:#0B0B0D; --cyan:#22D3EE; --cool:#22D3EE;
   --violet:#A855F7; --magenta:#FF4D8D; --lime:#C6F24E; --blue:#2E8BFF; --coral:#FF6B4A;
-  --grey:#948FA0; --dim:#7A7784; --line:#211F27; --line2:#2C2A33;
+  --grey:#948FA0; --dim:#8C8996; --line:#211F27; --line2:#2C2A33;
   --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
   --sans:"Helvetica Neue",Helvetica,"Segoe UI",system-ui,Arial,sans-serif;
   --raveo:"Raveo","Helvetica Neue",Helvetica,Arial,sans-serif; --maxw:1280px;
   --e1:cubic-bezier(.2,.7,.2,1); --e2:cubic-bezier(.76,0,.24,1);
 }
 *{box-sizing:border-box;margin:0;padding:0;}
+@media (prefers-contrast:more){:root{--paper70:#E7E3EA;--paper45:#D2CDD9;--grey:#C9C4D1;--dim:#B6B1C0;--line:#3B3843;--line2:#4A4751;}}
 html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%;}
 body{background:var(--ground);color:var(--paper);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 a{color:inherit;text-decoration:none;}
@@ -430,7 +431,7 @@ section.reveal>.wrap{position:relative;}
         <div class="pinfo"><div class="pn" style="view-transition-name:t-frame">Frame<em>.</em></div><div class="pd">A BJJ training journal built against the forgetting curve.</div><div class="pm"><span>iOS &middot; Native</span><span>Belt-accent identity</span><span>2026</span></div></div>
       </a>
       <a class="proj" href="#contact" aria-label="Brand engine (in progress)">
-        <div class="media arted" style="background-image:url('media/work-engine.svg')"><span class="mtag">Reel 03</span><span class="mgo">Enquire &rarr;</span></div>
+        <div class="media arted" data-reel style="background-image:url('media/work-engine.svg')"><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src="media/engine-reel.mp4"></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Reel 03 &middot; Loop</span><span class="mgo">Enquire &rarr;</span></div>
         <div class="pinfo"><span class="chip"><span class="dot"></span>In&nbsp;progress</span><div class="pn">Brand engine<em>.</em></div><div class="pd">A generative brand engine for a decentralised AI network.</div><div class="pm"><span>Generative</span><span>Brand system</span><span>2026</span></div></div>
       </a>
     </div>
