@@ -289,9 +289,9 @@ section.reveal>.wrap{position:relative;}
 /* --- video-led work reel --- */
 .statl{transition:color .2s;position:relative;}
 .statl:hover{color:var(--paper);}
-.reel{margin-top:clamp(34px,5vw,64px);display:flex;flex-direction:column;gap:clamp(30px,5vw,80px);}
-.proj{display:grid;grid-template-columns:1fr;gap:clamp(16px,2vw,26px);align-items:center;}
-.media{position:relative;aspect-ratio:16/10;background:#0e0d12;border:1px solid var(--line);overflow:hidden;}
+.reel{margin-top:clamp(34px,5vw,64px);display:flex;flex-direction:column;gap:clamp(60px,10vw,150px);}
+.proj{display:grid;grid-template-columns:1fr;gap:clamp(20px,3vw,34px);align-items:center;}
+.media{position:relative;aspect-ratio:2/3;max-width:440px;width:100%;margin-inline:auto;background:#0e0d12;border:1px solid var(--line);overflow:hidden;}
 .media .rv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s;}
 .media.playing .rv{opacity:1;}
 .media .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:46px 46px;background-position:center;}
@@ -308,7 +308,11 @@ section.reveal>.wrap{position:relative;}
 .pn em{font-style:normal;color:var(--paper);}
 .pd{color:var(--paper70);font-size:clamp(14px,1.5vw,17px);max-width:42ch;}
 .pm{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin-top:2px;}
-@media(min-width:820px){.proj{grid-template-columns:1.5fr 1fr;gap:clamp(30px,4vw,64px);}.proj:nth-child(even) .media{order:2;}}.footseal{width:76px;height:76px;color:var(--accent);flex:none;view-transition-name:brand-seal;}.footseal text{font-family:var(--mono);font-size:8.4px;letter-spacing:1.2px;fill:currentColor;}.footseal .stb{font-size:7px;letter-spacing:2.2px;}
+.chip{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);border:1px solid var(--line2);border-radius:999px;padding:6px 13px 6px 11px;line-height:1;}
+.chip .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);animation:chippulse 2.4s var(--e1) infinite;}
+@keyframes chippulse{0%{box-shadow:0 0 0 0 rgba(34,211,238,.55);}70%{box-shadow:0 0 0 8px rgba(34,211,238,0);}100%{box-shadow:0 0 0 0 rgba(34,211,238,0);}}
+@media(prefers-reduced-motion:reduce){.chip .dot{animation:none;}}
+@media(min-width:820px){.proj{grid-template-columns:1fr 1fr;gap:clamp(40px,5vw,96px);}.proj .media{margin-inline:0;justify-self:end;}.proj .pinfo{padding-block:clamp(10px,3vw,40px);}.proj:nth-child(even) .media{order:2;justify-self:start;}}.footseal{width:76px;height:76px;color:var(--accent);flex:none;view-transition-name:brand-seal;}.footseal text{font-family:var(--mono);font-size:8.4px;letter-spacing:1.2px;fill:currentColor;}.footseal .stb{font-size:7px;letter-spacing:2.2px;}
 
 /* offerings rate card */
 .offers .offer{grid-template-columns:34px 1fr auto;align-items:center;gap:clamp(16px,3vw,50px);}
@@ -426,8 +430,8 @@ section.reveal>.wrap{position:relative;}
         <div class="pinfo"><div class="pn" style="view-transition-name:t-frame">Frame<em>.</em></div><div class="pd">A BJJ training journal built against the forgetting curve.</div><div class="pm"><span>iOS &middot; Native</span><span>Belt-accent identity</span><span>2026</span></div></div>
       </a>
       <a class="proj" href="#contact" aria-label="Brand engine (in progress)">
-        <div class="media arted" data-reel style="background-image:url('media/work-engine.svg')"><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src=""></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Reel 03 &middot; In progress</span><span class="mgo">Enquire &rarr;</span></div>
-        <div class="pinfo"><div class="pn">Brand engine<em>.</em></div><div class="pd">A generative brand engine for a decentralised AI network.</div><div class="pm"><span>Generative</span><span>Brand system</span><span>2026</span></div></div>
+        <div class="media arted" style="background-image:url('media/work-engine.svg')"><span class="mtag">Reel 03</span><span class="mgo">Enquire &rarr;</span></div>
+        <div class="pinfo"><span class="chip"><span class="dot"></span>In&nbsp;progress</span><div class="pn">Brand engine<em>.</em></div><div class="pd">A generative brand engine for a decentralised AI network.</div><div class="pm"><span>Generative</span><span>Brand system</span><span>2026</span></div></div>
       </a>
     </div>
     <div class="collab"><span class="lbl">Past collaborations</span></div>
