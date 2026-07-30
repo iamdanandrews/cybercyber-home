@@ -89,6 +89,19 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .csintro{font-family:var(--raveo);font-variation-settings:"wght" 340,"opsz" 32;font-size:clamp(19px,2vw,27px);line-height:1.4;color:var(--paper);margin-bottom:6px;}
 .csmeta a{border-bottom:1px solid var(--accent);padding-bottom:2px;}
 .csmeta a:hover{color:var(--paper);}
+.decide{margin:clamp(50px,8vh,92px) 0 0;padding-top:28px;border-top:1px solid var(--line);}
+.decide .dl{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:clamp(22px,3vw,38px);letter-spacing:-.02em;line-height:1.05;margin-bottom:clamp(24px,4vw,42px);max-width:22ch;}
+.decide .cols{display:grid;grid-template-columns:1fr;gap:30px;}
+@media(min-width:720px){.decide .cols{grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);}}
+.decide h3{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+.decide .kept h3{color:var(--cyan);}.decide .cut h3{color:var(--accent);}
+.decide h3 .b{width:17px;height:17px;border:1px solid currentColor;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;line-height:1;}
+.decide ul{list-style:none;display:flex;flex-direction:column;gap:15px;}
+.decide li{font-family:var(--raveo);font-variation-settings:"wght" 460,"opsz" 32;font-size:clamp(18px,2.05vw,25px);letter-spacing:-.015em;line-height:1.12;color:var(--paper);}
+.decide .cut li{color:var(--paper45);}
+.colophon{margin-top:clamp(50px,8vh,92px);padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:16px 44px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);}
+.colophon b{display:block;color:var(--dim);font-weight:400;margin-bottom:5px;font-size:10px;}
+.colophon span{color:var(--paper);}
 </style>
 </head>
 <body>
@@ -117,6 +130,14 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
       <div class="block reveal"><h2>Built against the forgetting curve</h2><p>A single session throws four or five details at you &mdash; the grip, the angle, the small correction that made the sweep finally work &mdash; and within a week almost all of them are gone. Frame is built around that decay rather than despite it. Everything you log comes back to you on a schedule: a few days later, then a week, then a month, timed to land just before you&rsquo;d lose it. There&rsquo;s nothing to revise and no flashcards to sit down with &mdash; the app works out what&rsquo;s about to fade and puts it in front of you. Retention is the product, and it&rsquo;s the one thing a notebook has never done.</p></div>
       <div class="block reveal"><h2>The log you&rsquo;ll actually keep</h2><p>Everyone knows they should keep a training journal. Almost nobody does, because writing one up after an hour of getting choked is the last thing you want to do. Frame removes the friction: talk for thirty seconds in the car &mdash; &ldquo;started in closed guard, hit a scissor sweep to mount, got swept, tapped to an armbar&rdquo; &mdash; and it transcribes on-device and turns it into a structured session you just confirm. Then it reads your game back to you: the positions you live in, the subs you land, the ones that keep catching you, and hands you one or two specific things to hunt next session. A plan, not a feed.</p><div class="shot wide arted" style="background-image:url('media/work-frame-b.svg')"><span>Fig. 01 &mdash; Recall, timed to the forgetting curve</span></div></div>
       <div class="block reveal"><h2>The app wears your belt</h2><p>Frame is built for the belt journey and it shows it &mdash; the whole app takes on the colour of your rank and changes with you as you&rsquo;re promoted. It runs offline-first and keeps your training history yours: saved the instant you log it, private, exportable, never sold. The goal underneath every decision is simple and hard: make the progress you can&rsquo;t feel visible, so the belts who&rsquo;d otherwise quit have a reason to come back for the next stripe &mdash; not more features, but more people still on the mat a year from now.</p><div class="shot arted" style="background-image:url('media/work-frame-a.svg')"><span>Fig. 02 &mdash; The interface takes your belt colour</span></div></div>
+      <div class="decide reveal">
+        <div class="dl">Built by choosing what to leave out.</div>
+        <div class="cols">
+          <div class="col kept"><h3><span class="b">+</span>Kept</h3><ul><li>A thirty-second voice log, transcribed on-device</li><li>Recall timed to the forgetting curve</li><li>An identity that wears your belt</li></ul></div>
+          <div class="col cut"><h3><span class="b">&minus;</span>Cut</h3><ul><li>Typing up a session after training</li><li>A social feed to scroll</li><li>Your training history living on our servers</li></ul></div>
+        </div>
+      </div>
+      <div class="colophon reveal"><div><b>Stack</b><span>Swift &middot; SwiftUI &middot; on-device transcription</span></div><div><b>Timeline</b><span>2026</span></div><div><b>Hands</b><span>Designed &amp; built by one person</span></div><div><b>Constraint</b><span>Offline-first. Exportable. Never sold.</span></div></div>
     </div>
   </div></section>
   <section class="csnext"><div class="wrap"><a href="work-granite.html"><div class="l">Next case</div><div class="n">Granite<em>.</em></div></a></div></section>

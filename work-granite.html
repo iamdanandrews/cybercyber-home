@@ -89,6 +89,19 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .csintro{font-family:var(--raveo);font-variation-settings:"wght" 340,"opsz" 32;font-size:clamp(19px,2vw,27px);line-height:1.4;color:var(--paper);margin-bottom:6px;}
 .csmeta a{border-bottom:1px solid var(--accent);padding-bottom:2px;}
 .csmeta a:hover{color:var(--paper);}
+.decide{margin:clamp(50px,8vh,92px) 0 0;padding-top:28px;border-top:1px solid var(--line);}
+.decide .dl{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:clamp(22px,3vw,38px);letter-spacing:-.02em;line-height:1.05;margin-bottom:clamp(24px,4vw,42px);max-width:22ch;}
+.decide .cols{display:grid;grid-template-columns:1fr;gap:30px;}
+@media(min-width:720px){.decide .cols{grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);}}
+.decide h3{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+.decide .kept h3{color:var(--cyan);}.decide .cut h3{color:var(--accent);}
+.decide h3 .b{width:17px;height:17px;border:1px solid currentColor;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;line-height:1;}
+.decide ul{list-style:none;display:flex;flex-direction:column;gap:15px;}
+.decide li{font-family:var(--raveo);font-variation-settings:"wght" 460,"opsz" 32;font-size:clamp(18px,2.05vw,25px);letter-spacing:-.015em;line-height:1.12;color:var(--paper);}
+.decide .cut li{color:var(--paper45);}
+.colophon{margin-top:clamp(50px,8vh,92px);padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:16px 44px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);}
+.colophon b{display:block;color:var(--dim);font-weight:400;margin-bottom:5px;font-size:10px;}
+.colophon span{color:var(--paper);}
 </style>
 </head>
 <body>
@@ -117,6 +130,14 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
       <div class="block reveal"><h2>A coach, not a plan</h2><p>Most training apps hand you a fixed plan and hope you follow it. Granite works the other way round. It reasons &mdash; taking your goals, your experience, the days you actually have, your injuries, and the load you carry off the platform &mdash; and builds a week that fits your real life. When something changes, it rewrites, and tells you why. Not a plan you obey. A coach that adapts.</p></div>
       <div class="block reveal"><h2>The engine is the product</h2><p>The intelligence in Granite is deterministic, not generative &mdash; and that&rsquo;s a deliberate choice, not a limitation. It means every plan is consistent, every decision can be traced, and the whole system can be tested against real coaching principles rather than hoping a black box got it right. Accountable intelligence beats impressive intelligence when it&rsquo;s your body on the line. We built the engine first, and everything else serves it.</p><div class="shot wide arted" style="background-image:url('media/work-granite-a.svg')"><span>Fig. 01 &mdash; The coach engine, adapting the week</span></div></div>
       <div class="block reveal"><h2>On-device by decision</h2><p>Granite runs entirely on your phone. No account, no cloud, no data leaving your hands &mdash; the privacy isn&rsquo;t a policy you have to trust, it&rsquo;s the architecture. Running locally was the harder path, and it made the product sharper: an engine that can&rsquo;t lean on the cloud has to be deliberate about every decision. That constraint is the craft. Granite is the considered version of something most people build the easy way.</p><div class="shot arted" style="background-image:url('media/work-granite-b.svg')"><span>Fig. 02 &mdash; On-device: no cloud, no account</span></div></div>
+      <div class="decide reveal">
+        <div class="dl">The product is the decisions we refused to skip.</div>
+        <div class="cols">
+          <div class="col kept"><h3><span class="b">+</span>Kept</h3><ul><li>A deterministic engine you can trace</li><li>On-device &mdash; no account, no cloud</li><li>A weekly rewrite that explains itself</li></ul></div>
+          <div class="col cut"><h3><span class="b">&minus;</span>Cut</h3><ul><li>A generative black box guessing your plan</li><li>Cloud sync and sign-in</li><li>Streaks, badges, a feed to scroll</li></ul></div>
+        </div>
+      </div>
+      <div class="colophon reveal"><div><b>Stack</b><span>Swift &middot; SwiftUI &middot; on-device</span></div><div><b>Timeline</b><span>2026</span></div><div><b>Hands</b><span>Designed &amp; built by one person</span></div><div><b>Constraint</b><span>No cloud. No account. No black box.</span></div></div>
     </div>
   </div></section>
   <section class="csnext"><div class="wrap"><a href="work-frame.html"><div class="l">Next case</div><div class="n">Frame<em>.</em></div></a></div></section>
