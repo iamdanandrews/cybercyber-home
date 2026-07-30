@@ -128,6 +128,17 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .mech .t.gain .th{color:var(--cyan);}.mech .t.gain .th .tk{background:var(--cyan);}
 .mech .t.cost .th{color:var(--accent);}.mech .t.cost .th .tk{background:var(--accent);}
 .mech .t p{color:var(--paper70);font-size:clamp(15px,1.5vw,17px);line-height:1.6;}
+/* product-led hero */
+.cshgrid{display:grid;grid-template-columns:1fr;gap:clamp(38px,7vw,60px);align-items:center;}
+@media(min-width:920px){.cshgrid{grid-template-columns:1.02fr auto;gap:clamp(48px,6vw,96px);}}
+.cshtext{min-width:0;}
+.cshmedia{margin:0;display:flex;flex-direction:column;gap:15px;align-items:center;}
+@media(min-width:920px){.cshmedia{align-items:flex-start;justify-self:end;}}
+.device-lg{width:min(288px,72vw);box-shadow:0 44px 110px rgba(0,0,0,.62);}
+.cshcap{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);display:flex;align-items:center;gap:9px;}
+.cshcap .dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 4px rgba(34,211,238,.16);}
+/* alternated figure rhythm */
+@media(min-width:681px){.pfig.flip{grid-template-columns:1fr auto;}.pfig.flip .device{order:2;justify-self:end;}.pfig.flip .pcap{order:1;text-align:right;}}
 </style>
 </head>
 <body>
@@ -141,21 +152,26 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 <div class="ivlabel" aria-hidden="true">cyber:cyber &mdash; London</div>
 
 <main id="cs">
-  <section class="cshero"><div class="wrap">
-    <div class="eyebrow"><span class="tick"></span>Case study<span class="ix">02 / FRAME</span></div>
-    <h1 class="csh1" style="view-transition-name:t-frame">Frame</h1>
-    <p class="premise">A BJJ training journal built against the forgetting curve.</p>
-    <div class="csmeta"><div><b>Services</b><span>Native &middot; On-device</span></div><div><b>Site</b><span><a href="https://www.framebjj.app" target="_blank" rel="noopener">framebjj.app &nearr;</a></span></div><div><b>Role</b><span>Design + build</span></div><div><b>Status</b><span>Alpha</span></div><div><b>Year</b><span>2026</span></div></div>
+  <section class="cshero"><div class="wrap cshgrid">
+    <div class="cshtext">
+      <div class="eyebrow"><span class="tick"></span>Case study<span class="ix">02 / FRAME</span></div>
+      <h1 class="csh1" style="view-transition-name:t-frame">Frame</h1>
+      <p class="premise">A BJJ training journal built against the forgetting curve.</p>
+      <div class="csmeta"><div><b>Services</b><span>Native &middot; On-device</span></div><div><b>Site</b><span><a href="https://www.framebjj.app" target="_blank" rel="noopener">framebjj.app &nearr;</a></span></div><div><b>Role</b><span>Design + build</span></div><div><b>Status</b><span>Alpha</span></div><div><b>Year</b><span>2026</span></div></div>
+    </div>
+    <figure class="cshmedia reveal">
+      <div class="device device-lg"><img src="media/shots/f-retention.png" alt="Frame — your game, quantified from your own sessions" loading="eager" width="680" height="1478"></div>
+      <figcaption class="cshcap"><span class="dot"></span>Your game, built from logged sessions</figcaption>
+    </figure>
   </div>
-  <div class="wrap"><div class="csmedia arted" data-reel style="background-image:url('media/work-frame-hero.svg');view-transition-name:m-frame"><video muted loop playsinline preload="none" aria-hidden="true" data-src="media/frame-reel.mp4"></video><div class="ph"><span class="pp">&#9654;</span></div><span class="vtoggle" role="button" tabindex="0" aria-label="Play or pause">&#10073;&#10073;</span><span class="mtag">Showreel &middot; Loop</span></div></div>
   </section>
   <section class="csbody"><div class="wrap cs2">
     <div class="cslabel">The work<br>02 / FRAME</div>
     <div>
       <div class="block reveal"><p class="csintro">Frame is a BJJ training journal built on a hard truth: you forget most of what you&rsquo;re taught within days. Log a session in seconds by voice, and Frame holds every technique, brings it back just before you&rsquo;d forget it, and shows you &mdash; in plain data &mdash; that you&rsquo;re actually improving. Built for the belts who feel stuck, so they have a reason to keep turning up.</p></div>
-      <div class="block reveal"><h2>Built against the forgetting curve</h2><p>A single session throws four or five details at you &mdash; the grip, the angle, the small correction that made the sweep finally work &mdash; and within a week almost all of them are gone. Frame is built around that decay rather than despite it. Everything you log comes back to you on a schedule: a few days later, then a week, then a month, timed to land just before you&rsquo;d lose it. There&rsquo;s nothing to revise and no flashcards to sit down with &mdash; the app works out what&rsquo;s about to fade and puts it in front of you. Retention is the product, and it&rsquo;s the one thing a notebook has never done.</p></div>
-      <div class="block reveal"><h2>The log you&rsquo;ll actually keep</h2><p>Everyone knows they should keep a training journal. Almost nobody does, because writing one up after an hour of getting choked is the last thing you want to do. Frame removes the friction: talk for thirty seconds in the car &mdash; &ldquo;started in closed guard, hit a scissor sweep to mount, got swept, tapped to an armbar&rdquo; &mdash; and it transcribes on-device and turns it into a structured session you just confirm. Then it reads your game back to you: the positions you live in, the subs you land, the ones that keep catching you, and hands you one or two specific things to hunt next session. A plan, not a feed.</p><div class="pfig"><div class="device"><img src="media/shots/f-log.png" alt="Frame — log a session" loading="lazy"></div><div class="pcap"><span class="pn">Fig. 01 &middot; Frame &middot; log a session</span><span class="pd">Thirty seconds of voice in the car &mdash; transcribed on-device into a structured session you just confirm.</span></div></div></div>
-      <div class="block reveal"><h2>The app wears your belt</h2><p>Frame is built for the belt journey and it shows it &mdash; the whole app takes on the colour of your rank and changes with you as you&rsquo;re promoted. It runs offline-first and keeps your training history yours: saved the instant you log it, private, exportable, never sold. The goal underneath every decision is simple and hard: make the progress you can&rsquo;t feel visible, so the belts who&rsquo;d otherwise quit have a reason to come back for the next stripe &mdash; not more features, but more people still on the mat a year from now.</p><div class="pfig"><div class="device"><img src="media/shots/f-game.png" alt="Frame — your game, built from your sessions" loading="lazy"></div><div class="pcap"><span class="pn">Fig. 02 &middot; Frame &middot; your game</span><span class="pd">From those logs Frame builds your game &mdash; the positions you live in, and how well each is sticking. The interface wears your rank&rsquo;s colour.</span></div></div></div>
+      <div class="block reveal"><h2>Built against the forgetting curve</h2><p>A single session throws four or five details at you &mdash; the grip, the angle, the small correction that made the sweep finally work &mdash; and within a week almost all of them are gone. Frame is built around that decay rather than despite it. Everything you log comes back to you on a schedule: a few days later, then a week, then a month, timed to land just before you&rsquo;d lose it. There&rsquo;s nothing to revise and no flashcards to sit down with &mdash; the app works out what&rsquo;s about to fade and puts it in front of you. Retention is the product, and it&rsquo;s the one thing a notebook has never done.</p><div class="pfig"><div class="device"><img src="media/shots/f-game.png" alt="Frame — how well each technique is sticking" loading="lazy" width="680" height="1478"></div><div class="pcap"><span class="pn">Fig. 01 &middot; Frame &middot; how it&rsquo;s sticking</span><span class="pd">The forgetting curve, measured. Frame watches what&rsquo;s fading and brings it back before it&rsquo;s gone.</span></div></div></div>
+      <div class="block reveal"><h2>The log you&rsquo;ll actually keep</h2><p>Everyone knows they should keep a training journal. Almost nobody does, because writing one up after an hour of getting choked is the last thing you want to do. Frame removes the friction: talk for thirty seconds in the car &mdash; &ldquo;started in closed guard, hit a scissor sweep to mount, got swept, tapped to an armbar&rdquo; &mdash; and it transcribes on-device and turns it into a structured session you just confirm. Then it reads your game back to you: the positions you live in, the subs you land, the ones that keep catching you, and hands you one or two specific things to hunt next session. A plan, not a feed.</p><div class="pfig flip"><div class="device"><img src="media/shots/f-log.png" alt="Frame — log a session by voice" loading="lazy" width="680" height="1478"></div><div class="pcap"><span class="pn">Fig. 02 &middot; Frame &middot; log a session</span><span class="pd">Thirty seconds of voice in the car &mdash; transcribed on-device into a structured session you just confirm.</span></div></div></div>
+      <div class="block reveal"><h2>The app wears your belt</h2><p>Frame is built for the belt journey and it shows it &mdash; the whole app takes on the colour of your rank and changes with you as you&rsquo;re promoted. It runs offline-first and keeps your training history yours: saved the instant you log it, private, exportable, never sold. The goal underneath every decision is simple and hard: make the progress you can&rsquo;t feel visible, so the belts who&rsquo;d otherwise quit have a reason to come back for the next stripe &mdash; not more features, but more people still on the mat a year from now.</p></div>
       <div class="decide reveal">
         <div class="dl">Built by choosing what to leave out.</div>
         <div class="cols">
