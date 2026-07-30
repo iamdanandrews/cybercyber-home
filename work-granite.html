@@ -116,6 +116,18 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .device .belt{position:absolute;left:12px;bottom:12px;font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.75);z-index:2;transition:opacity .3s;}
 .pcap .pn{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-bottom:12px;}
 .pcap .pd{font-family:var(--raveo);font-variation-settings:"wght" 420,"opsz" 32;font-size:clamp(19px,2.1vw,28px);letter-spacing:-.015em;line-height:1.18;color:var(--paper);}
+.mech{margin-top:clamp(52px,8vh,96px);}
+.mech .mlabel{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:14px;}
+.mech h2{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:clamp(24px,3.4vw,42px);letter-spacing:-.02em;line-height:1.02;margin-bottom:16px;}
+.mech>p{color:var(--paper70);font-size:clamp(15px,1.5vw,18px);line-height:1.65;max-width:60ch;}
+.mech .mdiagram{aspect-ratio:16/9;background:var(--s1);border:1px solid var(--line);background-size:contain;background-repeat:no-repeat;background-position:center;margin:clamp(26px,4vw,40px) 0;}
+.mech .trade{display:grid;grid-template-columns:1fr;gap:26px;padding-top:24px;border-top:1px solid var(--line);}
+@media(min-width:720px){.mech .trade{grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);}}
+.mech .t .th{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.mech .t .th .tk{width:8px;height:8px;}
+.mech .t.gain .th{color:var(--cyan);}.mech .t.gain .th .tk{background:var(--cyan);}
+.mech .t.cost .th{color:var(--accent);}.mech .t.cost .th .tk{background:var(--accent);}
+.mech .t p{color:var(--paper70);font-size:clamp(15px,1.5vw,17px);line-height:1.6;}
 </style>
 </head>
 <body>
@@ -144,6 +156,16 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
       <div class="block reveal"><h2>A coach, not a plan</h2><p>Most training apps hand you a fixed plan and hope you follow it. Granite works the other way round. It reasons &mdash; taking your goals, your experience, the days you actually have, your injuries, and the load you carry off the platform &mdash; and builds a week that fits your real life. When something changes, it rewrites, and tells you why. Not a plan you obey. A coach that adapts.</p></div>
       <div class="block reveal"><h2>The engine is the product</h2><p>The intelligence in Granite is deterministic, not generative &mdash; and that&rsquo;s a deliberate choice, not a limitation. It means every plan is consistent, every decision can be traced, and the whole system can be tested against real coaching principles rather than hoping a black box got it right. Accountable intelligence beats impressive intelligence when it&rsquo;s your body on the line. We built the engine first, and everything else serves it.</p><div class="pfig"><div class="device"><img src="media/shots/g-week.png" alt="Granite — the week the engine builds" loading="lazy"></div><div class="pcap"><span class="pn">Fig. 01 &middot; Granite &middot; the week</span><span class="pd">The week the engine builds &mdash; six lifts a day, sequenced to your goals and rewritten as they change.</span></div></div></div>
       <div class="block reveal"><h2>On-device by decision</h2><p>Granite runs entirely on your phone. No account, no cloud, no data leaving your hands &mdash; the privacy isn&rsquo;t a policy you have to trust, it&rsquo;s the architecture. Running locally was the harder path, and it made the product sharper: an engine that can&rsquo;t lean on the cloud has to be deliberate about every decision. That constraint is the craft. Granite is the considered version of something most people build the easy way.</p><div class="pfig"><div class="device"><img src="media/shots/g-progress.png" alt="Granite — progress, tracked on-device" loading="lazy"></div><div class="pcap"><span class="pn">Fig. 02 &middot; Granite &middot; progress</span><span class="pd">Every session and every trend lives on the phone. No account, no cloud &mdash; nothing leaves your hands.</span></div></div></div>
+            <div class="mech reveal">
+        <span class="mlabel">The mechanism</span>
+        <h2>How the engine decides</h2>
+        <p>Granite reasons deterministically, not generatively. It reads your goals, the days you actually have, your injuries and the load you carry off the platform, and derives the week by rule &mdash; every choice traceable to a coaching principle, every plan reproducible, the whole system testable against how a good coach actually thinks.</p>
+        <div class="mdiagram" style="background-image:url('media/work-granite-a.svg')"></div>
+        <div class="trade">
+          <div class="t gain"><span class="th"><span class="tk"></span>The gain</span><p>Consistency and accountability. The same inputs always yield the same plan, every decision can be traced and audited, and the whole engine can be tested &mdash; which is what you want when it&rsquo;s your body on the line.</p></div>
+          <div class="t cost"><span class="th"><span class="tk"></span>The cost</span><p>No generative shortcuts. Every rule has to be engineered by hand &mdash; slower to build, and it will never improvise the way a black box might. We think that restraint is the product, not a limitation.</p></div>
+        </div>
+      </div>
       <div class="decide reveal">
         <div class="dl">The product is the decisions we refused to skip.</div>
         <div class="cols">

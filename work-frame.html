@@ -116,6 +116,18 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .device .belt{position:absolute;left:12px;bottom:12px;font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.75);z-index:2;transition:opacity .3s;}
 .pcap .pn{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-bottom:12px;}
 .pcap .pd{font-family:var(--raveo);font-variation-settings:"wght" 420,"opsz" 32;font-size:clamp(19px,2.1vw,28px);letter-spacing:-.015em;line-height:1.18;color:var(--paper);}
+.mech{margin-top:clamp(52px,8vh,96px);}
+.mech .mlabel{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:14px;}
+.mech h2{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:clamp(24px,3.4vw,42px);letter-spacing:-.02em;line-height:1.02;margin-bottom:16px;}
+.mech>p{color:var(--paper70);font-size:clamp(15px,1.5vw,18px);line-height:1.65;max-width:60ch;}
+.mech .mdiagram{aspect-ratio:16/9;background:var(--s1);border:1px solid var(--line);background-size:contain;background-repeat:no-repeat;background-position:center;margin:clamp(26px,4vw,40px) 0;}
+.mech .trade{display:grid;grid-template-columns:1fr;gap:26px;padding-top:24px;border-top:1px solid var(--line);}
+@media(min-width:720px){.mech .trade{grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);}}
+.mech .t .th{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.mech .t .th .tk{width:8px;height:8px;}
+.mech .t.gain .th{color:var(--cyan);}.mech .t.gain .th .tk{background:var(--cyan);}
+.mech .t.cost .th{color:var(--accent);}.mech .t.cost .th .tk{background:var(--accent);}
+.mech .t p{color:var(--paper70);font-size:clamp(15px,1.5vw,17px);line-height:1.6;}
 </style>
 </head>
 <body>
@@ -144,6 +156,16 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
       <div class="block reveal"><h2>Built against the forgetting curve</h2><p>A single session throws four or five details at you &mdash; the grip, the angle, the small correction that made the sweep finally work &mdash; and within a week almost all of them are gone. Frame is built around that decay rather than despite it. Everything you log comes back to you on a schedule: a few days later, then a week, then a month, timed to land just before you&rsquo;d lose it. There&rsquo;s nothing to revise and no flashcards to sit down with &mdash; the app works out what&rsquo;s about to fade and puts it in front of you. Retention is the product, and it&rsquo;s the one thing a notebook has never done.</p></div>
       <div class="block reveal"><h2>The log you&rsquo;ll actually keep</h2><p>Everyone knows they should keep a training journal. Almost nobody does, because writing one up after an hour of getting choked is the last thing you want to do. Frame removes the friction: talk for thirty seconds in the car &mdash; &ldquo;started in closed guard, hit a scissor sweep to mount, got swept, tapped to an armbar&rdquo; &mdash; and it transcribes on-device and turns it into a structured session you just confirm. Then it reads your game back to you: the positions you live in, the subs you land, the ones that keep catching you, and hands you one or two specific things to hunt next session. A plan, not a feed.</p><div class="pfig"><div class="device"><img src="media/shots/f-graph.png" alt="Frame — retention over time" loading="lazy"></div><div class="pcap"><span class="pn">Fig. 01 &middot; Frame &middot; recall</span><span class="pd">Retention made visible &mdash; the app surfaces each technique again just before it would fade.</span></div></div></div>
       <div class="block reveal"><h2>The app wears your belt</h2><p>Frame is built for the belt journey and it shows it &mdash; the whole app takes on the colour of your rank and changes with you as you&rsquo;re promoted. It runs offline-first and keeps your training history yours: saved the instant you log it, private, exportable, never sold. The goal underneath every decision is simple and hard: make the progress you can&rsquo;t feel visible, so the belts who&rsquo;d otherwise quit have a reason to come back for the next stripe &mdash; not more features, but more people still on the mat a year from now.</p><div class="pfig"><div class="device beltcycle" data-demo><img class="d on" src="media/shots/f-blue.png" data-belt="Blue" alt="Frame — blue belt"><img class="d" src="media/shots/f-coral.png" data-belt="Coral" alt="" loading="lazy"><img class="d" src="media/shots/f-brown.png" data-belt="Brown" alt="" loading="lazy"><img class="d" src="media/shots/f-purple.png" data-belt="Purple" alt="" loading="lazy"><span class="belt">Blue</span></div><div class="pcap"><span class="pn">Fig. 02 &middot; Frame &middot; belt identity</span><span class="pd">The whole app takes the colour of your rank &mdash; and changes with you as you&rsquo;re promoted.</span></div></div></div>
+            <div class="mech reveal">
+        <span class="mlabel">The mechanism</span>
+        <h2>How recall is timed</h2>
+        <p>Frame schedules each technique against the forgetting curve. Everything you log is surfaced again on a widening interval &mdash; a few days, then a week, then a month &mdash; timed to land just before you&rsquo;d lose it. The scheduling and the voice transcription both run on-device; nothing about your game leaves the phone.</p>
+        <div class="mdiagram" style="background-image:url('media/work-frame-b.svg')"></div>
+        <div class="trade">
+          <div class="t gain"><span class="th"><span class="tk"></span>The gain</span><p>Retention you can feel, and privacy by architecture. The progress a notebook can&rsquo;t show becomes visible, and your training history stays yours &mdash; saved instantly, exportable, never sold.</p></div>
+          <div class="t cost"><span class="th"><span class="tk"></span>The cost</span><p>On-device means no effortless cloud sync across devices, and the recall only works if you keep logging. We chose the version that respects the mat over the one that&rsquo;s easiest to scale.</p></div>
+        </div>
+      </div>
       <div class="decide reveal">
         <div class="dl">Built by choosing what to leave out.</div>
         <div class="cols">
