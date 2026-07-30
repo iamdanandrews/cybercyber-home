@@ -401,6 +401,41 @@ section.reveal>.wrap{position:relative;}
 .shot.arted{position:relative;}
 .shot.arted::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,11,13,.6),transparent 45%);pointer-events:none;}
 @media(max-width:600px){.word{font-size:clamp(30px,12.6vw,120px);}.herobar{max-width:52%;padding-bottom:clamp(20px,4vh,40px);}.heroline{font-size:15px;line-height:1.15;}.herometa{font-size:10px;}.herobar .herometa>div:last-child{display:none;}}
+/* ============================================================
+   SPATIAL PASS — Swiss asymmetry + Japanese ma (charged void)
+   + ruptured vertical meter. Consistency had flattened the
+   dynamics; this restores tension.
+   ============================================================ */
+/* 1 — ruptured meter: alternate heavy / light, not even */
+#about{padding:clamp(104px,16vh,208px) 0;}
+#offerings{padding-top:clamp(58px,9vh,120px);}
+#faq{padding-top:clamp(58px,9vh,120px);}
+#journal{padding:clamp(64px,10vh,140px) 0;}
+/* 2 — asymmetric section headers: eyebrow spans, then h2 (left, heavy)
+   and lead (right, bottom-aligned) sit in tension instead of stacking */
+.shd{margin-bottom:clamp(36px,5vw,68px);}
+@media(min-width:880px){
+  .shd{display:grid;grid-template-columns:1.05fr .95fr;column-gap:clamp(40px,6vw,120px);align-items:end;}
+  .shd .eyebrow{grid-column:1/-1;margin-bottom:clamp(24px,3.4vw,48px);}
+  .shd .h2{grid-column:1;margin:0;}
+  .shd .lead{grid-column:2;margin:0;max-width:36ch;padding-bottom:.34em;justify-self:start;}
+  /* rev: flip the weight — lead/left, h2 hangs right */
+  .shd.rev .h2{grid-column:2;justify-self:end;text-align:right;}
+  .shd.rev .lead{grid-column:1;grid-row:2;justify-self:start;padding-bottom:.5em;}
+  /* solo: h2 alone, right column left as charged void */
+  .shd.solo{grid-template-columns:1fr 1fr;}
+  .shd.solo.rev .h2{grid-column:2;justify-self:end;text-align:right;}
+}
+/* 3 — ABOUT as the charged void: statement anchored low-left in a tall
+   paper field, seal high-right, instrument labels held in the margins */
+@media(min-width:820px){
+  .aboutwrap{min-height:min(64vh,580px);display:flex;flex-direction:column;justify-content:flex-end;}
+  #about .aseal{top:0;}
+  .aboutwrap .ablab{position:absolute;top:0;left:0;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#8f8a83;display:inline-flex;align-items:center;gap:9px;}
+  .aboutwrap .ablab .tk{width:7px;height:7px;background:var(--accent);}
+  .aboutwrap .acoord{position:absolute;bottom:0;right:0;font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:#8f8a83;font-variant-numeric:tabular-nums;}
+}
+@media(max-width:819px){.aboutwrap .ablab,.aboutwrap .acoord{display:none;}}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -452,14 +487,16 @@ section.reveal>.wrap{position:relative;}
   <div class="foldbreak"><div class="wrap"><span class="fa"><span class="tk"></span>00 &mdash; The Lab</span><span class="fb">Enter &darr;</span></div></div>
 
   <section id="about" class="reveal light"><div class="wrap aboutwrap">
+    <span class="ablab" aria-hidden="true"><span class="tk"></span>00 &mdash; What it is</span>
+    <span class="acoord" aria-hidden="true">51.5074&deg; N &middot; 00.1278&deg; W</span>
     <p class="define"><b>cyber:cyber is a <span class="ul">product design lab<svg class="brush" viewBox="0 0 400 22" preserveAspectRatio="none" aria-hidden="true"><path d="M4,15 C64,5 132,19 210,10 C282,2 342,17 396,10" fill="none" stroke="var(--accent)" stroke-width="4.5" stroke-linecap="round"/></svg></span>.</b> <span data-split>We design your product &mdash; the brand, the interface, the whole thing. <span class="mut">And we can build it, too. A few clients a year.</span></span></p>
     <svg class="aseal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="arcA" d="M22,60 A38,38 0 0,1 98,60"/></defs><circle cx="60" cy="60" r="53" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/><text text-anchor="middle"><textPath href="#arcA" startOffset="50%">CYBER:CYBER</textPath></text><circle cx="60" cy="53" r="5" fill="currentColor"/><circle cx="60" cy="67" r="5" fill="currentColor"/><text class="stb" x="60" y="102" text-anchor="middle">MMXXVI</text></svg>
   </div></section>
 
   <section id="work" class="reveal"><div class="wrap">
-    <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Selected work<span class="ix">01 / INDEX</span></div>
+    <div class="shd"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Selected work<span class="ix">01 / INDEX</span></div>
     <h2 class="h2" style="--c:var(--paper)">The proof</h2>
-    <p class="lead">We don't just design for clients. We design, brand and build our own products &mdash; and ship them into the world.</p>
+    <p class="lead">We don't just design for clients. We design, brand and build our own products &mdash; and ship them into the world.</p></div>
     <div class="reel">
       <a class="proj" href="work-granite.html">
         <div class="media arted" data-reel style="background-image:url('media/work-granite-hero.svg');view-transition-name:m-granite"><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src="media/granite-reel.mp4"></video><div class="ph"><span class="pp">&#9654;</span></div><span class="vtoggle" role="button" tabindex="0" aria-label="Play or pause">&#10073;&#10073;</span><span class="mtag">Reel 01 &middot; Loop</span><span class="mgo">View case &rarr;</span></div>
@@ -477,9 +514,9 @@ section.reveal>.wrap{position:relative;}
   </div></section>
 
   <section id="offerings" class="reveal"><div class="wrap">
-    <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Work with us<span class="ix">02 / STUDIO</span></div>
+    <div class="shd rev"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Work with us<span class="ix">02 / STUDIO</span></div>
     <h2 class="h2" style="--c:var(--paper)">The offer</h2>
-    <p class="lead">You're not buying hours. You're buying the shipped result &mdash; the speed and the certainty are the offer. Fixed scope, fixed price, in weeks not quarters.</p>
+    <p class="lead">You're not buying hours. You're buying the shipped result &mdash; the speed and the certainty are the offer. Fixed scope, fixed price, in weeks not quarters.</p></div>
     <div class="offers">
       <div class="offer"><div class="oi">01</div><div class="ob"><div class="on">The Design Block</div><div class="os"><span class="sub">Design shipped in a week.</span>Brand to interface to the technical surfaces most designers can't touch.</div></div><div class="op">&pound;<span>5,000</span><small>per week</small></div></div>
       
@@ -490,8 +527,8 @@ section.reveal>.wrap{position:relative;}
   </div></section>
 
   <section id="notforyou" class="reveal"><div class="wrap">
-    <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Fair warning<span class="ix">03 / FILTER</span></div>
-    <h2 class="h2" style="--c:var(--paper)">Who it's not for</h2>
+    <div class="shd solo"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Fair warning<span class="ix">03 / FILTER</span></div>
+    <h2 class="h2" style="--c:var(--paper)">Who it's not for</h2></div>
     <div class="nfy2">
       <div class="ref"><span class="x">&times;</span><b>You want it fast and cheap.</b><span>Everyone's fast now. We sell the judgment that makes fast worth keeping.</span></div>
       <div class="ref"><span class="x">&times;</span><b>You've written the spec and want hands.</b><span>That's staffing. It's cheaper elsewhere.</span></div>
@@ -514,8 +551,8 @@ section.reveal>.wrap{position:relative;}
   </div></section>
 
   <section id="journal" class="reveal"><div class="wrap">
-    <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Journal<span class="ix">05 / NOTES</span></div>
-    <h2 class="h2" style="--c:var(--paper)">Journal</h2>
+    <div class="shd solo rev"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Journal<span class="ix">05 / NOTES</span></div>
+    <h2 class="h2" style="--c:var(--paper)">Journal</h2></div>
     <div class="jrnl">
       <a href="journal-door.html"><span class="jt">Building before the door opens</span><span class="jk">Article</span><span class="jd">Jul 16, 2026</span></a>
       <a href="journal-undocumented.html"><span class="jt">Nobody wrote it down</span><span class="jk">Article</span><span class="jd">Jul 10, 2026</span></a>
