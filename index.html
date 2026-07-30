@@ -300,6 +300,12 @@ section.reveal>.wrap{position:relative;}
 .proj:hover .pp{transform:scale(1.14);border-color:var(--accent);}
 .media .mtag{position:absolute;top:15px;left:15px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--paper45);}
 .media .mgo{position:absolute;bottom:15px;right:15px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--paper);opacity:0;transform:translateY(6px);transition:.3s var(--e1);}
+.media.playing .ph{opacity:0;transition:opacity .5s var(--e1);}
+.media .vtoggle{position:absolute;bottom:14px;left:14px;z-index:4;width:34px;height:34px;border:1px solid rgba(242,236,239,.45);border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(11,11,13,.35);backdrop-filter:blur(5px);color:var(--paper);font-size:9px;letter-spacing:1px;opacity:0;transition:opacity .3s var(--e1),border-color .2s;}
+.media.playing .vtoggle{opacity:0;}
+.proj:hover .media.playing .vtoggle,.media.paused .vtoggle{opacity:1;}
+.media .vtoggle:hover{border-color:var(--cyan);color:var(--cyan);}
+@media(hover:none){.media.playing .vtoggle{opacity:1;}}
 .proj:hover .mgo{opacity:1;transform:none;}
 .media::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px transparent;transition:box-shadow .3s;pointer-events:none;}
 .proj:hover .media::after{box-shadow:inset 0 0 0 1px var(--accent);}
@@ -330,6 +336,8 @@ section.reveal>.wrap{position:relative;}
 
 /* NOTAN: light-inverted about + sumi-e brush + hanko stamp */
 #about.light{background:var(--paper);color:var(--ground);border-top:0;}
+#about.light ::selection{background:var(--ground);color:var(--paper);}
+#about.light .coord,#about.light .verb{color:var(--ground);}
 #about.light .define{color:var(--ground);max-width:19ch;}
 #about.light .define .mut{color:#8f8a83;}
 #about.light .define .mut w{color:#8f8a83;}
@@ -424,15 +432,15 @@ section.reveal>.wrap{position:relative;}
     <p class="lead">We don't just design for clients. We design, brand and build our own products &mdash; and ship them into the world.</p>
     <div class="reel">
       <a class="proj" href="work-granite.html">
-        <div class="media arted" data-reel style="background-image:url('media/work-granite-hero.svg')"><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src="media/granite-reel.mp4"></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Reel 01 &middot; Loop</span><span class="mgo">View case &rarr;</span></div>
-        <div class="pinfo"><div class="pn" style="view-transition-name:t-granite">Granite<em>.</em></div><div class="pd">A native strength coach that rewrites your training every week.</div><div class="pm"><span>iOS &middot; SwiftUI</span><span>On-device AI</span><span class="live">Live &middot; granite.coach</span></div></div>
+        <div class="media arted" data-reel style="background-image:url('media/work-granite-hero.svg')"><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src="media/granite-reel.mp4"></video><div class="ph"><span class="pp">&#9654;</span></div><span class="vtoggle" role="button" tabindex="0" aria-label="Play or pause">&#10073;&#10073;</span><span class="mtag">Reel 01 &middot; Loop</span><span class="mgo">View case &rarr;</span></div>
+        <div class="pinfo"><div class="pn" style="view-transition-name:t-granite">Granite<em>.</em></div><div class="pd">A native strength coach that rewrites your training every week.</div><div class="pm"><span>iOS &middot; Native</span><span>On-device AI</span><span class="live">Alpha &middot; granite.coach</span></div></div>
       </a>
       <a class="proj" href="work-frame.html">
-        <div class="media arted" data-reel style="background-image:url('media/work-frame-hero.svg')"><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src="media/frame-reel.mp4"></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Reel 02 &middot; Loop</span><span class="mgo">View case &rarr;</span></div>
-        <div class="pinfo"><div class="pn" style="view-transition-name:t-frame">Frame<em>.</em></div><div class="pd">A BJJ training journal built against the forgetting curve.</div><div class="pm"><span>iOS &middot; Native</span><span>Belt-accent identity</span><span class="live">Live &middot; framebjj.app</span></div></div>
+        <div class="media arted" data-reel style="background-image:url('media/work-frame-hero.svg')"><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src="media/frame-reel.mp4"></video><div class="ph"><span class="pp">&#9654;</span></div><span class="vtoggle" role="button" tabindex="0" aria-label="Play or pause">&#10073;&#10073;</span><span class="mtag">Reel 02 &middot; Loop</span><span class="mgo">View case &rarr;</span></div>
+        <div class="pinfo"><div class="pn" style="view-transition-name:t-frame">Frame<em>.</em></div><div class="pd">A BJJ training journal built against the forgetting curve.</div><div class="pm"><span>iOS &middot; Native</span><span>Spaced recall</span><span class="live">Alpha &middot; framebjj.app</span></div></div>
       </a>
       <a class="proj" href="#contact" aria-label="Brand engine (in progress)">
-        <div class="media arted" data-reel style="background-image:url('media/work-engine.svg')"><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src="media/engine-reel.mp4"></video><div class="ph"><span class="pp">&#9654;</span></div><span class="mtag">Reel 03 &middot; Loop</span><span class="mgo">Enquire &rarr;</span></div>
+        <div class="media arted" data-reel style="background-image:url('media/work-engine.svg')"><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src="media/engine-reel.mp4"></video><div class="ph"><span class="pp">&#9654;</span></div><span class="vtoggle" role="button" tabindex="0" aria-label="Play or pause">&#10073;&#10073;</span><span class="mtag">Reel 03 &middot; Loop</span><span class="mgo">Enquire &rarr;</span></div>
         <div class="pinfo"><span class="chip"><span class="dot"></span>In&nbsp;progress</span><div class="pn">Brand engine<em>.</em></div><div class="pd">A generative brand engine for a decentralised AI network.</div><div class="pm"><span>Generative</span><span>Brand system</span><span>2026</span></div></div>
       </a>
     </div>
@@ -593,7 +601,23 @@ section.reveal>.wrap{position:relative;}
   document.querySelectorAll(".define w").forEach(function(w,i){w.style.transitionDelay=(i*0.028).toFixed(3)+"s";});
   if(!coarse&&!reduce){document.querySelectorAll(".mag").forEach(function(el){el.addEventListener("mousemove",function(e){var r=el.getBoundingClientRect();el.style.transform="translate("+((e.clientX-(r.left+r.width/2))*.22).toFixed(1)+"px,"+((e.clientY-(r.top+r.height/2))*.28).toFixed(1)+"px)";});el.addEventListener("mouseleave",function(){el.style.transform="";});});}
   if(!coarse&&!reduce){var spot=document.getElementById("spot");if(spot){addEventListener("mousemove",function(e){spot.style.transform="translate("+e.clientX+"px,"+e.clientY+"px) translate(-50%,-50%)";spot.style.opacity="1";},{passive:true});addEventListener("mouseleave",function(){spot.style.opacity="0";});}}
-  (function(){var media=document.querySelectorAll(".media[data-reel]");if(!media.length)return;var mo=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target.querySelector(".rv");if(!v)return;if(e.isIntersecting){if(v.dataset.src&&!v.getAttribute("src")){v.setAttribute("src",v.dataset.src);}if(v.getAttribute("src")&&!reduce){v.play().then(function(){e.target.classList.add("playing");}).catch(function(){});}}else if(v.getAttribute("src")){v.pause();}});},{threshold:.35});media.forEach(function(m){mo.observe(m);});})();
+  (function(){var media=document.querySelectorAll(".media[data-reel]");if(!media.length)return;
+    function ensure(m){var v=m.querySelector(".rv");if(!v)return;if(v.dataset.src&&!v.getAttribute("src")){v.setAttribute("preload","auto");v.addEventListener("loadeddata",function(){m.classList.add("playing");},{once:true});v.setAttribute("src",v.dataset.src);v.load();}}
+    // preload + show the first frame well before the tile scrolls into view (kills the placeholder flash)
+    var pre=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){ensure(e.target);pre.unobserve(e.target);}});},{rootMargin:"600px 0px"});
+    media.forEach(function(m){pre.observe(m);});
+    // play when in view, pause when out — unless the user stopped it
+    var play=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target.querySelector(".rv");if(!v)return;if(e.isIntersecting){ensure(e.target);if(!reduce&&!e.target.classList.contains("userpaused")){v.play().then(function(){e.target.classList.add("playing");}).catch(function(){});}}else{v.pause();}});},{threshold:.25});
+    media.forEach(function(m){play.observe(m);});
+    // stop / start control (does not trigger the tile's link)
+    media.forEach(function(m){var v=m.querySelector(".rv"),btn=m.querySelector(".vtoggle");if(!v||!btn)return;
+      function sync(){m.classList.toggle("paused",v.paused);btn.innerHTML=v.paused?"&#9654;":"&#10073;&#10073;";btn.setAttribute("aria-label",v.paused?"Play video":"Pause video");}
+      v.addEventListener("play",sync);v.addEventListener("pause",sync);sync();
+      function toggle(e){e.preventDefault();e.stopPropagation();if(v.paused){m.classList.remove("userpaused");v.play().catch(function(){});}else{m.classList.add("userpaused");v.pause();}}
+      btn.addEventListener("click",toggle);
+      btn.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){toggle(e);}});
+    });
+  })();
   boot();
 })();
 </script>
