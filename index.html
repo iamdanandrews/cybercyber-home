@@ -74,7 +74,7 @@ header.solid{background:rgba(11,11,13,.72);backdrop-filter:blur(10px);border-col
 .dot{width:8px;height:8px;border-radius:50%;background:var(--cool);box-shadow:0 0 9px 0 color-mix(in srgb,var(--cool) 75%,transparent);}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(.78);}}
 .dot{animation:pulse 2.6s ease-in-out infinite;}
-.clock{color:var(--grey);font-variant-numeric:tabular-nums;cursor:pointer;border-bottom:1px solid transparent;transition:opacity .22s,color .2s,border-color .2s;}
+.clock{display:inline-block;color:var(--grey);font-variant-numeric:tabular-nums;cursor:pointer;border-bottom:1px solid transparent;transition:opacity .22s,color .2s,border-color .2s;}
 .clock:hover,.clock:focus-visible{color:var(--paper);border-color:var(--cyan);}
 .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;padding:8px;}
 .burger span{width:22px;height:1.5px;background:var(--paper);}
@@ -437,6 +437,12 @@ section.reveal>.wrap{position:relative;}
   .aboutwrap .acoord{position:absolute;bottom:0;right:0;font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:#8f8a83;font-variant-numeric:tabular-nums;}
 }
 @media(max-width:819px){.aboutwrap .ablab,.aboutwrap .acoord{display:none;}}
+/* 5 — the interval: one dead-air void, a single held mark in near-empty space (ma) */
+.void{position:relative;min-height:clamp(220px,40vh,430px);border-top:1px solid var(--line);}
+.void .vline{position:absolute;left:33%;bottom:0;width:1px;height:46%;background:linear-gradient(to top,var(--line2),transparent);}
+.void .vnode{position:absolute;left:33%;bottom:46%;width:7px;height:7px;border:1px solid var(--dim);border-radius:50%;transform:translate(-50%,50%);}
+.void .vcoord{position:absolute;right:clamp(20px,5vw,64px);top:clamp(24px,5vh,54px);font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);opacity:.62;font-variant-numeric:tabular-nums;}
+@media(max-width:600px){.void{min-height:clamp(150px,26vh,240px);}}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -459,7 +465,7 @@ section.reveal>.wrap{position:relative;}
   <nav class="menu" aria-label="Primary" id="menu">
     <a href="#top"><i>01</i>Home</a><a href="#work"><i>02</i>Work</a><a href="manifesto.html"><i>03</i>Manifesto</a><a href="journal.html"><i>04</i>Journal</a><a href="#contact"><i>05</i>Contact</a>
   </nav>
-  <div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="#offerings" title="Services & pricing">OPEN &middot; Q4</a> <span class="clock" id="clk" role="button" tabindex="0" aria-label="Local time — click to change timezone" title="Click to change timezone">LDN --:--:--</span>
+  <div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="#offerings" title="Services & pricing">OPEN &middot; Q4</a> <span class="clock" id="clk" role="button" tabindex="0" aria-label="Local time — click to change timezone" title="Click to change timezone">LDN&nbsp;--:--</span>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </div></header>
@@ -513,6 +519,8 @@ section.reveal>.wrap{position:relative;}
       </div>
     </div>
   </div></section>
+
+  <div class="void" aria-hidden="true"><span class="vline"></span><span class="vnode"></span><span class="vcoord">01 &rarr; 02</span></div>
 
   <section id="offerings" class="reveal"><div class="wrap">
     <div class="shd rev"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Work with us<span class="ix">02 / STUDIO</span></div>
