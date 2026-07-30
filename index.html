@@ -57,7 +57,7 @@ a{color:inherit;text-decoration:none;}
 .reticle .verb{position:absolute;left:50%;top:calc(100% + 6px);transform:translateX(-50%);font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);white-space:nowrap;opacity:0;transition:opacity .2s;}
 .reticle.lock .ring{border-radius:3px;border-color:var(--cyan);}
 .reticle.lock .verb{opacity:1;}
-.coord{position:fixed;z-index:9998;pointer-events:none;font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:var(--dim);opacity:0;transition:opacity .3s;font-variant-numeric:tabular-nums;}
+.coord{position:fixed;z-index:9998;pointer-events:none;font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:var(--dim);opacity:0;transition:opacity .3s;font-variant-numeric:tabular-nums;}
 body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary,body.cursor-on [role=button]{cursor:none;}
 .cl{position:fixed;top:0;bottom:0;width:1px;background:var(--cyan);opacity:0;pointer-events:none;z-index:1;box-shadow:0 0 14px 0 var(--cyan);}
 
@@ -102,10 +102,10 @@ header.solid{background:rgba(11,11,13,.72);backdrop-filter:blur(10px);border-col
 .word .lyr .colon{color:var(--accent);transform-origin:center;animation:colonlife 3.4s ease-in-out infinite;}
 @keyframes colonlife{0%,100%{transform:scale(1);}50%{transform:scale(1.08);}}
 @media(prefers-reduced-motion:reduce){.word .lyr .colon{animation:none;}}
-.herobar{position:relative;z-index:3;max-width:min(46ch,48%);padding:0 clamp(20px,5vw,64px) clamp(26px,5vh,52px);display:flex;flex-direction:column;align-items:flex-start;gap:12px;opacity:0;transform:translateY(14px);transition:opacity .7s var(--e-settle) .2s,transform .7s var(--e-settle) .2s;text-align:left;}
+.herobar{position:relative;z-index:3;max-width:min(46ch,48%);padding:0 clamp(20px,5vw,64px) clamp(26px,5vh,52px);display:flex;flex-direction:column;align-items:flex-start;gap:12px;opacity:0;transform:translateY(12px);transition:opacity var(--dur-2) var(--e-settle) .2s,transform var(--dur-2) var(--e-settle) .2s;text-align:left;}
 .herobar.in{opacity:1;transform:none;}
 .heroline{font-family:var(--raveo);font-variation-settings:"wght" 500,"opsz" 24;font-size:clamp(18px,2.2vw,30px);letter-spacing:-.01em;max-width:24ch;line-height:1.1;}
-.herometa{font-size:11px;letter-spacing:.06em;color:var(--grey);text-align:left;}
+.herometa{font-size:11px;letter-spacing:.12em;color:var(--grey);text-align:left;font-variant-numeric:tabular-nums;}
 .hero .herometa .r{justify-content:flex-start;}
 .herometa .r{display:flex;align-items:center;gap:8px;justify-content:flex-end;}
 .scrollcue{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);z-index:3;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--dim);writing-mode:vertical-rl;}
@@ -184,7 +184,7 @@ section{position:relative;padding:clamp(96px,17vh,210px) 0;border-top:1px solid 
 .cta .frontier{margin-top:16px;font-size:12px;color:var(--grey);}
 
 footer{border-top:1px solid var(--line);padding:26px 0;}
-.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11px;letter-spacing:.08em;color:var(--grey);text-transform:uppercase;}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11px;letter-spacing:.12em;color:var(--grey);text-transform:uppercase;font-variant-numeric:tabular-nums;}
 .foot a:hover{color:var(--paper);}
 
 .reveal{opacity:0;transform:translateY(12px);transition:opacity var(--dur-2) var(--e-settle),transform var(--dur-2) var(--e-settle);}
@@ -326,6 +326,11 @@ section.reveal>.wrap{position:relative;}
 .media .vtoggle:hover{border-color:var(--cyan);color:var(--cyan);}
 @media(hover:none){.media.playing .vtoggle{opacity:1;}}
 .proj:hover .mgo{opacity:1;transform:none;}
+.proj.static{cursor:default;}
+.proj.static:hover .pn{font-variation-settings:"wght" 640,"opsz" 32;}
+.proj.static:hover .media::after{box-shadow:none;}
+.proj.static:hover .pp{transform:none;border-color:var(--paper45);}
+.proj.static .pn em{color:var(--dim);}
 .media::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px transparent;transition:box-shadow .3s;pointer-events:none;}
 .proj:hover .media::after{box-shadow:inset 0 0 0 1px var(--accent);}
 .pinfo{display:flex;flex-direction:column;align-items:flex-start;gap:14px;}
@@ -333,7 +338,7 @@ section.reveal>.wrap{position:relative;}
 .proj:hover .pn{font-variation-settings:"wght" 840,"opsz" 32;}
 .pn em{font-style:normal;color:var(--paper);}
 .pd{color:var(--paper70);font-size:clamp(14px,1.5vw,17px);max-width:42ch;}
-.pm{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin-top:2px;}
+.pm{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin-top:2px;font-variant-numeric:tabular-nums;}
 .pm .live{color:var(--cyan);}
 .chip{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);border:1px solid var(--line2);border-radius:999px;padding:6px 13px 6px 11px;line-height:1;}
 .chip .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);animation:chippulse 2.4s var(--e1) infinite;}
@@ -458,16 +463,16 @@ section.reveal>.wrap{position:relative;}
     <div class="reel">
       <a class="proj" href="work-granite.html">
         <div class="media arted" data-reel style="background-image:url('media/work-granite-hero.svg');view-transition-name:m-granite"><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src="media/granite-reel.mp4"></video><div class="ph"><span class="pp">&#9654;</span></div><span class="vtoggle" role="button" tabindex="0" aria-label="Play or pause">&#10073;&#10073;</span><span class="mtag">Reel 01 &middot; Loop</span><span class="mgo">View case &rarr;</span></div>
-        <div class="pinfo"><div class="pn" style="view-transition-name:t-granite">Granite<em>.</em></div><div class="pd">A native strength coach that rewrites your training every week.</div><div class="pm"><span>iOS &middot; Native</span><span>On-device AI</span><span class="live">Alpha &middot; granite.coach</span></div></div>
+        <div class="pinfo"><div class="pn" style="view-transition-name:t-granite">Granite<em>.</em></div><div class="pd">A strength coach that rewrites your week.</div><div class="pm"><span>iOS &middot; Native</span><span>On-device AI</span><span class="live">Alpha &middot; granite.coach</span></div></div>
       </a>
       <a class="proj" href="work-frame.html">
         <div class="media arted" data-reel style="background-image:url('media/work-frame-hero.svg');view-transition-name:m-frame"><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src="media/frame-reel.mp4"></video><div class="ph"><span class="pp">&#9654;</span></div><span class="vtoggle" role="button" tabindex="0" aria-label="Play or pause">&#10073;&#10073;</span><span class="mtag">Reel 02 &middot; Loop</span><span class="mgo">View case &rarr;</span></div>
         <div class="pinfo"><div class="pn" style="view-transition-name:t-frame">Frame<em>.</em></div><div class="pd">A BJJ training journal built against the forgetting curve.</div><div class="pm"><span>iOS &middot; Native</span><span>Spaced recall</span><span class="live">Alpha &middot; framebjj.app</span></div></div>
       </a>
-      <a class="proj" href="#contact" aria-label="Brand engine (in progress)">
-        <div class="media arted" data-reel style="background-image:url('media/work-engine.svg')"><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src="media/engine-reel.mp4"></video><div class="ph"><span class="pp">&#9654;</span></div><span class="vtoggle" role="button" tabindex="0" aria-label="Play or pause">&#10073;&#10073;</span><span class="mtag">Reel 03 &middot; Loop</span><span class="mgo">Enquire &rarr;</span></div>
-        <div class="pinfo"><span class="chip"><span class="dot"></span>In&nbsp;progress</span><div class="pn">Brand engine<em>.</em></div><div class="pd">A generative brand engine for a decentralised AI network.</div><div class="pm"><span>Generative</span><span>Brand system</span><span>2026</span></div></div>
-      </a>
+      <div class="proj static" aria-label="Brand engine — in progress, not yet public">
+        <div class="media arted" data-reel style="background-image:url('media/work-engine.svg')"><video class="rv" muted loop playsinline preload="none" aria-hidden="true" data-src="media/engine-reel.mp4"></video><div class="ph"><span class="pp">&#9654;</span></div><span class="vtoggle" role="button" tabindex="0" aria-label="Play or pause">&#10073;&#10073;</span><span class="mtag">Reel 03 &middot; In&nbsp;progress</span></div>
+        <div class="pinfo"><span class="chip"><span class="dot"></span>In&nbsp;progress</span><div class="pn">Brand engine<em>.</em></div><div class="pd">A generative brand engine for a decentralised AI network.</div><div class="pm"><span>Generative</span><span>Brand system</span><span>Case study to follow</span></div></div>
+      </div>
     </div>
   </div></section>
 

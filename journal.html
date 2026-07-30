@@ -63,7 +63,14 @@ footer{border-top:1px solid var(--line);padding:26px 0;margin-top:clamp(60px,10v
 .jrow .jt{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:clamp(24px,3.4vw,42px);letter-spacing:-.02em;line-height:1;transition:font-variation-settings .3s var(--e1);}
 .jrow:hover .jt{font-variation-settings:"wght" 780,"opsz" 32;}
 .jrow .jx{color:var(--paper45);font-size:14px;margin-top:12px;max-width:44ch;}
-.jrow .date{margin:0;color:var(--grey);white-space:nowrap;}
+.jrow .date{margin:0;color:var(--grey);white-space:nowrap;font-variant-numeric:tabular-nums;}
+.jrow.pending{opacity:.62;pointer-events:none;}
+.jrow.pending .frame{border-style:dashed;border-color:var(--line2);background:transparent;display:flex;align-items:center;justify-content:center;}
+.jrow.pending .frame .pdot{width:8px;height:8px;border-radius:50%;background:var(--cyan);animation:jpulse 2.4s var(--e1) infinite;}
+@keyframes jpulse{0%{box-shadow:0 0 0 0 rgba(34,211,238,.5);}70%{box-shadow:0 0 0 9px rgba(34,211,238,0);}100%{box-shadow:0 0 0 0 rgba(34,211,238,0);}}
+.jrow.pending .jt{color:var(--paper45);}
+.jrow.pending .jstat{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);display:block;margin-bottom:10px;}
+@media(prefers-reduced-motion:reduce){.jrow.pending .frame .pdot{animation:none;}}
 .reticle{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;transform:translate(-50%,-50%);opacity:0;transition:opacity .3s,width .22s var(--e1),height .22s var(--e1);width:24px;height:24px;}
 .reticle .ring{position:absolute;inset:0;border:1px solid var(--paper);border-radius:50%;mix-blend-mode:difference;transition:border-radius .22s,border-color .22s;}
 .reticle b{position:absolute;background:var(--paper);mix-blend-mode:difference;}
@@ -137,6 +144,11 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
         <div><div class="jt" style="view-transition-name:jn-why">Why cyber:cyber exists</div><div class="jx">The founding note. Why a lab rather than an agency or a studio, what we're betting on, and why the internet is drowning in B+ AI output.</div></div>
         <div class="date">Mar 1, 2026</div>
       </a>
+      <div class="jrow pending reveal">
+        <div class="frame"><span class="pdot"></span><span class="tl">&#12300;08&#12301;</span><span class="cap">Note 08</span></div>
+        <div><span class="jstat">Drafting &middot; in progress</span><div class="jt">The next note is being written</div><div class="jx">New entries land most weeks. This one&rsquo;s still in the notebook.</div></div>
+        <div class="date">Soon</div>
+      </div>
     </div></div></section>
 </main><footer><div class="wrap foot"><span>&copy; 2026 CYBERCYBER LTD &#183; London</span><a href="./">Home &uarr;</a></div></footer>
 <script>(function(){var hdr=document.getElementById("hdr");addEventListener("scroll",function(){hdr.classList.toggle("solid",scrollY>40);},{passive:true});var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.14});document.querySelectorAll(".reveal").forEach(function(el){io.observe(el);});})();</script>

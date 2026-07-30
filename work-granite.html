@@ -37,7 +37,7 @@ main{padding-top:96px;}
 .eyebrow .ix{margin-left:auto;color:var(--dim);}
 .csh1{font-family:var(--raveo);font-variation-settings:"wght" 720,"opsz" 32;font-size:clamp(56px,13vw,180px);letter-spacing:-.04em;text-transform:uppercase;line-height:.9;}
 .premise{font-family:var(--raveo);font-variation-settings:"wght" 400,"opsz" 32;font-size:var(--t-sub);letter-spacing:-.02em;line-height:1.08;max-width:22ch;margin-top:24px;color:var(--paper);}
-.csmeta{display:flex;flex-wrap:wrap;gap:12px 40px;margin-top:clamp(30px,5vw,54px);padding-top:22px;border-top:1px solid var(--line);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);}
+.csmeta{display:flex;flex-wrap:wrap;gap:12px 40px;margin-top:clamp(30px,5vw,54px);padding-top:22px;border-top:1px solid var(--line);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);font-variant-numeric:tabular-nums;}
 .csmeta b{display:block;color:var(--dim);font-weight:400;margin-bottom:5px;font-size:10px;}
 .csmeta span{color:var(--paper);}
 .csmedia{position:relative;aspect-ratio:2/3;max-width:440px;margin-top:clamp(34px,6vw,72px);background:var(--s1);border:1px solid var(--line);overflow:hidden;}
@@ -94,17 +94,23 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .csintro{font-family:var(--raveo);font-variation-settings:"wght" 340,"opsz" 32;font-size:clamp(19px,2vw,27px);line-height:1.4;color:var(--paper);margin-bottom:6px;}
 .csmeta a{border-bottom:1px solid var(--accent);padding-bottom:2px;}
 .csmeta a:hover{color:var(--paper);}
-.decide{margin:clamp(50px,8vh,92px) 0 0;padding-top:28px;border-top:1px solid var(--line);}
-.decide .dl{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:clamp(22px,3vw,38px);letter-spacing:-.02em;line-height:1.05;margin-bottom:clamp(24px,4vw,42px);max-width:22ch;}
+.decide{margin:clamp(66px,11vh,120px) 0 0;padding-top:20px;border-top:2px solid var(--paper);}
+.decide .dlabel{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:22px;}
+.decide .dl{font-family:var(--raveo);font-variation-settings:"wght" 620,"opsz" 32;font-size:clamp(28px,4.4vw,56px);letter-spacing:-.025em;line-height:1.02;margin-bottom:clamp(34px,5vw,58px);max-width:18ch;}
 .decide .cols{display:grid;grid-template-columns:1fr;gap:30px;}
 @media(min-width:720px){.decide .cols{grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);}}
 .decide h3{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:10px;}
 .decide .kept h3{color:var(--cyan);}.decide .cut h3{color:var(--accent);}
 .decide h3 .b{width:17px;height:17px;border:1px solid currentColor;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;line-height:1;}
 .decide ul{list-style:none;display:flex;flex-direction:column;gap:16px;counter-reset:dl;}
-.decide li{counter-increment:dl;display:grid;grid-template-columns:20px 1fr;gap:13px;align-items:baseline;font-family:var(--raveo);font-variation-settings:"wght" 460,"opsz" 32;font-size:clamp(18px,2.05vw,25px);letter-spacing:-.015em;line-height:1.12;color:var(--paper);}.decide li::before{content:counter(dl,decimal-leading-zero);font-family:var(--mono);font-variation-settings:normal;font-size:10px;letter-spacing:.08em;color:var(--dim);}
+.decide li{counter-increment:dl;display:grid;grid-template-columns:20px 1fr;gap:13px;align-items:baseline;font-family:var(--raveo);font-variation-settings:"wght" 500,"opsz" 32;font-size:clamp(19px,2.3vw,29px);letter-spacing:-.018em;line-height:1.1;color:var(--paper);}
+.refusal{margin-top:clamp(34px,5vw,58px);padding-top:26px;border-top:1px solid var(--line);}
+.refusal .rlabel{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+.refusal .rlabel::before{content:"";width:16px;height:16px;border:1px solid var(--accent);border-radius:50%;display:inline-flex;flex:none;background:radial-gradient(circle,var(--accent) 0 3px,transparent 3px);}
+.refusal p{font-family:var(--raveo);font-variation-settings:"wght" 400,"opsz" 32;font-size:clamp(19px,2.2vw,29px);letter-spacing:-.017em;line-height:1.28;color:var(--paper);max-width:38ch;}
+.refusal p b{font-variation-settings:"wght" 640,"opsz" 32;font-weight:inherit;}.decide li::before{content:counter(dl,decimal-leading-zero);font-family:var(--mono);font-variation-settings:normal;font-size:10px;letter-spacing:.08em;color:var(--dim);}
 .decide .cut li{color:var(--paper45);}
-.colophon{margin-top:clamp(50px,8vh,92px);padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:16px 44px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);}
+.colophon{margin-top:clamp(50px,8vh,92px);padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:16px 44px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);font-variant-numeric:tabular-nums;}
 .colophon b{display:block;color:var(--dim);font-weight:400;margin-bottom:5px;font-size:10px;}
 .colophon span{color:var(--paper);}
 .pfig{margin-top:clamp(28px,4vw,46px);background:var(--s1);border:1px solid var(--line);padding:clamp(24px,4vw,48px);display:grid;grid-template-columns:auto 1fr;gap:clamp(26px,5vw,60px);align-items:center;}
@@ -173,11 +179,13 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
       <div class="block reveal"><h2>The engine is the product</h2><p>The intelligence in Granite is deterministic, not generative &mdash; and that&rsquo;s a deliberate choice, not a limitation. It means every plan is consistent, every decision can be traced, and the whole system can be tested against real coaching principles rather than hoping a black box got it right. Accountable intelligence beats impressive intelligence when it&rsquo;s your body on the line. We built the engine first, and everything else serves it.</p></div>
       <div class="block reveal"><h2>On-device by decision</h2><p>Granite runs entirely on your phone. No account, no cloud, no data leaving your hands &mdash; the privacy isn&rsquo;t a policy you have to trust, it&rsquo;s the architecture. Running locally was the harder path, and it made the product sharper: an engine that can&rsquo;t lean on the cloud has to be deliberate about every decision. That constraint is the craft. Granite is the considered version of something most people build the easy way.</p><div class="pfig flip"><div class="device"><img src="media/shots/g-progress.png" alt="Granite — progress, tracked on-device" loading="lazy" width="680" height="1478"></div><div class="pcap"><span class="pn">Fig. 02 &middot; Granite &middot; progress</span><span class="pd">Every session and every trend lives on the phone. No account, no cloud &mdash; nothing leaves your hands.</span></div></div></div>
       <div class="decide reveal">
+        <span class="dlabel">The ledger &middot; kept / cut</span>
         <div class="dl">The product is the decisions we refused to skip.</div>
         <div class="cols">
           <div class="col kept"><h3><span class="b">+</span>Kept</h3><ul><li>A deterministic engine you can trace</li><li>On-device &mdash; no account, no cloud</li><li>A weekly rewrite that explains itself</li></ul></div>
           <div class="col cut"><h3><span class="b">&minus;</span>Cut</h3><ul><li>A generative black box guessing your plan</li><li>Cloud sync and sign-in</li><li>Streaks, badges, a feed to scroll</li></ul></div>
         </div>
+        <div class="refusal"><span class="rlabel">One we killed</span><p>We almost shipped <b>cloud sync</b> in week three &mdash; it would have made onboarding one tap and the demo look cleaner. We killed it because the moment your training history touches our servers, &ldquo;on-device and accountable&rdquo; stops being an architecture and becomes a marketing line. The harder path was the product.</p></div>
       </div>
       <div class="colophon reveal"><div><b>Stack</b><span>Swift &middot; SwiftUI &middot; on-device</span></div><div><b>Timeline</b><span>2026</span></div><div><b>Hands</b><span>Designed &amp; built by one person</span></div><div><b>Constraint</b><span>No cloud. No account. No black box.</span></div></div>
     </div>
