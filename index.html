@@ -74,7 +74,8 @@ header.solid{background:rgba(11,11,13,.72);backdrop-filter:blur(10px);border-col
 .dot{width:8px;height:8px;border-radius:50%;background:var(--cool);box-shadow:0 0 9px 0 color-mix(in srgb,var(--cool) 75%,transparent);}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(.78);}}
 .dot{animation:pulse 2.6s ease-in-out infinite;}
-.clock{color:var(--grey);font-variant-numeric:tabular-nums;transition:opacity .22s;}
+.clock{color:var(--grey);font-variant-numeric:tabular-nums;cursor:pointer;border-bottom:1px solid transparent;transition:opacity .22s,color .2s,border-color .2s;}
+.clock:hover,.clock:focus-visible{color:var(--paper);border-color:var(--cyan);}
 .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;padding:8px;}
 .burger span{width:22px;height:1.5px;background:var(--paper);}
 
@@ -458,7 +459,7 @@ section.reveal>.wrap{position:relative;}
   <nav class="menu" aria-label="Primary" id="menu">
     <a href="#top"><i>01</i>Home</a><a href="#work"><i>02</i>Work</a><a href="manifesto.html"><i>03</i>Manifesto</a><a href="journal.html"><i>04</i>Journal</a><a href="#contact"><i>05</i>Contact</a>
   </nav>
-  <div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="#offerings" title="Services & pricing">OPEN &middot; Q4</a> <span class="clock" id="clk">LDN --:--:--</span>
+  <div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="#offerings" title="Services & pricing">OPEN &middot; Q4</a> <span class="clock" id="clk" role="button" tabindex="0" aria-label="Local time — click to change timezone" title="Click to change timezone">LDN --:--:--</span>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </div></header>
@@ -586,8 +587,9 @@ section.reveal>.wrap{position:relative;}
 (function(){
   var reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
   var coarse=matchMedia("(hover:none),(pointer:coarse)").matches;
-  var CITIES=[["LDN","Europe/London"],["NYC","America/New_York"],["SF","America/Los_Angeles"],["TYO","Asia/Tokyo"]],ci=0,clkEl;function render(){try{var c=CITIES[ci],t=new Date().toLocaleTimeString("en-GB",{timeZone:c[1],hour:"2-digit",minute:"2-digit"});clkEl=clkEl||document.getElementById("clk");if(clkEl)clkEl.textContent=c[0]+" "+t;}catch(e){}}function rotate(){clkEl=clkEl||document.getElementById("clk");if(!clkEl)return;clkEl.style.opacity="0";setTimeout(function(){ci=(ci+1)%CITIES.length;render();clkEl.style.opacity="";},220);}
-  render(); if(!reduce){setInterval(render,1000);setInterval(rotate,3800);}
+  var CITIES=[["LDN","Europe/London"],["NYC","America/New_York"],["SF","America/Los_Angeles"],["BER","Europe/Berlin"],["DXB","Asia/Dubai"],["SIN","Asia/Singapore"],["TYO","Asia/Tokyo"],["SYD","Australia/Sydney"]],ci=0,clkEl,rotTimer;function render(){try{var c=CITIES[ci],t=new Date().toLocaleTimeString("en-GB",{timeZone:c[1],hour:"2-digit",minute:"2-digit"});clkEl=clkEl||document.getElementById("clk");if(clkEl)clkEl.textContent=c[0]+" "+t;}catch(e){}}function rotate(){clkEl=clkEl||document.getElementById("clk");if(!clkEl)return;clkEl.style.opacity="0";setTimeout(function(){ci=(ci+1)%CITIES.length;render();clkEl.style.opacity="";},220);}function armAuto(){if(reduce)return;clearInterval(rotTimer);rotTimer=setInterval(rotate,4200);}
+  render(); if(!reduce){setInterval(render,1000);armAuto();}
+  clkEl=document.getElementById("clk");if(clkEl){var manual=function(e){if(e)e.preventDefault();rotate();armAuto();};clkEl.addEventListener("click",manual);clkEl.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" ")manual(e);});}
 
   var word=document.getElementById("word");
   var lyrA=document.createElement("span");lyrA.className="lyr a";
@@ -665,7 +667,7 @@ section.reveal>.wrap{position:relative;}
     var rx=innerWidth/2,ry=innerHeight/2,tx=rx,ty=ry;
     addEventListener("mousemove",function(e){tx=e.clientX;ty=e.clientY;ret.style.opacity="1";coord.style.opacity="1";coord.style.left=(e.clientX+16)+"px";coord.style.top=(e.clientY+16)+"px";coord.textContent=("000"+e.clientX).slice(-4)+" \u00B7 "+("000"+e.clientY).slice(-4);});
     addEventListener("mouseleave",function(){ret.style.opacity="0";coord.style.opacity="0";});
-    function label(el){if(el.closest(".proj"))return"Open case \u2197";if(el.closest(".jrnl")||el.closest(".jall"))return"Read \u2197";if(el.tagName==="SUMMARY"||el.closest(".faq"))return"Expand";if(el.id==="email")return"Copy";if(el.closest(".statl"))return"Rates \u2197";if(el.closest("header"))return"Go";return"Go \u2197";}
+    function label(el){if(el.closest(".proj"))return"Open case \u2197";if(el.closest(".jrnl")||el.closest(".jall"))return"Read \u2197";if(el.tagName==="SUMMARY"||el.closest(".faq"))return"Expand";if(el.id==="email")return"Copy";if(el.id==="clk"||el.closest(".clock"))return"Cycle \u00b7 TZ";if(el.closest(".statl"))return"Rates \u2197";if(el.closest("header"))return"Go";return"Go \u2197";}
     document.querySelectorAll("a,button,summary,[role=button]").forEach(function(el){
       el.addEventListener("mouseenter",function(){ret.classList.add("lock");ret.style.width="42px";ret.style.height="42px";verb.textContent=label(el);});
       el.addEventListener("mouseleave",function(){ret.classList.remove("lock");ret.style.width="24px";ret.style.height="24px";});
