@@ -78,7 +78,8 @@ header.solid{background:rgba(11,11,13,.72);backdrop-filter:blur(10px);border-col
 .hero .grid{position:absolute;inset:-40px;z-index:0;opacity:.5;will-change:transform;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(120% 90% at 50% 42%,#000 30%,transparent 80%);-webkit-mask-image:radial-gradient(120% 90% at 50% 42%,#000 30%,transparent 80%);}
 .hero .glow{position:absolute;inset:0;z-index:0;background:radial-gradient(85% 52% at 50% 98%,color-mix(in srgb,var(--accent) 8%,transparent) 0%,transparent 62%);}
 .hero .inner{position:relative;z-index:3;max-width:none;}
-.word{font-family:var(--raveo);line-height:.84;letter-spacing:-.045em;text-transform:uppercase;font-size:clamp(40px,10.6vw,340px);white-space:nowrap;cursor:default;text-align:center;}
+.word{font-family:var(--raveo);line-height:.84;letter-spacing:-.045em;text-transform:uppercase;font-size:clamp(40px,10.6vw,340px);cursor:default;display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;}
+.word .wbreak{flex-basis:100%;height:0;display:none;}
 .word span{display:inline-block;font-variation-settings:"wght" 100,"opsz" 32;transition:font-variation-settings .16s ease-out;}
 .word .colon{color:var(--cyan);}
 .herobar{display:flex;flex-wrap:wrap;gap:clamp(16px,4vw,60px);align-items:flex-end;justify-content:space-between;margin-top:clamp(20px,4vh,44px);opacity:0;transform:translateY(14px);transition:opacity .7s .2s,transform .7s .2s;}
@@ -178,7 +179,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;}
   .row{grid-template-columns:30px 1fr 74px;} .row .rd{display:none;}
   .offer{grid-template-columns:1fr;gap:8px;} .offer .op{text-align:left;}
   .herometa{text-align:left;} .herometa .r{justify-content:flex-start;}
-  .word{font-size:clamp(46px,15vw,120px);} .scrollcue{display:none;}
+  .word{font-size:clamp(36px,12.5vw,92px);} .scrollcue{display:none;}
 }
 @media (max-width:520px){ .jrnl a{grid-template-columns:1fr;gap:4px;} .jrnl a .jk{display:none;} }
 @media (hover:none),(pointer:coarse){ .reticle,.cl,.coord{display:none!important;} }
@@ -356,6 +357,7 @@ section.reveal>.wrap{position:relative;}
 .media .ph,.csmedia .ph{background-image:none;}
 .shot.arted{position:relative;}
 .shot.arted::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,11,13,.6),transparent 45%);pointer-events:none;}
+@media(max-width:600px){.word .wbreak{display:block;}.word{font-size:clamp(54px,18vw,124px);line-height:.82;}}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -436,13 +438,13 @@ section.reveal>.wrap{position:relative;}
   <section id="offerings" class="reveal"><div class="wrap">
     <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Work with us<span class="ix">02 / STUDIO</span></div>
     <h2 class="h2" style="--c:var(--paper)">Service offerings</h2>
-    <p class="lead">You're not buying hours. You're buying the shipped result &mdash; in weeks, not quarters. Fixed scope, fixed price.</p>
+    <p class="lead">You're not buying hours. You're buying the shipped result &mdash; the speed and the certainty are the offer. Fixed scope, fixed price, in weeks not quarters.</p>
     <div class="offers">
       <div class="offer"><div class="oi">01</div><div class="ob"><div class="on">The Design Block</div><div class="os"><span class="sub">Design shipped in a week.</span>Brand to interface to the technical surfaces most designers can't touch.</div></div><div class="op">&pound;<span data-count="5000">5,000</span><small>per week</small></div></div>
-      <div class="offer"><div class="oi">02</div><div class="ob"><div class="on">The Rebuild</div><div class="os"><span class="sub">Your app, rebuilt for the Liquid Glass era.</span>One person, whole job, fixed price.</div></div><div class="op">&pound;<span data-count="25000">25,000</span><small>/ 4 weeks</small></div></div>
-      <div class="offer"><div class="oi">03</div><div class="ob"><div class="on">The AI Feature</div><div class="os"><span class="sub">One native AI feature, in production.</span>Personalised loops, model orchestration &mdash; design and build included.</div></div><div class="op">&pound;<span data-count="30000">30,000</span><small>/ 4 weeks</small></div></div>
-      <div class="offer"><div class="oi">04</div><div class="ob"><div class="on">The Build</div><div class="os"><span class="sub">A live product in your users' hands.</span>A complete native product, taken from nothing to live.</div></div><div class="op">&pound;<span data-count="50000">50,000</span><small>from &middot; complete build</small></div></div>
-      <div class="offer"><div class="oi">05</div><div class="ob"><div class="on">The Partnership</div><div class="os"><span class="sub">Embedded, not engaged.</span>A senior partner in the room, two to three days a week.</div></div><div class="op">&pound;<span data-count="12000">12,000</span><small>from &middot; per month</small></div></div>
+      
+      
+      <div class="offer"><div class="oi">02</div><div class="ob"><div class="on">The Build</div><div class="os"><span class="sub">A live product in your users' hands.</span>A complete native product &mdash; brand, interface, and the code underneath &mdash; taken from nothing to live. Native AI features when the product genuinely needs them, not because it's fashionable.</div></div><div class="op">&pound;<span data-count="50000">50,000</span><small>from &middot; complete build</small></div></div>
+      <div class="offer"><div class="oi">03</div><div class="ob"><div class="on">The Partnership</div><div class="os"><span class="sub">Embedded, not engaged.</span>A senior partner in the room two to three days a week &mdash; the craft your team doesn't have in-house, without the eighteen-month hire.</div></div><div class="op">&pound;<span data-count="12000">12,000</span><small>from &middot; per month</small></div></div>
     </div>
   </div></section>
 
@@ -464,7 +466,7 @@ section.reveal>.wrap{position:relative;}
       <details><summary>What is cyber:cyber?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>cyber:cyber is a product design lab in London. Dan Andrews designs and builds products end to end &mdash; the brand, the interface, and the code underneath &mdash; for a few clients a year.</p></div></div></details>
       <details><summary>What does it do?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Product design and build in one pair of hands: brand, interface, behaviour, and the production engineering underneath. Design that ships intact, with no handoff between design and code.</p></div></div></details>
       <details><summary>Who is it for?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Founders who want the whole product shipped, not just designed. Engagements are fixed-scope and fixed-price, and deliberately few &mdash; a handful of clients a year.</p></div></div></details>
-      <details><summary>How much does it cost?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Fixed prices: from &pound;5,000 / week for a Design Block, &pound;30,000 for a shipped AI feature, and &pound;50,000+ for a complete build. The Partnership is from &pound;12,000 / month.</p></div></div></details>
+      <details><summary>How much does it cost?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Fixed prices: from &pound;5,000 / week for a Design Block, and &pound;50,000+ for a complete build. The Partnership is from &pound;12,000 / month.</p></div></div></details>
       <details><summary>Does it build AI products?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Yes &mdash; native, on-device AI and agent features when the product genuinely needs them. But AI is a tool, not the identity; the craft is product design.</p></div></div></details>
       <details><summary>Who runs it?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Dan Andrews, a designer and engineer in London with a decade of product design across consumer health, developer platforms, and coaching.</p></div></div></details>
     </div>
@@ -510,8 +512,8 @@ section.reveal>.wrap{position:relative;}
   render(); if(!reduce){setInterval(render,1000);setInterval(rotate,3800);}
 
   var word=document.getElementById("word");
-  "CYBER:CYBER".split("").forEach(function(ch){var s=document.createElement("span");if(ch===":")s.className="colon";s.textContent=ch;word.appendChild(s);});
-  var spans=[].slice.call(word.children),REST=790,MIN=380,MAX=910,RAD=300;
+  "CYBER:CYBER".split("").forEach(function(ch){var s=document.createElement("span");if(ch===":")s.className="colon";s.textContent=ch;word.appendChild(s);if(ch===":"){var br=document.createElement("span");br.className="wbreak";word.appendChild(br);}});
+  var spans=[].slice.call(word.children).filter(function(s){return !s.classList.contains("wbreak");}),REST=790,MIN=380,MAX=910,RAD=300;
   function setAll(w){spans.forEach(function(s){s.style.fontVariationSettings="'wght' "+w.toFixed(0)+",'opsz' 32";});}
   var colon=word.querySelector(".colon");
   if(!reduce){var b0=performance.now();(function br(t){colon.style.opacity=(0.55+0.45*(0.5+0.5*Math.sin((t-b0)/560))).toFixed(2);requestAnimationFrame(br);})(b0);}
