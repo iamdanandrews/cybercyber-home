@@ -124,8 +124,8 @@ header.solid{background:rgba(11,11,13,.72);backdrop-filter:blur(10px);border-col
 .foldbreak:hover .fa .tk,.foldbreak:focus-visible .fa .tk{background:var(--accent);}
 .hero .glow{position:absolute;inset:0;z-index:0;background:radial-gradient(55% 40% at 24% 94%,color-mix(in srgb,var(--accent) 8%,transparent) 0%,transparent 60%);pointer-events:none;}
 .hero .hanchor{position:absolute;bottom:14%;left:var(--fold);z-index:2;pointer-events:none;}
-.hero .hanchor .hline{display:block;width:1px;height:64px;background:linear-gradient(to bottom,transparent,var(--line2));}
-.hero .hanchor .hnode{display:block;margin:8px 0 14px;width:7px;height:7px;border:1px solid var(--dim);border-radius:50%;transform:translateX(-3px);}
+
+
 .hero .hanchor .hcap{display:block;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.2em;text-transform:uppercase;color:var(--dim);white-space:nowrap;opacity:.75;}
 .hero .inner{position:relative;z-index:3;flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;width:100%;}
 .word{position:relative;display:inline-block;color:var(--paper);font-family:var(--raveo);font-size:var(--t-hero);line-height:1;letter-spacing:-.05em;text-transform:uppercase;white-space:nowrap;cursor:default;}
@@ -484,6 +484,13 @@ section.reveal>.wrap{position:relative;}
 .mk .mksend{margin-top:18px;display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.18em;text-transform:uppercase;color:var(--accent-ink);border-bottom:1px solid color-mix(in srgb,var(--accent-ink) 40%,transparent);padding-bottom:3px;}
 .mk .mksend:hover{border-bottom-color:var(--accent-ink);}
 @media(prefers-reduced-motion:reduce){.mk .mkfig path{animation:none;stroke-dashoffset:0;}}
+
+/* The void's held mark is the engine's own output, seeded from the studio name --
+   deterministic, one unbroken line. Kept quiet (dim, hairline) so it reads as a
+   held mark in empty space rather than an illustration filling it. */
+.hero .hanchor .hmark{display:block;width:104px;height:104px;margin:0 0 14px;overflow:visible;opacity:.5;}
+.hero .hanchor .hmark path{fill:none;stroke:var(--dim);stroke-width:.16;stroke-linecap:square;stroke-linejoin:miter;}
+@media(max-width:600px){.hero .hanchor .hmark{width:74px;height:74px;}}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -519,7 +526,7 @@ section.reveal>.wrap{position:relative;}
   <section class="hero" style="border-top:0;padding-top:0" id="hero">
     <div class="fold-bg" aria-hidden="true"><div class="grid" id="hgrid"></div></div><div class="glow" aria-hidden="true"></div>
     <div class="vf" aria-hidden="true"><i></i><i></i><i></i><i></i><span class="tl a">51.5074&deg; N</span><span class="tl b">00.1278&deg; W</span></div>
-    <div class="hanchor" aria-hidden="true"><span class="hline"></span><span class="hnode"></span><span class="hcap">London &mdash; Est. MMXXVI</span></div>
+    <div class="hanchor" aria-hidden="true"><svg class="hmark" viewBox="0 0 14 14" preserveAspectRatio="xMidYMid meet"><path id="hmpath" d=""/></svg><span class="hcap">London &mdash; Est. MMXXVI</span></div>
     <div class="wrap inner">
       <h1 class="word" id="word" aria-label="cyber:cyber"></h1>
       <p class="heroline" id="herobar">No theatre. Just the product.</p>
@@ -779,6 +786,9 @@ section.reveal>.wrap{position:relative;}
     },110);
   });
   draw(DEFAULT);
+  var hm=document.getElementById('hmpath');
+  if(hm){ var h=window.ccMark('cyber:cyber', 6); hm.setAttribute('d', h.d);
+    document.querySelector('.hmark').setAttribute('viewBox','0 0 '+h.N+' '+h.N); }
 })();
 </script>
 </body>
