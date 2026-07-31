@@ -93,11 +93,14 @@ header.solid{background:rgba(11,11,13,.72);backdrop-filter:blur(10px);border-col
 .fold-bg{position:absolute;inset:0;z-index:0;background:var(--ground);}
 .fold-bg .grid{position:absolute;inset:-40px;z-index:0;opacity:.5;will-change:transform;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(120% 90% at 30% 50%,#000 30%,transparent 78%);-webkit-mask-image:radial-gradient(120% 90% at 30% 50%,#000 30%,transparent 78%);}
 /* labeled section-rule: the threshold into the light About */
-.foldbreak{position:relative;z-index:5;background:var(--ground);border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);}
+.foldbreak{position:relative;z-index:5;display:block;background:var(--ground);border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);text-decoration:none;transition:background-color .2s var(--e1);}
 .foldbreak .wrap{display:flex;justify-content:space-between;align-items:center;padding:15px clamp(20px,5vw,64px);font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;}
-.foldbreak .fa{color:var(--grey);display:flex;align-items:center;gap:12px;}
-.foldbreak .fa .tk{width:7px;height:7px;background:var(--accent);}
-.foldbreak .fb{color:var(--dim);}
+.foldbreak .fa{color:var(--grey);display:flex;align-items:center;gap:12px;transition:color .2s var(--e1);}
+.foldbreak .fa .tk{width:7px;height:7px;background:var(--accent);transition:background-color .2s var(--e1);}
+.foldbreak .fb{color:var(--dim);transition:color .2s var(--e1);}
+.foldbreak:hover,.foldbreak:focus-visible{background:var(--accent);}
+.foldbreak:hover .fa,.foldbreak:hover .fb,.foldbreak:focus-visible .fa,.foldbreak:focus-visible .fb{color:var(--ground);}
+.foldbreak:hover .fa .tk,.foldbreak:focus-visible .fa .tk{background:var(--ground);}
 .hero .glow{position:absolute;inset:0;z-index:0;background:radial-gradient(55% 40% at 24% 94%,color-mix(in srgb,var(--accent) 8%,transparent) 0%,transparent 60%);pointer-events:none;}
 .hero .hanchor{position:absolute;bottom:14%;left:var(--fold);z-index:2;pointer-events:none;}
 .hero .hanchor .hline{display:block;width:1px;height:64px;background:linear-gradient(to bottom,transparent,var(--line2));}
@@ -486,7 +489,7 @@ section.reveal>.wrap{position:relative;}
     </div>
   </section>
 
-  <div class="foldbreak"><div class="wrap"><span class="fa"><span class="tk"></span>The Lab</span><span class="fb">Enter &darr;</span></div></div>
+  <a class="foldbreak" href="#about"><div class="wrap"><span class="fa"><span class="tk"></span>The Lab</span><span class="fb">Enter &darr;</span></div></a>
 
   <section id="about" class="reveal light"><div class="wrap aboutwrap">
     <span class="ablab" aria-hidden="true"><span class="tk"></span>00 &mdash; What it is</span>
@@ -672,7 +675,7 @@ section.reveal>.wrap{position:relative;}
     addEventListener("mousemove",function(e){tx=e.clientX;ty=e.clientY;ret.style.opacity="1";coord.style.opacity="1";coord.style.left=(e.clientX+16)+"px";coord.style.top=(e.clientY+16)+"px";coord.textContent=("000"+e.clientX).slice(-4)+" \u00B7 "+("000"+e.clientY).slice(-4);});
     addEventListener("mousedown",function(){ret.classList.add("press");},{passive:true});addEventListener("mouseup",function(){ret.classList.remove("press");},{passive:true});
     addEventListener("mouseleave",function(){ret.style.opacity="0";coord.style.opacity="0";});
-    function label(el){if(el.closest(".proj"))return"Open case \u2197";if(el.closest(".jrnl")||el.closest(".jall"))return"Read \u2197";if(el.tagName==="SUMMARY"||el.closest(".faq"))return"Expand";if(el.id==="email")return"Copy";if(el.id==="clk"||el.closest(".clock"))return"Cycle \u00b7 TZ";if(el.closest(".statl"))return"Rates \u2197";if(el.closest("header"))return"Go";return"Go \u2197";}
+    function label(el){if(el.closest(".foldbreak"))return"Enter \u2193";if(el.closest(".proj"))return"Open case \u2197";if(el.closest(".jrnl")||el.closest(".jall"))return"Read \u2197";if(el.tagName==="SUMMARY"||el.closest(".faq"))return"Expand";if(el.id==="email")return"Copy";if(el.id==="clk"||el.closest(".clock"))return"Cycle \u00b7 TZ";if(el.closest(".statl"))return"Rates \u2197";if(el.closest("header"))return"Go";return"Go \u2197";}
     document.querySelectorAll("a,button,summary,[role=button]").forEach(function(el){
       el.addEventListener("mouseenter",function(){ret.classList.add("lock");ret.style.width="42px";ret.style.height="42px";verb.textContent=label(el);});
       el.addEventListener("mouseleave",function(){ret.classList.remove("lock");ret.style.width="24px";ret.style.height="24px";});
