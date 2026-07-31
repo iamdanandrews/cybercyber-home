@@ -187,9 +187,9 @@ section{position:relative;padding:clamp(96px,17vh,210px) 0;border-top:1px solid 
 
 .cta .big{font-family:var(--raveo);font-variation-settings:"wght" 300,"opsz" 32;font-size:var(--t-h2);letter-spacing:-.04em;text-transform:uppercase;line-height:.9;transition:font-variation-settings var(--dur-display,.8s) var(--e1);}
 .reveal.in .cta .big{font-variation-settings:"wght" 660,"opsz" 32;}
-.cta .em{display:inline-flex;align-items:center;gap:12px;margin-top:28px;font-family:var(--raveo);font-variation-settings:"wght" 500,"opsz" 24;font-size:var(--t-lead);letter-spacing:-.01em;border-bottom:2px solid var(--cyan);padding-bottom:4px;cursor:pointer;}
-.cta .em .cp{font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.14em;color:var(--cyan);opacity:0;transition:opacity .2s;}
-.cta .em.copied .cp{opacity:1;}
+.cta 
+.cta 
+.cta 
 .cta p{color:var(--paper70);max-width:52ch;margin-top:22px;font-size:var(--t-body);line-height:1.6;}
 
 footer{border-top:1px solid var(--line);padding:26px 0;}
@@ -264,8 +264,8 @@ section.reveal>.wrap{position:relative;}
 #contact .eyebrow .tick{background:var(--accent-ink);box-shadow:none;}
 #contact .eyebrow .ix{color:rgba(11,11,13,.5);}
 #contact .big{color:var(--accent-ink);}
-#contact .em{border-color:var(--accent-ink);color:var(--accent-ink);}
-#contact .em .cp{color:var(--accent-ink);}
+#contact 
+#contact 
 #contact p{color:rgba(11,11,13,.72);}
 /* variable-font weight-motion on more hovers (motion language) */
 .offer .on{transition:font-variation-settings .3s var(--e1);}
@@ -728,8 +728,8 @@ section.reveal>.wrap{position:relative;}
   <section id="contact" class="reveal cta"><div class="wrap">
     <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Contact<span class="ix">06 / OPEN</span></div>
     <div class="big">Is it<br>worth building?</div>
-    <span class="em mag" id="email" role="button" tabindex="0">hello@cybercyber.ai<span class="cp">Copied</span></span>
-    <div class="mk"><div><label class="mkhint" for="mkin" style="display:block;margin:0 0 14px">Your one sentence</label><input class="mkin" id="mkin" type="text" autocomplete="off" spellcheck="false" placeholder="We need to ship the real product, not the demo." aria-describedby="mkhint"><div class="mkhint" id="mkhint">Seal &middot; <span id="mkref">------</span></div><a class="mksend" id="mksend" href="mailto:hello@cybercyber.ai">Send it &rarr;</a></div><div class="mkfig"><svg class="mkseal" id="mksvg" viewBox="0 0 120 120" role="img" aria-labelledby="mksealt"><title id="mksealt">A seal generated from your sentence</title><rect class="mkframe" x="6" y="6" width="108" height="108"/><g class="mkart" transform="translate(22 22) scale(5.8462)"><path id="mkpath" d=""/></g><text class="mkwm" x="60" y="16.4" text-anchor="middle">CYBER:CYBER</text><text class="mksr" id="mksr" x="60" y="107.9" text-anchor="middle">------</text><circle class="mkdot" cx="14" cy="56.4" r="1.4"/><circle class="mkdot" cx="14" cy="63.6" r="1.4"/><circle class="mkdot" cx="106" cy="56.4" r="1.4"/><circle class="mkdot" cx="106" cy="63.6" r="1.4"/></svg></div></div>
+    
+    <div class="mk"><div><label class="mkhint" for="mkin" style="display:block;margin:0 0 14px">Your one sentence</label><input class="mkin" id="mkin" type="text" autocomplete="off" spellcheck="false" placeholder="We need to ship the real product, not the demo." aria-describedby="mkhint"><div class="mkhint" id="mkhint">Seal &middot; <span id="mkref">------</span></div><a class="mksend" id="mksend" href="mailto:hello@cybercyber.ai">Send it to hello@cybercyber.ai &rarr;</a></div><div class="mkfig"><svg class="mkseal" id="mksvg" viewBox="0 0 120 120" role="img" aria-labelledby="mksealt"><title id="mksealt">A seal generated from your sentence</title><rect class="mkframe" x="6" y="6" width="108" height="108"/><g class="mkart" transform="translate(22 22) scale(5.8462)"><path id="mkpath" d=""/></g><text class="mkwm" x="60" y="16.4" text-anchor="middle">CYBER:CYBER</text><text class="mksr" id="mksr" x="60" y="107.9" text-anchor="middle">------</text><circle class="mkdot" cx="14" cy="56.4" r="1.4"/><circle class="mkdot" cx="14" cy="63.6" r="1.4"/><circle class="mkdot" cx="106" cy="56.4" r="1.4"/><circle class="mkdot" cx="106" cy="63.6" r="1.4"/></svg></div></div>
   </div></section>
 </main>
 
@@ -866,11 +866,7 @@ section.reveal>.wrap{position:relative;}
   burger.addEventListener("click",function(){var o=mob.classList.toggle("open");burger.setAttribute("aria-expanded",o);document.body.style.overflow=o?"hidden":"";});
   mob.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){mob.classList.remove("open");burger.setAttribute("aria-expanded","false");document.body.style.overflow="";});});
 
-  var email=document.getElementById("email");
-  function copyEmail(){try{navigator.clipboard.writeText("hello@cybercyber.ai");}catch(e){}email.classList.add("copied");setTimeout(function(){email.classList.remove("copied");},1600);}
-  email.addEventListener("click",copyEmail);
-  email.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();copyEmail();}});
-
+  
   if(!coarse&&!reduce){
     var ret=document.getElementById("ret"),verb=document.getElementById("verb"),coord=document.getElementById("coord");
     document.body.classList.add("cursor-on");
