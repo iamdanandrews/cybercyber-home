@@ -385,7 +385,7 @@ section.reveal>.wrap{position:relative;}
    content section. The asymmetry now comes from the placement of the void and the
    seal instead of from the rag. */
 #about.light .define{color:var(--ground);max-width:19ch;}
-#about.light .define .mut{color:#8f8a83;}
+#about.light .define .mut{color:#8f8a83;display:block;margin-top:.34em;}
 #about.light .define .mut w{color:#8f8a83;}
 .aboutwrap{position:relative;}
 #about .ul{position:relative;display:inline-block;}
@@ -665,13 +665,48 @@ section.reveal>.wrap{position:relative;}
       if(p<1)requestAnimationFrame(loop);
       else{
         loader.classList.add("done");    // PHASE 2 — loader dissolves, the hero underneath is already laid out
-        hero.classList.add("ignite");    // the vermilion colon takes its first breath
-        setTimeout(function(){hero.classList.remove("ignite");},780);
         start();
-        setTimeout(function(){           // PHASE 3 — the wordmark calibrates weight thin->set, copy settles
-          var c0=performance.now(),cd=780;
-          (function cal(tt){var cp=Math.min((tt-c0)/cd,1),ce=1-Math.pow(1-cp,3);setAll(200+ce*(REST-200));if(cp<1)requestAnimationFrame(cal);else{booted=true;enableReactive();}})(c0);
+        setTimeout(function(){
+          /* PHASE 3 — the wordmark RESOLVES LEFT TO RIGHT.
+             Previously every letter calibrated its weight in unison, which is a
+             state change, not a sequence: nothing led and nothing followed. The
+             site's strongest existing device is per-letter variable weight, so the
+             entrance now staggers it — each letter gets its own ramp, offset by
+             index, and the accent lands when the sequence reaches the colon rather
+             than on a fixed timer. One directed sequence using what is already
+             here, deliberately NOT five more effects: "random effects" is the
+             single most common reason a creative site scores like an average one. */
+          var c0=performance.now(), N=spans.length,
+              STAG=42,                       /* ms between adjacent letters */
+              RAMP=520,                      /* each letter's own resolve */
+              cd=STAG*(N-1)+RAMP,
+              colonIdx=-1, fired=false;
+          for(var ci=0;ci<N;ci++) if(spans[ci].className==='colon') colonIdx=ci;
+          (function cal(tt){
+            var el=tt-c0;
+            for(var i=0;i<N;i++){
+              var lp=Math.min(Math.max((el-i*STAG)/RAMP,0),1),
+                  le=1-Math.pow(1-lp,3);
+              spans[i].style.fontVariationSettings="'wght' "+(200+le*(REST-200)).toFixed(0)+",'opsz' 32";
+            }
+            /* the accent beat, timed to the letter it belongs to */
+            if(!fired && colonIdx>-1 && el>=colonIdx*STAG){
+              fired=true; hero.classList.add("ignite");
+              setTimeout(function(){hero.classList.remove("ignite");},780);
+            }
+            if(el<cd) requestAnimationFrame(cal);
+            else { setAll(REST); booted=true; enableReactive(); }
+          })(c0);
           herobar.classList.add("in");
+          /* the held mark in the void draws itself on, last */
+          var hp=document.getElementById('hmpath');
+          if(hp && hp.getTotalLength){
+            var L=hp.getTotalLength();
+            hp.style.strokeDasharray=L.toFixed(1);
+            hp.style.strokeDashoffset=L.toFixed(1);
+            hp.style.transition='stroke-dashoffset 1.5s var(--e-settle) .18s';
+            requestAnimationFrame(function(){ hp.style.strokeDashoffset='0'; });
+          }
         },320);
       }
     })(t0);
