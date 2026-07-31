@@ -116,13 +116,23 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .status .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);flex:none;animation:statpulse 2.4s ease-in-out infinite;}
 .status .statl{color:var(--grey);transition:color .2s;}
 .status .statl:hover{color:var(--paper);}
-.status .statc{color:var(--cyan);border-bottom:1px solid transparent;padding-bottom:1px;transition:border-bottom-color .2s;}
-.status .statc:hover{border-bottom-color:var(--cyan);}
 .status .clock{color:var(--grey);font-variant-numeric:tabular-nums;cursor:pointer;transition:opacity .22s,color .2s;}
 .status .clock:hover{color:var(--paper);}
 @keyframes statpulse{0%,100%{opacity:1;}50%{opacity:.45;}}
-@media(max-width:900px){.status .statc{display:none;}}
+@media(max-width:900px){}
 @media(prefers-reduced-motion:reduce){.status .dot{animation:none;}}
+
+/* Mobile navigation. On ten of thirteen pages .menu was display:none below 760px with NO
+   burger and no panel, so the nav was simply unreachable on a phone -- the brand link home
+   was the only way out of a case study. A collapsed phone layout is the documented cap at
+   Honorable Mention, so this is not cosmetic. */
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;padding:8px;cursor:pointer;}
+.burger span{width:22px;height:1.5px;background:var(--paper);}
+.mobile{position:fixed;inset:0;z-index:190;background:rgba(11,11,13,.97);backdrop-filter:blur(6px);display:flex;flex-direction:column;justify-content:center;padding:0 clamp(20px,5vw,64px);gap:8px;transform:translateY(-100%);transition:transform .45s cubic-bezier(.2,.7,.2,1);}
+.mobile.open{transform:none;}
+.mobile a{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:var(--t-sub);text-transform:uppercase;padding:8px 0;border-bottom:1px solid var(--line);}
+@media(max-width:760px){.burger{display:flex;}}
+@media(prefers-reduced-motion:reduce){.mobile{transition:none;}}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -134,8 +144,9 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 <a class="skip" href="#c">Skip to content</a>
 <header id="hdr"><div class="wrap nav">
   <a class="brand" href="./">cyber:cyber<sup>&trade;</sup></a>
-  <nav class="menu" aria-label="Primary"><a href="./">Home</a><a href="./#work">Work</a><a href="./manifesto.html">Manifesto</a><a href="journal.html" aria-current="page">Journal</a><a href="./#contact">Contact</a></nav><div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="./#offerings" title="Services &amp; pricing">OPEN &middot; Q4</a><a class="statc" href="mailto:hello@cybercyber.ai">hello@cybercyber.ai</a><span class="clock" id="clk" role="button" tabindex="0" aria-label="Local time — click to change timezone" title="Click to change timezone">LDN&nbsp;--:--</span></div>
+  <nav class="menu" aria-label="Primary"><a href="./">Home</a><a href="./#work">Work</a><a href="./manifesto.html">Manifesto</a><a href="journal.html" aria-current="page">Journal</a><a href="./#contact">Contact</a></nav><div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="./#offerings" title="Services &amp; pricing">OPEN &middot; Q4</a><span class="clock" id="clk" role="button" tabindex="0" aria-label="Local time — click to change timezone" title="Click to change timezone">LDN&nbsp;--:--</span><button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
 </div></header>
+<div class="mobile" id="mobile"><a href="./">Home</a><a href="./#work">Work</a><a href="./manifesto.html">Manifesto</a><a href="journal.html" aria-current="page">Journal</a><a href="./#contact">Contact</a></div>
 <div class="reticle" id="iret" aria-hidden="true"><span class="ring"></span><b class="h"></b><b class="v"></b><span class="verb" id="iverb">View</span></div>
 <span class="coord" id="icoord" aria-hidden="true">0000 &middot; 0000</span>
 
@@ -207,6 +218,23 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
   if(el){var m=function(e){if(e)e.preventDefault();rotate();};
     el.addEventListener("click",m);
     el.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" ")m(e);});}
+})();
+</script>
+<script>
+(function(){
+  var b=document.getElementById("burger"), m=document.getElementById("mobile");
+  if(!b||!m) return;
+  b.addEventListener("click",function(){
+    var o=m.classList.toggle("open");
+    b.setAttribute("aria-expanded",o);
+    document.body.style.overflow=o?"hidden":"";
+  });
+  m.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click",function(){
+      m.classList.remove("open"); b.setAttribute("aria-expanded","false");
+      document.body.style.overflow="";
+    });
+  });
 })();
 </script>
 </body></html>

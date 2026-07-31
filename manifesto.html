@@ -144,12 +144,10 @@ footer{border-top:1px solid var(--line);padding:28px 0;}
 .status .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);flex:none;animation:statpulse 2.4s ease-in-out infinite;}
 .status .statl{color:var(--grey);transition:color .2s;}
 .status .statl:hover{color:var(--paper);}
-.status .statc{color:var(--cyan);border-bottom:1px solid transparent;padding-bottom:1px;transition:border-bottom-color .2s;}
-.status .statc:hover{border-bottom-color:var(--cyan);}
 .status .clock{color:var(--grey);font-variant-numeric:tabular-nums;cursor:pointer;transition:opacity .22s,color .2s;}
 .status .clock:hover{color:var(--paper);}
 @keyframes statpulse{0%,100%{opacity:1;}50%{opacity:.45;}}
-@media(max-width:900px){.status .statc{display:none;}}
+@media(max-width:900px){}
 @media(prefers-reduced-motion:reduce){.status .dot{animation:none;}}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
@@ -168,7 +166,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;}
   <a class="brand" href="./">cyber:cyber<sup>&trade;</sup></a>
   <nav class="menu" aria-label="Primary">
     <a href="./">Home</a><a href="./#work">Work</a><a href="./manifesto.html" aria-current="page">Manifesto</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a>
-  </nav><div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="./#offerings" title="Services &amp; pricing">OPEN &middot; Q4</a><a class="statc" href="mailto:hello@cybercyber.ai">hello@cybercyber.ai</a><span class="clock" id="clk" role="button" tabindex="0" aria-label="Local time — click to change timezone" title="Click to change timezone">LDN&nbsp;--:--</span></div>
+  </nav><div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="./#offerings" title="Services &amp; pricing">OPEN &middot; Q4</a><span class="clock" id="clk" role="button" tabindex="0" aria-label="Local time — click to change timezone" title="Click to change timezone">LDN&nbsp;--:--</span></div>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></header>
 <div class="mobile" id="mobile"><a href="./">Home</a><a href="./#work">Work</a><a href="./manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a></div>
