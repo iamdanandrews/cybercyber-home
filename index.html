@@ -178,10 +178,10 @@ section{position:relative;padding:clamp(96px,17vh,210px) 0;border-top:1px solid 
 .faq .ans p{padding:0 0 18px;}
 
 .jrnl{border-top:1px solid var(--line);margin-top:clamp(34px,5vw,60px);}
-.jrnl a{display:grid;grid-template-columns:1fr auto auto;gap:14px 28px;align-items:baseline;padding:17px 0;border-bottom:1px solid var(--line);transition:padding-left .25s,background .25s;}
-.jrnl a:hover{padding-left:14px;background:#100f14;}
-.jrnl a .jt{font-family:var(--raveo);font-variation-settings:"wght" 520,"opsz" 24;font-size:var(--t-lead);transition:font-variation-settings .3s;}
-.jrnl a:hover .jt{font-variation-settings:"wght" 680,"opsz" 24;}
+.jrnl a{display:grid;grid-template-columns:1fr auto auto;gap:14px 28px;align-items:baseline;padding:17px 0;border-bottom:1px solid var(--line);transition:background .25s;}
+.jrnl a:hover{background:#100f14;}
+.jrnl a .jt{font-family:var(--raveo);font-variation-settings:"wght" 520,"opsz" 24;font-size:var(--t-lead);transition:color .3s;}
+.jrnl a:hover .jt{color:var(--paper);}
 .jrnl a .jk{font-size:var(--t-cap);letter-spacing:.16em;text-transform:uppercase;color:var(--dim);}
 .jrnl a .jd{font-size:var(--t-cap);color:var(--grey);font-variant-numeric:tabular-nums;}
 
@@ -240,7 +240,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;}
 @media(max-width:820px){.faqwrap{grid-template-columns:1fr;gap:18px;}.faqhead{position:static;}}
 .jrnl{border:1px solid var(--line);margin-top:clamp(34px,5vw,60px);display:grid;grid-template-columns:.9fr 1.1fr;gap:1px;background:var(--line);}
 .jrnl a{grid-template-columns:none!important;display:flex;flex-direction:column;gap:10px;background:var(--ground);padding:clamp(24px,3vw,44px);border-bottom:0;}
-.jrnl a:hover{padding-left:clamp(24px,3vw,44px);background:#100f14;}
+.jrnl a:hover{background:#100f14;}
 .jrnl a .jk{order:1;color:var(--accent);}
 .jrnl a .jt{order:2;font-size:var(--t-lead);}
 .jrnl a .jd{order:3;margin-top:auto;padding-top:20px;}
@@ -406,8 +406,8 @@ section.reveal>.wrap{position:relative;}
 @media(max-width:760px){.colgrid{display:none;}}
 /* index / colophon */
 .idx{border-top:1px solid var(--line);margin-top:clamp(30px,4vw,50px);}
-.irow{display:flex;align-items:baseline;gap:14px;padding:clamp(9px,1.05vw,13px) 0;border-bottom:1px solid var(--line);color:var(--paper70);transition:color .25s var(--e1),padding-left .25s var(--e1);}
-.irow:hover{color:var(--paper);padding-left:10px;}
+.irow{display:flex;align-items:baseline;gap:14px;padding:clamp(9px,1.05vw,13px) 0;border-bottom:1px solid var(--line);color:var(--paper70);transition:color .25s var(--e1);}
+.irow:hover{color:var(--paper);}
 .irow .in{font-family:var(--mono);font-size:var(--t-cap);color:var(--dim);}
 /* Apparatus, not content. This row used the DISPLAY face at the same size and weight as a
    FAQ question, so the site closed with two near-identical lists -- and it broke the rule
@@ -587,12 +587,26 @@ section.reveal>.wrap{position:relative;}
    blooms its title's weight and/or shifts in from the left. These summaries are
    clickable, so the missing feedback was a usability gap as much as an
    inconsistency. Same language, same tokens, no new device. */
-.faq summary{padding-inline:0;padding-block:clamp(18px,2vw,24px);transition:padding-left var(--dur-2) var(--e1),background-color var(--dur-2) var(--e1),font-variation-settings var(--dur-2) var(--e1);}
-.faq summary:hover{background:#100f14;padding-left:12px;font-variation-settings:"wght" 700,"opsz" 24;}
+.faq summary{padding-inline:0;padding-block:clamp(18px,2vw,24px);transition:background-color var(--dur-2) var(--e1);}
+.faq summary:hover{background:#100f14;}
 .faq summary:hover .pm{color:var(--paper);}
 .faq details[open] summary{font-variation-settings:"wght" 640,"opsz" 24;}
-.faq summary:focus-visible{background:#100f14;padding-left:12px;}
+.faq summary:focus-visible{background:#100f14;}
 @media(prefers-reduced-motion:reduce){.faq summary{transition:none;}}
+
+/* HOVER MUST NEVER CHANGE LAYOUT. The indent narrowed the text column while the
+   weight bloom widened the glyphs; together they re-wrapped a two-line journal
+   title, grew the row and shoved its date out of the grid. Both are replaced by a
+   marker that is PAINTED, not laid out: absolutely positioned so it is neither a
+   flex nor a grid item, and animated on transform only. */
+.jrnl a,.faq summary,.irow{position:relative;}
+.jrnl a::before,.faq summary::before,.irow::before{content:"";position:absolute;left:0;top:0;bottom:0;
+  width:2px;background:var(--accent);transform:scaleY(0);transition:transform var(--dur-2) var(--e1);}
+.jrnl a:hover::before,.faq summary:hover::before,.irow:hover::before,
+.faq summary:focus-visible::before,.irow:focus-visible::before{transform:scaleY(1);}
+@media(prefers-reduced-motion:reduce){
+  .jrnl a::before,.faq summary::before,.irow::before{transition:none;}
+}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -715,7 +729,7 @@ section.reveal>.wrap{position:relative;}
     <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Contact<span class="ix">06 / OPEN</span></div>
     <div class="big">Is it<br>worth building?</div>
     <span class="em mag" id="email" role="button" tabindex="0">hello@cybercyber.ai<span class="cp">Copied</span></span>
-    <p>One sentence about what you're trying to ship is enough. No forms, no discovery calls.</p><div class="mk"><div><label class="mkhint" for="mkin" style="display:block;margin:0 0 14px">Your one sentence</label><input class="mkin" id="mkin" type="text" autocomplete="off" spellcheck="false" placeholder="We need to ship the real product, not the demo." aria-describedby="mkhint"><div class="mkhint" id="mkhint">Seal &middot; <span id="mkref">------</span> &middot; same sentence, same seal</div><a class="mksend" id="mksend" href="mailto:hello@cybercyber.ai">Send it &rarr;</a></div><div class="mkfig"><svg class="mkseal" id="mksvg" viewBox="0 0 120 120" role="img" aria-labelledby="mksealt"><title id="mksealt">A seal generated from your sentence</title><rect class="mkframe" x="6" y="6" width="108" height="108"/><g class="mkart" transform="translate(22 22) scale(5.8462)"><path id="mkpath" d=""/></g><text class="mkwm" x="60" y="16.4" text-anchor="middle">CYBER:CYBER</text><text class="mksr" id="mksr" x="60" y="107.9" text-anchor="middle">------</text><circle class="mkdot" cx="14" cy="56.4" r="1.4"/><circle class="mkdot" cx="14" cy="63.6" r="1.4"/><circle class="mkdot" cx="106" cy="56.4" r="1.4"/><circle class="mkdot" cx="106" cy="63.6" r="1.4"/></svg></div></div>
+    <div class="mk"><div><label class="mkhint" for="mkin" style="display:block;margin:0 0 14px">Your one sentence</label><input class="mkin" id="mkin" type="text" autocomplete="off" spellcheck="false" placeholder="We need to ship the real product, not the demo." aria-describedby="mkhint"><div class="mkhint" id="mkhint">Seal &middot; <span id="mkref">------</span></div><a class="mksend" id="mksend" href="mailto:hello@cybercyber.ai">Send it &rarr;</a></div><div class="mkfig"><svg class="mkseal" id="mksvg" viewBox="0 0 120 120" role="img" aria-labelledby="mksealt"><title id="mksealt">A seal generated from your sentence</title><rect class="mkframe" x="6" y="6" width="108" height="108"/><g class="mkart" transform="translate(22 22) scale(5.8462)"><path id="mkpath" d=""/></g><text class="mkwm" x="60" y="16.4" text-anchor="middle">CYBER:CYBER</text><text class="mksr" id="mksr" x="60" y="107.9" text-anchor="middle">------</text><circle class="mkdot" cx="14" cy="56.4" r="1.4"/><circle class="mkdot" cx="14" cy="63.6" r="1.4"/><circle class="mkdot" cx="106" cy="56.4" r="1.4"/><circle class="mkdot" cx="106" cy="63.6" r="1.4"/></svg></div></div>
   </div></section>
 </main>
 
