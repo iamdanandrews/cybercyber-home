@@ -42,7 +42,7 @@
   --sans:"Helvetica Neue",Helvetica,"Segoe UI",system-ui,Arial,sans-serif;
   --raveo:"Raveo","Helvetica Neue",Helvetica,Arial,sans-serif; --maxw:1280px; --fold:66.667%;
   --e1:cubic-bezier(.2,.7,.2,1);--e2:cubic-bezier(.76,0,.24,1);--ep:cubic-bezier(.2,.6,.3,1);--s1:#0e0d12;--s2:#15131b;
-  --t-cap:clamp(10px,.28vw + 9px,11.5px);--t-body:clamp(15px,.35vw + 13.6px,17px);--t-lead:clamp(18px,.9vw + 14px,22px);--t-sub:clamp(24px,2.4vw + 14px,44px);--t-title:clamp(30px,4.4vw,58px);--t-h2:clamp(46px,9vw,140px);--t-hero:clamp(34px,10vw,175px);
+  --t-cap:clamp(10px,.28vw + 9px,11.5px);--t-body:clamp(15px,.35vw + 13.6px,17px);--t-lead:clamp(18px,.9vw + 14px,22px);--t-mid:clamp(23px,2.4vw,30px);--t-sub:clamp(24px,2.4vw + 14px,44px);--t-title:clamp(30px,4.4vw,58px);--t-h2:clamp(46px,9vw,140px);--t-hero:clamp(34px,10vw,175px);
   --tr-cap:.16em;--e-settle:cubic-bezier(.22,1,.36,1);--dur-1:.14s;--dur-2:.34s;--dur-3:.9s;--dur-display:.8s;--u:8px;--sp-3:24px;--sp-4:40px;--sp-5:64px;--sp-6:96px;--sp-7:144px;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -168,7 +168,7 @@ section{position:relative;padding:clamp(96px,17vh,210px) 0;border-top:1px solid 
 
 .faq{border-top:1px solid var(--line);margin-top:clamp(34px,5vw,60px);max-width:760px;}
 .faq details{border-bottom:1px solid var(--line);}
-.faq summary{list-style:none;cursor:pointer;padding:16px 0;display:flex;justify-content:space-between;gap:20px;align-items:center;font-family:var(--raveo);font-variation-settings:"wght" 540,"opsz" 24;font-size:var(--t-lead);}
+.faq summary{list-style:none;cursor:pointer;padding:16px 0;display:flex;justify-content:space-between;gap:20px;align-items:center;font-family:var(--raveo);font-variation-settings:"wght" 500,"opsz" 28;font-size:var(--t-mid);letter-spacing:-.015em;}
 .faq summary::-webkit-details-marker{display:none;}
 .faq summary .pm{color:var(--cyan);font-family:var(--mono);font-size:var(--t-lead);transition:transform .3s;}
 .faq details[open] summary .pm{transform:rotate(45deg);}
@@ -406,16 +406,24 @@ section.reveal>.wrap{position:relative;}
 @media(max-width:760px){.colgrid{display:none;}}
 /* index / colophon */
 .idx{border-top:1px solid var(--line);margin-top:clamp(30px,4vw,50px);}
-.irow{display:flex;align-items:baseline;gap:16px;padding:clamp(16px,2vw,26px) 0;border-bottom:1px solid var(--line);color:var(--paper70);transition:color .25s var(--e1),padding-left .25s var(--e1);}
+.irow{display:flex;align-items:baseline;gap:14px;padding:clamp(9px,1.05vw,13px) 0;border-bottom:1px solid var(--line);color:var(--paper70);transition:color .25s var(--e1),padding-left .25s var(--e1);}
 .irow:hover{color:var(--paper);padding-left:10px;}
 .irow .in{font-family:var(--mono);font-size:var(--t-cap);color:var(--dim);}
-.irow .il{font-family:var(--raveo);font-variation-settings:"wght" 520,"opsz" 32;font-size:var(--t-lead);letter-spacing:-.02em;line-height:1;}
+/* Apparatus, not content. This row used the DISPLAY face at the same size and weight as a
+   FAQ question, so the site closed with two near-identical lists -- and it broke the rule
+   holding everywhere else that mono carries labels and data. Back matter, set like it. */
+.irow .il{font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.14em;text-transform:uppercase;color:var(--paper);line-height:1;}
 .irow .dots{flex:1;border-bottom:1px dotted var(--dim);transform:translateY(-5px);min-width:24px;}
 .irow .iv{font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.1em;text-transform:uppercase;color:var(--grey);white-space:nowrap;}
 
 .arted{background-size:cover;background-position:center;background-repeat:no-repeat;}
 .frame.arted::before{display:none;}.media .ph{background-image:none;}
-@media(max-width:600px){.word{font-size:clamp(30px,12.6vw,120px);}.heroline{line-height:1.35;max-width:26ch;margin-top:1.9em;}.hero .hanchor .hcap{white-space:normal;max-width:36vw;line-height:1.6;}}
+@media(max-width:600px){.word{font-size:clamp(30px,12.6vw,120px);}.heroline{line-height:1.35;max-width:26ch;margin-top:1.9em;}/* The anchor is pinned at the 2/3 fold, which on a 390px screen puts it 260px in with its
+     caption running flush to the right edge -- no gutter at all, and the label wrapping into a
+     130px column. Bring it to the page gutter so it shares the wordmark's left edge and has
+     room to set both lines. */
+  .hero .hanchor{left:clamp(20px,5vw,64px);right:auto;}
+  .hero .hanchor .hcap{white-space:normal;max-width:min(78vw,42ch);line-height:1.6;}}
 /* ============================================================
    SPATIAL PASS — Swiss asymmetry + Japanese ma (charged void)
    + ruptured vertical meter. Consistency had flattened the
@@ -523,11 +531,11 @@ section.reveal>.wrap{position:relative;}
    line. Pointer-only, and reduced-motion gets the brightening without the redraw. */
 .hero .hanchor{pointer-events:auto;}
 .hero .hanchor .hmark path{transition:stroke .3s var(--e1);}
-.hero .hanchor .hlab{display:block;margin-top:6px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);opacity:0;transform:translateY(-3px);transition:opacity .28s var(--e1),transform .28s var(--e1);}
+.hero .hanchor .hlab{display:block;margin-top:6px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);opacity:.58;transition:opacity .28s var(--e1);}
 @media(hover:hover) and (pointer:fine){
   .hero .hanchor:hover .hmark{opacity:1;}
   .hero .hanchor:hover .hmark path{stroke:var(--paper);animation:hmretrace 1.4s var(--e-settle);}
-  .hero .hanchor:hover .hlab{opacity:.9;transform:none;}
+  .hero .hanchor:hover .hlab{opacity:1;}
 }
 @keyframes hmretrace{from{stroke-dasharray:var(--hl);stroke-dashoffset:var(--hl);}to{stroke-dasharray:var(--hl);stroke-dashoffset:0;}}
 @media(prefers-reduced-motion:reduce){.hero .hanchor:hover .hmark path{animation:none;}}
@@ -579,7 +587,7 @@ section.reveal>.wrap{position:relative;}
    blooms its title's weight and/or shifts in from the left. These summaries are
    clickable, so the missing feedback was a usability gap as much as an
    inconsistency. Same language, same tokens, no new device. */
-.faq summary{padding-inline:0;transition:padding-left var(--dur-2) var(--e1),background-color var(--dur-2) var(--e1),font-variation-settings var(--dur-2) var(--e1);}
+.faq summary{padding-inline:0;padding-block:clamp(18px,2vw,24px);transition:padding-left var(--dur-2) var(--e1),background-color var(--dur-2) var(--e1),font-variation-settings var(--dur-2) var(--e1);}
 .faq summary:hover{background:#100f14;padding-left:12px;font-variation-settings:"wght" 700,"opsz" 24;}
 .faq summary:hover .pm{color:var(--paper);}
 .faq details[open] summary{font-variation-settings:"wght" 640,"opsz" 24;}
@@ -687,14 +695,7 @@ section.reveal>.wrap{position:relative;}
   <section id="faq" class="reveal"><div class="wrap faqwrap"><div class="faqhead">
     <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>In short<span class="ix">04 / QUESTIONS</span></div>
     <h2 class="h2" style="--c:var(--paper)">Questions</h2><p class="lead">The short version &mdash; what we are, what it costs, and who it's for.</p></div>
-    <div class="faq">
-      <details><summary>What is cyber:cyber?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>cyber:cyber is a product design lab in London. Dan Andrews designs and builds products end to end &mdash; the brand, the interface, and the code underneath &mdash; for a few clients a year.</p></div></div></details>
-      <details><summary>What does it do?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Product design and build in one pair of hands: brand, interface, behaviour, and the production engineering underneath. Design that ships intact, with no handoff between design and code.</p></div></div></details>
-      <details><summary>Who is it for?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Founders who want the whole product shipped, not just designed. Engagements are fixed-scope and fixed-price, and deliberately few &mdash; a handful of clients a year.</p></div></div></details>
-      <details><summary>How much does it cost?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Fixed prices: from &pound;5,000 / week for a Design Block, and &pound;50,000+ for a complete build. The Partnership is from &pound;12,000 / month.</p></div></div></details>
-      <details><summary>Does it build AI products?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Yes &mdash; native, on-device AI and agent features when the product genuinely needs them. But AI is a tool, not the identity; the craft is product design.</p></div></div></details>
-      <details><summary>Who runs it?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Dan Andrews, a designer and engineer in London. Before starting cyber:cyber he spent a decade in product design and engineering &mdash; at companies including Spotify, Epic&nbsp;Games and Dell, and with early-stage teams.</p></div></div></details>
-    </div>
+    <div class="faq"><details><summary>Can one person do all of it?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Brand, interface and production code used to need three people because the <em>tools</em> needed three specialists. They don't any more. What hasn't got easier is deciding what to build, and that part never parallelised anyway. Granite and Frame are both here to be inspected &mdash; the same hands made the brand, the interface and the commits.</p></div></div></details><details><summary>What if I only need design?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Then this is the wrong studio, and that isn't a negotiating position. Handing a design over is where products lose their shape: the decisions that matter get made during the build, by whoever is holding it. Brand, interface and code &mdash; or we pass.</p></div></div></details><details><summary>How fast is fast?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>A Design Block is a week. A complete build is weeks, not quarters. But speed isn't what you're buying &mdash; everyone is fast now. You're buying the judgment that makes fast worth keeping.</p></div></div></details><details><summary>What if you're the bottleneck?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>A fair risk to name. It's why scope and price are fixed before anything starts, why work lands continuously instead of in one handover at the end, and why it's only a few clients a year. A calendar with slack in it is the only kind that holds.</p></div></div></details><details><summary>Do we own what you build?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>All of it, including the parts you'd rather not read. Native code, no proprietary runtime, no licence that expires. If we stopped talking tomorrow you'd have a product someone else could pick up and extend.</p></div></div></details><details><summary>Who does the actual work?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Dan Andrews &mdash; a designer and engineer in London, a decade of product work including Spotify, Epic&nbsp;Games and Dell, and early-stage teams before that. There's no bench, and nobody to hand you off to.</p></div></div></details></div>
   </div></section>
 
   <section id="journal" class="reveal"><div class="wrap">
@@ -724,7 +725,7 @@ section.reveal>.wrap{position:relative;}
       <a class="irow" href="#work"><span class="in">01</span><span class="il">Work</span><span class="dots"></span><span class="iv">Selected proof</span></a>
       <a class="irow" href="#offerings"><span class="in">02</span><span class="il">Studio</span><span class="dots"></span><span class="iv">Rate card &middot; from &pound;5k</span></a>
       <a class="irow" href="manifesto.html"><span class="in">03</span><span class="il">Manifesto</span><span class="dots"></span><span class="iv">Ten beliefs</span></a>
-      <a class="irow" href="journal.html"><span class="in">04</span><span class="il">Journal</span><span class="dots"></span><span class="iv">Notes</span></a>
+      <a class="irow" href="journal.html"><span class="in">04</span><span class="il">Journal</span><span class="dots"></span><span class="iv">Seven notes</span></a>
       <a class="irow" href="#contact"><span class="in">05</span><span class="il">Contact</span><span class="dots"></span><span class="iv">Open for Q4</span></a>
     </div>
   </div></section>
