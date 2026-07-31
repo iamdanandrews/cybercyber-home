@@ -13,7 +13,7 @@
 :root{--ground:#0B0B0D;--paper:#F2ECEF;--paper70:#C3BEC6;--paper45:#9E9BA6;--accent:#EA4E32;--accent-ink:#0B0B0D;--cyan:#22D3EE;--grey:#948FA0;--dim:#8C8996;--line:#211F27;--line2:#2C2A33;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;--sans:"Helvetica Neue",Helvetica,"Segoe UI",system-ui,Arial,sans-serif;--raveo:"Raveo","Helvetica Neue",Helvetica,Arial,sans-serif;--maxw:1180px;--e1:cubic-bezier(.2,.7,.2,1);--e2:cubic-bezier(.45,0,.75,.4);--ep:cubic-bezier(.2,.6,.3,1);--s1:#0e0d12;--s2:#15131b;--t-cap:clamp(10px,.28vw + 9px,11.5px);--t-body:clamp(15px,.35vw + 13.6px,17px);--t-lead:clamp(18px,.9vw + 14px,22px);--t-mid:clamp(23px,2.4vw,30px);--t-sub:clamp(24px,2.4vw + 14px,44px);--t-title:clamp(30px,4.4vw,58px);--t-art:clamp(38px,7.5vw,104px);--t-h2:clamp(46px,9vw,140px);--t-hero:clamp(64px,21vw,300px);--tr-cap:.16em;--e-settle:cubic-bezier(.22,1,.36,1);--dur-1:.14s;--dur-2:.34s;--dur-3:.9s;--dur-display:.8s;--u:8px;--sp-3:24px;--sp-4:40px;--sp-5:64px;--sp-6:96px;--sp-7:144px;}
 @media (prefers-contrast:more){:root{--paper70:#E7E3EA;--paper45:#D2CDD9;--grey:#C9C4D1;--dim:#B6B1C0;--line:#3B3843;--line2:#4A4751;}}
 *{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%;}
+html{scroll-behavior:smooth;scroll-padding-top:56px;-webkit-text-size-adjust:100%;}
 body{background:var(--ground);color:var(--paper);font-family:var(--sans);font-size:var(--t-body);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 a{color:inherit;text-decoration:none;}::selection{background:var(--accent);color:var(--accent-ink);}
 :focus-visible{outline:1.5px solid var(--cyan);outline-offset:4px;border-radius:1px;box-shadow:0 0 0 5px rgba(34,211,238,.14);}a:active,button:active,summary:active,[role=button]:active{transform:scale(.985);}
@@ -43,7 +43,7 @@ main{padding-top:96px;}
 .frame .bk.a{top:8px;left:8px;border-right:0;border-bottom:0;}
 .frame .bk.b{bottom:8px;right:8px;border-left:0;border-top:0;}
 /* hanko seal */
-.seal{width:104px;height:104px;color:var(--accent);flex:none;}
+.seal{width:64px;height:64px;color:var(--accent);flex:none;}
 .seal text{font-size:8.4px/*svg*/;letter-spacing:1.4px;fill:currentColor;}
 .seal .stb{font-size:7px/*svg*/;letter-spacing:2.4px;}
 footer{border-top:1px solid var(--line);padding:26px 0;margin-top:clamp(60px,10vh,120px);}
