@@ -45,7 +45,7 @@ a{color:inherit;text-decoration:none;}
 .skip:focus{transform:none;}
 .progress{position:fixed;top:54px;left:0;height:2px;width:100%;transform:scaleX(0);transform-origin:0 50%;background:var(--cyan);z-index:190;will-change:transform;}
 /* Swiss: grotesque body, monospace reserved for data + labels */
-.eyebrow,.menu,.status,.clock,.rm,.jk,.jd,.op,.foot,.lrow,.lstat,.coord,.verb,.ix,.collab .lbl,.frontier,.cp,.scrollcue,.mobile a i,.ri,.brand,.herometa{font-family:var(--mono);}
+.eyebrow,.menu,.status,.clock,.rm,.jk,.jd,.op,.foot,.lrow,.lstat,.coord,.verb,.ix,.collab .lbl,.frontier,.cp,.mobile a i,.ri,.brand,.herometa{font-family:var(--mono);}
 
 .loader{position:fixed;inset:0;z-index:1000;background:var(--ground);display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(20px,5vw,64px);transition:opacity .9s var(--e1);}
 .loader.done{opacity:0;pointer-events:none;}
@@ -90,7 +90,7 @@ header.solid{background:rgba(11,11,13,.72);backdrop-filter:blur(10px);border-col
 .burger span{width:22px;height:1.5px;background:var(--paper);}
 
 /* --- THE FOLD: notan mirror hinged on the colon --- */
-.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;overflow:hidden;background:var(--ground);}
+.hero{position:relative;min-height:calc(100svh - 48px);display:flex;flex-direction:column;overflow:hidden;background:var(--ground);}
 .fold-bg{position:absolute;inset:0;z-index:0;background:var(--ground);}
 .fold-bg .grid{position:absolute;inset:-40px;z-index:0;opacity:.5;will-change:transform;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(120% 90% at 30% 50%,#000 30%,transparent 78%);-webkit-mask-image:radial-gradient(120% 90% at 30% 50%,#000 30%,transparent 78%);}
 .fold-bg .paper{position:absolute;top:clamp(58px,8vh,82px);right:0;bottom:0;left:50%;z-index:1;background:var(--paper);transform-origin:left center;transform:scaleX(1);transition:transform .9s var(--e1);}
@@ -121,7 +121,6 @@ header.solid{background:rgba(11,11,13,.72);backdrop-filter:blur(10px);border-col
 .herometa{font-size:11px;letter-spacing:.12em;color:var(--grey);text-align:left;font-variant-numeric:tabular-nums;}
 .hero .herometa .r{justify-content:flex-start;}
 .herometa .r{display:flex;align-items:center;gap:8px;justify-content:flex-end;}
-.scrollcue{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);z-index:3;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--dim);writing-mode:vertical-rl;}
 
 section{position:relative;padding:clamp(96px,17vh,210px) 0;border-top:1px solid var(--line);}
 .eyebrow{display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.2em;word-spacing:.22em;text-transform:uppercase;color:var(--grey);margin-bottom:22px;}
@@ -214,7 +213,6 @@ footer{border-top:1px solid var(--line);padding:26px 0;}
   .row{grid-template-columns:30px 1fr 74px;} .row .rd{display:none;}
   .offer{grid-template-columns:1fr;gap:8px;} .offer .op{text-align:left;}
   .herometa{text-align:left;} .herometa .r{justify-content:flex-start;}
-  .scrollcue{display:none;}
 }
 @media (max-width:520px){ .jrnl a{grid-template-columns:1fr;gap:4px;} .jrnl a .jk{display:none;} }
 @media (hover:none),(pointer:coarse){ .reticle,.cl,.coord{display:none!important;} }
@@ -445,9 +443,9 @@ section.reveal>.wrap{position:relative;}
 @media(min-width:820px){
   .aboutwrap{min-height:min(72vh,660px);display:flex;flex-direction:column;justify-content:flex-end;padding-top:clamp(40px,8vh,90px);}
   #about .aseal{top:0;}
-  .aboutwrap .ablab{position:absolute;top:0;left:0;font-family:var(--mono);font-size:10px;letter-spacing:.2em;word-spacing:.22em;text-transform:uppercase;color:#8f8a83;display:inline-flex;align-items:center;gap:9px;}
+  .aboutwrap .ablab{position:absolute;top:0;left:clamp(20px,5vw,64px);font-family:var(--mono);font-size:10px;letter-spacing:.2em;word-spacing:.22em;text-transform:uppercase;color:#8f8a83;display:inline-flex;align-items:center;gap:9px;}
   .aboutwrap .ablab .tk{width:7px;height:7px;background:var(--accent);}
-  .aboutwrap .acoord{position:absolute;bottom:0;right:0;font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:#8f8a83;font-variant-numeric:tabular-nums;}
+  .aboutwrap .acoord{position:absolute;bottom:0;right:clamp(20px,5vw,64px);font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:#8f8a83;font-variant-numeric:tabular-nums;}
 }
 @media(max-width:819px){.aboutwrap .ablab,.aboutwrap .acoord{display:none;}}
 /* 5 — the interval: one dead-air void, a single held mark in near-empty space (ma) */
@@ -502,7 +500,6 @@ section.reveal>.wrap{position:relative;}
         <div class="r"><span class="dot" aria-hidden="true"></span><a href="#offerings" class="statl">Next available Q4</a></div>
       </div>
     </div>
-    <div class="scrollcue" aria-hidden="true">Scroll</div>
   </section>
 
   <div class="foldbreak"><div class="wrap"><span class="fa"><span class="tk"></span>00 &mdash; The Lab</span><span class="fb">Enter &darr;</span></div></div>
