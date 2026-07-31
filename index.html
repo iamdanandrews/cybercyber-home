@@ -192,7 +192,7 @@ section{position:relative;padding:clamp(96px,17vh,210px) 0;border-top:1px solid 
 .jrnl a .jk{font-size:var(--t-cap);letter-spacing:.16em;text-transform:uppercase;color:var(--dim);}
 .jrnl a .jd{font-size:var(--t-cap);color:var(--grey);font-variant-numeric:tabular-nums;}
 
-.cta .big{font-family:var(--raveo);font-variation-settings:"wght" 300,"opsz" 32;font-size:var(--t-h2);letter-spacing:-.04em;text-transform:uppercase;line-height:.9;transition:font-variation-settings var(--dur-display,.8s) var(--e1);}
+.cta .big{margin:0;font-family:var(--raveo);font-variation-settings:"wght" 300,"opsz" 32;font-size:var(--t-h2);letter-spacing:-.04em;text-transform:uppercase;line-height:.9;transition:font-variation-settings var(--dur-display,.8s) var(--e1);}
 .reveal.in .cta .big{font-variation-settings:"wght" 660,"opsz" 32;}
 .cta 
 .cta 
@@ -623,7 +623,7 @@ section.reveal>.wrap{position:relative;}
 .who{margin-top:clamp(30px,4vw,60px);border:1px solid var(--line);display:grid;grid-template-columns:.86fr 1.14fr;gap:1px;background:var(--line);}
 .who > div{background:var(--ground);padding:clamp(26px,3.4vw,52px);}
 .who .wl{display:block;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.2em;text-transform:uppercase;color:var(--dim);}
-.who .wn{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:var(--t-sub);line-height:1;letter-spacing:-.02em;margin-top:16px;color:var(--paper);}
+.who .wn{margin:0;font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:var(--t-sub);line-height:1;letter-spacing:-.02em;margin-top:16px;color:var(--paper);}
 .who p{font-size:var(--t-body);color:var(--paper70);line-height:1.68;max-width:54ch;}
 .who p + p{margin-top:15px;}
 .who .wlink{display:inline-block;margin-top:22px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);border-bottom:1px solid transparent;padding-bottom:3px;transition:border-bottom-color var(--dur-2) var(--e1);}
@@ -778,7 +778,7 @@ section.reveal>.wrap{position:relative;}
 
   <section class="reveal"><div class="wrap">
     <div class="who">
-      <div><span class="wl">Who you&rsquo;re hiring</span><div class="wn">Dan Andrews</div></div>
+      <div><span class="wl">Who you&rsquo;re hiring</span><h2 class="wn">Dan Andrews</h2></div>
       <div>
         <p>A designer in London. A decade across brand, interface, motion and interaction &mdash; Spotify, Epic&nbsp;Games, Dell &mdash; and early-stage teams before and since.</p>
         <p>The work I like most is the complicated kind: domains with their own constraints and their own vocabulary, where you have to learn the subject before you can design anything worth shipping. Brand, interface and the way a thing moves are one problem rather than four handoffs &mdash; and most of what goes wrong in a product goes wrong at the seams between them.</p>
@@ -789,7 +789,7 @@ section.reveal>.wrap{position:relative;}
 
   <section id="contact" class="reveal cta"><div class="wrap">
     <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Contact<span class="ix">06 / OPEN</span></div>
-    <div class="big">Is it<br>worth building?</div>
+    <h2 class="big">Is it<br>worth building?</h2>
     
     <div class="mk"><div><label class="mkhint" for="mkin" style="display:block;margin:0 0 14px">Your one sentence</label><input class="mkin" id="mkin" type="text" autocomplete="off" spellcheck="false" placeholder="We need to ship the real product, not the demo." aria-describedby="mkhint"><div class="mkhint" id="mkhint">Seal &middot; <span id="mkref">------</span></div><a class="mksend" id="mksend" href="mailto:hello@cybercyber.ai">Send it to hello@cybercyber.ai &rarr;</a></div><div class="mkfig"><svg class="mkseal" id="mksvg" viewBox="0 0 120 120" role="img" aria-labelledby="mksealt"><title id="mksealt">A seal generated from your sentence</title><rect class="mkframe" x="6" y="6" width="108" height="108"/><g class="mkart" transform="translate(22 22) scale(5.8462)"><path id="mkpath" d=""/></g><text class="mkwm" x="60" y="16.4" text-anchor="middle">CYBER:CYBER</text><text class="mksr" id="mksr" x="60" y="107.9" text-anchor="middle">------</text><circle class="mkdot" cx="14" cy="56.4" r="1.4"/><circle class="mkdot" cx="14" cy="63.6" r="1.4"/><circle class="mkdot" cx="106" cy="56.4" r="1.4"/><circle class="mkdot" cx="106" cy="63.6" r="1.4"/></svg></div></div>
   </div></section>
