@@ -45,12 +45,11 @@ a{color:inherit;text-decoration:none;}
 .skip:focus{transform:none;}
 .progress{position:fixed;top:54px;left:0;height:2px;width:100%;transform:scaleX(0);transform-origin:0 50%;background:var(--cyan);z-index:190;will-change:transform;}
 /* Swiss: grotesque body, monospace reserved for data + labels */
-.eyebrow,.menu,.status,.clock,.rm,.jk,.jd,.op,.foot,.lrow,.lstat,.coord,.verb,.ix,.collab .lbl,.frontier,.cp,.mobile a i,.ri,.brand,.herometa{font-family:var(--mono);}
+.eyebrow,.menu,.status,.clock,.rm,.jk,.jd,.op,.foot,.lrow,.lstat,.coord,.verb,.ix,.collab .lbl,.frontier,.cp,.mobile a i,.ri,.brand{font-family:var(--mono);}
 
 .loader{position:fixed;inset:0;z-index:1000;background:var(--ground);display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(20px,5vw,64px);transition:opacity .9s var(--e1);}
 .loader.done{opacity:0;pointer-events:none;}
 .loader .lglow{position:absolute;inset:0;z-index:0;background:radial-gradient(55% 40% at 24% 94%,color-mix(in srgb,var(--accent) 15%,transparent) 0%,transparent 60%);opacity:.1;transition:opacity .28s linear;pointer-events:none;}
-.loader .lseam{position:absolute;top:clamp(58px,8vh,82px);bottom:0;left:var(--fold);width:1px;z-index:1;background:var(--line2);transform:translateX(-.5px);opacity:.55;}
 .loader .lpct,.loader .lrow{position:relative;z-index:2;transition:transform .9s var(--e1),opacity .55s var(--e1);}
 .loader.done .lpct,.loader.done .lrow{transform:translateY(-14px);opacity:0;}
 .loader .lgrid{position:absolute;inset:-40px;z-index:0;opacity:.5;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(120% 90% at 30% 50%,#000 30%,transparent 78%);-webkit-mask-image:radial-gradient(120% 90% at 30% 50%,#000 30%,transparent 78%);}
@@ -89,41 +88,31 @@ header.solid{background:rgba(11,11,13,.72);backdrop-filter:blur(10px);border-col
 .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;padding:8px;}
 .burger span{width:22px;height:1.5px;background:var(--paper);}
 
-/* --- THE FOLD: notan mirror hinged on the colon --- */
+/* --- HERO: single grid, asymmetric grotesque + a charged void anchor --- */
 .hero{position:relative;min-height:calc(100svh - 48px);display:flex;flex-direction:column;overflow:hidden;background:var(--ground);}
 .fold-bg{position:absolute;inset:0;z-index:0;background:var(--ground);}
 .fold-bg .grid{position:absolute;inset:-40px;z-index:0;opacity:.5;will-change:transform;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(120% 90% at 30% 50%,#000 30%,transparent 78%);-webkit-mask-image:radial-gradient(120% 90% at 30% 50%,#000 30%,transparent 78%);}
-.fold-bg .paper{position:absolute;top:clamp(58px,8vh,82px);right:0;bottom:0;left:var(--fold);z-index:1;background:var(--paper);transform-origin:left center;transform:scaleX(1);transition:transform .9s var(--e1);}
-.hero.wipe .fold-bg .paper{transform:scaleX(0);}
-.fold-bg .seam{position:absolute;top:clamp(58px,8vh,82px);bottom:0;left:var(--fold);width:1px;z-index:2;background:var(--line2);transform:translateX(-.5px);}
-/* labeled section-rule: the fold deliberately opens into the light About */
+/* labeled section-rule: the threshold into the light About */
 .foldbreak{position:relative;z-index:5;background:var(--ground);border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);}
 .foldbreak .wrap{display:flex;justify-content:space-between;align-items:center;padding:15px clamp(20px,5vw,64px);font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;}
 .foldbreak .fa{color:var(--grey);display:flex;align-items:center;gap:12px;}
 .foldbreak .fa .tk{width:7px;height:7px;background:var(--accent);}
 .foldbreak .fb{color:var(--dim);}
 .hero .glow{position:absolute;inset:0;z-index:0;background:radial-gradient(55% 40% at 24% 94%,color-mix(in srgb,var(--accent) 8%,transparent) 0%,transparent 60%);pointer-events:none;}
-.hero .pmark{position:absolute;top:63%;left:calc(var(--fold) + (100% - var(--fold))/2);z-index:2;transform:translateX(-50%);pointer-events:none;}
-.hero .pmark .pline{position:absolute;left:50%;bottom:100%;width:1px;height:56px;background:linear-gradient(to bottom,transparent,#8f8a8366);transform:translateX(-50%);}
-.hero .pmark .pnode{display:block;width:7px;height:7px;border:1px solid #8f8a83;border-radius:50%;opacity:.6;}
-.hero .inner{position:relative;z-index:3;flex:1;min-height:0;display:flex;align-items:center;width:100%;}
-.word{position:relative;display:inline-block;font-family:var(--raveo);font-size:clamp(34px,13.2vw,196px);line-height:1;letter-spacing:-.05em;text-transform:uppercase;white-space:nowrap;cursor:default;}
-.word .lyr{display:block;}
-.word .lyr.b{position:absolute;inset:0;}
-.word .lyr span{display:inline-block;font-variation-settings:"wght" 100,"opsz" 32;transition:font-variation-settings .18s var(--ep);}
-.word .lyr.a{color:var(--paper);clip-path:inset(-25% calc(100% - var(--cut,50%)) -25% 0);}
-.word .lyr.b{color:var(--ground);clip-path:inset(-25% 0 -25% var(--cut,50%));}
-.word .lyr .colon{color:var(--accent);transform-origin:center;animation:colonlife 3.4s ease-in-out infinite;}
+.hero .hanchor{position:absolute;bottom:14%;left:var(--fold);z-index:2;pointer-events:none;}
+.hero .hanchor .hline{display:block;width:1px;height:64px;background:linear-gradient(to bottom,transparent,var(--line2));}
+.hero .hanchor .hnode{display:block;margin:8px 0 14px;width:7px;height:7px;border:1px solid var(--dim);border-radius:50%;transform:translateX(-3px);}
+.hero .hanchor .hcap{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);white-space:nowrap;opacity:.75;}
+.hero .inner{position:relative;z-index:3;flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;width:100%;}
+.word{position:relative;display:inline-block;color:var(--paper);font-family:var(--raveo);font-size:clamp(34px,13.2vw,196px);line-height:1;letter-spacing:-.05em;text-transform:uppercase;white-space:nowrap;cursor:default;}
+.word span{display:inline-block;font-variation-settings:"wght" 100,"opsz" 32;transition:font-variation-settings .18s var(--ep);}
+.word .colon{color:var(--accent);transform-origin:center;animation:colonlife 3.4s ease-in-out infinite;}
 @keyframes colonlife{0%,100%{transform:scale(1);}50%{transform:scale(1.08);}}
-.hero.ignite .word .lyr .colon{animation:colonignite .72s var(--e1) both;}
+.hero.ignite .word .colon{animation:colonignite .72s var(--e1) both;}
 @keyframes colonignite{0%{transform:scale(.35);opacity:0;filter:drop-shadow(0 0 0 transparent);}55%{opacity:1;filter:drop-shadow(0 0 16px color-mix(in srgb,var(--accent) 75%,transparent));}100%{transform:scale(1);opacity:1;filter:drop-shadow(0 0 0 transparent);}}
-@media(prefers-reduced-motion:reduce){.word .lyr .colon{animation:none;}}
-.herobar{position:relative;z-index:3;max-width:min(46ch,48%);margin-left:max(0px,calc((100vw - var(--maxw))/2));padding:0 clamp(20px,5vw,64px) clamp(26px,5vh,52px);display:flex;flex-direction:column;align-items:flex-start;gap:12px;opacity:0;transform:translateY(12px);transition:opacity var(--dur-2) var(--e-settle) .2s,transform var(--dur-2) var(--e-settle) .2s;text-align:left;}
-.herobar.in{opacity:1;transform:none;}
-.heroline{font-family:var(--sans);font-weight:600;font-size:clamp(20px,2.6vw,34px);letter-spacing:-.01em;max-width:20ch;line-height:1.08;}
-.herometa{font-size:11px;letter-spacing:.12em;color:var(--grey);text-align:left;font-variant-numeric:tabular-nums;}
-.hero .herometa .r{justify-content:flex-start;}
-.herometa .r{display:flex;align-items:center;gap:8px;justify-content:flex-end;}
+@media(prefers-reduced-motion:reduce){.word .colon{animation:none;}}
+.heroline{position:relative;z-index:3;font-family:var(--sans);font-weight:600;font-size:clamp(24px,3.2vw,44px);letter-spacing:-.01em;max-width:22ch;line-height:1.12;margin-top:clamp(18px,3vh,32px);opacity:0;transform:translateY(12px);transition:opacity var(--dur-2) var(--e-settle) .2s,transform var(--dur-2) var(--e-settle) .2s;}
+.heroline.in{opacity:1;transform:none;}
 
 section{position:relative;padding:clamp(96px,17vh,210px) 0;border-top:1px solid var(--line);}
 .eyebrow{display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.2em;word-spacing:.22em;text-transform:uppercase;color:var(--grey);margin-bottom:22px;}
@@ -215,11 +204,10 @@ footer{border-top:1px solid var(--line);padding:26px 0;}
   .menu,.nav .status .clock{display:none;} .burger{display:flex;}
   .row{grid-template-columns:30px 1fr 74px;} .row .rd{display:none;}
   .offer{grid-template-columns:1fr;gap:8px;} .offer .op{text-align:left;}
-  .herometa{text-align:left;} .herometa .r{justify-content:flex-start;}
 }
 @media (max-width:520px){ .jrnl a{grid-template-columns:1fr;gap:4px;} .jrnl a .jk{display:none;} }
 @media (hover:none),(pointer:coarse){ .reticle,.cl,.coord{display:none!important;} }
-@media (prefers-reduced-motion:reduce){ *{scroll-behavior:auto;transition:none!important;animation:none!important;} .reveal,.herobar{opacity:1;transform:none;} }
+@media (prefers-reduced-motion:reduce){ *{scroll-behavior:auto;transition:none!important;animation:none!important;} .reveal,.heroline{opacity:1;transform:none;} }
 
 /* --- differentiated sections --- */
 .nfy2{margin-top:clamp(34px,5vw,60px);display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
@@ -299,8 +287,6 @@ section.reveal>.wrap{position:relative;}
 
 /* --- MAX: viewfinder framing + wordmark glitch + edge telemetry (GITS x Swiss) --- */
 .vf{position:absolute;top:66px;left:clamp(12px,2.4vw,26px);right:clamp(12px,2.4vw,26px);bottom:clamp(12px,2.4vw,26px);z-index:2;pointer-events:none;}
-.vf i:nth-child(2),.vf i:nth-child(4){border-color:#8f8a83;}
-.vf .tl.b{color:#8f8a83;}
 .vf i{position:absolute;width:20px;height:20px;border:1.5px solid var(--dim);opacity:0;animation:vfin .6s var(--e1) forwards;}
 .vf i:nth-child(1){top:0;left:0;border-right:0;border-bottom:0;animation-delay:.10s;}
 .vf i:nth-child(2){top:0;right:0;border-left:0;border-bottom:0;animation-delay:.18s;}
@@ -310,8 +296,7 @@ section.reveal>.wrap{position:relative;}
 .vf .tl{position:absolute;font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:var(--dim);text-transform:uppercase;white-space:nowrap;}
 .vf .tl.a{top:-1px;left:28px;}
 .vf .tl.b{bottom:-1px;right:28px;}
-.vlabel{position:fixed;right:12px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font-family:var(--mono);font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--dim);z-index:120;pointer-events:none;}
-@media(max-width:860px){.vlabel{display:none;}.vf{top:58px;left:10px;right:10px;bottom:10px;}.vf .tl{display:none;}}
+@media(max-width:860px){.vf{top:58px;left:10px;right:10px;bottom:10px;}.vf .tl{display:none;}}
 @keyframes glitch{
  0%,100%{text-shadow:none;clip-path:inset(0 0 0 0);transform:translateX(0);}
  15%{text-shadow:-3px 0 var(--cyan),3px 0 var(--accent);transform:translateX(2px);}
@@ -417,7 +402,7 @@ section.reveal>.wrap{position:relative;}
 .media .ph,.csmedia .ph{background-image:none;}
 .shot.arted{position:relative;}
 .shot.arted::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,11,13,.6),transparent 45%);pointer-events:none;}
-@media(max-width:600px){.word{font-size:clamp(30px,12.6vw,120px);}.herobar{max-width:52%;padding-bottom:clamp(20px,4vh,40px);}.heroline{font-size:15px;line-height:1.15;}.herometa{font-size:10px;}.herobar .herometa>div:last-child{display:none;}}
+@media(max-width:600px){.word{font-size:clamp(30px,12.6vw,120px);}.heroline{font-size:17px;line-height:1.2;max-width:16ch;}.hero .hanchor .hcap{white-space:normal;max-width:36vw;line-height:1.6;}}
 /* ============================================================
    SPATIAL PASS — Swiss asymmetry + Japanese ma (charged void)
    + ruptured vertical meter. Consistency had flattened the
@@ -464,7 +449,6 @@ section.reveal>.wrap{position:relative;}
 <div class="loader" id="loader" aria-hidden="true">
   <div class="lglow" id="lglow"></div>
   <div class="lgrid"></div>
-  <span class="lseam"></span>
   <div class="lpct"><span id="lpct">0</span></div>
   <div class="lrow"><span class="lstat" id="lstat">INITIALISING</span><span>Est. London</span></div>
 </div>
@@ -475,7 +459,6 @@ section.reveal>.wrap{position:relative;}
 <div class="progress" id="progress" aria-hidden="true"></div>
 <div class="spot" id="spot" aria-hidden="true"></div>
 <div class="hud" id="hud" aria-hidden="true"><span class="sq"></span><span class="sec" id="hudSec">01 · The Proof</span><span class="pct" id="hudPct">0%</span></div>
-<div class="vlabel" aria-hidden="true">cyber:cyber &mdash; London &mdash; Est. MMXXVI</div>
 <div class="colgrid" aria-hidden="true"></div>
 
 <header id="hdr"><div class="wrap nav">
@@ -493,18 +476,13 @@ section.reveal>.wrap{position:relative;}
 </div>
 
 <main id="top">
-  <section class="hero wipe" style="border-top:0;padding-top:0" id="hero">
-    <div class="fold-bg" aria-hidden="true"><div class="grid" id="hgrid"></div><span class="paper"></span><span class="seam"></span></div><div class="glow" aria-hidden="true"></div>
+  <section class="hero" style="border-top:0;padding-top:0" id="hero">
+    <div class="fold-bg" aria-hidden="true"><div class="grid" id="hgrid"></div></div><div class="glow" aria-hidden="true"></div>
     <div class="vf" aria-hidden="true"><i></i><i></i><i></i><i></i><span class="tl a">51.5074&deg; N</span><span class="tl b">00.1278&deg; W</span></div>
-    <div class="pmark" aria-hidden="true"><span class="pline"></span><span class="pnode"></span></div>
+    <div class="hanchor" aria-hidden="true"><span class="hline"></span><span class="hnode"></span><span class="hcap">London &mdash; Est. MMXXVI</span></div>
     <div class="wrap inner">
       <h1 class="word" id="word" aria-label="cyber:cyber"></h1>
-    </div>
-    <div class="herobar" id="herobar">
-      <div class="heroline">No theatre. Just the product.</div>
-      <div class="herometa">
-        <div class="r"><span class="dot" aria-hidden="true"></span><a href="#offerings" class="statl">Next available Q4</a></div>
-      </div>
+      <p class="heroline" id="herobar">No theatre. Just the product.</p>
     </div>
   </section>
 
@@ -619,35 +597,14 @@ section.reveal>.wrap{position:relative;}
   clkEl=document.getElementById("clk");if(clkEl){var manual=function(e){if(e)e.preventDefault();rotate();armAuto();};clkEl.addEventListener("click",manual);clkEl.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" ")manual(e);});}
 
   var word=document.getElementById("word");
-  var lyrA=document.createElement("span");lyrA.className="lyr a";
-  var lyrB=document.createElement("span");lyrB.className="lyr b";
-  "CYBER:CYBER".split("").forEach(function(ch){[lyrA,lyrB].forEach(function(L){var s=document.createElement("span");if(ch===":")s.className="colon";s.textContent=ch;L.appendChild(s);});});
-  word.appendChild(lyrA);word.appendChild(lyrB);
-  var spans=[].slice.call(word.querySelectorAll(".lyr span")),REST=650,MAX=880,RAD=250;
+  "CYBER:CYBER".split("").forEach(function(ch){var s=document.createElement("span");if(ch===":")s.className="colon";s.textContent=ch;word.appendChild(s);});
+  var spans=[].slice.call(word.children),REST=650,MAX=880,RAD=250;
   function setAll(w){for(var i=0;i<spans.length;i++)spans[i].style.fontVariationSettings="'wght' "+w.toFixed(0)+",'opsz' 32";}
-
-  var FOLD=parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--fold"))/100||.66667;
-  function updateFold(){
-    var wr=word.getBoundingClientRect();
-    if(!wr.width)return;
-    var foldX=innerWidth*FOLD,letters=[].slice.call(lyrA.children),best=null,bestDist=Infinity;
-    for(var i=0;i<letters.length-1;i++){
-      var a=letters[i].getBoundingClientRect(),b=letters[i+1].getBoundingClientRect();
-      var gapX=(a.right+b.left)/2,dist=Math.abs(gapX-foldX);
-      if(dist<bestDist){bestDist=dist;best=gapX;}
-    }
-    if(best===null)best=foldX;   // single-glyph fallback, shouldn't happen with this wordmark
-    var cut=((best-wr.left)/wr.width)*100;
-    word.style.setProperty("--cut",Math.max(0,Math.min(100,cut)).toFixed(2)+"%");
-  }
-  updateFold();
-  var foldRaf=null;addEventListener("resize",function(){if(!foldRaf)foldRaf=requestAnimationFrame(function(){foldRaf=null;updateFold();});});
-  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(updateFold);
 
   var loader=document.getElementById("loader"),lpct=document.getElementById("lpct"),lstat=document.getElementById("lstat"),herobar=document.getElementById("herobar"),hero=document.getElementById("hero"),lglow=document.getElementById("lglow");
   var booted=false;
   function boot(){
-    if(reduce){setAll(REST);updateFold();if(loader)loader.style.display="none";hero.classList.remove("wipe");herobar.classList.add("in");booted=true;start();return;}
+    if(reduce){setAll(REST);if(loader)loader.style.display="none";herobar.classList.add("in");booted=true;start();return;}
     var t0=performance.now(),dur=1150;
     // PHASE 1 — initialise: the loader counts while the wordmark holds thin
     (function loop(t){var e=t-t0,p=Math.min(e/dur,1),ease=1-Math.pow(1-p,3);
@@ -657,14 +614,13 @@ section.reveal>.wrap{position:relative;}
       if(lglow)lglow.style.opacity=(0.1+p*0.5).toFixed(3);   // atmosphere warms as it boots
       if(p<1)requestAnimationFrame(loop);
       else{
-        loader.classList.add("done");
-        hero.classList.remove("wipe");   // PHASE 2 — the fold wipes open; loader dissolves on the same axis
-        hero.classList.add("ignite");    // the vermilion colon lands on the seam
+        loader.classList.add("done");    // PHASE 2 — loader dissolves, the hero underneath is already laid out
+        hero.classList.add("ignite");    // the vermilion colon takes its first breath
         setTimeout(function(){hero.classList.remove("ignite");},780);
         start();
         setTimeout(function(){           // PHASE 3 — the wordmark calibrates weight thin->set, copy settles
           var c0=performance.now(),cd=780;
-          (function cal(tt){var cp=Math.min((tt-c0)/cd,1),ce=1-Math.pow(1-cp,3);setAll(200+ce*(REST-200));if(cp<1)requestAnimationFrame(cal);else{booted=true;updateFold();enableReactive();}})(c0);
+          (function cal(tt){var cp=Math.min((tt-c0)/cd,1),ce=1-Math.pow(1-cp,3);setAll(200+ce*(REST-200));if(cp<1)requestAnimationFrame(cal);else{booted=true;enableReactive();}})(c0);
           herobar.classList.add("in");
         },320);
       }
