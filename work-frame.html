@@ -68,10 +68,10 @@ main{padding-top:96px;}
 .cs2{display:grid;grid-template-columns:1fr;gap:clamp(40px,7vw,90px);}
 @media(min-width:900px){.cs2{grid-template-columns:200px 1fr;gap:0;}.cslabel{position:sticky;top:104px;}.cs2>div:last-child{border-left:1px solid var(--line);padding-left:clamp(40px,5vw,72px);}}
 .cslabel{font-size:var(--t-cap);letter-spacing:.18em;text-transform:uppercase;color:var(--dim);}
-.block{margin-bottom:clamp(50px,8vh,96px);}
+.block{margin-bottom:clamp(78px,13vh,150px);}
 .block:last-child{margin-bottom:0;}
-.block h2{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:var(--t-sub);letter-spacing:-.02em;line-height:1.02;margin-bottom:18px;}
-.block p{color:var(--paper70);font-size:var(--t-body);line-height:1.65;max-width:60ch;margin-bottom:16px;}
+.block h2{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:var(--t-sub);letter-spacing:-.02em;line-height:1.08;margin-bottom:clamp(22px,2.4vh,32px);}
+.block p{color:var(--paper70);font-size:var(--t-body);line-height:1.72;max-width:60ch;margin-bottom:clamp(20px,2.2vh,30px);}
 .shot{aspect-ratio:4/3;margin-top:26px;background:var(--s1);border:1px solid var(--line);display:flex;align-items:flex-end;padding:16px;}
 .shot span{font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.14em;text-transform:uppercase;color:var(--dim);}
 .shot.wide{aspect-ratio:16/9;}
@@ -109,10 +109,10 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .media .ph,.csmedia .ph{background-image:none;}
 .shot.arted{position:relative;}
 .shot.arted::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,11,13,.6),transparent 45%);pointer-events:none;}
-.csintro{font-family:var(--raveo);font-variation-settings:"wght" 340,"opsz" 32;font-size:var(--t-mid);line-height:1.4;color:var(--paper);margin-bottom:6px;}
+.csintro{font-family:var(--raveo);font-variation-settings:"wght" 340,"opsz" 32;font-size:var(--t-mid);line-height:1.46;color:var(--paper);margin-bottom:clamp(14px,1.6vh,22px);}
 .csmeta a{border-bottom:1px solid var(--accent);padding-bottom:2px;}
 .csmeta a:hover{color:var(--paper);}
-.decide{margin:clamp(66px,11vh,120px) 0 0;padding-top:20px;border-top:2px solid var(--paper);}
+.decide{margin:clamp(100px,17vh,190px) 0 0;padding-top:20px;border-top:2px solid var(--paper);}
 .decide .dlabel{font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.2em;word-spacing:.22em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:22px;}
 .decide .dl{font-family:var(--raveo);font-variation-settings:"wght" 620,"opsz" 32;font-size:var(--t-title);letter-spacing:-.025em;line-height:1.02;margin-bottom:clamp(34px,5vw,58px);max-width:18ch;}
 .decide .cols{display:grid;grid-template-columns:1fr;gap:30px;}
@@ -128,7 +128,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .refusal p{font-family:var(--raveo);font-variation-settings:"wght" 400,"opsz" 32;font-size:var(--t-mid);letter-spacing:-.017em;line-height:1.28;color:var(--paper);max-width:38ch;}
 .refusal p b{font-variation-settings:"wght" 640,"opsz" 32;font-weight:inherit;}.decide li::before{content:counter(dl,decimal-leading-zero);font-family:var(--mono);font-variation-settings:normal;font-size:var(--t-cap);letter-spacing:.08em;color:var(--dim);}
 .decide .cut li{color:var(--paper45);}
-.colophon{margin-top:clamp(50px,8vh,92px);padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:16px 44px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.12em;text-transform:uppercase;color:var(--grey);font-variant-numeric:tabular-nums;}
+.colophon{margin-top:clamp(84px,13vh,150px);padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:16px 44px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.12em;text-transform:uppercase;color:var(--grey);font-variant-numeric:tabular-nums;}
 .colophon b{display:block;color:var(--dim);font-weight:400;margin-bottom:5px;font-size:var(--t-cap);}
 .colophon span{color:var(--paper);}
 .pfig{margin-top:clamp(28px,4vw,46px);background:var(--s1);border:1px solid var(--line);padding:clamp(24px,4vw,48px);display:grid;grid-template-columns:auto 1fr;gap:clamp(26px,5vw,60px);align-items:center;}
@@ -196,7 +196,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
    any solution) and a two-reader split (the individual / the room they train in),
    because these products are bought by one and paid for by the other.
 ------------------------------------------------------------------ */
-.stakes{margin:clamp(40px,6vh,72px) 0 0;padding-top:20px;border-top:2px solid var(--paper);}
+.stakes{margin:clamp(90px,15vh,170px) 0 clamp(78px,13vh,150px);padding-top:20px;border-top:2px solid var(--paper);}
 .stakes .slabel{font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.2em;word-spacing:.22em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:11px;margin-bottom:16px;}
 .stakes .slabel::before{content:"";width:7px;height:7px;background:var(--accent);flex:none;}
 .stakes .sl{font-family:var(--raveo);font-variation-settings:"wght" 620,"opsz" 32;font-size:var(--t-title);letter-spacing:-.025em;line-height:1.02;margin-bottom:clamp(24px,3.4vw,40px);max-width:26ch;}
@@ -209,19 +209,19 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .stakes .mech{margin-top:clamp(24px,3.4vw,40px);font-family:var(--raveo);font-variation-settings:"wght" 420,"opsz" 32;font-size:var(--t-mid);letter-spacing:-.015em;line-height:1.16;color:var(--paper);max-width:40ch;}
 .stakes .cav{margin-top:14px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.1em;color:var(--dim);max-width:60ch;line-height:1.7;}
 
-.aud{margin:clamp(44px,7vh,86px) 0 0;display:grid;grid-template-columns:1fr;gap:clamp(26px,3.4vw,48px);}
+.aud{margin:clamp(90px,15vh,170px) 0 clamp(78px,13vh,150px);display:grid;grid-template-columns:1fr;gap:clamp(26px,3.4vw,48px);}
 @media(min-width:820px){.aud{grid-template-columns:1.04fr .96fr;}}
 .aud .who{border-top:1px solid var(--line2);padding-top:18px;}
 .aud .who h3{font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.18em;text-transform:uppercase;margin:0 0 14px;display:flex;align-items:center;gap:10px;}
 .aud .who:first-child h3{color:var(--cyan);}
 .aud .who:last-child h3{color:var(--accent);}
-.aud .who h3 .b{width:17px;height:17px;border:1px solid currentColor;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:9px;flex:none;}
+.aud .who h3 .b{width:17px;height:17px;border:1px solid currentColor;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:9px;flex:none;line-height:1;padding-top:.5px;font-variant-numeric:tabular-nums;}
 .aud .who p{font-family:var(--raveo);font-variation-settings:"wght" 420,"opsz" 32;font-size:var(--t-mid);letter-spacing:-.015em;line-height:1.18;color:var(--paper);}
 .aud .who p em{font-style:normal;color:var(--paper45);}
 
 /* One quiet line: what is shipped is one surface of a longer system. States the
    scope without publishing the roadmap. */
-.horizon{margin-top:clamp(34px,5vh,60px);padding-top:18px;border-top:1px solid var(--line);font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.14em;color:var(--dim);line-height:1.8;max-width:62ch;}
+.horizon{margin-top:clamp(64px,10vh,110px);padding-top:18px;border-top:1px solid var(--line);font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.14em;color:var(--dim);line-height:1.8;max-width:62ch;}
 .horizon b{color:var(--paper);font-weight:400;}
 
 /* Real product motion, layered OVER the still: the still stays the fallback and keeps
@@ -234,12 +234,12 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
    there was a product to photograph, and they used to sit on the homepage Work tiles under a
    heading that says "The proof", where they proved only that people train. Here they are the
    right artefact: the tone the product had to live up to, shown as the brand work it is. */
-.cfilm{margin-top:clamp(34px,5vw,64px);border:1px solid var(--line);display:grid;grid-template-columns:1.06fr .94fr;gap:1px;background:var(--line);align-items:stretch;}
+.cfilm{margin-top:clamp(34px,5vw,64px);border:1px solid var(--line);display:grid;grid-template-columns:.34fr .66fr;gap:1px;background:var(--line);align-items:stretch;}
 .cfilm > div{background:var(--ground);padding:clamp(24px,3vw,44px);}
 .cfilm .cfl{display:block;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);}
 .cfilm h3{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:var(--t-mid);line-height:1.05;letter-spacing:-.02em;margin-top:14px;color:var(--paper);}
-.cfilm p{margin-top:14px;font-size:var(--t-body);line-height:1.68;color:var(--paper70);max-width:46ch;}
-.cfilm .cfv{padding:0;position:relative;overflow:hidden;min-height:260px;}
+.cfilm .cfyr{margin-top:14px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.14em;text-transform:uppercase;color:var(--paper45);line-height:1.7;}
+.cfilm .cfv{padding:0;position:relative;overflow:hidden;min-height:420px;}
 .cfilm video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
 .cfilm .cfnote{position:absolute;left:12px;bottom:10px;z-index:2;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.16em;text-transform:uppercase;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.8);}
 @media(max-width:819px){.cfilm{grid-template-columns:1fr;}.cfilm .cfv{min-height:0;aspect-ratio:2/3;}}
@@ -286,9 +286,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
       <div class="block reveal"><h2>The app wears your belt</h2><p>Frame is built for the belt journey and it shows it &mdash; the whole app takes on the colour of your rank and changes with you as you&rsquo;re promoted. It runs offline-first and keeps your training history yours: saved the instant you log it, private, exportable, never sold. The goal underneath every decision is simple and hard: make the progress you can&rsquo;t feel visible, so the belts who&rsquo;d otherwise quit have a reason to come back for the next stripe &mdash; not more features, but more people still on the mat a year from now.</p><div class="pfig"><div class="device"><img src="media/shots/f-leaks.png" alt="Frame — the three holes in your game, ranked from your own logged sessions" loading="lazy" width="680" height="1478"></div><div class="pcap"><span class="pn">Fig. 04 &middot; Frame &middot; the holes, ranked</span><span class="pd">The same data read back as a shortlist: what catches you most, whether it is getting better or worse, and one drill for each &mdash; so a session has a target instead of a vibe.</span></div></div><div class="pfig flip"><div class="device"><img src="media/shots/f-journey.png" alt="Frame — every promotion with the mat hours behind it, and what the next belt costs at the current pace" loading="lazy" width="680" height="1478"></div><div class="pcap"><span class="pn">Fig. 05 &middot; Frame &middot; the long view</span><span class="pd">Every promotion with the hours behind it, and what the next one costs at the pace you are actually training &mdash; the progress you cannot feel, made countable.</span></div></div></div>
       <div class="cfilm reveal">
       <div><span class="cfl">Art direction</span>
-        <h3>The film came before the product</h3>
-        <p>Cut before the app existed, to fix the register: the room, the light, the ordinary grind of rolling with someone who is trying to beat you. Everything the interface does later &mdash; the restraint, the refusal to gamify &mdash; had to earn its place next to this.</p>
-        <p>It is not a demo, and it is not proof of anything shipped. It is the brief we wrote to ourselves.</p>
+        <p class="cfyr">Made before the app existed.</p>
       </div>
       <div class="cfv"><video muted loop autoplay playsinline preload="none" aria-hidden="true"><source src="media/frame-concept.mp4" type="video/mp4"></video><span class="cfnote">Concept film &middot; not product footage</span></div>
     </div>
