@@ -35,6 +35,11 @@ The site itself is hand-coded vanilla HTML, CSS and JavaScript with no build ste
 - The Build — from £50,000. A complete native product taken from nothing to live.
 - The Partnership — from £12,000 per month. A senior partner embedded two to three days a week.
 
+## Who
+
+- Dan Andrews — designer and engineer, London. A decade of product work including Spotify, Epic Games and Dell, and early-stage teams before and since. Personal site: [iamdanandrews.com](https://iamdanandrews.com).
+- There is no bench and no account team; the person who designs the product also writes the code that ships it.
+
 ## Contact
 
 - Email: hello@cybercyber.ai — one sentence about what you're trying to ship is enough. No forms, no discovery calls.

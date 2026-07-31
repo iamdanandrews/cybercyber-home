@@ -607,6 +607,21 @@ section.reveal>.wrap{position:relative;}
 @media(prefers-reduced-motion:reduce){
   .jrnl a::before,.faq summary::before,.irow::before{transition:none;}
 }
+
+/* WHO YOU'RE HIRING -- a colophon, not another numbered section, and the one block on
+   the page written in the first person because it is the one place a person speaks
+   rather than the studio. Unnumbered on purpose: the numbered sections carry the
+   argument, and it keeps Contact at 06 / Index at 07 instead of cascading a renumber.
+   Displaced .86/1.14 like every other paired grid here -- never 1fr 1fr. */
+.who{margin-top:clamp(30px,4vw,60px);border:1px solid var(--line);display:grid;grid-template-columns:.86fr 1.14fr;gap:1px;background:var(--line);}
+.who > div{background:var(--ground);padding:clamp(26px,3.4vw,52px);}
+.who .wl{display:block;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.2em;text-transform:uppercase;color:var(--dim);}
+.who .wn{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:var(--t-sub);line-height:1;letter-spacing:-.02em;margin-top:16px;color:var(--paper);}
+.who p{font-size:var(--t-body);color:var(--paper70);line-height:1.68;max-width:54ch;}
+.who p + p{margin-top:15px;}
+.who .wlink{display:inline-block;margin-top:22px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);border-bottom:1px solid transparent;padding-bottom:3px;transition:border-bottom-color var(--dur-2) var(--e1);}
+.who .wlink:hover{border-bottom-color:var(--cyan);}
+@media(max-width:819px){.who{grid-template-columns:1fr;}}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -709,7 +724,7 @@ section.reveal>.wrap{position:relative;}
   <section id="faq" class="reveal"><div class="wrap faqwrap"><div class="faqhead">
     <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>In short<span class="ix">04 / QUESTIONS</span></div>
     <h2 class="h2" style="--c:var(--paper)">Questions</h2><p class="lead">The short version &mdash; what we are, what it costs, and who it's for.</p></div>
-    <div class="faq"><details><summary>Can one person do all of it?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Brand, interface and production code used to need three people because the <em>tools</em> needed three specialists. They don't any more. What hasn't got easier is deciding what to build, and that part never parallelised anyway. Granite and Frame are both here to be inspected &mdash; the same hands made the brand, the interface and the commits.</p></div></div></details><details><summary>What if I only need design?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Then this is the wrong studio, and that isn't a negotiating position. Handing a design over is where products lose their shape: the decisions that matter get made during the build, by whoever is holding it. Brand, interface and code &mdash; or we pass.</p></div></div></details><details><summary>How fast is fast?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>A Design Block is a week. A complete build is weeks, not quarters. But speed isn't what you're buying &mdash; everyone is fast now. You're buying the judgment that makes fast worth keeping.</p></div></div></details><details><summary>What if you're the bottleneck?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>A fair risk to name. It's why scope and price are fixed before anything starts, why work lands continuously instead of in one handover at the end, and why it's only a few clients a year. A calendar with slack in it is the only kind that holds.</p></div></div></details><details><summary>Do we own what you build?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>All of it, including the parts you'd rather not read. Native code, no proprietary runtime, no licence that expires. If we stopped talking tomorrow you'd have a product someone else could pick up and extend.</p></div></div></details><details><summary>Who does the actual work?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Dan Andrews &mdash; a designer and engineer in London, a decade of product work including Spotify, Epic&nbsp;Games and Dell, and early-stage teams before that. There's no bench, and nobody to hand you off to.</p></div></div></details></div>
+    <div class="faq"><details><summary>Can one person do all of it?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Brand, interface and production code used to need three people because the <em>tools</em> needed three specialists. They don&rsquo;t any more. What hasn&rsquo;t got easier is deciding what to build, and that part never parallelised anyway. Granite and Frame are both here to be inspected &mdash; the same hands made the brand, the interface and the commits.</p></div></div></details><details><summary>What if I only need design?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Then this is the wrong studio, and that isn&rsquo;t a negotiating position. Handing a design over is where products lose their shape: the decisions that matter get made during the build, by whoever is holding it. Brand, interface and code &mdash; or we pass.</p></div></div></details><details><summary>How fast is fast?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>A Design Block is a week. A complete build is weeks, not quarters. But speed isn&rsquo;t what you&rsquo;re buying &mdash; everyone is fast now. You&rsquo;re buying the judgment that makes fast worth keeping.</p></div></div></details><details><summary>What if you&rsquo;re the bottleneck?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>A fair risk to name. It&rsquo;s why scope and price are fixed before anything starts, why work lands continuously instead of in one handover at the end, and why it&rsquo;s only a few clients a year. A calendar with slack in it is the only kind that holds.</p></div></div></details><details><summary>Do we own what you build?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>All of it, including the parts you&rsquo;d rather not read. Native code, no proprietary runtime, no licence that expires. If we stopped talking tomorrow you&rsquo;d have a product someone else could pick up and extend.</p></div></div></details><details><summary>Who does the actual work?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Dan Andrews &mdash; a designer and engineer in London, a decade of product work including Spotify, Epic&nbsp;Games and Dell, and early-stage teams before that. There&rsquo;s no bench, and nobody to hand you off to. More at <a href="https://iamdanandrews.com" target="_blank" rel="noopener">iamdanandrews.com</a>.</p></div></div></details></div>
   </div></section>
 
   <section id="journal" class="reveal"><div class="wrap">
@@ -723,6 +738,17 @@ section.reveal>.wrap{position:relative;}
       <a href="journal-building.html"><span class="jt">Building cyber:cyber</span><span class="jk">Article</span><span class="jd">May 10, 2026</span></a>
     </div>
     <a class="jall" href="journal.html">All notes &rarr;</a>
+  </div></section>
+
+  <section class="reveal"><div class="wrap">
+    <div class="who">
+      <div><span class="wl">Who you&rsquo;re hiring</span><div class="wn">Dan Andrews</div></div>
+      <div>
+        <p>A designer and engineer in London. A decade of product work &mdash; Spotify, Epic&nbsp;Games, Dell &mdash; and early-stage teams before and since.</p>
+        <p>A studio this size usually sells one layer and hands the rest off. I don&rsquo;t: the brand, the interface and the code underneath are one job, and they go wrong at the seams between them. Granite and Frame are on this site so you can check that rather than take my word for it.</p>
+        <a class="wlink" href="https://iamdanandrews.com" target="_blank" rel="noopener">iamdanandrews.com &nearr;</a>
+      </div>
+    </div>
   </div></section>
 
   <section id="contact" class="reveal cta"><div class="wrap">
