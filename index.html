@@ -461,6 +461,29 @@ section.reveal>.wrap{position:relative;}
 .void .vline{position:absolute;left:38%;bottom:0;width:1px;height:46%;background:linear-gradient(to top,var(--line2),transparent);}
 .void .vnode{position:absolute;left:38%;bottom:46%;width:7px;height:7px;border:1px solid var(--dim);border-radius:50%;transform:translate(-50%,50%);}
 @media(max-width:600px){.void{min-height:clamp(150px,26vh,240px);}}
+
+/* ------------------------------------------------------------------
+   THE MARK. Contact already asked for "one sentence about what you're trying to
+   ship" -- this makes that literal. The sentence seeds the studio's own kené
+   engine and draws ONE unbroken line that never crosses itself, deterministic, so
+   the same sentence always yields the same mark. It is the site arguing its own
+   thesis instead of describing it: traceable and reproducible, not a generative
+   black box. Ink on the vermilion ground, so it reads as a stamp.
+------------------------------------------------------------------ */
+.mk{margin-top:clamp(26px,4vh,44px);display:grid;grid-template-columns:1fr;gap:clamp(20px,3vw,38px);align-items:center;max-width:940px;}
+@media(min-width:820px){.mk{grid-template-columns:1.08fr .92fr;}}
+.mk .mkin{display:block;width:100%;background:transparent;border:0;border-bottom:1.5px solid color-mix(in srgb,var(--accent-ink) 42%,transparent);color:var(--accent-ink);font-family:var(--sans);font-weight:600;font-size:var(--t-lead);letter-spacing:-.01em;padding:0 0 12px;outline:0;}
+.mk .mkin::placeholder{color:color-mix(in srgb,var(--accent-ink) 46%,transparent);font-weight:400;}
+.mk .mkin:focus{border-bottom-color:var(--accent-ink);}
+.mk .mkhint{margin-top:12px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--accent-ink) 58%,transparent);font-variant-numeric:tabular-nums;}
+.mk .mkfig{justify-self:center;width:min(300px,74vw);aspect-ratio:1;position:relative;}
+.mk .mkfig svg{width:100%;height:100%;display:block;overflow:visible;}
+.mk .mkfig path{fill:none;stroke:var(--accent-ink);stroke-width:.13;stroke-linecap:square;stroke-linejoin:miter;
+  stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:mkdraw 1.15s var(--e-settle) forwards;}
+@keyframes mkdraw{to{stroke-dashoffset:0;}}
+.mk .mksend{margin-top:18px;display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.18em;text-transform:uppercase;color:var(--accent-ink);border-bottom:1px solid color-mix(in srgb,var(--accent-ink) 40%,transparent);padding-bottom:3px;}
+.mk .mksend:hover{border-bottom-color:var(--accent-ink);}
+@media(prefers-reduced-motion:reduce){.mk .mkfig path{animation:none;stroke-dashoffset:0;}}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -589,7 +612,7 @@ section.reveal>.wrap{position:relative;}
     <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Contact<span class="ix">06 / OPEN</span></div>
     <div class="big">Is it<br>worth building?</div>
     <span class="em mag" id="email" role="button" tabindex="0">hello@cybercyber.ai<span class="cp">Copied</span></span>
-    <p>One sentence about what you're trying to ship is enough. No forms, no discovery calls.</p>
+    <p>One sentence about what you're trying to ship is enough. No forms, no discovery calls.</p><div class="mk"><div><label class="mkhint" for="mkin" style="display:block;margin:0 0 14px">Your one sentence</label><input class="mkin" id="mkin" type="text" autocomplete="off" spellcheck="false" placeholder="We need to ship the real product, not the demo." aria-describedby="mkhint"><div class="mkhint" id="mkhint">Draws a mark only you have &middot; <span id="mkn">--</span> segments</div><a class="mksend" id="mksend" href="mailto:hello@cybercyber.ai">Send it &rarr;</a></div><div class="mkfig" aria-hidden="true"><svg id="mksvg" viewBox="0 0 14 14" preserveAspectRatio="xMidYMid meet"><path id="mkpath" d=""/></svg></div></div>
   </div></section>
 </main>
 
@@ -726,5 +749,37 @@ section.reveal>.wrap{position:relative;}
 })();
 </script>
 
-<script>history.scrollRestoration="manual";addEventListener("load",function(){var h=location.hash;if(h.length>1){var t=document.getElementById(h.slice(1));if(t){var b=t.getBoundingClientRect().bottom+window.scrollY;document.querySelectorAll(".reveal").forEach(function(s){if(s.getBoundingClientRect().top+window.scrollY<b)s.classList.add("in");});setTimeout(function(){t.scrollIntoView();},240);}}});setTimeout(function(){var l=document.getElementById("loader");if(l&&!l.classList.contains("done")){l.classList.add("done");var hb=document.getElementById("herobar");if(hb)hb.classList.add("in");document.querySelectorAll(".reveal").forEach(function(s){s.classList.add("in");});}},2600);</script></body>
+<script>history.scrollRestoration="manual";addEventListener("load",function(){var h=location.hash;if(h.length>1){var t=document.getElementById(h.slice(1));if(t){var b=t.getBoundingClientRect().bottom+window.scrollY;document.querySelectorAll(".reveal").forEach(function(s){if(s.getBoundingClientRect().top+window.scrollY<b)s.classList.add("in");});setTimeout(function(){t.scrollIntoView();},240);}}});setTimeout(function(){var l=document.getElementById("loader");if(l&&!l.classList.contains("done")){l.classList.add("done");var hb=document.getElementById("herobar");if(hb)hb.classList.add("in");document.querySelectorAll(".reveal").forEach(function(s){s.classList.add("in");});}},2600);</script>
+<script src="mark.js"></script>
+<script>
+(function(){
+  var inp=document.getElementById('mkin'), p=document.getElementById('mkpath'),
+      svg=document.getElementById('mksvg'), n=document.getElementById('mkn'),
+      send=document.getElementById('mksend');
+  if(!inp||!p||!window.ccMark) return;
+  var DEFAULT='cyber:cyber';
+  function draw(seed){
+    var m=window.ccMark(seed||DEFAULT, 7);
+    svg.setAttribute('viewBox','0 0 '+m.N+' '+m.N);
+    p.setAttribute('d', m.d);
+    // restart the draw-on so each new sentence visibly re-renders
+    var len=p.getTotalLength ? p.getTotalLength() : 400;
+    p.style.setProperty('--len', len.toFixed(1));
+    p.style.animation='none'; void p.getBoundingClientRect(); p.style.animation='';
+    if(n) n.textContent=m.points;
+  }
+  var t=null;
+  inp.addEventListener('input', function(){
+    clearTimeout(t);
+    t=setTimeout(function(){
+      var v=inp.value.trim();
+      draw(v);
+      send.href='mailto:hello@cybercyber.ai?subject='+encodeURIComponent('One sentence')+
+                '&body='+encodeURIComponent(v);
+    },110);
+  });
+  draw(DEFAULT);
+})();
+</script>
+</body>
 </html>
