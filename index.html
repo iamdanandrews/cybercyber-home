@@ -476,14 +476,37 @@ section.reveal>.wrap{position:relative;}
 .mk .mkin::placeholder{color:color-mix(in srgb,var(--accent-ink) 46%,transparent);font-weight:400;}
 .mk .mkin:focus{border-bottom-color:var(--accent-ink);}
 .mk .mkhint{margin-top:12px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--accent-ink) 58%,transparent);font-variant-numeric:tabular-nums;}
-.mk .mkfig{justify-self:center;width:min(300px,74vw);aspect-ratio:1;position:relative;}
-.mk .mkfig svg{width:100%;height:100%;display:block;overflow:visible;}
-.mk .mkfig path{fill:none;stroke:var(--accent-ink);stroke-width:.13;stroke-linecap:square;stroke-linejoin:miter;
-  stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:mkdraw 1.15s var(--e-settle) forwards;}
+.mk .mkfig{justify-self:center;width:min(320px,78vw);aspect-ratio:1;position:relative;}
+/* THE SEAL. The brand already stamps things -- the circular CYBER:CYBER mark in
+   About. This is that same act, issued rather than decorative: a ruled field, the
+   studio along the top, the reference along the bottom, the colon set as
+   registration dots in the side bands. Square, not circular, because the line has
+   to fill its field EXACTLY and stay unbroken; a circle would have to crop it,
+   and a cropped line is no longer one line. */
+.mk .mkframe{fill:none;stroke:var(--accent-ink);stroke-width:1.4;}
+.mk .mkseal text{font-family:var(--mono);fill:var(--accent-ink);font-size:7px/*svg units*/;letter-spacing:2px;}
+.mk .mkseal .mksr{font-size:5.8px/*svg units*/;letter-spacing:2.9px;}
+.mk .mkseal .mkdot{fill:var(--accent-ink);}
+.mk .mkfig{opacity:0;}
+/* Its own press, not the 64px About seal's 1.45x/9deg slam: at 320px that
+   overshoot reads as a sticker and briefly exceeds a 430px viewport. Weight
+   presses, it does not bounce. */
+@keyframes mkstamp{0%{opacity:0;transform:scale(1.11) rotate(-2.4deg);}
+  58%{opacity:1;transform:scale(.985) rotate(.5deg);}
+  100%{opacity:1;transform:scale(1) rotate(0);}}
+#contact.in .mk .mkfig{animation:mkstamp .66s var(--e1) .12s both;}
+.mk .mkclaim{margin-top:14px;max-width:34em;font-size:var(--t-body);color:color-mix(in srgb,var(--accent-ink) 78%,transparent);}
+.mk .mkacts{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px clamp(18px,3vw,32px);}
+.mk .mkdl{margin-top:18px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.18em;text-transform:uppercase;color:color-mix(in srgb,var(--accent-ink) 62%,transparent);border-bottom:1px solid transparent;padding-bottom:3px;transition:color var(--dur-2) var(--e1),border-bottom-color var(--dur-2) var(--e1);}
+.mk .mkdl:hover{color:var(--accent-ink);border-bottom-color:color-mix(in srgb,var(--accent-ink) 40%,transparent);}.mk .mkfig svg{width:100%;height:100%;display:block;overflow:visible;}
+.mk .mkart path{fill:none;stroke:var(--accent-ink);stroke-width:.163/*pre-scale: ~0.95 in the 120 field*/;stroke-linecap:square;stroke-linejoin:miter;
+  stroke-dasharray:var(--len);stroke-dashoffset:var(--len);}
+#contact.in .mk .mkart path{animation:mkdraw 1.25s var(--e-settle) .34s forwards;}
 @keyframes mkdraw{to{stroke-dashoffset:0;}}
 .mk .mksend{margin-top:18px;display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.18em;text-transform:uppercase;color:var(--accent-ink);border-bottom:1px solid color-mix(in srgb,var(--accent-ink) 40%,transparent);padding-bottom:3px;}
 .mk .mksend:hover{border-bottom-color:var(--accent-ink);}
-@media(prefers-reduced-motion:reduce){.mk .mkfig path{animation:none;stroke-dashoffset:0;}}
+@media(prefers-reduced-motion:reduce){.mk .mkart path,#contact.in .mk .mkart path{animation:none;stroke-dashoffset:0;}
+  .mk .mkfig,#contact.in .mk .mkfig{animation:none;opacity:1;transform:none;}}
 
 /* The void's held mark is the engine's own output, seeded from the studio name --
    deterministic, one unbroken line. Kept quiet (dim, hairline) so it reads as a
@@ -693,7 +716,7 @@ section.reveal>.wrap{position:relative;}
     <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Contact<span class="ix">06 / OPEN</span></div>
     <div class="big">Is it<br>worth building?</div>
     <span class="em mag" id="email" role="button" tabindex="0">hello@cybercyber.ai<span class="cp">Copied</span></span>
-    <p>One sentence about what you're trying to ship is enough. No forms, no discovery calls.</p><div class="mk"><div><label class="mkhint" for="mkin" style="display:block;margin:0 0 14px">Your one sentence</label><input class="mkin" id="mkin" type="text" autocomplete="off" spellcheck="false" placeholder="We need to ship the real product, not the demo." aria-describedby="mkhint"><div class="mkhint" id="mkhint">Draws a mark only you have &middot; <span id="mkn">--</span> segments</div><a class="mksend" id="mksend" href="mailto:hello@cybercyber.ai">Send it &rarr;</a></div><div class="mkfig" aria-hidden="true"><svg id="mksvg" viewBox="0 0 14 14" preserveAspectRatio="xMidYMid meet"><path id="mkpath" d=""/></svg></div></div>
+    <p>One sentence about what you're trying to ship is enough. No forms, no discovery calls.</p><div class="mk"><div><label class="mkhint" for="mkin" style="display:block;margin:0 0 14px">Your one sentence</label><input class="mkin" id="mkin" type="text" autocomplete="off" spellcheck="false" placeholder="We need to ship the real product, not the demo." aria-describedby="mkhint"><div class="mkhint" id="mkhint">Seal &middot; <span id="mkref">------</span></div><p class="mkclaim">Type the same sentence next year and you get the same seal, down to the reference. Nothing here is random &mdash; that is the argument, and it is the same one the products make.</p><div class="mkacts"><a class="mksend" id="mksend" href="mailto:hello@cybercyber.ai">Send it &rarr;</a><a class="mkdl" id="mkdl" download="cybercyber-seal.svg" href="#">Keep the seal &darr;</a></div></div><div class="mkfig"><svg class="mkseal" id="mksvg" viewBox="0 0 120 120" role="img" aria-labelledby="mksealt"><title id="mksealt">A seal generated from your sentence</title><rect class="mkframe" x="6" y="6" width="108" height="108"/><g class="mkart" transform="translate(22 22) scale(5.8462)"><path id="mkpath" d=""/></g><text class="mkwm" x="60" y="16.4" text-anchor="middle">CYBER:CYBER</text><text class="mksr" id="mksr" x="60" y="107.9" text-anchor="middle">------</text><circle class="mkdot" cx="14" cy="56.4" r="1.4"/><circle class="mkdot" cx="14" cy="63.6" r="1.4"/><circle class="mkdot" cx="106" cy="56.4" r="1.4"/><circle class="mkdot" cx="106" cy="63.6" r="1.4"/></svg></div></div>
   </div></section>
 </main>
 
@@ -881,20 +904,50 @@ section.reveal>.wrap{position:relative;}
 <script>
 (function(){
   var inp=document.getElementById('mkin'), p=document.getElementById('mkpath'),
-      svg=document.getElementById('mksvg'), n=document.getElementById('mkn'),
-      send=document.getElementById('mksend');
+      ref=document.getElementById('mkref'), sr=document.getElementById('mksr'),
+      ttl=document.getElementById('mksealt'),
+      dl=document.getElementById('mkdl'), send=document.getElementById('mksend');
   if(!inp||!p||!window.ccMark) return;
-  var DEFAULT='cyber:cyber';
+  var DEFAULT='cyber:cyber', SC=5.8462, url=null;
+
+  /* A standalone file, written out rather than cloned from the DOM: the page's
+     CSS carries the stroke weights and the vermilion, and none of that travels
+     with a clone. Explicit is the only way the kept seal looks like the seal. */
+  function fileFor(m){
+    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="720" height="720">'
+      + '<rect width="120" height="120" fill="#EA4E32"/>'
+      + '<g fill="none" stroke="#0B0B0D">'
+      +   '<rect x="6" y="6" width="108" height="108" stroke-width="1.4"/>'
+      +   '<g transform="translate(22 22) scale(' + SC + ')"><path d="' + m.d
+      +     '" stroke-width="0.163" stroke-linecap="square" stroke-linejoin="miter"/></g>'
+      + '</g>'
+      + '<g fill="#0B0B0D" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">'
+      +   '<text x="60" y="16.4" text-anchor="middle" font-size="7" letter-spacing="2">CYBER:CYBER</text>'
+      +   '<text x="60" y="107.9" text-anchor="middle" font-size="5.8" letter-spacing="2.9">'
+      +     m.serial + '</text>'
+      +   '<circle cx="14" cy="56.4" r="1.4"/><circle cx="14" cy="63.6" r="1.4"/>'
+      +   '<circle cx="106" cy="56.4" r="1.4"/><circle cx="106" cy="63.6" r="1.4"/>'
+      + '</g></svg>';
+  }
+
   function draw(seed){
     var m=window.ccMark(seed||DEFAULT, 7);
-    svg.setAttribute('viewBox','0 0 '+m.N+' '+m.N);
     p.setAttribute('d', m.d);
-    // restart the draw-on so each new sentence visibly re-renders
-    var len=p.getTotalLength ? p.getTotalLength() : 400;
+    var len=p.getTotalLength ? p.getTotalLength() : 900;
     p.style.setProperty('--len', len.toFixed(1));
+    /* restart the draw so each new sentence visibly re-issues */
     p.style.animation='none'; void p.getBoundingClientRect(); p.style.animation='';
-    if(n) n.textContent=m.points;
+    if(ref) ref.textContent=m.serial;
+    if(sr) sr.textContent=m.serial;
+    if(ttl) ttl.textContent='A seal generated from your sentence, reference '+m.serial;
+    if(dl){
+      if(url) URL.revokeObjectURL(url);
+      url=URL.createObjectURL(new Blob([fileFor(m)],{type:'image/svg+xml'}));
+      dl.href=url; dl.setAttribute('download','cybercyber-seal-'+m.serial+'.svg');
+    }
+    return m;
   }
+
   var t=null;
   inp.addEventListener('input', function(){
     clearTimeout(t);

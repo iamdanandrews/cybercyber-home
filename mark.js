@@ -120,9 +120,18 @@ function toPath(pts, cut){
   out.push('L' + f(e[0]) + ' ' + f(e[1]));
   return out.join('');
 }
+/* The seal's reference. Same hash family as the line, different salt, so one
+   sentence yields exactly one line AND one reference -- and the reference is
+   the visible proof of the determinism, not a decorative counter. 36^6 keeps
+   it to six characters. */
+function serialOf(seedStr){
+  const h = xmur3(seedStr + '|serial')() % 2176782336;
+  return h.toString(36).toUpperCase().padStart(6, '0');
+}
 window.ccMark = function(seed, q){
   q = q || 7;
-  const { pts, N } = generateLoop(String(seed || 'cyber:cyber'), q);
-  return { d: toPath(pts, 0.42), N: N, points: pts.length };
+  const s = String(seed || 'cyber:cyber');
+  const { pts, N } = generateLoop(s, q);
+  return { d: toPath(pts, 0.42), N: N, points: pts.length, serial: serialOf(s) };
 };
 })();
