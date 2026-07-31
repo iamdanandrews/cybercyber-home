@@ -170,8 +170,8 @@ section{position:relative;padding:clamp(96px,17vh,210px) 0;border-top:1px solid 
 .faq details{border-bottom:1px solid var(--line);}
 .faq summary{list-style:none;cursor:pointer;padding:16px 0;display:flex;justify-content:space-between;gap:20px;align-items:center;font-family:var(--raveo);font-variation-settings:"wght" 540,"opsz" 24;font-size:var(--t-lead);}
 .faq summary::-webkit-details-marker{display:none;}
-.faq summary .pm{--sep-gap:11px;color:var(--cyan);font-family:var(--mono);font-size:var(--t-lead);transition:transform .3s;}
-.faq details[open] summary .pm{--sep-gap:11px;transform:rotate(45deg);}
+.faq summary .pm{color:var(--cyan);font-family:var(--mono);font-size:var(--t-lead);transition:transform .3s;}
+.faq details[open] summary .pm{transform:rotate(45deg);}
 .faq .inner{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s cubic-bezier(.2,.7,.2,1);}
 .faq details[open] .inner{grid-template-rows:1fr;}
 .faq .ans{overflow:hidden;color:var(--paper70);font-size:var(--t-body);line-height:1.65;max-width:62ch;}
@@ -553,6 +553,18 @@ section.reveal>.wrap{position:relative;}
     opacity:1;transform:none;transition:none;}
   #about.reveal.in .aseal{animation:none;opacity:1;transform:none;}
 }
+
+/* The FAQ was the only interactive row on the site with NO hover state -- every
+   comparable row (.offer, .jrnl a, .nfy2 .ref, .irow) already lifts its ground,
+   blooms its title's weight and/or shifts in from the left. These summaries are
+   clickable, so the missing feedback was a usability gap as much as an
+   inconsistency. Same language, same tokens, no new device. */
+.faq summary{padding-inline:0;transition:padding-left var(--dur-2) var(--e1),background-color var(--dur-2) var(--e1),font-variation-settings var(--dur-2) var(--e1);}
+.faq summary:hover{background:#100f14;padding-left:12px;font-variation-settings:"wght" 700,"opsz" 24;}
+.faq summary:hover .pm{color:var(--paper);}
+.faq details[open] summary{font-variation-settings:"wght" 640,"opsz" 24;}
+.faq summary:focus-visible{background:#100f14;padding-left:12px;}
+@media(prefers-reduced-motion:reduce){.faq summary{transition:none;}}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
