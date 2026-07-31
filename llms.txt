@@ -42,4 +42,4 @@ The site itself is hand-coded vanilla HTML, CSS and JavaScript with no build ste
 
 ## Contact
 
-- Email: hello@cybercyber.ai — one sentence about what you're trying to ship is enough. No forms, no discovery calls.
+- Email: hello@cybercyber.ai — one sentence about what you're trying to ship is enough. No discovery calls.
