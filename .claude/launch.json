@@ -1,11 +1,6 @@
 {
   "version": "0.0.1",
   "configurations": [
-    {
-      "name": "cybercyber-home",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8799"],
-      "port": 8799
-    }
+    { "name": "cybercyber-home", "runtimeExecutable": "python3", "runtimeArgs": ["-m","http.server","8777"], "port": 8777 }
   ]
 }
