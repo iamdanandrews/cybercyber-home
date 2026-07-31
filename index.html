@@ -170,8 +170,8 @@ section{position:relative;padding:clamp(96px,17vh,210px) 0;border-top:1px solid 
 .faq details{border-bottom:1px solid var(--line);}
 .faq summary{list-style:none;cursor:pointer;padding:16px 0;display:flex;justify-content:space-between;gap:20px;align-items:center;font-family:var(--raveo);font-variation-settings:"wght" 540,"opsz" 24;font-size:var(--t-lead);}
 .faq summary::-webkit-details-marker{display:none;}
-.faq summary .pm{color:var(--cyan);font-family:var(--mono);font-size:var(--t-lead);transition:transform .3s;}
-.faq details[open] summary .pm{transform:rotate(45deg);}
+.faq summary .pm{--sep-gap:11px;color:var(--cyan);font-family:var(--mono);font-size:var(--t-lead);transition:transform .3s;}
+.faq details[open] summary .pm{--sep-gap:11px;transform:rotate(45deg);}
 .faq .inner{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s cubic-bezier(.2,.7,.2,1);}
 .faq details[open] .inner{grid-template-rows:1fr;}
 .faq .ans{overflow:hidden;color:var(--paper70);font-size:var(--t-body);line-height:1.65;max-width:62ch;}
@@ -351,7 +351,7 @@ section.reveal>.wrap{position:relative;}
 .proj:hover .pn{font-variation-settings:"wght" 840,"opsz" 32;}
 .pn em{font-style:normal;color:var(--paper);}
 .pd{color:var(--paper70);font-size:var(--t-body);max-width:42ch;}
-.pm{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin-top:2px;font-variant-numeric:tabular-nums;}
+.pm{--sep-gap:11px;display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin-top:2px;font-variant-numeric:tabular-nums;}
 .pm .live{color:var(--cyan);}
 .chip{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);border:1px solid var(--line2);border-radius:999px;padding:6px 13px 6px 11px;line-height:1;}
 .chip .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);animation:chippulse 2.4s var(--e1) infinite;}
@@ -491,6 +491,26 @@ section.reveal>.wrap{position:relative;}
 .hero .hanchor .hmark{display:block;width:104px;height:104px;margin:0 0 14px;overflow:visible;opacity:.5;}
 .hero .hanchor .hmark path{fill:none;stroke:var(--dim);stroke-width:.16;stroke-linecap:square;stroke-linejoin:miter;}
 @media(max-width:600px){.hero .hanchor .hmark{width:74px;height:74px;}}
+
+/* One separator, one rhythm. The dot is the site's peer-separator everywhere
+   (Reel 01 · Loop, Alpha · granite.coach), so the reel meta uses it BETWEEN fields
+   too rather than leaving a bare gap that competes with the dots inside them. */
+.proj .pm{column-gap:var(--sep-gap);}
+.proj .pm > span + span::before{content:"\00B7";color:var(--dim);margin-right:var(--sep-gap);}
+
+/* The held mark proves itself on hover: the single path retraces from one end to
+   the other. Not a shimmer -- the retrace IS the argument that it is one unbroken
+   line. Pointer-only, and reduced-motion gets the brightening without the redraw. */
+.hero .hanchor{pointer-events:auto;}
+.hero .hanchor .hmark path{transition:stroke .3s var(--e1);}
+.hero .hanchor .hlab{display:block;margin-top:6px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);opacity:0;transform:translateY(-3px);transition:opacity .28s var(--e1),transform .28s var(--e1);}
+@media(hover:hover) and (pointer:fine){
+  .hero .hanchor:hover .hmark{opacity:1;}
+  .hero .hanchor:hover .hmark path{stroke:var(--paper);animation:hmretrace 1.4s var(--e-settle);}
+  .hero .hanchor:hover .hlab{opacity:.9;transform:none;}
+}
+@keyframes hmretrace{from{stroke-dasharray:var(--hl);stroke-dashoffset:var(--hl);}to{stroke-dasharray:var(--hl);stroke-dashoffset:0;}}
+@media(prefers-reduced-motion:reduce){.hero .hanchor:hover .hmark path{animation:none;}}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -526,7 +546,7 @@ section.reveal>.wrap{position:relative;}
   <section class="hero" style="border-top:0;padding-top:0" id="hero">
     <div class="fold-bg" aria-hidden="true"><div class="grid" id="hgrid"></div></div><div class="glow" aria-hidden="true"></div>
     <div class="vf" aria-hidden="true"><i></i><i></i><i></i><i></i><span class="tl a">51.5074&deg; N</span><span class="tl b">00.1278&deg; W</span></div>
-    <div class="hanchor" aria-hidden="true"><svg class="hmark" viewBox="0 0 14 14" preserveAspectRatio="xMidYMid meet"><path id="hmpath" d=""/></svg><span class="hcap">London &mdash; Est. MMXXVI</span></div>
+    <div class="hanchor" aria-hidden="true"><svg class="hmark" viewBox="0 0 14 14" preserveAspectRatio="xMidYMid meet"><path id="hmpath" d=""/></svg><span class="hcap">London &middot; Est. MMXXVI</span><span class="hlab" aria-hidden="true">One line &middot; never crosses</span></div>
     <div class="wrap inner">
       <h1 class="word" id="word" aria-label="cyber:cyber"></h1>
       <p class="heroline" id="herobar">No theatre. Just the product.</p>
@@ -705,6 +725,7 @@ section.reveal>.wrap{position:relative;}
             hp.style.strokeDasharray=L.toFixed(1);
             hp.style.strokeDashoffset=L.toFixed(1);
             hp.style.transition='stroke-dashoffset 1.5s var(--e-settle) .18s';
+            hp.style.setProperty('--hl', L.toFixed(1));
             requestAnimationFrame(function(){ hp.style.strokeDashoffset='0'; });
           }
         },320);
@@ -791,7 +812,7 @@ section.reveal>.wrap{position:relative;}
 })();
 </script>
 
-<script>history.scrollRestoration="manual";addEventListener("load",function(){var h=location.hash;if(h.length>1){var t=document.getElementById(h.slice(1));if(t){var b=t.getBoundingClientRect().bottom+window.scrollY;document.querySelectorAll(".reveal").forEach(function(s){if(s.getBoundingClientRect().top+window.scrollY<b)s.classList.add("in");});setTimeout(function(){t.scrollIntoView();},240);}}});setTimeout(function(){var l=document.getElementById("loader");if(l&&!l.classList.contains("done")){l.classList.add("done");var hb=document.getElementById("herobar");if(hb)hb.classList.add("in");document.querySelectorAll(".reveal").forEach(function(s){s.classList.add("in");});/* The wordmark rests at CSS wght 100 and only the boot loop lifts it. If that loop never advanced -- a backgrounded tab, a throttled/paused rAF, an early script error -- this safety net used to reveal the hero with the mark still hairline-thin. Settle the weight and the held mark here too, so the fallback produces the finished state rather than a half-booted one. *//* set unconditionally: this block only runs when the loader never reached "done", i.e. boot did not finish, so any weight already inline is a half-played frame (phase 1 leaves ~120) rather than a finished state. A !value guard silently skipped exactly that case. */document.querySelectorAll(".word span").forEach(function(sp){sp.style.fontVariationSettings="'wght' 650,'opsz' 32";});var hm=document.getElementById("hmpath");if(hm){hm.style.strokeDasharray="none";hm.style.strokeDashoffset="0";}}},2600);</script>
+<script>history.scrollRestoration="manual";addEventListener("load",function(){var h=location.hash;if(h.length>1){var t=document.getElementById(h.slice(1));if(t){var b=t.getBoundingClientRect().bottom+window.scrollY;document.querySelectorAll(".reveal").forEach(function(s){if(s.getBoundingClientRect().top+window.scrollY<b)s.classList.add("in");});setTimeout(function(){t.scrollIntoView();},240);}}});setTimeout(function(){var l=document.getElementById("loader");if(l&&!l.classList.contains("done")){l.classList.add("done");var hb=document.getElementById("herobar");if(hb)hb.classList.add("in");document.querySelectorAll(".reveal").forEach(function(s){s.classList.add("in");});/* The wordmark rests at CSS wght 100 and only the boot loop lifts it. If that loop never advanced -- a backgrounded tab, a throttled/paused rAF, an early script error -- this safety net used to reveal the hero with the mark still hairline-thin. Settle the weight and the held mark here too, so the fallback produces the finished state rather than a half-booted one. *//* set unconditionally: this block only runs when the loader never reached "done", i.e. boot did not finish, so any weight already inline is a half-played frame (phase 1 leaves ~120) rather than a finished state. A !value guard silently skipped exactly that case. */document.querySelectorAll(".word span").forEach(function(sp){sp.style.fontVariationSettings="'wght' 650,'opsz' 32";});var hm=document.getElementById("hmpath");if(hm){hm.style.strokeDasharray="none";hm.style.strokeDashoffset="0";if(hm.getTotalLength)hm.style.setProperty("--hl",hm.getTotalLength().toFixed(1));}}},2600);</script>
 <script src="mark.js"></script>
 <script>
 (function(){
