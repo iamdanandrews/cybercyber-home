@@ -1,0 +1,40 @@
+# cyber:cyber
+
+> A product design lab in London. We design the brand, the interface, and the code — and we build it. A few clients a year.
+
+cyber:cyber is a product design lab, not an agency and not a studio-for-hire. The work spans the whole stack of a product: brand, interface, and the code underneath — including the technical surfaces most designers hand off. Engagements are fixed-scope and fixed-price, measured in weeks rather than quarters, and deliberately few per year.
+
+The lab's own products are the proof rather than a client list: two native iOS apps, Granite and Frame, both designed and built in-house. Both case studies below use real screens captured from the shipping apps, not mockups.
+
+The site itself is hand-coded vanilla HTML, CSS and JavaScript with no build step and no framework — one self-contained file per page. That is a deliberate position, argued in the journal note "The hardest client was us".
+
+## Core
+
+- [Home](https://cybercyber.ai/): The lab, the offer, the work, and who it isn't for.
+- [Manifesto](https://cybercyber.ai/manifesto.html): Ten things a product design lab believes — on judgement, refusal, and what's worth building rather than just shipping fast.
+- [Journal](https://cybercyber.ai/journal.html): Working notes on judgement, refusal, and building on the frontier.
+
+## Work
+
+- [Granite](https://cybercyber.ai/work-granite.html): A native, on-device strength coach that rewrites your training every week. Deterministic coaching engine, not a chat wrapper.
+- [Frame](https://cybercyber.ai/work-frame.html): A native BJJ training journal built against the forgetting curve, with a belt-accent identity engine.
+
+## Journal
+
+- [The hardest client was us](https://cybercyber.ai/journal-hardest-client.html): Why the lab's own site was treated as the hardest brief of the year — hand-built, deliberately empty, real screens over mockups.
+- [Nobody wrote it down](https://cybercyber.ai/journal-undocumented.html): On confabulation, contextual inquiry, and why almost no software will make a decision.
+- [The velocity gods](https://cybercyber.ai/journal-velocity.html): How speed stopped being a means and became a faith — what the cult of shipping fast produces, and what it costs.
+- [Building cyber:cyber](https://cybercyber.ai/journal-building.html): An honest working note on building a one-person AI product lab — how it got built and what it cost.
+- [Shipping got commoditised](https://cybercyber.ai/journal-shipping.html): Anyone can ship a product in a weekend now. What's actually scarce once production is free.
+- [Six things native AI features get right](https://cybercyber.ai/journal-six-things.html): The six decisions that separate native AI from a chat bubble in the corner.
+- [Why cyber:cyber exists](https://cybercyber.ai/journal-why.html): The founding note — why a lab rather than an agency, and why the internet is drowning in B+ AI output.
+
+## The offer
+
+- The Design Block — £5,000 per week. Design shipped in a week, brand through to the technical surfaces.
+- The Build — from £50,000. A complete native product taken from nothing to live.
+- The Partnership — from £12,000 per month. A senior partner embedded two to three days a week.
+
+## Contact
+
+- Email: hello@cybercyber.ai — one sentence about what you're trying to ship is enough. No forms, no discovery calls.
