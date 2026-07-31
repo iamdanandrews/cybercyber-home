@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>cyber:cyber — a product design lab</title>
-<meta name="description" content="A product design lab in London. We design your product — the brand, the interface, the whole thing. And we can build it, too. A few clients a year.">
+<meta name="description" content="A product design lab in London. We design the brand, the interface, and the code — and we build it. A few clients a year.">
 <meta name="color-scheme" content="dark">
 <meta property="og:title" content="cyber:cyber — a product design lab">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230B0B0D'/><circle cx='16' cy='11' r='2.7' fill='%2322D3EE'/><circle cx='16' cy='21' r='2.7' fill='%2322D3EE'/></svg>">
 <link rel="preload" href="RaveoVF.woff2" as="font" type="font/woff2" crossorigin>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"cyber:cyber","alternateName":"cyber:cyber studio","description":"A product design lab in London. We design your product \u2014 the brand, the interface, the whole thing \u2014 and can build it too. A few clients a year.","url":"https://cybercyber.ai","email":"hello@cybercyber.ai","areaServed":"Worldwide","priceRange":"\u00a35,000\u2013\u00a350,000+","founder":{"@type":"Person","name":"Dan Andrews"},"knowsAbout":["Product design","Brand design","Interface design","Native app development","On-device AI","AI product design"],"address":{"@type":"PostalAddress","addressLocality":"London","addressCountry":"GB"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"cyber:cyber","alternateName":"cyber:cyber studio","description":"A product design lab in London. We design the brand, the interface, and the code \u2014 and we build it. A few clients a year.","url":"https://cybercyber.ai","email":"hello@cybercyber.ai","areaServed":"Worldwide","priceRange":"\u00a35,000\u2013\u00a350,000+","founder":{"@type":"Person","name":"Dan Andrews"},"knowsAbout":["Product design","Brand design","Interface design","Native app development","On-device AI","AI product design"],"address":{"@type":"PostalAddress","addressLocality":"London","addressCountry":"GB"}}</script>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
   window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
@@ -106,7 +106,7 @@ header.solid{background:rgba(11,11,13,.72);backdrop-filter:blur(10px);border-col
 .hero .pmark{position:absolute;top:63%;left:calc(var(--fold) + (100% - var(--fold))/2);z-index:2;transform:translateX(-50%);pointer-events:none;}
 .hero .pmark .pline{position:absolute;left:50%;bottom:100%;width:1px;height:56px;background:linear-gradient(to bottom,transparent,#8f8a8366);transform:translateX(-50%);}
 .hero .pmark .pnode{display:block;width:7px;height:7px;border:1px solid #8f8a83;border-radius:50%;opacity:.6;}
-.hero .inner{position:relative;z-index:3;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;max-width:none;width:100%;text-align:center;}
+.hero .inner{position:relative;z-index:3;flex:1;min-height:0;display:flex;align-items:center;width:100%;}
 .word{position:relative;display:inline-block;font-family:var(--raveo);font-size:clamp(34px,13.2vw,196px);line-height:1;letter-spacing:-.05em;text-transform:uppercase;white-space:nowrap;cursor:default;}
 .word .lyr{display:block;}
 .word .lyr.b{position:absolute;inset:0;}
@@ -118,9 +118,9 @@ header.solid{background:rgba(11,11,13,.72);backdrop-filter:blur(10px);border-col
 .hero.ignite .word .lyr .colon{animation:colonignite .72s var(--e1) both;}
 @keyframes colonignite{0%{transform:scale(.35);opacity:0;filter:drop-shadow(0 0 0 transparent);}55%{opacity:1;filter:drop-shadow(0 0 16px color-mix(in srgb,var(--accent) 75%,transparent));}100%{transform:scale(1);opacity:1;filter:drop-shadow(0 0 0 transparent);}}
 @media(prefers-reduced-motion:reduce){.word .lyr .colon{animation:none;}}
-.herobar{position:relative;z-index:3;max-width:min(46ch,48%);padding:0 clamp(20px,5vw,64px) clamp(26px,5vh,52px);display:flex;flex-direction:column;align-items:flex-start;gap:12px;opacity:0;transform:translateY(12px);transition:opacity var(--dur-2) var(--e-settle) .2s,transform var(--dur-2) var(--e-settle) .2s;text-align:left;}
+.herobar{position:relative;z-index:3;max-width:min(46ch,48%);margin-left:max(0px,calc((100vw - var(--maxw))/2));padding:0 clamp(20px,5vw,64px) clamp(26px,5vh,52px);display:flex;flex-direction:column;align-items:flex-start;gap:12px;opacity:0;transform:translateY(12px);transition:opacity var(--dur-2) var(--e-settle) .2s,transform var(--dur-2) var(--e-settle) .2s;text-align:left;}
 .herobar.in{opacity:1;transform:none;}
-.heroline{font-family:var(--raveo);font-variation-settings:"wght" 500,"opsz" 24;font-size:clamp(18px,2.2vw,30px);letter-spacing:-.01em;max-width:24ch;line-height:1.1;}
+.heroline{font-family:var(--sans);font-weight:600;font-size:clamp(20px,2.6vw,34px);letter-spacing:-.01em;max-width:20ch;line-height:1.08;}
 .herometa{font-size:11px;letter-spacing:.12em;color:var(--grey);text-align:left;font-variant-numeric:tabular-nums;}
 .hero .herometa .r{justify-content:flex-start;}
 .herometa .r{display:flex;align-items:center;gap:8px;justify-content:flex-end;}
@@ -501,7 +501,7 @@ section.reveal>.wrap{position:relative;}
       <h1 class="word" id="word" aria-label="cyber:cyber"></h1>
     </div>
     <div class="herobar" id="herobar">
-      <div class="heroline">Anyone can build it now. Knowing what to build is the work.</div>
+      <div class="heroline">No theatre. Just the product.</div>
       <div class="herometa">
         <div class="r"><span class="dot" aria-hidden="true"></span><a href="#offerings" class="statl">Next available Q4</a></div>
       </div>
@@ -513,7 +513,7 @@ section.reveal>.wrap{position:relative;}
   <section id="about" class="reveal light"><div class="wrap aboutwrap">
     <span class="ablab" aria-hidden="true"><span class="tk"></span>00 &mdash; What it is</span>
     <span class="acoord" aria-hidden="true">51.5074&deg; N &middot; 00.1278&deg; W</span>
-    <p class="define"><b>cyber:cyber is a <span class="ul">product design lab<svg class="brush" viewBox="0 0 400 22" preserveAspectRatio="none" aria-hidden="true"><path d="M4,15 C64,5 132,19 210,10 C282,2 342,17 396,10" fill="none" stroke="var(--accent)" stroke-width="4.5" stroke-linecap="round"/></svg></span>.</b> <span data-split>We design your product &mdash; the brand, the interface, the whole thing. <span class="mut">And we can build it, too. A few clients a year.</span></span></p>
+    <p class="define"><b>cyber:cyber is a <span class="ul">product design lab<svg class="brush" viewBox="0 0 400 22" preserveAspectRatio="none" aria-hidden="true"><path d="M4,15 C64,5 132,19 210,10 C282,2 342,17 396,10" fill="none" stroke="var(--accent)" stroke-width="4.5" stroke-linecap="round"/></svg></span>.</b> <span data-split>We design the brand, the interface, and the code &mdash; and we build it. <span class="mut">A few clients a year.</span></span></p>
     <svg class="aseal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="arcA" d="M22,60 A38,38 0 0,1 98,60"/></defs><circle cx="60" cy="60" r="53" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/><text text-anchor="middle"><textPath href="#arcA" startOffset="50%">CYBER:CYBER</textPath></text><circle cx="60" cy="53" r="5" fill="currentColor"/><circle cx="60" cy="67" r="5" fill="currentColor"/><text class="stb" x="60" y="102" text-anchor="middle">MMXXVI</text></svg>
   </div></section>
 
@@ -630,7 +630,14 @@ section.reveal>.wrap{position:relative;}
   function updateFold(){
     var wr=word.getBoundingClientRect();
     if(!wr.width)return;
-    var cut=((innerWidth*FOLD-wr.left)/wr.width)*100;
+    var foldX=innerWidth*FOLD,letters=[].slice.call(lyrA.children),best=null,bestDist=Infinity;
+    for(var i=0;i<letters.length-1;i++){
+      var a=letters[i].getBoundingClientRect(),b=letters[i+1].getBoundingClientRect();
+      var gapX=(a.right+b.left)/2,dist=Math.abs(gapX-foldX);
+      if(dist<bestDist){bestDist=dist;best=gapX;}
+    }
+    if(best===null)best=foldX;   // single-glyph fallback, shouldn't happen with this wordmark
+    var cut=((best-wr.left)/wr.width)*100;
     word.style.setProperty("--cut",Math.max(0,Math.min(100,cut)).toFixed(2)+"%");
   }
   updateFold();
@@ -640,7 +647,7 @@ section.reveal>.wrap{position:relative;}
   var loader=document.getElementById("loader"),lpct=document.getElementById("lpct"),lstat=document.getElementById("lstat"),herobar=document.getElementById("herobar"),hero=document.getElementById("hero"),lglow=document.getElementById("lglow");
   var booted=false;
   function boot(){
-    if(reduce){setAll(REST);if(loader)loader.style.display="none";hero.classList.remove("wipe");herobar.classList.add("in");booted=true;start();return;}
+    if(reduce){setAll(REST);updateFold();if(loader)loader.style.display="none";hero.classList.remove("wipe");herobar.classList.add("in");booted=true;start();return;}
     var t0=performance.now(),dur=1150;
     // PHASE 1 — initialise: the loader counts while the wordmark holds thin
     (function loop(t){var e=t-t0,p=Math.min(e/dur,1),ease=1-Math.pow(1-p,3);
@@ -657,7 +664,7 @@ section.reveal>.wrap{position:relative;}
         start();
         setTimeout(function(){           // PHASE 3 — the wordmark calibrates weight thin->set, copy settles
           var c0=performance.now(),cd=780;
-          (function cal(tt){var cp=Math.min((tt-c0)/cd,1),ce=1-Math.pow(1-cp,3);setAll(200+ce*(REST-200));if(cp<1)requestAnimationFrame(cal);else{booted=true;enableReactive();}})(c0);
+          (function cal(tt){var cp=Math.min((tt-c0)/cd,1),ce=1-Math.pow(1-cp,3);setAll(200+ce*(REST-200));if(cp<1)requestAnimationFrame(cal);else{booted=true;updateFold();enableReactive();}})(c0);
           herobar.classList.add("in");
         },320);
       }
