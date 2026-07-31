@@ -188,6 +188,41 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .pfig.pair .duo figcaption{font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.16em;text-transform:uppercase;color:var(--dim);}
 .pfig.pair .pcap{max-width:54ch;text-align:center;}
 @media(max-width:620px){.pfig.pair .duo{gap:14px;}.pfig.pair .duo .device{width:min(150px,42vw);}}
+
+/* ------------------------------------------------------------------
+   THE STAKES + THE TWO READERS. The cases proved WHAT was built and skipped
+   WHO IT IS FOR and WHY IT MATTERS. Two designed modules, inside the existing
+   spine rather than bolted on: a stakes panel (the problem, in numbers, before
+   any solution) and a two-reader split (the individual / the room they train in),
+   because these products are bought by one and paid for by the other.
+------------------------------------------------------------------ */
+.stakes{margin:clamp(40px,6vh,72px) 0 0;padding-top:20px;border-top:2px solid var(--paper);}
+.stakes .slabel{font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.2em;word-spacing:.22em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:11px;margin-bottom:16px;}
+.stakes .slabel::before{content:"";width:7px;height:7px;background:var(--accent);flex:none;}
+.stakes .sl{font-family:var(--raveo);font-variation-settings:"wght" 620,"opsz" 32;font-size:var(--t-title);letter-spacing:-.025em;line-height:1.02;margin-bottom:clamp(24px,3.4vw,40px);max-width:26ch;}
+.stakes .rungs{display:grid;grid-template-columns:1fr;gap:clamp(20px,2.6vw,34px);}
+@media(min-width:820px){.stakes .rungs{grid-template-columns:1.06fr .97fr .97fr;}}
+.stakes .rung{border-top:1px solid var(--line);padding-top:16px;}
+.stakes .rung b{display:block;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.16em;text-transform:uppercase;color:var(--dim);font-weight:400;margin-bottom:10px;}
+.stakes .rung .fig{display:block;font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:var(--t-sub);letter-spacing:-.02em;line-height:1;color:var(--paper);margin-bottom:9px;font-variant-numeric:tabular-nums;}
+.stakes .rung span{display:block;color:var(--paper70);font-size:var(--t-body);line-height:1.5;max-width:34ch;}
+.stakes .mech{margin-top:clamp(24px,3.4vw,40px);font-family:var(--raveo);font-variation-settings:"wght" 420,"opsz" 32;font-size:var(--t-mid);letter-spacing:-.015em;line-height:1.16;color:var(--paper);max-width:40ch;}
+.stakes .cav{margin-top:14px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.1em;color:var(--dim);max-width:60ch;line-height:1.7;}
+
+.aud{margin:clamp(44px,7vh,86px) 0 0;display:grid;grid-template-columns:1fr;gap:clamp(26px,3.4vw,48px);}
+@media(min-width:820px){.aud{grid-template-columns:1.04fr .96fr;}}
+.aud .who{border-top:1px solid var(--line2);padding-top:18px;}
+.aud .who h3{font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.18em;text-transform:uppercase;margin:0 0 14px;display:flex;align-items:center;gap:10px;}
+.aud .who:first-child h3{color:var(--cyan);}
+.aud .who:last-child h3{color:var(--accent);}
+.aud .who h3 .b{width:17px;height:17px;border:1px solid currentColor;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:9px;flex:none;}
+.aud .who p{font-family:var(--raveo);font-variation-settings:"wght" 420,"opsz" 32;font-size:var(--t-mid);letter-spacing:-.015em;line-height:1.18;color:var(--paper);}
+.aud .who p em{font-style:normal;color:var(--paper45);}
+
+/* One quiet line: what is shipped is one surface of a longer system. States the
+   scope without publishing the roadmap. */
+.horizon{margin-top:clamp(34px,5vh,60px);padding-top:18px;border-top:1px solid var(--line);font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.14em;color:var(--dim);line-height:1.8;max-width:62ch;}
+.horizon b{color:var(--paper);font-weight:400;}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -222,7 +257,9 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
     <div class="cslabel">The work<br>02 / FRAME</div>
     <div>
       <div class="block reveal"><p class="csintro">Frame is a BJJ training journal built on a hard truth: you forget most of what you&rsquo;re taught within days. Log a session in seconds by voice, and Frame holds every technique, brings it back just before you&rsquo;d forget it, and shows you &mdash; in plain data &mdash; that you&rsquo;re actually improving. Built for the belts who feel stuck, so they have a reason to keep turning up.</p></div>
+      <div class="stakes reveal"><div class="slabel">The problem</div><div class="sl">Every rung of the ladder leaks &mdash; for the same reason.</div><div class="rungs"><div class="rung"><b>White &rarr; blue</b><span class="fig">~1 in 10</span><span>Everything is new, everything hurts, and the first real sign of progress is months away.</span></div><div class="rung"><b>Blue &rarr; purple</b><span class="fig">50&ndash;70%</span><span>The gains go subtle &mdash; angles, timing, awareness. It has a name: the blue belt blues.</span></div><div class="rung"><b>Purple &amp; beyond</b><span class="fig">Quiet drift</span><span>They rarely churn like blues. They burn out and disappear without saying anything.</span></div></div><p class="mech">Different belts, different excuses, one mechanism: when progress goes invisible between classes, people drift.</p><p class="cav">Belt-attrition figures are community estimates, not studies &mdash; we treat them as the shape of the problem, not proof of it. ~6M practitioners worldwide (Gymdesk); median UK adult membership &pound;70/mo (Matador, 2026).</p></div>
       <div class="block reveal"><div class="pfig lead"><div class="device"><img src="media/shots/f-gamenew.png" alt="Frame — how well techniques are sticking, measured at 63%" loading="lazy" width="680" height="1478"></div><div class="pcap"><span class="pn">Fig. 01 &middot; Frame &middot; how it&rsquo;s sticking</span><span class="pd">The forgetting curve, measured on your own sessions: 63% retention, and the point &mdash; 2&ndash;4 weeks &mdash; where techniques start falling out.</span></div></div></div>
+      <div class="aud reveal"><div class="who"><h3><span class="b">1</span>For the individual</h3><p>You forget most of what you are taught within days, and you cannot see yourself improving. <em>Frame holds the detail and shows you the proof.</em></p></div><div class="who"><h3><span class="b">2</span>For the room</h3><p>The cheapest growth in jiu-jitsu is the member you already have, kept one more year. <em>A room that can see its own progress is harder to leave.</em></p></div></div>
       <div class="block reveal"><h2>Built against the forgetting curve</h2><p>A single session throws four or five details at you &mdash; the grip, the angle, the small correction that made the sweep finally work &mdash; and within a week almost all of them are gone. Frame is built around that decay rather than despite it. Everything you log comes back to you on a schedule: a few days later, then a week, then a month, timed to land just before you&rsquo;d lose it. There&rsquo;s nothing to revise and no flashcards to sit down with &mdash; the app works out what&rsquo;s about to fade and puts it in front of you. Retention is the product, and it&rsquo;s the one thing a notebook has never done.</p></div>
       <div class="block reveal"><h2>The log you&rsquo;ll actually keep</h2><p>Everyone knows they should keep a training journal. Almost nobody does, because writing one up after an hour of getting choked is the last thing you want to do. Frame removes the friction: talk for thirty seconds in the car &mdash; &ldquo;started in closed guard, hit a scissor sweep to mount, got swept, tapped to an armbar&rdquo; &mdash; and it transcribes on-device and turns it into a structured session you just confirm. Then it reads your game back to you: the positions you live in, the subs you land, the ones that keep catching you, and hands you one or two specific things to hunt next session. A plan, not a feed.</p><div class="pfig"><div class="device"><img src="media/shots/f-game.png" alt="Frame — the same screen at white belt, accent derived from rank" loading="lazy" width="680" height="1478"></div><div class="pcap"><span class="pn">Fig. 02 &middot; Frame &middot; the same screen, one rank down</span><span class="pd">Identical data, white belt. Every accent in the app is derived from the rank you hold &mdash; so the interface tells you where you are before you read a word of it.</span></div></div><div class="pfig flip"><div class="device"><img src="media/shots/f-today.png" alt="Frame — the daily home: log in seconds, recall what's fading" loading="lazy" width="680" height="1478"></div><div class="pcap"><span class="pn">Fig. 03 &middot; Frame &middot; the daily read</span><span class="pd">Log in thirty seconds by voice &mdash; and the same screen brings back what you&rsquo;re about to forget, before you forget it.</span></div></div></div>
       <div class="block reveal"><h2>The app wears your belt</h2><p>Frame is built for the belt journey and it shows it &mdash; the whole app takes on the colour of your rank and changes with you as you&rsquo;re promoted. It runs offline-first and keeps your training history yours: saved the instant you log it, private, exportable, never sold. The goal underneath every decision is simple and hard: make the progress you can&rsquo;t feel visible, so the belts who&rsquo;d otherwise quit have a reason to come back for the next stripe &mdash; not more features, but more people still on the mat a year from now.</p></div>
@@ -235,6 +272,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
         </div>
         <div class="refusal"><span class="rlabel">One we killed</span><p>We scoped Frame <b>typing-first</b>, with voice as a nice-to-have. Every test said the same thing: if logging costs more than thirty seconds, nobody does it &mdash; and a journal nobody keeps is worthless. So voice became the product and typing the fallback. The exact opposite of how we&rsquo;d planned it.</p></div>
       </div>
+      <p class="horizon"><b>Scope.</b> What is public here is the athlete's app &mdash; the first surface of a longer system, and the only part we will show until it has earned the next. The work behind it, and who it is being built with, stays off the site on purpose.</p>
       <div class="colophon reveal"><div><b>Stack</b><span>Swift &middot; SwiftUI &middot; on-device transcription</span></div><div><b>Timeline</b><span>2026</span></div><div><b>Hands</b><span>Designed &amp; built by one person</span></div><div><b>Constraint</b><span>Offline-first. Exportable. Never sold.</span></div></div>
     </div>
   </div></section>

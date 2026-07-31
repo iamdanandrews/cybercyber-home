@@ -188,6 +188,41 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .pfig.pair .duo figcaption{font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.16em;text-transform:uppercase;color:var(--dim);}
 .pfig.pair .pcap{max-width:54ch;text-align:center;}
 @media(max-width:620px){.pfig.pair .duo{gap:14px;}.pfig.pair .duo .device{width:min(150px,42vw);}}
+
+/* ------------------------------------------------------------------
+   THE STAKES + THE TWO READERS. The cases proved WHAT was built and skipped
+   WHO IT IS FOR and WHY IT MATTERS. Two designed modules, inside the existing
+   spine rather than bolted on: a stakes panel (the problem, in numbers, before
+   any solution) and a two-reader split (the individual / the room they train in),
+   because these products are bought by one and paid for by the other.
+------------------------------------------------------------------ */
+.stakes{margin:clamp(40px,6vh,72px) 0 0;padding-top:20px;border-top:2px solid var(--paper);}
+.stakes .slabel{font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.2em;word-spacing:.22em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:11px;margin-bottom:16px;}
+.stakes .slabel::before{content:"";width:7px;height:7px;background:var(--accent);flex:none;}
+.stakes .sl{font-family:var(--raveo);font-variation-settings:"wght" 620,"opsz" 32;font-size:var(--t-title);letter-spacing:-.025em;line-height:1.02;margin-bottom:clamp(24px,3.4vw,40px);max-width:26ch;}
+.stakes .rungs{display:grid;grid-template-columns:1fr;gap:clamp(20px,2.6vw,34px);}
+@media(min-width:820px){.stakes .rungs{grid-template-columns:1.06fr .97fr .97fr;}}
+.stakes .rung{border-top:1px solid var(--line);padding-top:16px;}
+.stakes .rung b{display:block;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.16em;text-transform:uppercase;color:var(--dim);font-weight:400;margin-bottom:10px;}
+.stakes .rung .fig{display:block;font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:var(--t-sub);letter-spacing:-.02em;line-height:1;color:var(--paper);margin-bottom:9px;font-variant-numeric:tabular-nums;}
+.stakes .rung span{display:block;color:var(--paper70);font-size:var(--t-body);line-height:1.5;max-width:34ch;}
+.stakes .mech{margin-top:clamp(24px,3.4vw,40px);font-family:var(--raveo);font-variation-settings:"wght" 420,"opsz" 32;font-size:var(--t-mid);letter-spacing:-.015em;line-height:1.16;color:var(--paper);max-width:40ch;}
+.stakes .cav{margin-top:14px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.1em;color:var(--dim);max-width:60ch;line-height:1.7;}
+
+.aud{margin:clamp(44px,7vh,86px) 0 0;display:grid;grid-template-columns:1fr;gap:clamp(26px,3.4vw,48px);}
+@media(min-width:820px){.aud{grid-template-columns:1.04fr .96fr;}}
+.aud .who{border-top:1px solid var(--line2);padding-top:18px;}
+.aud .who h3{font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.18em;text-transform:uppercase;margin:0 0 14px;display:flex;align-items:center;gap:10px;}
+.aud .who:first-child h3{color:var(--cyan);}
+.aud .who:last-child h3{color:var(--accent);}
+.aud .who h3 .b{width:17px;height:17px;border:1px solid currentColor;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:9px;flex:none;}
+.aud .who p{font-family:var(--raveo);font-variation-settings:"wght" 420,"opsz" 32;font-size:var(--t-mid);letter-spacing:-.015em;line-height:1.18;color:var(--paper);}
+.aud .who p em{font-style:normal;color:var(--paper45);}
+
+/* One quiet line: what is shipped is one surface of a longer system. States the
+   scope without publishing the roadmap. */
+.horizon{margin-top:clamp(34px,5vh,60px);padding-top:18px;border-top:1px solid var(--line);font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.14em;color:var(--dim);line-height:1.8;max-width:62ch;}
+.horizon b{color:var(--paper);font-weight:400;}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -222,7 +257,9 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
     <div class="cslabel">The work<br>01 / GRANITE</div>
     <div>
       <div class="block reveal"><p class="csintro">Granite is a strength coach that runs entirely on your phone. Not a plan you follow, but an engine that reasons &mdash; building your training around the life you actually train through, rewriting it each week as things change. We built it deterministic and on-device on purpose: your training history never leaves your hands, and every decision it makes can be traced, tested, and trusted.</p></div>
+      <div class="stakes reveal"><div class="slabel">The problem</div><div class="sl">A plan you cannot follow is worth nothing.</div><div class="rungs"><div class="rung"><b>The week moves</b><span class="fig">Life first</span><span>Work, sleep, travel, a niggle. The week you planned is rarely the week you get.</span></div><div class="rung"><b>So the plan breaks</b><span class="fig">Miss two</span><span>Fixed programmes have no answer for a missed session, so people improvise or stop.</span></div><div class="rung"><b>And nobody explains</b><span class="fig">No reason</span><span>Apps change your numbers without saying why, so there is nothing to trust or argue with.</span></div></div><p class="mech">One mechanism underneath all three: training adapts to the person, or the person quietly stops training.</p></div>
       <div class="block reveal"><div class="pfig lead"><div class="device"><img src="media/shots/g-review.png" alt="Granite — the weekly rewrite, with the reasoning shown" loading="lazy" width="680" height="1478"></div><div class="pcap"><span class="pn">Fig. 01 &middot; Granite &middot; the weekly rewrite</span><span class="pd">You missed sessions, so it pulls the week back &mdash; a deload, 40% less volume, loads held &mdash; and traces exactly what changed and why.</span></div></div></div>
+      <div class="aud reveal"><div class="who"><h3><span class="b">1</span>For the person training</h3><p>You do not need more discipline, you need a week that survives contact with your life. <em>Granite rewrites it and tells you what changed.</em></p></div><div class="who"><h3><span class="b">2</span>For the people who prescribe</h3><p>Coaches and clinicians cannot stand behind a black box that will not show its reasoning. <em>A deterministic engine can be inspected, tested and argued with.</em></p></div></div>
       <div class="block reveal"><h2>A coach, not a plan</h2><p>Most training apps hand you a fixed plan and hope you follow it. Granite works the other way round. It reasons &mdash; taking your goals, your experience, the days you actually have, your injuries, and the load you carry off the platform &mdash; and builds a week that fits your real life. When something changes, it rewrites, and tells you why. Not a plan you obey. A coach that adapts.</p><div class="pfig"><div class="device"><img src="media/shots/g-coach.png" alt="Granite — tell your coach what changed this week" loading="lazy" width="680" height="1478"></div><div class="pcap"><span class="pn">Fig. 02 &middot; Granite &middot; the check-in</span><span class="pd">You tell it what changed this week &mdash; a tweak, a bad night, a niggle &mdash; and the plan reasons around it.</span></div></div></div>
       <div class="block reveal"><h2>The engine is the product</h2><p>The intelligence in Granite is deterministic, not generative &mdash; and that&rsquo;s a deliberate choice, not a limitation. It means every plan is consistent, every decision can be traced, and the whole system can be tested against real coaching principles rather than hoping a black box got it right. Accountable intelligence beats impressive intelligence when it&rsquo;s your body on the line. We built the engine first, and everything else serves it.</p><div class="pfig flip"><div class="device"><img src="media/shots/g-session.png" alt="Granite — a session in progress, with the reason for today and pain capture" loading="lazy" width="680" height="1478"></div><div class="pcap"><span class="pn">Fig. 03 &middot; Granite &middot; the session</span><span class="pd">Every session opens with why it exists today &mdash; then prescribes load and RPE per set, and takes a pain flag inline, because that is the input that changes next week.</span></div></div></div>
       <div class="block reveal"><h2>On-device by decision</h2><p>Granite runs entirely on your phone. No account, no cloud, no data leaving your hands &mdash; the privacy isn&rsquo;t a policy you have to trust, it&rsquo;s the architecture. Running locally was the harder path, and it made the product sharper: an engine that can&rsquo;t lean on the cloud has to be deliberate about every decision. That constraint is the craft. Granite is the considered version of something most people build the easy way.</p><div class="pfig"><div class="device"><img src="media/shots/g-progress.png" alt="Granite — progress and personal records, tracked on-device" loading="lazy" width="680" height="1478"></div><div class="pcap"><span class="pn">Fig. 04 &middot; Granite &middot; on-device history</span><span class="pd">Every session, every PR and every trend lives on the phone &mdash; no account, no cloud, nothing leaving your hands.</span></div></div></div>
@@ -235,6 +272,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
         </div>
         <div class="refusal"><span class="rlabel">One we killed</span><p>We almost shipped <b>cloud sync</b> in week three &mdash; it would have made onboarding one tap and the demo look cleaner. We killed it because the moment your training history touches our servers, &ldquo;on-device and accountable&rdquo; stops being an architecture and becomes a marketing line. The harder path was the product.</p></div>
       </div>
+      <p class="horizon"><b>Scope.</b> What is public here is the consumer app. The engine underneath it was built to serve more than one reader &mdash; and those surfaces stay off the site until they ship. The architecture is the asset; publishing how it decides is not.</p>
       <div class="colophon reveal"><div><b>Stack</b><span>Swift &middot; SwiftUI &middot; on-device</span></div><div><b>Timeline</b><span>2026</span></div><div><b>Hands</b><span>Designed &amp; built by one person</span></div><div><b>Constraint</b><span>No cloud. No account. No black box.</span></div></div>
     </div>
   </div></section>
