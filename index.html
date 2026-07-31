@@ -47,9 +47,13 @@ a{color:inherit;text-decoration:none;}
 /* Swiss: grotesque body, monospace reserved for data + labels */
 .eyebrow,.menu,.status,.clock,.rm,.jk,.jd,.op,.foot,.lrow,.lstat,.coord,.verb,.ix,.collab .lbl,.frontier,.cp,.scrollcue,.mobile a i,.ri,.brand,.herometa{font-family:var(--mono);}
 
-.loader{position:fixed;inset:0;z-index:1000;background:var(--ground);display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(20px,5vw,64px);transition:transform .8s cubic-bezier(.76,0,.24,1);}
-.loader.done{transform:translateY(-100%);}
-.loader .lgrid{position:absolute;inset:0;opacity:.4;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(120% 90% at 50% 50%,#000 20%,transparent 75%);-webkit-mask-image:radial-gradient(120% 90% at 50% 50%,#000 20%,transparent 75%);}
+.loader{position:fixed;inset:0;z-index:1000;background:var(--ground);display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(20px,5vw,64px);transition:opacity .9s var(--e1);}
+.loader.done{opacity:0;pointer-events:none;}
+.loader .lglow{position:absolute;inset:0;z-index:0;background:radial-gradient(55% 40% at 24% 94%,color-mix(in srgb,var(--accent) 15%,transparent) 0%,transparent 60%);opacity:.1;transition:opacity .28s linear;pointer-events:none;}
+.loader .lseam{position:absolute;top:clamp(58px,8vh,82px);bottom:0;left:50%;width:1px;z-index:1;background:var(--line2);transform:translateX(-.5px);opacity:.55;}
+.loader .lpct,.loader .lrow{position:relative;z-index:2;transition:transform .9s var(--e1),opacity .55s var(--e1);}
+.loader.done .lpct,.loader.done .lrow{transform:translateY(-14px);opacity:0;}
+.loader .lgrid{position:absolute;inset:-40px;z-index:0;opacity:.5;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(120% 90% at 30% 50%,#000 30%,transparent 78%);-webkit-mask-image:radial-gradient(120% 90% at 30% 50%,#000 30%,transparent 78%);}
 .loader .lrow{position:relative;display:flex;justify-content:space-between;align-items:flex-end;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);border-top:1px solid var(--line);padding-top:14px;}
 .loader .lstat{color:var(--cyan);}
 .loader .lpct{font-family:var(--raveo);font-variation-settings:"wght" 300,"opsz" 32;font-size:clamp(40px,9vw,120px);color:var(--paper);letter-spacing:-.03em;line-height:.9;font-variant-numeric:tabular-nums;}
@@ -108,6 +112,8 @@ header.solid{background:rgba(11,11,13,.72);backdrop-filter:blur(10px);border-col
 .word .lyr.b{color:var(--ground);clip-path:inset(-25% 0 -25% 50%);}
 .word .lyr .colon{color:var(--accent);transform-origin:center;animation:colonlife 3.4s ease-in-out infinite;}
 @keyframes colonlife{0%,100%{transform:scale(1);}50%{transform:scale(1.08);}}
+.hero.ignite .word .lyr .colon{animation:colonignite .72s var(--e1) both;}
+@keyframes colonignite{0%{transform:scale(.35);opacity:0;filter:drop-shadow(0 0 0 transparent);}55%{opacity:1;filter:drop-shadow(0 0 16px color-mix(in srgb,var(--accent) 75%,transparent));}100%{transform:scale(1);opacity:1;filter:drop-shadow(0 0 0 transparent);}}
 @media(prefers-reduced-motion:reduce){.word .lyr .colon{animation:none;}}
 .herobar{position:relative;z-index:3;max-width:min(46ch,48%);padding:0 clamp(20px,5vw,64px) clamp(26px,5vh,52px);display:flex;flex-direction:column;align-items:flex-start;gap:12px;opacity:0;transform:translateY(12px);transition:opacity var(--dur-2) var(--e-settle) .2s,transform var(--dur-2) var(--e-settle) .2s;text-align:left;}
 .herobar.in{opacity:1;transform:none;}
@@ -453,7 +459,9 @@ section.reveal>.wrap{position:relative;}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
+  <div class="lglow" id="lglow"></div>
   <div class="lgrid"></div>
+  <span class="lseam"></span>
   <div class="lpct"><span id="lpct">0</span></div>
   <div class="lrow"><span class="lstat" id="lstat">INITIALISING</span><span>Est. London</span></div>
 </div>
@@ -615,7 +623,7 @@ section.reveal>.wrap{position:relative;}
   var spans=[].slice.call(word.querySelectorAll(".lyr span")),REST=650,MAX=880,RAD=250;
   function setAll(w){for(var i=0;i<spans.length;i++)spans[i].style.fontVariationSettings="'wght' "+w.toFixed(0)+",'opsz' 32";}
 
-  var loader=document.getElementById("loader"),lpct=document.getElementById("lpct"),lstat=document.getElementById("lstat"),herobar=document.getElementById("herobar"),hero=document.getElementById("hero");
+  var loader=document.getElementById("loader"),lpct=document.getElementById("lpct"),lstat=document.getElementById("lstat"),herobar=document.getElementById("herobar"),hero=document.getElementById("hero"),lglow=document.getElementById("lglow");
   var booted=false;
   function boot(){
     if(reduce){setAll(REST);if(loader)loader.style.display="none";hero.classList.remove("wipe");herobar.classList.add("in");booted=true;start();return;}
@@ -625,10 +633,13 @@ section.reveal>.wrap{position:relative;}
       lpct.textContent=Math.round(p*100);
       if(p>.35)lstat.textContent="CALIBRATING"; if(p>.82)lstat.textContent="READY";
       setAll(120+ease*80);
+      if(lglow)lglow.style.opacity=(0.1+p*0.5).toFixed(3);   // atmosphere warms as it boots
       if(p<1)requestAnimationFrame(loop);
       else{
         loader.classList.add("done");
-        hero.classList.remove("wipe");   // PHASE 2 — the fold wipes open
+        hero.classList.remove("wipe");   // PHASE 2 — the fold wipes open; loader dissolves on the same axis
+        hero.classList.add("ignite");    // the vermilion colon lands on the seam
+        setTimeout(function(){hero.classList.remove("ignite");},780);
         start();
         setTimeout(function(){           // PHASE 3 — the wordmark calibrates weight thin->set, copy settles
           var c0=performance.now(),cd=780;
