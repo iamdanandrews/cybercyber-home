@@ -629,6 +629,35 @@ section.reveal>.wrap{position:relative;}
 .who .wlink{display:inline-block;margin-top:22px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);border-bottom:1px solid transparent;padding-bottom:3px;transition:border-bottom-color var(--dur-2) var(--e1);}
 .who .wlink:hover{border-bottom-color:var(--cyan);}
 @media(max-width:819px){.who{grid-template-columns:1fr;}}
+
+/* THE WORK TILES CARRY A NUMBER, NOT A SCREENSHOT. A phone screen in a 2:3 box is the one
+   place this site dropped its own language for a stock portfolio convention -- and the box
+   cannot be won: a whole phone is illegible at 440px and a crop stops reading as a product.
+   So the tile states one true figure in Raveo, at a size that survives any viewport, with the
+   product's own generated mark beneath it. The screens live on the case studies, where there
+   is room to read them. Both figures come straight off the captured screens: 71% is Frame's
+   recall, +2.5kg is what Granite added across four lifts. */
+.media.stat{position:relative;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:clamp(22px,2.6vw,34px);background:var(--s1);overflow:hidden;}
+.media.stat .sfig{display:flex;align-items:flex-start;gap:.14em;font-family:var(--raveo);
+  font-variation-settings:"wght" 300,"opsz" 32;font-size:clamp(76px,12vw,148px);line-height:.84;
+  letter-spacing:-.045em;color:var(--paper);transition:font-variation-settings .6s var(--e1);}
+.media.stat .sfig i{font-style:normal;font-size:.3em;font-variation-settings:"wght" 420,"opsz" 32;
+  color:var(--accent);transform:translateY(.25em);}
+.media.stat .scap{margin-top:18px;max-width:26ch;font-family:var(--mono);font-size:var(--t-cap);
+  letter-spacing:.1em;text-transform:uppercase;line-height:1.75;color:var(--dim);}
+/* the product's seal: one unbroken line from mark.js, seeded on its name -- deterministic, so
+   each product has exactly one mark and it is always the same one */
+.media.stat .smark{position:absolute;top:clamp(20px,2.4vw,32px);right:clamp(20px,2.4vw,32px);
+  width:clamp(58px,7vw,84px);height:auto;overflow:visible;opacity:.34;
+  transition:opacity .5s var(--e1);}
+.media.stat .smark path{fill:none;stroke:var(--paper);stroke-width:.15;stroke-linecap:square;
+  stroke-linejoin:miter;}
+.proj:hover .media.stat .sfig{font-variation-settings:"wght" 520,"opsz" 32;}
+.proj:hover .media.stat .smark{opacity:.72;}
+@media(prefers-reduced-motion:reduce){
+  .media.stat .sfig,.media.stat .smark{transition:none;}
+}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -686,11 +715,11 @@ section.reveal>.wrap{position:relative;}
     <p class="lead">We don't just design for clients. We design, brand and build our own products &mdash; and ship them into the world.</p></div>
     <div class="reel">
       <a class="proj" href="work-granite.html">
-        <div class="media arted" data-reel style="background-image:url('media/work-granite-hero.svg');view-transition-name:m-granite"><video class="rv" muted playsinline preload="none" aria-hidden="true" data-src="media/granite-reel.mp4"></video><div class="ph"><span class="pp">&#9654;</span></div><span class="vtoggle" role="button" tabindex="0" aria-label="Play or pause">&#10073;&#10073;</span><span class="mtag">Reel 01 &middot; Loop</span><span class="mgo">View case &rarr;</span></div>
+        <div class="media stat" style="view-transition-name:m-granite"><span class="mtag">Proof 01</span><div class="sfig"><b>+2.5</b><i>kg</i></div><div class="scap">Added across four main lifts &mdash; decided on the phone, with the reasoning shown</div><svg class="smark" id="smark-granite" viewBox="0 0 12 12" aria-hidden="true"><path d=""/></svg><span class="mgo">View case &rarr;</span></div>
         <div class="pinfo"><div class="pn" style="view-transition-name:t-granite">Granite<em>.</em></div><div class="pd">A strength coach that rewrites your week.</div><div class="pm"><span>iOS &middot; Native</span><span>On-device AI</span><span class="live">Alpha &middot; granite.coach</span></div></div>
       </a>
       <a class="proj" href="work-frame.html">
-        <div class="media arted" data-reel style="background-image:url('media/work-frame-hero.svg');view-transition-name:m-frame"><video class="rv" muted playsinline preload="none" aria-hidden="true" data-src="media/frame-reel.mp4"></video><div class="ph"><span class="pp">&#9654;</span></div><span class="vtoggle" role="button" tabindex="0" aria-label="Play or pause">&#10073;&#10073;</span><span class="mtag">Reel 02 &middot; Loop</span><span class="mgo">View case &rarr;</span></div>
+        <div class="media stat" style="view-transition-name:m-frame"><span class="mtag">Proof 02</span><div class="sfig"><b>71</b><i>%</i></div><div class="scap">Of the techniques you were tested on, you still had &mdash; measured on your own sessions</div><svg class="smark" id="smark-frame" viewBox="0 0 12 12" aria-hidden="true"><path d=""/></svg><span class="mgo">View case &rarr;</span></div>
         <div class="pinfo"><div class="pn" style="view-transition-name:t-frame">Frame<em>.</em></div><div class="pd">Built against the forgetting curve.</div><div class="pm"><span>iOS &middot; Native</span><span>Spaced recall</span><span class="live">Alpha &middot; framebjj.app</span></div></div>
       </a>
       <!-- Brand engine card hidden for now (Dan, 2026-07-30) — restore this block to bring it back.
@@ -976,6 +1005,12 @@ section.reveal>.wrap{position:relative;}
     },110);
   });
   draw(DEFAULT);
+  ['granite','frame'].forEach(function(k){
+    var el=document.getElementById('smark-'+k); if(!el) return;
+    var m=window.ccMark(k, 6);
+    el.setAttribute('viewBox','0 0 '+m.N+' '+m.N);
+    el.querySelector('path').setAttribute('d', m.d);
+  });
   var hm=document.getElementById('hmpath');
   if(hm){ var h=window.ccMark('cyber:cyber', 6); hm.setAttribute('d', h.d);
     document.querySelector('.hmark').setAttribute('viewBox','0 0 '+h.N+' '+h.N); }
