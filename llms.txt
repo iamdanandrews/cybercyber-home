@@ -37,8 +37,8 @@ The site itself is hand-coded vanilla HTML, CSS and JavaScript with no build ste
 
 ## Who
 
-- Dan Andrews — designer and engineer, London. A decade of product work including Spotify, Epic Games and Dell, and early-stage teams before and since. Personal site: [iamdanandrews.com](https://iamdanandrews.com).
-- There is no bench and no account team; the person who designs the product also writes the code that ships it.
+- Dan Andrews — designer, London. A decade across brand, interface, motion and interaction, including Spotify, Epic Games and Dell, and early-stage teams before and since. Drawn to complex domains — the kind where you have to learn the subject before you can design in it. Personal site: [iamdanandrews.com](https://iamdanandrews.com).
+- There is no bench and no account team; the person who designs it is the person who builds it.
 
 ## Contact
 

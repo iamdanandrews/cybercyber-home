@@ -122,7 +122,14 @@ header.solid{background:rgba(11,11,13,.72);backdrop-filter:blur(10px);border-col
 .foldbreak:hover,.foldbreak:focus-visible{background:var(--ground);}
 .foldbreak:hover .fa,.foldbreak:hover .fb,.foldbreak:focus-visible .fa,.foldbreak:focus-visible .fb{color:var(--paper);opacity:1;}
 .foldbreak:hover .fa .tk,.foldbreak:focus-visible .fa .tk{background:var(--accent);}
-.hero .glow{position:absolute;inset:0;z-index:0;background:radial-gradient(55% 40% at 24% 94%,color-mix(in srgb,var(--accent) 8%,transparent) 0%,transparent 60%);pointer-events:none;}
+.hero .glow{position:absolute;inset:0;z-index:0;background:radial-gradient(55% 40% at 24% 94%,color-mix(in srgb,var(--accent) 8%,transparent) 0%,transparent 60%);pointer-events:none;opacity:1;transition:opacity 1.4s var(--e1);}
+/* The loader renders its progress AS LIGHT -- lglow swells 0.1 -> 0.6 as it loads -- and this
+   glow is where that lands, so the loading screen dissolves into a hero that already has its
+   light instead of cutting to a flat black one. Once the hero has settled the glow has no job
+   left, and a warm haze is the one atmospheric thing on a page built from hairlines and marks,
+   so it goes. Dan spotted it at rest and asked if it was deliberate -- it was, but only for the
+   two seconds it is doing something. */
+.hero.settled .glow{opacity:0;}
 .hero .hanchor{position:absolute;bottom:14%;left:var(--fold);z-index:2;pointer-events:none;}
 
 
@@ -724,7 +731,7 @@ section.reveal>.wrap{position:relative;}
   <section id="faq" class="reveal"><div class="wrap faqwrap"><div class="faqhead">
     <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>In short<span class="ix">04 / QUESTIONS</span></div>
     <h2 class="h2" style="--c:var(--paper)">Questions</h2><p class="lead">The short version &mdash; what we are, what it costs, and who it's for.</p></div>
-    <div class="faq"><details><summary>Can one person do all of it?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Brand, interface and production code used to need three people because the <em>tools</em> needed three specialists. They don&rsquo;t any more. What hasn&rsquo;t got easier is deciding what to build, and that part never parallelised anyway. Granite and Frame are both here to be inspected &mdash; the same hands made the brand, the interface and the commits.</p></div></div></details><details><summary>What if I only need design?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Then this is the wrong studio, and that isn&rsquo;t a negotiating position. Handing a design over is where products lose their shape: the decisions that matter get made during the build, by whoever is holding it. Brand, interface and code &mdash; or we pass.</p></div></div></details><details><summary>How fast is fast?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>A Design Block is a week. A complete build is weeks, not quarters. But speed isn&rsquo;t what you&rsquo;re buying &mdash; everyone is fast now. You&rsquo;re buying the judgment that makes fast worth keeping.</p></div></div></details><details><summary>What if you&rsquo;re the bottleneck?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>A fair risk to name. It&rsquo;s why scope and price are fixed before anything starts, why work lands continuously instead of in one handover at the end, and why it&rsquo;s only a few clients a year. A calendar with slack in it is the only kind that holds.</p></div></div></details><details><summary>Do we own what you build?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>All of it, including the parts you&rsquo;d rather not read. Native code, no proprietary runtime, no licence that expires. If we stopped talking tomorrow you&rsquo;d have a product someone else could pick up and extend.</p></div></div></details><details><summary>Who does the actual work?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Dan Andrews &mdash; a designer and engineer in London, a decade of product work including Spotify, Epic&nbsp;Games and Dell, and early-stage teams before that. There&rsquo;s no bench, and nobody to hand you off to. More at <a href="https://iamdanandrews.com" target="_blank" rel="noopener">iamdanandrews.com</a>.</p></div></div></details></div>
+    <div class="faq"><details><summary>Can one person do all of it?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Brand, interface and production code used to need three people because the <em>tools</em> needed three specialists. They don&rsquo;t any more. What hasn&rsquo;t got easier is deciding what to build, and that part never parallelised anyway. Granite and Frame are both here to be inspected &mdash; the same hands made the brand, the interface and the commits.</p></div></div></details><details><summary>What if I only need design?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Then this is the wrong studio, and that isn&rsquo;t a negotiating position. Handing a design over is where products lose their shape: the decisions that matter get made during the build, by whoever is holding it. Brand, interface and code &mdash; or we pass.</p></div></div></details><details><summary>How fast is fast?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>A Design Block is a week. A complete build is weeks, not quarters. But speed isn&rsquo;t what you&rsquo;re buying &mdash; everyone is fast now. You&rsquo;re buying the judgment that makes fast worth keeping.</p></div></div></details><details><summary>What if you&rsquo;re the bottleneck?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>A fair risk to name. It&rsquo;s why scope and price are fixed before anything starts, why work lands continuously instead of in one handover at the end, and why it&rsquo;s only a few clients a year. A calendar with slack in it is the only kind that holds.</p></div></div></details><details><summary>Do we own what you build?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>All of it, including the parts you&rsquo;d rather not read. Native code, no proprietary runtime, no licence that expires. If we stopped talking tomorrow you&rsquo;d have a product someone else could pick up and extend.</p></div></div></details><details><summary>Who does the actual work?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Dan Andrews &mdash; a designer in London, a decade across brand, interface, motion and interaction, including Spotify, Epic&nbsp;Games and Dell, and early-stage teams before that. There&rsquo;s no bench, and nobody to hand you off to. More at <a href="https://iamdanandrews.com" target="_blank" rel="noopener">iamdanandrews.com</a>.</p></div></div></details></div>
   </div></section>
 
   <section id="journal" class="reveal"><div class="wrap">
@@ -744,8 +751,8 @@ section.reveal>.wrap{position:relative;}
     <div class="who">
       <div><span class="wl">Who you&rsquo;re hiring</span><div class="wn">Dan Andrews</div></div>
       <div>
-        <p>A designer and engineer in London. A decade of product work &mdash; Spotify, Epic&nbsp;Games, Dell &mdash; and early-stage teams before and since.</p>
-        <p>A studio this size usually sells one layer and hands the rest off. I don&rsquo;t: the brand, the interface and the code underneath are one job, and they go wrong at the seams between them. Granite and Frame are on this site so you can check that rather than take my word for it.</p>
+        <p>A designer in London. A decade across brand, interface, motion and interaction &mdash; Spotify, Epic&nbsp;Games, Dell &mdash; and early-stage teams before and since.</p>
+        <p>The work I like most is the complicated kind: domains with their own constraints and their own vocabulary, where you have to learn the subject before you can design anything worth shipping. Brand, interface and the way a thing moves are one problem rather than four handoffs &mdash; and most of what goes wrong in a product goes wrong at the seams between them.</p>
         <a class="wlink" href="https://iamdanandrews.com" target="_blank" rel="noopener">iamdanandrews.com &nearr;</a>
       </div>
     </div>
@@ -790,7 +797,7 @@ section.reveal>.wrap{position:relative;}
   var loader=document.getElementById("loader"),lpct=document.getElementById("lpct"),lstat=document.getElementById("lstat"),herobar=document.getElementById("herobar"),hero=document.getElementById("hero"),lglow=document.getElementById("lglow");
   var booted=false;
   function boot(){
-    if(reduce){setAll(REST);if(loader)loader.style.display="none";herobar.classList.add("in");booted=true;start();return;}
+    if(reduce){setAll(REST);hero.classList.add("settled");if(loader)loader.style.display="none";herobar.classList.add("in");booted=true;start();return;}
     var t0=performance.now(),dur=1150;
     // PHASE 1 — initialise: the loader counts while the wordmark holds thin
     (function loop(t){var e=t-t0,p=Math.min(e/dur,1),ease=1-Math.pow(1-p,3);
@@ -831,7 +838,7 @@ section.reveal>.wrap{position:relative;}
               setTimeout(function(){hero.classList.remove("ignite");},780);
             }
             if(el<cd) requestAnimationFrame(cal);
-            else { setAll(REST); booted=true; enableReactive(); }
+            else { setAll(REST); booted=true; hero.classList.add("settled"); enableReactive(); }
           })(c0);
           herobar.classList.add("in");
           /* the held mark in the void draws itself on, last */

@@ -229,6 +229,21 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
    running app with simctl -- no mockups, and nothing tap-driven was faked. */
 .device video.dv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1;}
 @media(prefers-reduced-motion:reduce){.device video.dv{display:none;}}
+
+/* THE CONCEPT FILM. Art direction, and labelled as art direction -- these were cut before
+   there was a product to photograph, and they used to sit on the homepage Work tiles under a
+   heading that says "The proof", where they proved only that people train. Here they are the
+   right artefact: the tone the product had to live up to, shown as the brand work it is. */
+.cfilm{margin-top:clamp(34px,5vw,64px);border:1px solid var(--line);display:grid;grid-template-columns:1.06fr .94fr;gap:1px;background:var(--line);align-items:stretch;}
+.cfilm > div{background:var(--ground);padding:clamp(24px,3vw,44px);}
+.cfilm .cfl{display:block;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);}
+.cfilm h3{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:var(--t-mid);line-height:1.05;letter-spacing:-.02em;margin-top:14px;color:var(--paper);}
+.cfilm p{margin-top:14px;font-size:var(--t-body);line-height:1.68;color:var(--paper70);max-width:46ch;}
+.cfilm .cfv{padding:0;position:relative;overflow:hidden;min-height:260px;}
+.cfilm video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+.cfilm .cfnote{position:absolute;left:12px;bottom:10px;z-index:2;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.16em;text-transform:uppercase;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.8);}
+@media(max-width:819px){.cfilm{grid-template-columns:1fr;}.cfilm .cfv{min-height:0;aspect-ratio:2/3;}}
+@media(prefers-reduced-motion:reduce){.cfilm video{display:none;}}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -269,7 +284,16 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
       <div class="block reveal"><h2>Built against the forgetting curve</h2><p>A single session throws four or five details at you &mdash; the grip, the angle, the small correction that made the sweep finally work &mdash; and within a week almost all of them are gone. Frame is built around that decay rather than despite it. Everything you log comes back to you on a schedule: a few days later, then a week, then a month, timed to land just before you&rsquo;d lose it. There&rsquo;s nothing to revise and no flashcards to sit down with &mdash; the app works out what&rsquo;s about to fade and puts it in front of you. Retention is the product, and it&rsquo;s the one thing a notebook has never done.</p></div>
       <div class="block reveal"><h2>The log you&rsquo;ll actually keep</h2><p>Everyone knows they should keep a training journal. Almost nobody does, because writing one up after an hour of getting choked is the last thing you want to do. Frame removes the friction: talk for thirty seconds in the car &mdash; &ldquo;started in closed guard, hit a scissor sweep to mount, got swept, tapped to an armbar&rdquo; &mdash; and it transcribes on-device and turns it into a structured session you just confirm. Then it reads your game back to you: the positions you live in, the subs you land, the ones that keep catching you, and hands you one or two specific things to hunt next session. A plan, not a feed.</p><div class="pfig"><div class="device"><img src="media/shots/f-game.png" alt="Frame — the same screen at white belt, accent derived from rank" loading="lazy" width="680" height="1478"></div><div class="pcap"><span class="pn">Fig. 02 &middot; Frame &middot; the same screen, one rank down</span><span class="pd">Identical data, white belt. Every accent in the app is derived from the rank you hold &mdash; so the interface tells you where you are before you read a word of it.</span></div></div><div class="pfig flip"><div class="device"><img src="media/shots/f-today.png" alt="Frame — the daily home: log in seconds, recall what's fading" loading="lazy" width="680" height="1478"></div><div class="pcap"><span class="pn">Fig. 03 &middot; Frame &middot; the daily read</span><span class="pd">Log in thirty seconds by voice &mdash; and the same screen brings back what you&rsquo;re about to forget, before you forget it.</span></div></div></div>
       <div class="block reveal"><h2>The app wears your belt</h2><p>Frame is built for the belt journey and it shows it &mdash; the whole app takes on the colour of your rank and changes with you as you&rsquo;re promoted. It runs offline-first and keeps your training history yours: saved the instant you log it, private, exportable, never sold. The goal underneath every decision is simple and hard: make the progress you can&rsquo;t feel visible, so the belts who&rsquo;d otherwise quit have a reason to come back for the next stripe &mdash; not more features, but more people still on the mat a year from now.</p><div class="pfig"><div class="device"><img src="media/shots/f-leaks.png" alt="Frame — the three holes in your game, ranked from your own logged sessions" loading="lazy" width="680" height="1478"></div><div class="pcap"><span class="pn">Fig. 04 &middot; Frame &middot; the holes, ranked</span><span class="pd">The same data read back as a shortlist: what catches you most, whether it is getting better or worse, and one drill for each &mdash; so a session has a target instead of a vibe.</span></div></div><div class="pfig flip"><div class="device"><img src="media/shots/f-journey.png" alt="Frame — every promotion with the mat hours behind it, and what the next belt costs at the current pace" loading="lazy" width="680" height="1478"></div><div class="pcap"><span class="pn">Fig. 05 &middot; Frame &middot; the long view</span><span class="pd">Every promotion with the hours behind it, and what the next one costs at the pace you are actually training &mdash; the progress you cannot feel, made countable.</span></div></div></div>
-      <div class="decide reveal">
+      <div class="cfilm reveal">
+      <div><span class="cfl">Art direction</span>
+        <h3>The film came before the product</h3>
+        <p>Cut before the app existed, to fix the register: the room, the light, the ordinary grind of rolling with someone who is trying to beat you. Everything the interface does later &mdash; the restraint, the refusal to gamify &mdash; had to earn its place next to this.</p>
+        <p>It is not a demo, and it is not proof of anything shipped. It is the brief we wrote to ourselves.</p>
+      </div>
+      <div class="cfv"><video muted loop autoplay playsinline preload="none" aria-hidden="true"><source src="media/frame-concept.mp4" type="video/mp4"></video><span class="cfnote">Concept film &middot; not product footage</span></div>
+    </div>
+
+    <div class="decide reveal">
         <span class="dlabel">The ledger &middot; kept / cut</span>
         <div class="dl">Built by choosing what to leave out.</div>
         <div class="cols">

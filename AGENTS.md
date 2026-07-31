@@ -36,7 +36,9 @@ Push to `main` → Vercel deploys automatically. There is no staging.
 
 **Colour:** `--ground:#0B0B0D` · `--paper:#F2ECEF` · `--accent:#EA4E32` (vermilion) · `--accent-ink:#0B0B0D` (ink on vermilion) · `--cyan:#22D3EE`. The accent is single and rationed. Dark-first; there is **no light mode and one is not wanted**.
 
-**Grid:** there are **zero occurrences of `grid-template-columns:1fr 1fr` site-wide, on purpose.** Paired columns are displaced instead (`.nfy2` 1.12/.88, `.jrnl` .9/1.1 mirrored, `.proj` .94/1.06, `.shd.solo` 1.12/.88, `.shd.solo.rev` .88/1.12). Adding a dead-even split breaks the system.
+**Grid:** section layouts are **never dead-even** — paired columns are displaced (`.nfy2` 1.12/.88, `.jrnl` .9/1.1 mirrored, `.proj` .94/1.06, `.shd.solo` 1.12/.88, `.shd.solo.rev` .88/1.12, `.who` .86/1.14, `.cfilm` 1.06/.94). Adding a dead-even split to a section breaks the system.
+
+There are exactly **three deliberate exceptions**, all on the case studies, and all genuine like-for-like comparisons where displacement would misrepresent the content: `.pfig.pair .duo` (two devices side by side), `.decide .cols` (kept vs cut) and `.mech .trade` (trade-off vs trade-off). Those three were displaced once and reverted, because a balanced pair should read balanced. Don't "fix" them, and don't cite them as licence for a fourth.
 
 **Fonts:** Raveo variable (`opsz` 14–32, `wght` 100–900) for display; Helvetica Neue for body; system mono for labels. `font-display:block` on every page — deliberate, because Raveo is preloaded and a swap flashed the browser's default sans (reported repeatedly as "I see Inter"; it was never Inter in the CSS).
 
@@ -45,7 +47,7 @@ Push to `main` → Vercel deploys automatically. There is no staging.
 - **`.reveal` sections need `.in` to become visible.** Anything you add inside one is invisible until its observer fires. `#about` has its own observer at threshold `.55` and is deliberately excluded from the 2600ms boot fallback, because it holds a set-piece that must not burn off-screen.
 - **`#coord`, `#cl`, `#spot`, `#hud`, `.colgrid` are hidden, NOT deleted** — `display:none!important`. JS still dereferences them; deleting the markup throws.
 - **The reticle cursor is `#ret` on `index`/`manifesto` but `#iret` on the 11 sub-pages.** Grepping for `id="ret"` falsely reports it missing.
-- **The Contact seal's geometry exists twice** — once in the page markup/CSS, once as an explicit string in `fileFor()` in `index.html`. They must stay identical or the downloaded SVG is a different object from the one on screen. A global find-and-replace on coordinates has already broken the export silently. Verify by fetching the blob URL and comparing `path.d` and the serial.
+- **The Contact seal's geometry lives in ONE place now** — the page markup and CSS. It briefly existed twice (a `fileFor()` SVG-export string fed a download), and a global find-and-replace on coordinates silently broke the copy that wasn't on screen. The download was cut; if anything ever re-exports the seal, that duplication hazard comes back — generate from the same numbers, don't retype them.
 - **Journal notes are numbered newest = Note 01.** Adding or removing a note renumbers every note below it, in `journal.html` (both `&#12300;0N&#12301;` and `Note 0N`) *and* in each article's own `<span class="ix">0N / JOURNAL</span>`. Articles also form a closed `.next` cycle — the last note wraps to the newest. Verify the cycle after editing; it has been left broken before.
 - **Grouped selectors:** the shared mono-font rule lists several unrelated classes. Deleting a rule wholesale to remove one selector has stripped the mono face off half the interface. Filter the selector list instead.
 - Every animated thing needs a `prefers-reduced-motion` twin.
