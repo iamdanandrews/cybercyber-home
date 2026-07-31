@@ -60,7 +60,6 @@ a{color:inherit;text-decoration:none;}
 
 .loader{position:fixed;inset:0;z-index:1000;background:var(--ground);display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(20px,5vw,64px);transition:opacity .9s var(--e1);}
 .loader.done{opacity:0;pointer-events:none;}
-.loader .lglow{position:absolute;inset:0;z-index:0;background:radial-gradient(55% 40% at 24% 94%,color-mix(in srgb,var(--accent) 15%,transparent) 0%,transparent 60%);opacity:.1;transition:opacity .28s linear;pointer-events:none;}
 .loader .lpct,.loader .lrow{position:relative;z-index:2;transition:transform .9s var(--e1),opacity .55s var(--e1);}
 .loader.done .lpct,.loader.done .lrow{transform:translateY(-14px);opacity:0;}
 .loader .lgrid{position:absolute;inset:-40px;z-index:0;opacity:.5;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(120% 90% at 30% 50%,#000 30%,transparent 78%);-webkit-mask-image:radial-gradient(120% 90% at 30% 50%,#000 30%,transparent 78%);}
@@ -122,14 +121,6 @@ header.solid{background:rgba(11,11,13,.72);backdrop-filter:blur(10px);border-col
 .foldbreak:hover,.foldbreak:focus-visible{background:var(--ground);}
 .foldbreak:hover .fa,.foldbreak:hover .fb,.foldbreak:focus-visible .fa,.foldbreak:focus-visible .fb{color:var(--paper);opacity:1;}
 .foldbreak:hover .fa .tk,.foldbreak:focus-visible .fa .tk{background:var(--accent);}
-.hero .glow{position:absolute;inset:0;z-index:0;background:radial-gradient(55% 40% at 24% 94%,color-mix(in srgb,var(--accent) 8%,transparent) 0%,transparent 60%);pointer-events:none;opacity:1;transition:opacity 1.4s var(--e1);}
-/* The loader renders its progress AS LIGHT -- lglow swells 0.1 -> 0.6 as it loads -- and this
-   glow is where that lands, so the loading screen dissolves into a hero that already has its
-   light instead of cutting to a flat black one. Once the hero has settled the glow has no job
-   left, and a warm haze is the one atmospheric thing on a page built from hairlines and marks,
-   so it goes. Dan spotted it at rest and asked if it was deliberate -- it was, but only for the
-   two seconds it is doing something. */
-.hero.settled .glow{opacity:0;}
 .hero .hanchor{position:absolute;bottom:14%;left:var(--fold);z-index:2;pointer-events:none;}
 
 
@@ -661,7 +652,7 @@ section.reveal>.wrap{position:relative;}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
-  <div class="lglow" id="lglow"></div>
+  
   <div class="lgrid"></div>
   <div class="lpct"><span id="lpct">0</span></div>
   <div class="lrow"><span class="lstat" id="lstat">INITIALISING</span><span>Est. London</span></div>
@@ -691,7 +682,7 @@ section.reveal>.wrap{position:relative;}
 
 <main id="top">
   <section class="hero" style="border-top:0;padding-top:0" id="hero">
-    <div class="fold-bg" aria-hidden="true"><div class="grid" id="hgrid"></div></div><div class="glow" aria-hidden="true"></div>
+    <div class="fold-bg" aria-hidden="true"><div class="grid" id="hgrid"></div></div>
     <div class="vf" aria-hidden="true"><i></i><i></i><i></i><i></i><span class="tl a">51.5074&deg; N</span><span class="tl b">00.1278&deg; W</span></div>
     <div class="hanchor" aria-hidden="true"><svg class="hmark" viewBox="0 0 14 14" preserveAspectRatio="xMidYMid meet"><path id="hmpath" d=""/></svg><span class="hcap">Brand &middot; interface &middot; code</span><span class="hlab" aria-hidden="true">We ship all three</span></div>
     <div class="wrap inner">
@@ -823,17 +814,16 @@ section.reveal>.wrap{position:relative;}
   var spans=[].slice.call(word.children),REST=650,MAX=880,RAD=250;
   function setAll(w){for(var i=0;i<spans.length;i++)spans[i].style.fontVariationSettings="'wght' "+w.toFixed(0)+",'opsz' 32";}
 
-  var loader=document.getElementById("loader"),lpct=document.getElementById("lpct"),lstat=document.getElementById("lstat"),herobar=document.getElementById("herobar"),hero=document.getElementById("hero"),lglow=document.getElementById("lglow");
+  var loader=document.getElementById("loader"),lpct=document.getElementById("lpct"),lstat=document.getElementById("lstat"),herobar=document.getElementById("herobar"),hero=document.getElementById("hero");
   var booted=false;
   function boot(){
-    if(reduce){setAll(REST);hero.classList.add("settled");if(loader)loader.style.display="none";herobar.classList.add("in");booted=true;start();return;}
+    if(reduce){setAll(REST);if(loader)loader.style.display="none";herobar.classList.add("in");booted=true;start();return;}
     var t0=performance.now(),dur=1150;
     // PHASE 1 — initialise: the loader counts while the wordmark holds thin
     (function loop(t){var e=t-t0,p=Math.min(e/dur,1),ease=1-Math.pow(1-p,3);
       lpct.textContent=Math.round(p*100);
       if(p>.35)lstat.textContent="CALIBRATING"; if(p>.82)lstat.textContent="READY";
       setAll(120+ease*80);
-      if(lglow)lglow.style.opacity=(0.1+p*0.5).toFixed(3);   // atmosphere warms as it boots
       if(p<1)requestAnimationFrame(loop);
       else{
         loader.classList.add("done");    // PHASE 2 — loader dissolves, the hero underneath is already laid out
@@ -867,7 +857,7 @@ section.reveal>.wrap{position:relative;}
               setTimeout(function(){hero.classList.remove("ignite");},780);
             }
             if(el<cd) requestAnimationFrame(cal);
-            else { setAll(REST); booted=true; hero.classList.add("settled"); enableReactive(); }
+            else { setAll(REST); booted=true; enableReactive(); }
           })(c0);
           herobar.classList.add("in");
           /* the held mark in the void draws itself on, last */
