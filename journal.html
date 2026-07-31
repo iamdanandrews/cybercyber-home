@@ -87,6 +87,8 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .media .ph,.csmedia .ph{background-image:none;}
 .shot.arted{position:relative;}
 .shot.arted::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,11,13,.6),transparent 45%);pointer-events:none;}
+/* Cut for the same reason as on the homepage: this printed raw cursor clientX/clientY as if it were instrumentation. Meaningless data, permanently in motion. Hidden rather than deleted so its writer cannot throw. */
+.coord{display:none!important;}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>

@@ -151,6 +151,8 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .cshcap .dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 4px rgba(34,211,238,.16);}
 /* alternated figure rhythm */
 @media(min-width:681px){.pfig.flip{grid-template-columns:1fr auto;}.pfig.flip .device{order:2;justify-self:end;}.pfig.flip .pcap{order:1;text-align:right;}}
+/* Cut for the same reason as on the homepage: this printed raw cursor clientX/clientY as if it were instrumentation. Meaningless data, permanently in motion. Hidden rather than deleted so its writer cannot throw. */
+.coord{display:none!important;}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
