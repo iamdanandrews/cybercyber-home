@@ -133,6 +133,24 @@ footer{border-top:1px solid var(--line);padding:28px 0;}
 /* Verb label on the reticle. Per the research the ring alone is ornament; the verb is what makes it an affordance -- it states what the click will do. Ported from the homepage so the cursor behaves identically across the site. */
 .reticle .verb{position:absolute;left:50%;top:calc(100% + 6px);transform:translateX(-50%);font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);white-space:nowrap;opacity:0;transition:opacity .2s;}
 .reticle.lock .verb{opacity:1;}
+
+/* THE STATUS BLOCK, ON EVERY PAGE. It existed only on the homepage, so the site's most
+   distinctive persistent chrome -- availability plus a live clock -- vanished the moment
+   anyone opened a case study, and the instrument identity went with it. It now carries the
+   contact route too, which is the answer to "should contact be a floating button": no, it
+   belongs in the register the site already speaks. Address hidden below 900px, where the
+   burger menu carries Contact instead. */
+.status{display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.1em;white-space:nowrap;margin-left:auto;}
+.status .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);flex:none;animation:statpulse 2.4s ease-in-out infinite;}
+.status .statl{color:var(--grey);transition:color .2s;}
+.status .statl:hover{color:var(--paper);}
+.status .statc{color:var(--cyan);border-bottom:1px solid transparent;padding-bottom:1px;transition:border-bottom-color .2s;}
+.status .statc:hover{border-bottom-color:var(--cyan);}
+.status .clock{color:var(--grey);font-variant-numeric:tabular-nums;cursor:pointer;transition:opacity .22s,color .2s;}
+.status .clock:hover{color:var(--paper);}
+@keyframes statpulse{0%,100%{opacity:1;}50%{opacity:.45;}}
+@media(max-width:900px){.status .statc{display:none;}}
+@media(prefers-reduced-motion:reduce){.status .dot{animation:none;}}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -150,7 +168,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;}
   <a class="brand" href="./">cyber:cyber<sup>&trade;</sup></a>
   <nav class="menu" aria-label="Primary">
     <a href="./">Home</a><a href="./#work">Work</a><a href="./manifesto.html" aria-current="page">Manifesto</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a>
-  </nav>
+  </nav><div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="./#offerings" title="Services &amp; pricing">OPEN &middot; Q4</a><a class="statc" href="mailto:hello@cybercyber.ai">hello@cybercyber.ai</a><span class="clock" id="clk" role="button" tabindex="0" aria-label="Local time — click to change timezone" title="Click to change timezone">LDN&nbsp;--:--</span></div>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></header>
 <div class="mobile" id="mobile"><a href="./">Home</a><a href="./#work">Work</a><a href="./manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a></div>
@@ -220,5 +238,25 @@ footer{border-top:1px solid var(--line);padding:28px 0;}
 })();
 </script>
 <script>(function(){var rp=document.getElementById("rprog");if(!rp)return;addEventListener("scroll",function(){var m=document.documentElement.scrollHeight-innerHeight;rp.style.transform="scaleX("+(m>0?Math.min(1,scrollY/m):0).toFixed(4)+")";},{passive:true});})();</script>
+<script>
+/* Clock, ported from the homepage. Pinned to London -- a London studio's header should not
+   spend most of its time asserting Singapore local time. Click or Enter cycles on demand. */
+(function(){
+  var reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+  var CITIES=[["LDN","Europe/London"],["NYC","America/New_York"],["SFO","America/Los_Angeles"],
+              ["BER","Europe/Berlin"],["DXB","Asia/Dubai"],["SIN","Asia/Singapore"],
+              ["TYO","Asia/Tokyo"],["SYD","Australia/Sydney"]],ci=0,el;
+  function render(){try{var c=CITIES[ci],t=new Date().toLocaleTimeString("en-GB",
+    {timeZone:c[1],hour:"2-digit",minute:"2-digit"});el=el||document.getElementById("clk");
+    if(el)el.textContent=c[0]+" "+t;}catch(e){}}
+  function rotate(){el=el||document.getElementById("clk");if(!el)return;el.style.opacity="0";
+    setTimeout(function(){ci=(ci+1)%CITIES.length;render();el.style.opacity="";},220);}
+  render(); if(!reduce) setInterval(render,1000);
+  el=document.getElementById("clk");
+  if(el){var m=function(e){if(e)e.preventDefault();rotate();};
+    el.addEventListener("click",m);
+    el.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" ")m(e);});}
+})();
+</script>
 </body>
 </html>

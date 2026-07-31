@@ -105,6 +105,24 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 /* Verb label on the reticle. Per the research the ring alone is ornament; the verb is what makes it an affordance -- it states what the click will do. Ported from the homepage so the cursor behaves identically across the site. */
 .reticle .verb{position:absolute;left:50%;top:calc(100% + 6px);transform:translateX(-50%);font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);white-space:nowrap;opacity:0;transition:opacity .2s;}
 .reticle.lock .verb{opacity:1;}
+
+/* THE STATUS BLOCK, ON EVERY PAGE. It existed only on the homepage, so the site's most
+   distinctive persistent chrome -- availability plus a live clock -- vanished the moment
+   anyone opened a case study, and the instrument identity went with it. It now carries the
+   contact route too, which is the answer to "should contact be a floating button": no, it
+   belongs in the register the site already speaks. Address hidden below 900px, where the
+   burger menu carries Contact instead. */
+.status{display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.1em;white-space:nowrap;margin-left:auto;}
+.status .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);flex:none;animation:statpulse 2.4s ease-in-out infinite;}
+.status .statl{color:var(--grey);transition:color .2s;}
+.status .statl:hover{color:var(--paper);}
+.status .statc{color:var(--cyan);border-bottom:1px solid transparent;padding-bottom:1px;transition:border-bottom-color .2s;}
+.status .statc:hover{border-bottom-color:var(--cyan);}
+.status .clock{color:var(--grey);font-variant-numeric:tabular-nums;cursor:pointer;transition:opacity .22s,color .2s;}
+.status .clock:hover{color:var(--paper);}
+@keyframes statpulse{0%,100%{opacity:1;}50%{opacity:.45;}}
+@media(max-width:900px){.status .statc{display:none;}}
+@media(prefers-reduced-motion:reduce){.status .dot{animation:none;}}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -116,7 +134,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 <a class="skip" href="#c">Skip to content</a>
 <header id="hdr"><div class="wrap nav">
   <a class="brand" href="./">cyber:cyber<sup>&trade;</sup></a>
-  <nav class="menu" aria-label="Primary"><a href="./">Home</a><a href="./#work">Work</a><a href="./manifesto.html">Manifesto</a><a href="journal.html" aria-current="page">Journal</a><a href="./#contact">Contact</a></nav>
+  <nav class="menu" aria-label="Primary"><a href="./">Home</a><a href="./#work">Work</a><a href="./manifesto.html">Manifesto</a><a href="journal.html" aria-current="page">Journal</a><a href="./#contact">Contact</a></nav><div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="./#offerings" title="Services &amp; pricing">OPEN &middot; Q4</a><a class="statc" href="mailto:hello@cybercyber.ai">hello@cybercyber.ai</a><span class="clock" id="clk" role="button" tabindex="0" aria-label="Local time — click to change timezone" title="Click to change timezone">LDN&nbsp;--:--</span></div>
 </div></header>
 <div class="reticle" id="iret" aria-hidden="true"><span class="ring"></span><b class="h"></b><b class="v"></b><span class="verb" id="iverb">View</span></div>
 <span class="coord" id="icoord" aria-hidden="true">0000 &middot; 0000</span>
@@ -171,4 +189,24 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 </main><footer><div class="wrap foot"><span>&copy; 2026 CYBERCYBER LTD &#183; London</span><a href="./">Home &uarr;</a></div></footer>
 <script>(function(){var hdr=document.getElementById("hdr");addEventListener("scroll",function(){hdr.classList.toggle("solid",scrollY>40);},{passive:true});var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.14});document.querySelectorAll(".reveal").forEach(function(el){io.observe(el);});})();</script>
 <script>(function(){var reduce=matchMedia("(prefers-reduced-motion:reduce)").matches,coarse=matchMedia("(hover:none),(pointer:coarse)").matches;if(coarse||reduce)return;function ivLabel(el){if(el.closest(".next")||el.closest(".csnext"))return"Read \u2197";if(el.closest(".jrow")||el.closest(".jall"))return"Read \u2197";if(el.closest(".proj")||el.closest(".cslink"))return"Open case \u2197";if(el.tagName==="SUMMARY"||el.closest(".faq"))return"Expand";if(el.getAttribute&&(el.getAttribute("href")||"").indexOf("mailto:")===0)return"Email \u2197";if(el.closest("header"))return"Go";if(el.closest("footer"))return"Go";return"Go \u2197";}var ivb=document.getElementById("iverb");var ret=document.getElementById("iret"),coord=document.getElementById("icoord");if(!ret)return;document.body.classList.add("cursor-on");var rx=innerWidth/2,ry=innerHeight/2,tx=rx,ty=ry;addEventListener("mousemove",function(e){tx=e.clientX;ty=e.clientY;ret.style.opacity="1";coord.style.opacity="1";coord.style.left=(e.clientX+16)+"px";coord.style.top=(e.clientY+16)+"px";coord.textContent=("000"+e.clientX).slice(-4)+" \u00B7 "+("000"+e.clientY).slice(-4);});addEventListener("mouseleave",function(){ret.style.opacity="0";coord.style.opacity="0";});document.querySelectorAll("a,button,summary").forEach(function(el){el.addEventListener("mouseenter",function(){if(ivb)ivb.textContent=ivLabel(el);ret.classList.add("lock");ret.style.width="40px";ret.style.height="40px";});el.addEventListener("mouseleave",function(){ret.classList.remove("lock");ret.style.width="24px";ret.style.height="24px";});});(function tick(){rx+=(tx-rx)*.3;ry+=(ty-ry)*.3;var w=parseFloat(ret.style.width)||24,h=parseFloat(ret.style.height)||24;ret.style.transform="translate("+(rx-w/2)+"px,"+(ry-h/2)+"px)";requestAnimationFrame(tick);})();})();</script>
+<script>
+/* Clock, ported from the homepage. Pinned to London -- a London studio's header should not
+   spend most of its time asserting Singapore local time. Click or Enter cycles on demand. */
+(function(){
+  var reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+  var CITIES=[["LDN","Europe/London"],["NYC","America/New_York"],["SFO","America/Los_Angeles"],
+              ["BER","Europe/Berlin"],["DXB","Asia/Dubai"],["SIN","Asia/Singapore"],
+              ["TYO","Asia/Tokyo"],["SYD","Australia/Sydney"]],ci=0,el;
+  function render(){try{var c=CITIES[ci],t=new Date().toLocaleTimeString("en-GB",
+    {timeZone:c[1],hour:"2-digit",minute:"2-digit"});el=el||document.getElementById("clk");
+    if(el)el.textContent=c[0]+" "+t;}catch(e){}}
+  function rotate(){el=el||document.getElementById("clk");if(!el)return;el.style.opacity="0";
+    setTimeout(function(){ci=(ci+1)%CITIES.length;render();el.style.opacity="";},220);}
+  render(); if(!reduce) setInterval(render,1000);
+  el=document.getElementById("clk");
+  if(el){var m=function(e){if(e)e.preventDefault();rotate();};
+    el.addEventListener("click",m);
+    el.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" ")m(e);});}
+})();
+</script>
 </body></html>
