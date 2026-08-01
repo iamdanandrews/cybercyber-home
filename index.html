@@ -96,7 +96,17 @@ header.solid{background:rgba(11,11,13,.72);-webkit-backdrop-filter:blur(10px);ba
 .clock{display:inline-block;color:var(--grey);font-variant-numeric:tabular-nums;cursor:pointer;border-bottom:1px solid transparent;transition:opacity .22s,color .2s,border-color .2s;}
 .clock:hover,.clock:focus-visible{color:var(--paper);border-color:var(--cyan);}
 .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;padding:8px;}
-.burger span{width:22px;height:1.5px;background:var(--paper);}
+/* The menu is the colon. Two stacked dots: the brand glyph, and the kebab menu
+   convention — identity and affordance pointing the same way. Paper, not vermilion:
+   a second vermilion colon beside the wordmark's would stutter. Open, it becomes
+   the ×. */
+.burger{gap:7px;align-items:center;}
+.burger span{width:6.5px;height:6.5px;border-radius:50%;background:var(--paper);
+  transition:transform .3s var(--e1),border-radius .3s var(--e1),width .3s var(--e1),height .3s var(--e1);}
+.burger[aria-expanded="true"] span{width:20px;height:1.5px;border-radius:0;}
+.burger[aria-expanded="true"] span:first-child{transform:translateY(4.25px) rotate(45deg);}
+.burger[aria-expanded="true"] span:last-child{transform:translateY(-4.25px) rotate(-45deg);}
+@media(prefers-reduced-motion:reduce){.burger span{transition:none;}}
 
 /* --- HERO: single grid, asymmetric grotesque + a charged void anchor --- */
 .hero{position:relative;min-height:calc(100svh - 48px);display:flex;flex-direction:column;overflow:hidden;background:var(--ground);}
@@ -745,7 +755,7 @@ section.reveal>.wrap{position:relative;}
     <a href="#top">Home</a><a href="#work">Work</a><a href="manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="#contact">Contact</a>
   </nav>
   <div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="#offerings" title="Services & pricing">OPEN &middot; Q4</a> <span class="clock" id="clk" role="button" tabindex="0" title="Click to change timezone">LDN&nbsp;--:--</span>
-    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
   </div>
 </div></header>
 

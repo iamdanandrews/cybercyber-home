@@ -55,7 +55,17 @@ header.solid{background:rgba(10,10,11,.7);-webkit-backdrop-filter:blur(10px);bac
 .brand{font-size:var(--t-cap);letter-spacing:.04em;view-transition-name:brand;}.brand sup{color:var(--paper60);}
 .menu{display:flex;gap:24px;font-size:var(--t-cap);letter-spacing:.14em;text-transform:uppercase;}
 .menu a{color:var(--paper60);transition:color .2s;}.menu a:hover{color:var(--paper);}.menu a[aria-current]{color:var(--accent);}
-.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;padding:8px;}.burger span{width:22px;height:1.5px;background:var(--paper);}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;padding:8px;}/* The menu is the colon. Two stacked dots: the brand glyph, and the kebab menu
+   convention — identity and affordance pointing the same way. Paper, not vermilion:
+   a second vermilion colon beside the wordmark's would stutter. Open, it becomes
+   the ×. */
+.burger{gap:7px;align-items:center;}
+.burger span{width:6.5px;height:6.5px;border-radius:50%;background:var(--paper);
+  transition:transform .3s var(--e1),border-radius .3s var(--e1),width .3s var(--e1),height .3s var(--e1);}
+.burger[aria-expanded="true"] span{width:20px;height:1.5px;border-radius:0;}
+.burger[aria-expanded="true"] span:first-child{transform:translateY(4.25px) rotate(45deg);}
+.burger[aria-expanded="true"] span:last-child{transform:translateY(-4.25px) rotate(-45deg);}
+@media(prefers-reduced-motion:reduce){.burger span{transition:none;}}
 
 /* HERO — ma: the statement sits low-left, everything else breathes around it */
 .hero{position:relative;min-height:94svh;display:grid;grid-template-rows:1fr auto;padding-top:110px;}
@@ -173,7 +183,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;}
   <nav class="menu" aria-label="Primary">
     <a href="./">Home</a><a href="./#work">Work</a><a href="./manifesto.html" aria-current="page">Manifesto</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a>
   </nav><div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="./#offerings" title="Services &amp; pricing">OPEN &middot; Q4</a><span class="clock" id="clk" role="button" tabindex="0" title="Click to change timezone">LDN&nbsp;--:--</span></div>
-  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
 </div></header>
 <div class="mobile" id="mobile"><a href="./">Home</a><a href="./#work">Work</a><a class="msub" href="work-granite.html">Granite</a><a class="msub" href="work-frame.html">Frame</a><a href="./manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a></div>
 

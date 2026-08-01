@@ -284,7 +284,17 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
    was the only way out of a case study. A collapsed phone layout is the documented cap at
    Honorable Mention, so this is not cosmetic. */
 .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;padding:8px;cursor:pointer;}
-.burger span{width:22px;height:1.5px;background:var(--paper);}
+/* The menu is the colon. Two stacked dots: the brand glyph, and the kebab menu
+   convention — identity and affordance pointing the same way. Paper, not vermilion:
+   a second vermilion colon beside the wordmark's would stutter. Open, it becomes
+   the ×. */
+.burger{gap:7px;align-items:center;}
+.burger span{width:6.5px;height:6.5px;border-radius:50%;background:var(--paper);
+  transition:transform .3s var(--e1),border-radius .3s var(--e1),width .3s var(--e1),height .3s var(--e1);}
+.burger[aria-expanded="true"] span{width:20px;height:1.5px;border-radius:0;}
+.burger[aria-expanded="true"] span:first-child{transform:translateY(4.25px) rotate(45deg);}
+.burger[aria-expanded="true"] span:last-child{transform:translateY(-4.25px) rotate(-45deg);}
+@media(prefers-reduced-motion:reduce){.burger span{transition:none;}}
 .mobile{position:fixed;inset:0;z-index:190;background:rgba(11,11,13,.97);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);display:flex;flex-direction:column;justify-content:center;padding:0 clamp(20px,5vw,64px);gap:8px;transform:translateY(-100%);transition:transform .45s var(--e1);}
 .mobile.open{transform:none;}
 .mobile a{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:var(--t-sub);text-transform:uppercase;padding:8px 0;border-bottom:1px solid var(--line);}
@@ -323,7 +333,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 <a class="skip" href="#cs">Skip to content</a>
 <header id="hdr"><div class="wrap nav">
   <a class="brand" href="./">cyber:cyber<sup>&trade;</sup></a>
-  <nav class="menu" aria-label="Primary"><a href="./">Home</a><a href="./#work">Work</a><a href="./manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a></nav><div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="./#offerings" title="Services &amp; pricing">OPEN &middot; Q4</a><span class="clock" id="clk" role="button" tabindex="0" title="Click to change timezone">LDN&nbsp;--:--</span><button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+  <nav class="menu" aria-label="Primary"><a href="./">Home</a><a href="./#work">Work</a><a href="./manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a></nav><div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="./#offerings" title="Services &amp; pricing">OPEN &middot; Q4</a><span class="clock" id="clk" role="button" tabindex="0" title="Click to change timezone">LDN&nbsp;--:--</span><button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button></div>
 </div></header>
 <div class="mobile" id="mobile"><a href="./">Home</a><a href="./#work">Work</a><a class="msub" href="work-granite.html">Granite</a><a class="msub" href="work-frame.html">Frame</a><a href="./manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a></div>
 <div class="reticle" id="iret" aria-hidden="true"><span class="ring"></span><b class="h"></b><b class="v"></b><span class="verb" id="iverb">View</span></div>
