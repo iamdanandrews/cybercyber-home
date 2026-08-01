@@ -290,6 +290,15 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .mobile a{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:var(--t-sub);text-transform:uppercase;padding:8px 0;border-bottom:1px solid var(--line);}
 @media(max-width:760px){.burger{display:flex;}}
 @media(prefers-reduced-motion:reduce){.mobile{transition:none;}}
+
+
+/* THE ISSUE SYSTEM. Every page this studio ships is issued: the engine draws its
+   crest from the page's own title and stamps the reference beside the copyright.
+   Same seed, same crest, forever. */
+.fseal{display:inline-flex;align-items:center;gap:9px;}
+.fmark{width:20px;height:20px;display:block;opacity:.75;}
+.fmark path{fill:var(--dim);}
+.fref{font-variant-numeric:tabular-nums;letter-spacing:.14em;}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -354,7 +363,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
   <div class="void" aria-hidden="true"><span class="vline"></span><span class="vnode"></span></div>
   <section class="csnext"><div class="wrap"><a href="work-granite.html"><div class="l">Next case</div><div class="n">Granite<em>.</em></div></a></div></section>
 </main>
-<footer><div class="wrap foot"><span>&copy; 2026 CYBERCYBER LTD &middot; London</span><a href="./">Home &uarr;</a></div></footer>
+<footer><div class="wrap foot"><span>&copy; 2026 CYBERCYBER LTD &middot; London</span><span class="fseal" aria-hidden="true"><svg class="fmark" viewBox="0 0 100 100"><path d=""/></svg><span class="fref">------</span></span><a href="./">Home &uarr;</a></div></footer>
 <script>
 (function(){
   var hdr=document.getElementById("hdr");addEventListener("scroll",function(){hdr.classList.toggle("solid",scrollY>40);},{passive:true});
@@ -404,6 +413,21 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
       document.body.style.overflow="";
     });
   });
+})();
+</script>
+<script src="mark.js"></script>
+<script>
+(function(){
+  if(!window.ccMark) return;
+  document.querySelectorAll(".jmark[data-seed]").forEach(function(el){
+    var m=window.ccMark(el.getAttribute("data-seed"),6);
+    el.setAttribute("viewBox",m.vb);
+    el.querySelector("path").setAttribute("d",m.d);
+  });
+  var f=document.querySelector(".fmark");
+  if(f){ var m2=window.ccMark(document.title,6);
+    f.setAttribute("viewBox",m2.vb); f.querySelector("path").setAttribute("d",m2.d);
+    var r=document.querySelector(".fref"); if(r) r.textContent=m2.serial; }
 })();
 </script>
 </body>

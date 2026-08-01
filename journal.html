@@ -133,6 +133,21 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .mobile a{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:var(--t-sub);text-transform:uppercase;padding:8px 0;border-bottom:1px solid var(--line);}
 @media(max-width:760px){.burger{display:flex;}}
 @media(prefers-reduced-motion:reduce){.mobile{transition:none;}}
+
+
+/* Generative note art: each note's frame carries its own engine-issued crest,
+   seeded by its title — eight notes, eight crests, one system, zero stock art. */
+.frame .jmark{position:absolute;inset:0;margin:auto;width:52%;max-width:300px;height:auto;opacity:.42;}
+.frame .jmark path{fill:var(--dim);}
+
+
+/* THE ISSUE SYSTEM. Every page this studio ships is issued: the engine draws its
+   crest from the page's own title and stamps the reference beside the copyright.
+   Same seed, same crest, forever. */
+.fseal{display:inline-flex;align-items:center;gap:9px;}
+.fmark{width:20px;height:20px;display:block;opacity:.75;}
+.fmark path{fill:var(--dim);}
+.fref{font-variant-numeric:tabular-nums;letter-spacing:.14em;}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -161,43 +176,43 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
   </div></section>
   <section><div class="wrap"><div class="jlist">
       <a class="jrow reveal" href="journal-hardest-client.html">
-        <div class="frame"><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;01&#12301;</span><span class="cap">Note 01</span></div>
+        <div class="frame"><svg class="jmark" data-seed="The hardest client was us" aria-hidden="true"><path d=""/></svg><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;01&#12301;</span><span class="cap">Note 01</span></div>
         <div><div class="jt" style="view-transition-name:jn-hardest">The hardest client was us</div><div class="jx">A studio's own website is the one piece of work a client can inspect all the way down. So we treated ours as the hardest brief of the year &mdash; hand-built, deliberately empty, real screens over mockups.</div></div>
         <div class="date">Jul 29, 2026</div>
       </a>
       
       <a class="jrow reveal" href="journal-undocumented.html">
-        <div class="frame arted" style="background-image:url('media/journal-undocumented.svg')"><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;02&#12301;</span><span class="cap">Note 02</span></div>
+        <div class="frame" style=""><svg class="jmark" data-seed="Nobody wrote it down" aria-hidden="true"><path d=""/></svg><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;02&#12301;</span><span class="cap">Note 02</span></div>
         <div><div class="jt" style="view-transition-name:jn-undocumented">Nobody wrote it down</div><div class="jx">On confabulation, contextual inquiry, and why almost no software will make a decision — and what it takes to extract judgment an expert can't articulate.</div></div>
         <div class="date">Jul 10, 2026</div>
       </a>
       <a class="jrow reveal" href="journal-velocity.html">
-        <div class="frame arted" style="background-image:url('media/journal-velocity.svg')"><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;03&#12301;</span><span class="cap">Note 03</span></div>
+        <div class="frame" style=""><svg class="jmark" data-seed="The velocity gods" aria-hidden="true"><path d=""/></svg><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;03&#12301;</span><span class="cap">Note 03</span></div>
         <div><div class="jt" style="view-transition-name:jn-velocity">The velocity gods</div><div class="jx">A working theory of how speed stopped being a means and became a faith — what the cult of shipping fast actually produces, and what it costs.</div></div>
         <div class="date">Jul 8, 2026</div>
       </a>
       <a class="jrow reveal" href="journal-building.html">
-        <div class="frame arted" style="background-image:url('media/journal-building.svg')"><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;04&#12301;</span><span class="cap">Note 04</span></div>
+        <div class="frame" style=""><svg class="jmark" data-seed="Building cyber:cyber" aria-hidden="true"><path d=""/></svg><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;04&#12301;</span><span class="cap">Note 04</span></div>
         <div><div class="jt" style="view-transition-name:jn-building">Building cyber:cyber</div><div class="jx">An honest working note on building a one-person AI product lab: how it got built, what it cost, and what we're learning before the first client engagement.</div></div>
         <div class="date">May 10, 2026</div>
       </a>
       <a class="jrow reveal" href="journal-shipping.html">
-        <div class="frame arted" style="background-image:url('media/journal-shipping.svg')"><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;05&#12301;</span><span class="cap">Note 05</span></div>
+        <div class="frame" style=""><svg class="jmark" data-seed="Shipping got commoditised" aria-hidden="true"><path d=""/></svg><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;05&#12301;</span><span class="cap">Note 05</span></div>
         <div><div class="jt" style="view-transition-name:jn-shipping">Shipping got commoditised</div><div class="jx">Anyone with a laptop can ship a product in a weekend now. A working theory of what's actually scarce once production is free — and why so much of it is B+.</div></div>
         <div class="date">May 6, 2026</div>
       </a>
       <a class="jrow reveal" href="journal-six-things.html">
-        <div class="frame arted" style="background-image:url('media/journal-six-things.svg')"><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;06&#12301;</span><span class="cap">Note 06</span></div>
+        <div class="frame" style=""><svg class="jmark" data-seed="Six Things Native AI Features Get Right (That Bolted-On Ones Don't)" aria-hidden="true"><path d=""/></svg><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;06&#12301;</span><span class="cap">Note 06</span></div>
         <div><div class="jt" style="view-transition-name:jn-six-things">Six Things Native AI Features Get Right (That Bolted-On Ones Don't)</div><div class="jx">A field guide to the difference between AI as a feature and AI as decoration — the six decisions that separate native AI from a chat bubble in the corner.</div></div>
         <div class="date">Mar 4, 2026</div>
       </a>
       <a class="jrow reveal" href="journal-why.html">
-        <div class="frame arted" style="background-image:url('media/journal-why.svg')"><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;07&#12301;</span><span class="cap">Note 07</span></div>
+        <div class="frame" style=""><svg class="jmark" data-seed="Why cyber:cyber exists" aria-hidden="true"><path d=""/></svg><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;07&#12301;</span><span class="cap">Note 07</span></div>
         <div><div class="jt" style="view-transition-name:jn-why">Why cyber:cyber exists</div><div class="jx">The founding note. Why a lab rather than an agency or a studio, what we're betting on, and why the internet is drowning in B+ AI output.</div></div>
         <div class="date">Mar 1, 2026</div>
       </a>
       </div></div></section>
-</main><footer><div class="wrap foot"><span>&copy; 2026 CYBERCYBER LTD &#183; London</span><a href="./">Home &uarr;</a></div></footer>
+</main><footer><div class="wrap foot"><span>&copy; 2026 CYBERCYBER LTD &#183; London</span><span class="fseal" aria-hidden="true"><svg class="fmark" viewBox="0 0 100 100"><path d=""/></svg><span class="fref">------</span></span><a href="./">Home &uarr;</a></div></footer>
 <script>(function(){var hdr=document.getElementById("hdr");addEventListener("scroll",function(){hdr.classList.toggle("solid",scrollY>40);},{passive:true});var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.14});document.querySelectorAll(".reveal").forEach(function(el){io.observe(el);});})();</script>
 <script>(function(){var reduce=matchMedia("(prefers-reduced-motion:reduce)").matches,coarse=matchMedia("(hover:none),(pointer:coarse)").matches;if(coarse||reduce)return;function ivLabel(el){if(el.closest(".next")||el.closest(".csnext"))return"Read \u2197";if(el.closest(".jrow")||el.closest(".jall"))return"Read \u2197";if(el.closest(".proj")||el.closest(".cslink"))return"Open case \u2197";if(el.tagName==="SUMMARY"||el.closest(".faq"))return"Expand";if(el.getAttribute&&(el.getAttribute("href")||"").indexOf("mailto:")===0)return"Email \u2197";if(el.closest("header"))return"Go";if(el.closest("footer"))return"Go";return"Go \u2197";}var ivb=document.getElementById("iverb");var ret=document.getElementById("iret"),coord=document.getElementById("icoord");if(!ret)return;document.body.classList.add("cursor-on");var rx=innerWidth/2,ry=innerHeight/2,tx=rx,ty=ry;addEventListener("mousemove",function(e){tx=e.clientX;ty=e.clientY;ret.style.opacity="1";coord.style.opacity="1";coord.style.left=(e.clientX+16)+"px";coord.style.top=(e.clientY+16)+"px";coord.textContent=("000"+e.clientX).slice(-4)+" \u00B7 "+("000"+e.clientY).slice(-4);});addEventListener("mouseleave",function(){ret.style.opacity="0";coord.style.opacity="0";});document.querySelectorAll("a,button,summary").forEach(function(el){el.addEventListener("mouseenter",function(){if(ivb)ivb.textContent=ivLabel(el);ret.classList.add("lock");ret.style.width="40px";ret.style.height="40px";});el.addEventListener("mouseleave",function(){ret.classList.remove("lock");ret.style.width="24px";ret.style.height="24px";});});(function tick(){rx+=(tx-rx)*.3;ry+=(ty-ry)*.3;var w=parseFloat(ret.style.width)||24,h=parseFloat(ret.style.height)||24;ret.style.transform="translate("+(rx-w/2)+"px,"+(ry-h/2)+"px)";requestAnimationFrame(tick);})();})();</script>
 <script>
@@ -235,6 +250,21 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
       document.body.style.overflow="";
     });
   });
+})();
+</script>
+<script src="mark.js"></script>
+<script>
+(function(){
+  if(!window.ccMark) return;
+  document.querySelectorAll(".jmark[data-seed]").forEach(function(el){
+    var m=window.ccMark(el.getAttribute("data-seed"),6);
+    el.setAttribute("viewBox",m.vb);
+    el.querySelector("path").setAttribute("d",m.d);
+  });
+  var f=document.querySelector(".fmark");
+  if(f){ var m2=window.ccMark(document.title,6);
+    f.setAttribute("viewBox",m2.vb); f.querySelector("path").setAttribute("d",m2.d);
+    var r=document.querySelector(".fref"); if(r) r.textContent=m2.serial; }
 })();
 </script>
 </body></html>

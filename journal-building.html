@@ -133,6 +133,21 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .mobile a{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:var(--t-sub);text-transform:uppercase;padding:8px 0;border-bottom:1px solid var(--line);}
 @media(max-width:760px){.burger{display:flex;}}
 @media(prefers-reduced-motion:reduce){.mobile{transition:none;}}
+
+
+/* Generative note art: each note's frame carries its own engine-issued crest,
+   seeded by its title — eight notes, eight crests, one system, zero stock art. */
+.frame .jmark{position:absolute;inset:0;margin:auto;width:52%;max-width:300px;height:auto;opacity:.42;}
+.frame .jmark path{fill:var(--dim);}
+
+
+/* THE ISSUE SYSTEM. Every page this studio ships is issued: the engine draws its
+   crest from the page's own title and stamps the reference beside the copyright.
+   Same seed, same crest, forever. */
+.fseal{display:inline-flex;align-items:center;gap:9px;}
+.fmark{width:20px;height:20px;display:block;opacity:.75;}
+.fmark path{fill:var(--dim);}
+.fref{font-variant-numeric:tabular-nums;letter-spacing:.14em;}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -158,14 +173,14 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
     <h1 class="ah1" style="view-transition-name:jn-building">Building cyber:cyber</h1>
     <p class="lede">A working note on what we're learning while building a one-person AI product lab.</p>
   </div>
-  <div class="wrap"><div class="frame reveal arted" style="aspect-ratio:16/9;background-image:url('media/journal-building.svg')"><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;NOTE&#12301;</span><span class="cap">Fig. 01 &mdash; Building cyber:cyber</span></div></div>
+  <div class="wrap"><div class="frame reveal" style="aspect-ratio:16/9;"><svg class="jmark" data-seed="Building cyber:cyber" aria-hidden="true"><path d=""/></svg><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;NOTE&#12301;</span><span class="cap">Fig. 01 &mdash; Building cyber:cyber</span></div></div>
   </section>
   <article class="prose"><p class="reveal">cybercyber is a lab for AI products, AI features, and the agent infrastructure that runs them. The site went live this week. Before the first client engagement begins, here's an honest record of how the lab got built and what we're learning before the work starts.</p><p class="reveal">We're publishing this for two reasons. First, the manifesto says we build in public. The manifesto only matters if the practice does. Second, anyone considering hiring us should know how we work — what tools we trust, what we refuse, what the actual operating model looks like when the brand work is over and the production work begins.</p><p class="reveal">This is week one. There will be more.</p><h2 class="reveal">What this place actually is</h2><p class="reveal">cybercyber is not just a studio that takes on client work. It's an operator-led lab that builds its own AI products and businesses, and takes on a small number of client engagements each year that compound with the lab's own work.</p><p class="reveal">This distinction matters. Most agencies sell hours. cybercyber sells judgement that has been earned by actually shipping products into markets — products with users, prices, churn rates, and growth curves. The reason we can charge premium for client work is that we're not just consultants advising on AI products. We're the people building them, in our own stack, on our own dime, every week.</p><p class="reveal">The current state of the lab: several AI products at varying stages of development. Some are nearly ready to launch. Some are in active build. Some are speculative experiments we're using to test market hypotheses. Most won't make it to production — that's the point. The discipline of refusal we sell to clients is the same discipline we apply to our own work. Many of our own ideas don't survive contact with reality, and we kill them quickly when they don't.</p><p class="reveal">What this means in practice: when a client hires cybercyber, they're hiring a team that has spent the last six months in the trenches building real things, killing the ones that didn't work, and learning what does. The judgement is fresh. The patterns are current. The work is informed by the same discipline we'd apply to our own products and years in the digital product game.</p><h2 class="reveal">What we build with </h2><p class="reveal">The cybercyber tooling stack, current as of week one:</p><ul><li><strong>Claude Code</strong> for codebase operations, especially first-pass scaffolding and refactoring</li><li><strong>Cursor</strong> for IDE-based work where iteration matters more than scale</li><li><strong>Next.js + TypeScript + Tailwind</strong> as the default web stack — boring, reliable, fast to ship</li><li><strong>Anthropic API</strong> for AI features in shipped products, primarily Sonnet 4.7</li><li><strong>Vercel</strong> for deployment, with Stripe for payments and Clerk for auth where needed</li><li><strong>Webflow</strong> for the cybercyber site itself, because design tooling shouldn't bottleneck a designer.&nbsp;It also comes with a CMS&nbsp;and a bunch of other features we don't see the value in building and maintaining.</li><li><strong>Figma</strong> for visual exploration that doesn't need to be code yet</li><li><strong>Linear</strong> for tracking — including the next post, which is already in the queue</li></ul><p class="reveal">The tooling is mostly conventional. The leverage isn't in the tools. The leverage is in operating the tools at full capacity, which most teams don't because most teams have meetings about how to operate them.</p><h2 class="reveal">What's next</h2><p class="reveal">The first client engagement begins later in two months. Several of cybercyber's own products are getting closer to launch. By the end of month two, we expect to have shipped real work for both — a client engagement and at least one of our own products in market.</p><p class="reveal">Future blog posts will be working notes from inside that work. It will not be a case study. It will be honest about what worked, what didn't, and what we'd do differently. Case studies are marketing artefacts written six months after the fact. Working notes are written while the work is still wet. The second is more useful. We'll keep doing it.</p><p class="reveal">The lab is soon open. The work is starting.<br><br>----</p><p class="reveal"><em>cybercyber is a lab for AI products, AI features, and the agent infrastructure that runs them. We work with a small number of clients each year. The ones who can tell the difference. </em><a href="mailto:hello@cybercyber.ai"><em>Email hello@cybercyber.ai</em></a><em>.</em></p></article>
   <div class="wrap"><div class="sealwrap reveal"><svg class="seal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="arc04" d="M22,60 A38,38 0 0,1 98,60"/></defs><circle cx="60" cy="60" r="53" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/><text text-anchor="middle"><textPath href="#arc04" startOffset="50%">CYBER:CYBER</textPath></text><circle cx="60" cy="53" r="5" fill="currentColor"/><circle cx="60" cy="67" r="5" fill="currentColor"/><text class="stb" x="60" y="102" text-anchor="middle">MMXXVI</text></svg></div></div>
   <div class="void" aria-hidden="true"><span class="vline"></span><span class="vnode"></span></div>
   <section class="next"><div class="wrap"><a href="journal-shipping.html"><div class="l">Next note</div><div class="n">Shipping got commoditised</div></a></div></section>
 </main>
-<footer><div class="wrap foot"><span>&copy; 2026 CYBERCYBER LTD &#183; London</span><a href="./">Home &uarr;</a></div></footer>
+<footer><div class="wrap foot"><span>&copy; 2026 CYBERCYBER LTD &#183; London</span><span class="fseal" aria-hidden="true"><svg class="fmark" viewBox="0 0 100 100"><path d=""/></svg><span class="fref">------</span></span><a href="./">Home &uarr;</a></div></footer>
 <script>(function(){var hdr=document.getElementById("hdr");addEventListener("scroll",function(){hdr.classList.toggle("solid",scrollY>40);var rp=document.getElementById("rprog");if(rp){var m=document.documentElement.scrollHeight-innerHeight;rp.style.transform="scaleX("+(m>0?Math.min(1,scrollY/m):0).toFixed(4)+")";}},{passive:true});var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.14});document.querySelectorAll(".reveal").forEach(function(el){io.observe(el);});})();</script>
 <script>(function(){var reduce=matchMedia("(prefers-reduced-motion:reduce)").matches,coarse=matchMedia("(hover:none),(pointer:coarse)").matches;if(coarse||reduce)return;function ivLabel(el){if(el.closest(".next")||el.closest(".csnext"))return"Read \u2197";if(el.closest(".jrow")||el.closest(".jall"))return"Read \u2197";if(el.closest(".proj")||el.closest(".cslink"))return"Open case \u2197";if(el.tagName==="SUMMARY"||el.closest(".faq"))return"Expand";if(el.getAttribute&&(el.getAttribute("href")||"").indexOf("mailto:")===0)return"Email \u2197";if(el.closest("header"))return"Go";if(el.closest("footer"))return"Go";return"Go \u2197";}var ivb=document.getElementById("iverb");var ret=document.getElementById("iret"),coord=document.getElementById("icoord");if(!ret)return;document.body.classList.add("cursor-on");var rx=innerWidth/2,ry=innerHeight/2,tx=rx,ty=ry;addEventListener("mousemove",function(e){tx=e.clientX;ty=e.clientY;ret.style.opacity="1";coord.style.opacity="1";coord.style.left=(e.clientX+16)+"px";coord.style.top=(e.clientY+16)+"px";coord.textContent=("000"+e.clientX).slice(-4)+" \u00B7 "+("000"+e.clientY).slice(-4);});addEventListener("mouseleave",function(){ret.style.opacity="0";coord.style.opacity="0";});document.querySelectorAll("a,button,summary").forEach(function(el){el.addEventListener("mouseenter",function(){if(ivb)ivb.textContent=ivLabel(el);ret.classList.add("lock");ret.style.width="40px";ret.style.height="40px";});el.addEventListener("mouseleave",function(){ret.classList.remove("lock");ret.style.width="24px";ret.style.height="24px";});});(function tick(){rx+=(tx-rx)*.3;ry+=(ty-ry)*.3;var w=parseFloat(ret.style.width)||24,h=parseFloat(ret.style.height)||24;ret.style.transform="translate("+(rx-w/2)+"px,"+(ry-h/2)+"px)";requestAnimationFrame(tick);})();})();</script>
 <script>
@@ -203,6 +218,21 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
       document.body.style.overflow="";
     });
   });
+})();
+</script>
+<script src="mark.js"></script>
+<script>
+(function(){
+  if(!window.ccMark) return;
+  document.querySelectorAll(".jmark[data-seed]").forEach(function(el){
+    var m=window.ccMark(el.getAttribute("data-seed"),6);
+    el.setAttribute("viewBox",m.vb);
+    el.querySelector("path").setAttribute("d",m.d);
+  });
+  var f=document.querySelector(".fmark");
+  if(f){ var m2=window.ccMark(document.title,6);
+    f.setAttribute("viewBox",m2.vb); f.querySelector("path").setAttribute("d",m2.d);
+    var r=document.querySelector(".fref"); if(r) r.textContent=m2.serial; }
 })();
 </script>
 </body></html>

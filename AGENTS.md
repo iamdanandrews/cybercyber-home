@@ -42,6 +42,24 @@ There are exactly **three deliberate exceptions**, all on the case studies, and 
 
 **Fonts:** Raveo variable (`opsz` 14–32, `wght` 100–900) for display; Helvetica Neue for body; system mono for labels. `font-display:block` on every page — deliberate, because Raveo is preloaded and a swap flashed the browser's default sans (reported repeatedly as "I see Inter"; it was never Inter in the CSS).
 
+## The identity constitution
+
+**The issue system.** Everything this studio ships is issued: `mark.js` draws a dot-matrix kamon — a radially symmetric crest of dots with the brand's colon at its centre — seeded from the artifact's own name, plus a six-character reference from the same seed. Same seed, same crest, same reference, forever. Crests appear on: the hero void, the two Work tiles (seeded `granite`/`frame`), the Contact seal (seeded by the visitor's sentence), every journal note's frame (seeded by its title), and every shipped page's footer (seeded by `document.title`). **The circular hanko (arc-text seal) is the founding stamp and appears ONLY on the studio's own statements — home and manifesto footers, and About.** Don't issue crests there, and don't put the hanko on shipped artifacts.
+
+**Generated marks are dots only.** No lines, no meanders, no mazes, no woven or single-line patterns — that visual language is reserved against other work and must never appear in this identity. If a future mark needs a new form, it extends the dot grammar (rings of dots, dot strokes), never lines.
+
+**Colour grammar.** Two accents, two voices — never interchangeable:
+- **Cyan** = the system speaking: live state (status dot, clock, progress, loader), interactive affordances (focus, the FAQ `+`, reticle lock), and the *affirm* side of any pair (kept, gain, "for the individual").
+- **Vermilion** = the studio judging: decisions, refusals, dates, seals, the colon, `::selection`, and the *cut* side of any pair.
+A brand *claim* is neither — it speaks in paper. If a new element needs colour, ask which voice is talking; if neither, it gets no accent.
+
+**Motion grammar — four moves, no fifth.** Every animation on this site is one of:
+1. **Weight resolves** — variable-font weight settles or blooms (wordmark, stat figures).
+2. **Lines draw** — a rule or connector draws along its length (duo connector, brush underline).
+3. **Surfaces press** — a plane presses in or wipes (seal stamp, About inversion, hover lift).
+4. **Dots settle** — a crest fades/scales into rest (tile marks).
+Nothing floats, nothing bounces, nothing loops decoratively. A proposed animation that isn't one of these four is the wrong animation.
+
 ## Traps that have already cost time
 
 - **`.reveal` sections need `.in` to become visible.** Anything you add inside one is invisible until its observer fires. `#about` has its own observer at threshold `.55` and is deliberately excluded from the 2600ms boot fallback, because it holds a set-piece that must not burn off-screen.

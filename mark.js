@@ -1,15 +1,21 @@
 /* ------------------------------------------------------------------
-   ONE LINE — extracted verbatim from the kené engine in
-   Proposal/Shipibo/engine.js (the studio's own generative work), reduced to
-   only what a single mark needs: a seeded spanning tree walked into one
-   Hamiltonian cycle. ONE unbroken line that fills the field and never crosses
-   itself — not an aesthetic of a single line, an actual single line, provably.
-   Deterministic: the same sentence always yields the same mark. That is the
-   point, and it is the same argument the products make.
-   No imports, no build step. ~4KB.
+   THE ISSUE MARK — a dot-matrix kamon.
+
+   Every artifact this studio ships is issued: seeded from its own name, the
+   engine draws a radially symmetric crest of dots — kamon by construction,
+   dot-matrix by material — with the brand's colon always at its centre. The
+   same seed always yields the same crest and the same six-character
+   reference; that determinism is the point, and it is the same argument the
+   products make.
+
+   Geometry: a 13×13 grid masked to a disc, cells chosen by seeded weight
+   under 180° rotational symmetry (the symmetry that preserves a vertical
+   colon), the centre column reserved so the colon stands alone. Output is
+   normalised to a 0..100 viewBox. Dots only — no strokes, no lines.
+
+   No imports, no build step. ~3KB.
 ------------------------------------------------------------------ */
 (function(){
-const DIRS = [[1,0],[0,1],[-1,0],[0,-1]];
 function xmur3(str){
   let h = 1779033703 ^ str.length;
   for (let i = 0; i < str.length; i++){
@@ -30,108 +36,60 @@ function mulberry32(a){
     return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
   };
 }
-function generateLoop(seedStr, q){
-  const rng = mulberry32(xmur3(seedStr + '|line')());
-  const idx = (x, y) => y * q + x;
-  const seen = new Uint8Array(q * q);
-  const conn = [];                       // open tree connections [x,y,dx,dy]
-  const stack = [[Math.floor(rng() * q), Math.floor(rng() * q)]];
-  seen[idx(stack[0][0], stack[0][1])] = 1;
-  while (stack.length){
-    const [x, y] = stack[stack.length - 1];
-    const open = DIRS.filter(([dx, dy]) => {
-      const nx = x + dx, ny = y + dy;
-      return nx >= 0 && ny >= 0 && nx < q && ny < q && !seen[idx(nx, ny)];
-    });
-    if (!open.length){ stack.pop(); continue; }
-    const [dx, dy] = open[Math.floor(rng() * open.length)];
-    seen[idx(x + dx, y + dy)] = 1;
-    conn.push([x, y, dx, dy]);
-    stack.push([x + dx, y + dy]);
-  }
-
-  /* fine grid: each coarse cell is a 2x2 mini-loop; each tree
-     connection merges two mini-loops. The result is one cycle. */
-  const N = 2 * q;
-  const nk = (x, y) => y * N + x;
-  const ek = (a, b) => a < b ? a + '|' + b : b + '|' + a;
-  const E = new Set();
-  for (let y = 0; y < q; y++)
-    for (let x = 0; x < q; x++){
-      const a = nk(2 * x, 2 * y), b = nk(2 * x + 1, 2 * y);
-      const c = nk(2 * x, 2 * y + 1), d = nk(2 * x + 1, 2 * y + 1);
-      E.add(ek(a, b)); E.add(ek(c, d)); E.add(ek(a, c)); E.add(ek(b, d));
-    }
-  for (const [x, y, dx, dy] of conn){
-    if (dx === 1){
-      E.delete(ek(nk(2*x+1, 2*y), nk(2*x+1, 2*y+1)));
-      E.delete(ek(nk(2*x+2, 2*y), nk(2*x+2, 2*y+1)));
-      E.add(ek(nk(2*x+1, 2*y), nk(2*x+2, 2*y)));
-      E.add(ek(nk(2*x+1, 2*y+1), nk(2*x+2, 2*y+1)));
-    } else if (dx === -1){
-      E.delete(ek(nk(2*x, 2*y), nk(2*x, 2*y+1)));
-      E.delete(ek(nk(2*x-1, 2*y), nk(2*x-1, 2*y+1)));
-      E.add(ek(nk(2*x-1, 2*y), nk(2*x, 2*y)));
-      E.add(ek(nk(2*x-1, 2*y+1), nk(2*x, 2*y+1)));
-    } else if (dy === 1){
-      E.delete(ek(nk(2*x, 2*y+1), nk(2*x+1, 2*y+1)));
-      E.delete(ek(nk(2*x, 2*y+2), nk(2*x+1, 2*y+2)));
-      E.add(ek(nk(2*x, 2*y+1), nk(2*x, 2*y+2)));
-      E.add(ek(nk(2*x+1, 2*y+1), nk(2*x+1, 2*y+2)));
-    } else {
-      E.delete(ek(nk(2*x, 2*y), nk(2*x+1, 2*y)));
-      E.delete(ek(nk(2*x, 2*y-1), nk(2*x+1, 2*y-1)));
-      E.add(ek(nk(2*x, 2*y-1), nk(2*x, 2*y)));
-      E.add(ek(nk(2*x+1, 2*y-1), nk(2*x+1, 2*y)));
-    }
-  }
-  const adj = new Map();
-  for (const k of E){
-    const [a, b] = k.split('|').map(Number);
-    (adj.get(a) || adj.set(a, []).get(a)).push(b);
-    (adj.get(b) || adj.set(b, []).get(b)).push(a);
-  }
-  const pts = [];
-  let cur = 0, prev = -1;
-  do {
-    pts.push([cur % N, Math.floor(cur / N)]);
-    const nb = adj.get(cur);
-    const nxt = nb[0] === prev ? nb[1] : nb[0];
-    prev = cur; cur = nxt;
-  } while (cur !== 0);
-  pts.push([0, 0]);                      // close the loop
-  return { pts, N };
-}
-function toPath(pts, cut){
-  const f = n => n.toFixed(1);
-  if (pts.length < 3 || cut <= 0) return 'M' + pts.map(p => f(p[0]) + ' ' + f(p[1])).join('L');
-
-  const out = ['M' + f(pts[0][0]) + ' ' + f(pts[0][1])];
-  for (let i = 1; i < pts.length - 1; i++){
-    const a = pts[i - 1], b = pts[i], c = pts[i + 1];
-    const la = Math.hypot(b[0] - a[0], b[1] - a[1]);
-    const lc = Math.hypot(c[0] - b[0], c[1] - b[1]);
-    const k  = Math.min(cut, la * 0.5, lc * 0.5);
-    const p1 = [b[0] + (a[0] - b[0]) / la * k, b[1] + (a[1] - b[1]) / la * k];
-    const p2 = [b[0] + (c[0] - b[0]) / lc * k, b[1] + (c[1] - b[1]) / lc * k];
-    out.push('L' + f(p1[0]) + ' ' + f(p1[1]), 'L' + f(p2[0]) + ' ' + f(p2[1]));
-  }
-  const e = pts[pts.length - 1];
-  out.push('L' + f(e[0]) + ' ' + f(e[1]));
-  return out.join('');
-}
-/* The seal's reference. Same hash family as the line, different salt, so one
-   sentence yields exactly one line AND one reference -- and the reference is
-   the visible proof of the determinism, not a decorative counter. 36^6 keeps
-   it to six characters. */
+/* The reference: same hash family as the crest, different salt — one seed,
+   one crest, one reference. 36^6 keeps it to six characters. */
 function serialOf(seedStr){
   const h = xmur3(seedStr + '|serial')() % 2176782336;
   return h.toString(36).toUpperCase().padStart(6, '0');
 }
+
+const N = 13, C = 6;                  // grid and its centre
+const SPAN = 13.5;                    // 12 units of centres + 0.75 margin each side
+const U = 100 / SPAN;                 // grid unit → viewBox units
+const px = x => +(((x + 0.75) * U).toFixed(2));
+
+function generate(seedStr, q){
+  const rng = mulberry32(xmur3(seedStr + '|crest')());
+  const pairs = q === 7 ? 18 : 14;    // the contact seal is denser than a chrome mark
+
+  /* candidate cells: inside the disc, off the reserved colon column, in one
+     half-plane — each carries its 180°-rotated twin. Weighted by the seeded
+     rng in FIXED iteration order, so the choice is the seed's alone. */
+  const cand = [];
+  for (let y = 0; y < N; y++){
+    for (let x = 0; x < N; x++){
+      if (x === C) continue;                        // the colon's column
+      if (y > C || (y === C && x > C)) continue;    // one half-plane only
+      const dx = x - C, dy = y - C;
+      if (dx*dx + dy*dy > 38) continue;             // the disc (r ≈ 6.2)
+      /* radial bias: a crest has mass at its core, not an even scatter — the
+         seeded weight is blended with closeness to centre, so dots gather
+         around the colon and thin toward the rim */
+      cand.push({ x, y, w: rng() * 0.62 + (1 - Math.sqrt(dx*dx + dy*dy) / 6.2) * 0.38 });
+    }
+  }
+  cand.sort((a, b) => b.w - a.w);
+
+  const dots = [];
+  for (const c of cand.slice(0, pairs)){
+    dots.push([c.x, c.y]);
+    dots.push([2*C - c.x, 2*C - c.y]);              // the 180° twin
+  }
+  /* the colon, always, at the heart — slightly larger than the field dots */
+  const R  = +(0.34 * U).toFixed(2);
+  const RC = +(0.52 * U).toFixed(2);
+  const circle = (x, y, r) =>
+    `M${(px(x) - r).toFixed(2)} ${px(y)}a${r} ${r} 0 1 0 ${(r*2).toFixed(2)} 0a${r} ${r} 0 1 0 ${(-r*2).toFixed(2)} 0`;
+  const parts = [];
+  for (const [x, y] of dots) parts.push(circle(x, y, R));
+  parts.push(circle(C, C - 1, RC), circle(C, C + 1, RC));
+  return { d: parts.join(''), dots: dots.length + 2 };
+}
+
 window.ccMark = function(seed, q){
-  q = q || 7;
   const s = String(seed || 'cyber:cyber');
-  const { pts, N } = generateLoop(s, q);
-  return { d: toPath(pts, 0.42), N: N, points: pts.length, serial: serialOf(s) };
+  const m = generate(s, q || 6);
+  return { d: m.d, vb: '0 0 100 100', N: 100, dots: m.dots,
+           points: m.dots, serial: serialOf(s) };
 };
 })();
