@@ -716,6 +716,12 @@ section.reveal>.wrap{position:relative;}
 @media(prefers-reduced-motion:reduce){
   .offer .op span,.reveal.in .offer .op span{font-variation-settings:"wght" 620,"opsz" 32;transition:none;}
 }
+
+/* Nested case-study routes in the mobile panel — same doctrine as the site register:
+   the deepest pages must be reachable from the navigation surface, and on a phone the
+   panel IS the navigation surface. Indented, mono, dimmer: under Work, not beside it. */
+.mobile a.msub{font-family:var(--mono);font-variation-settings:normal;font-size:var(--t-cap);
+  letter-spacing:.14em;padding:10px 0 10px 22px;color:var(--paper70);border-bottom:1px solid var(--line);}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -744,7 +750,7 @@ section.reveal>.wrap{position:relative;}
 </div></header>
 
 <div class="mobile" id="mobile">
-  <a href="#top">Home</a><a href="#work">Work</a><a href="manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="#contact">Contact</a>
+  <a href="#top">Home</a><a href="#work">Work</a><a class="msub" href="work-granite.html">Granite</a><a class="msub" href="work-frame.html">Frame</a><a href="manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="#contact">Contact</a>
 </div>
 
 <main id="top">
@@ -846,7 +852,7 @@ section.reveal>.wrap{position:relative;}
       <a class="irow" href="#offerings"><span class="in">02</span><span class="il">Studio</span><span class="dots"></span><span class="iv">Rate card &middot; from &pound;5k</span></a>
       <a class="irow" href="manifesto.html"><span class="in">03</span><span class="il">Manifesto</span><span class="dots"></span><span class="iv">Ten beliefs</span></a>
       <a class="irow" href="journal.html"><span class="in">04</span><span class="il">Journal</span><span class="dots"></span><span class="iv">Seven notes</span></a>
-      <a class="irow" href="#contact"><span class="in">05</span><span class="il">Contact</span><span class="dots"></span><span class="iv">Open for Q4</span></a>
+      <a class="irow" href="#contact"><span class="in">05</span><span class="il">Contact</span><span class="dots"></span><span class="iv" id="ivq">Open for Q4</span></a>
     </div>
   </div></section>
 
@@ -867,6 +873,10 @@ section.reveal>.wrap{position:relative;}
   // Pinned to London. The clock used to auto-rotate every 4.2s, so a London studio's
   // header spent most of its time asserting SIN/SFO local time -- an instrument
   // stating something untrue about its owner. Click/Enter still cycles on demand.
+  /* the quarter computes itself — a status chip that can never go stale */
+  var q='Q'+(Math.floor(new Date().getMonth()/3)+1);
+  document.querySelectorAll('.statl').forEach(function(el){el.textContent='OPEN \u00B7 '+q;});
+  var ivq=document.getElementById('ivq'); if(ivq) ivq.textContent='Open for '+q;
   render(); if(!reduce){setInterval(render,1000);}
   clkEl=document.getElementById("clk");if(clkEl){var manual=function(e){if(e)e.preventDefault();rotate();};clkEl.addEventListener("click",manual);clkEl.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" ")manual(e);});}
 

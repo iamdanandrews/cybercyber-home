@@ -149,6 +149,12 @@ footer{border-top:1px solid var(--line);padding:28px 0;}
 @keyframes statpulse{0%,100%{opacity:1;}50%{opacity:.45;}}
 @media(max-width:900px){}
 @media(prefers-reduced-motion:reduce){.status .dot{animation:none;}}
+
+/* Nested case-study routes in the mobile panel — same doctrine as the site register:
+   the deepest pages must be reachable from the navigation surface, and on a phone the
+   panel IS the navigation surface. Indented, mono, dimmer: under Work, not beside it. */
+.mobile a.msub{font-family:var(--mono);font-variation-settings:normal;font-size:var(--t-cap);
+  letter-spacing:.14em;padding:10px 0 10px 22px;color:var(--paper70);border-bottom:1px solid var(--line);}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -169,7 +175,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;}
   </nav><div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="./#offerings" title="Services &amp; pricing">OPEN &middot; Q4</a><span class="clock" id="clk" role="button" tabindex="0" title="Click to change timezone">LDN&nbsp;--:--</span></div>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></header>
-<div class="mobile" id="mobile"><a href="./">Home</a><a href="./#work">Work</a><a href="./manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a></div>
+<div class="mobile" id="mobile"><a href="./">Home</a><a href="./#work">Work</a><a class="msub" href="work-granite.html">Granite</a><a class="msub" href="work-frame.html">Frame</a><a href="./manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a></div>
 
 <div class="rail" aria-hidden="true"><span class="n" id="railnum">01</span><span class="ln"><i id="railfill"></i></span><span>10</span></div>
 
@@ -249,6 +255,10 @@ footer{border-top:1px solid var(--line);padding:28px 0;}
     if(el)el.textContent=c[0]+" "+t;}catch(e){}}
   function rotate(){el=el||document.getElementById("clk");if(!el)return;el.style.opacity="0";
     setTimeout(function(){ci=(ci+1)%CITIES.length;render();el.style.opacity="";},220);}
+  /* the quarter computes itself — a status chip that can never go stale */
+  var q='Q'+(Math.floor(new Date().getMonth()/3)+1);
+  document.querySelectorAll('.statl').forEach(function(el){el.textContent='OPEN \u00B7 '+q;});
+  var ivq=document.getElementById('ivq'); if(ivq) ivq.textContent='Open for '+q;
   render(); if(!reduce) setInterval(render,1000);
   el=document.getElementById("clk");
   if(el){var m=function(e){if(e)e.preventDefault();rotate();};
