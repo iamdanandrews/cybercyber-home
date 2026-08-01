@@ -596,8 +596,12 @@ section.reveal>.wrap{position:relative;}
    marker that is PAINTED, not laid out: absolutely positioned so it is neither a
    flex nor a grid item, and animated on transform only. */
 .jrnl a,.faq summary,.irow{position:relative;}
-.jrnl a::before,.faq summary::before,.irow::before{content:"";position:absolute;left:0;top:0;bottom:0;
+/* The marker lives in the LEFT MARGIN, like a proof-reader's change-bar — the text
+   column never moves and never touches it. Journal cards keep it at their inner edge
+   because their own padding already clears it. */
+.jrnl a::before,.faq summary::before,.irow::before{content:"";position:absolute;left:-14px;top:0;bottom:0;
   width:2px;background:var(--accent);transform:scaleY(0);transition:transform var(--dur-2) var(--e1);}
+.jrnl a::before{left:0;}
 .jrnl a:hover::before,.faq summary:hover::before,.irow:hover::before,
 .faq summary:focus-visible::before,.irow:focus-visible::before{transform:scaleY(1);}
 @media(prefers-reduced-motion:reduce){
