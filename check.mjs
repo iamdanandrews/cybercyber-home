@@ -54,7 +54,7 @@ for (const f of PAGES) {
   }
 
   /* ---- tokens: every var() must resolve ---- */
-  const RUNTIME = new Set(['--hl', '--len', '--sl']);   // set from JS at runtime
+  const RUNTIME = new Set(['--hl', '--len', '--sl', '--bd']);   // set from JS at runtime (--bd: per-dot bloom delay)
   // tokens can also be defined in an inline style attribute — the eyebrows set --c
   // per section, which is a legitimate per-instance override, not a global token
   for (const m of s.matchAll(/style="([^"]*)"/g)) {

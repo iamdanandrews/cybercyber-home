@@ -20,7 +20,7 @@
 <link rel="canonical" href="https://cybercyber.ai/">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230B0B0D'/><circle cx='16' cy='11' r='2.7' fill='%2322D3EE'/><circle cx='16' cy='21' r='2.7' fill='%2322D3EE'/></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230B0B0D'/><circle cx='16' cy='11' r='2.7' fill='%23EA4E32'/><circle cx='16' cy='21' r='2.7' fill='%23EA4E32'/></svg>">
 <link rel="preload" href="RaveoVF.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"cyber:cyber","alternateName":"cyber:cyber studio","description":"A product design lab in London. We design the brand, the interface, and the code \u2014 and we build it. A few clients a year.","url":"https://cybercyber.ai","email":"hello@cybercyber.ai","areaServed":"Worldwide","priceRange":"\u00a35,000\u2013\u00a350,000+","founder":{"@type":"Person","name":"Dan Andrews"},"knowsAbout":["Product design","Brand design","Interface design","Native app development","On-device AI","AI product design"],"address":{"@type":"PostalAddress","addressLocality":"London","addressCountry":"GB"}}</script>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
@@ -117,7 +117,7 @@ header.solid{background:rgba(11,11,13,.72);backdrop-filter:blur(10px);border-col
 .foldbreak .wrap{display:flex;justify-content:space-between;align-items:center;padding:15px clamp(20px,5vw,64px);font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.22em;text-transform:uppercase;}
 .foldbreak .fa{color:var(--accent-ink);display:flex;align-items:center;gap:12px;transition:color .2s var(--e1);}
 .foldbreak .fa .tk{width:7px;height:7px;background:var(--accent-ink);transition:background-color .2s var(--e1);}
-.foldbreak .fb{color:var(--accent-ink);opacity:.72;transition:color .2s var(--e1),opacity .2s var(--e1);}
+.foldbreak .fb{color:color-mix(in srgb,var(--accent-ink) 86%,var(--accent));/* 4.67:1 on the strip; opacity dimming composited to 3.8:1 and failed WCAG */transition:color .2s var(--e1);}
 .foldbreak:hover,.foldbreak:focus-visible{background:var(--ground);}
 .foldbreak:hover .fa,.foldbreak:hover .fb,.foldbreak:focus-visible .fa,.foldbreak:focus-visible .fb{color:var(--paper);opacity:1;}
 .foldbreak:hover .fa .tk,.foldbreak:focus-visible .fa .tk{background:var(--accent);}
@@ -673,6 +673,23 @@ section.reveal>.wrap{position:relative;}
 .idx .irow.sub .il{font-size:var(--t-cap);letter-spacing:.1em;color:var(--paper70);}
 
 @media(max-width:900px){}
+
+/* THE THIRD SCENE — the colon is the seed. On hover (and once at boot, straight after
+   the ignite), the studio crest's field dots settle in around the wordmark's colon and
+   retract when you leave: the logotype revealing that every issued crest grows from its
+   punctuation. Dots settle — grammar move four. Fine pointers only; reduced motion gets
+   no bloom at all. */
+.word span{position:relative;z-index:1;}
+.word .wbloom{position:absolute;pointer-events:none;overflow:visible;z-index:0;}
+.word .wbloom circle{fill:var(--dim);opacity:0;transform:scale(.35);transform-origin:center;transform-box:fill-box;
+  transition:opacity .5s var(--e-settle) var(--bd,0s),transform .5s var(--e-settle) var(--bd,0s);}
+@media(hover:hover) and (pointer:fine){
+  .word:hover .wbloom circle{opacity:.5;transform:none;}
+}
+.word.bloom .wbloom circle{opacity:.5;transform:none;}
+@media(prefers-reduced-motion:reduce){
+  .word .wbloom{display:none;}
+}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -695,7 +712,7 @@ section.reveal>.wrap{position:relative;}
   <nav class="menu" aria-label="Primary" id="menu">
     <a href="#top">Home</a><a href="#work">Work</a><a href="manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="#contact">Contact</a>
   </nav>
-  <div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="#offerings" title="Services & pricing">OPEN &middot; Q4</a> <span class="clock" id="clk" role="button" tabindex="0" aria-label="Local time — click to change timezone" title="Click to change timezone">LDN&nbsp;--:--</span>
+  <div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="#offerings" title="Services & pricing">OPEN &middot; Q4</a> <span class="clock" id="clk" role="button" tabindex="0" title="Click to change timezone">LDN&nbsp;--:--</span>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </div></header>
@@ -872,6 +889,7 @@ section.reveal>.wrap{position:relative;}
             /* the accent beat, timed to the letter it belongs to */
             if(!fired && colonIdx>-1 && el>=colonIdx*STAG){
               fired=true; hero.classList.add("ignite");
+              if(window.ccBloomOnce) setTimeout(window.ccBloomOnce, 520);
               setTimeout(function(){hero.classList.remove("ignite");},780);
             }
             if(el<cd) requestAnimationFrame(cal);
@@ -1007,6 +1025,43 @@ section.reveal>.wrap{position:relative;}
     el.setAttribute('viewBox', m.vb);
     el.querySelector('path').setAttribute('d', m.d);
   });
+  /* the colon bloom: the cyber:cyber crest's field dots, parsed into circles so each
+     can settle with its own radial delay; the crest's own central colon is dropped
+     because the TYPE colon is the heart here */
+  (function(){
+    var word=document.getElementById('word'); if(!word||!window.ccMark) return;
+    var colon=word.querySelector('.colon'); if(!colon) return;
+    var m=window.ccMark('cyber:cyber',6);
+    var segs=m.d.split('M').filter(Boolean).slice(0,-2);   // drop the colon pair
+    var svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+    svg.setAttribute('class','wbloom'); svg.setAttribute('viewBox',m.vb);
+    svg.setAttribute('aria-hidden','true');
+    segs.forEach(function(seg){
+      var p=seg.trim().split(/[ a]+/);
+      var r=parseFloat(p[2]), cx=parseFloat(p[0])+r, cy=parseFloat(p[1]);
+      var c=document.createElementNS('http://www.w3.org/2000/svg','circle');
+      c.setAttribute('cx',cx); c.setAttribute('cy',cy); c.setAttribute('r',r);
+      var dist=Math.hypot(cx-50,cy-50)/50;
+      c.style.setProperty('--bd',(dist*0.42).toFixed(2)+'s');
+      svg.appendChild(c);
+    });
+    word.appendChild(svg);
+    function place(){
+      var wr=word.getBoundingClientRect(), cr=colon.getBoundingClientRect();
+      var size=cr.height*2.35;
+      svg.style.width=size+'px'; svg.style.height=size+'px';
+      svg.style.left=(cr.left-wr.left+cr.width/2-size/2)+'px';
+      svg.style.top=(cr.top-wr.top+cr.height/2-size/2)+'px';
+    }
+    place();
+    addEventListener('resize',place);
+    word.addEventListener('mouseenter',place);
+    window.ccBloomOnce=function(){
+      place();
+      word.classList.add('bloom');
+      setTimeout(function(){word.classList.remove('bloom');},1900);
+    };
+  })();
   var hm=document.getElementById('hmpath');
   if(hm){ var h=window.ccMark('cyber:cyber', 6); hm.setAttribute('d', h.d);
     document.querySelector('.hmark').setAttribute('viewBox', h.vb); }
