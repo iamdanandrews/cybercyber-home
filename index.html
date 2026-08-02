@@ -81,6 +81,15 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary,bod
 .cl{position:fixed;top:0;bottom:0;width:1px;background:var(--cyan);opacity:0;pointer-events:none;z-index:1;box-shadow:0 0 14px 0 var(--cyan);}
 
 @view-transition{navigation:auto;}
+/* THE SEAM. Left ungoverned, a page-to-page navigation is the one motion moment
+   with no author — the browser's default cross-fade, at the browser's default
+   timing. Tuned once, site-wide, to the same easing everything else here uses:
+   not a new move, the existing "surfaces press" grammar applied to the transition
+   the platform already runs. The named pairs that actually morph (rather than
+   cross-fade) are declared where they're used: t-granite/t-frame (title), the two
+   media boxes and the two tile marks travelling from a Work tile into its case
+   study's hero. */
+::view-transition-group(*){animation-duration:.5s;animation-timing-function:var(--e-settle);}
 header{view-transition-name:site-header;position:fixed;top:0;left:0;right:0;z-index:200;border-bottom:1px solid transparent;transition:background .3s,border-color .3s,backdrop-filter .3s;}
 header.solid{background:rgba(11,11,13,.72);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-color:var(--line);}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px clamp(20px,5vw,64px);}
@@ -684,21 +693,36 @@ section.reveal>.wrap{position:relative;}
 
 @media(max-width:900px){}
 
-/* THE THIRD SCENE — the colon is the seed. On hover (and once at boot, straight after
-   the ignite), the studio crest's field dots settle in around the wordmark's colon and
-   retract when you leave: the logotype revealing that every issued crest grows from its
-   punctuation. Dots settle — grammar move four. Fine pointers only; reduced motion gets
-   no bloom at all. */
+/* THE THIRD SCENE — the colon is the seed. On hover, a chrome-scale echo of the
+   studio crest settles in around the wordmark's colon and retracts when you leave.
+   Once at boot, the same mechanism plays as the ARRIVAL EVENT: the crest assembles
+   at hero scale, holds long enough to be read as the site's thesis rather than a
+   corner flourish, stamps its reference, then recedes back into the chrome-scale
+   position it occupies for the rest of the visit. Same engine, same dots, staged
+   larger once — not a second visual language. Dots settle — grammar move four
+   (assembly and recession are both this move, run at two sizes). The reference
+   stamp reuses the existing `stamp` keyframe — grammar move three, borrowed, not
+   invented. Fine pointers only; reduced motion gets no bloom and no arrival at all. */
 .word span{position:relative;z-index:1;}
-.word .wbloom{position:absolute;pointer-events:none;overflow:visible;z-index:0;}
+.word .wbloom{position:absolute;pointer-events:none;overflow:visible;z-index:0;
+  transition:width .7s var(--e-settle),height .7s var(--e-settle),left .7s var(--e-settle),top .7s var(--e-settle);}
 .word .wbloom circle{fill:var(--dim);opacity:0;transform:scale(.35);transform-origin:center;transform-box:fill-box;
   transition:opacity .5s var(--e-settle) var(--bd,0s),transform .5s var(--e-settle) var(--bd,0s);}
 @media(hover:hover) and (pointer:fine){
   .word:hover .wbloom circle{opacity:.5;transform:none;}
 }
-.word.bloom .wbloom circle{opacity:.5;transform:none;}
+/* .bloom is the arrival-only state (boot JS toggles it) — full intensity, distinct
+   from the .5 hover echo, because this is the one moment the mark is meant to be
+   looked at rather than noticed in passing. */
+.word.bloom .wbloom circle{opacity:1;transform:none;}
+.word .wref{position:absolute;transform:translateX(-50%);white-space:nowrap;
+  font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.22em;text-transform:uppercase;
+  color:var(--dim);opacity:0;pointer-events:none;z-index:2;transition:opacity .5s var(--e1);}
+.word .wref b{color:var(--paper70);font-weight:400;}
+.word.bloom .wref{opacity:1;animation:stamp .6s var(--e1) .1s both;}
 @media(prefers-reduced-motion:reduce){
   .word .wbloom{display:none;}
+  .word .wref{display:none;}
 }
 
 /* THE GLIMPSE. The tile leads with its number — but on hover, a few seconds of the real
@@ -789,11 +813,11 @@ section.reveal>.wrap{position:relative;}
     <p class="lead">We don't just design for clients. We design, brand and build our own products &mdash; and ship them into the world.</p></div>
     <div class="reel">
       <a class="proj" href="work-granite.html">
-        <div class="media stat" style="view-transition-name:m-granite"><video class="tv" muted loop playsinline preload="none" aria-hidden="true" data-src="media/granite-coach.mp4"></video><span class="mtag">Proof 01</span><div class="sfig"><b>+2.5</b><i>kg</i></div><div class="scap">Added across four main lifts &mdash; decided on the phone, with the reasoning shown</div><svg class="smark" id="smark-granite" viewBox="0 0 12 12" aria-hidden="true"><path d=""/></svg><span class="mgo">View case &rarr;</span></div>
+        <div class="media stat" style="view-transition-name:m-granite"><video class="tv" muted loop playsinline preload="none" aria-hidden="true" data-src="media/granite-coach.mp4"></video><span class="mtag">Proof 01</span><div class="sfig"><b>+2.5</b><i>kg</i></div><div class="scap">Added across four main lifts &mdash; decided on the phone, with the reasoning shown</div><svg class="smark" id="smark-granite" viewBox="0 0 12 12" aria-hidden="true" style="view-transition-name:mk-granite"><path d=""/></svg><span class="mgo">View case &rarr;</span></div>
         <div class="pinfo"><div class="pn" style="view-transition-name:t-granite">Granite<em>.</em></div><div class="pd">A strength coach that rewrites your week.</div><div class="pm"><span>iOS &middot; Native</span><span>On-device AI</span><span class="live">Alpha &middot; granite.coach</span></div></div>
       </a>
       <a class="proj" href="work-frame.html">
-        <div class="media stat" style="view-transition-name:m-frame"><video class="tv" muted loop playsinline preload="none" aria-hidden="true" data-src="media/frame-graph.mp4"></video><span class="mtag">Proof 02</span><div class="sfig"><b>71</b><i>%</i></div><div class="scap">Of the techniques you were tested on, you still had &mdash; measured on your own sessions</div><svg class="smark" id="smark-frame" viewBox="0 0 12 12" aria-hidden="true"><path d=""/></svg><span class="mgo">View case &rarr;</span></div>
+        <div class="media stat" style="view-transition-name:m-frame"><video class="tv" muted loop playsinline preload="none" aria-hidden="true" data-src="media/frame-graph.mp4"></video><span class="mtag">Proof 02</span><div class="sfig"><b>71</b><i>%</i></div><div class="scap">Of the techniques you were tested on, you still had &mdash; measured on your own sessions</div><svg class="smark" id="smark-frame" viewBox="0 0 12 12" aria-hidden="true" style="view-transition-name:mk-frame"><path d=""/></svg><span class="mgo">View case &rarr;</span></div>
         <div class="pinfo"><div class="pn" style="view-transition-name:t-frame">Frame<em>.</em></div><div class="pd">Built against the forgetting curve.</div><div class="pm"><span>iOS &middot; Native</span><span>Spaced recall</span><span class="live">Alpha &middot; framebjj.app</span></div></div>
       </a>
       </div>
@@ -1065,6 +1089,47 @@ section.reveal>.wrap{position:relative;}
     },110);
   });
   draw(DEFAULT);
+
+  /* THE CONTACT DEMONSTRATION — a juror does not type. So the first time this
+     section is actually in view, the field types its own placeholder sentence
+     and the seal redraws live as it goes — determinism witnessed, not merely
+     offered — then clears and hands the cursor back. Any real focus or
+     keystroke, at any point before, during or after, wins immediately: this
+     must never fight a visitor for their own input. Runs once. */
+  (function(){
+    var sec=document.getElementById('contact');
+    if(!sec) return;
+    var interacted=false;
+    inp.addEventListener('focus',function(){
+      if(interacted) return;
+      interacted=true;
+      inp.value=''; draw(DEFAULT);
+    },{once:true});
+    inp.addEventListener('input',function(){ interacted=true; },{once:true});
+    function run(){
+      if(interacted||inp.value) return;
+      var str=inp.getAttribute('placeholder')||'We need to ship the real product, not the demo.';
+      if(matchMedia('(prefers-reduced-motion:reduce)').matches){
+        inp.value=str; draw(str);
+        setTimeout(function(){ if(!interacted){ inp.value=''; draw(DEFAULT); } },1400);
+        return;
+      }
+      var i=0;
+      (function step(){
+        if(interacted) return;
+        i++;
+        var partial=str.slice(0,i);
+        inp.value=partial; draw(partial);
+        if(i<str.length){ setTimeout(step,26+Math.random()*34); }
+        else { setTimeout(function(){ if(!interacted){ inp.value=''; draw(DEFAULT); } },1100); }
+      })();
+    }
+    var obs=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ obs.unobserve(sec); setTimeout(run,300); } });
+    },{threshold:.5});
+    obs.observe(sec);
+  })();
+
   ['granite','frame'].forEach(function(k){
     var el=document.getElementById('smark-'+k); if(!el) return;
     var m=window.ccMark(k, 6);
@@ -1092,20 +1157,38 @@ section.reveal>.wrap{position:relative;}
       svg.appendChild(c);
     });
     word.appendChild(svg);
-    function place(){
+    // the reference stamp — same vocabulary as the contact seal's "Seal · ------",
+    // shown only during the boot arrival, positioned under whatever size is current.
+    var wref=document.createElement('span');
+    wref.className='wref'; wref.setAttribute('aria-hidden','true');
+    wref.innerHTML='Seal &middot; <b>------</b>';
+    var wrefv=wref.querySelector('b');
+    word.appendChild(wref);
+    function place(big){
       var wr=word.getBoundingClientRect(), cr=colon.getBoundingClientRect();
-      var size=cr.height*2.35;
+      var size=big?Math.min(innerHeight,innerWidth)*0.52:cr.height*2.35;
+      var left=cr.left-wr.left+cr.width/2-size/2, top=cr.top-wr.top+cr.height/2-size/2;
       svg.style.width=size+'px'; svg.style.height=size+'px';
-      svg.style.left=(cr.left-wr.left+cr.width/2-size/2)+'px';
-      svg.style.top=(cr.top-wr.top+cr.height/2-size/2)+'px';
+      svg.style.left=left+'px'; svg.style.top=top+'px';
+      if(big){
+        wref.style.left=(cr.left-wr.left+cr.width/2)+'px';
+        wref.style.top=(top+size+14)+'px';
+      }
     }
     place();
-    addEventListener('resize',place);
-    word.addEventListener('mouseenter',place);
+    addEventListener('resize',function(){place();});
+    word.addEventListener('mouseenter',function(){place();});
+    /* THE ARRIVAL EVENT — the crest assembles at hero scale, holds, stamps its
+       reference, then recedes into the chrome-scale position it keeps for the
+       rest of the visit. Runs once, straight after the wordmark's ignite. */
     window.ccBloomOnce=function(){
-      place();
+      wrefv.textContent=m.serial;
+      place(true);
       word.classList.add('bloom');
-      setTimeout(function(){word.classList.remove('bloom');},1900);
+      setTimeout(function(){
+        place(false);
+        word.classList.remove('bloom');
+      },1800);
     };
   })();
   /* tile glimpses load on first hover — never on page load */
