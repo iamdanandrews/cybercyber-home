@@ -686,27 +686,33 @@ section.reveal>.wrap{position:relative;}
    place this site dropped its own language for a stock portfolio convention -- but the
    fix wasn't "no screen", it was showing it wrong: a whole device is illegible at that
    size, and a number set in Raveo is a claim about the product, not evidence of it.
-   These are the same reading-distance crops the case studies already use -- device-less,
-   cropped tight, no bezel -- legible enough that a visitor doesn't have to click through
-   to check it's real. Held on paper, not the page's own dark ground: both apps are
-   dark-UI throughout, so this isn't a colour match, it's a gallery mount -- a light mat
-   is the standard way to hold a dark-toned image so it reads with real contrast instead
-   of bleeding into the page around it. */
+   Held on paper, not the page's own dark ground: both apps are dark-UI throughout, so
+   this isn't a colour match, it's a gallery mount -- a light mat is the standard way to
+   hold a dark-toned image so it reads with real contrast instead of bleeding into the
+   page around it.
+   NOTHING sits on top of the photo -- an earlier version overlaid a proof label and the
+   mark directly on the screen and it collided with the screen's own text, the exact
+   failure this site already killed once for a hover-video overlay. The mark, the caption
+   and the case-study link all live in their own strip below the image instead, where
+   the content is fully authored and can never collide with anything. */
 .media.stat{aspect-ratio:auto;max-width:none;display:flex;flex-direction:column;
   background:var(--paper);border-color:color-mix(in srgb,var(--ground) 22%,transparent);}
 .media.stat .shot{position:relative;overflow:hidden;}
 .media.stat .shot img{display:block;width:100%;height:100%;object-fit:cover;}
-/* the product's seal sits on the photo itself, not the mat -- both screens are dark, so
-   the mark stays paper-coloured exactly as it always was, unrelated to the mat beneath */
-.media.stat .smark{position:absolute;top:clamp(16px,2vw,24px);right:clamp(16px,2vw,24px);
-  width:clamp(46px,5.6vw,64px);height:auto;overflow:visible;opacity:.4;
-  transition:opacity .5s var(--e1);}
-.media.stat .smark path{fill:var(--paper);}
+.media.stat .scap{display:flex;align-items:center;gap:14px;margin:0;max-width:none;
+  padding:16px clamp(18px,2.2vw,26px);font-family:var(--mono);font-size:var(--t-cap);
+  letter-spacing:.05em;line-height:1.5;color:var(--ink-mut);
+  border-top:1px solid color-mix(in srgb,var(--ground) 14%,transparent);}
+.media.stat .scap .sctext{flex:1;}
+/* the product's seal, now held in the caption strip on paper -- dark ink, not the
+   paper-coloured fill it uses everywhere else it sits on the dark ground */
+.media.stat .smark{position:static;flex:none;width:22px;height:22px;overflow:visible;
+  opacity:.5;transition:opacity .5s var(--e1);}
+.media.stat .smark path{fill:var(--ground);}
 .media.stat .smark{transform:scale(.92);}
 .reveal.in .media.stat .smark{transform:none;transition:opacity .9s var(--e-settle) .3s,transform .9s var(--e-settle) .3s;}
-.media.stat .scap{margin:0;max-width:none;padding:17px clamp(20px,2.4vw,28px) 19px;
-  font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.05em;line-height:1.65;
-  color:var(--ink-mut);border-top:1px solid color-mix(in srgb,var(--ground) 14%,transparent);}
+.media.stat .mgo{position:static;flex:none;opacity:1;transform:none;color:var(--ground);
+  font-size:var(--t-cap);letter-spacing:.1em;white-space:nowrap;}
 @media(prefers-reduced-motion:reduce){
   .media.stat .smark,.reveal.in .media.stat .smark{transform:none;transition:none;}
 }
@@ -833,11 +839,11 @@ section.reveal>.wrap{position:relative;}
     <p class="lead">We don't just design for clients. We design, brand and build our own products &mdash; and ship them into the world.</p></div>
     <div class="reel">
       <a class="proj" href="work-granite.html">
-        <div class="media stat" style="view-transition-name:m-granite"><div class="shot" style="aspect-ratio:1126/760"><img src="media/shots/g-detail.webp" alt="Granite — the change rows: bench, squat and row each raised 2.5kg with its reason" loading="lazy" width="1126" height="760"><span class="mtag">Proof 01</span><svg class="smark" id="smark-granite" viewBox="0 0 12 12" aria-hidden="true" style="view-transition-name:mk-granite"><path d=""/></svg><span class="mgo">View case &rarr;</span></div><div class="scap">Bench, squat, row: +2.5kg each &mdash; cleared at RPE 7&ndash;8, adding load.</div></div>
+        <div class="media stat" style="view-transition-name:m-granite"><div class="shot" style="aspect-ratio:680/664"><img src="media/shots/g-hero.webp" alt="Granite — the weekly review: a strong week, every top set at or under RPE 8" loading="lazy" width="680" height="664"></div><div class="scap"><svg class="smark" id="smark-granite" viewBox="0 0 12 12" aria-hidden="true" style="view-transition-name:mk-granite"><path d=""/></svg><span class="sctext">Week 2: every top set at or under RPE 8 &mdash; so week 3 goes up on all four lifts.</span><span class="mgo">View case &rarr;</span></div></div>
         <div class="pinfo"><div class="pn" style="view-transition-name:t-granite">Granite<em>.</em></div><div class="pd">A strength coach that rewrites your week.</div><div class="pm"><span>iOS &middot; Native</span><span>On-device AI</span><span class="live">Alpha &middot; granite.coach</span></div></div>
       </a>
       <a class="proj" href="work-frame.html">
-        <div class="media stat" style="view-transition-name:m-frame"><div class="shot" style="aspect-ratio:1126/690"><img src="media/shots/f-detail.webp" alt="Frame — the leak ranked: kimura from half guard, caught eight times, with its drill" loading="lazy" width="1126" height="690"><span class="mtag">Proof 02</span><svg class="smark" id="smark-frame" viewBox="0 0 12 12" aria-hidden="true" style="view-transition-name:mk-frame"><path d=""/></svg><span class="mgo">View case &rarr;</span></div><div class="scap">Kimura from half guard: caught eight times &mdash; one drill, not a feed of stats.</div></div>
+        <div class="media stat" style="view-transition-name:m-frame"><div class="shot" style="aspect-ratio:680/396"><img src="media/shots/f-hero.webp" alt="Frame — what's sticking: 71% recall, measured on your own sessions" loading="lazy" width="680" height="396"></div><div class="scap"><svg class="smark" id="smark-frame" viewBox="0 0 12 12" aria-hidden="true" style="view-transition-name:mk-frame"><path d=""/></svg><span class="sctext">71% recall, on your own sessions &mdash; drops below half at 2&ndash;4 weeks.</span><span class="mgo">View case &rarr;</span></div></div>
         <div class="pinfo"><div class="pn" style="view-transition-name:t-frame">Frame<em>.</em></div><div class="pd">Built against the forgetting curve.</div><div class="pm"><span>iOS &middot; Native</span><span>Spaced recall</span><span class="live">Alpha &middot; framebjj.app</span></div></div>
       </a>
       </div>
