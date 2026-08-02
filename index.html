@@ -752,14 +752,8 @@ section.reveal>.wrap{position:relative;}
    from the .5 hover echo, because this is the one moment the mark is meant to be
    looked at rather than noticed in passing. */
 .word.bloom .wbloom circle{opacity:1;transform:none;}
-.word .wref{position:absolute;transform:translateX(-50%);white-space:nowrap;
-  font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.22em;text-transform:uppercase;
-  color:var(--dim);opacity:0;pointer-events:none;z-index:2;transition:opacity .5s var(--e1);}
-.word .wref b{color:var(--paper70);font-weight:400;}
-.word.bloom .wref{opacity:1;animation:stamp .6s var(--e1) .1s both;}
 @media(prefers-reduced-motion:reduce){
   .word .wbloom{display:none;}
-  .word .wref{display:none;}
 }
 
 /* THE BACK-HALF BEAT. The rate card's figures resolve the way the Work tiles' do —
@@ -1203,32 +1197,20 @@ section.reveal>.wrap{position:relative;}
       svg.appendChild(c);
     });
     word.appendChild(svg);
-    // the reference stamp — same vocabulary as the contact seal's "Seal · ------",
-    // shown only during the boot arrival, positioned under whatever size is current.
-    var wref=document.createElement('span');
-    wref.className='wref'; wref.setAttribute('aria-hidden','true');
-    wref.innerHTML='Seal &middot; <b>------</b>';
-    var wrefv=wref.querySelector('b');
-    word.appendChild(wref);
     function place(big){
       var wr=word.getBoundingClientRect(), cr=colon.getBoundingClientRect();
       var size=big?Math.min(innerHeight,innerWidth)*0.52:cr.height*2.35;
       var left=cr.left-wr.left+cr.width/2-size/2, top=cr.top-wr.top+cr.height/2-size/2;
       svg.style.width=size+'px'; svg.style.height=size+'px';
       svg.style.left=left+'px'; svg.style.top=top+'px';
-      if(big){
-        wref.style.left=(cr.left-wr.left+cr.width/2)+'px';
-        wref.style.top=(top+size+14)+'px';
-      }
     }
     place();
     addEventListener('resize',function(){place();});
     word.addEventListener('mouseenter',function(){place();});
-    /* THE ARRIVAL EVENT — the crest assembles at hero scale, holds, stamps its
-       reference, then recedes into the chrome-scale position it keeps for the
-       rest of the visit. Runs once, straight after the wordmark's ignite. */
+    /* THE ARRIVAL EVENT — the crest assembles at hero scale, holds, then recedes
+       into the chrome-scale position it keeps for the rest of the visit. Runs
+       once, straight after the wordmark's ignite. */
     window.ccBloomOnce=function(){
-      wrefv.textContent=m.serial;
       place(true);
       word.classList.add('bloom');
       setTimeout(function(){
