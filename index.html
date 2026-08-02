@@ -682,45 +682,37 @@ section.reveal>.wrap{position:relative;}
 .who .wlink:hover{border-bottom-color:var(--cyan);}
 @media(max-width:819px){.who{grid-template-columns:1fr;}}
 
-/* THE WORK TILES CARRY A NUMBER, NOT A SCREENSHOT. A phone screen in a 2:3 box is the one
-   place this site dropped its own language for a stock portfolio convention -- and the box
-   cannot be won: a whole phone is illegible at 440px and a crop stops reading as a product.
-   So the tile states one true figure in Raveo, at a size that survives any viewport, with the
-   product's own generated mark beneath it. The screens live on the case studies, where there
-   is room to read them. Both figures come straight off the captured screens: 71% is Frame's
-   recall, +2.5kg is what Granite added across four lifts. */
-.media.stat{position:relative;display:flex;flex-direction:column;justify-content:flex-end;
-  padding:clamp(22px,2.6vw,34px);background:var(--s1);overflow:hidden;}
-.media.stat .sfig{display:flex;align-items:flex-start;gap:.14em;font-family:var(--raveo);
-  font-variation-settings:"wght" 300,"opsz" 32;font-size:clamp(76px,12vw,148px);line-height:.84;
-  letter-spacing:-.045em;color:var(--paper);transition:font-variation-settings .6s var(--e1);}
-.media.stat .sfig i{font-style:normal;font-size:.3em;font-variation-settings:"wght" 420,"opsz" 32;
-  color:var(--accent);transform:translateY(.25em);}
-.media.stat .scap{margin-top:18px;max-width:26ch;font-family:var(--mono);font-size:var(--t-cap);
-  letter-spacing:.1em;text-transform:uppercase;line-height:1.75;color:var(--dim);}
-/* the product's seal: one unbroken line from mark.js, seeded on its name -- deterministic, so
-   each product has exactly one mark and it is always the same one */
-.media.stat .smark{position:absolute;top:clamp(20px,2.4vw,32px);right:clamp(20px,2.4vw,32px);
-  width:clamp(58px,7vw,84px);height:auto;overflow:visible;opacity:.34;
+/* THE WORK TILES CARRY THE SCREEN ITSELF NOW. A phone silhouette at 440px was the one
+   place this site dropped its own language for a stock portfolio convention -- but the
+   fix wasn't "no screen", it was showing it wrong: a whole device is illegible at that
+   size, and a number set in Raveo is a claim about the product, not evidence of it.
+   These are the same reading-distance crops the case studies already use -- device-less,
+   cropped tight, no bezel -- legible enough that a visitor doesn't have to click through
+   to check it's real. Held on paper, not the page's own dark ground: both apps are
+   dark-UI throughout, so this isn't a colour match, it's a gallery mount -- a light mat
+   is the standard way to hold a dark-toned image so it reads with real contrast instead
+   of bleeding into the page around it. */
+.media.stat{aspect-ratio:auto;max-width:none;display:flex;flex-direction:column;
+  background:var(--paper);border-color:color-mix(in srgb,var(--ground) 22%,transparent);}
+.media.stat .shot{position:relative;overflow:hidden;}
+.media.stat .shot img{display:block;width:100%;height:100%;object-fit:cover;}
+/* the product's seal sits on the photo itself, not the mat -- both screens are dark, so
+   the mark stays paper-coloured exactly as it always was, unrelated to the mat beneath */
+.media.stat .smark{position:absolute;top:clamp(16px,2vw,24px);right:clamp(16px,2vw,24px);
+  width:clamp(46px,5.6vw,64px);height:auto;overflow:visible;opacity:.4;
   transition:opacity .5s var(--e1);}
 .media.stat .smark path{fill:var(--paper);}
-/* ONE beat, in the section headed "The proof": the figure resolves as the tile arrives
-   and its mark draws in behind it. Reuses the two devices already on this page -- variable
-   weight and a stroke that draws -- rather than inventing a third, because "random effects"
-   is the single most-cited scoring killer. One thing, tied to meaning: the proof arriving. */
-.media.stat .sfig{font-variation-settings:"wght" 140,"opsz" 32;}
-.reveal.in .media.stat .sfig{font-variation-settings:"wght" 300,"opsz" 32;
-  transition:font-variation-settings 1.1s var(--e-settle) .12s;}
 .media.stat .smark{transform:scale(.92);}
 .reveal.in .media.stat .smark{transform:none;transition:opacity .9s var(--e-settle) .3s,transform .9s var(--e-settle) .3s;}
+.media.stat .scap{margin:0;max-width:none;padding:17px clamp(20px,2.4vw,28px) 19px;
+  font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.05em;line-height:1.65;
+  color:var(--ink-mut);border-top:1px solid color-mix(in srgb,var(--ground) 14%,transparent);}
 @media(prefers-reduced-motion:reduce){
-  .media.stat .sfig,.reveal.in .media.stat .sfig{font-variation-settings:"wght" 300,"opsz" 32;transition:none;}
   .media.stat .smark,.reveal.in .media.stat .smark{transform:none;transition:none;}
 }
-.proj:hover .media.stat .sfig{font-variation-settings:"wght" 520,"opsz" 32;}
-.proj:hover .media.stat .smark{opacity:.72;}
+.proj:hover .media.stat .smark{opacity:.75;}
 @media(prefers-reduced-motion:reduce){
-  .media.stat .sfig,.media.stat .smark{transition:none;}
+  .media.stat .smark{transition:none;}
 }
 
 /* Nested register rows. The case studies were reachable only from two tiles on this page --
@@ -841,11 +833,11 @@ section.reveal>.wrap{position:relative;}
     <p class="lead">We don't just design for clients. We design, brand and build our own products &mdash; and ship them into the world.</p></div>
     <div class="reel">
       <a class="proj" href="work-granite.html">
-        <div class="media stat" style="view-transition-name:m-granite"><span class="mtag">Proof 01</span><div class="sfig"><b>+2.5</b><i>kg</i></div><div class="scap">Added across four main lifts &mdash; decided on the phone, with the reasoning shown</div><svg class="smark" id="smark-granite" viewBox="0 0 12 12" aria-hidden="true" style="view-transition-name:mk-granite"><path d=""/></svg><span class="mgo">View case &rarr;</span></div>
+        <div class="media stat" style="view-transition-name:m-granite"><div class="shot" style="aspect-ratio:1126/760"><img src="media/shots/g-detail.webp" alt="Granite — the change rows: bench, squat and row each raised 2.5kg with its reason" loading="lazy" width="1126" height="760"><span class="mtag">Proof 01</span><svg class="smark" id="smark-granite" viewBox="0 0 12 12" aria-hidden="true" style="view-transition-name:mk-granite"><path d=""/></svg><span class="mgo">View case &rarr;</span></div><div class="scap">Bench, squat, row: +2.5kg each &mdash; cleared at RPE 7&ndash;8, adding load.</div></div>
         <div class="pinfo"><div class="pn" style="view-transition-name:t-granite">Granite<em>.</em></div><div class="pd">A strength coach that rewrites your week.</div><div class="pm"><span>iOS &middot; Native</span><span>On-device AI</span><span class="live">Alpha &middot; granite.coach</span></div></div>
       </a>
       <a class="proj" href="work-frame.html">
-        <div class="media stat" style="view-transition-name:m-frame"><span class="mtag">Proof 02</span><div class="sfig"><b>71</b><i>%</i></div><div class="scap">Of the techniques you were tested on, you still had &mdash; measured on your own sessions</div><svg class="smark" id="smark-frame" viewBox="0 0 12 12" aria-hidden="true" style="view-transition-name:mk-frame"><path d=""/></svg><span class="mgo">View case &rarr;</span></div>
+        <div class="media stat" style="view-transition-name:m-frame"><div class="shot" style="aspect-ratio:1126/690"><img src="media/shots/f-detail.webp" alt="Frame — the leak ranked: kimura from half guard, caught eight times, with its drill" loading="lazy" width="1126" height="690"><span class="mtag">Proof 02</span><svg class="smark" id="smark-frame" viewBox="0 0 12 12" aria-hidden="true" style="view-transition-name:mk-frame"><path d=""/></svg><span class="mgo">View case &rarr;</span></div><div class="scap">Kimura from half guard: caught eight times &mdash; one drill, not a feed of stats.</div></div>
         <div class="pinfo"><div class="pn" style="view-transition-name:t-frame">Frame<em>.</em></div><div class="pd">Built against the forgetting curve.</div><div class="pm"><span>iOS &middot; Native</span><span>Spaced recall</span><span class="live">Alpha &middot; framebjj.app</span></div></div>
       </a>
       </div>
