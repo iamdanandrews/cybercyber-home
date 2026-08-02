@@ -246,7 +246,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
     setTimeout(function(){ci=(ci+1)%CITIES.length;render();el.style.opacity="";},220);}
   /* the quarter computes itself — a status chip that can never go stale */
   var q='Q'+(Math.floor(new Date().getMonth()/3)+1);
-  document.querySelectorAll('.statl').forEach(function(el){el.textContent='AVAILABLE \u00B7 '+q;});
+  document.querySelectorAll('.statl').forEach(function(el){el.textContent='AVAILABLE '+q;});
   var ivq=document.getElementById('ivq'); if(ivq) ivq.textContent='Open for '+q;
   render(); if(!reduce) setInterval(render,1000);
   el=document.getElementById("clk");

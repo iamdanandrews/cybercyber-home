@@ -402,7 +402,14 @@ section.reveal>.wrap{position:relative;}
 .chip .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);animation:chippulse 2.4s var(--e1) infinite;}
 @keyframes chippulse{0%{box-shadow:0 0 0 0 rgba(34,211,238,.55);}70%{box-shadow:0 0 0 8px rgba(34,211,238,0);}100%{box-shadow:0 0 0 0 rgba(34,211,238,0);}}
 @media(prefers-reduced-motion:reduce){.chip .dot{animation:none;}}
-@media(min-width:820px){.proj{grid-template-columns:1.7fr 1fr;gap:clamp(40px,5vw,96px);}.proj .media{margin-inline:0;justify-self:end;}.proj .pinfo{padding-block:clamp(10px,3vw,40px);}.proj:nth-child(even) .media{order:2;justify-self:start;}}.footseal{width:76px;height:76px;color:var(--accent);flex:none;view-transition-name:brand-seal;}.footseal text{font-family:var(--mono);font-size:8.4px/*svg units*/;letter-spacing:1.2px;fill:currentColor;}.footseal .stb{font-size:7px/*svg units*/;letter-spacing:2.2px;}
+@media(min-width:820px){.proj{grid-template-columns:1.7fr 1fr;gap:clamp(40px,5vw,96px);}.proj .media{margin-inline:0;justify-self:end;}.proj .pinfo{padding-block:clamp(10px,3vw,40px);}
+  /* order alone only changes VISUAL position -- grid auto-placement still assigns
+     tracks by order value, so the reordered .media landed in the narrow 1fr track
+     while .pinfo took the wide 1.7fr one. A single flush image just shrank to fit
+     and hid this; the duo-stack has real minimum widths and overflowed the
+     viewport because of it. Swap the track sizes too, not just the item order. */
+  .proj:nth-child(even){grid-template-columns:1fr 1.7fr;}
+  .proj:nth-child(even) .media{order:2;justify-self:start;}}.footseal{width:76px;height:76px;color:var(--accent);flex:none;view-transition-name:brand-seal;}.footseal text{font-family:var(--mono);font-size:8.4px/*svg units*/;letter-spacing:1.2px;fill:currentColor;}.footseal .stb{font-size:7px/*svg units*/;letter-spacing:2.2px;}
 
 /* offerings rate card */
 .offers .offer{grid-template-columns:34px 1fr auto;align-items:center;gap:clamp(16px,3vw,50px);opacity:0;transform:translateY(10px);transition:opacity var(--dur-2) var(--e-settle),transform var(--dur-2) var(--e-settle),background .25s;}
@@ -682,24 +689,30 @@ section.reveal>.wrap{position:relative;}
 .who .wlink:hover{border-bottom-color:var(--cyan);}
 @media(max-width:819px){.who{grid-template-columns:1fr;}}
 
-/* THE WORK TILES CARRY THE SCREEN ITSELF NOW, FULL WIDTH, WITH NO FRAME. Checked
-   directly against real studio sites (Instrument, basement.studio, Work & Co) rather
-   than reasoned from principle: none of them tile a screenshot beside a text column or
-   mat it in a card -- the image takes the dominant share of its row, sits flush with no
-   border or shadow, and a single line of real typography carries the claim, not a
-   caption stuck to the photo. The proof-fact moved into .pinfo as .pf for exactly that
-   reason: one photo, one bold statement, asymmetric and generously spaced -- the Swiss
-   poster pairing -- rather than a photo captioned under itself. The image column is
-   1.7fr against pinfo's 1fr, alternating sides between the two products (the site's own
-   never-dead-even grid law), so the asymmetry is real, not a cosmetic ratio. */
+/* THE WORK TILES CARRY MULTIPLE REAL SCREENS NOW, NOT ONE CROP. Checked directly
+   against real studio sites (Instrument, basement.studio, Work & Co) rather than
+   reasoned from principle. Instrument's own case-study tiles hold one styled product
+   photograph each -- but their homepage hero is a presentation layer of several real
+   artifacts together, which is the specific thing that reads as a considered body of
+   work rather than a single lucky screenshot. Adopted the multiplicity, not the
+   scattered/rotated collage styling -- random rotation would fight this site's own
+   grid discipline, so the two screens are staggered cleanly on a fixed diagonal, not
+   scattered. Real, complete, uncropped device screens -- .device reuses the exact
+   phone-frame convention the case studies already use, so it isn't a new visual
+   language, just a second one of it. No mat, no colour flip, same dark ground. */
 .media.stat{aspect-ratio:auto;max-width:none;display:flex;flex-direction:column;
   background:none;border:none;}
-.media.stat .shot{position:relative;overflow:hidden;}
-.media.stat .shot img{display:block;width:100%;height:100%;object-fit:cover;}
+.media.stat .duo-stack{position:relative;padding-bottom:clamp(50px,9vw,90px);}
+.media.stat .device{position:relative;width:min(300px,56vw);aspect-ratio:680/1478;
+  border-radius:22px;overflow:hidden;background:#000;border:1px solid var(--line2);}
+.media.stat .device img{display:block;width:100%;height:100%;object-fit:cover;}
+.media.stat .dv-a{box-shadow:0 30px 70px -20px rgba(0,0,0,.7);}
+.media.stat .dv-b{position:absolute;left:clamp(130px,24vw,230px);
+  top:clamp(64px,11vw,116px);z-index:2;box-shadow:0 40px 90px -18px rgba(0,0,0,.85);}
 .media.stat::after{display:none;}
-.media.stat .shot::after{content:"";position:absolute;inset:0;
+.media.stat .device::after{content:"";position:absolute;inset:0;
   box-shadow:inset 0 0 0 1px transparent;transition:box-shadow .3s;pointer-events:none;}
-.proj:hover .media.stat .shot::after{box-shadow:inset 0 0 0 1px var(--accent);}
+.proj:hover .media.stat .dv-a::after{box-shadow:inset 0 0 0 1px var(--accent);}
 .pf{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;
   font-size:var(--t-lead);line-height:1.35;letter-spacing:-.01em;color:var(--paper);
   max-width:34ch;}
@@ -822,11 +835,11 @@ section.reveal>.wrap{position:relative;}
     <p class="lead">We don't just design for clients. We design, brand and build our own products &mdash; and ship them into the world.</p></div>
     <div class="reel">
       <a class="proj" href="work-granite.html">
-        <div class="media stat" style="view-transition-name:m-granite"><div class="shot" style="aspect-ratio:680/664"><img src="media/shots/g-hero.webp" alt="Granite — the weekly review: a strong week, every top set at or under RPE 8" loading="lazy" width="680" height="664"></div></div>
+        <div class="media stat" style="view-transition-name:m-granite"><div class="duo-stack"><div class="device dv-a"><img src="media/shots/g-week.webp" alt="Granite — the training week, day by day" loading="lazy" width="680" height="1478"></div><div class="device dv-b"><img src="media/shots/g-coach.webp" alt="Granite — talking to the coach" loading="lazy" width="680" height="1478"></div></div></div>
         <div class="pinfo"><div class="pn" style="view-transition-name:t-granite">Granite<em>.</em></div><div class="pd">A strength coach that rewrites your week.</div><p class="pf">Week 2: every top set at or under RPE 8 &mdash; so week 3 goes up on all four lifts.</p><div class="pm"><span>iOS &middot; Native</span><span>On-device AI</span><span class="live">Alpha &middot; granite.coach</span></div></div>
       </a>
       <a class="proj" href="work-frame.html">
-        <div class="media stat" style="view-transition-name:m-frame"><div class="shot" style="aspect-ratio:680/396"><img src="media/shots/f-hero.webp" alt="Frame — what's sticking: 71% recall, measured on your own sessions" loading="lazy" width="680" height="396"></div></div>
+        <div class="media stat" style="view-transition-name:m-frame"><div class="duo-stack"><div class="device dv-a"><img src="media/shots/f-graph.webp" alt="Frame — the game graph: your positions, and where you're caught" loading="lazy" width="680" height="1478"></div><div class="device dv-b"><img src="media/shots/f-journey.webp" alt="Frame — the belt journey, mat hours and promotions" loading="lazy" width="680" height="1478"></div></div></div>
         <div class="pinfo"><div class="pn" style="view-transition-name:t-frame">Frame<em>.</em></div><div class="pd">Built against the forgetting curve.</div><p class="pf">71% recall, on your own sessions &mdash; drops below half at 2&ndash;4 weeks.</p><div class="pm"><span>iOS &middot; Native</span><span>Spaced recall</span><span class="live">Alpha &middot; framebjj.app</span></div></div>
       </a>
       </div>
@@ -920,7 +933,7 @@ section.reveal>.wrap{position:relative;}
   // stating something untrue about its owner. Click/Enter still cycles on demand.
   /* the quarter computes itself — a status chip that can never go stale */
   var q='Q'+(Math.floor(new Date().getMonth()/3)+1);
-  document.querySelectorAll('.statl').forEach(function(el){el.textContent='AVAILABLE \u00B7 '+q;});
+  document.querySelectorAll('.statl').forEach(function(el){el.textContent='AVAILABLE '+q;});
   var ivq=document.getElementById('ivq'); if(ivq) ivq.textContent='Open for '+q;
   render(); if(!reduce){setInterval(render,1000);}
   clkEl=document.getElementById("clk");if(clkEl){var manual=function(e){if(e)e.preventDefault();rotate();};clkEl.addEventListener("click",manual);clkEl.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" ")manual(e);});}
