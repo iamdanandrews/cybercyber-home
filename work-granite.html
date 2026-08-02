@@ -331,6 +331,13 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .pdetail{margin-top:clamp(40px,6vw,72px);border:1px solid var(--line);}
 .pdetail img{display:block;width:100%;height:auto;}
 .pdetail .pcap{margin:0;padding:16px 20px 20px;background:var(--s1);border-top:1px solid var(--line);max-width:none;text-align:left;}
+
+/* BRANDING DETAIL. Flat, no phone chrome -- shown the way a type or icon foundry presents
+   a specimen sheet, not as another screenshot. Separate from .pdetail's one-per-page rule:
+   that doctrine is about UI evidence read at reading distance, this is craft on its own terms. */
+.glyphsheet{margin-top:clamp(40px,6vw,72px);border:1px solid var(--line);}
+.glyphsheet img{display:block;width:100%;height:auto;}
+.glyphsheet .pcap{margin:0;padding:16px 20px 20px;background:var(--s1);border-top:1px solid var(--line);max-width:none;text-align:left;}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -378,6 +385,8 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
       </div>
       <div class="cfv"><video muted loop autoplay playsinline preload="none" aria-hidden="true"><source src="media/granite-concept.mp4" type="video/mp4"></video><span class="cfnote">Concept film &middot; not product footage</span></div>
     </div>
+
+    <div class="glyphsheet reveal"><img src="media/shots/g-glyphs.webp" alt="Granite — the bespoke glyph set: twelve custom-drawn icons for equipment types and training goals, no stock icon library" loading="lazy" width="680" height="523"><div class="pcap"><span class="pn">Branding detail &middot; Granite &middot; the glyph set</span><span class="pd">Twelve icons drawn for this product, not pulled from a system library &mdash; one per equipment type and training goal, down to the onboarding questions nobody lingers on.</span></div></div>
 
     <div class="decide reveal">
         <span class="dlabel">The ledger &middot; kept / cut</span>
