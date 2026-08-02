@@ -104,17 +104,26 @@ header.solid{background:rgba(11,11,13,.72);-webkit-backdrop-filter:blur(10px);ba
 .dot{animation:pulse 2.6s ease-in-out infinite;}
 .clock{display:inline-block;color:var(--grey);font-variant-numeric:tabular-nums;cursor:pointer;border-bottom:1px solid transparent;transition:opacity .22s,color .2s,border-color .2s;}
 .clock:hover,.clock:focus-visible{color:var(--paper);border-color:var(--cyan);}
-.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;padding:8px;}
 /* The menu is the colon. Two stacked dots: the brand glyph, and the kebab menu
    convention — identity and affordance pointing the same way. Paper, not vermilion:
    a second vermilion colon beside the wordmark's would stutter. Open, it becomes
-   the ×. */
-.burger{gap:7px;align-items:center;}
-.burger span{width:6.5px;height:6.5px;border-radius:50%;background:var(--paper);
+   the ×.
+   The button is a fixed-size box and both dots are positioned absolutely inside
+   it — not flex children — because the dot→bar size change (6.5px circle to
+   20px bar) used to run through normal layout: the button's own box grew and
+   shrank with it, which on the real device (this pane can't reproduce animated
+   layout shifts) showed up as the icon visibly jumping position on open/close.
+   Pulled out of flow, only `transform` ever moves anything, so the button's
+   footprint never changes and neither does its position among its siblings. */
+.burger{display:none;position:relative;width:36px;height:36px;background:none;border:0;padding:0;}
+.burger span{position:absolute;left:50%;width:6.5px;height:6.5px;border-radius:50%;background:var(--paper);
+  transform:translate(-50%,-50%);
   transition:transform .3s var(--e1),border-radius .3s var(--e1),width .3s var(--e1),height .3s var(--e1);}
+.burger span:first-child{top:calc(50% - 6.75px);}
+.burger span:last-child{top:calc(50% + 6.75px);}
 .burger[aria-expanded="true"] span{width:20px;height:1.5px;border-radius:0;}
-.burger[aria-expanded="true"] span:first-child{transform:translateY(4.25px) rotate(45deg);}
-.burger[aria-expanded="true"] span:last-child{transform:translateY(-4.25px) rotate(-45deg);}
+.burger[aria-expanded="true"] span:first-child{transform:translate(-50%,-50%) translateY(4.25px) rotate(45deg);}
+.burger[aria-expanded="true"] span:last-child{transform:translate(-50%,-50%) translateY(-4.25px) rotate(-45deg);}
 @media(prefers-reduced-motion:reduce){.burger span{transition:none;}}
 
 /* --- HERO: single grid, asymmetric grotesque + a charged void anchor --- */
@@ -147,7 +156,13 @@ header.solid{background:rgba(11,11,13,.72);-webkit-backdrop-filter:blur(10px);ba
 .hero .inner{position:relative;z-index:3;flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;width:100%;}
 .word{position:relative;display:inline-block;color:var(--paper);font-family:var(--raveo);font-size:var(--t-hero);line-height:1;letter-spacing:-.05em;text-transform:uppercase;white-space:nowrap;cursor:default;}
 .word span{display:inline-block;font-variation-settings:"wght" 100,"opsz" 32;transition:font-variation-settings .18s var(--ep);}
-.word .colon{color:var(--accent);transform-origin:center;animation:colonlife 3.4s ease-in-out infinite;}
+/* Measured, not eyeballed: the Raveo colon's ink sits ~11.8% of the font-size
+   below true cap-height centre (it's drawn near the baseline/mean-line, as
+   colons conventionally are for running prose with a space after them —
+   wrong assumption for a tightly-set logotype with no space either side).
+   `translate` is a separate property from `transform` so this static optical
+   correction composes with the animated transform below instead of fighting it. */
+.word .colon{color:var(--accent);transform-origin:center;translate:0 -.118em;animation:colonlife 3.4s ease-in-out infinite;}
 @keyframes colonlife{0%,100%{transform:scale(1);}50%{transform:scale(1.08);}}
 .hero.ignite .word .colon{animation:colonignite .72s var(--e1) both;}
 @keyframes colonignite{0%{transform:scale(.35);opacity:0;filter:drop-shadow(0 0 0 transparent);}55%{opacity:1;filter:drop-shadow(0 0 16px color-mix(in srgb,var(--accent) 75%,transparent));}100%{transform:scale(1);opacity:1;filter:drop-shadow(0 0 0 transparent);}}
