@@ -149,7 +149,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .device .d{opacity:0;transition:opacity .9s var(--e1);}
 .device .d.on{opacity:1;}
 .pcap .pn{display:block;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-bottom:18px;}
-.pcap .pd{font-family:var(--raveo);font-variation-settings:"wght" 420,"opsz" 32;font-size:var(--t-mid);letter-spacing:-.015em;line-height:1.18;color:var(--paper);}
+.pcap .pd{font-family:var(--raveo);font-variation-settings:"wght" 420,"opsz" 32;font-size:var(--t-mid);letter-spacing:-.015em;line-height:1.34;color:var(--paper);}
 .mech{margin-top:clamp(52px,8vh,96px);}
 .mech .mlabel{font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:14px;}
 .mech h2{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:var(--t-sub);letter-spacing:-.02em;line-height:1.02;margin-bottom:16px;}
@@ -188,7 +188,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .pfig.lead{margin-top:clamp(34px,5vw,60px);padding:clamp(30px,5vw,64px) clamp(24px,4vw,48px) clamp(26px,4vw,44px);grid-template-columns:1fr;justify-items:center;gap:clamp(26px,3.4vw,40px);}
 .pfig.lead .device{width:min(420px,80vw);box-shadow:0 54px 130px rgba(0,0,0,.66);}
 .pfig.lead .pcap{max-width:52ch;text-align:center;}
-.pfig.lead .pcap .pd{font-size:var(--t-sub);line-height:1.12;color:var(--paper);}
+.pfig.lead .pcap .pd{font-size:var(--t-sub);line-height:1.28;color:var(--paper);}
 /* PAIR. Two devices in one frame, for the case where the comparison IS the proof
    (log this, it counts it -- the before and after are the argument). */
 .pfig.pair{grid-template-columns:1fr;justify-items:center;gap:clamp(24px,3vw,38px);}
@@ -328,9 +328,14 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 /* THE DETAIL. One figure per case study breaks the phone-in-a-panel module: a native-
    resolution crop at reading distance, full width, no device chrome — the same evidence,
    closer. One per page; a second would turn a break into a pattern. */
-.pdetail{margin-top:clamp(40px,6vw,72px);border:1px solid var(--line);}
+/* Sized down from full-bleed: at 100% width this read as a giant blown-up card rather
+   than a considered zoom. Contained at roughly half the column width, still bigger than
+   a standard figure, so it feels like a closer look rather than a wall of text. */
+.pdetail{margin:clamp(40px,6vw,72px) auto 0;width:52%;max-width:460px;border:1px solid var(--line);}
 .pdetail img{display:block;width:100%;height:auto;}
-.pdetail .pcap{margin:0;padding:16px 20px 20px;background:var(--s1);border-top:1px solid var(--line);max-width:none;text-align:left;}
+.pdetail .pcap{margin:0;padding:18px 20px 22px;background:var(--s1);border-top:1px solid var(--line);max-width:none;text-align:left;}
+.pdetail .pcap .pd{font-size:var(--t-body);line-height:1.55;}
+@media(max-width:680px){.pdetail{width:80%;}}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -365,7 +370,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
   <section class="csbody"><div class="wrap cs2">
     <div class="cslabel">The work<br>02 / FRAME</div>
     <div>
-      <div class="block reveal"><p class="csintro">Frame is a BJJ training journal built on a hard truth: you forget most of what you&rsquo;re taught within days. Log a session in seconds by voice, and Frame holds every technique, brings it back just before you&rsquo;d forget it, and shows you &mdash; in plain data &mdash; that you&rsquo;re actually improving. Built for the belts who feel stuck, so they have a reason to keep turning up.</p></div>
+      <div class="block reveal"><p class="csintro">Frame is a training journal for Brazilian Jiu-Jitsu (BJJ), built on a hard truth: you forget most of what you&rsquo;re taught within days. Log a session in seconds by voice, and Frame holds every technique, brings it back just before you&rsquo;d forget it, and shows you &mdash; in plain data &mdash; that you&rsquo;re actually improving. Built for the belts who feel stuck, so they have a reason to keep turning up.</p></div>
       <div class="stakes reveal"><div class="slabel">The problem</div><div class="sl">Every rung of the ladder leaks &mdash; for the same reason.</div><div class="rungs"><div class="rung"><b>White &rarr; blue</b><span class="fig">~1 in 10</span><span>Everything is new, everything hurts, and the first real sign of progress is months away.</span></div><div class="rung"><b>Blue &rarr; purple</b><span class="fig">50&ndash;70%</span><span>The gains go subtle &mdash; angles, timing, awareness. It has a name: the blue belt blues.</span></div><div class="rung"><b>Purple &amp; beyond</b><span class="fig">Quiet drift</span><span>They rarely churn like blues. They burn out and disappear without saying anything.</span></div></div><p class="mech">Different belts, different excuses, one mechanism: when progress goes invisible between classes, people drift.</p><p class="cav">Belt-attrition figures are community estimates, not studies &mdash; we treat them as the shape of the problem, not proof of it. ~6M practitioners worldwide (Gymdesk); median UK adult membership &pound;70/mo (Matador, 2026).</p></div>
       <div class="aud reveal"><div class="who"><h3><span class="b">1</span>For the individual</h3><p>You forget most of what you are taught within days, and you cannot see yourself improving. <em>Frame holds the detail and shows you the proof.</em></p></div><div class="who"><h3><span class="b">2</span>For the room</h3><p>The cheapest growth in jiu-jitsu is the member you already have, kept one more year. <em>A room that can see its own progress is harder to leave.</em></p></div></div>
       <div class="block reveal"><h2>Built against the forgetting curve</h2><p>A single session throws four or five details at you &mdash; the grip, the angle, the small correction that made the sweep finally work &mdash; and within a week almost all of them are gone. Frame is built around that decay rather than despite it.</p><p>Everything you log comes back to you on a schedule: a few days later, then a week, then a month, timed to land just before you&rsquo;d lose it. There&rsquo;s nothing to revise and no flashcards to sit down with &mdash; the app works out what&rsquo;s about to fade and puts it in front of you. Retention is the product, and it&rsquo;s the one thing a notebook has never done.</p><div class="pfig lead"><div class="device"><img src="media/shots/f-retention-light.webp" alt="Frame — how well techniques are sticking, measured at 71%" loading="lazy" width="680" height="1474"></div><div class="pcap"><span class="pn">Fig. 01 &middot; Frame &middot; how it&rsquo;s sticking</span><span class="pd">The forgetting curve, measured on your own sessions: 71% recall, and the point &mdash; 2&ndash;4 weeks &mdash; where it drops below half.</span></div></div></div>
