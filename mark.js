@@ -80,16 +80,20 @@ function generate(seedStr, q){
   const RC = +(0.52 * U).toFixed(2);
   const circle = (x, y, r) =>
     `M${(px(x) - r).toFixed(2)} ${px(y)}a${r} ${r} 0 1 0 ${(r*2).toFixed(2)} 0a${r} ${r} 0 1 0 ${(-r*2).toFixed(2)} 0`;
-  const parts = [];
-  for (const [x, y] of dots) parts.push(circle(x, y, R));
+  /* pts: the same circles as plain {cx,cy,r} — field dots first, colon last, same
+     order as the path above — so a caller can hold persistent <circle> elements
+     and move them between marks instead of only ever replacing a path string. */
+  const parts = [], pts = [];
+  for (const [x, y] of dots){ parts.push(circle(x, y, R)); pts.push({ cx: px(x), cy: px(y), r: R }); }
   parts.push(circle(C, C - 1, RC), circle(C, C + 1, RC));
-  return { d: parts.join(''), dots: dots.length + 2 };
+  pts.push({ cx: px(C), cy: px(C - 1), r: RC }, { cx: px(C), cy: px(C + 1), r: RC });
+  return { d: parts.join(''), dots: dots.length + 2, pts };
 }
 
 window.ccMark = function(seed, q){
   const s = String(seed || 'cyber:cyber');
   const m = generate(s, q || 6);
   return { d: m.d, vb: '0 0 100 100', N: 100, dots: m.dots,
-           points: m.dots, serial: serialOf(s) };
+           points: m.dots, pts: m.pts, serial: serialOf(s) };
 };
 })();

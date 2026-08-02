@@ -534,7 +534,7 @@ section.reveal>.wrap{position:relative;}
    deterministic, one unbroken line. Kept quiet (dim, hairline) so it reads as a
    held mark in empty space rather than an illustration filling it. */
 .hero .hanchor .hmark{display:block;width:104px;height:104px;margin:0 0 14px;overflow:visible;opacity:.5;}
-.hero .hanchor .hmark path{fill:var(--dim);}
+.hero .hanchor .hmark circle{fill:var(--dim);}
 @media(max-width:600px){.hero .hanchor .hmark{width:74px;height:74px;}}
 
 /* One separator, one rhythm. The dot is the site's peer-separator everywhere
@@ -545,16 +545,26 @@ section.reveal>.wrap{position:relative;}
 
 /* The held mark proves itself on hover, twice over: the whole crest brightens,
    and each word of the caption underneath holds its OWN seed — hovering "Brand"
-   draws that word's mark in place of the studio's, "interface" and "code" the
-   same, reverting to the studio mark when the caption is left. One engine, three
-   more proofs that it's deterministic rather than decorative. Pointer-only. */
+   REARRANGES the studio's crest into that word's own, dot by dot, then settles
+   back when the caption is left. The two dots aren't drawn as one path any more
+   but as 30 persistent circles, so their cx/cy can transition instead of the
+   whole mark hard-cutting; the JS reassigns each circle to its nearest point in
+   the new mark (least motion, no dots crossing paths) and staggers the settle
+   outward from the colon — the same radial-delay technique the hero's own
+   arrival crest uses, at hover speed rather than boot speed. The two colon
+   dots are excluded entirely: their position never varies by seed, so they
+   never move. One engine, three more proofs it's deterministic, not decorative.
+   Pointer-only; reduced motion keeps the swap but drops the travel. */
 .hero .hanchor{pointer-events:auto;}
-.hero .hanchor .hmark path{transition:fill .3s var(--e1);}
+.hero .hanchor .hmark circle{transition:fill .3s var(--e1),cx .55s var(--e-settle) var(--md,0s),cy .55s var(--e-settle) var(--md,0s);}
 .hero .hanchor .hcap .hw{cursor:default;}
 @media(hover:hover) and (pointer:fine){
   .hero .hanchor:hover .hmark{opacity:1;}
-  .hero .hanchor:hover .hmark path{fill:var(--paper);}
+  .hero .hanchor:hover .hmark circle{fill:var(--paper);}
   .hero .hanchor .hcap .hw:hover{color:var(--paper);}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero .hanchor .hmark circle{transition:fill .3s var(--e1);}
 }
 
 /* ==================================================================
@@ -727,18 +737,6 @@ section.reveal>.wrap{position:relative;}
   .word .wref{display:none;}
 }
 
-/* THE GLIMPSE. The tile leads with its number — but on hover, a few seconds of the real
-   product move underneath it: the coach wave under +2.5kg, the graph rising under 71%.
-   Content footage, not ornament; zero bytes until the first hover (src set lazily);
-   the figure stays the headline at full ink above it. */
-.media.stat .tv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;
-  transition:opacity .5s var(--e1);z-index:0;}
-.media.stat .mtag,.media.stat .sfig,.media.stat .scap,.media.stat .smark,.media.stat .mgo{position:relative;z-index:1;}
-@media(hover:hover) and (pointer:fine){
-  .proj:hover .media.stat .tv{opacity:.26;}
-}
-@media(prefers-reduced-motion:reduce){.media.stat .tv{display:none;}}
-
 /* THE BACK-HALF BEAT. The rate card's figures resolve the way the Work tiles' do —
    weight settling from thin to rest as the section reveals, staggered down the card.
    Grammar move one, reused rather than invented; the back half's only other motion is
@@ -793,7 +791,7 @@ section.reveal>.wrap{position:relative;}
   <section class="hero" style="border-top:0;padding-top:0" id="hero">
     <div class="fold-bg" aria-hidden="true"><div class="grid" id="hgrid"></div></div>
     <div class="vf" aria-hidden="true"><i></i><i></i><i></i><i></i><span class="tl a">51.5074&deg; N</span><span class="tl b">00.1278&deg; W</span></div>
-    <div class="hanchor" aria-hidden="true"><svg class="hmark" viewBox="0 0 14 14" preserveAspectRatio="xMidYMid meet"><path id="hmpath" d=""/></svg><span class="hcap"><span class="hw" data-seed="brand">Brand</span> &middot; <span class="hw" data-seed="interface">interface</span> &middot; <span class="hw" data-seed="code">code</span></span></div>
+    <div class="hanchor" aria-hidden="true"><svg class="hmark" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"></svg><span class="hcap"><span class="hw" data-seed="brand">Brand</span> &middot; <span class="hw" data-seed="interface">interface</span> &middot; <span class="hw" data-seed="code">code</span></span></div>
     <div class="wrap inner">
       <h1 class="word" id="word" aria-label="cyber:cyber"></h1>
       <p class="heroline" id="herobar">No theatre. Just the product.</p>
@@ -815,11 +813,11 @@ section.reveal>.wrap{position:relative;}
     <p class="lead">We don't just design for clients. We design, brand and build our own products &mdash; and ship them into the world.</p></div>
     <div class="reel">
       <a class="proj" href="work-granite.html">
-        <div class="media stat" style="view-transition-name:m-granite"><video class="tv" muted loop playsinline preload="none" aria-hidden="true" data-src="media/granite-coach.mp4"></video><span class="mtag">Proof 01</span><div class="sfig"><b>+2.5</b><i>kg</i></div><div class="scap">Added across four main lifts &mdash; decided on the phone, with the reasoning shown</div><svg class="smark" id="smark-granite" viewBox="0 0 12 12" aria-hidden="true" style="view-transition-name:mk-granite"><path d=""/></svg><span class="mgo">View case &rarr;</span></div>
+        <div class="media stat" style="view-transition-name:m-granite"><span class="mtag">Proof 01</span><div class="sfig"><b>+2.5</b><i>kg</i></div><div class="scap">Added across four main lifts &mdash; decided on the phone, with the reasoning shown</div><svg class="smark" id="smark-granite" viewBox="0 0 12 12" aria-hidden="true" style="view-transition-name:mk-granite"><path d=""/></svg><span class="mgo">View case &rarr;</span></div>
         <div class="pinfo"><div class="pn" style="view-transition-name:t-granite">Granite<em>.</em></div><div class="pd">A strength coach that rewrites your week.</div><div class="pm"><span>iOS &middot; Native</span><span>On-device AI</span><span class="live">Alpha &middot; granite.coach</span></div></div>
       </a>
       <a class="proj" href="work-frame.html">
-        <div class="media stat" style="view-transition-name:m-frame"><video class="tv" muted loop playsinline preload="none" aria-hidden="true" data-src="media/frame-graph.mp4"></video><span class="mtag">Proof 02</span><div class="sfig"><b>71</b><i>%</i></div><div class="scap">Of the techniques you were tested on, you still had &mdash; measured on your own sessions</div><svg class="smark" id="smark-frame" viewBox="0 0 12 12" aria-hidden="true" style="view-transition-name:mk-frame"><path d=""/></svg><span class="mgo">View case &rarr;</span></div>
+        <div class="media stat" style="view-transition-name:m-frame"><span class="mtag">Proof 02</span><div class="sfig"><b>71</b><i>%</i></div><div class="scap">Of the techniques you were tested on, you still had &mdash; measured on your own sessions</div><svg class="smark" id="smark-frame" viewBox="0 0 12 12" aria-hidden="true" style="view-transition-name:mk-frame"><path d=""/></svg><span class="mgo">View case &rarr;</span></div>
         <div class="pinfo"><div class="pn" style="view-transition-name:t-frame">Frame<em>.</em></div><div class="pd">Built against the forgetting curve.</div><div class="pm"><span>iOS &middot; Native</span><span>Spaced recall</span><span class="live">Alpha &middot; framebjj.app</span></div></div>
       </a>
       </div>
@@ -1193,32 +1191,57 @@ section.reveal>.wrap{position:relative;}
       },1800);
     };
   })();
-  /* tile glimpses load on first hover — never on page load */
-  document.querySelectorAll('.proj').forEach(function(tile){
-    tile.addEventListener('mouseenter', function(){
-      var v=tile.querySelector('.tv');
-      if(v && !v.src){ v.src=v.getAttribute('data-src'); v.play().catch(function(){}); }
-    }, {once:true});
-  });
-  var hm=document.getElementById('hmpath'), hmSvg=document.querySelector('.hmark');
-  if(hm){ var h=window.ccMark('cyber:cyber', 6); hm.setAttribute('d', h.d);
-    hmSvg.setAttribute('viewBox', h.vb);
-    // each word of the caption holds its own seed — hover swaps the held mark to
-    // that word's crest, proving the same engine draws a different mark for a
-    // different name; leaving the caption returns it to the studio's own mark.
+  (function(){
+    var hmSvg=document.querySelector('.hmark');
+    if(!hmSvg||!window.ccMark) return;
+    var base=window.ccMark('cyber:cyber', 6);
+    var FIELD=base.pts.length-2;                 // last two points are the colon, always
+    var circles=base.pts.map(function(pt){
+      var c=document.createElementNS('http://www.w3.org/2000/svg','circle');
+      c.style.cx=pt.cx+'px'; c.style.cy=pt.cy+'px'; c.style.r=pt.r+'px';
+      hmSvg.appendChild(c);
+      return c;
+    });
+    var current=base.pts;                        // last-committed position per circle, index-aligned
+    // least-motion reassignment: each currently-held point claims its nearest
+    // still-free point in the target mark, so the settle reads as dots finding
+    // their new place rather than an arbitrary index-to-index jump that would
+    // send some of them crossing the whole crest for no reason.
+    function reassign(from, to){
+      var used=new Array(to.length).fill(false), out=new Array(from.length);
+      from.forEach(function(fp,i){
+        var best=-1,bestD=Infinity;
+        for(var j=0;j<to.length;j++){
+          if(used[j]) continue;
+          var dx=fp.cx-to[j].cx, dy=fp.cy-to[j].cy, d=dx*dx+dy*dy;
+          if(d<bestD){ bestD=d; best=j; }
+        }
+        used[best]=true; out[i]=to[best];
+      });
+      return out;
+    }
+    function drawTo(mark){
+      var field=reassign(current.slice(0,FIELD), mark.pts.slice(0,FIELD));
+      field.forEach(function(pt,i){
+        var c=circles[i], dist=Math.hypot(pt.cx-50,pt.cy-50)/50;
+        c.style.setProperty('--md',(dist*0.25).toFixed(2)+'s');
+        c.style.cx=pt.cx+'px'; c.style.cy=pt.cy+'px';
+      });
+      current=field.concat(current.slice(FIELD));  // colon entries untouched, never reassigned
+    }
+    // each word of the caption holds its own seed — hover morphs the held mark
+    // into that word's crest, proving the same engine draws a different mark
+    // for a different name; leaving the caption settles it back to the studio's.
     var hcap=document.querySelector('.hero .hanchor .hcap');
     if(hcap && matchMedia('(hover:hover) and (pointer:fine)').matches){
       hcap.querySelectorAll('.hw').forEach(function(w){
         w.addEventListener('mouseenter', function(){
-          var wm=window.ccMark(w.getAttribute('data-seed'), 6);
-          hm.setAttribute('d', wm.d); hmSvg.setAttribute('viewBox', wm.vb);
+          drawTo(window.ccMark(w.getAttribute('data-seed'), 6));
         });
       });
-      hcap.addEventListener('mouseleave', function(){
-        hm.setAttribute('d', h.d); hmSvg.setAttribute('viewBox', h.vb);
-      });
+      hcap.addEventListener('mouseleave', function(){ drawTo(base); });
     }
-  }
+  })();
 })();
 </script>
 </body>
