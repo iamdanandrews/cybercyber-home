@@ -182,7 +182,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;}
   <a class="brand" href="./">cyber:cyber<sup>&trade;</sup></a>
   <nav class="menu" aria-label="Primary">
     <a href="./">Home</a><a href="./#work">Work</a><a href="./manifesto.html" aria-current="page">Manifesto</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a>
-  </nav><div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="./#offerings" title="Services &amp; pricing">OPEN &middot; Q4</a><span class="clock" id="clk" role="button" tabindex="0" title="Click to change timezone">LDN&nbsp;--:--</span></div>
+  </nav><div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="./#offerings" title="Services &amp; pricing">AVAILABLE &middot; Q4</a><span class="clock" id="clk" role="button" tabindex="0" title="Click to change timezone">LDN&nbsp;--:--</span></div>
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
 </div></header>
 <div class="mobile" id="mobile"><a href="./">Home</a><a href="./#work">Work</a><a class="msub" href="work-granite.html">Granite</a><a class="msub" href="work-frame.html">Frame</a><a href="./manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a></div>
@@ -267,7 +267,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;}
     setTimeout(function(){ci=(ci+1)%CITIES.length;render();el.style.opacity="";},220);}
   /* the quarter computes itself — a status chip that can never go stale */
   var q='Q'+(Math.floor(new Date().getMonth()/3)+1);
-  document.querySelectorAll('.statl').forEach(function(el){el.textContent='OPEN \u00B7 '+q;});
+  document.querySelectorAll('.statl').forEach(function(el){el.textContent='AVAILABLE \u00B7 '+q;});
   var ivq=document.getElementById('ivq'); if(ivq) ivq.textContent='Open for '+q;
   render(); if(!reduce) setInterval(render,1000);
   el=document.getElementById("clk");

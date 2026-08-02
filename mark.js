@@ -69,22 +69,38 @@ function generate(seedStr, q){
     }
   }
   cand.sort((a, b) => b.w - a.w);
+  const chosen = cand.slice(0, pairs);
+  const wLo = Math.min(...chosen.map(c => c.w)), wHi = Math.max(...chosen.map(c => c.w));
+  const wSpan = wHi - wLo || 1;
 
+  /* the twin shares its partner's weight, not a fresh one — a size gradient is
+     still part of the crest's geometry, and the geometry has to obey the same
+     180° symmetry as the positions or the colon stops being the mirror axis. */
   const dots = [];
-  for (const c of cand.slice(0, pairs)){
-    dots.push([c.x, c.y]);
-    dots.push([2*C - c.x, 2*C - c.y]);              // the 180° twin
+  for (const c of chosen){
+    const t = (c.w - wLo) / wSpan;                  // 0..1: how decisively this cell won its spot
+    dots.push({ x: c.x, y: c.y, t });
+    dots.push({ x: 2*C - c.x, y: 2*C - c.y, t });    // the 180° twin
   }
-  /* the colon, always, at the heart — slightly larger than the field dots */
+  /* the colon still anchors the crest, but by POSITION alone — fixed, centred,
+     never moving — rather than also outsizing every field dot by half again.
+     A kamon's hierarchy comes from placement, not from one mark shouting over
+     the rest of the sheet. Field dots get a small, deterministic size spread
+     instead — driven by the same weight that won them their place, so the
+     ones that won decisively read a touch larger than the marginal ones. */
   const R  = +(0.34 * U).toFixed(2);
-  const RC = +(0.52 * U).toFixed(2);
+  const RC = +(0.40 * U).toFixed(2);
   const circle = (x, y, r) =>
     `M${(px(x) - r).toFixed(2)} ${px(y)}a${r} ${r} 0 1 0 ${(r*2).toFixed(2)} 0a${r} ${r} 0 1 0 ${(-r*2).toFixed(2)} 0`;
   /* pts: the same circles as plain {cx,cy,r} — field dots first, colon last, same
      order as the path above — so a caller can hold persistent <circle> elements
      and move them between marks instead of only ever replacing a path string. */
   const parts = [], pts = [];
-  for (const [x, y] of dots){ parts.push(circle(x, y, R)); pts.push({ cx: px(x), cy: px(y), r: R }); }
+  for (const d of dots){
+    const r = +(R * (0.8 + d.t * 0.4)).toFixed(2);  // ±20% around R, deterministic
+    parts.push(circle(d.x, d.y, r));
+    pts.push({ cx: px(d.x), cy: px(d.y), r });
+  }
   parts.push(circle(C, C - 1, RC), circle(C, C + 1, RC));
   pts.push({ cx: px(C), cy: px(C - 1), r: RC }, { cx: px(C), cy: px(C + 1), r: RC });
   return { d: parts.join(''), dots: dots.length + 2, pts };
