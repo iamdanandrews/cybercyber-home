@@ -76,6 +76,12 @@ a{color:inherit;text-decoration:none;}
 .reticle .verb{position:absolute;left:50%;top:calc(100% + 6px);transform:translateX(-50%);font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);white-space:nowrap;opacity:0;transition:opacity .2s;}
 .reticle.lock .ring{border-radius:3px;border-color:var(--cyan);}
 .reticle.lock .verb{opacity:1;}
+/* Explicit fallback for the light "About" inversion -- see the mousemove
+   handler. Paper-on-paper via mix-blend-mode should have inverted to black
+   and didn't, so this sets the dark colour directly instead of blending. */
+.reticle.inv .ring{border-color:var(--ground);mix-blend-mode:normal;}
+.reticle.inv b{background:var(--ground);mix-blend-mode:normal;}
+.reticle.inv.lock .ring{border-color:var(--cyan);}
 .coord{position:fixed;z-index:9998;pointer-events:none;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.16em;color:var(--dim);opacity:0;transition:opacity .3s;font-variant-numeric:tabular-nums;}
 body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary,body.cursor-on [role=button]{cursor:none;}
 .cl{position:fixed;top:0;bottom:0;width:1px;background:var(--cyan);opacity:0;pointer-events:none;z-index:1;box-shadow:0 0 14px 0 var(--cyan);}
@@ -1043,7 +1049,16 @@ section.reveal>.wrap{position:relative;}
     var ret=document.getElementById("ret"),verb=document.getElementById("verb"),coord=document.getElementById("coord");
     document.body.classList.add("cursor-on");
     var rx=innerWidth/2,ry=innerHeight/2,tx=rx,ty=ry;
-    addEventListener("mousemove",function(e){tx=e.clientX;ty=e.clientY;ret.style.opacity="1";coord.style.opacity="1";coord.style.left=(e.clientX+16)+"px";coord.style.top=(e.clientY+16)+"px";coord.textContent=("000"+e.clientX).slice(-4)+" \u00B7 "+("000"+e.clientY).slice(-4);});
+    addEventListener("mousemove",function(e){tx=e.clientX;ty=e.clientY;ret.style.opacity="1";coord.style.opacity="1";coord.style.left=(e.clientX+16)+"px";coord.style.top=(e.clientY+16)+"px";coord.textContent=("000"+e.clientX).slice(-4)+" \u00B7 "+("000"+e.clientY).slice(-4);
+      /* The ring inverts against its backdrop via mix-blend-mode so it never
+         needs a light/dark switch -- except that trick is a known compositing
+         edge case for fixed-position, high-z-index elements over scrolled
+         content in some browsers, and it visibly failed here (paper ring,
+         paper "About" background, no contrast). Detected explicitly instead
+         of trusting the blend to hold up everywhere. */
+      var under=document.elementFromPoint(e.clientX,e.clientY);
+      ret.classList.toggle("inv", !!(under && under.closest("#about.light")));
+    });
     addEventListener("mousedown",function(){ret.classList.add("press");},{passive:true});addEventListener("mouseup",function(){ret.classList.remove("press");},{passive:true});
     addEventListener("mouseleave",function(){ret.style.opacity="0";coord.style.opacity="0";});
     function label(el){if(el.closest(".foldbreak"))return"Enter \u2193";if(el.closest(".proj"))return"Open case \u2197";if(el.closest(".jrnl")||el.closest(".jall"))return"Read \u2197";if(el.tagName==="SUMMARY"||el.closest(".faq"))return"Expand";if(el.id==="email")return"Copy";if(el.id==="clk"||el.closest(".clock"))return"Cycle \u00b7 TZ";if(el.closest(".statl"))return"Rates \u2197";if(el.closest("header"))return"Go";return"Go \u2197";}
