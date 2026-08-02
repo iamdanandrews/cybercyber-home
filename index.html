@@ -543,16 +543,18 @@ section.reveal>.wrap{position:relative;}
 .proj .pm{column-gap:var(--sep-gap);}
 .proj .pm > span + span::before{content:"\00B7";color:var(--dim);margin-right:var(--sep-gap);}
 
-/* The held mark proves itself on hover: the single path retraces from one end to
-   the other. Not a shimmer -- the retrace IS the argument that it is one unbroken
-   line. Pointer-only, and reduced-motion gets the brightening without the redraw. */
+/* The held mark proves itself on hover, twice over: the whole crest brightens,
+   and each word of the caption underneath holds its OWN seed — hovering "Brand"
+   draws that word's mark in place of the studio's, "interface" and "code" the
+   same, reverting to the studio mark when the caption is left. One engine, three
+   more proofs that it's deterministic rather than decorative. Pointer-only. */
 .hero .hanchor{pointer-events:auto;}
 .hero .hanchor .hmark path{transition:fill .3s var(--e1);}
-.hero .hanchor .hlab{display:block;margin-top:6px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.16em;text-transform:uppercase;color:var(--paper);opacity:.58;transition:opacity .28s var(--e1);}
+.hero .hanchor .hcap .hw{cursor:default;}
 @media(hover:hover) and (pointer:fine){
   .hero .hanchor:hover .hmark{opacity:1;}
   .hero .hanchor:hover .hmark path{fill:var(--paper);}
-  .hero .hanchor:hover .hlab{opacity:1;}
+  .hero .hanchor .hcap .hw:hover{color:var(--paper);}
 }
 
 /* ==================================================================
@@ -791,7 +793,7 @@ section.reveal>.wrap{position:relative;}
   <section class="hero" style="border-top:0;padding-top:0" id="hero">
     <div class="fold-bg" aria-hidden="true"><div class="grid" id="hgrid"></div></div>
     <div class="vf" aria-hidden="true"><i></i><i></i><i></i><i></i><span class="tl a">51.5074&deg; N</span><span class="tl b">00.1278&deg; W</span></div>
-    <div class="hanchor" aria-hidden="true"><svg class="hmark" viewBox="0 0 14 14" preserveAspectRatio="xMidYMid meet"><path id="hmpath" d=""/></svg><span class="hcap">Brand &middot; interface &middot; code</span><span class="hlab" aria-hidden="true">We ship all three</span></div>
+    <div class="hanchor" aria-hidden="true"><svg class="hmark" viewBox="0 0 14 14" preserveAspectRatio="xMidYMid meet"><path id="hmpath" d=""/></svg><span class="hcap"><span class="hw" data-seed="brand">Brand</span> &middot; <span class="hw" data-seed="interface">interface</span> &middot; <span class="hw" data-seed="code">code</span></span></div>
     <div class="wrap inner">
       <h1 class="word" id="word" aria-label="cyber:cyber"></h1>
       <p class="heroline" id="herobar">No theatre. Just the product.</p>
@@ -1198,9 +1200,25 @@ section.reveal>.wrap{position:relative;}
       if(v && !v.src){ v.src=v.getAttribute('data-src'); v.play().catch(function(){}); }
     }, {once:true});
   });
-  var hm=document.getElementById('hmpath');
+  var hm=document.getElementById('hmpath'), hmSvg=document.querySelector('.hmark');
   if(hm){ var h=window.ccMark('cyber:cyber', 6); hm.setAttribute('d', h.d);
-    document.querySelector('.hmark').setAttribute('viewBox', h.vb); }
+    hmSvg.setAttribute('viewBox', h.vb);
+    // each word of the caption holds its own seed — hover swaps the held mark to
+    // that word's crest, proving the same engine draws a different mark for a
+    // different name; leaving the caption returns it to the studio's own mark.
+    var hcap=document.querySelector('.hero .hanchor .hcap');
+    if(hcap && matchMedia('(hover:hover) and (pointer:fine)').matches){
+      hcap.querySelectorAll('.hw').forEach(function(w){
+        w.addEventListener('mouseenter', function(){
+          var wm=window.ccMark(w.getAttribute('data-seed'), 6);
+          hm.setAttribute('d', wm.d); hmSvg.setAttribute('viewBox', wm.vb);
+        });
+      });
+      hcap.addEventListener('mouseleave', function(){
+        hm.setAttribute('d', h.d); hmSvg.setAttribute('viewBox', h.vb);
+      });
+    }
+  }
 })();
 </script>
 </body>
