@@ -895,7 +895,9 @@ section.reveal>.wrap{position:relative;}
       <div><span class="wl">Who you&rsquo;re hiring</span><h2 class="wn">Dan Andrews</h2></div>
       <div>
         <p>A designer in London. A decade of product, brand, interface and motion &mdash; Spotify, Epic&nbsp;Games, Dell &mdash; and early-stage teams before and since.</p>
-        <p>I believe product thinking is the argument. Brand, interface and motion are how you make it land: one decision about what a thing is, expressed three ways, not three separate handoffs. Most products break in the seams between those handoffs &mdash; the moment nobody in the room owns the whole decision, which is usually the moment a team needs someone from outside it. That shows up hardest in domains with their own constraints and their own vocabulary, which is usually where the interesting work is.</p>
+        <p>I believe product is the argument. Brand, interface, motion &mdash; that&rsquo;s how you make people feel it&rsquo;s true.</p>
+        <p>Most products don&rsquo;t fail because the idea was wrong. They fail in the gap between the person who decided what to build and the person who built it &mdash; something gets lost there, every time, and the thing ships a little hollow.</p>
+        <p>So I don&rsquo;t hand it off. I carry the decision the whole way through, because the work worth doing is never simple, and somebody has to actually understand it, not just manage it.</p>
         <a class="wlink" href="https://iamdanandrews.com" target="_blank" rel="noopener">iamdanandrews.com &nearr;</a>
       </div>
     </div>
@@ -915,7 +917,7 @@ section.reveal>.wrap{position:relative;}
 
   <section id="contact" class="reveal cta"><div class="wrap">
     <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Contact<span class="ix">07 / OPEN</span></div>
-    <h2 class="big">Is it<br>worth building?</h2>
+    <h2 class="big">What are<br>you building?</h2>
     
     <div class="mk"><div><label class="mkhint" for="mkin" style="display:block;margin:0 0 14px">Your one sentence</label><input class="mkin" id="mkin" type="text" autocomplete="off" spellcheck="false" placeholder="cyber:cyber" aria-describedby="mkhint"><div class="mkhint" id="mkhint">Seal &middot; <span id="mkref">------</span></div><a class="mksend" id="mksend" href="mailto:hello@cybercyber.ai">Email hello@cybercyber.ai &rarr;</a></div><div class="mkfig"><svg class="mkseal" id="mksvg" viewBox="0 0 120 120" role="img" aria-labelledby="mksealt"><title id="mksealt">A seal generated from your sentence</title><rect class="mkframe" x="6" y="6" width="108" height="108"/><g class="mkart" transform="translate(22 22) scale(0.76)"><path id="mkpath" d=""/></g><text class="mkwm" x="60" y="16.4" text-anchor="middle">CYBER:CYBER</text><text class="mksr" id="mksr" x="60" y="107.9" text-anchor="middle">------</text><circle class="mkdot" cx="14" cy="56.4" r="1.4"/><circle class="mkdot" cx="14" cy="63.6" r="1.4"/><circle class="mkdot" cx="106" cy="56.4" r="1.4"/><circle class="mkdot" cx="106" cy="63.6" r="1.4"/></svg></div></div>
   </div></section>
@@ -1142,8 +1144,8 @@ section.reveal>.wrap{position:relative;}
         i++;
         var partial=str.slice(0,i);
         inp.value=partial; draw(partial);
-        if(i<str.length){ setTimeout(step,26+Math.random()*34); }
-        else { setTimeout(function(){ if(!interacted){ inp.value=''; draw(DEFAULT); } },1100); }
+        if(i<str.length){ setTimeout(step,110+Math.random()*90); }
+        else { setTimeout(function(){ if(!interacted){ inp.value=''; draw(DEFAULT); } },1800); }
       })();
     }
     var obs=new IntersectionObserver(function(es){
