@@ -1025,10 +1025,17 @@ section.reveal>.wrap{position:relative;}
      only a sliver had entered -- the inversion played while the viewer was still
      looking at the threshold strip above it, and was over before the paper filled
      the screen. The set-piece needs to run when it is actually being watched, so it
-     gets its own observer at a much higher threshold. */
+     gets its own observer -- but keyed to WHERE on the viewport the section has
+     reached (rootMargin), not WHAT FRACTION of the section is visible (threshold).
+     A percentage-of-target threshold is only as reliable as the target's own
+     height staying under viewport-height/threshold; this section's actual
+     rendered height varies with line-wrapping and font scaling across real
+     viewports, and at .55 that ratio silently stopped being reachable on at
+     least one real browser -- the reveal simply never fired, with no error,
+     nothing to catch except a live report that it had stopped animating. */
   document.querySelectorAll(".reveal").forEach(function(el){ if(el.id!=="about") io.observe(el); });
   var ioAbout=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){
-    e.target.classList.add("in");counts(e.target);ioAbout.unobserve(e.target);}});},{threshold:.55});
+    e.target.classList.add("in");counts(e.target);ioAbout.unobserve(e.target);}});},{threshold:0,rootMargin:"-10% 0px -40% 0px"});
   var ab=document.getElementById("about");
   if(ab){ if("IntersectionObserver" in window) ioAbout.observe(ab);
           else ab.classList.add("in"); }
