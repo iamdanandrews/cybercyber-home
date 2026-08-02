@@ -1024,20 +1024,23 @@ section.reveal>.wrap{position:relative;}
   /* #about is now a FULL SCREEN section, so a .16 threshold fired its sequence when
      only a sliver had entered -- the inversion played while the viewer was still
      looking at the threshold strip above it, and was over before the paper filled
-     the screen. The set-piece needs to run when it is actually being watched, so it
-     gets its own observer -- but keyed to WHERE on the viewport the section has
-     reached (rootMargin), not WHAT FRACTION of the section is visible (threshold).
-     A percentage-of-target threshold is only as reliable as the target's own
-     height staying under viewport-height/threshold; this section's actual
-     rendered height varies with line-wrapping and font scaling across real
-     viewports, and at .55 that ratio silently stopped being reachable on at
-     least one real browser -- the reveal simply never fired, with no error,
-     nothing to catch except a live report that it had stopped animating. */
+     the screen. Raising the threshold, then switching to a rootMargin keyed to
+     the SECTION's own edge, both still watched the wrong thing: the reveal has
+     to be witnessed by whoever is looking at the actual TEXT, and the text sits
+     below a label and padding inside #about -- so anything keyed to the
+     section's edge alone can fire while the section has barely appeared and the
+     words are still off-screen, finishing the animation in that gap before the
+     reader's eye ever reaches them. Confirmed live: a real visit logged .in
+     already present with #about's top at 55px in a 791px viewport -- the
+     section had all but scrolled past by the time the class had landed.
+     Watching the text block itself instead of the section fixes this by
+     construction: whatever fires it has to mean the words are actually there. */
   document.querySelectorAll(".reveal").forEach(function(el){ if(el.id!=="about") io.observe(el); });
-  var ioAbout=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){
-    e.target.classList.add("in");counts(e.target);ioAbout.unobserve(e.target);}});},{threshold:0,rootMargin:"-10% 0px -40% 0px"});
   var ab=document.getElementById("about");
-  if(ab){ if("IntersectionObserver" in window) ioAbout.observe(ab);
+  var aboutWatch=ab?(ab.querySelector(".define")||ab):null;
+  var ioAbout=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){
+    ab.classList.add("in");counts(ab);ioAbout.unobserve(e.target);}});},{threshold:.4});
+  if(ab){ if("IntersectionObserver" in window) ioAbout.observe(aboutWatch);
           else ab.classList.add("in"); }
 
   document.querySelectorAll("[data-split]").forEach(function(p){
