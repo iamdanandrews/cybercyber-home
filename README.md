@@ -17,7 +17,7 @@ That is the finished position, not a staging post — an earlier note here propo
 | `journal.html` + 7 `journal-*.html` | Working notes, numbered newest-first |
 | `work-granite.html`, `work-frame.html` | Case studies, using real screens from the shipping apps |
 | `404.html` | |
-| `mark.js` | The kené generative engine — seeds one unbroken Hamiltonian line, plus the seal reference |
+| `mark.js` | The dot-matrix kamon generator — seeds a radially symmetric crest of dots plus a six-character reference, both deterministic from a name |
 | `llms.txt` | Machine-readable site summary for LLM/agent consumers |
 | `AGENTS.md` | **Read this before editing.** Design tokens, conventions, and the traps |
 
