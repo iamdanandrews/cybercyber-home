@@ -16,7 +16,7 @@ The site itself is hand-coded vanilla HTML, CSS and JavaScript with no build ste
 
 ## Work
 
-- [Granite](https://cybercyber.ai/work-granite.html): A native, on-device strength coach that rewrites your training every week. Deterministic coaching engine, not a chat wrapper.
+- [Granite](https://cybercyber.ai/work-granite.html): A native, on-device strength coach for athletes whose sport isn't lifting — rewrites your training every week around what your sport already cost your body. Deterministic coaching engine, not a chat wrapper.
 - [Frame](https://cybercyber.ai/work-frame.html): A native BJJ training journal built against the forgetting curve.
 
 ## Journal
