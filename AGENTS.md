@@ -79,3 +79,23 @@ If you verify in an embedded browser pane, note that **it may freeze `requestAni
 ## Content voice
 
 Plain, concrete, first-person, judgement-forward. Short declarative sentences. No manifesto grandeur, no clever wordplay, no em-dash-heavy throat-clearing. Claims must be verifiable or dropped. Separators between inline meta items are middle dots (`&middot;`), not em dashes.
+
+**"cyber" vocabulary.** Never place the word "cyber" near "security" in any copy. Never write "we're reclaiming the word" or explain the cybernetics etymology outside the dedicated journal note — it is the only place that story gets told. The working vocabulary the etymology licenses — *governor, steering, feedback, the helm* — is used plainly, as ordinary product language, or not at all.
+
+## The portfolio chrome (2026-08)
+
+The portfolio is now four case studies with genuinely different visual identities (a dark clinical SaaS, a dark athlete app, a light belt-accented app, and — pending — a vivid generative brand system). The rule that makes that survivable: **authorship lives in the fixture, diversity lives in the specimen.** The house — grid, labels, brackets, rules, the mono caption block — never repaints toward a client's palette. The work — screenshots, video, client colour — never gets diluted toward the house's. Neither layer invades the other.
+
+**The specimen window.** Case-study media sits inside a bracketed frame (see `.spec`/`<i>` corner marks on `work-kaido.html` for the reference implementation) at a fixed aspect ratio, client pixels at full brightness inside. A light screenshot or a saturated one goes in exactly as it would go into a portfolio review — the mat is what keeps it from blooming against the black ground, not a dark filter over the image.
+
+**Per-case accent, reported not adopted.** Each case study's `csmeta` row may carry one `Accent` entry — a small square chip plus the client's own hex, in mono, like a spectrometer reading. Define it once as a `--case-accent` token in that page's own `:root` (this is the only place outside the primitive layer a literal hex is allowed — `check.mjs` enforces it) and use `var(--case-accent)` everywhere the chip needs it. It must never colour body text, links, or hover states — those stay house vermilion/cyan. Optionally the page's own crest (`ccMark` fill) may also take `var(--case-accent)` instead of vermilion — that fill swap is the ONE sanctioned fusion point between a client's identity and the house system. Geometry never changes: marks stay dots (see the existing rule above — this is not a new exception, it's the same one restated for the multi-case-study era).
+
+**`signal: response`.** The site already performs its own name in layout: "You say this / The plan changes," kept/cut, the two-tone colour grammar — paired statements, one answering the other. That's not incidental, it's the house rhetorical form, and it's why the studio's name is a doubled word split by a colon. Prefer a call-and-response pair over a single flat statement when a section has a genuine pair inside it (proposal/decision, before/after, claim/consequence). Don't force a pair where none exists — the three-way ledger (kept/cut/refused) and single declarative statements are both still correct where the content is genuinely one-sided.
+
+## Screenshot / headless verification recipe
+
+`/Applications/Google Chrome.app/Contents/MacOS/Google Chrome --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=1 --window-size=W,H --virtual-time-budget=4200 --screenshot=/tmp/out.png "http://localhost:8799/PAGE"`, served via `python3 -m http.server 8799` from the repo root.
+
+- **Budget below ~4000ms captures the boot loader** ("CALIBRATING") instead of the real page — use ≥4200.
+- **`transition-delay` does not advance under `--virtual-time-budget`.** Only JS timers (`setTimeout`/`setInterval`) do. A staggered `.reveal` figure that's missing from a screenshot at any budget is a verification artifact, not a bug — isolate the component instead: copy the page to a `_scratch.html`, wrap the piece in a `#posterStage{position:fixed;inset:0;z-index:99999}` overlay with the ancestor's `.reveal` class hand-set to `.reveal.in`, screenshot that, then **delete the scratch file**. Never commit a `_*.html` file.
+- An embedded browser pane can report a 0×0 viewport and freeze `requestAnimationFrame` — don't conclude a change is broken from that either; use the CLI recipe above.

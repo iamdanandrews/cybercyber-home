@@ -270,6 +270,13 @@ footer{border-top:1px solid var(--line);padding:26px 0;}
 
 /* --- differentiated sections --- */
 .nfy2{margin-top:clamp(34px,5vw,60px);display:grid;grid-template-columns:1.12fr .88fr;gap:1px;background:var(--line);border:1px solid var(--line);}
+.engine{margin-top:clamp(40px,6vw,72px);display:grid;grid-template-columns:.88fr 1.12fr;gap:1px;background:var(--line);border:1px solid var(--line);}
+@media(max-width:720px){.engine{grid-template-columns:1fr;}}
+.engine>div{background:var(--ground);padding:clamp(24px,3.2vw,44px);}
+.engine .el{font-size:var(--t-cap);font-family:var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--dim);}
+.engine .ex{margin-top:14px;font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:var(--t-lead);letter-spacing:-.01em;color:var(--paper);}
+.engine p{margin-top:14px;color:var(--paper70);font-size:var(--t-body);line-height:1.6;}
+.engine p a{color:var(--paper);border-bottom:1px solid var(--accent);padding-bottom:1px;}
 .nfy2 .ref{background:var(--ground);padding:clamp(26px,3.2vw,46px);transition:background .25s;}
 .nfy2 .ref:hover{background:var(--lift);}
 .nfy2 .x{color:var(--paper);font-size:var(--t-lead);display:block;margin-bottom:18px;}
@@ -811,7 +818,7 @@ section.reveal>.wrap{position:relative;}
 </div></header>
 
 <div class="mobile" id="mobile">
-  <a href="#top">Home</a><a href="#work">Work</a><a class="msub" href="work-granite.html">Granite</a><a class="msub" href="work-frame.html">Frame</a><a href="manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="#contact">Contact</a>
+  <a href="#top">Home</a><a href="#work">Work</a><a class="msub" href="work-kaido.html">Kaido</a><a class="msub" href="work-granite.html">Granite</a><a class="msub" href="work-frame.html">Frame</a><a href="manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="#contact">Contact</a>
 </div>
 
 <main id="top">
@@ -837,17 +844,22 @@ section.reveal>.wrap{position:relative;}
   <section id="work" class="reveal"><div class="wrap">
     <div class="shd"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Selected work<span class="ix">01 / INDEX</span></div>
     <h2 class="h2" style="--c:var(--paper)">The proof</h2>
-    <p class="lead">We don't just design for clients. We build our own products, too &mdash; and ship them into the world.</p></div>
+    <p class="lead">Three products of our own &mdash; designed, built, and shipped from this studio. A few times a year, a client gets the same team.</p></div>
     <div class="reel">
+      <a class="proj" href="work-kaido.html">
+        <div class="media stat" style="view-transition-name:m-kaido"><div class="duo-stack"><div class="device dv-a dv-wide" style="aspect-ratio:1600/1000"><img src="media/shots/k-today.webp" alt="Kaido — the clinician's view: patients who need attention first" loading="lazy" width="1600" height="1000"></div><div class="device dv-b dv-wide" style="aspect-ratio:1600/1000"><img src="media/shots/k-queue.webp" alt="Kaido — the review queue: proposed changes awaiting approval" loading="lazy" width="1600" height="1000"></div></div></div>
+        <div class="pinfo"><div class="pn" style="view-transition-name:t-kaido">Kaido<em>.</em></div><div class="pd">Criteria-based rehab planning for clinics.</div><p class="pf">It proposes and monitors a plan between visits &mdash; and never clears the patient. That call stays with the clinician.</p><div class="pm"><span>SaaS &middot; B2B</span><span>Web + iOS</span><span class="live">Piloting &middot; kaidohealth.co</span></div></div>
+      </a>
       <a class="proj" href="work-granite.html">
-        <div class="media stat" style="view-transition-name:m-granite"><div class="duo-stack"><div class="device dv-a"><img src="media/shots/g-patient-session.webp" alt="Granite — a rehab exercise from the physio, pinned into the patient's normal session" loading="lazy" width="620" height="1348"></div><div class="device dv-b dv-wide" style="aspect-ratio:1440/875"><img src="media/shots/g-clinic-queue.webp" alt="Granite Clinic — the review queue, proposed changes awaiting approval" loading="lazy" width="1440" height="875"></div></div></div>
-        <div class="pinfo"><div class="pn" style="view-transition-name:t-granite">Granite<em>.</em></div><div class="pd">Rehab planning for physiotherapists.</div><p class="pf">Approved in the queue, done inside the same session &mdash; the patient never opens a second app.</p><div class="pm"><span>iOS &middot; Native</span><span>On-device AI</span><span class="live">Piloting &middot; granite.coach/clinic</span></div></div>
+        <div class="media stat" style="view-transition-name:m-granite"><div class="duo-stack"><div class="device dv-a"><img src="media/shots/g-week.webp" alt="Granite — the training week, day by day" loading="lazy" width="680" height="1478"></div><div class="device dv-b"><img src="media/shots/g-coach.webp" alt="Granite — talking to the coach" loading="lazy" width="680" height="1478"></div></div></div>
+        <div class="pinfo"><div class="pn" style="view-transition-name:t-granite">Granite<em>.</em></div><div class="pd">A strength coach for athletes whose sport isn&rsquo;t lifting.</div><p class="pf">You rolled hard, not lifted heavy &mdash; so today&rsquo;s session already knows, and eases off.</p><div class="pm"><span>iOS &middot; Native</span><span>On-device AI</span><span class="live">Alpha &middot; granite.coach</span></div></div>
       </a>
       <a class="proj" href="work-frame.html">
         <div class="media stat" style="view-transition-name:m-frame"><div class="duo-stack"><div class="device dv-a"><img src="media/shots/f-today-light.webp" alt="Frame — today, personalized: injury-aware, with a game plan built from your own leaks" loading="lazy" width="680" height="1474"></div><div class="device dv-b"><img src="media/shots/f-leaks-light.webp" alt="Frame — your ranked leaks, with a drill for each" loading="lazy" width="680" height="1474"></div></div></div>
         <div class="pinfo"><div class="pn" style="view-transition-name:t-frame">Frame<em>.</em></div><div class="pd">Built against the forgetting curve.</div><p class="pf">The same mistake caught you seven times this month &mdash; so now there's one drill built to fix it.</p><div class="pm"><span>iOS &middot; Native</span><span>Spaced recall</span><span class="live">Alpha &middot; framebjj.app</span></div></div>
       </a>
       </div>
+    <div class="engine"><div><span class="el">One engine</span><div class="ex">Two products.</div></div><div><p>We built a deterministic coaching engine for <a href="work-granite.html">Granite</a> &mdash; every decision traceable, tested, on-device. When physiotherapists saw the weekly rewrite, the engine got a second job: <a href="work-kaido.html">Kaido</a> now proposes and monitors a rehab plan a clinician approves. Same rules, different governor.</p></div></div>
   </div></section>
 
   <div class="void" aria-hidden="true"><span class="vline"></span><span class="vnode"></span></div>
@@ -911,7 +923,7 @@ section.reveal>.wrap{position:relative;}
 <section class="index reveal"><div class="wrap">
     <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Index<span class="ix">06 / SITE</span></div>
     <div class="idx">
-      <a class="irow" href="#work"><span class="in">01</span><span class="il">Work</span><span class="dots"></span><span class="iv">Selected proof</span></a><a class="irow sub" href="work-granite.html"><span class="in">&mdash;</span><span class="il">Granite</span><span class="dots"></span><span class="iv">Strength coach &middot; on-device</span></a><a class="irow sub" href="work-frame.html"><span class="in">&mdash;</span><span class="il">Frame</span><span class="dots"></span><span class="iv">BJJ journal &middot; spaced recall</span></a>
+      <a class="irow" href="#work"><span class="in">01</span><span class="il">Work</span><span class="dots"></span><span class="iv">Selected proof</span></a><a class="irow sub" href="work-kaido.html"><span class="in">&mdash;</span><span class="il">Kaido</span><span class="dots"></span><span class="iv">Rehab platform &middot; criteria-based</span></a><a class="irow sub" href="work-granite.html"><span class="in">&mdash;</span><span class="il">Granite</span><span class="dots"></span><span class="iv">Strength coach &middot; on-device</span></a><a class="irow sub" href="work-frame.html"><span class="in">&mdash;</span><span class="il">Frame</span><span class="dots"></span><span class="iv">BJJ journal &middot; spaced recall</span></a>
       <a class="irow" href="#offerings"><span class="in">02</span><span class="il">Studio</span><span class="dots"></span><span class="iv">Rate card &middot; from &pound;5k</span></a>
       <a class="irow" href="manifesto.html"><span class="in">03</span><span class="il">Manifesto</span><span class="dots"></span><span class="iv">Ten beliefs</span></a>
       <a class="irow" href="journal.html"><span class="in">04</span><span class="il">Journal</span><span class="dots"></span><span class="iv">Seven notes</span></a>
