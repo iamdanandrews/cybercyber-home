@@ -725,8 +725,14 @@ section.reveal>.wrap{position:relative;}
   box-shadow:0 30px 70px -20px rgba(0,0,0,.7);}
 .media.stat .device img{display:block;width:100%;height:100%;object-fit:cover;}
 .media.stat .dv-a{margin-bottom:clamp(30px,5vw,56px);}
-.media.stat .device.dv-hero{position:relative;width:min(780px,88vw);border-radius:14px;overflow:hidden;background:#000;border:1px solid var(--line2);box-shadow:0 30px 70px -20px rgba(0,0,0,.7);}
+.media.stat .device.dv-hero{position:relative;width:min(780px,88vw);border-radius:4px;overflow:hidden;background:none;border:none;box-shadow:none;}
 .media.stat .device.dv-hero img{display:block;width:100%;height:100%;object-fit:cover;}
+/* Bare, not framed. The comp research was blunt on this: six of seven top-studio case
+   studies show real screens with no mockup chrome -- no bezel, no glass highlight, no
+   drop shadow simulating a floating panel. The .spec corner ticks already do the framing
+   job (a specimen mark, not device chrome); the shadow/radius/border under it was
+   decoration doing the same job twice. Wide/desktop shots go flat; phone-shaped .device
+   keeps its frame below, because a bare rectangle reads as a random crop, not a phone. */
 /* Kaido and IKARAO run one wide screen edge to edge; Granite and Frame ran two phones
    at 46vw each, dead space above and below both -- the one tile format that never
    filled its own frame. One phone, large, does what the duo was trying to do. */
