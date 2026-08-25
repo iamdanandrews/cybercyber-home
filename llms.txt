@@ -19,7 +19,7 @@ The site itself is hand-coded vanilla HTML, CSS and JavaScript with no build ste
 - [Kaido](https://cybercyber.ai/work-kaido.html): Criteria-based rehab planning for physiotherapy clinics. Proposes and monitors a patient's plan between visits; never clears them. Spun off Granite's coaching engine, piloting in clinics at £200/month.
 - [Granite](https://cybercyber.ai/work-granite.html): A native, on-device strength coach for athletes whose sport isn't lifting — rewrites your training every week around what your sport already cost your body. The engine that Kaido grew out of.
 - [Frame](https://cybercyber.ai/work-frame.html): A native BJJ training journal built against the forgetting curve.
-- [IKARAO](https://cybercyber.ai/work-ikarao.html): A generative brand engine for Bittensor. Type in a name, and it draws that name's own mark — deterministically, forever. The one client engagement among the four; the rest are the lab's own products.
+- [IKARAO](https://cybercyber.ai/work-ikarao.html): A generative identity system for Bittensor, art-directed off eighty-six reference textiles and enforced by a drawing engine rather than a style guide. The one client engagement among the four; the rest are the lab's own products.
 
 ## Journal
 
