@@ -78,7 +78,7 @@ main{padding-top:96px;}
 .csmedia:hover .vtoggle,.csmedia.paused .vtoggle{opacity:1;}
 .csmedia .vtoggle:hover{border-color:var(--cyan);color:var(--cyan);}
 @media(hover:none){.csmedia .vtoggle{opacity:1;}}
-.csbody{padding:clamp(70px,12vh,150px) 0;}
+.csbody{padding:clamp(70px,12vh,150px) 0 clamp(48px,8vh,100px);}
 .cs2{display:grid;grid-template-columns:1fr;gap:clamp(40px,7vw,90px);}
 @media(min-width:900px){.cs2{grid-template-columns:200px 1fr;gap:0;}.cslabel{position:sticky;top:104px;}.cs2>div:last-child{border-left:1px solid var(--line);padding-left:clamp(40px,5vw,72px);}}
 .cslabel{font-size:var(--t-cap);letter-spacing:.18em;text-transform:uppercase;color:var(--dim);}
@@ -96,11 +96,11 @@ main{padding-top:96px;}
 .csnext .n{font-family:var(--raveo);font-variation-settings:"wght" 640,"opsz" 32;font-size:var(--t-art);letter-spacing:-.03em;text-transform:uppercase;line-height:.92;transition:font-variation-settings .3s var(--e1);}
 .csnext a:hover .n{font-variation-settings:"wght" 840,"opsz" 32;}
 .csnext .n em{font-style:normal;color:var(--accent);}
-.void{position:relative;min-height:clamp(190px,32vh,360px);border-top:1px solid var(--line);}
-.void .vline{position:absolute;left:38%;bottom:0;width:1px;height:46%;background:linear-gradient(to top,var(--line2),transparent);}
-.void .vnode{position:absolute;left:38%;bottom:46%;width:7px;height:7px;border:1px solid var(--dim);border-radius:50%;transform:translate(-50%,50%);}
-.void .vcoord{position:absolute;right:clamp(20px,5vw,64px);top:clamp(22px,5vh,50px);font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.2em;word-spacing:.22em;text-transform:uppercase;color:var(--dim);opacity:.62;font-variant-numeric:tabular-nums;}
-@media(max-width:600px){.void{min-height:clamp(130px,22vh,200px);}}
+
+
+
+
+@media(max-width:600px){}
 footer{border-top:1px solid var(--line);padding:26px 0;}
 .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:var(--t-cap);letter-spacing:.08em;color:var(--grey);text-transform:uppercase;}
 .foot a:hover{color:var(--paper);}
@@ -114,9 +114,8 @@ footer{border-top:1px solid var(--line);padding:26px 0;}
 .reticle .v{height:7px;width:1px;left:50%;top:50%;transform:translate(-.5px,-50%);}
 .reticle.lock .ring{border-radius:3px;border-color:var(--cyan);}
 .coord{position:fixed;z-index:9998;pointer-events:none;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.1em;color:var(--dim);opacity:0;transition:opacity .3s;font-variant-numeric:tabular-nums;}
-.ivlabel{position:fixed;right:12px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.34em;text-transform:uppercase;color:var(--dim);z-index:120;pointer-events:none;}
 body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cursor:none;}
-@media(hover:none),(pointer:coarse){.reticle,.coord,.ivlabel{display:none!important;}}
+@media(hover:none),(pointer:coarse){.reticle,.coord,}
 
 .arted{background-size:cover;background-position:center;background-repeat:no-repeat;}
 .frame.arted::before{display:none;}
@@ -466,7 +465,6 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
       <div class="colophon reveal"><div><b>Stack</b><span>Web &middot; iOS &middot; one engine</span></div><div><b>Timeline</b><span>2026</span></div><div><b>Constraint</b><span>Proposes and monitors. Never clears.</span></div></div>
     </div>
   </div></section>
-  <div class="void" aria-hidden="true"><span class="vline"></span><span class="vnode"></span></div>
   <section class="csnext"><div class="wrap"><a href="work-granite.html"><div class="l">Next case</div><div class="n">Granite<em>.</em></div></a></div></section>
 </main>
 <footer><div class="wrap foot"><span>&copy; 2026 CYBERCYBER LTD &middot; London</span><span class="fseal" aria-hidden="true"><svg class="fmark" viewBox="0 0 100 100"><path d=""/></svg><span class="fref">------</span><span class="fchk" title="Linted before every publish: colour exists only as tokens &middot; no raw hex outside :root &middot; mobile nav present &middot; figures numbered in reading order &middot; journal cycle closed">CHK 05/05</span></span><a href="./">Home &uarr;</a></div></footer>
