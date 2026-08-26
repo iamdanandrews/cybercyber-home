@@ -64,10 +64,10 @@ a{color:inherit;text-decoration:none;}
 
 .loader{position:fixed;inset:0;z-index:1000;background:var(--ground);display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(20px,5vw,64px);transition:opacity .9s var(--e1);}
 .loader.done{opacity:0;pointer-events:none;}
-.loader .lpct,.loader .lrow{position:relative;z-index:2;transition:transform .9s var(--e1),opacity .55s var(--e1);}
-.loader.done .lpct,.loader.done .lrow{transform:translateY(-14px);opacity:0;}
+.loader .lpct,.loader .wkrow{position:relative;z-index:2;transition:transform .9s var(--e1),opacity .55s var(--e1);}
+.loader.done .lpct,.loader.done .wkrow{transform:translateY(-14px);opacity:0;}
 .loader .lgrid{position:absolute;inset:-40px;z-index:0;opacity:.5;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(120% 90% at 30% 50%,#000 30%,transparent 78%);-webkit-mask-image:radial-gradient(120% 90% at 30% 50%,#000 30%,transparent 78%);}
-.loader .lrow{position:relative;display:flex;justify-content:space-between;align-items:flex-end;font-size:var(--t-cap);letter-spacing:.18em;text-transform:uppercase;color:var(--grey);border-top:1px solid var(--line);padding-top:14px;}
+.loader .wkrow{position:relative;display:flex;justify-content:space-between;align-items:flex-end;font-size:var(--t-cap);letter-spacing:.18em;text-transform:uppercase;color:var(--grey);border-top:1px solid var(--line);padding-top:14px;}
 .loader .lstat{color:var(--cyan);}
 .loader .lpct{font-family:var(--raveo);font-variation-settings:"wght" 300,"opsz" 32;font-size:var(--t-h2);color:var(--paper);letter-spacing:-.03em;line-height:.9;font-variant-numeric:tabular-nums;}
 
@@ -212,9 +212,7 @@ section{position:relative;padding:clamp(96px,17vh,210px) 0 clamp(64px,11vh,140px
 .faq details{border-bottom:1px solid var(--line);}
 .faq summary{list-style:none;cursor:pointer;padding:16px 0;display:flex;justify-content:space-between;gap:20px;align-items:center;font-family:var(--raveo);font-variation-settings:"wght" 500,"opsz" 28;font-size:var(--t-mid);letter-spacing:-.015em;}
 .faq summary::-webkit-details-marker{display:none;}
-.faq summary .pm{color:var(--cyan);font-family:var(--mono);font-size:var(--t-lead);transition:transform .3s;}
-.faq details[open] summary .pm{transform:rotate(45deg);}
-.faq .inner{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s var(--e1);}
+.faq summary .faq details[open] summary .faq .inner{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s var(--e1);}
 .faq details[open] .inner{grid-template-rows:1fr;}
 .faq .ans{overflow:hidden;color:var(--paper70);font-size:var(--t-body);line-height:1.65;max-width:62ch;}
 .faq .ans p{padding:0 0 18px;}
@@ -371,54 +369,24 @@ section.reveal>.wrap{position:relative;}
 /* --- video-led work reel --- */
 .statl{transition:color .2s;position:relative;}
 .statl:hover{color:var(--paper);}
-.reel{margin-top:clamp(34px,5vw,64px);display:flex;flex-direction:column;gap:clamp(60px,10vw,150px);}
-.proj{display:grid;grid-template-columns:1fr;gap:clamp(20px,3vw,34px);align-items:center;}
 .media{position:relative;aspect-ratio:2/3;max-width:440px;width:100%;margin-inline:auto;background:var(--s1);border:1px solid var(--line);overflow:hidden;}
 .media .rv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s;}
 .media.playing .rv{opacity:1;}
 .media .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:46px 46px;background-position:center;}
 .media .pp{width:62px;height:62px;border:1px solid var(--paper45);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--paper);font-size:var(--t-body);padding-left:3px;transition:transform .35s var(--e1),border-color .3s;}
-.proj:hover .pp{transform:scale(1.14);border-color:var(--accent);}
 .media .mtag{position:absolute;top:15px;left:15px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.16em;text-transform:uppercase;color:var(--paper45);}
 .media .mgo{position:absolute;bottom:15px;right:15px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.12em;text-transform:uppercase;color:var(--paper);opacity:0;transform:translateY(6px);transition:.3s var(--e1);}
 .media.playing .ph{opacity:0;transition:opacity .5s var(--e1);}
 .media .vtoggle{position:absolute;bottom:14px;left:14px;z-index:4;width:34px;height:34px;border:1px solid rgba(242,236,239,.45);border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(11,11,13,.35);-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);color:var(--paper);font-size:var(--t-cap);letter-spacing:1px;opacity:0;transition:opacity .3s var(--e1),border-color .2s;}
 .media.playing .vtoggle{opacity:0;}
-.proj:hover .media.playing .vtoggle,.media.paused .vtoggle{opacity:1;}
 .media .vtoggle:hover{border-color:var(--cyan);color:var(--cyan);}
 @media(hover:none){.media.playing .vtoggle{opacity:1;}}
-.proj:hover .mgo{opacity:1;transform:none;}
-.proj.static{cursor:default;}
-.proj.static:hover .pn{font-variation-settings:"wght" 640,"opsz" 32;}
-.proj.static:hover .media::after{box-shadow:none;}
-.proj.static:hover .pp{transform:none;border-color:var(--paper45);}
-.proj.static .pn em{color:var(--dim);}
 .media::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px transparent;transition:box-shadow .3s;pointer-events:none;}
-.proj:hover .media::after{box-shadow:inset 0 0 0 1px var(--accent);}
-.pinfo{display:flex;flex-direction:column;align-items:flex-start;gap:14px;}
-.pn{font-family:var(--raveo);font-variation-settings:"wght" 640,"opsz" 32;font-size:var(--t-title);letter-spacing:-.025em;line-height:.98;transition:font-variation-settings .3s var(--e1);}
-.proj:hover .pn{font-variation-settings:"wght" 840,"opsz" 32;}
-.pn em{font-style:normal;color:var(--paper);}
-.pn .pacc{display:inline-block;width:10px;height:10px;margin-left:16px;vertical-align:clamp(8px,1.6vw,22px);}
-.pd{color:var(--paper70);font-size:var(--t-body);max-width:42ch;}
-.pm{--sep-gap:11px;display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin-top:2px;font-variant-numeric:tabular-nums;}
-.pm .live{color:var(--cyan);}
 .chip{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);border:1px solid var(--line2);border-radius:999px;padding:6px 13px 6px 11px;line-height:1;}
 .chip .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);animation:chippulse 2.4s var(--e1) infinite;}
 @keyframes chippulse{0%{box-shadow:0 0 0 0 rgba(34,211,238,.55);}70%{box-shadow:0 0 0 8px rgba(34,211,238,0);}100%{box-shadow:0 0 0 0 rgba(34,211,238,0);}}
 @media(prefers-reduced-motion:reduce){.chip .dot{animation:none;}}
-@media(min-width:820px){.proj{grid-template-columns:1.7fr 1fr;gap:clamp(40px,5vw,96px);}.proj .media{margin-inline:0;}.proj>.spec{justify-self:end;}.proj .pinfo{padding-block:clamp(10px,3vw,40px);}
-  /* order alone only changes VISUAL position -- grid auto-placement still assigns
-     tracks by order value, so the reordered .media landed in the narrow 1fr track
-     while .pinfo took the wide 1.7fr one. A single flush image just shrank to fit
-     and hid this; the duo-stack has real minimum widths and overflowed the
-     viewport because of it. Swap the track sizes too, not just the item order. */
-  .proj:nth-child(even){grid-template-columns:1fr 1.7fr;}
-  /* ...and then the same mistake was made again, one level up. Wrapping the media in
-     .spec for the corner brackets made THAT the grid item, so order/justify-self on
-     .media silently stopped moving anything and all four rows rendered image-left --
-     the alternation was in the stylesheet but not on the page. Target the grid item. */
-  .proj:nth-child(even)>.spec{order:2;justify-self:start;}}.footseal{width:76px;height:76px;color:var(--accent);flex:none;view-transition-name:brand-seal;}.footseal text{font-family:var(--mono);font-size:8.4px/*svg units*/;letter-spacing:1.2px;fill:currentColor;}.footseal .stb{font-size:7px/*svg units*/;letter-spacing:2.2px;}
+.footseal{width:76px;height:76px;color:var(--accent);flex:none;view-transition-name:brand-seal;}.footseal text{font-family:var(--mono);font-size:8.4px/*svg units*/;letter-spacing:1.2px;fill:currentColor;}.footseal .stb{font-size:7px/*svg units*/;letter-spacing:2.2px;}
 
 /* offerings rate card */
 .os .ono{display:block;margin-top:9px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.1em;color:var(--dim);}
@@ -583,11 +551,6 @@ section.reveal>.wrap{position:relative;}
 .hero .hanchor .hmark circle{fill:var(--dim);}
 @media(max-width:600px){.hero .hanchor .hmark{width:74px;height:74px;}}
 
-/* One separator, one rhythm. The dot is the site's peer-separator everywhere
-   (Reel 01 · Loop, Alpha · granite.coach), so the reel meta uses it BETWEEN fields
-   too rather than leaving a bare gap that competes with the dots inside them. */
-.proj .pm{column-gap:var(--sep-gap);}
-.proj .pm > span + span::before{content:"\00B7";color:var(--dim);margin-right:var(--sep-gap);}
 
 /* The held mark proves itself on hover, twice over: the whole crest brightens,
    and each word of the caption underneath holds its OWN seed — hovering "Brand"
@@ -662,8 +625,7 @@ section.reveal>.wrap{position:relative;}
    inconsistency. Same language, same tokens, no new device. */
 .faq summary{padding-inline:0;padding-block:clamp(18px,2vw,24px);transition:background-color var(--dur-2) var(--e1);}
 .faq summary:hover{background:var(--lift);}
-.faq summary:hover .pm{color:var(--paper);}
-.faq details[open] summary{font-variation-settings:"wght" 640,"opsz" 24;}
+.faq summary:hover .faq details[open] summary{font-variation-settings:"wght" 640,"opsz" 24;}
 .faq summary:focus-visible{background:var(--lift);}
 @media(prefers-reduced-motion:reduce){.faq summary{transition:none;}}
 
@@ -700,40 +662,6 @@ section.reveal>.wrap{position:relative;}
 .who .wlink:hover{border-bottom-color:var(--cyan);}
 @media(max-width:819px){.who{grid-template-columns:1fr;}}
 
-/* THE WORK TILES CARRY MULTIPLE REAL SCREENS NOW, NOT ONE CROP. Checked directly
-   against real studio sites (Instrument, basement.studio, Work & Co) rather than
-   reasoned from principle. Instrument's own case-study tiles hold one styled product
-   photograph each -- but their homepage hero is a presentation layer of several real
-   artifacts together, which is the specific thing that reads as a considered body of
-   work rather than a single lucky screenshot. Adopted the multiplicity, not the
-   scattered/rotated collage styling -- random rotation would fight this site's own
-   grid discipline, so the two screens are staggered cleanly on a fixed diagonal, not
-   scattered. Real, complete, uncropped device screens -- .device reuses the exact
-   phone-frame convention the case studies already use, so it isn't a new visual
-   language, just a second one of it. No mat, no colour flip, same dark ground. */
-/* The specimen window -- corner brackets frame each tile's media as one exhibit under
-   glass. House device, house brackets; the screenshots inside stay exactly as they are,
-   whatever product they're from. Same component as the case-study hero frame. */
-.proj .spec{position:relative;display:inline-block;}
-.proj .spec>i{position:absolute;width:16px;height:16px;border:1.5px solid var(--dim);z-index:3;pointer-events:none;}
-.proj .spec>i:nth-child(1){top:-10px;left:-10px;border-right:0;border-bottom:0;}
-.proj .spec>i:nth-child(2){top:-10px;right:-10px;border-left:0;border-bottom:0;}
-.proj .spec>i:nth-child(3){bottom:-10px;left:-10px;border-right:0;border-top:0;}
-.proj .spec>i:nth-child(4){bottom:-10px;right:-10px;border-left:0;border-top:0;}
-.media.stat{aspect-ratio:auto;max-width:none;display:flex;flex-direction:column;
-  background:none;border:none;}
-/* Side by side, not stacked -- an overlapping deck hid part of the back screen, which
-   argues against the whole point of showing two real screens instead of one crop.
-   A vertical offset (dv-a sits higher) keeps the asymmetry without ever occluding
-   either one. Both screens fully visible, always. */
-.media.stat .duo-stack{display:flex;align-items:flex-end;gap:clamp(20px,3vw,36px);}
-.media.stat .device{position:relative;width:min(260px,46vw);aspect-ratio:680/1478;
-  border-radius:22px;overflow:hidden;background:#000;border:1px solid var(--line2);
-  box-shadow:0 30px 70px -20px rgba(0,0,0,.7);}
-.media.stat .device img{display:block;width:100%;height:100%;object-fit:cover;}
-.media.stat .dv-a{margin-bottom:clamp(30px,5vw,56px);}
-.media.stat .device.dv-hero{position:relative;width:min(780px,88vw);border-radius:4px;overflow:hidden;background:none;border:none;box-shadow:none;}
-.media.stat .device.dv-hero img{display:block;width:100%;height:100%;object-fit:cover;}
 /* Bare, not framed. The comp research was blunt on this: six of seven top-studio case
    studies show real screens with no mockup chrome -- no bezel, no glass highlight, no
    drop shadow simulating a floating panel. The .spec corner ticks already do the framing
@@ -746,15 +674,7 @@ section.reveal>.wrap{position:relative;}
    or staged, the crop is the only edit. */
 /* No hover ring on the images at all now -- a shared outline can't cleanly trace two
    staggered, overlapping devices without fragmenting at the overlap, and the tile
-   already has a complete hover signal that has nothing to do with the photos: .pn
-   bolds (640->840) and the custom cursor already reads "Open case" on any .proj.
-   Adding a third signal to the images themselves would be answering a question
-   nobody's asking twice. */
-.media.stat::after{display:none;}
-.pf{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;
-  font-size:var(--t-lead);line-height:1.35;letter-spacing:-.01em;color:var(--paper);
-  max-width:34ch;}
-
+   already has a complete hover signal that has nothing to do with the photos: 
 /* Nested register rows. The case studies were reachable only from two tiles on this page --
    not from the nav, not from here, not from any other page -- so the most crafted pages on
    the site were orphaned. Indented and dashed rather than numbered, because they sit UNDER
@@ -810,13 +730,45 @@ section.reveal>.wrap{position:relative;}
    panel IS the navigation surface. Indented, mono, dimmer: under Work, not beside it. */
 .mobile a.msub{font-family:var(--mono);font-variation-settings:normal;font-size:var(--t-cap);
   letter-spacing:.14em;padding:10px 0 10px 22px;color:var(--paper70);border-bottom:1px solid var(--line);}
-.fchk{font-family:var(--mono);font-size:var(--t-cap);color:var(--dim);letter-spacing:.14em;cursor:help;}</style>
+.fchk{font-family:var(--mono);font-size:var(--t-cap);color:var(--dim);letter-spacing:.14em;cursor:help;}
+/* THE LEDGER (replaces the reel -- see the markup note). One shared grid, hairline
+   rules between rows, the name as the display object. Uniform rows on purpose: the
+   rhythm of a ledger is its rules, not a zigzag. Hover spends the site's one
+   signature type move (the variable-weight swell) plus a quiet zoom in the frame. */
+.ledger{margin-top:clamp(34px,5vw,64px);border-top:1px solid var(--line2);}
+.wkrow{display:grid;grid-template-columns:1fr;gap:clamp(18px,3vw,30px);align-items:center;
+  padding:clamp(30px,4.5vh,54px) 0 clamp(34px,5vh,60px);border-bottom:1px solid var(--line);}
+@media(min-width:820px){.wkrow{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,5vw,96px);}}
+.wkmedia{min-width:0;}
+.wkrow .spec{position:relative;display:block;}
+.wkrow .spec>i{position:absolute;width:16px;height:16px;border:1.5px solid var(--dim);z-index:3;pointer-events:none;}
+.wkrow .spec>i:nth-child(1){top:-9px;left:-9px;border-right:0;border-bottom:0;}
+.wkrow .spec>i:nth-child(2){top:-9px;right:-9px;border-left:0;border-bottom:0;}
+.wkrow .spec>i:nth-child(3){bottom:-9px;left:-9px;border-right:0;border-top:0;}
+.wkrow .spec>i:nth-child(4){bottom:-9px;right:-9px;border-left:0;border-top:0;}
+.wkframe{position:relative;width:100%;overflow:hidden;border-radius:4px;background:var(--s1);}
+.wkframe img{display:block;width:100%;height:100%;object-fit:cover;transform:scale(1);transition:transform .6s var(--e-settle);}
+.wkrow:hover .wkframe img{transform:scale(1.022);}
+.wktext{min-width:0;display:flex;flex-direction:column;gap:12px;}
+@media(min-width:820px){.wktext{text-align:right;align-items:flex-end;}}
+.wkn{font-family:var(--raveo);font-variation-settings:"wght" 640,"opsz" 32;
+  font-size:clamp(44px,6.8vw,104px);letter-spacing:-.035em;line-height:.92;text-transform:none;
+  transition:font-variation-settings .3s var(--e1);}
+.wkrow:hover .wkn{font-variation-settings:"wght" 840,"opsz" 32;}
+.wkn em{font-style:normal;color:var(--accent);}
+.wkn .pacc{display:inline-block;width:10px;height:10px;margin-left:16px;vertical-align:clamp(8px,1.6vw,22px);}
+.wkd{color:var(--paper70);font-size:var(--t-body);max-width:38ch;}
+.wkm{--sep-gap:11px;display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:var(--t-cap);
+  letter-spacing:.14em;text-transform:uppercase;color:var(--grey);font-variant-numeric:tabular-nums;}
+@media(min-width:820px){.wkm{justify-content:flex-end;}}
+.wkm .live{color:var(--cyan);}
+</style>
 
 <div class="loader" id="loader" aria-hidden="true">
   
   <div class="lgrid"></div>
   <div class="lpct"><span id="lpct">0</span></div>
-  <div class="lrow"><span class="lstat" id="lstat">INITIALISING</span><span>Est. London</span></div>
+  <div class="wkrow"><span class="lstat" id="lstat">INITIALISING</span><span>Est. London</span></div>
 </div>
 
 <div class="reticle" id="ret" aria-hidden="true"><span class="ring"></span><b class="h"></b><b class="v"></b><span class="verb" id="verb">View</span></div>
@@ -865,25 +817,31 @@ section.reveal>.wrap{position:relative;}
     <div class="shd"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Selected work<span class="ix">01 / INDEX</span></div>
     <h2 class="h2" style="--c:var(--paper)">The proof</h2>
     <p class="lead">Three products of our own, and the rare client good enough to earn the same team. Below is one of them.</p></div>
-    <div class="reel">
-      <a class="proj" href="work-kaido.html">
-        <div class="spec"><i></i><i></i><i></i><i></i><div class="media stat" style="view-transition-name:m-kaido"><div class="device dv-hero" style="aspect-ratio:1600/1000"><img src="media/shots/k-today.webp" alt="Kaido — the clinician's view: patients who need attention first, each with a reason and a trend" loading="lazy" width="1600" height="1000"></div></div></div>
-        <div class="pinfo"><div class="pn" style="view-transition-name:t-kaido">Kaido<em>.</em><i class="pacc" aria-hidden="true" style="background:var(--acc-kaido)"></i></div><div class="pd">Criteria-based rehab planning for clinics.</div><p class="pf">It proposes and monitors a plan between visits &mdash; and never clears the patient. That call stays with the clinician.</p><div class="pm"><span>SaaS &middot; B2B</span><span>Web + iOS</span><span class="live">Piloting &middot; kaidohealth.co</span></div></div>
+    <!-- THE LEDGER. The alternating image+paragraph reel was the one pattern the field
+     research found exactly once at the top tier, and only animated. What dominates
+     instead: the project NAME at display scale as the primary object, images on one
+     shared hairline grid, metadata cut to a line -- the section reads as one composed
+     instrument panel, not four stacked banners. Uniform rows on rules; the proof
+     paragraphs live in the case studies where they belong. -->
+    <div class="ledger">
+      <a class="wkrow" href="work-kaido.html">
+        <div class="wkmedia"><div class="spec"><i></i><i></i><i></i><i></i><div class="wkframe" style="view-transition-name:m-kaido;aspect-ratio:1600/1000"><img src="media/shots/k-today.webp" alt="Kaido — the clinician’s view: patients who need attention first, each with a reason and a trend" loading="lazy" width="1600" height="1000"></div></div></div>
+        <div class="wktext"><div class="wkn" style="view-transition-name:t-kaido">Kaido<em>.</em><i class="pacc" aria-hidden="true" style="background:var(--acc-kaido)"></i></div><div class="wkd">Criteria-based rehab planning for clinics &mdash; proposes and monitors, never clears.</div><div class="wkm"><span>SaaS &middot; B2B</span><span class="live">Piloting &middot; kaidohealth.co</span></div></div>
       </a>
-      <a class="proj" href="work-granite.html">
-        <div class="spec"><i></i><i></i><i></i><i></i><div class="media stat" style="view-transition-name:m-granite"><div class="device dv-hero" style="aspect-ratio:1600/780"><img src="media/shots/g-tile.webp" alt="Granite — the week the engine builds, the coach you talk to, and the plateau it caught" loading="lazy" width="1600" height="780"></div></div></div>
-        <div class="pinfo"><div class="pn" style="view-transition-name:t-granite">Granite<em>.</em><i class="pacc" aria-hidden="true" style="background:var(--acc-granite)"></i></div><div class="pd">A strength coach for athletes whose sport isn&rsquo;t lifting.</div><p class="pf">You rolled hard, not lifted heavy &mdash; so today&rsquo;s session already knows, and eases off.</p><div class="pm"><span>iOS &middot; Native</span><span>On-device AI</span><span class="live">Alpha &middot; granite.coach</span></div></div>
+      <a class="wkrow" href="work-granite.html">
+        <div class="wkmedia"><div class="spec"><i></i><i></i><i></i><i></i><div class="wkframe" style="view-transition-name:m-granite;aspect-ratio:1600/780"><img src="media/shots/g-tile.webp" alt="Granite — the week the engine builds, the week after you tell it something, and the plateau it caught" loading="lazy" width="1600" height="780"></div></div></div>
+        <div class="wktext"><div class="wkn" style="view-transition-name:t-granite">Granite<em>.</em><i class="pacc" aria-hidden="true" style="background:var(--acc-granite)"></i></div><div class="wkd">A strength coach for athletes whose sport isn&rsquo;t lifting.</div><div class="wkm"><span>iOS &middot; On-device AI</span><span class="live">Alpha &middot; granite.coach</span></div></div>
       </a>
-      <a class="proj" href="work-frame.html">
-        <div class="spec"><i></i><i></i><i></i><i></i><div class="media stat" style="view-transition-name:m-frame"><div class="device dv-hero" style="aspect-ratio:1600/780"><img src="media/shots/f-tile.webp" alt="Frame — today's game plan, your ranked leaks, and the map of where you actually get caught" loading="lazy" width="1600" height="780"></div></div></div>
-        <div class="pinfo"><div class="pn" style="view-transition-name:t-frame">Frame<em>.</em><i class="pacc" aria-hidden="true" style="background:var(--acc-frame)"></i></div><div class="pd">Built against the forgetting curve.</div><p class="pf">The same mistake caught you seven times this month &mdash; so now there's one drill built to fix it.</p><div class="pm"><span>iOS &middot; Native</span><span>Spaced recall</span><span class="live">Alpha &middot; framebjj.app</span></div></div>
+      <a class="wkrow" href="work-frame.html">
+        <div class="wkmedia"><div class="spec"><i></i><i></i><i></i><i></i><div class="wkframe" style="view-transition-name:m-frame;aspect-ratio:1600/780"><img src="media/shots/f-tile.webp" alt="Frame — today’s game plan, your ranked leaks, and the map of where you actually get caught" loading="lazy" width="1600" height="780"></div></div></div>
+        <div class="wktext"><div class="wkn" style="view-transition-name:t-frame">Frame<em>.</em><i class="pacc" aria-hidden="true" style="background:var(--acc-frame)"></i></div><div class="wkd">A BJJ journal built against the forgetting curve.</div><div class="wkm"><span>iOS &middot; Spaced recall</span><span class="live">Alpha &middot; framebjj.app</span></div></div>
       </a>
-      <a class="proj" href="work-ikarao.html">
-        <div class="spec"><i></i><i></i><i></i><i></i><div class="media stat" style="view-transition-name:m-ikarao"><div class="device dv-hero" style="aspect-ratio:1600/786"><img src="media/shots/i-hero2.webp" alt="IKARAO — a field of generated marks, each one a different subnet name, cut by the frame rather than shown whole" loading="lazy" width="1600" height="786"></div></div></div>
-        <div class="pinfo"><div class="pn" style="view-transition-name:t-ikarao">IKARAO<em>.</em><i class="pacc" aria-hidden="true" style="background:var(--acc-ikarao)"></i></div><div class="pd">A generative identity system for Bittensor.</div><p class="pf">Line weight, colour, symmetry &mdash; every rule pulled from eighty-six reference textiles and enforced by the engine, not a style guide.</p><div class="pm"><span>Brand &middot; Engine</span><span>Client</span><span class="live">Delivered &middot; bittensor.com</span></div></div>
+      <a class="wkrow" href="work-ikarao.html">
+        <div class="wkmedia"><div class="spec"><i></i><i></i><i></i><i></i><div class="wkframe" style="view-transition-name:m-ikarao;aspect-ratio:1600/786"><img src="media/shots/i-hero2.webp" alt="IKARAO — a field of generated marks, each one a different subnet name, cut by the frame rather than shown whole" loading="lazy" width="1600" height="786"></div></div></div>
+        <div class="wktext"><div class="wkn" style="view-transition-name:t-ikarao">IKARAO<em>.</em><i class="pacc" aria-hidden="true" style="background:var(--acc-ikarao)"></i></div><div class="wkd">A generative identity system for Bittensor.</div><div class="wkm"><span>Brand &middot; Engine</span><span class="live">Delivered &middot; bittensor.com</span></div></div>
       </a>
-      </div>
-  </div></section>
+    </div>
+  </section>
 
   <section id="offerings" class="reveal"><div class="wrap">
     <div class="shd rev"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Work with us<span class="ix">02 / STUDIO</span></div>
@@ -1103,7 +1061,7 @@ section.reveal>.wrap{position:relative;}
     });
     addEventListener("mousedown",function(){ret.classList.add("press");},{passive:true});addEventListener("mouseup",function(){ret.classList.remove("press");},{passive:true});
     addEventListener("mouseleave",function(){ret.style.opacity="0";coord.style.opacity="0";});
-    function label(el){if(el.closest(".foldbreak"))return"Enter \u2193";if(el.closest(".proj"))return"Open case \u2197";if(el.closest(".jrnl")||el.closest(".jall"))return"Read \u2197";if(el.tagName==="SUMMARY"||el.closest(".faq"))return"Expand";if(el.id==="email")return"Copy";if(el.id==="clk"||el.closest(".clock"))return"Cycle \u00b7 TZ";if(el.closest(".statl"))return"Rates \u2197";if(el.closest("header"))return"Go";return"Go \u2197";}
+    function label(el){if(el.closest(".foldbreak"))return"Enter \u2193";if(el.closest(".wkrow"))return"Open case \u2197";if(el.closest(".jrnl")||el.closest(".jall"))return"Read \u2197";if(el.tagName==="SUMMARY"||el.closest(".faq"))return"Expand";if(el.id==="email")return"Copy";if(el.id==="clk"||el.closest(".clock"))return"Cycle \u00b7 TZ";if(el.closest(".statl"))return"Rates \u2197";if(el.closest("header"))return"Go";return"Go \u2197";}
     document.querySelectorAll("a,button,summary,[role=button]").forEach(function(el){
       el.addEventListener("mouseenter",function(){ret.classList.add("lock");ret.style.width="42px";ret.style.height="42px";verb.textContent=label(el);});
       el.addEventListener("mouseleave",function(){ret.classList.remove("lock");ret.style.width="24px";ret.style.height="24px";});
