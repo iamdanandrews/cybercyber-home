@@ -355,6 +355,10 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .pdetail .pcap{margin:0;padding:18px 20px 22px;background:var(--s1);border-top:1px solid var(--line);max-width:none;text-align:left;}
 .pdetail .pcap .pd{font-size:var(--t-body);line-height:1.55;}
 @media(max-width:680px){.pdetail{width:80%;}}
+.csmeta .acc{display:inline-block;width:10px;height:10px;background:var(--case-accent);margin-right:8px;vertical-align:-1px;}
+/* pair captions obey the same quiet-caption law as the leads */
+.pfig.pair .pcap .pd{font-size:var(--t-lead);line-height:1.5;color:var(--paper70);}
+.pfig.pair .pcap{max-width:62ch;}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -378,7 +382,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
       <div class="eyebrow"><svg class="ehmark" id="ehmark" viewBox="0 0 12 12" aria-hidden="true" style="view-transition-name:mk-frame"><path d=""/></svg>Case study<span class="ix">02 / FRAME</span></div>
       <h1 class="csh1" style="view-transition-name:t-frame">Frame</h1>
       <p class="premise">A BJJ training journal built against the forgetting curve.</p>
-      <div class="csmeta"><div><b>Services</b><span>Native &middot; On-device</span></div><div><b>Site</b><span><a href="https://www.framebjj.app" target="_blank" rel="noopener">framebjj.app &nearr;</a></span></div><div><b>Role</b><span>Design + build</span></div><div><b>Status</b><span>Alpha</span></div><div><b>Year</b><span>2026</span></div></div>
+      <div class="csmeta"><div><b>Services</b><span>Native &middot; On-device</span></div><div><b>Site</b><span><a href="https://www.framebjj.app" target="_blank" rel="noopener">framebjj.app &nearr;</a></span></div><div><b>Role</b><span>Design + build</span></div><div><b>Status</b><span>Alpha</span></div><div><b>Year</b><span>2026</span></div><div><b>Accent</b><span><i class="acc" aria-hidden="true"></i>#7B3AEB</span></div></div>
     </div>
     <figure class="cshmedia">
       <div class="device device-lg" style="view-transition-name:m-frame"><img src="media/shots/f-today-light.webp" alt="Frame — today, personalized: injury-aware, with a game plan built from your own leaks" loading="eager" width="680" height="1474"></div>
@@ -417,7 +421,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
       <div class="colophon reveal"><div><b>Stack</b><span>Swift &middot; SwiftUI &middot; on-device transcription</span></div><div><b>Timeline</b><span>2026</span></div><div><b>Constraint</b><span>Offline-first. Exportable. Never sold.</span></div></div>
     </div>
   </div></section>
-  <section class="csnext"><div class="wrap"><a href="work-granite.html"><div class="l">Next case</div><div class="n">Granite<em>.</em></div></a></div></section>
+  <section class="csnext"><div class="wrap"><a href="work-ikarao.html"><div class="l">Next case</div><div class="n">IKARAO<em>.</em></div></a></div></section>
 </main>
 <footer><div class="wrap foot"><span>&copy; 2026 CYBERCYBER LTD &middot; London</span><span class="fseal" aria-hidden="true"><svg class="fmark" viewBox="0 0 100 100"><path d=""/></svg><span class="fref">------</span><span class="fchk" title="Linted before every publish: colour exists only as tokens &middot; no raw hex outside :root &middot; mobile nav present &middot; figures numbered in reading order &middot; journal cycle closed">CHK 05/05</span></span><a href="./">Home &uarr;</a></div></footer>
 <script>
