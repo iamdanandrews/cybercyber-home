@@ -4,7 +4,7 @@
 
 cyber:cyber is a product design lab, not an agency and not a studio-for-hire. The work spans the whole stack of a product: brand, interface, and the code underneath — including the technical surfaces most designers hand off. Engagements are fixed-scope and fixed-price, measured in weeks rather than quarters, and deliberately few per year.
 
-The lab's own products are the proof rather than a client list: two native iOS apps, Granite and Frame, both designed and built in-house. Both case studies below use real screens captured from the shipping apps, not mockups.
+The lab's own products are the proof rather than a client list: Kaido (clinical rehab planning), Granite and Frame (native iOS apps), all designed and built in-house, plus one delivered client engagement (IKARAO, for Bittensor). Every case study uses real screens captured from the shipping products, not mockups.
 
 The site itself is hand-coded vanilla HTML, CSS and JavaScript with no build step and no framework — one self-contained file per page. That is a deliberate position, argued in the journal note "The hardest client was us".
 
@@ -23,6 +23,7 @@ The site itself is hand-coded vanilla HTML, CSS and JavaScript with no build ste
 
 ## Journal
 
+- [The sea lion papers](https://cybercyber.ai/journal-sea-lion.html): Ninety fabricated research citations, caught by checking every one against PubMed — and what a clinical product owes a clinician after that.
 - [The word before it drifted](https://cybercyber.ai/journal-the-word.html): cyber comes from the Greek for helmsman, and "governor" is the same word by a different road — what that means for a studio whose products are literally feedback loops with a human at the wheel.
 - [The hardest client was us](https://cybercyber.ai/journal-hardest-client.html): Why the lab's own site was treated as the hardest brief of the year — hand-built, deliberately empty, real screens over mockups.
 - [Nobody wrote it down](https://cybercyber.ai/journal-undocumented.html): On confabulation, contextual inquiry, and why almost no software will make a decision.

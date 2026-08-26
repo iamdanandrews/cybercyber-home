@@ -373,7 +373,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .fseal{display:inline-flex;align-items:center;gap:9px;}
 .fmark{width:20px;height:20px;display:block;opacity:.75;}
 .fmark path{fill:var(--dim);}
-.fref{font-variant-numeric:tabular-nums;letter-spacing:.14em;}
+.fref{font-variant-numeric:tabular-nums;letter-spacing:.14em;}.fchk{color:var(--dim);letter-spacing:.14em;margin-left:14px;cursor:help;}
 
 /* Nested case-study routes in the mobile panel — same doctrine as the site register:
    the deepest pages must be reachable from the navigation surface, and on a phone the
@@ -485,7 +485,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
   <div class="void" aria-hidden="true"><span class="vline"></span><span class="vnode"></span></div>
   <section class="csnext"><div class="wrap"><a href="work-kaido.html"><div class="l">Next case</div><div class="n">Kaido<em>.</em></div></a></div></section>
 </main>
-<footer><div class="wrap foot"><span>&copy; 2026 CYBERCYBER LTD &middot; London</span><span class="fseal" aria-hidden="true"><svg class="fmark" viewBox="0 0 100 100"><path d=""/></svg><span class="fref">------</span></span><a href="./">Home &uarr;</a></div></footer>
+<footer><div class="wrap foot"><span>&copy; 2026 CYBERCYBER LTD &middot; London</span><span class="fseal" aria-hidden="true"><svg class="fmark" viewBox="0 0 100 100"><path d=""/></svg><span class="fref">------</span><span class="fchk" title="Linted before every publish: colour exists only as tokens &middot; no raw hex outside :root &middot; mobile nav present &middot; figures numbered in reading order &middot; journal cycle closed">CHK 05/05</span></span><a href="./">Home &uarr;</a></div></footer>
 <script>
 (function(){
   var hdr=document.getElementById("hdr");addEventListener("scroll",function(){hdr.classList.toggle("solid",scrollY>40);},{passive:true});

@@ -39,7 +39,7 @@
 @font-face{font-family:"Raveo";src:url("RaveoVF.woff2") format("woff2");font-weight:100 900;font-stretch:normal;font-display:block;}
 :root{
   --ground:#0B0B0D; --paper:#F2ECEF; --paper70:#C3BEC6; --paper45:#9E9BA6;
-  --accent:#EA4E32; --accent-ink:var(--ground); --cyan:#22D3EE;--lift:#100F14;--ink-mut:#8F8A83;--e-wipe:cubic-bezier(.7,0,.2,1);/* the About inversion wipe *//* muted ink on the paper panel *//* the surface an interactive row lifts to on hover */ --cool:#22D3EE;
+  --accent:#EA4E32;--acc-kaido:#38EDD1;--acc-granite:#38EDD1;--acc-frame:#7B3AEB;--acc-ikarao:#A8341F; --accent-ink:var(--ground); --cyan:#22D3EE;--lift:#100F14;--ink-mut:#8F8A83;--e-wipe:cubic-bezier(.7,0,.2,1);/* the About inversion wipe *//* muted ink on the paper panel *//* the surface an interactive row lifts to on hover */ --cool:#22D3EE;
   --violet:#A855F7; --magenta:#FF4D8D; --lime:#C6F24E; --blue:#2E8BFF; --coral:#FF6B4A;
   --grey:#948FA0; --dim:#8C8996; --line:#211F27; --line2:#2C2A33;
   --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
@@ -399,6 +399,7 @@ section.reveal>.wrap{position:relative;}
 .pn{font-family:var(--raveo);font-variation-settings:"wght" 640,"opsz" 32;font-size:var(--t-title);letter-spacing:-.025em;line-height:.98;transition:font-variation-settings .3s var(--e1);}
 .proj:hover .pn{font-variation-settings:"wght" 840,"opsz" 32;}
 .pn em{font-style:normal;color:var(--paper);}
+.pn .pacc{display:inline-block;width:10px;height:10px;margin-left:16px;vertical-align:clamp(8px,1.6vw,22px);}
 .pd{color:var(--paper70);font-size:var(--t-body);max-width:42ch;}
 .pm{--sep-gap:11px;display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin-top:2px;font-variant-numeric:tabular-nums;}
 .pm .live{color:var(--cyan);}
@@ -420,6 +421,8 @@ section.reveal>.wrap{position:relative;}
   .proj:nth-child(even)>.spec{order:2;justify-self:start;}}.footseal{width:76px;height:76px;color:var(--accent);flex:none;view-transition-name:brand-seal;}.footseal text{font-family:var(--mono);font-size:8.4px/*svg units*/;letter-spacing:1.2px;fill:currentColor;}.footseal .stb{font-size:7px/*svg units*/;letter-spacing:2.2px;}
 
 /* offerings rate card */
+.os .ono{display:block;margin-top:9px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.1em;color:var(--dim);}
+.os .ono b{color:var(--accent);font-weight:400;margin-right:8px;}
 .offers .offer{grid-template-columns:34px 1fr auto;align-items:center;gap:clamp(16px,3vw,50px);opacity:0;transform:translateY(10px);transition:opacity var(--dur-2) var(--e-settle),transform var(--dur-2) var(--e-settle),background .25s;}
 #offerings.in .offers .offer{opacity:1;transform:none;}
 #offerings.in .offers .offer:nth-child(2){transition-delay:.08s;}
@@ -807,7 +810,7 @@ section.reveal>.wrap{position:relative;}
    panel IS the navigation surface. Indented, mono, dimmer: under Work, not beside it. */
 .mobile a.msub{font-family:var(--mono);font-variation-settings:normal;font-size:var(--t-cap);
   letter-spacing:.14em;padding:10px 0 10px 22px;color:var(--paper70);border-bottom:1px solid var(--line);}
-</style>
+.fchk{font-family:var(--mono);font-size:var(--t-cap);color:var(--dim);letter-spacing:.14em;cursor:help;}</style>
 
 <div class="loader" id="loader" aria-hidden="true">
   
@@ -865,19 +868,19 @@ section.reveal>.wrap{position:relative;}
     <div class="reel">
       <a class="proj" href="work-kaido.html">
         <div class="spec"><i></i><i></i><i></i><i></i><div class="media stat" style="view-transition-name:m-kaido"><div class="device dv-hero" style="aspect-ratio:1600/1000"><img src="media/shots/k-today.webp" alt="Kaido — the clinician's view: patients who need attention first, each with a reason and a trend" loading="lazy" width="1600" height="1000"></div></div></div>
-        <div class="pinfo"><div class="pn" style="view-transition-name:t-kaido">Kaido<em>.</em></div><div class="pd">Criteria-based rehab planning for clinics.</div><p class="pf">It proposes and monitors a plan between visits &mdash; and never clears the patient. That call stays with the clinician.</p><div class="pm"><span>SaaS &middot; B2B</span><span>Web + iOS</span><span class="live">Piloting &middot; kaidohealth.co</span></div></div>
+        <div class="pinfo"><div class="pn" style="view-transition-name:t-kaido">Kaido<em>.</em><i class="pacc" aria-hidden="true" style="background:var(--acc-kaido)"></i></div><div class="pd">Criteria-based rehab planning for clinics.</div><p class="pf">It proposes and monitors a plan between visits &mdash; and never clears the patient. That call stays with the clinician.</p><div class="pm"><span>SaaS &middot; B2B</span><span>Web + iOS</span><span class="live">Piloting &middot; kaidohealth.co</span></div></div>
       </a>
       <a class="proj" href="work-granite.html">
         <div class="spec"><i></i><i></i><i></i><i></i><div class="media stat" style="view-transition-name:m-granite"><div class="device dv-hero" style="aspect-ratio:1600/780"><img src="media/shots/g-tile.webp" alt="Granite — the week the engine builds, the coach you talk to, and the plateau it caught" loading="lazy" width="1600" height="780"></div></div></div>
-        <div class="pinfo"><div class="pn" style="view-transition-name:t-granite">Granite<em>.</em></div><div class="pd">A strength coach for athletes whose sport isn&rsquo;t lifting.</div><p class="pf">You rolled hard, not lifted heavy &mdash; so today&rsquo;s session already knows, and eases off.</p><div class="pm"><span>iOS &middot; Native</span><span>On-device AI</span><span class="live">Alpha &middot; granite.coach</span></div></div>
+        <div class="pinfo"><div class="pn" style="view-transition-name:t-granite">Granite<em>.</em><i class="pacc" aria-hidden="true" style="background:var(--acc-granite)"></i></div><div class="pd">A strength coach for athletes whose sport isn&rsquo;t lifting.</div><p class="pf">You rolled hard, not lifted heavy &mdash; so today&rsquo;s session already knows, and eases off.</p><div class="pm"><span>iOS &middot; Native</span><span>On-device AI</span><span class="live">Alpha &middot; granite.coach</span></div></div>
       </a>
       <a class="proj" href="work-frame.html">
         <div class="spec"><i></i><i></i><i></i><i></i><div class="media stat" style="view-transition-name:m-frame"><div class="device dv-hero" style="aspect-ratio:1600/780"><img src="media/shots/f-tile.webp" alt="Frame — today's game plan, your ranked leaks, and the map of where you actually get caught" loading="lazy" width="1600" height="780"></div></div></div>
-        <div class="pinfo"><div class="pn" style="view-transition-name:t-frame">Frame<em>.</em></div><div class="pd">Built against the forgetting curve.</div><p class="pf">The same mistake caught you seven times this month &mdash; so now there's one drill built to fix it.</p><div class="pm"><span>iOS &middot; Native</span><span>Spaced recall</span><span class="live">Alpha &middot; framebjj.app</span></div></div>
+        <div class="pinfo"><div class="pn" style="view-transition-name:t-frame">Frame<em>.</em><i class="pacc" aria-hidden="true" style="background:var(--acc-frame)"></i></div><div class="pd">Built against the forgetting curve.</div><p class="pf">The same mistake caught you seven times this month &mdash; so now there's one drill built to fix it.</p><div class="pm"><span>iOS &middot; Native</span><span>Spaced recall</span><span class="live">Alpha &middot; framebjj.app</span></div></div>
       </a>
       <a class="proj" href="work-ikarao.html">
         <div class="spec"><i></i><i></i><i></i><i></i><div class="media stat" style="view-transition-name:m-ikarao"><div class="device dv-hero" style="aspect-ratio:1700/829"><img src="media/shots/i-hero2.webp" alt="IKARAO — a field of generated marks, each one a different subnet name, cut by the frame rather than shown whole" loading="lazy" width="1700" height="829"></div></div></div>
-        <div class="pinfo"><div class="pn" style="view-transition-name:t-ikarao">IKARAO<em>.</em></div><div class="pd">A generative identity system for Bittensor.</div><p class="pf">Line weight, colour, symmetry &mdash; every rule pulled from eighty-six reference textiles and enforced by the engine, not a style guide.</p><div class="pm"><span>Brand &middot; Engine</span><span>Client</span><span class="live">Delivered &middot; bittensor.com</span></div></div>
+        <div class="pinfo"><div class="pn" style="view-transition-name:t-ikarao">IKARAO<em>.</em><i class="pacc" aria-hidden="true" style="background:var(--acc-ikarao)"></i></div><div class="pd">A generative identity system for Bittensor.</div><p class="pf">Line weight, colour, symmetry &mdash; every rule pulled from eighty-six reference textiles and enforced by the engine, not a style guide.</p><div class="pm"><span>Brand &middot; Engine</span><span>Client</span><span class="live">Delivered &middot; bittensor.com</span></div></div>
       </a>
       </div>
   </div></section>
@@ -889,11 +892,11 @@ section.reveal>.wrap{position:relative;}
     <h2 class="h2" style="--c:var(--paper)">The offer</h2>
     <p class="lead">You're not buying hours. You're buying the result, shipped &mdash; fixed scope, fixed price, in weeks not quarters.</p></div>
     <div class="offers">
-      <div class="offer"><div class="oi">01</div><div class="ob"><div class="on">The Design Block</div><div class="os"><span class="sub">Design shipped in a week.</span>Brand to interface to the technical surfaces most designers can't touch.</div></div><div class="op">&pound;<span>5,000</span><small>per week</small></div></div>
+      <div class="offer"><div class="oi">01</div><div class="ob"><div class="on">The Design Block</div><div class="os"><span class="sub">Design shipped in a week.</span>Brand to interface to the technical surfaces most designers can't touch.<span class="ono"><b>&times;</b>Won't polish an idea that shouldn't ship &mdash; the no comes first.</span></div></div><div class="op">&pound;<span>5,000</span><small>per week</small></div></div>
       
       
-      <div class="offer"><div class="oi">02</div><div class="ob"><div class="on">The Build</div><div class="os"><span class="sub">A live product in your users' hands.</span>A complete native product &mdash; brand, interface, and the code underneath &mdash; built from nothing to live. Native AI features when the product genuinely needs them, not because it's fashionable.</div></div><div class="op">&pound;<span>50,000</span><small>from &middot; complete build</small></div></div>
-      <div class="offer"><div class="oi">03</div><div class="ob"><div class="on">The Partnership</div><div class="os"><span class="sub">Embedded, not engaged.</span>A senior partner in the room two to three days a week &mdash; the craft your team doesn't have in-house, without the eighteen-month hire.</div></div><div class="op">&pound;<span>12,000</span><small>from &middot; per month</small></div></div>
+      <div class="offer"><div class="oi">02</div><div class="ob"><div class="on">The Build</div><div class="os"><span class="sub">A live product in your users' hands.</span>A complete native product &mdash; brand, interface, and the code underneath &mdash; built from nothing to live. Native AI features when the product genuinely needs them, not because it's fashionable.<span class="ono"><b>&times;</b>Won't stage a milestone &mdash; nothing is shown working that isn't.</span></div></div><div class="op">&pound;<span>50,000</span><small>from &middot; complete build</small></div></div>
+      <div class="offer"><div class="oi">03</div><div class="ob"><div class="on">The Partnership</div><div class="os"><span class="sub">Embedded, not engaged.</span>A senior partner in the room two to three days a week &mdash; the craft your team doesn't have in-house, without the eighteen-month hire.<span class="ono"><b>&times;</b>Won't be the yes in the room &mdash; the pushback is what you're paying for.</span></div></div><div class="op">&pound;<span>12,000</span><small>from &middot; per month</small></div></div>
     </div>
   </div></section>
 
@@ -918,12 +921,12 @@ section.reveal>.wrap{position:relative;}
     <div class="shd solo rev"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Journal<span class="ix">05 / NOTES</span></div>
     <h2 class="h2" style="--c:var(--paper)">Journal</h2></div>
     <div class="jrnl">
+      <a href="journal-sea-lion.html"><span class="jt">The sea lion papers</span><span class="jk">Article</span><span class="jd">Aug 26, 2026</span></a>
       <a href="journal-hardest-client.html"><span class="jt">The hardest client was us</span><span class="jk">Article</span><span class="jd">Jul 29, 2026</span></a>
       
       <a href="journal-undocumented.html"><span class="jt">Nobody wrote it down</span><span class="jk">Article</span><span class="jd">Jul 10, 2026</span></a>
       <a href="journal-velocity.html"><span class="jt">The velocity gods</span><span class="jk">Article</span><span class="jd">Jul 8, 2026</span></a>
-      <a href="journal-building.html"><span class="jt">Building cyber:cyber</span><span class="jk">Article</span><span class="jd">May 10, 2026</span></a>
-    </div>
+          </div>
     <a class="jall" href="journal.html">All notes &rarr;</a>
   </div></section>
 
@@ -946,7 +949,7 @@ section.reveal>.wrap{position:relative;}
       <a class="irow" href="#work"><span class="in">01</span><span class="il">Work</span><span class="dots"></span><span class="iv">Selected proof</span></a><a class="irow sub" href="work-kaido.html"><span class="in">&mdash;</span><span class="il">Kaido</span><span class="dots"></span><span class="iv">Rehab platform &middot; criteria-based</span></a><a class="irow sub" href="work-granite.html"><span class="in">&mdash;</span><span class="il">Granite</span><span class="dots"></span><span class="iv">Strength coach &middot; on-device</span></a><a class="irow sub" href="work-frame.html"><span class="in">&mdash;</span><span class="il">Frame</span><span class="dots"></span><span class="iv">BJJ journal &middot; spaced recall</span></a><a class="irow sub" href="work-ikarao.html"><span class="in">&mdash;</span><span class="il">IKARAO</span><span class="dots"></span><span class="iv">Generative brand engine &middot; client</span></a>
       <a class="irow" href="#offerings"><span class="in">02</span><span class="il">Studio</span><span class="dots"></span><span class="iv">Rate card &middot; from &pound;5k</span></a>
       <a class="irow" href="manifesto.html"><span class="in">03</span><span class="il">Manifesto</span><span class="dots"></span><span class="iv">Ten beliefs</span></a>
-      <a class="irow" href="journal.html"><span class="in">04</span><span class="il">Journal</span><span class="dots"></span><span class="iv">Seven notes</span></a>
+      <a class="irow" href="journal.html"><span class="in">04</span><span class="il">Journal</span><span class="dots"></span><span class="iv">Nine notes</span></a>
       <a class="irow" href="#contact"><span class="in">05</span><span class="il">Contact</span><span class="dots"></span><span class="iv" id="ivq">Open for Q4</span></a>
     </div>
   </div></section>
@@ -958,7 +961,7 @@ section.reveal>.wrap{position:relative;}
     
     <div class="mk"><div><label class="mkhint" for="mkin" style="display:block;margin:0 0 14px">Your one sentence</label><input class="mkin" id="mkin" type="text" autocomplete="off" spellcheck="false" placeholder="cyber:cyber" aria-describedby="mkhint"><div class="mkhint" id="mkhint">Seal &middot; <span id="mkref">------</span></div><a class="mksend" id="mksend" href="mailto:hello@cybercyber.ai">Email hello@cybercyber.ai &rarr;</a></div><div class="mkfig"><svg class="mkseal" id="mksvg" viewBox="0 0 120 120" role="img" aria-labelledby="mksealt"><title id="mksealt">A seal generated from your sentence</title><rect class="mkframe" x="6" y="6" width="108" height="108"/><g class="mkart" transform="translate(22 22) scale(0.76)"><path id="mkpath" d=""/></g><text class="mkwm" x="60" y="16.4" text-anchor="middle">CYBER:CYBER</text><text class="mksr" id="mksr" x="60" y="107.9" text-anchor="middle">------</text><circle class="mkdot" cx="14" cy="56.4" r="1.4"/><circle class="mkdot" cx="14" cy="63.6" r="1.4"/><circle class="mkdot" cx="106" cy="56.4" r="1.4"/><circle class="mkdot" cx="106" cy="63.6" r="1.4"/></svg></div></div>
   </div></section>
-</main><footer><div class="wrap foot" style="align-items:center"><span>&copy; 2026 CYBERCYBER LTD &middot; London</span><svg class="footseal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="arcF" d="M22,60 A38,38 0 0,1 98,60"/></defs><circle cx="60" cy="60" r="53" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/><text text-anchor="middle"><textPath href="#arcF" startOffset="50%">CYBER:CYBER</textPath></text><circle cx="60" cy="53" r="5" fill="currentColor"/><circle cx="60" cy="67" r="5" fill="currentColor"/><text class="stb" x="60" y="102" text-anchor="middle">MMXXVI</text></svg><a href="#top" id="recal">Recalibrate &uarr; top</a></div></footer>
+</main><footer><div class="wrap foot" style="align-items:center"><span>&copy; 2026 CYBERCYBER LTD &middot; London</span><svg class="footseal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="arcF" d="M22,60 A38,38 0 0,1 98,60"/></defs><circle cx="60" cy="60" r="53" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/><text text-anchor="middle"><textPath href="#arcF" startOffset="50%">CYBER:CYBER</textPath></text><circle cx="60" cy="53" r="5" fill="currentColor"/><circle cx="60" cy="67" r="5" fill="currentColor"/><text class="stb" x="60" y="102" text-anchor="middle">MMXXVI</text></svg><span class="fchk" title="Linted before every publish: colour exists only as tokens &middot; no raw hex outside :root &middot; mobile nav present &middot; figures numbered in reading order &middot; journal cycle closed">CHK 05/05</span><a href="#top" id="recal">Recalibrate &uarr; top</a></div></footer>
 
 <script>
 (function(){

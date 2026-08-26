@@ -161,7 +161,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .fseal{display:inline-flex;align-items:center;gap:9px;}
 .fmark{width:20px;height:20px;display:block;opacity:.75;}
 .fmark path{fill:var(--dim);}
-.fref{font-variant-numeric:tabular-nums;letter-spacing:.14em;}
+.fref{font-variant-numeric:tabular-nums;letter-spacing:.14em;}.fchk{color:var(--dim);letter-spacing:.14em;margin-left:14px;cursor:help;}
 
 /* Nested case-study routes in the mobile panel — same doctrine as the site register:
    the deepest pages must be reachable from the navigation surface, and on a phone the
@@ -188,7 +188,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 
 <main id="c">
   <section class="ahero"><div class="wrap">
-    <div class="eyebrow"><span class="tick"></span>Journal &#183; Note<span class="ix">07 / JOURNAL</span></div>
+    <div class="eyebrow"><span class="tick"></span>Journal &#183; Note<span class="ix">08 / JOURNAL</span></div>
     <div class="date">Mar 4, 2026</div>
     <h1 class="ah1" style="view-transition-name:jn-six-things">Six Things Native AI Features Get Right (That Bolted-On Ones Don't)</h1>
     <p class="lede">A field guide to the difference between AI as feature and AI as decoration.</p>
@@ -200,7 +200,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
   <div class="void" aria-hidden="true"><span class="vline"></span><span class="vnode"></span></div>
   <section class="next"><div class="wrap"><a href="journal-why.html"><div class="l">Next note</div><div class="n">Why cyber:cyber exists</div></a></div></section>
 </main>
-<footer><div class="wrap foot"><span>&copy; 2026 CYBERCYBER LTD &#183; London</span><span class="fseal" aria-hidden="true"><svg class="fmark" viewBox="0 0 100 100"><path d=""/></svg><span class="fref">------</span></span><a href="./">Home &uarr;</a></div></footer>
+<footer><div class="wrap foot"><span>&copy; 2026 CYBERCYBER LTD &#183; London</span><span class="fseal" aria-hidden="true"><svg class="fmark" viewBox="0 0 100 100"><path d=""/></svg><span class="fref">------</span><span class="fchk" title="Linted before every publish: colour exists only as tokens &middot; no raw hex outside :root &middot; mobile nav present &middot; figures numbered in reading order &middot; journal cycle closed">CHK 05/05</span></span><a href="./">Home &uarr;</a></div></footer>
 <script>(function(){var hdr=document.getElementById("hdr");addEventListener("scroll",function(){hdr.classList.toggle("solid",scrollY>40);var rp=document.getElementById("rprog");if(rp){var m=document.documentElement.scrollHeight-innerHeight;rp.style.transform="scaleX("+(m>0?Math.min(1,scrollY/m):0).toFixed(4)+")";}},{passive:true});var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.14});document.querySelectorAll(".reveal").forEach(function(el){io.observe(el);});})();</script>
 <script>(function(){var reduce=matchMedia("(prefers-reduced-motion:reduce)").matches,coarse=matchMedia("(hover:none),(pointer:coarse)").matches;if(coarse||reduce)return;function ivLabel(el){if(el.closest(".next")||el.closest(".csnext"))return"Read \u2197";if(el.closest(".jrow")||el.closest(".jall"))return"Read \u2197";if(el.closest(".proj")||el.closest(".cslink"))return"Open case \u2197";if(el.tagName==="SUMMARY"||el.closest(".faq"))return"Expand";if(el.getAttribute&&(el.getAttribute("href")||"").indexOf("mailto:")===0)return"Email \u2197";if(el.closest("header"))return"Go";if(el.closest("footer"))return"Go";return"Go \u2197";}var ivb=document.getElementById("iverb");var ret=document.getElementById("iret"),coord=document.getElementById("icoord");if(!ret)return;document.body.classList.add("cursor-on");var rx=innerWidth/2,ry=innerHeight/2,tx=rx,ty=ry;addEventListener("mousemove",function(e){tx=e.clientX;ty=e.clientY;ret.style.opacity="1";coord.style.opacity="1";coord.style.left=(e.clientX+16)+"px";coord.style.top=(e.clientY+16)+"px";coord.textContent=("000"+e.clientX).slice(-4)+" \u00B7 "+("000"+e.clientY).slice(-4);});addEventListener("mouseleave",function(){ret.style.opacity="0";coord.style.opacity="0";});document.querySelectorAll("a,button,summary").forEach(function(el){el.addEventListener("mouseenter",function(){if(ivb)ivb.textContent=ivLabel(el);ret.classList.add("lock");ret.style.width="40px";ret.style.height="40px";});el.addEventListener("mouseleave",function(){ret.classList.remove("lock");ret.style.width="24px";ret.style.height="24px";});});(function tick(){rx+=(tx-rx)*.3;ry+=(ty-ry)*.3;var w=parseFloat(ret.style.width)||24,h=parseFloat(ret.style.height)||24;ret.style.transform="translate("+(rx-w/2)+"px,"+(ry-h/2)+"px)";requestAnimationFrame(tick);})();})();</script>
 <script>
