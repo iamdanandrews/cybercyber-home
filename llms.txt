@@ -1,6 +1,6 @@
 # cyber:cyber
 
-> A product design lab in London. We design the brand, the interface, and the code — and we build it. A few clients a year.
+> A product design lab in London. We design the brand, the interface, and the code — and we build it: software that knows what it's not allowed to decide. A few clients a year.
 
 cyber:cyber is a product design lab, not an agency and not a studio-for-hire. The work spans the whole stack of a product: brand, interface, and the code underneath — including the technical surfaces most designers hand off. Engagements are fixed-scope and fixed-price, measured in weeks rather than quarters, and deliberately few per year.
 
