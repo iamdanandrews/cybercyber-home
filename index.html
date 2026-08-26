@@ -406,14 +406,18 @@ section.reveal>.wrap{position:relative;}
 .chip .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);animation:chippulse 2.4s var(--e1) infinite;}
 @keyframes chippulse{0%{box-shadow:0 0 0 0 rgba(34,211,238,.55);}70%{box-shadow:0 0 0 8px rgba(34,211,238,0);}100%{box-shadow:0 0 0 0 rgba(34,211,238,0);}}
 @media(prefers-reduced-motion:reduce){.chip .dot{animation:none;}}
-@media(min-width:820px){.proj{grid-template-columns:1.7fr 1fr;gap:clamp(40px,5vw,96px);}.proj .media{margin-inline:0;justify-self:end;}.proj .pinfo{padding-block:clamp(10px,3vw,40px);}
+@media(min-width:820px){.proj{grid-template-columns:1.7fr 1fr;gap:clamp(40px,5vw,96px);}.proj .media{margin-inline:0;}.proj>.spec{justify-self:end;}.proj .pinfo{padding-block:clamp(10px,3vw,40px);}
   /* order alone only changes VISUAL position -- grid auto-placement still assigns
      tracks by order value, so the reordered .media landed in the narrow 1fr track
      while .pinfo took the wide 1.7fr one. A single flush image just shrank to fit
      and hid this; the duo-stack has real minimum widths and overflowed the
      viewport because of it. Swap the track sizes too, not just the item order. */
   .proj:nth-child(even){grid-template-columns:1fr 1.7fr;}
-  .proj:nth-child(even) .media{order:2;justify-self:start;}}.footseal{width:76px;height:76px;color:var(--accent);flex:none;view-transition-name:brand-seal;}.footseal text{font-family:var(--mono);font-size:8.4px/*svg units*/;letter-spacing:1.2px;fill:currentColor;}.footseal .stb{font-size:7px/*svg units*/;letter-spacing:2.2px;}
+  /* ...and then the same mistake was made again, one level up. Wrapping the media in
+     .spec for the corner brackets made THAT the grid item, so order/justify-self on
+     .media silently stopped moving anything and all four rows rendered image-left --
+     the alternation was in the stylesheet but not on the page. Target the grid item. */
+  .proj:nth-child(even)>.spec{order:2;justify-self:start;}}.footseal{width:76px;height:76px;color:var(--accent);flex:none;view-transition-name:brand-seal;}.footseal text{font-family:var(--mono);font-size:8.4px/*svg units*/;letter-spacing:1.2px;fill:currentColor;}.footseal .stb{font-size:7px/*svg units*/;letter-spacing:2.2px;}
 
 /* offerings rate card */
 .offers .offer{grid-template-columns:34px 1fr auto;align-items:center;gap:clamp(16px,3vw,50px);opacity:0;transform:translateY(10px);transition:opacity var(--dur-2) var(--e-settle),transform var(--dur-2) var(--e-settle),background .25s;}
@@ -872,7 +876,7 @@ section.reveal>.wrap{position:relative;}
         <div class="pinfo"><div class="pn" style="view-transition-name:t-frame">Frame<em>.</em></div><div class="pd">Built against the forgetting curve.</div><p class="pf">The same mistake caught you seven times this month &mdash; so now there's one drill built to fix it.</p><div class="pm"><span>iOS &middot; Native</span><span>Spaced recall</span><span class="live">Alpha &middot; framebjj.app</span></div></div>
       </a>
       <a class="proj" href="work-ikarao.html">
-        <div class="spec"><i></i><i></i><i></i><i></i><div class="media stat" style="view-transition-name:m-ikarao"><div class="device dv-hero" style="aspect-ratio:1700/650"><img src="media/shots/i-hero2.webp" alt="IKARAO — a field of generated marks, each one a different subnet name, cut by the frame rather than shown whole" loading="lazy" width="1700" height="650"></div></div></div>
+        <div class="spec"><i></i><i></i><i></i><i></i><div class="media stat" style="view-transition-name:m-ikarao"><div class="device dv-hero" style="aspect-ratio:1700/829"><img src="media/shots/i-hero2.webp" alt="IKARAO — a field of generated marks, each one a different subnet name, cut by the frame rather than shown whole" loading="lazy" width="1700" height="829"></div></div></div>
         <div class="pinfo"><div class="pn" style="view-transition-name:t-ikarao">IKARAO<em>.</em></div><div class="pd">A generative identity system for Bittensor.</div><p class="pf">Line weight, colour, symmetry &mdash; every rule pulled from eighty-six reference textiles and enforced by the engine, not a style guide.</p><div class="pm"><span>Brand &middot; Engine</span><span>Client</span><span class="live">Delivered &middot; bittensor.com</span></div></div>
       </a>
       </div>
