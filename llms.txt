@@ -13,6 +13,7 @@ The site itself is hand-coded vanilla HTML, CSS and JavaScript with no build ste
 - [Home](https://cybercyber.ai/): The lab, the offer, the work, and who it isn't for.
 - [Manifesto](https://cybercyber.ai/manifesto.html): Ten things a product design lab believes — on judgement, refusal, and what's worth building rather than just shipping fast.
 - [Journal](https://cybercyber.ai/journal.html): Working notes on judgement, refusal, and building on the frontier.
+- [The Register](https://cybercyber.ai/specimen.html): The house type specimen published as law — one variable face, seven permitted weights, eight sizes, a seeded setting machine, and the measured drift the rules haven't caught up with.
 
 ## Work
 
