@@ -733,10 +733,10 @@ section.reveal>.wrap{position:relative;}
    job (a specimen mark, not device chrome); the shadow/radius/border under it was
    decoration doing the same job twice. Wide/desktop shots go flat; phone-shaped .device
    keeps its frame below, because a bare rectangle reads as a random crop, not a phone. */
-/* Kaido and IKARAO run one wide screen edge to edge; Granite and Frame ran two phones
-   at 46vw each, dead space above and below both -- the one tile format that never
-   filled its own frame. One phone, large, does what the duo was trying to do. */
-.media.stat .device.dv-solo{width:min(320px,58vw);}
+/* Every tile is now one composed wide frame at the same width, so no product reads as
+   a lesser tier than its neighbour. Granite and Frame are three real screens cut by the
+   frame -- a layout of genuine screenshots, not a mockup: nothing is restyled, retouched
+   or staged, the crop is the only edit. */
 /* No hover ring on the images at all now -- a shared outline can't cleanly trace two
    staggered, overlapping devices without fragmenting at the overlap, and the tile
    already has a complete hover signal that has nothing to do with the photos: .pn
@@ -864,11 +864,11 @@ section.reveal>.wrap{position:relative;}
         <div class="pinfo"><div class="pn" style="view-transition-name:t-kaido">Kaido<em>.</em></div><div class="pd">Criteria-based rehab planning for clinics.</div><p class="pf">It proposes and monitors a plan between visits &mdash; and never clears the patient. That call stays with the clinician.</p><div class="pm"><span>SaaS &middot; B2B</span><span>Web + iOS</span><span class="live">Piloting &middot; kaidohealth.co</span></div></div>
       </a>
       <a class="proj" href="work-granite.html">
-        <div class="spec"><i></i><i></i><i></i><i></i><div class="media stat" style="view-transition-name:m-granite"><div class="device dv-solo"><img src="media/shots/g-week.webp" alt="Granite — the training week, day by day" loading="lazy" width="680" height="1478"></div></div></div>
+        <div class="spec"><i></i><i></i><i></i><i></i><div class="media stat" style="view-transition-name:m-granite"><div class="device dv-hero" style="aspect-ratio:1600/780"><img src="media/shots/g-tile.webp" alt="Granite — the week the engine builds, the coach you talk to, and the plateau it caught" loading="lazy" width="1600" height="780"></div></div></div>
         <div class="pinfo"><div class="pn" style="view-transition-name:t-granite">Granite<em>.</em></div><div class="pd">A strength coach for athletes whose sport isn&rsquo;t lifting.</div><p class="pf">You rolled hard, not lifted heavy &mdash; so today&rsquo;s session already knows, and eases off.</p><div class="pm"><span>iOS &middot; Native</span><span>On-device AI</span><span class="live">Alpha &middot; granite.coach</span></div></div>
       </a>
       <a class="proj" href="work-frame.html">
-        <div class="spec"><i></i><i></i><i></i><i></i><div class="media stat" style="view-transition-name:m-frame"><div class="device dv-solo"><img src="media/shots/f-today-light.webp" alt="Frame — today, personalized: injury-aware, with a game plan built from your own leaks" loading="lazy" width="680" height="1474"></div></div></div>
+        <div class="spec"><i></i><i></i><i></i><i></i><div class="media stat" style="view-transition-name:m-frame"><div class="device dv-hero" style="aspect-ratio:1600/780"><img src="media/shots/f-tile.webp" alt="Frame — today's game plan, your ranked leaks, and the map of where you actually get caught" loading="lazy" width="1600" height="780"></div></div></div>
         <div class="pinfo"><div class="pn" style="view-transition-name:t-frame">Frame<em>.</em></div><div class="pd">Built against the forgetting curve.</div><p class="pf">The same mistake caught you seven times this month &mdash; so now there's one drill built to fix it.</p><div class="pm"><span>iOS &middot; Native</span><span>Spaced recall</span><span class="live">Alpha &middot; framebjj.app</span></div></div>
       </a>
       <a class="proj" href="work-ikarao.html">
