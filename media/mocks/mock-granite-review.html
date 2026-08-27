@@ -1,0 +1,43 @@
+<!doctype html><meta charset="utf-8">
+<style>
+/* Authored recreation of Granite's real "Weekly Review" screen, at 2x native res
+   (source: g-review.webp, 680x1478 — too soft to blow up past ~420px). Content
+   verbatim from the shipped screen. Screen content only; the .device CSS wrapper
+   on the case-study page supplies the phone frame. */
+*{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+body{width:1360px;height:2956px;background:#000;color:#F4F4F5;position:relative;overflow:hidden;
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.mono{font-family:ui-monospace,"SF Mono",Menlo,monospace}
+.status{display:flex;justify-content:space-between;padding:52px 64px 0;font-size:34px;font-weight:600}
+.navbar{text-align:center;font-size:38px;font-weight:600;margin-top:56px}
+.wrap{padding:70px 56px 0}
+.lab{font-size:28px;letter-spacing:.14em;color:#8B8F93;font-weight:600}
+h1{font-size:66px;font-weight:700;margin-top:16px}
+.quote{display:flex;gap:24px;background:#151517;border:2px solid rgba(255,255,255,.08);border-radius:24px;
+  padding:44px 40px;margin-top:44px}
+.quote .q{font-size:44px;color:#5A5D61;line-height:1;flex:none}
+.quote p{font-size:34px;line-height:1.48;color:#E4E4E6}
+h2{font-size:40px;font-weight:700;margin-top:60px}
+.item{background:#151517;border:2px solid rgba(255,255,255,.07);border-radius:20px;padding:32px 36px;margin-top:24px}
+.item.hi{background:rgba(232,163,61,.08);border-color:rgba(232,163,61,.28)}
+.item .row{display:flex;align-items:flex-start;gap:24px}
+.item .ic{font-size:44px;flex:none;line-height:1}
+.item b{font-size:36px;font-weight:700;display:block}
+.item span{font-size:30px;color:#9BA0A4;line-height:1.4;display:block;margin-top:8px}
+.dash{width:44px;height:44px;border-radius:50%;background:#2A2A2D;flex:none}
+.btn{margin-top:56px;border:2px solid rgba(255,255,255,.16);border-radius:20px;text-align:center;
+  padding:36px;font-size:34px;letter-spacing:.08em;font-weight:600}
+</style>
+<div class="status"><span>20:13</span><span>&#9679;&#9679;&#9679;&#9679; &#128225; &#128267;</span></div>
+<div class="navbar">Weekly Review</div>
+<div class="wrap">
+  <div class="lab mono">WEEK 1 REVIEW</div>
+  <h1>Time to recover</h1>
+  <div class="quote"><span class="q">&ldquo;</span><p>Week 1 done &mdash; you logged 0 of 4 sessions. Next week we pull it back so you come back stronger.</p></div>
+  <h2>What changes for Week 2</h2>
+  <div class="item hi"><div class="row"><span class="ic">&#127942;</span><div><b>Deload week</b><span>Deloading this week because you&rsquo;ve missed two or more sessions. Volume drops 40%, loads stay near working weight, no top sets.</span></div></div></div>
+  <div class="item"><div class="row"><span class="dash"></span><div><b>Back Squat: held</b><span>No sets logged this week &mdash; keeping the target.</span></div></div></div>
+  <div class="item"><div class="row"><span class="dash"></span><div><b>Barbell Curl: held</b><span>No sets logged this week &mdash; keeping the target.</span></div></div></div>
+  <div class="item"><div class="row"><span class="dash"></span><div><b>Front Squat: held</b><span>No sets logged this week &mdash; keeping the target.</span></div></div></div>
+  <div class="btn mono">START WEEK 2</div>
+</div>

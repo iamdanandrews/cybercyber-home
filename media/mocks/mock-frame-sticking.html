@@ -1,0 +1,56 @@
+<!doctype html><meta charset="utf-8">
+<style>
+/* Authored recreation of Frame's real "What's sticking" screen (source: f-retention-light.webp,
+   680x1478). Content verbatim from the shipped screen. Light theme, matches the app. */
+*{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+body{width:1360px;height:2956px;background:#F7F5F3;color:#141217;position:relative;overflow:hidden;
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.mono{font-family:ui-monospace,"SF Mono",Menlo,monospace}
+.status{display:flex;justify-content:space-between;padding:52px 64px 0;font-size:34px;font-weight:600}
+.navbar{text-align:center;font-size:38px;font-weight:600;margin-top:56px}
+.wrap{padding:64px 56px 0}
+h1{font-size:56px;font-weight:700}
+.card{background:#fff;border:2px solid rgba(20,18,23,.08);border-radius:26px;padding:44px 40px;margin-top:40px;
+  box-shadow:0 20px 50px rgba(20,18,23,.05)}
+.lab{font-size:28px;letter-spacing:.12em;color:#8B8680;font-weight:600}
+.big{font-size:96px;font-weight:800;margin-top:14px;letter-spacing:-.02em}
+.card p{font-size:32px;color:#4A4640;line-height:1.5;margin-top:18px}
+.tag{display:flex;align-items:center;gap:20px;margin-top:32px;padding-top:32px;border-top:2px solid rgba(20,18,23,.08)}
+.tag .ic{font-size:34px}
+.tag span{font-size:30px;color:#6B655D}
+.tag b{color:#141217;font-weight:700}
+.chartlab{font-size:28px;letter-spacing:.12em;color:#8B8680;font-weight:600}
+.rows{margin-top:30px}
+.rr{display:flex;align-items:center;gap:24px;padding:16px 0}
+.rr .k{width:120px;font-size:28px;color:#6B655D;flex:none}
+.rr .track{flex:1;height:28px;background:#EFEBE6;border-radius:14px;overflow:hidden}
+.rr .track i{display:block;height:100%;background:linear-gradient(90deg,#8B5CF6,#B18CF2);border-radius:14px}
+.rr .v{width:110px;text-align:right;font-size:30px;font-weight:700;font-variant-numeric:tabular-nums}
+.pills{display:flex;gap:20px;margin-top:34px;flex-wrap:wrap}
+.pill{background:#F1EDE8;border-radius:999px;padding:18px 32px;font-size:30px;font-weight:600}
+</style>
+<div class="status"><span>21:32</span><span>&#9679;&#9679;&#9679;&#9679; &#128225; &#128267;</span></div>
+<div class="navbar">What&rsquo;s sticking</div>
+<div class="wrap">
+  <div class="card">
+    <div class="lab mono">YOUR RECALL</div>
+    <div class="big">71%</div>
+    <p>of the techniques you&rsquo;ve been tested on, you still had.</p>
+    <div class="tag"><span class="ic">&#8987;</span><span><b>You drop below half</b> at 2&ndash;4w</span></div>
+  </div>
+  <div class="card">
+    <div class="chartlab mono">YOUR FORGETTING CURVE</div>
+    <div class="rows">
+      <div class="rr"><span class="k mono">1&ndash;3d</span><span class="track"><i style="width:100%"></i></span><span class="v">100%</span></div>
+      <div class="rr"><span class="k mono">4&ndash;7d</span><span class="track"><i style="width:86%"></i></span><span class="v">86%</span></div>
+      <div class="rr"><span class="k mono">1&ndash;2w</span><span class="track"><i style="width:100%"></i></span><span class="v">100%</span></div>
+      <div class="rr"><span class="k mono">2&ndash;4w</span><span class="track"><i style="width:40%"></i></span><span class="v">40%</span></div>
+      <div class="rr"><span class="k mono">1m+</span><span class="track"><i style="width:25%"></i></span><span class="v">25%</span></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="lab mono">DRILLED, NOT YET LANDED</div>
+    <p>You&rsquo;ve studied these but haven&rsquo;t hit them in a live roll yet. Not a failure &mdash; a shortlist for your next rounds.</p>
+    <div class="pills"><span class="pill">Back Take</span><span class="pill">Hip Bump Sweep</span><span class="pill">Kimura</span></div>
+  </div>
+</div>

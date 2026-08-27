@@ -88,6 +88,19 @@ The portfolio is now four case studies with genuinely different visual identitie
 
 **The specimen window.** Case-study media sits inside a bracketed frame (see `.spec`/`<i>` corner marks on `work-kaido.html` for the reference implementation) at a fixed aspect ratio, client pixels at full brightness inside. A light screenshot or a saturated one goes in exactly as it would go into a portfolio review — the mat is what keeps it from blooming against the black ground, not a dark filter over the image.
 
+**Authored recreations, on Dan's instruction (2026-08-26).** Where the only source
+is a small capture (Granite's and Frame's phone screens ship at 680px, App Store
+fastlane assets at best) and the frame wants it at hero scale, an upscaled photo
+goes soft. The fix used on the homepage ledger tiles and the Granite/Frame lead
+figures: author the screen as real HTML/CSS at 2x the target resolution, render it,
+downsample. Content is verbatim from the shipped screen — same copy, same numbers,
+same layout — never invented. Source files live in `media/mocks/` for anyone to
+check against the real app. This does NOT extend to Kaido (its screenshots are
+native 1600px captures of the real web app — already sharp) or to IKARAO (its
+images ARE the deliverable; recreating generated marks by hand would misrepresent
+the determinism the whole case study argues). Real capture remains the default;
+authored recreation is the documented exception, only for undersized real content.
+
 **Per-case accent, reported not adopted.** Each case study's `csmeta` row may carry one `Accent` entry — a small square chip plus the client's own hex, in mono, like a spectrometer reading. Define it once as a `--case-accent` token in that page's own `:root` (this is the only place outside the primitive layer a literal hex is allowed — `check.mjs` enforces it) and use `var(--case-accent)` everywhere the chip needs it. It must never colour body text, links, or hover states — those stay house vermilion/cyan. Optionally the page's own crest (`ccMark` fill) may also take `var(--case-accent)` instead of vermilion — that fill swap is the ONE sanctioned fusion point between a client's identity and the house system. Geometry never changes: marks stay dots (see the existing rule above — this is not a new exception, it's the same one restated for the multi-case-study era).
 
 **`signal: response`.** The site already performs its own name in layout: "You say this / The plan changes," kept/cut, the two-tone colour grammar — paired statements, one answering the other. That's not incidental, it's the house rhetorical form, and it's why the studio's name is a doubled word split by a colon. Prefer a call-and-response pair over a single flat statement when a section has a genuine pair inside it (proposal/decision, before/after, claim/consequence). Don't force a pair where none exists — the three-way ledger (kept/cut/refused) and single declarative statements are both still correct where the content is genuinely one-sided.

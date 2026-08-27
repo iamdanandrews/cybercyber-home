@@ -1,0 +1,53 @@
+<!doctype html><meta charset="utf-8">
+<style>
+/* Granite tile mockup · authored at 2x (3200x1560) · content verbatim from the shipping app */
+*{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+body{width:3200px;height:1560px;background:#0E1214;position:relative;overflow:hidden;
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#F4F4F5}
+.card{position:absolute;background:#17191C;border:2px solid rgba(255,255,255,.07);border-radius:36px;
+  box-shadow:0 24px 80px rgba(0,0,0,.45)}
+.mono{font-family:ui-monospace,"SF Mono",Menlo,monospace}
+/* ---- base: the Day 1 card ---- */
+.day{left:130px;top:130px;width:1980px;padding:64px 72px 40px}
+.day .lab{font-size:30px;letter-spacing:.14em;color:#8B8F93;font-weight:500}
+.day h1{font-size:64px;font-weight:700;letter-spacing:-.01em;margin-top:10px}
+.day .sub{font-size:34px;color:#8B8F93;margin-top:12px;padding-bottom:36px;border-bottom:2px solid rgba(255,255,255,.08)}
+.row{display:flex;align-items:center;gap:28px;padding:29px 0;font-size:38px}
+.row .dot{width:16px;height:16px;border-radius:50%;flex:none}
+.row .nm{flex:1;font-weight:500}
+.row .vl{color:#9BA0A4;font-variant-numeric:tabular-nums;letter-spacing:.01em}
+.row .old{color:#8B8F93;text-decoration:line-through;text-decoration-thickness:3px;margin-right:18px}
+.row .chip{background:#F4F4F5;color:#0B0B0C;font-family:ui-monospace,"SF Mono",Menlo,monospace;
+  font-size:34px;font-weight:600;padding:8px 18px;border-radius:10px;margin-right:18px}
+/* ---- floating: readiness ---- */
+.ready{left:2020px;top:830px;width:1120px;padding:56px 64px;background:#191B1E;
+  box-shadow:0 40px 120px rgba(0,0,0,.62)}
+.ready .lab{font-size:30px;letter-spacing:.2em;color:#8B8F93;font-weight:500}
+.ready .head{display:flex;align-items:center;gap:26px;margin-top:34px}
+.ready .head svg{width:52px;height:52px}
+.ready .head b{font-size:46px;font-weight:700}
+.ready .bar{height:14px;border-radius:7px;background:rgba(255,255,255,.09);margin-top:40px;position:relative}
+.ready .bar i{position:absolute;left:0;top:0;bottom:0;width:44%;border-radius:7px;background:#E8A33D}
+.ready p{font-size:33px;line-height:1.5;color:#9BA0A4;margin-top:36px}
+</style>
+<div class="card day">
+  <div class="lab mono">DAY 1</div>
+  <h1>Bench Press</h1>
+  <div class="sub">7 exercises &middot; ~49 min</div>
+  <div class="row"><span class="dot" style="background:#5AA7F7"></span><span class="nm">Dynamic Warm-up</span><span class="vl">2&times;10 &middot; BW</span></div>
+  <div class="row"><span class="dot" style="background:#F26DA9"></span><span class="nm">Band Pull-apart</span><span class="vl">2&times;15 &middot; BW</span></div>
+  <div class="row"><span class="dot" style="background:#38EDD1"></span><span class="nm">Bench Press</span><span class="vl">5&times;4 &middot; 92.5 kg</span></div>
+  <div class="row"><span class="dot" style="background:#B18CF2"></span><span class="nm">Pull-Up</span><span class="vl">3&times;6 &middot; BW</span></div>
+  <div class="row"><span class="dot" style="background:#F2836D"></span><span class="nm">External Rotation</span><span class="vl">2&times;12 &middot; BW</span></div>
+  <div class="row"><span class="dot" style="background:#5AA7F7"></span><span class="nm">Barbell Row</span><span class="vl"><span class="old">50 kg</span><span class="chip">52.5 kg</span>3&times;6 &middot; 52.5 kg</span></div>
+  <div class="row" style="border-bottom:0"><span class="dot" style="background:#B18CF2"></span><span class="nm">Barbell Curl</span><span class="vl">3&times;6 &middot; 22.5 kg</span></div>
+</div>
+<div class="card ready">
+  <div class="lab mono">READINESS</div>
+  <div class="head">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#E8A33D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l2-7 4 14 2-7h8"/></svg>
+    <b>Train, but hold back</b>
+  </div>
+  <div class="bar"><i></i></div>
+  <p>A little taxed &mdash; hold today&rsquo;s loads and keep the reps crisp rather than forcing a PR.</p>
+</div>

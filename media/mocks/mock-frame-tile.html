@@ -1,0 +1,55 @@
+<!doctype html><meta charset="utf-8">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+body{width:3200px;height:1560px;background:#120E18;position:relative;overflow:hidden;
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#F4F4F5}
+.mono{font-family:ui-monospace,"SF Mono",Menlo,monospace}
+.card{position:absolute;background:#17141C;border:2px solid rgba(255,255,255,.07);border-radius:36px;
+  box-shadow:0 24px 80px rgba(0,0,0,.45)}
+/* ---- base: the forgetting-curve card, bleeding off the bottom ---- */
+.stick{left:130px;top:90px;width:2000px;padding:68px 76px 0;border-radius:36px 36px 0 0;height:1470px}
+.stick .lab{font-size:32px;letter-spacing:.1em;color:#A6A0AE;font-weight:500}
+.stick .pct{position:absolute;right:76px;top:68px;font-size:56px;font-weight:700;color:#8B5CF6}
+.stick .sub{font-size:36px;color:#8B8F93;margin-top:22px;max-width:26ch;line-height:1.4}
+.bars{display:flex;align-items:flex-end;gap:44px;height:340px;margin-top:64px;padding-top:40px;border-top:2px solid rgba(255,255,255,.08)}
+.bars .b{width:150px;border-radius:14px 14px 0 0}
+.bars .lbl{text-align:center;margin-top:20px;font-size:28px;color:#8B8F93}
+.bcol{display:flex;flex-direction:column;align-items:center}
+.line{margin-top:56px}
+.line .lt{font-size:32px;color:#A6A0AE}
+/* ---- floating: today's game plan ---- */
+.plan{left:2160px;top:900px;width:900px;padding:52px 58px}
+.plan .lab{display:flex;align-items:center;gap:20px;font-size:30px;letter-spacing:.14em;color:#B79CF5;font-weight:600}
+.plan .lab i{width:22px;height:22px;border-radius:50%;border:5px solid #8B5CF6}
+.plan h2{display:flex;align-items:baseline;gap:24px;margin-top:30px}
+.plan h2 b{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:34px;color:#8B5CF6;font-weight:700}
+.plan h2 span{font-size:46px;font-weight:700;line-height:1.15}
+.plan p{font-size:32px;color:#9BA0A4;margin-top:22px;line-height:1.5}
+</style>
+<div class="card stick">
+  <div class="lab mono">HOW WELL IT&rsquo;S STICKING</div>
+  <div class="pct">63%</div>
+  <div class="sub">You start losing techniques around 2&ndash;4w. Across 11 reviews.</div>
+  <div class="bars">
+    <div class="bcol"><div class="b" style="height:300px;background:linear-gradient(180deg,#B18CF2,#8B5CF6)"></div><div class="lbl">1&ndash;3d</div></div>
+    <div class="bcol"><div class="b" style="height:270px;background:linear-gradient(180deg,#B18CF2,#8B5CF6)"></div><div class="lbl">4&ndash;7d</div></div>
+    <div class="bcol"><div class="b" style="height:56px;background:rgba(255,255,255,.09)"></div><div class="lbl">1&ndash;2w</div></div>
+    <div class="bcol"><div class="b" style="height:56px;background:rgba(255,255,255,.09)"></div><div class="lbl">2&ndash;4w</div></div>
+  </div>
+  <div class="line">
+    <div class="lt mono">YOUR GAME OVER TIME</div>
+    <svg width="1846" height="360" style="margin-top:24px" viewBox="0 0 1846 360">
+      <defs><linearGradient id="gg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#8B5CF6" stop-opacity=".35"/>
+        <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+      </linearGradient></defs>
+      <path d="M0,300 L260,286 L520,254 L780,240 L1040,204 L1300,150 L1560,96 L1846,40 L1846,360 L0,360 Z" fill="url(#gg)"/>
+      <path d="M0,300 L260,286 L520,254 L780,240 L1040,204 L1300,150 L1560,96 L1846,40" fill="none" stroke="#8B5CF6" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</div>
+<div class="card plan">
+  <div class="lab"><i></i>TODAY&rsquo;S GAME PLAN</div>
+  <h2><b>01</b><span>Get comfortable in guard</span></h2>
+  <p>Unfamiliar territory that&rsquo;s costing you rounds.</p>
+</div>
