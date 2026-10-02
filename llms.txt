@@ -4,7 +4,7 @@
 
 cyber:cyber is Dan Andrews’s independent product design and development practice in London. The work spans the whole stack of a product: brand, interface, and the code underneath — including the technical surfaces most designers hand off. Engagements are fixed-scope and fixed-price, measured in weeks rather than quarters, and deliberately few per year.
 
-The lab's own products are the proof rather than a client list: Kaido (clinical rehab planning), Granite and Frame (native iOS apps), all designed and built in-house, plus one delivered client engagement (IKARAO, for Bittensor). The cases show product captures, generated identity output and explicitly labelled presentation studies. Kaido screens use fictional demo cases; they do not report clinical outcomes.
+The lab's own products are the proof rather than a client list: Kaido (clinical rehab planning), Granite and Frame (native iOS apps), all designed and built in-house, plus one delivered client engagement (IKARAO, for Bittensor). The cases show product captures and generated identity output. Kaido screens are captured from the current running app using fictional local demo patients; they do not report clinical outcomes.
 
 The site itself is hand-coded vanilla HTML, CSS and JavaScript with no build step and no framework — one self-contained file per page. That is a deliberate position, argued in the journal note "The hardest client was us".
 

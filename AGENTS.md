@@ -122,3 +122,6 @@ fonts remain inside the specimen and do not extend the house type system.
 Provenance lives in media/mocks/kaido-study/provenance.json.
 
 Dan explicitly requested a homepage value-proposition rewrite and visual-led product presentation on 2 October 2026. The homepage leads with the service and shows UI; do not restore repeated human-approval doctrine across its project descriptions.
+
+## Current product captures (2 October 2026)
+Dan requested real current UI in place of presentation studies. Kaido now uses captures from the current React app running against the isolated local test database. Fictional demo patients are labelled in captions. The earlier study files are historical sources, not the published Kaido specimens. Homepage phone frames share identical dimensions and neutral grey mats.
