@@ -441,6 +441,35 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 
 .pfig.pair{grid-template-columns:minmax(0,1fr);}.pfig.pair .duo{min-width:0;grid-template-columns:minmax(0,1fr) minmax(0,1fr);}.pfig.pair .duo figure,.pfig .pcap{min-width:0;max-width:100%;}.pfig.pair .duo .device{max-width:100%;}
 @media(max-width:620px){.pfig.pair .duo{grid-template-columns:minmax(0,1fr);gap:28px;}.pfig.pair .duo .device,.pfig.pair .duo .device.dv-wide{width:min(340px,100%);}.pfig.pair .duo::before{display:none;}}
+
+/* Editorial specimens: neutral mats, full source pixels, alternating detail and overview. */
+:root{--specimen-ground:#E5E5E3;}
+.pfig{background:var(--specimen-ground);border:0;}
+.pfig .pcap .pn,.pfig .pcap .pd{color:var(--ground);}
+.pfig .device{box-shadow:none;}
+.cshmedia{background:var(--specimen-ground);padding:clamp(20px,3vw,40px);}
+.cshmedia .cshcap{color:var(--ground);}
+.cshmedia .device{max-width:100%;box-shadow:none;}
+.pfig.editorial{grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:clamp(24px,4vw,48px);}
+.pfig.editorial .device{width:min(280px,100%);justify-self:center;}
+.pfig.editorial .pcap{text-align:left;max-width:32ch;}
+.pfig.editorial.flip .device{order:2;}.pfig.editorial.flip .pcap{order:1;}
+.evidence-note{margin-top:clamp(48px,7vw,88px);padding:clamp(24px,3vw,40px);border:1px solid var(--line2);}
+.evidence-note h3{font-family:var(--raveo);font-size:var(--t-mid);line-height:1.16;margin-bottom:16px;}
+.evidence-note p{font-size:var(--t-body);color:var(--paper70);line-height:1.7;max-width:60ch;}
+@media(max-width:680px){.pfig.editorial{grid-template-columns:minmax(0,1fr);}.pfig.editorial.flip .device,.pfig.editorial.flip .pcap{order:initial;}.pfig.editorial .pcap{max-width:100%;}}
+
+.capture-link{display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in;}
+.device>.capture-link{position:absolute;inset:0;height:100%;}
+.capture-link img{display:block;max-width:100%;}
+.capture-dialog{border:1px solid var(--line2);background:var(--ground);color:var(--paper);width:min(1100px,94vw);max-height:92vh;margin:auto;padding:clamp(16px,3vw,32px);overflow:auto;}
+.capture-dialog::backdrop{background:rgba(0,0,0,.88);}
+.capture-dialog button{display:block;margin:0 0 18px auto;background:transparent;border:1px solid var(--line2);padding:10px 16px;color:var(--paper);font-family:var(--mono);font-size:var(--t-cap);cursor:pointer;}
+.capture-dialog img{display:block;max-width:100%;height:auto;margin:auto;}
+.capture-dialog p{font-size:var(--t-body);color:var(--paper70);margin-top:20px;}
+.case-enquiry{margin-top:clamp(40px,6vw,80px);padding-top:24px;border-top:1px solid var(--line);}
+.case-enquiry p{font-family:var(--raveo);font-size:var(--t-mid);line-height:1.25;max-width:28ch;}
+.case-enquiry a{display:inline-block;margin-top:20px;padding-bottom:6px;border-bottom:1px solid var(--cyan);font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.1em;text-transform:uppercase;}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -479,21 +508,23 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
       <div class="stakes reveal"><div class="slabel">The brief</div><div class="sl">Keep the clinic’s work in one place.</div><p class="mech">A patient list should make progress, adherence and the next task easy to find. The individual record should keep the plan and its history close together.</p></div>
       <div class="block reveal"><div class="pfig lead"><div class="spec"><i></i><i></i><i></i><i></i><div class="device dv-wide" style="aspect-ratio:1280/720"><img src="media/shots/k-current-caseload-20261002.png" width="1280" height="720" loading="lazy" alt="Current Kaido caseload, captured from the running app."></div></div><div class="pcap"><span class="pn">Fig. 01 &middot; Kaido &middot; caseload</span><span class="pd">The current caseload view: patient, condition, clinician and criteria status. Captured from the real app using fictional local demo patients.</span></div></div><div class="pfig lead"><div class="spec"><i></i><i></i><i></i><i></i><div class="device dv-wide" style="aspect-ratio:1280/720"><img src="media/shots/k-current-plans-20261002.png" width="1280" height="720" loading="lazy" alt="Current Kaido plan library, captured from the running app."></div></div><div class="pcap"><span class="pn">Fig. 02 &middot; Kaido &middot; plan library</span><span class="pd">The current plan library groups conditions by region, with rehabilitation arcs and criteria counts visible before opening a plan.</span></div></div></div>
       <div class="aud reveal"><div class="who"><h3><span class="b">1</span>For the clinician</h3><p>A caseload overview with the condition, assigned clinician and criteria status visible on each row. Patient detail opens from the same workspace.</p></div><div class="who"><h3><span class="b">2</span>For the patient</h3><p>A plan to follow between appointments, with the current exercises and progress recorded together.</p></div></div>
-      <div class="block reveal"><h2>From the clinic to the plan</h2><p>The caseload, plan library and protocol detail share one navigation system. The overview supports a quick scan; the detail brings exercises, starting checks and progress criteria together.</p><p>Clinical approval and discharge remain the clinician’s responsibility.</p><div class="pfig lead"><div class="spec"><i></i><i></i><i></i><i></i><div class="device dv-wide" style="aspect-ratio:1280/720"><img src="media/shots/k-current-protocol-20261002.png" width="1280" height="720" loading="lazy" alt="Current Kaido protocol detail, captured from the running app."></div></div><div class="pcap"><span class="pn">Fig. 03 &middot; Kaido &middot; protocol detail</span><span class="pd">A protocol opened inside the current app. Exercises, dosage, starting checks and research sit within the same workspace.</span></div></div></div>
+      <div class="block reveal"><h2>Overview first. Detail when it is needed.</h2><p>I made the caseload a scan of the clinic: condition, assigned clinician and criteria status sit on each row. The plan library is organised by body region, so choosing a protocol starts with the condition rather than a blank editor.</p><p>Inside a protocol, dosage, starting checks and research stay together. This keeps the overview compact while giving the detail enough space to be useful.</p><div class="pfig lead"><div class="spec"><i></i><i></i><i></i><i></i><div class="device dv-wide" style="aspect-ratio:1280/720"><img src="media/shots/k-current-protocol-20261002.png" width="1280" height="720" loading="lazy" alt="Current Kaido protocol detail, captured from the running app."></div></div><div class="pcap"><span class="pn">Fig. 03 &middot; Kaido &middot; protocol detail</span><span class="pd">A protocol opened inside the current app. Exercises, dosage, starting checks and research sit within the same workspace.</span></div></div></div>
 
 
 
 
     <div class="decide reveal">
         <span class="dlabel">The scope &middot; kept / cut</span>
-        <div class="dl">What shaped the product.</div>
+        <div class="dl">Make the plan inspectable.</div>
         <div class="cols">
-          <div class="col kept"><h3><span class="b">+</span>Kept</h3><ul><li>A criteria engine a clinician can inspect</li><li>Every approval recorded &mdash; who, when, why</li><li>Citations that travel with the threshold</li></ul></div>
-          <div class="col cut"><h3><span class="b">&minus;</span>Cut</h3><ul><li>Auto-discharge &mdash; the engine decides alone</li><li>Nudging extra sessions to grow revenue</li><li>A generated plan with no criteria behind it</li></ul></div>
+          <div class="col kept"><h3><span class="b">+</span>Kept</h3><ul><li>A criteria engine a clinician can inspect</li><li>Plan history alongside the current prescription</li><li>Citations that travel with the threshold</li></ul></div>
+          <div class="col cut"><h3><span class="b">&minus;</span>Cut</h3><ul><li>Discharge inferred from a calendar alone</li><li>Nudging extra sessions to grow revenue</li><li>A generated plan with no criteria behind it</li></ul></div>
         </div>
         <div class="refusal"><span class="rlabel">Left out</span><p>Visit-frequency recommendations were left out. The product’s focus is the rehabilitation plan and the progress recorded against it.</p></div>
       </div>
-      <p class="horizon"><b>Scope.</b> Brand, product design and implementation. The hero and first two figures are presentation studies with fictional demo content; later figures show the earlier demo. Kaido is piloting in clinics. No patient data or measured clinical outcomes appear here.</p>
+      <section class="evidence-note" aria-label="Project result"><h3>From a reusable engine to a clinic product</h3><p>The delivered work is a working clinical workspace, with caseload, plan library and protocol detail connected in one app. Kaido is in pilot. The screens use fictional local demo patients; clinical outcomes and clinic renewal are not reported in this case.</p></section>
+      <p class="horizon"><b>Scope.</b> Brand, product design and implementation. All figures are captured from the current running app with fictional local demo data. Kaido is piloting in clinics. No patient data or measured clinical outcomes appear here.</p>
+      <div class="case-enquiry"><p>Building a product around a specialist workflow?</p><a href="./#contact">Tell me what you are building &nearr;</a></div>
       <div class="colophon reveal"><div><b>Stack</b><span>Web &middot; iOS &middot; one engine</span></div><div><b>Timeline</b><span>2026</span></div><div><b>Constraint</b><span>Clinical workspace &middot; pilot</span></div></div>
     </div>
   </div></section>
@@ -602,6 +633,22 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
     else if(!e.shiftKey&&document.activeElement===b){e.preventDefault();first.focus();}
   });
   addEventListener('resize',function(){if(getComputedStyle(b).display==='none'&&m.classList.contains('open'))b.click();});
+})();
+</script>
+<dialog class="capture-dialog" id="capture-dialog" aria-label="Product screenshot"><button type="button">Close image</button><img alt=""><p></p></dialog>
+<script>
+(function(){
+ var dialog=document.getElementById('capture-dialog');
+ if(!dialog||!dialog.showModal)return;
+ var image=dialog.querySelector('img'),caption=dialog.querySelector('p');
+ document.querySelectorAll('.pfig img,.cshmedia img').forEach(function(img){
+  var button=document.createElement('button');button.type='button';button.className='capture-link';
+  button.setAttribute('aria-label','Enlarge: '+img.alt);
+  img.parentNode.insertBefore(button,img);button.appendChild(img);
+  button.addEventListener('click',function(){image.src=img.currentSrc||img.src;image.alt=img.alt;caption.textContent=img.alt;dialog.showModal();});
+ });
+ dialog.querySelector('button').addEventListener('click',function(){dialog.close();});
+ dialog.addEventListener('click',function(e){if(e.target===dialog){var b=dialog.getBoundingClientRect();if(e.clientX<b.left||e.clientX>b.right||e.clientY<b.top||e.clientY>b.bottom)dialog.close();}});
 })();
 </script>
 </body>

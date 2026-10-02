@@ -411,6 +411,35 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 
 .pfig.pair{grid-template-columns:minmax(0,1fr);}.pfig.pair .duo{min-width:0;grid-template-columns:minmax(0,1fr) minmax(0,1fr);}.pfig.pair .duo figure,.pfig .pcap{min-width:0;max-width:100%;}.pfig.pair .duo .device{max-width:100%;}
 @media(max-width:620px){.pfig.pair .duo{grid-template-columns:minmax(0,1fr);gap:28px;}.pfig.pair .duo .device,.pfig.pair .duo .device.dv-wide{width:min(340px,100%);}.pfig.pair .duo::before{display:none;}}
+
+/* Editorial specimens: neutral mats, full source pixels, alternating detail and overview. */
+:root{--specimen-ground:#E5E5E3;}
+.pfig{background:var(--specimen-ground);border:0;}
+.pfig .pcap .pn,.pfig .pcap .pd{color:var(--ground);}
+.pfig .device{box-shadow:none;}
+.cshmedia{background:var(--specimen-ground);padding:clamp(20px,3vw,40px);}
+.cshmedia .cshcap{color:var(--ground);}
+.cshmedia .device{max-width:100%;box-shadow:none;}
+.pfig.editorial{grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:clamp(24px,4vw,48px);}
+.pfig.editorial .device{width:min(280px,100%);justify-self:center;}
+.pfig.editorial .pcap{text-align:left;max-width:32ch;}
+.pfig.editorial.flip .device{order:2;}.pfig.editorial.flip .pcap{order:1;}
+.evidence-note{margin-top:clamp(48px,7vw,88px);padding:clamp(24px,3vw,40px);border:1px solid var(--line2);}
+.evidence-note h3{font-family:var(--raveo);font-size:var(--t-mid);line-height:1.16;margin-bottom:16px;}
+.evidence-note p{font-size:var(--t-body);color:var(--paper70);line-height:1.7;max-width:60ch;}
+@media(max-width:680px){.pfig.editorial{grid-template-columns:minmax(0,1fr);}.pfig.editorial.flip .device,.pfig.editorial.flip .pcap{order:initial;}.pfig.editorial .pcap{max-width:100%;}}
+
+.capture-link{display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in;}
+.device>.capture-link{position:absolute;inset:0;height:100%;}
+.capture-link img{display:block;max-width:100%;}
+.capture-dialog{border:1px solid var(--line2);background:var(--ground);color:var(--paper);width:min(1100px,94vw);max-height:92vh;margin:auto;padding:clamp(16px,3vw,32px);overflow:auto;}
+.capture-dialog::backdrop{background:rgba(0,0,0,.88);}
+.capture-dialog button{display:block;margin:0 0 18px auto;background:transparent;border:1px solid var(--line2);padding:10px 16px;color:var(--paper);font-family:var(--mono);font-size:var(--t-cap);cursor:pointer;}
+.capture-dialog img{display:block;max-width:100%;height:auto;margin:auto;}
+.capture-dialog p{font-size:var(--t-body);color:var(--paper70);margin-top:20px;}
+.case-enquiry{margin-top:clamp(40px,6vw,80px);padding-top:24px;border-top:1px solid var(--line);}
+.case-enquiry p{font-family:var(--raveo);font-size:var(--t-mid);line-height:1.25;max-width:28ch;}
+.case-enquiry a{display:inline-block;margin-top:20px;padding-bottom:6px;border-bottom:1px solid var(--cyan);font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.1em;text-transform:uppercase;}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -447,11 +476,11 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
     <div>
       <div class="block reveal"><p class="csintro">Granite is a native iOS strength coach for athletes whose main sport is elsewhere. I designed the identity, interface and on-device training engine as one product: a week view, a session to train from, and a coach you can talk to. The same engine later became the foundation for Kaido.</p></div>
       <div class="stakes reveal"><div class="slabel">The brief</div><div class="sl">Make strength training fit around another sport.</div><p class="mech">The plan needs to account for the days available, training already done and changes during the week. The interface needs to stay useful while someone is actually training.</p></div>
-      <div class="block reveal"><div class="pfig lead"><div class="device" style="aspect-ratio:1320/2868"><img src="media/shots/g-native-review.png" width="1320" height="2868" loading="lazy" alt="Granite native app: weekly review."></div><div class="pcap"><span class="pn">Fig. 01 &middot; Granite &middot; weekly review</span><span class="pd">The native weekly review shows the next programme and the changes behind it. This example is a deload after missed sessions.</span></div></div></div>
+      <div class="block reveal"><div class="pfig editorial"><div class="device" style="aspect-ratio:1320/2868"><img src="media/shots/g-native-review.png" width="1320" height="2868" loading="lazy" alt="Granite native app: weekly review."></div><div class="pcap"><span class="pn">Fig. 01 &middot; Granite &middot; weekly review</span><span class="pd">The native weekly review shows the next programme and the changes behind it. This example is a deload after missed sessions.</span></div></div></div>
       <div class="aud reveal"><div class="who"><h3><span class="b">1</span>For the person training</h3><p>A week that fits around training, work and recovery, with each lifting session ready to use.</p></div><div class="who"><h3><span class="b">2</span>For the people who prescribe</h3><p>A reusable engine behind the consumer app. Its rules also became the starting point for Kaido’s clinic product.</p></div></div>
-      <div class="block reveal"><h2>The week, the session and the coach</h2><p>The week view is the centre of the app. Goals, available days and logged training feed into a programme, while the session screen keeps the current exercise and working sets close at hand.</p><p>The voice coach offers another route into the same programme.</p><div class="pfig lead"><div class="device" style="aspect-ratio:1320/2868"><img src="media/shots/g-native-coach.png" width="1320" height="2868" loading="lazy" alt="Granite native app: voice coach."></div><div class="pcap"><span class="pn">Fig. 02 &middot; Granite &middot; voice coach</span><span class="pd">The native voice coach entry point.</span></div></div></div>
-      <div class="block reveal"><h2>One programme, several timescales</h2><p>Fixed coaching rules build and revise the programme. The week, session and review present the result as connected parts of one product.</p><p>A twelve-week arc gives the sessions a longer structure.</p><div class="pfig lead"><div class="device" style="aspect-ratio:1320/2868"><img src="media/shots/g-native-session.png" width="1320" height="2868" loading="lazy" alt="Granite native app: training session."></div><div class="pcap"><span class="pn">Fig. 03 &middot; Granite &middot; training session</span><span class="pd">The native session screen, with working sets and the reason for the day’s training.</span></div></div></div>
-      <div class="block reveal"><h2>Built to run on the phone</h2><p>Training history and programme calculations stay on the device. The product has no account or cloud service to set up before the first session.</p><div class="pfig lead"><div class="device" style="aspect-ratio:1320/2868"><img src="media/shots/g-native-progress.png" width="1320" height="2868" loading="lazy" alt="Granite native app: progress."></div><div class="pcap"><span class="pn">Fig. 04 &middot; Granite &middot; progress</span><span class="pd">The native Progress screen, calculated from the training history on the device.</span></div></div></div>
+      <div class="block reveal"><h2>Change the week without starting again.</h2><p>I put the programme at the centre of the app. Available days, goals and logged training feed the same engine, whether the change starts in the week view or with the voice coach.</p><p>The design decision was to keep those inputs connected to one programme. The coach is another way to describe a change, rather than a separate conversation with its own plan.</p><div class="pfig editorial flip"><div class="device" style="aspect-ratio:1320/2868"><img src="media/shots/g-native-coach.png" width="1320" height="2868" loading="lazy" alt="Granite native app: voice coach."></div><div class="pcap"><span class="pn">Fig. 02 &middot; Granite &middot; voice coach</span><span class="pd">The native voice coach entry point.</span></div></div></div>
+      <div class="block reveal"><h2>Different detail for planning and training.</h2><p>The week answers when to train. The session answers what to do now: the exercise, load, repetitions and rest. I separated those scales so the training screen can stay focused on the current work.</p><p>The weekly review makes the next programme visible before another session begins. In the example above, missed sessions lead to a deload.</p><div class="pfig editorial"><div class="device" style="aspect-ratio:1320/2868"><img src="media/shots/g-native-session.png" width="1320" height="2868" loading="lazy" alt="Granite native app: training session."></div><div class="pcap"><span class="pn">Fig. 03 &middot; Granite &middot; training session</span><span class="pd">The native session screen, with working sets and the reason for the day’s training.</span></div></div></div>
+      <div class="block reveal"><h2>Built to run on the phone</h2><p>Training history and programme calculations stay on the device. The product has no account or cloud service to set up before the first session.</p><div class="pfig editorial flip"><div class="device" style="aspect-ratio:1320/2868"><img src="media/shots/g-native-progress.png" width="1320" height="2868" loading="lazy" alt="Granite native app: progress."></div><div class="pcap"><span class="pn">Fig. 04 &middot; Granite &middot; progress</span><span class="pd">The native Progress screen, calculated from the training history on the device.</span></div></div></div>
       <div class="cfilm reveal">
       <div><span class="cfl">Art direction</span>
         <p class="cfyr">Made before the app existed.</p>
@@ -465,14 +494,16 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 
     <div class="decide reveal">
         <span class="dlabel">The scope &middot; kept / cut</span>
-        <div class="dl">What shaped the product.</div>
+        <div class="dl">One programme. Several ways in.</div>
         <div class="cols">
           <div class="col kept"><h3><span class="b">+</span>Kept</h3><ul><li>A rule-based engine you can trace</li><li>On-device &mdash; no account, no cloud</li><li>A weekly rewrite that explains itself</li></ul></div>
           <div class="col cut"><h3><span class="b">&minus;</span>Cut</h3><ul><li>An AI black box guessing your plan</li><li>Cloud sync and sign-in</li><li>Streaks, badges, a feed to scroll</li></ul></div>
         </div>
         <div class="refusal"><span class="rlabel">Left out</span><p>Cloud sync was removed from the scope. Local storage kept the app’s architecture consistent with its on-device premise.</p></div>
       </div>
+      <section class="evidence-note" aria-label="Project result"><h3>A native product and a reusable engine</h3><p>Granite is in Alpha. The case demonstrates the programme, session and review interfaces, alongside the identity and on-device implementation. Its engine became the foundation for Kaido. Repeated use and paid retention remain to be established.</p></section>
       <p class="horizon"><b>Scope.</b> Brand, native iOS interface and on-device training engine. The consumer app is in Alpha. Its engine also forms the foundation of <a href="work-kaido.html">Kaido</a>.</p>
+      <div class="case-enquiry"><p>Taking a complex engine into a usable product?</p><a href="./#contact">Tell me what you are building &nearr;</a></div>
       <div class="colophon reveal"><div><b>Stack</b><span>Swift &middot; SwiftUI &middot; on-device</span></div><div><b>Timeline</b><span>2026</span></div><div><b>Constraint</b><span>No cloud. No account. No black box.</span></div></div>
     </div>
   </div></section>
@@ -581,6 +612,22 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
     else if(!e.shiftKey&&document.activeElement===b){e.preventDefault();first.focus();}
   });
   addEventListener('resize',function(){if(getComputedStyle(b).display==='none'&&m.classList.contains('open'))b.click();});
+})();
+</script>
+<dialog class="capture-dialog" id="capture-dialog" aria-label="Product screenshot"><button type="button">Close image</button><img alt=""><p></p></dialog>
+<script>
+(function(){
+ var dialog=document.getElementById('capture-dialog');
+ if(!dialog||!dialog.showModal)return;
+ var image=dialog.querySelector('img'),caption=dialog.querySelector('p');
+ document.querySelectorAll('.pfig img,.cshmedia img').forEach(function(img){
+  var button=document.createElement('button');button.type='button';button.className='capture-link';
+  button.setAttribute('aria-label','Enlarge: '+img.alt);
+  img.parentNode.insertBefore(button,img);button.appendChild(img);
+  button.addEventListener('click',function(){image.src=img.currentSrc||img.src;image.alt=img.alt;caption.textContent=img.alt;dialog.showModal();});
+ });
+ dialog.querySelector('button').addEventListener('click',function(){dialog.close();});
+ dialog.addEventListener('click',function(e){if(e.target===dialog){var b=dialog.getBoundingClientRect();if(e.clientX<b.left||e.clientX>b.right||e.clientY<b.top||e.clientY>b.bottom)dialog.close();}});
 })();
 </script>
 </body>

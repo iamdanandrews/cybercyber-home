@@ -432,6 +432,35 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 
 .pfig.pair{grid-template-columns:minmax(0,1fr);}.pfig.pair .duo{min-width:0;grid-template-columns:minmax(0,1fr) minmax(0,1fr);}.pfig.pair .duo figure,.pfig .pcap{min-width:0;max-width:100%;}.pfig.pair .duo .device{max-width:100%;}
 @media(max-width:620px){.pfig.pair .duo{grid-template-columns:minmax(0,1fr);gap:28px;}.pfig.pair .duo .device,.pfig.pair .duo .device.dv-wide{width:min(340px,100%);}.pfig.pair .duo::before{display:none;}}
+
+/* Editorial specimens: neutral mats, full source pixels, alternating detail and overview. */
+:root{--specimen-ground:#E5E5E3;}
+.pfig{background:var(--specimen-ground);border:0;}
+.pfig .pcap .pn,.pfig .pcap .pd{color:var(--ground);}
+.pfig .device{box-shadow:none;}
+.cshmedia{background:var(--specimen-ground);padding:clamp(20px,3vw,40px);}
+.cshmedia .cshcap{color:var(--ground);}
+.cshmedia .device{max-width:100%;box-shadow:none;}
+.pfig.editorial{grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:clamp(24px,4vw,48px);}
+.pfig.editorial .device{width:min(280px,100%);justify-self:center;}
+.pfig.editorial .pcap{text-align:left;max-width:32ch;}
+.pfig.editorial.flip .device{order:2;}.pfig.editorial.flip .pcap{order:1;}
+.evidence-note{margin-top:clamp(48px,7vw,88px);padding:clamp(24px,3vw,40px);border:1px solid var(--line2);}
+.evidence-note h3{font-family:var(--raveo);font-size:var(--t-mid);line-height:1.16;margin-bottom:16px;}
+.evidence-note p{font-size:var(--t-body);color:var(--paper70);line-height:1.7;max-width:60ch;}
+@media(max-width:680px){.pfig.editorial{grid-template-columns:minmax(0,1fr);}.pfig.editorial.flip .device,.pfig.editorial.flip .pcap{order:initial;}.pfig.editorial .pcap{max-width:100%;}}
+
+.capture-link{display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in;}
+.device>.capture-link{position:absolute;inset:0;height:100%;}
+.capture-link img{display:block;max-width:100%;}
+.capture-dialog{border:1px solid var(--line2);background:var(--ground);color:var(--paper);width:min(1100px,94vw);max-height:92vh;margin:auto;padding:clamp(16px,3vw,32px);overflow:auto;}
+.capture-dialog::backdrop{background:rgba(0,0,0,.88);}
+.capture-dialog button{display:block;margin:0 0 18px auto;background:transparent;border:1px solid var(--line2);padding:10px 16px;color:var(--paper);font-family:var(--mono);font-size:var(--t-cap);cursor:pointer;}
+.capture-dialog img{display:block;max-width:100%;height:auto;margin:auto;}
+.capture-dialog p{font-size:var(--t-body);color:var(--paper70);margin-top:20px;}
+.case-enquiry{margin-top:clamp(40px,6vw,80px);padding-top:24px;border-top:1px solid var(--line);}
+.case-enquiry p{font-family:var(--raveo);font-size:var(--t-mid);line-height:1.25;max-width:28ch;}
+.case-enquiry a{display:inline-block;margin-top:20px;padding-bottom:6px;border-bottom:1px solid var(--cyan);font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.1em;text-transform:uppercase;}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -470,21 +499,23 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
       <div class="stakes reveal"><div class="slabel">The brief</div><div class="sl">Build a family, rather than commission every new mark.</div><p class="mech">The identity has to remain recognisable as new names appear. The drawing rules, palette and application templates need to work together.</p></div>
       <div class="aud reveal"><div class="who"><h3><span class="b">1</span>For the network</h3><p>Each name generates a distinct mark, with the family resemblance held by the drawing system.</p></div><div class="who"><h3><span class="b">2</span>For the team shipping it</h3><p>Posters and social templates carry that same identity into the team’s publishing work.</p></div></div>
       <div class="block reveal"><div class="pfig lead"><div class="spec"><i></i><i></i><i></i><i></i><div class="device dv-wide" style="aspect-ratio:1600/1144"><img src="media/shots/i-wall.webp" alt="IKARAO — the shipped wall: 300 marks with filters for register, shape, density and symmetry, and the count that proves nothing is re-picked" loading="lazy" width="1600" height="1144"></div></div><div class="pcap"><span class="pn">Fig. 01 &middot; IKARAO &middot; 300 marks, one rule</span><span class="pd">The wall of generated marks. Filters expose different registers without regenerating the underlying family.</span></div></div></div>
-      <div class="block reveal"><h2>The drawing language</h2><p>A name becomes a seed for the drawing engine. It sets the route through a grid and produces the same continuous-line mark each time.</p><p>The formal research draws on kené, the line-work tradition of the Shipibo-Konibo people of the Peruvian Amazon. That lineage is credited on the work; the engine does not claim the tradition’s meaning as its own.</p><div class="pfig lead"><div class="spec"><i></i><i></i><i></i><i></i><div class="device dv-wide" style="aspect-ratio:1600/1000"><img src="media/shots/i-tool.webp" alt="IKARAO — the Tool, live: seed TARGON drawn as 64 lines around the client’s own tau, with the full control panel" loading="lazy" width="1600" height="1000"></div></div><div class="pcap"><span class="pn">Fig. 02 &middot; IKARAO &middot; the Tool</span><span class="pd">The drawing tool, with a seed and controls for style, density and register.</span></div></div><div class="pfig lead"><div class="spec"><i></i><i></i><i></i><i></i><div class="device dv-wide" style="aspect-ratio:1200/630"><img src="media/shots/i-styles.webp" alt="IKARAO &mdash; the same seed drawn in both styles, Circuit on void and Flat line on cream, each with its full parameter line beneath" loading="lazy" width="1200" height="630"></div></div><div class="pcap"><span class="pn">Fig. 03 &middot; IKARAO &middot; one seed, both styles</span><span class="pd">One name in two registers: Circuit on a dark ground and Flat line on a pale sheet.</span></div></div></div><div class="block reveal"><h2>A family that can be regenerated</h2><p>The output is deterministic: a name can be regenerated without retrieving a stored logo file.</p><p>The application templates use the same generated marks, keeping the specimen sheets, posters and social kit related.</p><div class="pfig lead"><div class="spec"><i></i><i></i><i></i><i></i><div class="device dv-wide" style="aspect-ratio:1600/546"><img src="media/shots/i-print.webp" alt="IKARAO &mdash; a printed specimen sheet: five names on one plate, alternating cream and void grounds" loading="lazy" width="1600" height="546"></div></div><div class="pcap"><span class="pn">Fig. 04 &middot; IKARAO &middot; one plate, five names</span><span class="pd">A specimen sheet with five names, alternating pale and dark grounds.</span></div></div><div class="pfig pair"><div class="duo"><figure><div class="device dv-wide" style="aspect-ratio:1600/851"><img src="media/shots/i-poster.webp" alt="IKARAO — a concept poster: the plate on the field, one statement per sheet, the names registered that epoch" loading="lazy" width="1600" height="851"></div><figcaption>Plate on field</figcaption></figure><figure><div class="device dv-wide" style="aspect-ratio:1600/851"><img src="media/shots/i-social.webp" alt="IKARAO — the social kit: the same template on void and on cream, filled in daily" loading="lazy" width="1600" height="851"></div><figcaption>One template, two grounds</figcaption></figure></div><div class="pcap"><span class="pn">Fig. 05 &middot; IKARAO &middot; posters and the daily feed</span><span class="pd">Concept posters and social templates, using the same generated identity.</span></div></div></div>
+      <div class="block reveal"><h2>The drawing language</h2><p>A name becomes a seed for the drawing engine. It sets the route through a grid and produces the same continuous-line mark each time.</p><p>The formal research draws on kené, the line-work tradition of the Shipibo-Konibo people of the Peruvian Amazon. That lineage is credited on the work; the engine does not claim the tradition’s meaning as its own.</p><div class="pfig lead"><div class="spec"><i></i><i></i><i></i><i></i><div class="device dv-wide" style="aspect-ratio:1600/1000"><img src="media/shots/i-tool.webp" alt="IKARAO — the Tool, live: seed TARGON drawn as 64 lines around the client’s own tau, with the full control panel" loading="lazy" width="1600" height="1000"></div></div><div class="pcap"><span class="pn">Fig. 02 &middot; IKARAO &middot; the Tool</span><span class="pd">The drawing tool, with a seed and controls for style, density and register.</span></div></div><div class="pfig lead"><div class="spec"><i></i><i></i><i></i><i></i><div class="device dv-wide" style="aspect-ratio:1200/630"><img src="media/shots/i-styles.webp" alt="IKARAO &mdash; the same seed drawn in both styles, Circuit on void and Flat line on cream, each with its full parameter line beneath" loading="lazy" width="1200" height="630"></div></div><div class="pcap"><span class="pn">Fig. 03 &middot; IKARAO &middot; one seed, both styles</span><span class="pd">One name in two registers: Circuit on a dark ground and Flat line on a pale sheet.</span></div></div></div><div class="block reveal"><h2>Make the system usable after handover.</h2><p>I made the name the input to the drawing system. The output is deterministic, so the same name regenerates the same mark without a library of stored logo files.</p><p>The practical decision was to deliver the engine alongside application templates. New names can enter the family through the same rules used for the original work.</p><p>The application templates use the same generated marks, keeping the specimen sheets, posters and social kit related.</p><div class="pfig lead"><div class="spec"><i></i><i></i><i></i><i></i><div class="device dv-wide" style="aspect-ratio:1600/546"><img src="media/shots/i-print.webp" alt="IKARAO &mdash; a printed specimen sheet: five names on one plate, alternating cream and void grounds" loading="lazy" width="1600" height="546"></div></div><div class="pcap"><span class="pn">Fig. 04 &middot; IKARAO &middot; one plate, five names</span><span class="pd">A specimen sheet with five names, alternating pale and dark grounds.</span></div></div><div class="pfig pair"><div class="duo"><figure><div class="device dv-wide" style="aspect-ratio:1600/851"><img src="media/shots/i-poster.webp" alt="IKARAO — a concept poster: the plate on the field, one statement per sheet, the names registered that epoch" loading="lazy" width="1600" height="851"></div><figcaption>Plate on field</figcaption></figure><figure><div class="device dv-wide" style="aspect-ratio:1600/851"><img src="media/shots/i-social.webp" alt="IKARAO — the social kit: the same template on void and on cream, filled in daily" loading="lazy" width="1600" height="851"></div><figcaption>One template, two grounds</figcaption></figure></div><div class="pcap"><span class="pn">Fig. 05 &middot; IKARAO &middot; posters and the daily feed</span><span class="pd">Concept posters and social templates, using the same generated identity.</span></div></div></div>
       <div class="block reveal"><h2>From reference to drawing rules</h2><p>Eighty-six reference textiles were studied against six formal questions: weight, density, colour placement, symmetry, edges and junctions. The findings became drawing constraints, rather than a moodboard alone.</p><p>Weight is built from parallel contours, filled channels and clear gutters. Fixed tiers give the family a consistent register across different compositions.</p><p>Colour is concentrated at junctions and line ends. The contrast between dark grounds and pale specimen sheets lets the same mark work in different applications.</p><p>The engine’s routing is part of the composition itself. The final art direction favours work in which the drawing system is visible, rather than extra framing layered around it.</p><p>The quieter applications reduce the surrounding furniture to a headline, a mono line and the lockup. That leaves room for the mark to carry the identity.</p></div><div class="pfig lead"><div class="spec"><i></i><i></i><i></i><i></i><div class="device dv-wide" style="aspect-ratio:1400/1391"><img src="media/shots/i-specs.webp" alt="IKARAO — the specs page: ink coverage, rhythm and largest void, measured against the client’s own painted canvases, plus the six rules the engine refuses to break" loading="lazy" width="1400" height="1391"></div></div><div class="pcap"><span class="pn">Fig. 06 &middot; IKARAO &middot; measured against the client&rsquo;s own canvas</span><span class="pd">The specification view records ink coverage and the drawing constraints checked by the engine.</span></div></div>
 
 
 
     <div class="decide reveal">
         <span class="dlabel">The scope &middot; kept / cut</span>
-        <div class="dl">What shaped the product.</div>
+        <div class="dl">Keep the rules inside the work.</div>
         <div class="cols">
-          <div class="col kept"><h3><span class="b">+</span>Kept</h3><ul><li>One rule, applied to every name, forever</li><li>Every caption states a checked fact, not a guess</li><li>The client&rsquo;s own palette &mdash; the black, gold and red already live on their feed</li></ul></div>
-          <div class="col cut"><h3><span class="b">&minus;</span>Cut</h3><ul><li>A logo, guarded by a rulebook nobody enforces</li><li>Layouts borrowed from the hundred systems we studied</li><li>Every exploratory direction that didn&rsquo;t make the cut</li></ul></div>
+          <div class="col kept"><h3><span class="b">+</span>Kept</h3><ul><li>One rule, applied to every name, forever</li><li>Templates that preserve the drawing system</li><li>The client&rsquo;s own palette &mdash; the black, gold and red already live on their feed</li></ul></div>
+          <div class="col cut"><h3><span class="b">&minus;</span>Cut</h3><ul><li>A logo, guarded by a rulebook nobody enforces</li><li>Extra framing that competes with the mark</li><li>Every exploratory direction that didn&rsquo;t make the cut</li></ul></div>
         </div>
         <div class="refusal"><span class="rlabel">Left out</span><p>The final case shows the delivered drawing system and its applications. Exploratory directions are omitted so the family can be read as a coherent whole.</p></div>
       </div>
-      <p class="horizon"><b>Scope.</b> IKARAO is this studio&rsquo;s name for the engagement &mdash; it appears on nothing Bittensor ships; their own mark is <span style="font-family:var(--mono)">&tau;</span>. What&rsquo;s shown here is the finished system: the engine, the concept posters, the social kit. The process, the backlog and the roads not taken stay off this page, same as they stayed off the client&rsquo;s.</p>
+      <section class="evidence-note" aria-label="Project result"><h3>A delivered identity system</h3><p>The deliverable combines a deterministic drawing engine, specimen sheets, concept posters and social templates. The applications shown explain the system; this case does not report campaign performance or claim that every concept was published.</p></section>
+      <p class="horizon"><b>Scope.</b> IKARAO is this studio&rsquo;s name for the engagement &mdash; it appears on nothing Bittensor ships; their own mark is <span style="font-family:var(--mono)">&tau;</span>. What&rsquo;s shown here is the finished system: the engine, the concept posters, the social kit. The case shows the final drawing rules and selected applications. Concept posters are labelled as concepts.</p>
+      <div class="case-enquiry"><p>Need an identity that can grow with your product?</p><a href="./#contact">Tell me what you are building &nearr;</a></div>
       <div class="colophon reveal"><div><b>Stack</b><span>JavaScript &middot; zero dependencies</span></div><div><b>Timeline</b><span>2026</span></div><div><b>Constraint</b><span>Same name, same mark. Forever.</span></div></div>
     </div>
   </div></section>
@@ -593,6 +624,22 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
     else if(!e.shiftKey&&document.activeElement===b){e.preventDefault();first.focus();}
   });
   addEventListener('resize',function(){if(getComputedStyle(b).display==='none'&&m.classList.contains('open'))b.click();});
+})();
+</script>
+<dialog class="capture-dialog" id="capture-dialog" aria-label="Product screenshot"><button type="button">Close image</button><img alt=""><p></p></dialog>
+<script>
+(function(){
+ var dialog=document.getElementById('capture-dialog');
+ if(!dialog||!dialog.showModal)return;
+ var image=dialog.querySelector('img'),caption=dialog.querySelector('p');
+ document.querySelectorAll('.pfig img,.cshmedia img').forEach(function(img){
+  var button=document.createElement('button');button.type='button';button.className='capture-link';
+  button.setAttribute('aria-label','Enlarge: '+img.alt);
+  img.parentNode.insertBefore(button,img);button.appendChild(img);
+  button.addEventListener('click',function(){image.src=img.currentSrc||img.src;image.alt=img.alt;caption.textContent=img.alt;dialog.showModal();});
+ });
+ dialog.querySelector('button').addEventListener('click',function(){dialog.close();});
+ dialog.addEventListener('click',function(e){if(e.target===dialog){var b=dialog.getBoundingClientRect();if(e.clientX<b.left||e.clientX>b.right||e.clientY<b.top||e.clientY>b.bottom)dialog.close();}});
 })();
 </script>
 </body>

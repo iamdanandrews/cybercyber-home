@@ -1,6 +1,6 @@
 # cyber:cyber
 
-> Independent product design and development by Dan Andrews. Brand, interface and production code, from first direction through to release.
+> A product design lab for founders taking a product from first direction to launch. Brand, interface and working software by Dan Andrews.
 
 cyber:cyber is Dan Andrews’s independent product design and development practice in London. The work spans the whole stack of a product: brand, interface, and the code underneath — including the technical surfaces most designers hand off. Engagements are fixed-scope and fixed-price, measured in weeks rather than quarters, and deliberately few per year.
 
