@@ -44,7 +44,7 @@
   --grey:#948FA0; --dim:#8C8996; --line:#211F27; --line2:#2C2A33;
   --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
   --sans:"Helvetica Neue",Helvetica,"Segoe UI",system-ui,Arial,sans-serif;
-  --raveo:"Raveo","Helvetica Neue",Helvetica,Arial,sans-serif; --maxw:1280px; --fold:66.667%;--kaido-ground:#171B24;--frame-ground:#101116;
+  --raveo:"Raveo","Helvetica Neue",Helvetica,Arial,sans-serif; --maxw:1280px; --fold:66.667%;--kaido-ground:#171B24;--frame-ground:#101116;--portfolio-ground:#E5E5E3;
   --e1:cubic-bezier(.2,.7,.2,1);--ep:cubic-bezier(.2,.6,.3,1);--s1:#0e0d12;--s2:#15131b;
   --t-cap:clamp(10px,.28vw + 9px,11.5px);--t-body:clamp(15px,.35vw + 13.6px,17px);--t-lead:clamp(18px,.9vw + 14px,22px);--t-mid:clamp(23px,2.4vw,30px);--t-sub:clamp(24px,2.4vw + 14px,44px);--t-title:clamp(30px,4.4vw,58px);--t-h2:clamp(46px,9vw,140px);--t-hero:clamp(34px,10vw,175px);
   --tr-cap:.16em;--e-settle:cubic-bezier(.22,1,.36,1);--dur-1:.14s;--dur-2:.34s;--dur-3:.9s;--dur-display:.8s;--u:8px;--sp-3:24px;--sp-4:40px;--sp-5:64px;--sp-6:96px;--sp-7:144px;
@@ -567,7 +567,7 @@ section.reveal>.wrap{position:relative;}
 .hero .hanchor .hcap .hw{cursor:default;}
 @media(hover:hover) and (pointer:fine){
   .hero .hanchor:hover .hmark{opacity:1;}
-  .hero .hanchor:hover .hmark circle{fill:var(--paper);}
+  .hero .hanchor:hover .hmark circle{fill:var(--cyan);}
   .hero .hanchor .hcap .hw:hover{color:var(--paper);}
 }
 @media(prefers-reduced-motion:reduce){
@@ -826,16 +826,16 @@ section.reveal>.wrap{position:relative;}
 .wkm{justify-content:flex-start;letter-spacing:.04em;line-height:1.7;}
 .portfolio-plate{width:100%;overflow:hidden;position:relative;}
 .portfolio-plate img{display:block;height:auto;max-width:100%;}
-.plate-kaido{background:var(--kaido-ground);padding:clamp(18px,3vw,42px);}.plate-kaido img{width:100%;border-radius:9px;box-shadow:0 20px 55px rgba(0,0,0,.18);}
-.plate-granite{background:var(--gr-ground);padding:clamp(28px,4vw,56px) 24px;}
-.plate-frame{background:var(--frame-ground);padding:clamp(28px,4vw,56px) 24px;}
-.phone-set{display:flex;align-items:center;justify-content:center;gap:clamp(18px,3vw,42px);height:clamp(440px,44vw,600px);}
-.phone-set img{height:100%;width:auto;max-width:29%;object-fit:contain;border-radius:16px;}
-.phone-set .phone-secondary{height:90%;}.phone-set .phone-tertiary{height:82%;}
-.plate-ikarao{background:var(--ik-void);}.plate-ikarao img{width:100%;}.plate-ikarao .identity-strip{margin-top:14px;}
-.proof-caption{margin-top:16px;}.nfy2 .ref{padding-left:0;}
-@media(max-width:819px){.wkhead{grid-template-columns:1fr;gap:22px;align-items:start;}.wktext{align-items:flex-start;text-align:left;}.phone-set{height:clamp(360px,65vw,540px);gap:16px;}.phone-set .phone-tertiary{display:none;}.phone-set img{max-width:44%;}.plate-kaido{padding:16px;}.plate-kaido img{width:170%;max-width:none;}.plate-kaido{max-height:560px;}.proof-caption{font-size:var(--t-cap);}}
-@media(max-width:460px){.phone-set{height:390px;gap:14px;}.plate-granite,.plate-frame{padding:28px 14px;}.phone-set img{max-width:47%;border-radius:10px;}.plate-kaido img{width:220%;}.plate-kaido{height:380px;}.wkhead{margin-bottom:24px;}.wkn{font-size:var(--t-title);}.proof-caption{flex-wrap:wrap;}}
+.plate-kaido{background:var(--portfolio-ground);padding:clamp(18px,3vw,42px);}.plate-kaido img{width:100%;border-radius:9px;box-shadow:0 20px 55px rgba(0,0,0,.18);}
+.plate-granite{background:var(--portfolio-ground);padding:clamp(28px,4vw,56px) 24px;}
+.plate-frame{background:var(--portfolio-ground);padding:clamp(28px,4vw,56px) 24px;}
+.phone-set{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:clamp(18px,3vw,42px);max-width:900px;margin:0 auto;}
+.phone-set img{width:100%;height:auto;max-width:100%;aspect-ratio:680/1478;object-fit:cover;object-position:top;border-radius:16px;}
+.plate-ikarao{background:var(--portfolio-ground);}.plate-ikarao img{width:100%;}.plate-ikarao .identity-strip{margin-top:14px;}
+.proof-caption{margin-top:16px;}
+#notforyou .shd .h2{grid-column:1/-1;white-space:nowrap;}
+@media(max-width:819px){.wkhead{grid-template-columns:1fr;gap:22px;align-items:start;}.wktext{align-items:flex-start;text-align:left;}.phone-set{grid-template-columns:repeat(2,minmax(0,1fr));max-width:500px;gap:16px;}.phone-set .phone-tertiary{display:none;}.phone-set img{max-width:100%;}.plate-kaido{padding:16px;}.plate-kaido img{width:170%;max-width:none;}.plate-kaido{max-height:560px;}.proof-caption{font-size:var(--t-cap);}}
+@media(max-width:460px){.phone-set{gap:14px;}.plate-granite,.plate-frame{padding:28px 14px;}.phone-set img{max-width:100%;border-radius:10px;}.plate-kaido img{width:220%;}.plate-kaido{height:380px;}.wkhead{margin-bottom:24px;}.wkn{font-size:var(--t-title);}.proof-caption{flex-wrap:wrap;}}
 
 </style>
 
@@ -891,7 +891,7 @@ section.reveal>.wrap{position:relative;}
   <section id="work"><div class="wrap">
     <div class="shd"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Selected work<span class="ix">01 / INDEX</span></div>
     <h2 class="h2" style="--c:var(--paper)">Selected work</h2>
-    <p class="lead">Three products of my own. One identity system for a client. Each taken from its visual language to the code that makes it work.</p></div>
+    </div>
     <!-- THE LEDGER. The alternating image+paragraph reel was the one pattern the field
      research found exactly once at the top tier, and only animated. What dominates
      instead: the project NAME at display scale as the primary object, images on one
@@ -1322,7 +1322,9 @@ section.reveal>.wrap{position:relative;}
           drawTo(window.ccMark(w.getAttribute('data-seed'), 6));
         });
       });
-      hcap.addEventListener('mouseleave', function(){ drawTo(base); });
+      var anchor=hmSvg.closest('.hanchor');
+      anchor.addEventListener('mouseenter',function(){drawTo(window.ccMark('brand',6));});
+      anchor.addEventListener('mouseleave',function(){drawTo(base);});
     }
   })();
 })();
