@@ -125,3 +125,5 @@ Dan explicitly requested a homepage value-proposition rewrite and visual-led pro
 
 ## Current product captures (2 October 2026)
 Dan requested real current UI in place of presentation studies. Kaido now uses captures from the current React app running against the isolated local test database. Fictional demo patients are labelled in captions. The earlier study files are historical sources, not the published Kaido specimens. Homepage phone frames share identical dimensions and neutral grey mats.
+
+Granite and Frame specimens use unmodified native screenshot sets from their product repositories. Provenance is recorded in media/shots/native-product-provenance.json; do not describe these sets as newly captured on 2 October. Frame’s old four-tab HTML recreations are no longer published.

@@ -1,0 +1,13 @@
+{
+  "Granite": {
+    "source": "Prgrm/docs/screenshots-6.9",
+    "type": "Unmodified native product screenshot set, not newly captured this session",
+    "checked_against": "Granite/Views/RootTabView.swift and current view structure"
+  },
+  "Frame": {
+    "source": "Frame/docs/app-store/screenshots/6.9in-*",
+    "type": "Unmodified native product screenshot set, not newly captured this session",
+    "checked_against": "Sources/App/RootTabView.swift; current five-tab navigation, native Log and Game views"
+  },
+  "presentation": "Uniform frames; full pixels retained; no HTML UI recreation"
+}
