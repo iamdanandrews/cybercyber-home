@@ -2,7 +2,13 @@
   "Granite": {
     "source": "Prgrm/docs/screenshots-6.9",
     "type": "Unmodified native product screenshot set, not newly captured this session",
-    "checked_against": "Granite/Views/RootTabView.swift and current view structure"
+    "checked_against": "Granite/Views/RootTabView.swift and current view structure",
+    "coach_replacement": {
+      "source": "Existing g-coach.webp capture",
+      "reason": "Waveform upper band; text below, with no overlap",
+      "checked_against": "CoachWaveView.swift: CoachWave, listeningStatus, transcript in a vertical stack",
+      "fresh_capture": false
+    }
   },
   "Frame": {
     "source": "Frame/docs/app-store/screenshots/6.9in-*",
