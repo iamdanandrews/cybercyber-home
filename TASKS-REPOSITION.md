@@ -11,6 +11,16 @@ stop and flag rather than improvise.
 
 ---
 
+## Release audit · 2026-10-02
+
+The 33-commit reposition branch implements the four-case structure, Kaido rename,
+portfolio chrome, two additional journal notes and the Register. This historical
+phase checklist is not the current release status. No Git stashes were present.
+Dan approved publication of the finished named IKARAO/Bittensor case on 2 October.
+The audit also fixes navigation, evidence labelling, mobile figure sizing,
+canonical URLs, social metadata and immutable-media cache addresses.
+Offer prices are retained; no new billing or slot facts are invented.
+
 ## 0 · Invariants (referenced by every task — do not restate per task)
 
 - **I1 — Checker green.** `node check.mjs` exits 0 after every task. No exceptions.

@@ -4,35 +4,35 @@
 
 cyber:cyber is a product design lab, not an agency and not a studio-for-hire. The work spans the whole stack of a product: brand, interface, and the code underneath — including the technical surfaces most designers hand off. Engagements are fixed-scope and fixed-price, measured in weeks rather than quarters, and deliberately few per year.
 
-The lab's own products are the proof rather than a client list: Kaido (clinical rehab planning), Granite and Frame (native iOS apps), all designed and built in-house, plus one delivered client engagement (IKARAO, for Bittensor). Every case study uses real screens captured from the shipping products, not mockups.
+The lab's own products are the proof rather than a client list: Kaido (clinical rehab planning), Granite and Frame (native iOS apps), all designed and built in-house, plus one delivered client engagement (IKARAO, for Bittensor). The cases show product captures, generated identity output and explicitly labelled presentation studies. Kaido screens use fictional demo cases; they do not report clinical outcomes.
 
 The site itself is hand-coded vanilla HTML, CSS and JavaScript with no build step and no framework — one self-contained file per page. That is a deliberate position, argued in the journal note "The hardest client was us".
 
 ## Core
 
-- [Home](https://cybercyber.ai/): The lab, the offer, the work, and who it isn't for.
-- [Manifesto](https://cybercyber.ai/manifesto.html): Ten things a product design lab believes — on judgement, refusal, and what's worth building rather than just shipping fast.
-- [Journal](https://cybercyber.ai/journal.html): Working notes on judgement, refusal, and building on the frontier.
-- [The Register](https://cybercyber.ai/specimen.html): The house type specimen published as law — one variable face, seven permitted weights, eight sizes, a seeded setting machine, and the measured drift the rules haven't caught up with.
+- [Home](https://www.cybercyber.ai/): The lab, the offer, the work, and who it isn't for.
+- [Manifesto](https://www.cybercyber.ai/manifesto.html): Ten things a product design lab believes — on judgement, refusal, and what's worth building rather than just shipping fast.
+- [Journal](https://www.cybercyber.ai/journal.html): Working notes on judgement, refusal, and building on the frontier.
+- [The Register](https://www.cybercyber.ai/specimen.html): The house type specimen published as law — one variable face, seven permitted weights, eight sizes, a seeded setting machine, and the measured drift the rules haven't caught up with.
 
 ## Work
 
-- [Kaido](https://cybercyber.ai/work-kaido.html): Criteria-based rehab planning for physiotherapy clinics. Proposes and monitors a patient's plan between visits; never clears them. Spun off Granite's coaching engine, piloting in clinics at £200/month.
-- [Granite](https://cybercyber.ai/work-granite.html): A native, on-device strength coach for athletes whose sport isn't lifting — rewrites your training every week around what your sport already cost your body. The engine that Kaido grew out of.
-- [Frame](https://cybercyber.ai/work-frame.html): A native BJJ training journal built against the forgetting curve.
-- [IKARAO](https://cybercyber.ai/work-ikarao.html): A generative identity system for Bittensor, art-directed off eighty-six reference textiles and enforced by a drawing engine rather than a style guide. The one client engagement among the four; the rest are the lab's own products.
+- [Kaido](https://www.cybercyber.ai/work-kaido.html): Criteria-based rehab planning for physiotherapy clinics. Proposes and monitors a patient's plan between visits; never clears them. Spun off Granite's coaching engine, piloting in clinics at £200/month.
+- [Granite](https://www.cybercyber.ai/work-granite.html): A native, on-device strength coach for athletes whose sport isn't lifting — rewrites your training every week around what your sport already cost your body. The engine that Kaido grew out of.
+- [Frame](https://www.cybercyber.ai/work-frame.html): A native BJJ training journal built against the forgetting curve.
+- [IKARAO](https://www.cybercyber.ai/work-ikarao.html): A generative identity system for Bittensor, art-directed off eighty-six reference textiles and enforced by a drawing engine rather than a style guide. The one client engagement among the four; the rest are the lab's own products.
 
 ## Journal
 
-- [The sea lion papers](https://cybercyber.ai/journal-sea-lion.html): Ninety fabricated research citations, caught by checking every one against PubMed — and what a clinical product owes a clinician after that.
-- [The word before it drifted](https://cybercyber.ai/journal-the-word.html): cyber comes from the Greek for helmsman, and "governor" is the same word by a different road — what that means for a studio whose products are literally feedback loops with a human at the wheel.
-- [The hardest client was us](https://cybercyber.ai/journal-hardest-client.html): Why the lab's own site was treated as the hardest brief of the year — hand-built, deliberately empty, real screens over mockups.
-- [Nobody wrote it down](https://cybercyber.ai/journal-undocumented.html): On confabulation, contextual inquiry, and why almost no software will make a decision.
-- [The velocity gods](https://cybercyber.ai/journal-velocity.html): How speed stopped being a means and became a faith — what the cult of shipping fast produces, and what it costs.
-- [Building cyber:cyber](https://cybercyber.ai/journal-building.html): An honest working note on building a one-person AI product lab — how it got built and what it cost.
-- [Shipping got commoditised](https://cybercyber.ai/journal-shipping.html): Anyone can ship a product in a weekend now. What's actually scarce once production is free.
-- [Six things native AI features get right](https://cybercyber.ai/journal-six-things.html): The six decisions that separate native AI from a chat bubble in the corner.
-- [Why cyber:cyber exists](https://cybercyber.ai/journal-why.html): The founding note — why a lab rather than an agency, and why the internet is drowning in B+ AI output.
+- [The sea lion papers](https://www.cybercyber.ai/journal-sea-lion.html): Ninety fabricated research citations, caught by checking every one against PubMed — and what a clinical product owes a clinician after that.
+- [The word before it drifted](https://www.cybercyber.ai/journal-the-word.html): cyber comes from the Greek for helmsman, and "governor" is the same word by a different road — what that means for a studio whose products are literally feedback loops with a human at the wheel.
+- [The hardest client was us](https://www.cybercyber.ai/journal-hardest-client.html): Why the lab's own site was treated as the hardest brief of the year — hand-built, with product captures and presentation studies clearly distinguished.
+- [Nobody wrote it down](https://www.cybercyber.ai/journal-undocumented.html): On confabulation, contextual inquiry, and why almost no software will make a decision.
+- [The velocity gods](https://www.cybercyber.ai/journal-velocity.html): How speed stopped being a means and became a faith — what the cult of shipping fast produces, and what it costs.
+- [Building cyber:cyber](https://www.cybercyber.ai/journal-building.html): An honest working note on building a one-person AI product lab — how it got built and what it cost.
+- [Shipping got commoditised](https://www.cybercyber.ai/journal-shipping.html): Anyone can ship a product in a weekend now. What's actually scarce once production is free.
+- [Six things native AI features get right](https://www.cybercyber.ai/journal-six-things.html): The six decisions that separate native AI from a chat bubble in the corner.
+- [Why cyber:cyber exists](https://www.cybercyber.ai/journal-why.html): The founding note — why a lab rather than an agency, and why the internet is drowning in B+ AI output.
 
 ## The offer
 

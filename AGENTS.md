@@ -4,7 +4,7 @@ Instructions for any agent (or person) editing this repo. Read this before chang
 
 ## What this is
 
-The cyber:cyber studio site. **13 hand-written, self-contained HTML pages. No build step, no framework, no dependencies, no `package.json`.** Each page carries its own `<style>` and `<script>` inline. `mark.js` is the only shared script and `RaveoVF.woff2` the only shared font.
+The cyber:cyber studio site. **18 hand-written, self-contained HTML pages. No build step, no framework, no dependencies, no `package.json`.** Each page carries its own `<style>` and `<script>` inline. `mark.js` is the only shared script and `RaveoVF.woff2` the only shared font.
 
 This is a deliberate position, not an accident or a stage to be migrated away from. Do not introduce a bundler, a framework, a CSS preprocessor, or a component system. Do not split pages into partials. If a change seems to need a build step, it is the wrong change.
 
@@ -14,7 +14,7 @@ Push to `main` → Vercel deploys automatically. There is no staging.
 
 - Apex `cybercyber.ai` **308-redirects to `www`** — verify live with `curl -sL` (follow redirects) or you will read the redirect, not the page.
 - The CDN lags a push. Poll in a loop; the first check after a deploy is usually stale.
-- `vercel.json` sets immutable long-cache headers on `woff2`/`svg` only. Renaming a font or an SVG is the way to bust its cache.
+- `vercel.json` sets immutable long-cache headers on fonts, SVGs and media images/video. Renaming a font or an SVG is the way to bust its cache.
 
 ## Design system — read before touching CSS
 
@@ -113,3 +113,10 @@ authored recreation is the documented exception, only for undersized real conten
 - **Budget below ~4000ms captures the boot loader** ("CALIBRATING") instead of the real page — use ≥4200.
 - **`transition-delay` does not advance under `--virtual-time-budget`.** Only JS timers (`setTimeout`/`setInterval`) do. A staggered `.reveal` figure that's missing from a screenshot at any budget is a verification artifact, not a bug — isolate the component instead: copy the page to a `_scratch.html`, wrap the piece in a `#posterStage{position:fixed;inset:0;z-index:99999}` overlay with the ancestor's `.reveal` class hand-set to `.reveal.in`, screenshot that, then **delete the scratch file**. Never commit a `_*.html` file.
 - An embedded browser pane can report a 0×0 viewport and freeze `requestAnimationFrame` — don't conclude a change is broken from that either; use the CLI recipe above.
+
+## Presentation studies (2026-10)
+Kaido’s hero and opening approval specimen are explicitly labelled studies using
+fictional demo content and the current product palette. They are not claims of
+shipped UI. The native HTML approval asset is read-only; product-local Switzer
+fonts remain inside the specimen and do not extend the house type system.
+Provenance lives in media/mocks/kaido-study/provenance.json.

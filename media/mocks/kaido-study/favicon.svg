@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Kaido">
+  <rect width="48" height="48" rx="10" fill="#161412"/>
+  <g stroke="#EDE6DA" stroke-width="5.2" fill="none">
+    <path d="M15 9v30"/>
+    <path d="M15.5 24.5 33 9.5"/>
+    <path d="M15.5 23.5 33 38.5"/>
+  </g>
+  <rect x="27" y="21.9" width="17" height="4.2" fill="#FFD000"/>
+</svg>

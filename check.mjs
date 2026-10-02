@@ -89,12 +89,20 @@ for (const f of PAGES) {
     if (!/class="status"/.test(s)) bad(f, 'no status block');
   }
 
+  /* ---- every mobile menu exposes the same published cases ---- */
+  if (!ALLOW.noHeader.includes(f)) {
+    const expected = ['work-kaido.html', 'work-granite.html', 'work-frame.html', 'work-ikarao.html'];
+    const panel = s.match(/<div class="mobile"[^>]*>([\s\S]*?)<\/div>/)?.[1] || '';
+    const routes = [...panel.matchAll(/class="msub" href="([^"]+)"/g)].map(m => m[1]);
+    if (JSON.stringify(routes) !== JSON.stringify(expected)) bad(f, 'mobile case routes missing or out of order');
+  }
+
   /* ---- motion must have a reduced-motion twin ---- */
   const animates = /transition:|animation:/.test(css);
   if (animates && !/prefers-reduced-motion/.test(css)) bad(f, 'animates with no reduced-motion twin');
 
   /* ---- assets referenced must exist ---- */
-  for (const m of s.matchAll(/(?:src|href|data-src)="((?!https?:|mailto:|#|\/_vercel|\.\/|tel:)[^"]+\.(?:html|png|svg|js|woff2|mp4|txt|md))"/g)) {
+  for (const m of s.matchAll(/(?:src|href|data-src)="((?!https?:|mailto:|#|\/_vercel|\.\/|tel:)[^"]+\.(?:html|png|webp|jpg|jpeg|svg|js|woff2|mp4|txt|md))"/g)) {
     if (!existsSync(m[1])) bad(f, `dead reference → ${m[1]}`);
   }
 
