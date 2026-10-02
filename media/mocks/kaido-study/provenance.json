@@ -2,7 +2,7 @@
   "status": "Presentation study; fictional demo data; not a shipped clinical product screen",
   "source": "Kaido clinic-demo.html and its fictional approval queue",
   "visual_reference": "webapp/src/theme/kaido.ts: slate surfaces, #D5F784 accent, Switzer",
-  "homepage_asset": "Native HTML extracted from the fictional L. Tran approval card; action labels are read-only",
-  "case_study": "Hero and opening approval figure refreshed; subsequent figures remain earlier demo captures",
+  "homepage_asset": "Caseload screenshot of the refreshed fictional demo presentation; no approval card overlay",
+  "case_study": "Hero and first two figures are refreshed caseload and plan-library presentation studies; later figures remain earlier demo captures",
   "scope": "Site presentation only; clinical product and clinical logic unchanged"
 }

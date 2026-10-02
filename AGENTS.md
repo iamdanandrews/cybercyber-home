@@ -115,8 +115,10 @@ authored recreation is the documented exception, only for undersized real conten
 - An embedded browser pane can report a 0×0 viewport and freeze `requestAnimationFrame` — don't conclude a change is broken from that either; use the CLI recipe above.
 
 ## Presentation studies (2026-10)
-Kaido’s hero and opening approval specimen are explicitly labelled studies using
+Kaido’s hero and first two UI specimens are explicitly labelled studies using
 fictional demo content and the current product palette. They are not claims of
-shipped UI. The native HTML approval asset is read-only; product-local Switzer
+shipped UI. The older native HTML approval asset is retained as a source study; product-local Switzer
 fonts remain inside the specimen and do not extend the house type system.
 Provenance lives in media/mocks/kaido-study/provenance.json.
+
+Dan explicitly requested a homepage value-proposition rewrite and visual-led product presentation on 2 October 2026. The homepage leads with the service and shows UI; do not restore repeated human-approval doctrine across its project descriptions.

@@ -3,19 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>cyber:cyber — a product design lab</title>
-<meta name="description" content="A product design lab in London. We design the brand, the interface, and the code — and we build it. A few clients a year.">
+<title>cyber:cyber — brand, product design and development</title>
+<meta name="description" content="Independent product design and development by Dan Andrews. Brand, interface and production code, from first direction through to release.">
 
 <meta property="og:site_name" content="cyber:cyber">
 <meta property="og:url" content="https://www.cybercyber.ai/">
-<meta property="og:title" content="cyber:cyber — a product design lab">
-<meta property="og:description" content="A product design lab in London. We design the brand, the interface, and the code — and we build it. A few clients a year.">
+<meta property="og:title" content="cyber:cyber — brand, product design and development">
+<meta property="og:description" content="Independent product design and development by Dan Andrews. Brand, interface and production code, from first direction through to release.">
 <meta property="og:image" content="https://www.cybercyber.ai/media/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="cyber:cyber — a product design lab">
-<meta name="twitter:description" content="A product design lab in London. We design the brand, the interface, and the code — and we build it. A few clients a year.">
+<meta name="twitter:title" content="cyber:cyber — brand, product design and development">
+<meta name="twitter:description" content="Independent product design and development by Dan Andrews. Brand, interface and production code, from first direction through to release.">
 <meta name="twitter:image" content="https://www.cybercyber.ai/media/og.png">
 <link rel="canonical" href="https://www.cybercyber.ai/">
 <meta name="color-scheme" content="dark">
@@ -26,7 +26,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="preload" href="RaveoVF.woff2" as="font" type="font/woff2" crossorigin>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"cyber:cyber","alternateName":"cyber:cyber studio","description":"A product design lab in London. We design the brand, the interface, and the code \u2014 and we build it. A few clients a year.","url":"https://www.cybercyber.ai","email":"hello@cybercyber.ai","areaServed":"Worldwide","priceRange":"\u00a35,000\u2013\u00a350,000+","founder":{"@type":"Person","name":"Dan Andrews"},"knowsAbout":["Product design","Brand design","Interface design","Native app development","On-device AI","AI product design"],"address":{"@type":"PostalAddress","addressLocality":"London","addressCountry":"GB"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"cyber:cyber","alternateName":"cyber:cyber studio","description":"Independent product design and development by Dan Andrews. Brand, interface and production code, from first direction through to release.","url":"https://www.cybercyber.ai","email":"hello@cybercyber.ai","areaServed":"Worldwide","priceRange":"£5,000–£50,000+","founder":{"@type":"Person","name":"Dan Andrews"},"knowsAbout":["Product design","Brand design","Interface design","Native app development","On-device AI","AI product design"],"address":{"@type":"PostalAddress","addressLocality":"London","addressCountry":"GB"}}</script>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
   window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
@@ -37,7 +37,7 @@
 <a class="skip" href="#top">Skip to content</a>
 <style>
 @font-face{font-family:"Raveo";src:url("RaveoVF.woff2") format("woff2");font-weight:100 900;font-stretch:normal;font-display:block;}
-:root{--k-card:#222731;--k-fg:#F6F4EF;--k-muted:#B9BFCA;--k-divider:#454D5B;--k-lime:#D5F784;--k-ink:#171B24;--k-body:14px;--k-small:12px;--k-label:11px;
+:root{--t-art:clamp(38px,7.5vw,104px);--k-card:#222731;--k-fg:#F6F4EF;--k-muted:#B9BFCA;--k-divider:#454D5B;--k-lime:#D5F784;--k-ink:#171B24;--k-body:14px;--k-small:12px;--k-label:11px;
   --ground:#0B0B0D; --paper:#F2ECEF; --paper70:#C3BEC6; --paper45:#9E9BA6;
   --accent:#EA4E32;--acc-kaido:#38EDD1;--acc-granite:#38EDD1;--acc-frame:#7B3AEB;--acc-frame2:#B18CF2;--ik-void:#0B0B0A;--ik-lbl:#8a7d63;--fr-mut:#6B655D;--fr-track:#EFEBE6;--gr-dash:#2A2A2D;--fr-ground:#F7F5F3;--fr-ink:#141217;--fr-red:#c0524a;--gr-ground:#0E1214;--kc-bg:#131316;--acc-ikarao:#A8341F; --accent-ink:var(--ground); --cyan:#22D3EE;--lift:#100F14;--ink-mut:#8F8A83;--e-wipe:cubic-bezier(.7,0,.2,1);/* the About inversion wipe *//* muted ink on the paper panel *//* the surface an interactive row lifts to on hover */ --cool:#22D3EE;
   --violet:#A855F7; --magenta:#FF4D8D; --lime:#C6F24E; --blue:#2E8BFF; --coral:#FF6B4A;
@@ -64,10 +64,10 @@ a{color:inherit;text-decoration:none;}
 
 .loader{position:fixed;inset:0;z-index:1000;background:var(--ground);display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(20px,5vw,64px);transition:opacity .9s var(--e1);}
 .loader.done{opacity:0;pointer-events:none;}
-.loader .lpct,.loader .wkrow{position:relative;z-index:2;transition:transform .9s var(--e1),opacity .55s var(--e1);}
-.loader.done .lpct,.loader.done .wkrow{transform:translateY(-14px);opacity:0;}
+.loader .lpct,.loader .lrow{position:relative;z-index:2;transition:transform .9s var(--e1),opacity .55s var(--e1);}
+.loader.done .lpct,.loader.done .lrow{transform:translateY(-14px);opacity:0;}
 .loader .lgrid{position:absolute;inset:-40px;z-index:0;opacity:.5;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(120% 90% at 30% 50%,#000 30%,transparent 78%);-webkit-mask-image:radial-gradient(120% 90% at 30% 50%,#000 30%,transparent 78%);}
-.loader .wkrow{position:relative;display:flex;justify-content:space-between;align-items:flex-end;font-size:var(--t-cap);letter-spacing:.18em;text-transform:uppercase;color:var(--grey);border-top:1px solid var(--line);padding-top:14px;}
+.loader .lrow{position:relative;display:flex;justify-content:space-between;align-items:flex-end;font-size:var(--t-cap);letter-spacing:.18em;text-transform:uppercase;color:var(--grey);border-top:1px solid var(--line);padding-top:14px;}
 .loader .lstat{color:var(--cyan);}
 .loader .lpct{font-family:var(--raveo);font-variation-settings:"wght" 300,"opsz" 32;font-size:var(--t-h2);color:var(--paper);letter-spacing:-.03em;line-height:.9;font-variant-numeric:tabular-nums;}
 
@@ -815,13 +815,35 @@ section.reveal>.wrap{position:relative;}
 .ka-button{display:inline-block;border-radius:5px;background:var(--k-lime);color:var(--k-ink);font-size:var(--k-small);padding:8px 12px;}
 .ka-button.ka-ghost{background:var(--k-divider);color:var(--k-fg);}
 @media(max-width:460px){.ka-head,.ka-actions{padding:14px 16px;}.ka-rows{padding:0 16px;}.ka-row{gap:6px 8px;}}
+
+/* October visual-led portfolio. House typography outside, product UI inside. */
+.wkrow{display:block;padding:clamp(48px,7vw,100px) 0;border-bottom:1px solid var(--line);}
+.wkhead{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:40px;align-items:end;margin-bottom:32px;}
+.wkissue,.wkopen{display:block;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.1em;text-transform:uppercase;color:var(--grey);}
+.wkissue{margin-bottom:16px;}.wkopen{margin-top:14px;color:var(--paper);}
+.wkn{font-size:var(--t-art);font-variation-settings:"wght" 560,"opsz" 32;}
+.wktext{text-align:left;align-items:flex-start;gap:12px;}.wkd{font-family:var(--raveo);font-variation-settings:"wght" 420,"opsz" 32;font-size:var(--t-mid);line-height:1.15;color:var(--paper);max-width:25ch;}
+.wkm{justify-content:flex-start;letter-spacing:.04em;line-height:1.7;}
+.portfolio-plate{width:100%;overflow:hidden;position:relative;}
+.portfolio-plate img{display:block;height:auto;max-width:100%;}
+.plate-kaido{background:var(--kaido-ground);padding:clamp(18px,3vw,42px);}.plate-kaido img{width:100%;border-radius:9px;box-shadow:0 20px 55px rgba(0,0,0,.18);}
+.plate-granite{background:var(--gr-ground);padding:clamp(28px,4vw,56px) 24px;}
+.plate-frame{background:var(--frame-ground);padding:clamp(28px,4vw,56px) 24px;}
+.phone-set{display:flex;align-items:center;justify-content:center;gap:clamp(18px,3vw,42px);height:clamp(440px,44vw,600px);}
+.phone-set img{height:100%;width:auto;max-width:29%;object-fit:contain;border-radius:16px;}
+.phone-set .phone-secondary{height:90%;}.phone-set .phone-tertiary{height:82%;}
+.plate-ikarao{background:var(--ik-void);}.plate-ikarao img{width:100%;}.plate-ikarao .identity-strip{margin-top:14px;}
+.proof-caption{margin-top:16px;}.nfy2 .ref{padding-left:0;}
+@media(max-width:819px){.wkhead{grid-template-columns:1fr;gap:22px;align-items:start;}.wktext{align-items:flex-start;text-align:left;}.phone-set{height:clamp(360px,65vw,540px);gap:16px;}.phone-set .phone-tertiary{display:none;}.phone-set img{max-width:44%;}.plate-kaido{padding:16px;}.plate-kaido img{width:170%;max-width:none;}.plate-kaido{max-height:560px;}.proof-caption{font-size:var(--t-cap);}}
+@media(max-width:460px){.phone-set{height:390px;gap:14px;}.plate-granite,.plate-frame{padding:28px 14px;}.phone-set img{max-width:47%;border-radius:10px;}.plate-kaido img{width:220%;}.plate-kaido{height:380px;}.wkhead{margin-bottom:24px;}.wkn{font-size:var(--t-title);}.proof-caption{flex-wrap:wrap;}}
+
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
   
   <div class="lgrid"></div>
   <div class="lpct"><span id="lpct">0</span></div>
-  <div class="wkrow"><span class="lstat" id="lstat">INITIALISING</span><span>Est. London</span></div>
+  <div class="lrow"><span class="lstat" id="lstat">INITIALISING</span><span>Est. London</span></div>
 </div>
 
 <div class="reticle" id="ret" aria-hidden="true"><span class="ring"></span><b class="h"></b><b class="v"></b><span class="verb" id="verb">View</span></div>
@@ -862,14 +884,14 @@ section.reveal>.wrap{position:relative;}
   <section id="about" class="reveal light"><div class="wrap aboutwrap">
     <span class="ablab" aria-hidden="true"><span class="tk"></span>00 &mdash; What it is</span>
     <span class="acoord" aria-hidden="true">51.5074&deg; N &middot; 00.1278&deg; W</span>
-    <p class="define"><b>cyber:cyber is a <span class="ul">product design lab<svg class="brush" viewBox="0 0 400 22" preserveAspectRatio="none" aria-hidden="true"><path d="M4,15 C64,5 132,19 210,10 C282,2 342,17 396,10" fill="none" stroke="var(--accent)" stroke-width="4.5" stroke-linecap="round"/></svg></span>.</b> <span data-split>We design the brand, the interface, and the code &mdash; and we build it: software that knows what it&rsquo;s not allowed to decide. <span class="mut">A few clients a year.</span></span></p>
+    <p class="define"><b>I design and build digital products.</b> <span data-split>Brand, interface, and the software underneath. One person carrying the work from its first direction through to release. <span class="mut">For founders and teams building something of their own.</span></span></p>
     <svg class="aseal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="arcA" d="M22,60 A38,38 0 0,1 98,60"/></defs><circle cx="60" cy="60" r="53" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/><text text-anchor="middle"><textPath href="#arcA" startOffset="50%">CYBER:CYBER</textPath></text><circle cx="60" cy="53" r="5" fill="currentColor"/><circle cx="60" cy="67" r="5" fill="currentColor"/><text class="stb" x="60" y="102" text-anchor="middle">MMXXVI</text></svg>
   </div></section>
 
   <section id="work" class="reveal"><div class="wrap">
     <div class="shd"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Selected work<span class="ix">01 / INDEX</span></div>
-    <h2 class="h2" style="--c:var(--paper)">The proof</h2>
-    <p class="lead">Three products designed and built here, and one client identity system. Brand, interface, and the code underneath &mdash; carried through by the same person.</p></div>
+    <h2 class="h2" style="--c:var(--paper)">Selected work</h2>
+    <p class="lead">Three products of my own. One identity system for a client. Each taken from its visual language to the code that makes it work.</p></div>
     <!-- THE LEDGER. The alternating image+paragraph reel was the one pattern the field
      research found exactly once at the top tier, and only animated. What dominates
      instead: the project NAME at display scale as the primary object, images on one
@@ -877,69 +899,33 @@ section.reveal>.wrap{position:relative;}
      instrument panel, not four stacked banners. Uniform rows on rules; the proof
      paragraphs live in the case studies where they belong. -->
     <div class="ledger">
-      <a class="wkrow" href="work-kaido.html">
-        <div class="wkmedia"><div class="spec"><i></i><i></i><i></i><i></i>
-          <div class="proof-scene kaido" style="view-transition-name:m-kaido"><div class="ka-asset" role="img" aria-label="Kaido interface study with fictional data. L. Tran’s proposed Nordic curl, RDL and sprint changes show the old and new values and their reasons. The clinician can approve the week, adjust it first, or open the patient."><div class="ka-proposal" aria-hidden="true"><div class="ka-head"><b>L. Tran · Hamstring · week 6</b><span>proposed · awaiting you</span></div><div class="ka-rows"><div class="ka-row"><span>Nordic curls</span><span><del class="ka-old">3×6</del> <ins class="ka-chip">3×8</ins></span><span class="ka-why">because eccentric target hit two weeks running</span></div><div class="ka-row"><span>RDL</span><span><del class="ka-old">3×8 · 50kg</del> <ins class="ka-chip">3×8 · 55kg</ins></span><span class="ka-why">because RPE steady at 7 — room to load</span></div><div class="ka-row"><span>Sprints</span><span><del class="ka-old">80%</del> <ins class="ka-chip">85%</ins></span><span class="ka-why">because pain-free at 80% for two weeks</span></div></div><div class="ka-actions"><span class="ka-button">Approve week</span><span class="ka-button ka-ghost">Adjust first</span><span class="ka-button ka-ghost">Open patient</span></div></div></div></div>
-        </div><div class="proof-caption"><span class="proof-title">Every change waits for a clinician.</span><span class="proof-source">UI study &middot; demo</span></div></div>
-        <div class="wktext"><div class="wkn" style="view-transition-name:t-kaido">Kaido<em>.</em></div>
-          <div class="wkd">Criteria-based rehab planning for clinics. See what changed, why it changed, and decide what reaches the patient.</div><div class="wkm"><span>Web &middot; Clinical SaaS</span><span class="live">Piloting &middot; kaidohealth.co</span></div>
-        </div>
-      </a>
-      <a class="wkrow" href="work-granite.html">
-        <div class="wkmedia"><div class="spec"><i></i><i></i><i></i><i></i>
-          <div class="proof-scene granite" style="view-transition-name:m-granite"><div class="proof-pair"><div class="proof-phone"><img src="media/shots/g-review-8e014aea.webp" width="1120" height="2276" alt="Granite’s native weekly review: Time to recover." loading="lazy"></div><div class="proof-detail"><img src="media/shots/g-detail-185b90af.webp" width="1260" height="392" alt="Detail of the same weekly review: volume drops 40% after two or more missed sessions; loads stay near working weight." loading="lazy"><span class="proof-note">The same review, closer.<br>The rule and its reason, in the app.</span></div></div></div>
-        </div><div class="proof-caption"><span class="proof-title">A missed week gets a workable next one.</span><span class="proof-source">Native captures</span></div></div>
-        <div class="wktext"><div class="wkn" style="view-transition-name:t-granite">Granite<em>.</em></div>
-          <div class="wkd">A strength coach for athletes whose sport isn&rsquo;t lifting. The week adapts to what happened &mdash; and tells you why.</div><div class="wkm"><span>iOS &middot; On-device AI</span><span class="live">Alpha &middot; granite.coach</span></div>
-        </div>
-      </a>
-      <a class="wkrow" href="work-frame.html">
-        <div class="wkmedia"><div class="spec"><i></i><i></i><i></i><i></i>
-          <div class="proof-scene frame" style="view-transition-name:m-frame"><div class="proof-pair"><div class="proof-phone"><img src="media/shots/f-ship-recall.webp" width="620" height="1347" alt="Frame’s native recall card asks for the key detail of Scissor Sweep." loading="lazy"></div><div class="proof-detail"><img src="media/shots/f-ship-detail.webp" width="900" height="727" alt="Frame’s real technique records: Scissor Sweep recalled 2 of 2 and landed 4 times in rolling; Armbar recalled 2 of 3 and landed once." loading="lazy"><span class="proof-note">Asked in the app.<br>Counted on the mat.</span></div></div></div>
-        </div><div class="proof-caption"><span class="proof-title">Remember the detail. See it land.</span><span class="proof-source">Native captures</span></div></div>
-        <div class="wktext"><div class="wkn" style="view-transition-name:t-frame">Frame<em>.</em></div>
-          <div class="wkd">A BJJ journal built against the forgetting curve. What you learned comes back for recall, and what you land starts to count.</div><div class="wkm"><span>iOS &middot; Spaced recall</span><span class="live">Alpha &middot; framebjj.app</span></div>
-        </div>
-      </a>
-      <a class="wkrow" href="work-ikarao.html">
-        <div class="wkmedia"><div class="spec"><i></i><i></i><i></i><i></i>
-          <div class="proof-scene ikarao" style="view-transition-name:m-ikarao"><img src="media/shots/i-hero2.webp" width="1600" height="780" alt="Eight real IKARAO marks generated by the drawing engine, showing different names within one identity family." loading="lazy"></div>
-        </div><div class="proof-caption"><span class="proof-title">Different names. One recognisable family.</span><span class="proof-source">Engine output</span></div></div>
-        <div class="wktext"><div class="wkn" style="view-transition-name:t-ikarao">IKARAO<em>.</em></div>
-          <div class="wkd">A generative identity system for Bittensor. Every new name gets its own mark, made by the same drawing rules.</div><div class="wkm"><span>Brand &middot; Engine</span><span class="live">Delivered &middot; bittensor.com</span></div>
-        </div>
-      </a>
+<a class="wkrow" href="work-kaido.html"><div class="wkhead"><div><span class="wkissue">01 &middot; Piloting</span><div class="wkn" style="view-transition-name:t-kaido">Kaido</div></div><div class="wktext"><div class="wkd">A workspace for rehabilitation clinics.</div><div class="wkm">Product design &middot; Web + iOS</div><span class="wkopen">View project &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-kaido"><div class="portfolio-plate plate-kaido"><img class="" src="media/shots/k-caseload-study-v2.png" width="1280" height="900" alt="Kaido caseload interface study: patient list, progress indicators and clinic navigation." loading="lazy"></div></div><div class="proof-caption"><span>Interface study &middot; fictional cases</span><span>cyber:cyber &middot; 2026</span></div></a>
+<a class="wkrow" href="work-granite.html"><div class="wkhead"><div><span class="wkissue">02 &middot; Alpha</span><div class="wkn" style="view-transition-name:t-granite">Granite</div></div><div class="wktext"><div class="wkd">Strength training built around your sport.</div><div class="wkm">Brand &middot; Product design &middot; iOS</div><span class="wkopen">View project &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-granite"><div class="portfolio-plate plate-granite"><div class="phone-set"><img class="" src="media/shots/g-week.webp" width="680" height="1478" alt="Granite week view: lifting sessions and training days." loading="lazy"><img class="phone-secondary" src="media/shots/g-coach-67b8f2e3.webp" width="680" height="1383" alt="Granite coach interface: a conversation about training." loading="lazy"><img class="phone-tertiary" src="media/shots/g-session-adf4ca55.webp" width="680" height="1383" alt="Granite training session: exercises, working weights and sets." loading="lazy"></div></div></div><div class="proof-caption"><span>Running app</span><span>cyber:cyber &middot; 2026</span></div></a>
+<a class="wkrow" href="work-frame.html"><div class="wkhead"><div><span class="wkissue">03 &middot; Alpha</span><div class="wkn" style="view-transition-name:t-frame">Frame</div></div><div class="wktext"><div class="wkd">A training journal for the details worth keeping.</div><div class="wkm">Brand &middot; Product design &middot; iOS</div><span class="wkopen">View project &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-frame"><div class="portfolio-plate plate-frame"><div class="phone-set"><img class="" src="media/shots/f-ship-today.webp" width="900" height="1955" alt="Frame Today screen: training summary and techniques due for recall." loading="lazy"><img class="phone-secondary" src="media/shots/f-ship-recall.webp" width="620" height="1347" alt="Frame technique recall screen for Scissor Sweep." loading="lazy"><img class="phone-tertiary" src="media/shots/f-gameflow.webp" width="680" height="1478" alt="Frame game flow screen showing connected BJJ techniques." loading="lazy"></div></div></div><div class="proof-caption"><span>Running app</span><span>cyber:cyber &middot; 2026</span></div></a>
+<a class="wkrow" href="work-ikarao.html"><div class="wkhead"><div><span class="wkissue">04 &middot; Client &middot; Delivered</span><div class="wkn" style="view-transition-name:t-ikarao">IKARAO</div></div><div class="wktext"><div class="wkd">An identity that grows with the network.</div><div class="wkm">Art direction &middot; Identity &middot; Generative code</div><span class="wkopen">View project &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-ikarao"><div class="portfolio-plate plate-ikarao"><img class="" src="media/shots/i-hero2.webp" width="1600" height="780" alt="IKARAO: eight distinct generated marks in one family." loading="lazy"><img class="identity-strip" src="media/shots/i-print.webp" width="1600" height="546" alt="IKARAO specimen sheet on contrasting paper and dark grounds." loading="lazy"></div></div><div class="proof-caption"><span>Generated identity system</span><span>cyber:cyber &middot; 2026</span></div></a>
     </div>
+  </div>
   </section>
 
   <section id="offerings" class="reveal"><div class="wrap">
-    <div class="shd rev"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Work with us<span class="ix">02 / STUDIO</span></div>
+    <div class="shd rev"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Work with me<span class="ix">02 / STUDIO</span></div>
     <h2 class="h2" style="--c:var(--paper)">The offer</h2>
-    <p class="lead">You're not buying hours. You're buying the result, shipped &mdash; fixed scope, fixed price, in weeks not quarters.</p></div>
+    <p class="lead">A focused design engagement, a complete product, or ongoing work with your team. The scope and price are agreed before work starts.</p></div>
     <div class="offers">
-      <div class="offer"><div class="oi">01</div><div class="ob"><div class="on">The Design Block</div><div class="os"><span class="sub">Design shipped in a week.</span>Brand to interface to the technical surfaces most designers can't touch.</div></div><div class="op">&pound;<span>5,000</span><small>per week</small></div></div>
+      <div class="offer"><div class="oi">01</div><div class="ob"><div class="on">The Design Block</div><div class="os"><span class="sub">Focused brand or product design.</span>A week to establish a direction and make work your team can build from.</div></div><div class="op">&pound;<span>5,000</span><small>per week</small></div></div>
       
       
-      <div class="offer"><div class="oi">02</div><div class="ob"><div class="on">The Build</div><div class="os"><span class="sub">A live product in your users' hands.</span>A complete native product &mdash; brand, interface, and the code underneath &mdash; built from nothing to live. Native AI features when the product genuinely needs them, not because it's fashionable.</div></div><div class="op">&pound;<span>50,000</span><small>from &middot; complete build</small></div></div>
-      <div class="offer"><div class="oi">03</div><div class="ob"><div class="on">The Partnership</div><div class="os"><span class="sub">Embedded, not engaged.</span>A senior partner in the room two to three days a week &mdash; the craft your team doesn't have in-house, without the eighteen-month hire.</div></div><div class="op">&pound;<span>12,000</span><small>from &middot; per month</small></div></div>
+      <div class="offer"><div class="oi">02</div><div class="ob"><div class="on">The Build</div><div class="os"><span class="sub">A product, designed and built.</span>Identity, interface and production code, with one person responsible for the result.</div></div><div class="op">&pound;<span>50,000</span><small>from &middot; complete build</small></div></div>
+      <div class="offer"><div class="oi">03</div><div class="ob"><div class="on">The Partnership</div><div class="os"><span class="sub">Senior design inside your team.</span>Two to three days a week, from the difficult questions to the finished work.</div></div><div class="op">&pound;<span>12,000</span><small>from &middot; per month</small></div></div>
     </div>
   </div></section>
 
-  <section id="notforyou" class="reveal"><div class="wrap">
-    <div class="shd solo"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Fair warning<span class="ix">03 / FILTER</span></div>
-    <h2 class="h2" style="--c:var(--paper)">Who it's not for</h2></div>
-    <div class="nfy2">
-      <div class="ref"><span class="x">&times;</span><b>You want it fast and cheap.</b><span>Everyone's fast now. We sell the judgment that makes fast worth keeping.</span></div>
-      <div class="ref"><span class="x">&times;</span><b>You've written the spec and want hands.</b><span>That's staffing. It's cheaper elsewhere.</span></div>
-      <div class="ref"><span class="x">&times;</span><b>You're building a demo to raise on.</b><span>We ship the real product &mdash; not the one that photographs well.</span></div>
-      <div class="ref"><span class="x">&times;</span><b>You want a yes.</b><span>We'll tell you when the idea's wrong. That's the job.</span></div>
-    </div>
-  </div></section>
+  <section id="notforyou" class="reveal"><div class="wrap"><div class="shd solo"><div class="eyebrow"><span class="tick"></span>The working relationship<span class="ix">03 / FIT</span></div><h2 class="h2">A good fit</h2></div><div class="nfy2"><div class="ref"><b>You need the whole product to hold together.</b><span>The identity, the interface and the implementation are developed as one piece of work.</span></div><div class="ref"><b>The brief still has questions in it.</b><span>I work with you to find the shape of the product, then make it real.</span></div><div class="ref"><b>You want to work with the person making it.</b><span>Direct collaboration with me, from the first conversation to the finished build.</span></div><div class="ref"><b>You care about the details people use.</b><span>The everyday screens, the awkward states, and the parts that have to work after launch.</span></div></div></div></section>
 
   <section id="faq" class="reveal"><div class="wrap faqwrap"><div class="faqhead">
     <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>In short<span class="ix">04 / QUESTIONS</span></div>
-    <h2 class="h2" style="--c:var(--paper)">Questions</h2><p class="lead">The short version &mdash; what we are, what it costs, and who it's for.</p></div>
-    <div class="faq"><details><summary>Why bring in an outside expert?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>A full-time hire has to learn your product and the craft at the same time, on your clock. An outside expert has already made these calls, on other people&rsquo;s products &mdash; what&rsquo;s left is applying that judgment to yours, not developing it.</p></div></div></details><details><summary>Can one person do all of it?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Brand, interface and production code used to need three people because the <em>tools</em> needed three specialists. They don&rsquo;t any more. What hasn&rsquo;t got easier is deciding what to build &mdash; and that&rsquo;s exactly the part that gets lost in a handover instead of held by one person end to end. This model fits ambiguous, early-stage work; it&rsquo;s the wrong shape for a build with multiple teams, real-time systems and compliance to coordinate, and it won&rsquo;t pretend otherwise.</p></div></div></details><details><summary>What happens if the scope changes halfway through?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>It usually does &mdash; the sharpest brief still meets reality partway through. A change gets scoped and quoted on its own, in a day, not fought over and not quietly absorbed into the original number. What&rsquo;s fixed is the standard the work is held to, not the plan.</p></div></div></details><details><summary>What if I only need design?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>That&rsquo;s the Design Block &mdash; a week of brand or interface work, scoped and priced on its own. Not everyone needs the rest.</p></div></div></details><details><summary>How fast is fast?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>A Design Block is a week. A complete build is weeks, not quarters. Speed on its own isn&rsquo;t worth much &mdash; every studio claims it now. What matters is not being back here in six months redoing it.</p></div></div></details><details><summary>What if you&rsquo;re the bottleneck?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>A fair risk to name. It&rsquo;s why scope and price are fixed before anything starts, and why work lands continuously instead of in one handover at the end &mdash; if something&rsquo;s off, you find out in week one, not month three.</p></div></div></details><details><summary>Who does the actual work?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Dan Andrews &mdash; a designer in London, a decade across brand, interface, motion and interaction, including Spotify, Epic&nbsp;Games and Dell, and early-stage teams before that. There&rsquo;s no bench, and nobody to hand you off to. More at <a href="https://iamdanandrews.com" target="_blank" rel="noopener">iamdanandrews.com</a>.</p></div></div></details></div>
+    <h2 class="h2" style="--c:var(--paper)">Questions</h2><p class="lead">How the work is scoped, shared and built.</p></div>
+    <div class="faq"><details><summary>What can I hire you for?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>A focused week of brand or product design, a complete product build, or ongoing design and technical work with your team. The three engagement options and their starting prices are above.</p></div></div></details><details><summary>Can one person carry the whole product?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>That is how I work: identity, interface and implementation developed together. The owned products and the client identity system show that range. The right scope matters; a large programme with several engineering teams needs a different setup.</p></div></div></details><details><summary>What happens if the scope changes?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>We agree the scope and price before work starts. New requirements are scoped and quoted separately, so the trade-offs stay visible.</p></div></div></details><details><summary>Can you work with our engineers?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Yes. The Design Block and Partnership can focus on brand, interface and technical direction while your team handles the build.</p></div></div></details><details><summary>How long does the work take?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>A Design Block is a week. Builds are scoped around the product and its requirements; the timeline is agreed with the scope.</p></div></div></details><details><summary>How will I see progress?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>You work directly with me, and the work is shared as it develops. Design and implementation can be reviewed together rather than waiting for a final handover.</p></div></div></details><details><summary>Who does the work?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Dan Andrews, a designer in London with a decade across brand, product, motion and interaction, including work with Spotify, Epic Games and Dell. <a href="https://iamdanandrews.com" target="_blank" rel="noopener">More about me &nearr;</a>.</p></div></div></details></div>
   </div></section>
 
   <section id="journal" class="reveal"><div class="wrap">
@@ -960,9 +946,9 @@ section.reveal>.wrap{position:relative;}
       <div><span class="wl">Who you&rsquo;re hiring</span><h2 class="wn">Dan Andrews</h2></div>
       <div>
         <p>A designer in London. A decade of product, brand, interface and motion &mdash; Spotify, Epic&nbsp;Games, Dell &mdash; and early-stage teams before and since.</p>
-        <p>I believe product is the argument. Brand, interface, motion &mdash; that&rsquo;s how you make people feel it&rsquo;s true.</p>
-        <p>Most products don&rsquo;t fail because the idea was wrong. They fail in the gap between the person who decided what to build and the person who built it &mdash; something gets lost there, every time, and the thing ships a little hollow.</p>
-        <p>So I don&rsquo;t hand it off. I carry the decision the whole way through, because the work worth doing is never simple, and somebody has to actually understand it, not just manage it.</p>
+        <p>My work spans the identity of a product, the way it behaves, and the code that makes it usable.</p>
+        <p>I build my own products alongside client work. It keeps the design close to the practical work of making, testing and maintaining software.</p>
+        <p>You work directly with me. I stay with the product from the first direction through to implementation.</p>
         <a class="wlink" href="https://iamdanandrews.com" target="_blank" rel="noopener">iamdanandrews.com &nearr;</a>
       </div>
     </div>
