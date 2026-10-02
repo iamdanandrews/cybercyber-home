@@ -114,8 +114,8 @@ authored recreation is the documented exception, only for undersized real conten
 - **`transition-delay` does not advance under `--virtual-time-budget`.** Only JS timers (`setTimeout`/`setInterval`) do. A staggered `.reveal` figure that's missing from a screenshot at any budget is a verification artifact, not a bug — isolate the component instead: copy the page to a `_scratch.html`, wrap the piece in a `#posterStage{position:fixed;inset:0;z-index:99999}` overlay with the ancestor's `.reveal` class hand-set to `.reveal.in`, screenshot that, then **delete the scratch file**. Never commit a `_*.html` file.
 - An embedded browser pane can report a 0×0 viewport and freeze `requestAnimationFrame` — don't conclude a change is broken from that either; use the CLI recipe above.
 
-## Presentation studies (2026-10)
-Kaido’s hero and first two UI specimens are explicitly labelled studies using
+## Historical presentation studies (replaced 2 October 2026)
+Kaido’s earlier hero and first two UI specimens were explicitly labelled studies using
 fictional demo content and the current product palette. They are not claims of
 shipped UI. The older native HTML approval asset is retained as a source study; product-local Switzer
 fonts remain inside the specimen and do not extend the house type system.
