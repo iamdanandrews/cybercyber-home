@@ -157,3 +157,7 @@ Dan requested the contact mark generator restored on 3 October. Keep it below th
 
 ## Proposition and case argument (3 October 2026)
 The proposition is making complex software clear, distinctive and usable. Services explain the buyer situation, scope and deliverables. Each case states its challenge and design response before the screen walkthrough; the closing evidence distinguishes delivered scope from adoption. Preserve current native imagery and full-screen intro. Do not equate craft quality with verified product-market fit or an award.
+
+Dan corrected the product relationship on 3 October: Kaido does not use Granite. Do not restore claims that Granite powers, spun off, or supplies the engine for Kaido. Cases now distinguish the business opportunity, design contribution and delivered capability from measured adoption.
+
+Homepage Kaido now shows the complete current caseload at lead scale, with a separate complete protocol window below; no overlapping panels. Frame leads with native Log and Game screens; onboarding remains within its case. Business-value sections explain opportunity, contribution and delivered capability, with stages retained.
