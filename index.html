@@ -921,6 +921,15 @@ body.cursor-on .capture-link{cursor:zoom-in;}
 .hw[data-seed=code][aria-pressed=true],.hw[data-seed=code]:hover{color:var(--mark-code);}
 .hero .hanchor:hover .hmark circle{fill:currentColor;}
 .issue-colour-0{fill:var(--accent);}.issue-colour-1{fill:var(--cyan);}.issue-colour-2{fill:var(--mark-code);}
+
+/* A direct invitation, with one route to contact. */
+#contact{min-height:75svh;padding-block:clamp(80px,10vw,144px);color:var(--ground);scroll-margin-top:0;}
+#contact .big{font-size:var(--t-h2);font-variation-settings:"wght" 650,"opsz" 32;line-height:1;text-transform:none;}
+#contact .contact-intro{color:var(--ground);margin:28px 0;max-width:32ch;}
+#contact .contact-primary{color:var(--ground);border-color:var(--ground);font-size:var(--t-lead);font-family:var(--sans);letter-spacing:0;text-transform:none;}
+#contact .eyebrow,#contact .eyebrow .ix{color:var(--ground);}
+#contact .contact-primary:hover{color:var(--ground);border-bottom-width:2px;}
+#contact .contact-primary:focus-visible{outline:2px solid var(--ground);outline-offset:8px;}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -965,7 +974,7 @@ body.cursor-on .capture-link{cursor:zoom-in;}
 
   <a class="foldbreak" href="#about"><div class="wrap"><span class="fa"><span class="tk"></span>Client work &amp; lab products</span><span class="fb">Explore &darr;</span></div></a>
 
-  <section id="about" class="reveal"><div class="wrap"><div class="intro-grid"><h2 class="intro-title">cyber:cyber is a product design lab turning complex ideas into distinctive digital products.</h2><div><p class="lead">Brand, product design and development. From working prototype to first release.</p><div class="hero-actions"><a href="#work">View the work &darr;</a><a href="#contact">Discuss a project &nearr;</a></div><p class="hero-experience">Led by Dan Andrews &middot; London<br>Previous experience includes Spotify, Epic Games and Dell.</p></div></div></div></section>
+  <section id="about" class="reveal"><div class="wrap"><div class="intro-grid"><h2 class="intro-title">cyber:cyber is a product design lab turning complex ideas into distinctive digital products.</h2><div><div class="hero-actions"><a href="#work">View the work &darr;</a><a href="#contact">Discuss a project &nearr;</a></div></div></div></div></section>
 
   <section id="work"><div class="wrap">
     <div class="shd"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Selected work<span class="ix">01 / INDEX</span></div>
@@ -1043,10 +1052,10 @@ body.cursor-on .capture-link{cursor:zoom-in;}
 
 
   <section id="contact" class="reveal cta"><div class="wrap">
-    <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Contact<span class="ix">07 / OPEN</span></div>
-    <h2 class="big">Have a product<br>taking shape?</h2><p class="contact-intro">Tell me what you’re building, where it stands and what needs to happen next. Include your timing and a budget range if you have one.</p><a class="contact-primary" href="mailto:hello@cybercyber.ai?subject=Project%20enquiry&amp;body=Product%20or%20company%3A%0A%0ACurrent%20stage%3A%0A%0AWhat%20needs%20to%20happen%20next%3A%0A%0ATiming%3A%0A%0ABudget%20range%20(optional)%3A">Discuss a project &nearr;</a><p class="contact-address">Or email <a href="mailto:hello@cybercyber.ai">hello@cybercyber.ai</a></p>
-    
-    <div class="mk"><div><label class="mkhint" for="mkin" style="display:block;margin:0 0 14px">Optional: give your idea a mark</label><input class="mkin" id="mkin" type="text" autocomplete="off" spellcheck="false" placeholder="What are you building?" aria-describedby="mkhint"><div class="mkhint" id="mkhint">Seal &middot; <span id="mkref">------</span></div><a class="mksend" id="mksend" href="mailto:hello@cybercyber.ai">Email hello@cybercyber.ai &rarr;</a></div><div class="mkfig"><svg class="mkseal" id="mksvg" viewBox="0 0 120 120" role="img" aria-labelledby="mksealt"><title id="mksealt">A seal generated from your sentence</title><rect class="mkframe" x="6" y="6" width="108" height="108"/><g class="mkart" transform="translate(22 22) scale(0.76)"><path id="mkpath" d=""/></g><text class="mkwm" x="60" y="16.4" text-anchor="middle">CYBER:CYBER</text><text class="mksr" id="mksr" x="60" y="107.9" text-anchor="middle">------</text><circle class="mkdot" cx="14" cy="56.4" r="1.4"/><circle class="mkdot" cx="14" cy="63.6" r="1.4"/><circle class="mkdot" cx="106" cy="56.4" r="1.4"/><circle class="mkdot" cx="106" cy="63.6" r="1.4"/></svg></div></div>
+    <div class="eyebrow"><span class="tick"></span>Contact</div>
+    <h2 class="big">Let’s talk.</h2>
+    <p class="contact-intro">Tell me what you’re building.</p>
+    <a class="contact-primary" href="mailto:hello@cybercyber.ai?subject=Project%20enquiry">hello@cybercyber.ai &nearr;</a>
   </div></section>
 </main><footer><div class="wrap foot" style="align-items:center"><span>&copy; 2026 CYBERCYBER LTD &middot; London</span><svg class="footseal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="arcF" d="M22,60 A38,38 0 0,1 98,60"/></defs><circle cx="60" cy="60" r="53" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/><text text-anchor="middle"><textPath href="#arcF" startOffset="50%">CYBER:CYBER</textPath></text><circle cx="60" cy="53" r="5" fill="currentColor"/><circle cx="60" cy="67" r="5" fill="currentColor"/><text class="stb" x="60" y="102" text-anchor="middle">MMXXVI</text></svg><span class="fchk" title="Linted before every publish: colour exists only as tokens &middot; no raw hex outside :root &middot; mobile nav present &middot; figures numbered in reading order &middot; journal cycle closed">CHK 05/05</span><a href="#top" id="recal">Back to top &uarr;</a></div></footer>
 
