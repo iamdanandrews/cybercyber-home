@@ -146,3 +146,7 @@ Preserve the full-height identity hero, orange threshold and paper introduction 
 Work has a shared dark-grey mat and different inner compositions: Bittensor physical specimen, Granite programme/coach and delivered glyph vocabulary, Kaido full protocol with separate caseload context, Frame capture/record/connect. Native screenshot pixels are preserved. Frame uses horizontal screen rails on mobile. Case titles and premises precede their imagery; chapter links and screenshot enlargement support reading. Case order is Bittensor, Granite, Kaido, Frame.
 
 Older product recordings were reviewed and retained as historical sources because they show outdated interface states. Current screen walkthroughs remain labelled as separate real captures, not new continuous recordings. No new adoption, retention or outcome claims were added.
+
+The paper introduction is a full-viewport section. The orange threshold links to #about, not #work. Its entrance is a one-time paper wipe, type-weight resolve and supporting-content settle, triggered by the visible title. Content stays available if JavaScript or motion is disabled.
+
+Dan requested three-colour mark interactions on 3 October: Brand uses vermilion, Interface cyan, Code violet. Project issue crests combine this palette; it is confined to the dot identity rather than applied to body copy or clinical UI.

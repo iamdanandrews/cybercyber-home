@@ -902,6 +902,25 @@ body.cursor-on .capture-link{cursor:zoom-in;}
 /* The complete native modal, including all four edges; background app stays available in the enlarged capture. */
 .protocol-window{position:relative;overflow:hidden;aspect-ratio:840/580;width:100%;}
 .protocol-window img,.protocol-window .capture-link img{position:absolute;left:-26.190476%;top:-12.068966%;width:152.380952%;height:124.137931%;max-width:none;object-fit:fill;}
+
+/* Full-screen paper introduction. Entrance is opt-in; content remains available without motion or JS. */
+#about{min-height:100svh;height:auto;display:flex;align-items:center;padding-block:clamp(80px,10vw,144px);scroll-margin-top:0;}
+#about>.wrap{width:100%;}#about::before{display:none;}
+#about .intro-title{font-variation-settings:"wght" 600,"opsz" 32;}
+#about.intro-entering::before{display:block;transform:none;animation:paper-open .78s var(--e-wipe) both;}
+#about.intro-entering .intro-title{animation:intro-type .85s var(--e-settle) .25s both;}
+#about.intro-entering .intro-grid>div{animation:intro-support .65s var(--e-settle) .4s both;}
+@keyframes paper-open{from{transform:scaleY(1);}to{transform:scaleY(0);}}
+@keyframes intro-type{from{font-variation-settings:"wght" 350,"opsz" 32;transform:translateY(12px);}to{font-variation-settings:"wght" 600,"opsz" 32;transform:none;}}
+@keyframes intro-support{from{opacity:.55;transform:translateY(10px);}to{opacity:1;transform:none;}}
+@media(prefers-reduced-motion:reduce){#about.intro-entering::before{display:none;}#about.intro-entering .intro-title,#about.intro-entering .intro-grid>div{animation:none;}}
+
+:root{--mark-code:#B18CF2;}
+.hw[data-seed=brand][aria-pressed=true],.hw[data-seed=brand]:hover{color:var(--accent);}
+.hw[data-seed=interface][aria-pressed=true],.hw[data-seed=interface]:hover{color:var(--cyan);}
+.hw[data-seed=code][aria-pressed=true],.hw[data-seed=code]:hover{color:var(--mark-code);}
+.hero .hanchor:hover .hmark circle{fill:currentColor;}
+.issue-colour-0{fill:var(--accent);}.issue-colour-1{fill:var(--cyan);}.issue-colour-2{fill:var(--mark-code);}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -944,7 +963,7 @@ body.cursor-on .capture-link{cursor:zoom-in;}
     </div>
   </section>
 
-  <a class="foldbreak" href="#work"><div class="wrap"><span class="fa"><span class="tk"></span>Client work &amp; lab products</span><span class="fb">Explore &darr;</span></div></a>
+  <a class="foldbreak" href="#about"><div class="wrap"><span class="fa"><span class="tk"></span>Client work &amp; lab products</span><span class="fb">Explore &darr;</span></div></a>
 
   <section id="about" class="reveal"><div class="wrap"><div class="intro-grid"><h2 class="intro-title">cyber:cyber is a product design lab turning complex ideas into distinctive digital products.</h2><div><p class="lead">Brand, product design and development. From working prototype to first release.</p><div class="hero-actions"><a href="#work">View the work &darr;</a><a href="#contact">Discuss a project &nearr;</a></div><p class="hero-experience">Led by Dan Andrews &middot; London<br>Previous experience includes Spotify, Epic Games and Dell.</p></div></div></div></section>
 
@@ -1139,7 +1158,7 @@ body.cursor-on .capture-link{cursor:zoom-in;}
      construction: whatever fires it has to mean the words are actually there. */
   document.querySelectorAll(".reveal").forEach(function(el){ if(el.id!=="about") io.observe(el); });
   var ab=document.getElementById("about");
-  var aboutWatch=ab?(ab.querySelector(".define")||ab):null;
+  var aboutWatch=ab?(ab.querySelector(".intro-title")||ab):null;
   var ioAbout=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){
     ab.classList.add("in");counts(ab);ioAbout.unobserve(e.target);}});},{threshold:.4});
   if(ab){ if("IntersectionObserver" in window) ioAbout.observe(aboutWatch);
@@ -1374,7 +1393,7 @@ body.cursor-on .capture-link{cursor:zoom-in;}
     var hcap=document.querySelector('.hero .hanchor .hcap');
     if(hcap){
       var words=hcap.querySelectorAll('.hw');
-      function choose(w){hmSvg.style.color="var(--cyan)";drawTo(window.ccMark(w.getAttribute('data-seed'),6));words.forEach(function(x){x.setAttribute('aria-pressed',String(x===w));});}
+      function choose(w){hmSvg.style.color=({brand:"var(--accent)",interface:"var(--cyan)",code:"var(--mark-code)"})[w.dataset.seed];drawTo(window.ccMark(w.getAttribute('data-seed'),6));words.forEach(function(x){x.setAttribute('aria-pressed',String(x===w));});}
       words.forEach(function(w){['mouseenter','focus','click'].forEach(function(event){w.addEventListener(event,function(){choose(w);});});});
     }
   })();
@@ -1405,5 +1424,7 @@ body.cursor-on .capture-link{cursor:zoom-in;}
 })();
 </script>
 <script>(function(){document.querySelectorAll('[data-issue]').forEach(function(svg){svg.querySelector('path').setAttribute('d',ccMark(svg.dataset.issue,6).d);});})();</script>
+<script>(function(){var section=document.getElementById('about'),title=section.querySelector('.intro-title');if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches)return;var entrance=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){section.classList.add('intro-entering');entrance.disconnect();}});},{threshold:.3,rootMargin:'0px 0px -10% 0px'});entrance.observe(title);})();</script>
+<script>(function(){document.querySelectorAll('svg[data-issue],svg.ehmark').forEach(function(svg){var seed=svg.dataset.issue||location.pathname.replace('work-','').replace('.html','');var mark=ccMark(seed,6);svg.setAttribute('viewBox',mark.vb);svg.replaceChildren();mark.pts.forEach(function(point,i){var dot=document.createElementNS('http://www.w3.org/2000/svg','circle');dot.setAttribute('cx',point.cx);dot.setAttribute('cy',point.cy);dot.setAttribute('r',point.r);dot.setAttribute('class','issue-colour-'+(i%3));svg.appendChild(dot);});});})();</script>
 </body>
 </html>

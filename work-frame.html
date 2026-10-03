@@ -446,6 +446,13 @@ body.cursor-on .capture-link{cursor:zoom-in;}
 .walk-panel:not([hidden]){animation:evidence-arrive .3s var(--e-settle) both;}
 @keyframes evidence-arrive{from{opacity:.6;clip-path:inset(0 2% 0 0);}to{opacity:1;clip-path:inset(0);}}
 @media(prefers-reduced-motion:reduce){.walk-panel:not([hidden]){animation:none;}}
+
+:root{--mark-code:#B18CF2;}
+.hw[data-seed=brand][aria-pressed=true],.hw[data-seed=brand]:hover{color:var(--accent);}
+.hw[data-seed=interface][aria-pressed=true],.hw[data-seed=interface]:hover{color:var(--cyan);}
+.hw[data-seed=code][aria-pressed=true],.hw[data-seed=code]:hover{color:var(--mark-code);}
+.hero .hanchor:hover .hmark circle{fill:currentColor;}
+.issue-colour-0{fill:var(--accent);}.issue-colour-1{fill:var(--cyan);}.issue-colour-2{fill:var(--mark-code);}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -625,5 +632,6 @@ body.cursor-on .capture-link{cursor:zoom-in;}
 </script>
 <script>
 (function(){document.querySelectorAll('.walkthrough').forEach(function(root){var buttons=root.querySelectorAll('button[data-panel]');buttons.forEach(function(button){button.addEventListener('click',function(){buttons.forEach(function(other){other.setAttribute('aria-pressed',other===button?'true':'false');});root.querySelectorAll('.walk-panel').forEach(function(panel){panel.hidden=panel.id!==button.dataset.panel;});});});});})();
-</script></body>
+</script><script>(function(){document.querySelectorAll('svg[data-issue],svg.ehmark').forEach(function(svg){var seed=svg.dataset.issue||location.pathname.replace('work-','').replace('.html','');var mark=ccMark(seed,6);svg.setAttribute('viewBox',mark.vb);svg.replaceChildren();mark.pts.forEach(function(point,i){var dot=document.createElementNS('http://www.w3.org/2000/svg','circle');dot.setAttribute('cx',point.cx);dot.setAttribute('cy',point.cy);dot.setAttribute('r',point.r);dot.setAttribute('class','issue-colour-'+(i%3));svg.appendChild(dot);});});})();</script>
+</body>
 </html>
