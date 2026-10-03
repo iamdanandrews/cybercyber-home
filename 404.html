@@ -16,11 +16,11 @@
 <style>
 :root{--ground:#0B0B0D;--paper:#F2ECEF;--paper70:#C3BEC6;--accent:#EA4E32;--dim:#8C8996;
   --grey:#C9C4D1;--line:#211F27;--line2:#2C2A33;
-  --mono:ui-monospace,'SF Mono',Menlo,monospace;--sans:'Helvetica Neue',Helvetica,Arial,sans-serif;
-  --raveo:Raveo,'Helvetica Neue',sans-serif;--e1:cubic-bezier(.2,.7,.2,1);
+  --mono:ui-monospace,"SF Mono",Menlo,monospace;--sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --raveo:Raveo,"Helvetica Neue",sans-serif;--e1:cubic-bezier(.2,.7,.2,1);
   --t-cap:clamp(10px,.28vw + 9px,11.5px);--t-body:clamp(15px,.35vw + 13.6px,17px);
   --t-h2:clamp(46px,9vw,140px);}
-@font-face{font-family:Raveo;src:url('RaveoVF.woff2') format('woff2');font-weight:100 900;font-display:block;}
+@font-face{font-family:Raveo;src:url("RaveoVF.woff2") format("woff2");font-weight:100 900;font-display:block;}
 *{margin:0;padding:0;box-sizing:border-box;}
 ::selection{background:var(--ground);color:var(--accent);}
 html,body{height:100%;}
@@ -55,26 +55,25 @@ h1 i{font-style:normal;color:var(--paper);}
   transition:border-color .2s var(--e1);}
 .home:hover{border-color:var(--paper);}
 @media(prefers-reduced-motion:reduce){.home{transition:none;}}
-.reveal{opacity:1!important;transform:none!important;}
-@media(max-width:600px){header .statl{display:none;}.cshtext,.cshmedia{min-width:0;}.cshtext .eyebrow{flex-wrap:wrap;row-gap:10px;}.cshtext .eyebrow .ix{margin-left:0;}.irow .iv{max-width:44%;white-space:normal;text-align:right;}.irow .il{min-width:0;white-space:normal;}.sf{overflow-wrap:anywhere;}}
+
+@media(max-width:600px){}
 
 /* Editorial house: quiet chrome, clear reading hierarchy. */
-.reticle,.coord,.vf{display:none!important;}
-body.cursor-on{cursor:auto;}body.cursor-on a,body.cursor-on button,body.cursor-on summary,body.cursor-on [role=button]{cursor:pointer;}
-body.cursor-on .capture-link{cursor:zoom-in;}
+
+body.cursor-on [role=button]{cursor:pointer;}
+
 @media(prefers-reduced-motion:reduce){::view-transition-group(*){animation:none!important;}}
 
 /* A shared motion grammar, with content available before enhancement. */
 @keyframes specimen-wipe{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0)}}
 @keyframes issue-settle{from{transform:scale(.76)}to{transform:scale(1)}}
 @keyframes reading-rule{from{transform:scaleX(.15)}to{transform:scaleX(1)}}
-.motion-enter .r-mat,.motion-enter .portfolio-plate,.motion-enter .walk-evidence,.motion-enter .frame{animation:specimen-wipe .65s ease-out both;}
-.motion-enter .ehmark,.motion-enter .project-crest,.motion-enter .jmark{animation:issue-settle .55s ease-out both;}
+
+
 .r-chapter,.belief{position:relative;}.r-chapter::before,.belief::before{content:"";position:absolute;top:0;left:0;width:100%;height:1px;background:var(--line);transform-origin:left;pointer-events:none;}.motion-enter.r-chapter::before,.motion-enter.belief::before{animation:reading-rule .7s ease-out;}
-.capture-link{transition:background .2s ease-out;}.capture-link:hover,.capture-link:focus-visible{background:var(--line);}
-.walk-controls button{transition:background .2s,color .2s,border-color .2s;}.walk-controls button:hover,.walk-controls button:focus-visible{border-color:var(--accent);}
-.project-crest{transition:transform .4s ease-out;transform-origin:center;}.wkrow:hover .project-crest,.wkrow:focus-visible .project-crest{transform:scale(1.15);}
-@media(prefers-reduced-motion:reduce){.motion-enter *,.motion-enter::before{animation:none!important;clip-path:none!important;}.project-crest{transition:none;}}
+
+
+@media(prefers-reduced-motion:reduce){.motion-enter *,.motion-enter::before{animation:none!important;clip-path:none!important;}}
 </style></head><body>
 <a class="brand" href="./">cyber:cyber</a>
 <span class="co a">51.5074&deg; N</span>

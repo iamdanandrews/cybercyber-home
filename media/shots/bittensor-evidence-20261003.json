@@ -1,0 +1,16 @@
+{
+  "source": "/Users/da/Proposal/Shipibo-handover",
+  "engineVersion": "2.0",
+  "recipe": {
+    "expression": "flat",
+    "palette": "kene",
+    "ground": "light",
+    "weight": 0.45,
+    "gaps": 0.1,
+    "asym": 0.18,
+    "outline": "double",
+    "animate": false
+  },
+  "created": "2026-10-03",
+  "purpose": "Portfolio demonstrations generated from the delivered drawing engine, not evidence of network adoption"
+}

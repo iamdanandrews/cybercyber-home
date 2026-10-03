@@ -24,5 +24,16 @@
     "demo_fixture": "A manual plan with one exercise and one unrecorded criterion was added via the normal UI to fictional K. Sato in the isolated test clinic; no patient outcomes recorded. Catalogue clinical review restrictions were retained."
   },
   "commercial_review": "2026-10-03: the case uses complete dark-theme caseload, library and protocol captures from the existing isolated demo capture set; no new product results claimed.",
-  "art_direction_review": "2026-10-03: existing complete captures reframed in the site; no new product execution or outcomes claimed."
+  "art_direction_review": "2026-10-03: existing complete captures reframed in the site; no new product execution or outcomes claimed.",
+  "fresh_20261003": {
+    "source": "Current local React app at localhost:4331/app2/",
+    "method": "Unmodified full-viewport browser screenshots",
+    "screens": [
+      "k-current-patient-rehab-20261003.png",
+      "k-current-protocol-overview-20261003.png",
+      "k-current-protocol-research-20261003.png"
+    ],
+    "data": "Existing isolated Kaido Studio Demo; fictional K. Sato with one exercise and one unrecorded criterion; no new clinical entries made",
+    "purpose": "Patient context and separate protocol overview/research reading modes"
+  }
 }

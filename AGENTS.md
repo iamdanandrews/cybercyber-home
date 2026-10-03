@@ -212,3 +212,30 @@ Dan finds small coloured house crests beside project titles detached from the wo
 Homepage project headers and case eyebrows now use typography and metadata alone.
 Keep the hero and contact mark interactions; do not reintroduce decorative house
 crests beside project names or confuse them with client logos.
+
+## Coordinated evidence release (3 October 2026)
+This supersedes earlier imagery notes: Kaido leads on the homepage and in its case
+with the complete protocol Overview captured from the current local React app on
+3 October. Its walkthrough separately shows caseload, patient rehabilitation and
+Research. Demo patients are fictional. The native screenshots are unmodified.
+
+Bittensor leads with three deterministic outputs generated from the delivered
+engine; the actual engine is scoped inline to work-ikarao.html and supports name,
+Flat/Circuit register and SVG export. Client line grammar remains separate from
+the house dot mark. Concept applications are labelled; adoption is not claimed.
+
+Cases include a defining decision, product structure and separate delivered
+capability/evidence stage. Journal diagrams describe each note's topic rather than
+repeating decorative seals. Manifesto commitments link to practical evidence.
+Use the versioned lossless WebP native captures for delivery; original PNGs remain
+archived. Versioned social cards cover all sixteen public content pages.
+
+Do not restore blanket specimen entrance wipes. Input-driven engine path drawing,
+captured-state surface presses and reading progress have reduced-motion twins.
+Retain native-dialog focus return, inert closed navigation and placeholder-only
+contact typing. On small screens case metadata stacks rather than narrowing the
+project description into a word-per-line column.
+
+Responsive geometry, interaction checks and static audits do not establish actual
+Safari/Firefox, assistive-technology or hardware coverage. Current continuous
+Granite/Frame films and customer outcome evidence remain external release gates.

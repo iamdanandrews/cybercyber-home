@@ -10,13 +10,13 @@
 <meta property="og:url" content="https://www.cybercyber.ai/manifesto.html">
 <meta property="og:title" content="Manifesto — cyber:cyber">
 <meta property="og:description" content="Ten things a product design lab believes — on judgement, refusal, and what's worth building rather than just shipping fast.">
-<meta property="og:image" content="https://www.cybercyber.ai/media/og.png">
+<meta property="og:image" content="https://www.cybercyber.ai/media/social/manifesto-20261003.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Manifesto — cyber:cyber">
 <meta name="twitter:description" content="Ten things a product design lab believes — on judgement, refusal, and what's worth building rather than just shipping fast.">
-<meta name="twitter:image" content="https://www.cybercyber.ai/media/og.png">
+<meta name="twitter:image" content="https://www.cybercyber.ai/media/social/manifesto-20261003.png">
 <link rel="canonical" href="https://www.cybercyber.ai/manifesto.html">
 <meta name="color-scheme" content="dark">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -142,7 +142,7 @@ footer{border-top:1px solid var(--mline);padding:28px 0;}
 .mseal{width:64px;height:64px;color:var(--accent);flex:none;view-transition-name:brand-seal;}
 .mseal text{font-family:var(--mono);font-size:8.4px/*svg*/;letter-spacing:1.3px;fill:currentColor;}
 .mseal .stb{font-size:7px/*svg*/;letter-spacing:2.2px;}
-@media(max-width:820px){.ivlabel,.mvf{display:none;}}
+@media(max-width:820px){.mvf{display:none;}}
 /* Verb label on the reticle. Per the research the ring alone is ornament; the verb is what makes it an affordance -- it states what the click will do. Ported from the homepage so the cursor behaves identically across the site. */
 .reticle .verb{position:absolute;left:50%;top:calc(100% + 6px);transform:translateX(-50%);font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);white-space:nowrap;opacity:0;transition:opacity .2s;}
 .reticle.lock .verb{opacity:1;}
@@ -169,13 +169,13 @@ footer{border-top:1px solid var(--mline);padding:28px 0;}
 .mobile a.msub{font-family:var(--mono);font-variation-settings:normal;font-size:var(--t-cap);
   letter-spacing:.14em;padding:10px 0 10px 22px;color:var(--mpaper70);border-bottom:1px solid var(--mline);}
 .fchk{font-family:var(--mono);font-size:var(--t-cap);color:var(--mdim);letter-spacing:.14em;cursor:help;}.belief{opacity:1!important;transform:none!important;}
-.reveal{opacity:1!important;transform:none!important;}
-@media(max-width:600px){header .statl{display:none;}.cshtext,.cshmedia{min-width:0;}.cshtext .eyebrow{flex-wrap:wrap;row-gap:10px;}.cshtext .eyebrow .ix{margin-left:0;}.irow .iv{max-width:44%;white-space:normal;text-align:right;}.irow .il{min-width:0;white-space:normal;}.sf{overflow-wrap:anywhere;}}
+
+@media(max-width:600px){header .statl{display:none;}}
 
 /* Editorial house: quiet chrome, clear reading hierarchy. */
-.reticle,.coord,.vf{display:none!important;}
-body.cursor-on{cursor:auto;}body.cursor-on a,body.cursor-on button,body.cursor-on summary,body.cursor-on [role=button]{cursor:pointer;}
-body.cursor-on .capture-link{cursor:zoom-in;}
+.reticle{display:none!important;}
+body.cursor-on [role=button]{cursor:pointer;}
+
 @media(prefers-reduced-motion:reduce){::view-transition-group(*){animation:none!important;}}
 
 /* Practical commitments in the house editorial system. */
@@ -183,7 +183,7 @@ body.cursor-on .capture-link{cursor:zoom-in;}
 .belief .st{font-size:var(--t-title);line-height:1.1;letter-spacing:-.025em;}
 .belief .bd{font-size:var(--t-lead);line-height:1.65;max-width:44ch;}
 .belief .txt{max-width:820px;}.end h2{font-size:var(--t-title);max-width:18ch;}
-.belief,.reveal{opacity:1;transform:none;filter:none;}
+.belief{opacity:1;transform:none;filter:none;}
 .end a:focus-visible,.end a:hover{color:var(--cyan);}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important;}}
 
@@ -191,13 +191,15 @@ body.cursor-on .capture-link{cursor:zoom-in;}
 @keyframes specimen-wipe{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0)}}
 @keyframes issue-settle{from{transform:scale(.76)}to{transform:scale(1)}}
 @keyframes reading-rule{from{transform:scaleX(.15)}to{transform:scaleX(1)}}
-.motion-enter .r-mat,.motion-enter .portfolio-plate,.motion-enter .walk-evidence,.motion-enter .frame{animation:specimen-wipe .65s ease-out both;}
-.motion-enter .ehmark,.motion-enter .project-crest,.motion-enter .jmark{animation:issue-settle .55s ease-out both;}
+
+
 .r-chapter,.belief{position:relative;}.r-chapter::before,.belief::before{content:"";position:absolute;top:0;left:0;width:100%;height:1px;background:var(--line);transform-origin:left;pointer-events:none;}.motion-enter.r-chapter::before,.motion-enter.belief::before{animation:reading-rule .7s ease-out;}
-.capture-link{transition:background .2s ease-out;}.capture-link:hover,.capture-link:focus-visible{background:var(--line);}
-.walk-controls button{transition:background .2s,color .2s,border-color .2s;}.walk-controls button:hover,.walk-controls button:focus-visible{border-color:var(--cyan);}
-.project-crest{transition:transform .4s ease-out;transform-origin:center;}.wkrow:hover .project-crest,.wkrow:focus-visible .project-crest{transform:scale(1.15);}
-@media(prefers-reduced-motion:reduce){.motion-enter *,.motion-enter::before{animation:none!important;clip-path:none!important;}.project-crest{transition:none;}}
+
+
+@media(prefers-reduced-motion:reduce){.motion-enter *,.motion-enter::before{animation:none!important;clip-path:none!important;}}
+
+.commitment-evidence{display:inline-block;margin-top:24px;font-family:var(--mono);font-size:var(--t-cap);border-bottom:1px solid currentColor;padding:10px 0;color:var(--ground);}.commitment-evidence:hover,.commitment-evidence:focus-visible{color:var(--accent);}
+@media(prefers-reduced-motion:reduce){.belief{opacity:1!important;transform:none!important;}}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -235,16 +237,16 @@ body.cursor-on .capture-link{cursor:zoom-in;}
   </div></section>
 
   <div class="beliefs wrap">
-    <article class="belief" data-n="1"><div class="num">01</div><div class="txt"><div class="st">Start with the situation.</div><div class="rule"></div><p class="bd">Understand who the product is for, what they need to do and why the work matters now. Name the task, the audience and the business reason before choosing the form.</p></div></article>
-    <article class="belief rev" data-n="2"><div class="num">02</div><div class="txt"><div class="st">Make the direction tangible.</div><div class="rule"></div><p class="bd">Use the artifact that helps the decision: a sketch, a prototype, a written argument or a working slice. Give the team something specific to assess.</p></div></article>
-    <article class="belief" data-n="3"><div class="num">03</div><div class="txt"><div class="st">Choose a useful first release.</div><div class="rule"></div><p class="bd">Agree the core workflows and make the important parts work together. Define what the first release needs to teach us, then keep its scope small enough to test that question.</p></div></article>
-    <article class="belief rev" data-n="4"><div class="num">04</div><div class="txt"><div class="st">Design the whole experience.</div><div class="rule"></div><p class="bd">Identity, interface, language and behaviour belong to the same product. Build continuity from the first impression to the everyday task.</p></div></article>
-    <article class="belief" data-n="5"><div class="num">05</div><div class="txt"><div class="st">Stay close to the work.</div><div class="rule"></div><p class="bd">You collaborate directly with the person designing and building. Keep decisions and implementation connected throughout the engagement.</p></div></article>
-    <article class="belief rev" data-n="6"><div class="num">06</div><div class="txt"><div class="st">Make scope and price clear.</div><div class="rule"></div><p class="bd">Agree deliverables, milestones and fees before work begins. Discuss new requirements before they change the commitment.</p></div></article>
-    <article class="belief" data-n="7"><div class="num">07</div><div class="txt"><div class="st">Give technology a useful role.</div><div class="rule"></div><p class="bd">Choose tools around the task and the constraints. Make the result understandable to the person using it.</p></div></article>
-    <article class="belief rev" data-n="8"><div class="num">08</div><div class="txt"><div class="st">Share progress.</div><div class="rule"></div><p class="bd">Show the work as it develops. Bring questions and trade-offs into the conversation while there is time to act on them.</p></div></article>
-    <article class="belief" data-n="9"><div class="num">09</div><div class="txt"><div class="st">Test the awkward states.</div><div class="rule"></div><p class="bd">Check the keyboard, the small screen, the empty state and the interrupted task. A convincing hero screen is only the beginning.</p></div></article>
-    <article class="belief rev" data-n="10"><div class="num">10</div><div class="txt"><div class="st">Leave something the team can use.</div><div class="rule"></div><p class="bd">Define the source files, implementation, documentation and support in the scope. Build systems that can continue beyond the engagement.</p></div></article>
+    <article class="belief" data-n="1"><div class="num">01</div><div class="txt"><div class="st">Start with the situation.</div><div class="rule"></div><p class="bd">Understand who the product is for, what they need to do and why the work matters now. Name the task, the audience and the business reason before choosing the form.</p><a class="commitment-evidence" href="work-kaido.html">See the clinical information hierarchy ↗</a></div></article>
+    <article class="belief rev" data-n="2"><div class="num">02</div><div class="txt"><div class="st">Make the direction tangible.</div><div class="rule"></div><p class="bd">Use the artifact that helps the decision: a sketch, a prototype, a written argument or a working slice. Give the team something specific to assess.</p><a class="commitment-evidence" href="work-frame.html">See capture and organisation ↗</a></div></article>
+    <article class="belief" data-n="3"><div class="num">03</div><div class="txt"><div class="st">Choose a useful first release.</div><div class="rule"></div><p class="bd">Agree the core workflows and make the important parts work together. Define what the first release needs to teach us, then keep its scope small enough to test that question.</p><a class="commitment-evidence" href="work-ikarao.html#drawing-engine">Try the working identity engine ↗</a></div></article>
+    <article class="belief rev" data-n="4"><div class="num">04</div><div class="txt"><div class="st">Design the whole experience.</div><div class="rule"></div><p class="bd">Identity, interface, language and behaviour belong to the same product. Build continuity from the first impression to the everyday task.</p><a class="commitment-evidence" href="work-granite.html">See the identity and product together ↗</a></div></article>
+    <article class="belief" data-n="5"><div class="num">05</div><div class="txt"><div class="st">Stay close to the work.</div><div class="rule"></div><p class="bd">You collaborate directly with the person designing and building. Keep decisions and implementation connected throughout the engagement.</p><a class="commitment-evidence" href="./#offerings">See engagement options ↗</a></div></article>
+    <article class="belief rev" data-n="6"><div class="num">06</div><div class="txt"><div class="st">Make scope and price clear.</div><div class="rule"></div><p class="bd">Agree deliverables, milestones and fees before work begins. Discuss new requirements before they change the commitment.</p><a class="commitment-evidence" href="./#offerings">See scope and starting fees ↗</a></div></article>
+    <article class="belief" data-n="7"><div class="num">07</div><div class="txt"><div class="st">Give technology a useful role.</div><div class="rule"></div><p class="bd">Choose tools around the task and the constraints. Make the result understandable to the person using it.</p><a class="commitment-evidence" href="work-granite.html">See on-device programme and history ↗</a></div></article>
+    <article class="belief rev" data-n="8"><div class="num">08</div><div class="txt"><div class="st">Share progress.</div><div class="rule"></div><p class="bd">Show the work as it develops. Bring questions and trade-offs into the conversation while there is time to act on them.</p><a class="commitment-evidence" href="./#offerings">See the working commitments ↗</a></div></article>
+    <article class="belief" data-n="9"><div class="num">09</div><div class="txt"><div class="st">Test the awkward states.</div><div class="rule"></div><p class="bd">Check the keyboard, the small screen, the empty state and the interrupted task. A convincing hero screen is only the beginning.</p><a class="commitment-evidence" href="journal-hardest-client.html">Read the studio design review ↗</a></div></article>
+    <article class="belief rev" data-n="10"><div class="num">10</div><div class="txt"><div class="st">Leave something the team can use.</div><div class="rule"></div><p class="bd">Define the source files, implementation, documentation and support in the scope. Build systems that can continue beyond the engagement.</p><a class="commitment-evidence" href="work-ikarao.html">See an extensible identity system ↗</a></div></article>
   </div>
 
   <section class="end"><div class="wrap">
@@ -300,7 +302,7 @@ body.cursor-on .capture-link{cursor:zoom-in;}
   var q='Q'+(Math.floor(new Date().getMonth()/3)+1);
   document.querySelectorAll('.statl').forEach(function(el){el.textContent='PROJECT ENQUIRIES';});
   var ivq=document.getElementById('ivq'); if(ivq) ivq.textContent='Project enquiries';
-  render(); if(!reduce) setInterval(render,1000);
+  render(); if(!reduce) setInterval(render,60000);
   el=document.getElementById("clk");
   if(el){var m=function(e){if(e)e.preventDefault();rotate();};
     el.addEventListener("click",m);

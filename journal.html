@@ -10,13 +10,13 @@
 <meta property="og:url" content="https://www.cybercyber.ai/journal.html">
 <meta property="og:title" content="Journal — cyber:cyber">
 <meta property="og:description" content="Notes from cyber:cyber, a product design lab in London — on judgement, refusal, and building on the frontier.">
-<meta property="og:image" content="https://www.cybercyber.ai/media/og.png">
+<meta property="og:image" content="https://www.cybercyber.ai/media/social/journal-20261003.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Journal — cyber:cyber">
 <meta name="twitter:description" content="Notes from cyber:cyber, a product design lab in London — on judgement, refusal, and building on the frontier.">
-<meta name="twitter:image" content="https://www.cybercyber.ai/media/og.png">
+<meta name="twitter:image" content="https://www.cybercyber.ai/media/social/journal-20261003.png">
 <link rel="canonical" href="https://www.cybercyber.ai/journal.html">
 <meta name="color-scheme" content="dark">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -34,7 +34,7 @@ html{scroll-behavior:smooth;scroll-padding-top:56px;-webkit-text-size-adjust:100
 body{background:var(--ground);color:var(--paper);font-family:var(--sans);font-size:var(--t-body);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 a{color:inherit;text-decoration:none;}::selection{background:var(--accent);color:var(--accent-ink);}
 :focus-visible{outline:1.5px solid var(--cyan);outline-offset:4px;border-radius:1px;box-shadow:0 0 0 5px rgba(34,211,238,.14);}a:active,button:active,summary:active,[role=button]:active{transform:scale(.985);}
-.eyebrow,.menu,.brand,.foot,.kick,.date,.cap,.jmeta,.seal text,.vlabel{font-family:var(--mono);}
+.eyebrow,.menu,.brand,.foot,.date,.cap,.seal text{font-family:var(--mono);}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,64px);}
 .skip{position:fixed;top:8px;left:8px;z-index:2000;background:var(--paper);color:var(--ground);padding:10px 16px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.08em;text-transform:uppercase;transform:translateY(-180%);transition:transform .25s var(--e1);}
 .skip:focus{transform:none;}
@@ -87,7 +87,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;margin-top:clamp(60px,10v
 
 
 
-@media(prefers-reduced-motion:reduce){}
+
 .reticle{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;transform:translate(-50%,-50%);opacity:0;transition:opacity .3s,width .22s var(--e1),height .22s var(--e1);width:24px;height:24px;}
 .reticle .ring{position:absolute;inset:0;border:1px solid var(--paper);border-radius:50%;mix-blend-mode:difference;transition:border-radius .22s,border-color .22s;}
 .reticle b{position:absolute;background:var(--paper);mix-blend-mode:difference;}
@@ -98,11 +98,11 @@ footer{border-top:1px solid var(--line);padding:26px 0;margin-top:clamp(60px,10v
 body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cursor:none;}
 @media(hover:none),(pointer:coarse){.reticle,.coord{display:none;}}
 
-.arted{background-size:cover;background-position:center;background-repeat:no-repeat;}
-.frame.arted::before{display:none;}
-.media .ph,.csmedia .ph{background-image:none;}
-.shot.arted{position:relative;}
-.shot.arted::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,11,13,.6),transparent 45%);pointer-events:none;}
+
+
+
+
+
 /* Cut for the same reason as on the homepage: this printed raw cursor clientX/clientY as if it were instrumentation. Meaningless data, permanently in motion. Hidden rather than deleted so its writer cannot throw. */
 .coord{display:none!important;}
 /* Verb label on the reticle. Per the research the ring alone is ornament; the verb is what makes it an affordance -- it states what the click will do. Ported from the homepage so the cursor behaves identically across the site. */
@@ -168,12 +168,12 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .mobile a.msub{font-family:var(--mono);font-variation-settings:normal;font-size:var(--t-cap);
   letter-spacing:.14em;padding:10px 0 10px 22px;color:var(--paper70);border-bottom:1px solid var(--line);}
 .reveal{opacity:1!important;transform:none!important;}
-@media(max-width:600px){header .statl{display:none;}.cshtext,.cshmedia{min-width:0;}.cshtext .eyebrow{flex-wrap:wrap;row-gap:10px;}.cshtext .eyebrow .ix{margin-left:0;}.irow .iv{max-width:44%;white-space:normal;text-align:right;}.irow .il{min-width:0;white-space:normal;}.sf{overflow-wrap:anywhere;}}
+@media(max-width:600px){header .statl{display:none;}}
 
 /* Editorial house: quiet chrome, clear reading hierarchy. */
-.reticle,.coord,.vf{display:none!important;}
+.reticle,.coord{display:none!important;}
 body.cursor-on{cursor:auto;}body.cursor-on a,body.cursor-on button,body.cursor-on summary,body.cursor-on [role=button]{cursor:pointer;}
-body.cursor-on .capture-link{cursor:zoom-in;}
+
 @media(prefers-reduced-motion:reduce){::view-transition-group(*){animation:none!important;}}
 
 /* Complete editorial release — readable without motion or script. */
@@ -183,10 +183,10 @@ body.cursor-on .capture-link{cursor:zoom-in;}
 .ahero .frame::before{opacity:.25;}
 .ahero .frame .jmark{width:170px;max-width:36%;opacity:.8;}
 .ahero .frame .jmark path{fill:var(--accent);}
-.ahero .ah1{max-width:16ch;font-size:var(--t-title);line-height:1.04;}
-.prose{max-width:76ch;}.prose p{line-height:1.8;}.prose h2{margin-top:56px;}
-.next a:focus-visible .n,.next a:hover .n{color:var(--cyan);}
-@media(max-width:640px){.ahero .frame{aspect-ratio:2/1;}.ahero .ah1{font-size:var(--t-art);}.prose{margin-top:48px;}}
+
+
+
+@media(max-width:640px){.ahero .frame{aspect-ratio:2/1;}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important;}}
 
 /* Editorial index — issued notes, calm hierarchy. */
@@ -200,13 +200,12 @@ body.cursor-on .capture-link{cursor:zoom-in;}
 @keyframes specimen-wipe{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0)}}
 @keyframes issue-settle{from{transform:scale(.76)}to{transform:scale(1)}}
 @keyframes reading-rule{from{transform:scaleX(.15)}to{transform:scaleX(1)}}
-.motion-enter .r-mat,.motion-enter .portfolio-plate,.motion-enter .walk-evidence,.motion-enter .frame{animation:specimen-wipe .65s var(--e-settle) both;}
-.motion-enter .ehmark,.motion-enter .project-crest,.motion-enter .jmark{animation:issue-settle .55s var(--e-settle) both;}
+
+.motion-enter .jmark{animation:issue-settle .55s var(--e-settle) both;}
 .r-chapter,.belief{position:relative;}.r-chapter::before,.belief::before{content:"";position:absolute;top:0;left:0;width:100%;height:1px;background:var(--line);transform-origin:left;pointer-events:none;}.motion-enter.r-chapter::before,.motion-enter.belief::before{animation:reading-rule .7s var(--e-settle);}
-.capture-link{transition:background .2s var(--e-settle);}.capture-link:hover,.capture-link:focus-visible{background:var(--line);}
-.walk-controls button{transition:background .2s,color .2s,border-color .2s;}.walk-controls button:hover,.walk-controls button:focus-visible{border-color:var(--cyan);}
-.project-crest{transition:transform .4s var(--e-settle);transform-origin:center;}.wkrow:hover .project-crest,.wkrow:focus-visible .project-crest{transform:scale(1.15);}
-@media(prefers-reduced-motion:reduce){.motion-enter *,.motion-enter::before{animation:none!important;clip-path:none!important;}.project-crest{transition:none;}}
+
+
+@media(prefers-reduced-motion:reduce){.motion-enter *,.motion-enter::before{animation:none!important;clip-path:none!important;}}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -249,7 +248,7 @@ body.cursor-on .capture-link{cursor:zoom-in;}
         <div><div class="jt" style="view-transition-name:jn-hardest">The hardest client was us</div><div class="jx">A studio's own website is the one piece of work a client can inspect all the way down. So we treated ours as the hardest brief of the year &mdash; hand-built, with product captures and presentation studies clearly distinguished.</div></div>
         <div class="date">Jul 29, 2026</div>
       </a>
-      
+
       <a class="jrow reveal" href="journal-undocumented.html">
         <div class="frame" style=""><svg class="jmark" data-seed="Nobody wrote it down" aria-hidden="true"><path d=""/></svg><span class="bk a"></span><span class="bk b"></span><span class="tl">&#12300;04&#12301;</span><span class="cap">Note 04</span></div>
         <div><div class="jt" style="view-transition-name:jn-undocumented">Nobody wrote it down</div><div class="jx">On confabulation, contextual inquiry, and why almost no software will make a decision — and what it takes to extract judgment an expert can't articulate.</div></div>
@@ -301,7 +300,7 @@ body.cursor-on .capture-link{cursor:zoom-in;}
   var q='Q'+(Math.floor(new Date().getMonth()/3)+1);
   document.querySelectorAll('.statl').forEach(function(el){el.textContent='PROJECT ENQUIRIES';});
   var ivq=document.getElementById('ivq'); if(ivq) ivq.textContent='Project enquiries';
-  render(); if(!reduce) setInterval(render,1000);
+  render(); if(!reduce) setInterval(render,60000);
   el=document.getElementById("clk");
   if(el){var m=function(e){if(e)e.preventDefault();rotate();};
     el.addEventListener("click",m);
