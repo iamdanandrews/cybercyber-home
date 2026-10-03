@@ -20,7 +20,8 @@
       "kaido-caseload-dark-v4.png",
       "kaido-acl-dark-v4.png"
     ],
-    "homepage": "Two unmodified native dark-theme captures, composed with CSS: clinic caseload and ACL exercise protocol; no anatomical selector.",
+    "homepage": "Single complete native dark-theme caseload capture, presented on a dark-grey mat. No overlapping panels or additional crop.",
     "demo_fixture": "A manual plan with one exercise and one unrecorded criterion was added via the normal UI to fictional K. Sato in the isolated test clinic; no patient outcomes recorded. Catalogue clinical review restrictions were retained."
-  }
+  },
+  "commercial_review": "2026-10-03: the case uses complete dark-theme caseload, library and protocol captures from the existing isolated demo capture set; no new product results claimed."
 }

@@ -115,7 +115,7 @@ for (const f of PAGES) {
   /* ---- headings must not run back to back with no evidence between ----
      Evidence is a case figure (.pfig) or one of the specimen's live tables
      (.tiers/.scale/.pair/.seedbox) -- a rendered sample is evidence too. */
-  const seq = [...s.matchAll(/<h2>|<div class="(?:pfig|tiers|scale|pair|seedbox)/g)].map(m => m[0]);
+  const seq = [...s.matchAll(/<h2>|<div class="(?:pfig|tiers|scale|pair|seedbox|walk-evidence)/g)].map(m => m[0]);
   for (let i = 0; i < seq.length - 1; i++) {
     if (seq[i] === '<h2>' && seq[i + 1] === '<h2>') { bad(f, 'two <h2> with no evidence between'); break; }
   }

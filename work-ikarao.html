@@ -3,19 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IKARAO — cyber:cyber</title>
-<meta name="description" content="A generative identity for a growing network. Brand, product design and build by cyber:cyber.">
+<title>Bittensor / Bittensor / IKARAO — cyber:cyber</title>
+<meta name="description" content="A commissioned generative identity system for Bittensor. Art direction, a deterministic drawing engine and application templates by cyber:cyber.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="cyber:cyber">
 <meta property="og:url" content="https://www.cybercyber.ai/work-ikarao.html">
-<meta property="og:title" content="IKARAO — cyber:cyber">
-<meta property="og:description" content="A generative identity for a growing network. Brand, product design and build by cyber:cyber.">
+<meta property="og:title" content="Bittensor / IKARAO — cyber:cyber">
+<meta property="og:description" content="A commissioned generative identity system for Bittensor. Art direction, a deterministic drawing engine and application templates by cyber:cyber.">
 <meta property="og:image" content="https://www.cybercyber.ai/media/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="IKARAO — cyber:cyber">
-<meta name="twitter:description" content="A generative identity for a growing network. Brand, product design and build by cyber:cyber.">
+<meta name="twitter:title" content="Bittensor / IKARAO — cyber:cyber">
+<meta name="twitter:description" content="A commissioned generative identity system for Bittensor. Art direction, a deterministic drawing engine and application templates by cyber:cyber.">
 <meta name="twitter:image" content="https://www.cybercyber.ai/media/og.png">
 <link rel="canonical" href="https://www.cybercyber.ai/work-ikarao.html">
 <meta name="color-scheme" content="dark">
@@ -307,7 +307,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .cfilm video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
 .cfilm .cfnote{position:absolute;left:12px;bottom:10px;z-index:2;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.16em;text-transform:uppercase;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.8);}
 @media(max-width:819px){.cfilm{grid-template-columns:1fr;}.cfilm .cfv{min-height:0;aspect-ratio:2/3;}}
-@media(prefers-reduced-motion:reduce){.cfilm video{display:none;}}
+@media(prefers-reduced-motion:reduce){.cfilm video{display:block;}}
 
 /* A duo is a CAUSE and an EFFECT, so it must not arrive as one flat image. The left
    device settles, a connector draws across the gap, then the right device arrives --
@@ -461,6 +461,32 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 .case-enquiry{margin-top:clamp(40px,6vw,80px);padding-top:24px;border-top:1px solid var(--line);}
 .case-enquiry p{font-family:var(--raveo);font-size:var(--t-mid);line-height:1.25;max-width:28ch;}
 .case-enquiry a{display:inline-block;margin-top:20px;padding-bottom:6px;border-bottom:1px solid var(--cyan);font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.1em;text-transform:uppercase;}
+
+.reveal{opacity:1!important;transform:none!important;}
+.case-summary{max-width:var(--maxw);margin:0 auto;padding:clamp(24px,4vw,48px) clamp(20px,5vw,64px);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.summary-stage,.case-summary dt{font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.1em;text-transform:uppercase;color:var(--grey);}
+.case-summary dl{display:grid;grid-template-columns:1.12fr .88fr;gap:28px 48px;margin-top:24px;}
+.case-summary dd{font-size:var(--t-lead);line-height:1.5;color:var(--paper);margin:10px 0 0;}
+.summary-role{font-size:var(--t-body);line-height:1.6;color:var(--grey);margin-top:24px;max-width:75ch;}
+.cfilm .cfv{aspect-ratio:2/3;min-height:0;}.cfilm video{position:static;width:100%;height:100%;object-fit:contain;}
+@media(max-width:680px){.case-summary dl{grid-template-columns:1fr;}}
+
+.reveal{opacity:1!important;transform:none!important;}
+
+.walkthrough{padding-block:clamp(36px,5vw,64px);}
+.walkthrough h2{font-family:var(--raveo);font-size:var(--t-title);letter-spacing:-.025em;line-height:1.1;margin-bottom:28px;}
+.walk-layout{display:grid;grid-template-columns:.88fr 1.12fr;gap:clamp(24px,5vw,64px);align-items:start;}
+.walk-controls{display:flex;flex-direction:column;gap:12px;}
+.walk-controls button{font:inherit;font-size:var(--t-lead);text-align:left;background:transparent;color:var(--paper);border:1px solid var(--line2);padding:18px 20px;cursor:pointer;}
+.walk-controls button[aria-pressed="true"]{border-color:var(--cyan);}
+.walk-controls button span{font-family:var(--mono);font-size:var(--t-cap);color:var(--grey);margin-right:14px;}
+.walk-controls button:focus-visible{outline:2px solid var(--cyan);outline-offset:4px;}
+.walk-evidence{margin:0;background:transparent;padding:0;}.walk-panel{margin:0;}.walk-panel[hidden]{display:none;}
+.walk-panel .walk-mat{background:var(--s2);padding:clamp(18px,3vw,36px);display:flex;justify-content:center;align-items:center;min-height:280px;}
+.walk-panel img{max-width:100%;width:auto;height:auto;max-height:550px;display:block;object-fit:contain;}
+.walk-panel figcaption{font-size:var(--t-body);color:var(--paper70);line-height:1.6;margin-top:18px;}
+@media(max-width:680px){.walk-layout{grid-template-columns:1fr;}.walk-controls{gap:8px;}.walk-controls button{padding:12px 16px;}.walk-panel img{max-height:450px;}}
+@media(max-width:600px){header .statl{display:none;}.cshtext,.cshmedia{min-width:0;}.cshtext .eyebrow{flex-wrap:wrap;row-gap:10px;}.cshtext .eyebrow .ix{margin-left:0;}.irow .iv{max-width:44%;white-space:normal;text-align:right;}.irow .il{min-width:0;white-space:normal;}.sf{overflow-wrap:anywhere;}}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -472,19 +498,19 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 <a class="skip" href="#cs">Skip to content</a>
 <header id="hdr"><div class="wrap nav">
   <a class="brand" href="./">cyber:cyber<sup>&trade;</sup></a>
-  <nav class="menu" aria-label="Primary"><a href="./">Home</a><a href="./#work">Work</a><a href="./manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a></nav><div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="./#offerings" title="Services &amp; pricing">AVAILABLE Q4</a><span class="clock" id="clk" role="button" tabindex="0" title="Click to change timezone">LDN&nbsp;--:--</span><button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button></div>
+  <nav class="menu" aria-label="Primary"><a href="./">Home</a><a href="./#work">Work</a><a href="./#offerings">Services</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a></nav><div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="./#contact" title="Project enquiries">PROJECT ENQUIRIES</a><span class="clock" id="clk" role="button" tabindex="0" title="Click to change timezone">LDN&nbsp;--:--</span><button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button></div>
 </div></header>
 <div class="mobile" id="mobile" inert><a href="./">Home</a><a href="./#work">Work</a><a class="msub" href="work-kaido.html">Kaido</a><a class="msub" href="work-granite.html">Granite</a><a class="msub" href="work-frame.html">Frame</a><a class="msub" href="work-ikarao.html">IKARAO</a><a href="./manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a></div>
 <div class="reticle" id="iret" aria-hidden="true"><span class="ring"></span><b class="h"></b><b class="v"></b><span class="verb" id="iverb">View</span></div>
 <span class="coord" id="icoord" aria-hidden="true">0000 &middot; 0000</span>
 
 <main id="cs">
-  <section class="cshero light"><div class="wrap cshgrid">
+  <section class="cshero"><div class="wrap cshgrid">
     <div class="cshtext">
       <div class="eyebrow"><svg class="ehmark" id="ehmark" viewBox="0 0 12 12" aria-hidden="true" style="view-transition-name:mk-ikarao"><path d=""/></svg>Case study<span class="ix">04 / IKARAO</span></div>
-      <h1 class="csh1" style="view-transition-name:t-ikarao">IKARAO</h1>
+      <h1 class="csh1" style="view-transition-name:t-ikarao">Bittensor</h1>
       <p class="premise">A generative identity for a growing network.</p>
-      <div class="csmeta"><div><b>Services</b><span>Brand &middot; Engine</span></div><div><b>For</b><span><a href="https://bittensor.com" target="_blank" rel="noopener">Bittensor &nearr;</a></span></div><div><b>Role</b><span>Design + build</span></div><div><b>Status</b><span>Delivered</span></div><div><b>Year</b><span>2026</span></div><div><b>Accent</b><span><i class="acc" aria-hidden="true"></i>#A8341F</span></div></div>
+      <div class="csmeta"><div><b>Services</b><span>Identity &middot; Generative system</span></div><div><b>For</b><span><a href="https://bittensor.com" target="_blank" rel="noopener">Bittensor &nearr;</a></span></div><div><b>Role</b><span>Design + build</span></div><div><b>Status</b><span>Delivered</span></div><div><b>Year</b><span>2026</span></div><div><b>Accent</b><span><i class="acc" aria-hidden="true"></i>#A8341F</span></div></div>
     </div>
     <figure class="cshmedia">
       <div class="spec"><i></i><i></i><i></i><i></i><div class="device device-lg dv-wide" style="view-transition-name:m-ikarao;aspect-ratio:1600/780"><img src="media/shots/i-hero2.webp" alt="IKARAO — eight of 300 generated marks, each a different name drawn by the same rule, cut by the frame" loading="eager" width="1600" height="780"></div></div>
@@ -492,7 +518,9 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
     </figure>
   </div>
   </section>
-  <section class="csbody"><div class="wrap cs2">
+  <section class="case-summary" aria-label="Engagement summary"><p class="summary-stage">Commissioned work · Delivered</p><dl><div><dt>Scope</dt><dd>Art direction, identity system and generative implementation.</dd></div><div><dt>Delivered</dt><dd>A drawing engine, specimen sheets, concept posters and social templates.</dd></div></dl><p class="summary-role">Designed and built by Dan Andrews for the Bittensor identity engagement. IKARAO is the internal project codename, not the client’s public brand.</p></section>
+  <section class="walkthrough"><div class="wrap"><h2>The system in use</h2><div class="walk-layout"><div class="walk-controls" role="group" aria-label="Explore the captured screens"><button type="button" data-panel="ikarao-step-1" aria-controls="ikarao-step-1" aria-pressed="true"><span>01</span>Generate a mark</button><button type="button" data-panel="ikarao-step-2" aria-controls="ikarao-step-2" aria-pressed="false"><span>02</span>Choose the register</button><button type="button" data-panel="ikarao-step-3" aria-controls="ikarao-step-3" aria-pressed="false"><span>03</span>Apply the identity</button></div><div class="walk-evidence"><figure class="walk-panel" id="ikarao-step-1"><div class="walk-mat"><img src="media/shots/i-tool.webp" alt="Generate a mark" loading="lazy"></div><figcaption>A name seeds the drawing engine. The controls define the style, density and register.</figcaption></figure><figure class="walk-panel" id="ikarao-step-2" hidden><div class="walk-mat"><img src="media/shots/i-styles.webp" alt="Choose the register" loading="lazy"></div><figcaption>The same seed can be expressed in Circuit and Flat line. A shared drawing language holds the family together.</figcaption></figure><figure class="walk-panel" id="ikarao-step-3" hidden><div class="walk-mat"><img src="media/shots/i-social.webp" alt="Apply the identity" loading="lazy"></div><figcaption>Social templates carry the generated marks into a repeatable publishing format. Applications shown here include concepts.</figcaption></figure></div></div></div></section>
+<section class="csbody"><div class="wrap cs2">
     <div class="cslabel">The work<br>04 / IKARAO</div>
     <div>
       <div class="block reveal"><p class="csintro">Bittensor needed an identity system that could extend across named subnets and validators. I developed the art direction and built a drawing engine that gives each name a distinct mark within one family. The work extends from the marks to specimen sheets, concept posters and a social kit.</p></div>
@@ -502,20 +530,9 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
       <div class="block reveal"><h2>The drawing language</h2><p>A name becomes a seed for the drawing engine. It sets the route through a grid and produces the same continuous-line mark each time.</p><p>The formal research draws on kené, the line-work tradition of the Shipibo-Konibo people of the Peruvian Amazon. That lineage is credited on the work; the engine does not claim the tradition’s meaning as its own.</p><div class="pfig lead"><div class="spec"><i></i><i></i><i></i><i></i><div class="device dv-wide" style="aspect-ratio:1600/1000"><img src="media/shots/i-tool.webp" alt="IKARAO — the Tool, live: seed TARGON drawn as 64 lines around the client’s own tau, with the full control panel" loading="lazy" width="1600" height="1000"></div></div><div class="pcap"><span class="pn">Fig. 02 &middot; IKARAO &middot; the Tool</span><span class="pd">The drawing tool, with a seed and controls for style, density and register.</span></div></div><div class="pfig lead"><div class="spec"><i></i><i></i><i></i><i></i><div class="device dv-wide" style="aspect-ratio:1200/630"><img src="media/shots/i-styles.webp" alt="IKARAO &mdash; the same seed drawn in both styles, Circuit on void and Flat line on cream, each with its full parameter line beneath" loading="lazy" width="1200" height="630"></div></div><div class="pcap"><span class="pn">Fig. 03 &middot; IKARAO &middot; one seed, both styles</span><span class="pd">One name in two registers: Circuit on a dark ground and Flat line on a pale sheet.</span></div></div></div><div class="block reveal"><h2>Make the system usable after handover.</h2><p>I made the name the input to the drawing system. The output is deterministic, so the same name regenerates the same mark without a library of stored logo files.</p><p>The practical decision was to deliver the engine alongside application templates. New names can enter the family through the same rules used for the original work.</p><p>The application templates use the same generated marks, keeping the specimen sheets, posters and social kit related.</p><div class="pfig lead"><div class="spec"><i></i><i></i><i></i><i></i><div class="device dv-wide" style="aspect-ratio:1600/546"><img src="media/shots/i-print.webp" alt="IKARAO &mdash; a printed specimen sheet: five names on one plate, alternating cream and void grounds" loading="lazy" width="1600" height="546"></div></div><div class="pcap"><span class="pn">Fig. 04 &middot; IKARAO &middot; one plate, five names</span><span class="pd">A specimen sheet with five names, alternating pale and dark grounds.</span></div></div><div class="pfig pair"><div class="duo"><figure><div class="device dv-wide" style="aspect-ratio:1600/851"><img src="media/shots/i-poster.webp" alt="IKARAO — a concept poster: the plate on the field, one statement per sheet, the names registered that epoch" loading="lazy" width="1600" height="851"></div><figcaption>Plate on field</figcaption></figure><figure><div class="device dv-wide" style="aspect-ratio:1600/851"><img src="media/shots/i-social.webp" alt="IKARAO — the social kit: the same template on void and on cream, filled in daily" loading="lazy" width="1600" height="851"></div><figcaption>One template, two grounds</figcaption></figure></div><div class="pcap"><span class="pn">Fig. 05 &middot; IKARAO &middot; posters and the daily feed</span><span class="pd">Concept posters and social templates, using the same generated identity.</span></div></div></div>
       <div class="block reveal"><h2>From reference to drawing rules</h2><p>Eighty-six reference textiles were studied against six formal questions: weight, density, colour placement, symmetry, edges and junctions. The findings became drawing constraints, rather than a moodboard alone.</p><p>Weight is built from parallel contours, filled channels and clear gutters. Fixed tiers give the family a consistent register across different compositions.</p><p>Colour is concentrated at junctions and line ends. The contrast between dark grounds and pale specimen sheets lets the same mark work in different applications.</p><p>The engine’s routing is part of the composition itself. The final art direction favours work in which the drawing system is visible, rather than extra framing layered around it.</p><p>The quieter applications reduce the surrounding furniture to a headline, a mono line and the lockup. That leaves room for the mark to carry the identity.</p></div><div class="pfig lead"><div class="spec"><i></i><i></i><i></i><i></i><div class="device dv-wide" style="aspect-ratio:1400/1391"><img src="media/shots/i-specs.webp" alt="IKARAO — the specs page: ink coverage, rhythm and largest void, measured against the client’s own painted canvases, plus the six rules the engine refuses to break" loading="lazy" width="1400" height="1391"></div></div><div class="pcap"><span class="pn">Fig. 06 &middot; IKARAO &middot; measured against the client&rsquo;s own canvas</span><span class="pd">The specification view records ink coverage and the drawing constraints checked by the engine.</span></div></div>
 
-
-
-    <div class="decide reveal">
-        <span class="dlabel">The scope &middot; kept / cut</span>
-        <div class="dl">Keep the rules inside the work.</div>
-        <div class="cols">
-          <div class="col kept"><h3><span class="b">+</span>Kept</h3><ul><li>One rule, applied to every name, forever</li><li>Templates that preserve the drawing system</li><li>The client&rsquo;s own palette &mdash; the black, gold and red already live on their feed</li></ul></div>
-          <div class="col cut"><h3><span class="b">&minus;</span>Cut</h3><ul><li>A logo, guarded by a rulebook nobody enforces</li><li>Extra framing that competes with the mark</li><li>Every exploratory direction that didn&rsquo;t make the cut</li></ul></div>
-        </div>
-        <div class="refusal"><span class="rlabel">Left out</span><p>The final case shows the delivered drawing system and its applications. Exploratory directions are omitted so the family can be read as a coherent whole.</p></div>
-      </div>
       <section class="evidence-note" aria-label="Project result"><h3>A delivered identity system</h3><p>The deliverable combines a deterministic drawing engine, specimen sheets, concept posters and social templates. The applications shown explain the system; this case does not report campaign performance or claim that every concept was published.</p></section>
       <p class="horizon"><b>Scope.</b> IKARAO is this studio&rsquo;s name for the engagement &mdash; it appears on nothing Bittensor ships; their own mark is <span style="font-family:var(--mono)">&tau;</span>. What&rsquo;s shown here is the finished system: the engine, the concept posters, the social kit. The case shows the final drawing rules and selected applications. Concept posters are labelled as concepts.</p>
-      <div class="case-enquiry"><p>Need an identity that can grow with your product?</p><a href="./#contact">Tell me what you are building &nearr;</a></div>
+      <div class="case-enquiry"><p>Need an identity that can grow with your product?</p><a href="./#contact">Discuss a project &nearr;</a></div>
       <div class="colophon reveal"><div><b>Stack</b><span>JavaScript &middot; zero dependencies</span></div><div><b>Timeline</b><span>2026</span></div><div><b>Constraint</b><span>Same name, same mark. Forever.</span></div></div>
     </div>
   </div></section>
@@ -551,8 +568,8 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
     setTimeout(function(){ci=(ci+1)%CITIES.length;render();el.style.opacity="";},220);}
   /* the quarter computes itself — a status chip that can never go stale */
   var q='Q'+(Math.floor(new Date().getMonth()/3)+1);
-  document.querySelectorAll('.statl').forEach(function(el){el.textContent='AVAILABLE '+q;});
-  var ivq=document.getElementById('ivq'); if(ivq) ivq.textContent='Open for '+q;
+  document.querySelectorAll('.statl').forEach(function(el){el.textContent='PROJECT ENQUIRIES';});
+  var ivq=document.getElementById('ivq'); if(ivq) ivq.textContent='Project enquiries';
   render(); if(!reduce) setInterval(render,1000);
   el=document.getElementById("clk");
   if(el){var m=function(e){if(e)e.preventDefault();rotate();};
@@ -642,5 +659,7 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
  dialog.addEventListener('click',function(e){if(e.target===dialog){var b=dialog.getBoundingClientRect();if(e.clientX<b.left||e.clientX>b.right||e.clientY<b.top||e.clientY>b.bottom)dialog.close();}});
 })();
 </script>
-</body>
+<script>
+(function(){document.querySelectorAll('.walkthrough').forEach(function(root){var buttons=root.querySelectorAll('button[data-panel]');buttons.forEach(function(button){button.addEventListener('click',function(){buttons.forEach(function(other){other.setAttribute('aria-pressed',other===button?'true':'false');});root.querySelectorAll('.walk-panel').forEach(function(panel){panel.hidden=panel.id!==button.dataset.panel;});});});});})();
+</script></body>
 </html>

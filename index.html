@@ -3,19 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>cyber:cyber — brand, product design and development</title>
-<meta name="description" content="A product design lab for founders taking a product from first direction to launch. Brand, interface and working software by Dan Andrews.">
+<title>cyber:cyber — brand, product design and development for founders</title>
+<meta name="description" content="A product design lab turning complex ideas into distinctive digital products. Brand, product design and development, led by Dan Andrews in London.">
 
 <meta property="og:site_name" content="cyber:cyber">
 <meta property="og:url" content="https://www.cybercyber.ai/">
 <meta property="og:title" content="cyber:cyber — brand, product design and development">
-<meta property="og:description" content="A product design lab for founders taking a product from first direction to launch. Brand, interface and working software by Dan Andrews.">
+<meta property="og:description" content="A product design lab turning complex ideas into distinctive digital products. Brand, product design and development, led by Dan Andrews in London.">
 <meta property="og:image" content="https://www.cybercyber.ai/media/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="cyber:cyber — brand, product design and development">
-<meta name="twitter:description" content="A product design lab for founders taking a product from first direction to launch. Brand, interface and working software by Dan Andrews.">
+<meta name="twitter:description" content="A product design lab turning complex ideas into distinctive digital products. Brand, product design and development, led by Dan Andrews in London.">
 <meta name="twitter:image" content="https://www.cybercyber.ai/media/og.png">
 <link rel="canonical" href="https://www.cybercyber.ai/">
 <meta name="color-scheme" content="dark">
@@ -26,7 +26,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="preload" href="RaveoVF.woff2" as="font" type="font/woff2" crossorigin>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"cyber:cyber","alternateName":"cyber:cyber studio","description":"A product design lab for founders taking a product from first direction to launch. Brand, interface and working software by Dan Andrews.","url":"https://www.cybercyber.ai","email":"hello@cybercyber.ai","areaServed":"Worldwide","priceRange":"£5,000–£50,000+","founder":{"@type":"Person","name":"Dan Andrews"},"knowsAbout":["Product design","Brand design","Interface design","Native app development","On-device AI","AI product design"],"address":{"@type":"PostalAddress","addressLocality":"London","addressCountry":"GB"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"cyber:cyber","alternateName":"cyber:cyber studio","description":"A product design lab turning complex ideas into distinctive digital products. Brand, product design and development, led by Dan Andrews in London.","url":"https://www.cybercyber.ai","email":"hello@cybercyber.ai","areaServed":"Worldwide","priceRange":"£5,000–£50,000+","founder":{"@type":"Person","name":"Dan Andrews"},"knowsAbout":["Product design","Brand design","Interface design","Native app development","On-device AI","AI product design"],"address":{"@type":"PostalAddress","addressLocality":"London","addressCountry":"GB"}}</script>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
   window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
@@ -842,10 +842,46 @@ section.reveal>.wrap{position:relative;}
 .plate-kaido{display:block;padding:0;aspect-ratio:1.6;min-height:0;max-height:none;height:auto;}
 .kaido-overview-frame,.kaido-detail-frame{position:absolute;overflow:hidden;border-radius:10px;box-shadow:0 24px 60px rgba(0,0,0,.3);}
 .kaido-overview-frame{left:5%;top:8%;width:72%;padding:clamp(16px,2vw,28px);background:var(--kaido-ui);}
-.plate-kaido .kaido-overview{position:static;width:100%;max-width:100%;height:auto;aspect-ratio:988/678;border-radius:0;box-shadow:none;object-fit:contain;}
+.plate-kaido .kaido-overview{position:static;width:100%;max-width:100%;height:auto;aspect-ratio:1280/720;border-radius:0;box-shadow:none;object-fit:contain;}
 .kaido-detail-frame{right:5%;bottom:8%;width:50%;}
 .plate-kaido .kaido-detail{position:static;width:100%;max-width:100%;height:auto;aspect-ratio:800/486;object-fit:cover;object-position:top;border-radius:0;box-shadow:none;}
 @media(max-width:600px){.plate-kaido{aspect-ratio:auto;padding:24px 18px;display:grid;gap:18px;}.kaido-overview-frame,.kaido-detail-frame{position:static;width:100%;max-width:100%;border-radius:7px;}.kaido-overview-frame{padding:16px;}}
+/* Commercial hierarchy: the proposition and next step share the first viewport. */
+.hero{min-height:0;padding-bottom:clamp(36px,5vw,72px);}
+.hero .inner{flex:none;padding-top:clamp(100px,11vw,156px);padding-bottom:0;}
+.hero .hanchor{position:relative;bottom:auto;left:auto;margin:34px auto 0;width:min(var(--maxw),calc(100% - 2*clamp(20px,5vw,64px)));order:2;}
+.hero .hanchor .hmark{display:block;width:48px;height:48px;margin:0;}.hero .hanchor{display:flex;align-items:center;gap:20px;}
+.hero-intro{margin-top:clamp(28px,4vw,56px);max-width:920px;}
+.hero-proposition{font-family:var(--raveo);font-size:var(--t-sub);font-variation-settings:"wght" 470,"opsz" 32;line-height:1.12;letter-spacing:-.025em;max-width:34ch;}
+.hero-support{font-size:var(--t-lead);color:var(--paper70);margin-top:22px;max-width:48ch;line-height:1.5;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:16px 32px;margin-top:28px;}
+.hero-actions a,.contact-primary{font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--cyan);padding:12px 0;}
+.hero-experience{font-size:var(--t-body);color:var(--grey);margin-top:28px;line-height:1.6;}
+.intro-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(28px,5vw,72px);align-items:start;}
+.intro-title{font-family:var(--raveo);font-size:var(--t-sub);line-height:1.12;letter-spacing:-.02em;}
+.intro-note{font-size:var(--t-body);line-height:1.65;color:var(--grey);margin-top:20px;}
+.reveal,.offers .offer{opacity:1!important;transform:none!important;}
+#about{min-height:0;height:auto;background:var(--ground);color:var(--paper);padding-block:clamp(44px,7vw,88px);}
+.portfolio-plate{aspect-ratio:1.6;display:flex;align-items:center;justify-content:center;}
+.phone-set{width:100%;max-width:900px;align-items:center;}
+.phone-set img{height:auto;object-fit:contain;}
+.plate-kaido{padding:clamp(24px,4vw,60px);height:auto;max-height:none;}
+.kaido-overview-frame{position:static;width:100%;padding:clamp(14px,2vw,28px);max-width:1050px;background:var(--kaido-ui);}
+.plate-kaido .kaido-overview{width:100%;max-width:100%;height:auto;object-fit:contain;}
+.plate-ikarao{display:block;padding:clamp(24px,4vw,60px);}
+.plate-ikarao .identity-strip{display:none;}
+.plate-ikarao img{height:100%;width:100%;object-fit:contain;}
+#notforyou .shd .h2{font-size:var(--t-title);white-space:normal;}
+.offer .os a{display:inline-block;margin-top:12px;color:var(--paper);border-bottom:1px solid var(--cyan);}
+.contact-intro{font-size:var(--t-lead);color:var(--paper70);max-width:48ch;line-height:1.55;margin:28px 0 18px;}
+.contact-primary{display:inline-block;}.contact-address{font-size:var(--t-body);margin-top:20px;color:var(--grey);}
+#contact .mk{border-top:1px solid var(--line);padding-top:32px;margin-top:48px;}
+@media(max-width:819px){.intro-grid{grid-template-columns:1fr;}.portfolio-plate{aspect-ratio:auto;min-height:0;}.phone-set{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,2vw,16px);}.phone-set .phone-tertiary{display:block;}.plate-kaido{padding:20px 14px;}.hero .hanchor{margin-left:clamp(20px,5vw,64px);width:auto;}.plate-ikarao{aspect-ratio:1.6;}}
+@media(max-width:460px){.hero .inner{padding-top:100px;}.hero-proposition{font-size:var(--t-mid);}.hero-support{font-size:var(--t-body);}.hero .hanchor .hcap{max-width:none;}.kaido-overview-frame{padding:12px;}.plate-granite,.plate-frame{padding:24px 12px;}.phone-set img{border-radius:7px;}}
+
+.reveal{opacity:1!important;transform:none!important;}
+.hero .inner{opacity:1!important;transform:none!important;}.loader{display:none!important;}
+@media(max-width:600px){header .statl{display:none;}.cshtext,.cshmedia{min-width:0;}.cshtext .eyebrow{flex-wrap:wrap;row-gap:10px;}.cshtext .eyebrow .ix{margin-left:0;}.irow .iv{max-width:44%;white-space:normal;text-align:right;}.irow .il{min-width:0;white-space:normal;}.sf{overflow-wrap:anywhere;}}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -866,9 +902,9 @@ section.reveal>.wrap{position:relative;}
 <header id="hdr"><div class="wrap nav">
   <a class="brand" href="#top">cyber:cyber<sup>&trade;</sup></a>
   <nav class="menu" aria-label="Primary" id="menu">
-    <a href="#top">Home</a><a href="#work">Work</a><a href="manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="#contact">Contact</a>
+    <a href="#top">Home</a><a href="#work">Work</a><a href="#offerings">Services</a><a href="journal.html">Journal</a><a href="#contact">Contact</a>
   </nav>
-  <div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="#offerings" title="Services & pricing">AVAILABLE Q4</a> <span class="clock" id="clk" role="button" tabindex="0" title="Click to change timezone">LDN&nbsp;--:--</span>
+  <div class="status"><span class="dot" aria-hidden="true"></span><a class="statl" href="#contact" title="Project enquiries">PROJECT ENQUIRIES</a> <span class="clock" id="clk" role="button" tabindex="0" title="Click to change timezone">LDN&nbsp;--:--</span>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
   </div>
 </div></header>
@@ -883,19 +919,14 @@ section.reveal>.wrap{position:relative;}
     <div class="vf" aria-hidden="true"><i></i><i></i><i></i><i></i><span class="tl a">51.5074&deg; N</span><span class="tl b">00.1278&deg; W</span></div>
     <div class="hanchor" aria-hidden="true"><svg class="hmark" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"></svg><span class="hcap"><span class="hw" data-seed="brand">Brand</span> &middot; <span class="hw" data-seed="interface">interface</span> &middot; <span class="hw" data-seed="code">code</span></span></div>
     <div class="wrap inner">
-      <h1 class="word" id="word" aria-label="cyber:cyber"></h1>
-      <p class="heroline" id="herobar" hidden aria-hidden="true"></p>
+      <h1 class="word" id="word" aria-label="cyber:cyber">CYBER:CYBER</h1>
+      <div class="hero-intro"><p class="hero-proposition">cyber:cyber is a product design lab turning complex ideas into distinctive digital products.</p><p class="hero-support">Brand, product design and development. From working prototype to first release.</p><div class="hero-actions"><a href="#work">View the work &darr;</a><a href="#contact">Discuss a project &nearr;</a></div><p class="hero-experience">Led by Dan Andrews &middot; London<br>Previous experience includes Spotify, Epic Games and Dell.</p></div><p class="heroline" id="herobar" hidden aria-hidden="true"></p>
     </div>
   </section>
 
-  <a class="foldbreak" href="#about"><div class="wrap"><span class="fa"><span class="tk"></span>The Lab</span><span class="fb">Enter &darr;</span></div></a>
+  <a class="foldbreak" href="#work"><div class="wrap"><span class="fa"><span class="tk"></span>Client work &amp; lab products</span><span class="fb">Explore &darr;</span></div></a>
 
-  <section id="about" class="reveal light"><div class="wrap aboutwrap">
-    <span class="ablab" aria-hidden="true"><span class="tk"></span>00 &mdash; What it is</span>
-    <span class="acoord" aria-hidden="true">51.5074&deg; N &middot; 00.1278&deg; W</span>
-    <p class="define"><b>cyber:cyber is a product design lab</b> <span data-split>for founders taking a product from first direction to launch.</span></p>
-    <svg class="aseal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="arcA" d="M22,60 A38,38 0 0,1 98,60"/></defs><circle cx="60" cy="60" r="53" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/><text text-anchor="middle"><textPath href="#arcA" startOffset="50%">CYBER:CYBER</textPath></text><circle cx="60" cy="53" r="5" fill="currentColor"/><circle cx="60" cy="67" r="5" fill="currentColor"/><text class="stb" x="60" y="102" text-anchor="middle">MMXXVI</text></svg>
-  </div></section>
+  <section id="about" class="reveal"><div class="wrap"><div class="intro-grid"><h2 class="intro-title">Your technology works.<br>Now the product needs to come together.</h2><div><p class="lead">I work with founders and product teams on the identity, core workflows and implementation of a first release or a substantial redesign.</p><p class="intro-note">Client engagements sit alongside independently developed products. The work below shows both, with the scope and stage of each made clear.</p></div></div></div></section>
 
   <section id="work"><div class="wrap">
     <div class="shd"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Selected work<span class="ix">01 / INDEX</span></div>
@@ -908,53 +939,19 @@ section.reveal>.wrap{position:relative;}
      instrument panel, not four stacked banners. Uniform rows on rules; the proof
      paragraphs live in the case studies where they belong. -->
     <div class="ledger">
-<a class="wkrow" href="work-kaido.html"><div class="wkhead"><div><span class="wkissue">01 &middot; Piloting</span><div class="wkn" style="view-transition-name:t-kaido">Kaido</div></div><div class="wktext"><div class="wkd">A clinic’s caseload, plans and progress in one workspace.</div><div class="wkm">Product design &middot; Web + iOS</div><span class="wkopen">View project &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-kaido"><div class="portfolio-plate plate-kaido"><div class="kaido-overview-frame"><img class="kaido-overview" src="media/shots/kaido-caseload-dark-v4.png" width="988" height="678" alt="Kaido’s current clinic caseload with fictional demo patients." loading="lazy"></div><div class="kaido-detail-frame"><img class="kaido-detail" src="media/shots/kaido-acl-dark-v4.png" width="800" height="540" alt="Kaido’s current ACL rehabilitation protocol and exercise prescriptions." loading="lazy"></div></div></div><div class="proof-caption"><span>Current app &middot; demo data</span><span>cyber:cyber &middot; 2026</span></div></a>
-<a class="wkrow" href="work-granite.html"><div class="wkhead"><div><span class="wkissue">02 &middot; Alpha</span><div class="wkn" style="view-transition-name:t-granite">Granite</div></div><div class="wktext"><div class="wkd">A strength programme that fits around another sport.</div><div class="wkm">Brand &middot; Product design &middot; iOS</div><span class="wkopen">View project &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-granite"><div class="portfolio-plate plate-granite"><div class="phone-set"><img class="" src="media/shots/g-native-week.png" width="1320" height="2868" alt="Granite week view: lifting sessions and training days." loading="lazy"><img class="phone-secondary" src="media/shots/g-coach-separated-20261002.webp" width="680" height="1478" alt="Granite native coach screen: voice input for training changes." loading="lazy"><img class="phone-tertiary" src="media/shots/g-native-session.png" width="1320" height="2868" alt="Granite training session: exercises, working weights and sets." loading="lazy"></div></div></div><div class="proof-caption"><span>Native product capture &middot; Alpha</span><span>cyber:cyber &middot; 2026</span></div></a>
-<a class="wkrow" href="work-frame.html"><div class="wkhead"><div><span class="wkissue">03 &middot; Alpha</span><div class="wkn" style="view-transition-name:t-frame">Frame</div></div><div class="wktext"><div class="wkd">Turn a short training log into a record worth returning to.</div><div class="wkm">Brand &middot; Product design &middot; iOS</div><span class="wkopen">View project &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-frame"><div class="portfolio-plate plate-frame"><div class="phone-set"><img class="" src="media/shots/f-native-log.png" width="1320" height="2868" alt="Frame native Log screen: session history and recorded training." loading="lazy"><img class="phone-secondary" src="media/shots/f-native-game.png" width="1320" height="2868" alt="Frame native Game screen: positions, techniques and flows." loading="lazy"><img class="phone-tertiary" src="media/shots/f-native-onboarding.png" width="1320" height="2868" alt="Frame native onboarding screen: quick session logging." loading="lazy"></div></div></div><div class="proof-caption"><span>Native product capture &middot; Alpha</span><span>cyber:cyber &middot; 2026</span></div></a>
-<a class="wkrow" href="work-ikarao.html"><div class="wkhead"><div><span class="wkissue">04 &middot; Client &middot; Delivered</span><div class="wkn" style="view-transition-name:t-ikarao">IKARAO</div></div><div class="wktext"><div class="wkd">An identity that grows with the network.</div><div class="wkm">Art direction &middot; Identity &middot; Generative code</div><span class="wkopen">View project &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-ikarao"><div class="portfolio-plate plate-ikarao"><img class="" src="media/shots/i-hero2.webp" width="1600" height="780" alt="IKARAO: eight distinct generated marks in one family." loading="lazy"><img class="identity-strip" src="media/shots/i-print.webp" width="1600" height="546" alt="IKARAO specimen sheet on contrasting paper and dark grounds." loading="lazy"></div></div><div class="proof-caption"><span>Generated identity system</span><span>cyber:cyber &middot; 2026</span></div></a>
+<a class="wkrow" href="work-ikarao.html"><div class="wkhead"><div><span class="wkissue">01 &middot; Commissioned &middot; Delivered</span><div class="wkn" style="view-transition-name:t-ikarao">Bittensor</div></div><div class="wktext"><div class="wkd">A generative identity system for a growing network.</div><div class="wkm">Art direction &middot; Identity &middot; Generative code</div><span class="wkopen">View case study &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-ikarao"><div class="portfolio-plate plate-ikarao"><img class="" src="media/shots/i-hero2.webp" width="1600" height="780" alt="IKARAO: eight distinct generated marks in one family." loading="lazy"><img class="identity-strip" src="media/shots/i-print.webp" width="1600" height="546" alt="IKARAO specimen sheet on contrasting paper and dark grounds." loading="lazy"></div></div></a>
+<a class="wkrow" href="work-granite.html"><div class="wkhead"><div><span class="wkissue">02 &middot; Owned product &middot; Alpha</span><div class="wkn" style="view-transition-name:t-granite">Granite</div></div><div class="wktext"><div class="wkd">A strength programme that fits around another sport.</div><div class="wkm">Brand &middot; Product design &middot; iOS</div><span class="wkopen">View case study &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-granite"><div class="portfolio-plate plate-granite"><div class="phone-set"><img class="" src="media/shots/g-native-week.png" width="1320" height="2868" alt="Granite week view: lifting sessions and training days." loading="lazy"><img class="phone-secondary" src="media/shots/g-coach-separated-20261002.webp" width="680" height="1478" alt="Granite native coach screen: voice input for training changes." loading="lazy"><img class="phone-tertiary" src="media/shots/g-native-session.png" width="1320" height="2868" alt="Granite training session: exercises, working weights and sets." loading="lazy"></div></div></div></a>
+<a class="wkrow" href="work-kaido.html"><div class="wkhead"><div><span class="wkissue">03 &middot; Owned product &middot; Pilot</span><div class="wkn" style="view-transition-name:t-kaido">Kaido</div></div><div class="wktext"><div class="wkd">A clinical workspace connecting patients and rehabilitation plans.</div><div class="wkm">Product design &middot; Web + iOS</div><span class="wkopen">View case study &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-kaido"><div class="portfolio-plate plate-kaido"><div class="kaido-overview-frame"><img class="kaido-overview" src="media/shots/k-current-caseload-20261002.png" width="1280" height="720" alt="Kaido clinic caseload: fictional patients, conditions, assigned clinicians and criteria status." loading="lazy"></div></div></div></a>
+<a class="wkrow" href="work-frame.html"><div class="wkhead"><div><span class="wkissue">04 &middot; Owned product &middot; Alpha</span><div class="wkn" style="view-transition-name:t-frame">Frame</div></div><div class="wktext"><div class="wkd">Turn a short training log into a record worth returning to.</div><div class="wkm">Brand &middot; Product design &middot; iOS</div><span class="wkopen">View case study &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-frame"><div class="portfolio-plate plate-frame"><div class="phone-set"><img class="" src="media/shots/f-native-log.png" width="1320" height="2868" alt="Frame native Log screen: session history and recorded training." loading="lazy"><img class="phone-secondary" src="media/shots/f-native-game.png" width="1320" height="2868" alt="Frame native Game screen: positions, techniques and flows." loading="lazy"><img class="phone-tertiary" src="media/shots/f-native-onboarding.png" width="1320" height="2868" alt="Frame native onboarding screen: quick session logging." loading="lazy"></div></div></div></a>
     </div>
   </div>
   </section>
-
-  <section id="offerings" class="reveal"><div class="wrap">
-    <div class="shd rev"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Work with me<span class="ix">02 / STUDIO</span></div>
-    <h2 class="h2" style="--c:var(--paper)">The offer</h2>
-    <p class="lead">A focused design engagement, a complete product, or ongoing work with your team. The scope and price are agreed before work starts.</p></div>
-    <div class="offers">
-      <div class="offer"><div class="oi">01</div><div class="ob"><div class="on">The Design Block</div><div class="os"><span class="sub">Focused brand or product design.</span>A week to establish a direction and make work your team can build from.</div></div><div class="op">&pound;<span>5,000</span><small>per week</small></div></div>
-      
-      
-      <div class="offer"><div class="oi">02</div><div class="ob"><div class="on">The Build</div><div class="os"><span class="sub">A product, designed and built.</span>Identity, interface and production code, with one person responsible for the result.</div></div><div class="op">&pound;<span>50,000</span><small>from &middot; complete build</small></div></div>
-      <div class="offer"><div class="oi">03</div><div class="ob"><div class="on">The Partnership</div><div class="os"><span class="sub">Senior design inside your team.</span>Two to three days a week, from the difficult questions to the finished work.</div></div><div class="op">&pound;<span>12,000</span><small>from &middot; per month</small></div></div>
-    </div>
-  </div></section>
-
-  <section id="notforyou" class="reveal"><div class="wrap"><div class="shd solo"><div class="eyebrow"><span class="tick"></span>The working relationship<span class="ix">03 / FIT</span></div><h2 class="h2">A good fit</h2></div><div class="nfy2"><div class="ref"><b>You need the whole product to hold together.</b><span>The identity, the interface and the implementation are developed as one piece of work.</span></div><div class="ref"><b>The brief still has questions in it.</b><span>I work with you to find the shape of the product, then make it real.</span></div><div class="ref"><b>You want to work with the person making it.</b><span>Direct collaboration with me, from the first conversation to the finished build.</span></div><div class="ref"><b>You care about the details people use.</b><span>The everyday screens, the awkward states, and the parts that have to work after launch.</span></div></div></div></section>
-
-  <section id="faq" class="reveal"><div class="wrap faqwrap"><div class="faqhead">
-    <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>In short<span class="ix">04 / QUESTIONS</span></div>
-    <h2 class="h2" style="--c:var(--paper)">Questions</h2><p class="lead">How the work is scoped, shared and built.</p></div>
-    <div class="faq"><details><summary>What can I hire you for?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>A focused week of brand or product design, a complete product build, or ongoing design and technical work with your team. The three engagement options and their starting prices are above.</p></div></div></details><details><summary>Can one person carry the whole product?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>That is how I work: identity, interface and implementation developed together. The owned products and the client identity system show that range. The right scope matters; a large programme with several engineering teams needs a different setup.</p></div></div></details><details><summary>What happens if the scope changes?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>We agree the scope and price before work starts. New requirements are scoped and quoted separately, so the trade-offs stay visible.</p></div></div></details><details><summary>Can you work with our engineers?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Yes. The Design Block and Partnership can focus on brand, interface and technical direction while your team handles the build.</p></div></div></details><details><summary>How long does the work take?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>A Design Block is a week. Builds are scoped around the product and its requirements; the timeline is agreed with the scope.</p></div></div></details><details><summary>How will I see progress?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>You work directly with me, and the work is shared as it develops. Design and implementation can be reviewed together rather than waiting for a final handover.</p></div></div></details><details><summary>Who does the work?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Dan Andrews, a designer in London with a decade across brand, product, motion and interaction, including work with Spotify, Epic Games and Dell. <a href="https://iamdanandrews.com" target="_blank" rel="noopener">More about me &nearr;</a>.</p></div></div></details></div>
-  </div></section>
-
-  <section id="journal" class="reveal"><div class="wrap">
-    <div class="shd solo rev"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Journal<span class="ix">05 / NOTES</span></div>
-    <h2 class="h2" style="--c:var(--paper)">Journal</h2></div>
-    <div class="jrnl">
-      <a href="journal-sea-lion.html"><span class="jt">The sea lion papers</span><span class="jk">Article</span><span class="jd">Aug 26, 2026</span></a>
-      <a href="journal-hardest-client.html"><span class="jt">The hardest client was us</span><span class="jk">Article</span><span class="jd">Jul 29, 2026</span></a>
-      
-      <a href="journal-undocumented.html"><span class="jt">Nobody wrote it down</span><span class="jk">Article</span><span class="jd">Jul 10, 2026</span></a>
-      <a href="journal-velocity.html"><span class="jt">The velocity gods</span><span class="jk">Article</span><span class="jd">Jul 8, 2026</span></a>
-          </div>
-    <a class="jall" href="journal.html">All notes &rarr;</a>
-  </div></section>
 
   <section class="reveal"><div class="wrap">
     <div class="who">
       <div><span class="wl">Who you&rsquo;re hiring</span><h2 class="wn">Dan Andrews</h2></div>
       <div>
-        <p>A designer in London. A decade of product, brand, interface and motion &mdash; Spotify, Epic&nbsp;Games, Dell &mdash; and early-stage teams before and since.</p>
+        <p>A designer in London. A decade across product, brand, interface and motion. My previous experience includes Spotify, Epic&nbsp;Games, Dell and early-stage teams.</p>
         <p>My work spans the identity of a product, the way it behaves, and the code that makes it usable.</p>
         <p>I build my own products alongside client work. It keeps the design close to the practical work of making, testing and maintaining software.</p>
         <p>You work directly with me. I stay with the product from the first direction through to implementation.</p>
@@ -963,26 +960,56 @@ section.reveal>.wrap{position:relative;}
     </div>
   </div></section>
 
+  <section id="offerings" class="reveal"><div class="wrap">
+    <div class="shd rev"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Work with me<span class="ix">02 / STUDIO</span></div>
+    <h2 class="h2" style="--c:var(--paper)">Work together</h2>
+    <p class="lead">Choose the engagement around the next decision your product needs. Scope, milestones and fees are agreed before work starts.</p></div>
+    <div class="offers">
+      <div class="offer"><div class="oi">01</div><div class="ob"><div class="on">Product Direction</div><div class="os"><span class="sub">Find the direction before committing to a build.</span>One or two weeks to resolve a positioning or core-workflow problem. A focused prototype and a scoped next step. <a href="#contact">Discuss direction &nearr;</a></div></div><div class="op">&pound;<span>5,000</span><small>per week</small></div></div>
+      
+      
+      <div class="offer"><div class="oi">02</div><div class="ob"><div class="on">Product Release</div><div class="os"><span class="sub">Bring a defined release together.</span>Identity, core workflows and implementation for an agreed first release or redesign. Platforms, integrations, handover and launch support are scoped together. <a href="#contact">Discuss a release &nearr;</a></div></div><div class="op">&pound;<span>50,000</span><small>from &middot; scoped release</small></div></div>
+      <div class="offer"><div class="oi">03</div><div class="ob"><div class="on">Design Partnership</div><div class="os"><span class="sub">Senior design alongside your team.</span>An agreed monthly allocation for product direction, identity and interaction design. Responsibilities and the working rhythm are set around your team. <a href="#contact">Discuss a partnership &nearr;</a></div></div><div class="op">&pound;<span>12,000</span><small>from &middot; per month</small></div></div>
+    </div>
+  </div></section>
+
+  <section id="notforyou" class="reveal"><div class="wrap"><div class="shd solo"><div class="eyebrow"><span class="tick"></span>The working relationship<span class="ix">03 / WORKING</span></div><h2 class="h2">Working together</h2></div><div class="nfy2"><div class="ref"><b>Direct collaboration.</b><span>You work with Dan from the first conversation through delivery. The person making the work is in the room.</span></div><div class="ref"><b>Clear scope.</b><span>Core workflows, milestones and responsibilities are agreed up front. New requirements are discussed and priced before they are added.</span></div><div class="ref"><b>Visible progress.</b><span>Prototypes and implementation are shared as the work develops. Existing engineers can stay involved throughout.</span></div><div class="ref"><b>A usable handover.</b><span>Source files, implementation and the support period are defined in the scope. Specialist requirements are identified before committing to delivery.</span></div></div></div></section>
+
+  <section id="faq" class="reveal"><div class="wrap faqwrap"><div class="faqhead">
+    <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>In short<span class="ix">04 / QUESTIONS</span></div>
+    <h2 class="h2" style="--c:var(--paper)">Questions</h2><p class="lead">How the work is scoped, shared and built.</p></div>
+    <div class="faq"><details><summary>What happens after launch?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>The handover, documentation and support period are agreed in the release scope. Continued improvements can be commissioned separately or through a Design Partnership.</p></div></div></details><details><summary>What can I hire you for?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>A focused direction engagement, a scoped product release, or ongoing design and technical work with your team. The three engagement options and their starting prices are above.</p></div></div></details><details><summary>How is delivery organised?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>I lead identity, interface and implementation together within an agreed scope. Your engineers can handle the build where that is the right arrangement. Specialist needs and larger programmes are discussed before an engagement is agreed.</p></div></div></details><details><summary>What happens if the scope changes?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>We agree the scope and price before work starts. New requirements are scoped and quoted separately, so the trade-offs stay visible.</p></div></div></details><details><summary>Can you work with our engineers?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Yes. Product Direction and Partnership can focus on brand, interface and technical direction while your team handles the build.</p></div></div></details><details><summary>How long does the work take?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Product Direction runs for one or two weeks. Builds are scoped around the product and its requirements; the timeline is agreed with the scope.</p></div></div></details><details><summary>How will I see progress?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>You work directly with me, and the work is shared as it develops. Design and implementation can be reviewed together rather than waiting for a final handover.</p></div></div></details><details><summary>Who does the work?<span class="pm">+</span></summary><div class="inner"><div class="ans"><p>Dan Andrews, a designer in London with a decade across brand, product, motion and interaction, including work with Spotify, Epic Games and Dell. <a href="https://iamdanandrews.com" target="_blank" rel="noopener">More about me &nearr;</a>.</p></div></div></details></div>
+  </div></section>
+
+  <section id="journal" class="reveal"><div class="wrap">
+    <div class="shd solo rev"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Journal<span class="ix">05 / NOTES</span></div>
+    <h2 class="h2" style="--c:var(--paper)">Journal</h2></div>
+    <div class="jrnl"><a href="journal-undocumented.html"><span class="jt">Nobody wrote it down</span><span class="jk">Product decisions</span><span class="jd">Jul 10, 2026</span></a><a href="journal-six-things.html"><span class="jt">Six things native AI features get right</span><span class="jk">Interaction design</span><span class="jd">Mar 4, 2026</span></a><a href="journal-hardest-client.html"><span class="jt">The hardest client was us</span><span class="jk">Designing the studio</span><span class="jd">Jul 29, 2026</span></a></div>
+    <a class="jall" href="journal.html">All notes &rarr;</a>
+  </div></section>
+
+
+
 <section class="index reveal"><div class="wrap">
     <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Index<span class="ix">06 / SITE</span></div>
     <div class="idx">
-      <a class="irow" href="#work"><span class="in">01</span><span class="il">Work</span><span class="dots"></span><span class="iv">Selected proof</span></a><a class="irow sub" href="work-kaido.html"><span class="in">&mdash;</span><span class="il">Kaido</span><span class="dots"></span><span class="iv">Rehab platform &middot; criteria-based</span></a><a class="irow sub" href="work-granite.html"><span class="in">&mdash;</span><span class="il">Granite</span><span class="dots"></span><span class="iv">Strength coach &middot; on-device</span></a><a class="irow sub" href="work-frame.html"><span class="in">&mdash;</span><span class="il">Frame</span><span class="dots"></span><span class="iv">BJJ journal &middot; spaced recall</span></a><a class="irow sub" href="work-ikarao.html"><span class="in">&mdash;</span><span class="il">IKARAO</span><span class="dots"></span><span class="iv">Generative brand engine &middot; client</span></a>
+      <a class="irow" href="#work"><span class="in">01</span><span class="il">Work</span><span class="dots"></span><span class="iv">Selected proof</span></a><a class="irow sub" href="work-kaido.html"><span class="in">&mdash;</span><span class="il">Kaido</span><span class="dots"></span><span class="iv">Rehab platform &middot; criteria-based</span></a><a class="irow sub" href="work-granite.html"><span class="in">&mdash;</span><span class="il">Granite</span><span class="dots"></span><span class="iv">Strength coach &middot; on-device</span></a><a class="irow sub" href="work-frame.html"><span class="in">&mdash;</span><span class="il">Frame</span><span class="dots"></span><span class="iv">BJJ journal &middot; spaced recall</span></a><a class="irow sub" href="work-ikarao.html"><span class="in">&mdash;</span><span class="il">Bittensor</span><span class="dots"></span><span class="iv">Generative identity &middot; client</span></a>
       <a class="irow" href="#offerings"><span class="in">02</span><span class="il">Studio</span><span class="dots"></span><span class="iv">Rate card &middot; from &pound;5k</span></a>
       <a class="irow" href="manifesto.html"><span class="in">03</span><span class="il">Manifesto</span><span class="dots"></span><span class="iv">Ten beliefs</span></a>
       <a class="irow" href="journal.html"><span class="in">04</span><span class="il">Journal</span><span class="dots"></span><span class="iv">Nine notes</span></a>
       <a class="irow" href="specimen.html"><span class="in">05</span><span class="il">Specimen</span><span class="dots"></span><span class="iv">The register &middot; type as law</span></a>
-      <a class="irow" href="#contact"><span class="in">06</span><span class="il">Contact</span><span class="dots"></span><span class="iv" id="ivq">Open for Q4</span></a>
+      <a class="irow" href="#contact"><span class="in">06</span><span class="il">Contact</span><span class="dots"></span><span class="iv" id="ivq">Project enquiries</span></a>
     </div>
   </div></section>
 
 
   <section id="contact" class="reveal cta"><div class="wrap">
     <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Contact<span class="ix">07 / OPEN</span></div>
-    <h2 class="big">What are<br>you building?</h2>
+    <h2 class="big">Have a product<br>taking shape?</h2><p class="contact-intro">Tell me what you’re building, where it stands and what needs to happen next. Include your timing and a budget range if you have one.</p><a class="contact-primary" href="mailto:hello@cybercyber.ai?subject=Project%20enquiry&amp;body=Product%20or%20company%3A%0A%0ACurrent%20stage%3A%0A%0AWhat%20needs%20to%20happen%20next%3A%0A%0ATiming%3A%0A%0ABudget%20range%20(optional)%3A">Discuss a project &nearr;</a><p class="contact-address">Or email <a href="mailto:hello@cybercyber.ai">hello@cybercyber.ai</a></p>
     
-    <div class="mk"><div><label class="mkhint" for="mkin" style="display:block;margin:0 0 14px">Your one sentence</label><input class="mkin" id="mkin" type="text" autocomplete="off" spellcheck="false" placeholder="cyber:cyber" aria-describedby="mkhint"><div class="mkhint" id="mkhint">Seal &middot; <span id="mkref">------</span></div><a class="mksend" id="mksend" href="mailto:hello@cybercyber.ai">Email hello@cybercyber.ai &rarr;</a></div><div class="mkfig"><svg class="mkseal" id="mksvg" viewBox="0 0 120 120" role="img" aria-labelledby="mksealt"><title id="mksealt">A seal generated from your sentence</title><rect class="mkframe" x="6" y="6" width="108" height="108"/><g class="mkart" transform="translate(22 22) scale(0.76)"><path id="mkpath" d=""/></g><text class="mkwm" x="60" y="16.4" text-anchor="middle">CYBER:CYBER</text><text class="mksr" id="mksr" x="60" y="107.9" text-anchor="middle">------</text><circle class="mkdot" cx="14" cy="56.4" r="1.4"/><circle class="mkdot" cx="14" cy="63.6" r="1.4"/><circle class="mkdot" cx="106" cy="56.4" r="1.4"/><circle class="mkdot" cx="106" cy="63.6" r="1.4"/></svg></div></div>
+    <div class="mk"><div><label class="mkhint" for="mkin" style="display:block;margin:0 0 14px">Optional: give your idea a mark</label><input class="mkin" id="mkin" type="text" autocomplete="off" spellcheck="false" placeholder="What are you building?" aria-describedby="mkhint"><div class="mkhint" id="mkhint">Seal &middot; <span id="mkref">------</span></div><a class="mksend" id="mksend" href="mailto:hello@cybercyber.ai">Email hello@cybercyber.ai &rarr;</a></div><div class="mkfig"><svg class="mkseal" id="mksvg" viewBox="0 0 120 120" role="img" aria-labelledby="mksealt"><title id="mksealt">A seal generated from your sentence</title><rect class="mkframe" x="6" y="6" width="108" height="108"/><g class="mkart" transform="translate(22 22) scale(0.76)"><path id="mkpath" d=""/></g><text class="mkwm" x="60" y="16.4" text-anchor="middle">CYBER:CYBER</text><text class="mksr" id="mksr" x="60" y="107.9" text-anchor="middle">------</text><circle class="mkdot" cx="14" cy="56.4" r="1.4"/><circle class="mkdot" cx="14" cy="63.6" r="1.4"/><circle class="mkdot" cx="106" cy="56.4" r="1.4"/><circle class="mkdot" cx="106" cy="63.6" r="1.4"/></svg></div></div>
   </div></section>
-</main><footer><div class="wrap foot" style="align-items:center"><span>&copy; 2026 CYBERCYBER LTD &middot; London</span><svg class="footseal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="arcF" d="M22,60 A38,38 0 0,1 98,60"/></defs><circle cx="60" cy="60" r="53" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/><text text-anchor="middle"><textPath href="#arcF" startOffset="50%">CYBER:CYBER</textPath></text><circle cx="60" cy="53" r="5" fill="currentColor"/><circle cx="60" cy="67" r="5" fill="currentColor"/><text class="stb" x="60" y="102" text-anchor="middle">MMXXVI</text></svg><span class="fchk" title="Linted before every publish: colour exists only as tokens &middot; no raw hex outside :root &middot; mobile nav present &middot; figures numbered in reading order &middot; journal cycle closed">CHK 05/05</span><a href="#top" id="recal">Recalibrate &uarr; top</a></div></footer>
+</main><footer><div class="wrap foot" style="align-items:center"><span>&copy; 2026 CYBERCYBER LTD &middot; London</span><svg class="footseal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="arcF" d="M22,60 A38,38 0 0,1 98,60"/></defs><circle cx="60" cy="60" r="53" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/><text text-anchor="middle"><textPath href="#arcF" startOffset="50%">CYBER:CYBER</textPath></text><circle cx="60" cy="53" r="5" fill="currentColor"/><circle cx="60" cy="67" r="5" fill="currentColor"/><text class="stb" x="60" y="102" text-anchor="middle">MMXXVI</text></svg><span class="fchk" title="Linted before every publish: colour exists only as tokens &middot; no raw hex outside :root &middot; mobile nav present &middot; figures numbered in reading order &middot; journal cycle closed">CHK 05/05</span><a href="#top" id="recal">Back to top &uarr;</a></div></footer>
 
 <script>
 (function(){
@@ -994,12 +1021,12 @@ section.reveal>.wrap{position:relative;}
   // stating something untrue about its owner. Click/Enter still cycles on demand.
   /* the quarter computes itself — a status chip that can never go stale */
   var q='Q'+(Math.floor(new Date().getMonth()/3)+1);
-  document.querySelectorAll('.statl').forEach(function(el){el.textContent='AVAILABLE '+q;});
-  var ivq=document.getElementById('ivq'); if(ivq) ivq.textContent='Open for '+q;
+  document.querySelectorAll('.statl').forEach(function(el){el.textContent='PROJECT ENQUIRIES';});
+  var ivq=document.getElementById('ivq'); if(ivq) ivq.textContent='Project enquiries';
   render(); if(!reduce){setInterval(render,1000);}
   clkEl=document.getElementById("clk");if(clkEl){var manual=function(e){if(e)e.preventDefault();rotate();};clkEl.addEventListener("click",manual);clkEl.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" ")manual(e);});}
 
-  var word=document.getElementById("word");
+  var word=document.getElementById("word");word.textContent="";
   "CYBER:CYBER".split("").forEach(function(ch){var s=document.createElement("span");if(ch===":")s.className="colon";s.textContent=ch;word.appendChild(s);});
   var spans=[].slice.call(word.children),REST=650,MAX=880,RAD=250;
   function setAll(w){for(var i=0;i<spans.length;i++)spans[i].style.fontVariationSettings="'wght' "+w.toFixed(0)+",'opsz' 32";}
@@ -1126,7 +1153,7 @@ section.reveal>.wrap{position:relative;}
     });
     addEventListener("mousedown",function(){ret.classList.add("press");},{passive:true});addEventListener("mouseup",function(){ret.classList.remove("press");},{passive:true});
     addEventListener("mouseleave",function(){ret.style.opacity="0";coord.style.opacity="0";});
-    function label(el){if(el.closest(".foldbreak"))return"Enter \u2193";if(el.closest(".wkrow"))return"Open case \u2197";if(el.closest(".jrnl")||el.closest(".jall"))return"Read \u2197";if(el.tagName==="SUMMARY"||el.closest(".faq"))return"Expand";if(el.id==="email")return"Copy";if(el.id==="clk"||el.closest(".clock"))return"Cycle \u00b7 TZ";if(el.closest(".statl"))return"Rates \u2197";if(el.closest("header"))return"Go";return"Go \u2197";}
+    function label(el){if(el.closest(".foldbreak"))return"Enter \u2193";if(el.closest(".wkrow"))return"Open case \u2197";if(el.closest(".jrnl")||el.closest(".jall"))return"Read \u2197";if(el.tagName==="SUMMARY"||el.closest(".faq"))return"Expand";if(el.id==="email")return"Copy";if(el.id==="clk"||el.closest(".clock"))return"Cycle \u00b7 TZ";if(el.closest(".statl"))return"Discuss \u2197";if(el.closest("header"))return"Go";return"Go \u2197";}
     document.querySelectorAll("a,button,summary,[role=button]").forEach(function(el){
       el.addEventListener("mouseenter",function(){ret.classList.add("lock");ret.style.width="42px";ret.style.height="42px";verb.textContent=label(el);});
       el.addEventListener("mouseleave",function(){ret.classList.remove("lock");ret.style.width="24px";ret.style.height="24px";});
@@ -1156,7 +1183,7 @@ section.reveal>.wrap{position:relative;}
       btn.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){toggle(e);}});
     });
   })();
-  boot();
+  setAll(REST);booted=true;if(loader)loader.style.display="none";enableReactive();start();
 })();
 </script>
 

@@ -130,3 +130,12 @@ Granite and Frame specimens use unmodified native screenshot sets from their pro
 
 ## Case editorial pass (2 October 2026)
 Cases explain project-specific interface decisions and distinguish delivered scope from market evidence. Do not publish invented customer quotes or product outcomes. Neutral specimen mats preserve original pixels; screenshots open in a keyboard-accessible native dialog. The internal market-evidence register is maintained separately from public case copy.
+
+## Commercial site pass (3 October 2026)
+The homepage states the product-design-lab proposition in the first viewport. Commissioned Bittensor work precedes the owned alpha/pilot products. Services are Product Direction, Product Release and Design Partnership; delivery is scoped rather than promised as an unlimited complete product.
+
+The homepage loading gate is retired. Keep the loader DOM for existing script references, but do not block reading with it. Content stays visible independently of intersection animation. All homepage specimen mats use the same dark grey and desktop proportions. Kaido uses one complete native caseload window, not overlapping cropped panels. Its case uses the existing full dark-theme capture set with fictional demo data.
+
+Case walkthroughs are selectable real captures, not simulated product executions or continuous session recordings. Concept films are labelled and user-controlled. Scope and stage summaries distinguish delivered work from adoption evidence. Do not invent quotes, retention, clinical outcomes or client adoption. The public Bittensor title retains IKARAO as the internal engagement codename.
+
+The manifesto now expresses practical working commitments. Historical journal publication order and the closed next-note cycle remain intact; the hardest-client and building notes carry corrections for the current presentation and product stages. Primary navigation prioritises Services; Manifesto remains accessible in the supporting navigation.
