@@ -152,3 +152,5 @@ The paper introduction is a full-viewport section. The orange threshold links to
 Dan requested three-colour mark interactions on 3 October: Brand uses vermilion, Interface cyan, Code violet. Project issue crests combine this palette; it is confined to the dot identity rather than applied to body copy or clinical UI.
 
 Dan requested a simpler contact close on 3 October: one short invitation and one email link, with dark text on vermilion. The optional contact mark generator and duplicated email action are removed. Keep mark interaction in the identity areas rather than the enquiry flow.
+
+Dan requested the contact mark generator restored on 3 October. Keep it below the short contact invitation, in dark ink on vermilion. Its initialisation must remain independent from the hero mark so removing either component never disables the other.

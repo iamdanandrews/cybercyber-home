@@ -1060,6 +1060,7 @@ body.cursor-on .capture-link{cursor:zoom-in;}
     <h2 class="big">Let’s talk.</h2>
     <p class="contact-intro">Tell me what you’re building.</p>
     <a class="contact-primary" href="mailto:hello@cybercyber.ai?subject=Project%20enquiry">hello@cybercyber.ai &nearr;</a>
+    <div class="mk"><div><label class="mkhint" for="mkin" style="display:block;margin:0 0 14px">Optional: give your idea a mark</label><input class="mkin" id="mkin" type="text" autocomplete="off" spellcheck="false" placeholder="What are you building?" aria-describedby="mkhint"><div class="mkhint" id="mkhint">Seal &middot; <span id="mkref">------</span></div><a class="mksend" id="mksend" href="mailto:hello@cybercyber.ai">Email hello@cybercyber.ai &rarr;</a></div><div class="mkfig"><svg class="mkseal" id="mksvg" viewBox="0 0 120 120" role="img" aria-labelledby="mksealt"><title id="mksealt">A seal generated from your sentence</title><rect class="mkframe" x="6" y="6" width="108" height="108"/><g class="mkart" transform="translate(22 22) scale(0.76)"><path id="mkpath" d=""/></g><text class="mkwm" x="60" y="16.4" text-anchor="middle">CYBER:CYBER</text><text class="mksr" id="mksr" x="60" y="107.9" text-anchor="middle">------</text><circle class="mkdot" cx="14" cy="56.4" r="1.4"/><circle class="mkdot" cx="14" cy="63.6" r="1.4"/><circle class="mkdot" cx="106" cy="56.4" r="1.4"/><circle class="mkdot" cx="106" cy="63.6" r="1.4"/></svg></div></div>
   </div></section>
 </main><footer><div class="wrap foot" style="align-items:center"><span>&copy; 2026 CYBERCYBER LTD &middot; London</span><svg class="footseal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="arcF" d="M22,60 A38,38 0 0,1 98,60"/></defs><circle cx="60" cy="60" r="53" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/><text text-anchor="middle"><textPath href="#arcF" startOffset="50%">CYBER:CYBER</textPath></text><circle cx="60" cy="53" r="5" fill="currentColor"/><circle cx="60" cy="67" r="5" fill="currentColor"/><text class="stb" x="60" y="102" text-anchor="middle">MMXXVI</text></svg><span class="fchk" title="Linted before every publish: colour exists only as tokens &middot; no raw hex outside :root &middot; mobile nav present &middot; figures numbered in reading order &middot; journal cycle closed">CHK 05/05</span><a href="#top" id="recal">Back to top &uarr;</a></div></footer>
 
@@ -1241,6 +1242,78 @@ body.cursor-on .capture-link{cursor:zoom-in;}
 
 <script>history.scrollRestoration="auto";addEventListener("load",function(){var h=location.hash;if(h.length>1){var t=document.getElementById(h.slice(1));if(t){var b=t.getBoundingClientRect().bottom+window.scrollY;document.querySelectorAll(".reveal").forEach(function(s){if(s.getBoundingClientRect().top+window.scrollY<b)s.classList.add("in");});setTimeout(function(){t.scrollIntoView();},240);}}});setTimeout(function(){var l=document.getElementById("loader");if(l&&!l.classList.contains("done")){l.classList.add("done");var hb=document.getElementById("herobar");if(hb)hb.classList.add("in");document.querySelectorAll(".reveal").forEach(function(s){if(s.id!=="about")s.classList.add("in");});/* The wordmark rests at CSS wght 100 and only the boot loop lifts it. If that loop never advanced -- a backgrounded tab, a throttled/paused rAF, an early script error -- this safety net used to reveal the hero with the mark still hairline-thin. Settle the weight and the held mark here too, so the fallback produces the finished state rather than a half-booted one. *//* set unconditionally: this block only runs when the loader never reached "done", i.e. boot did not finish, so any weight already inline is a half-played frame (phase 1 leaves ~120) rather than a finished state. A !value guard silently skipped exactly that case. */document.querySelectorAll(".word span").forEach(function(sp){sp.style.fontVariationSettings="'wght' 650,'opsz' 32";});}},2600);</script>
 <script src="mark.js"></script>
+<script>(function(){
+  var inp=document.getElementById('mkin'), p=document.getElementById('mkpath'),
+      ref=document.getElementById('mkref'), sr=document.getElementById('mksr'),
+      ttl=document.getElementById('mksealt'),
+      send=document.getElementById('mksend');
+  if(!inp||!p||!window.ccMark) return;
+  var DEFAULT='cyber:cyber';
+
+  function draw(seed){
+    var m=window.ccMark(seed||DEFAULT, 7);
+    p.setAttribute('d', m.d);
+    var fig=document.querySelector('.mk .mkfig');
+    if(fig){ fig.classList.remove('reissue'); void fig.offsetWidth; fig.classList.add('reissue'); }
+    if(ref) ref.textContent=m.serial;
+    if(sr) sr.textContent=m.serial;
+    if(ttl) ttl.textContent='A seal generated from your sentence, reference '+m.serial;
+    return m;
+  }
+
+  var t=null;
+  inp.addEventListener('input', function(){
+    clearTimeout(t);
+    t=setTimeout(function(){
+      var v=inp.value.trim();
+      draw(v);
+      send.href='mailto:hello@cybercyber.ai?subject='+encodeURIComponent('One sentence')+
+                '&body='+encodeURIComponent(v);
+    },110);
+  });
+  draw(DEFAULT);
+
+  /* THE CONTACT DEMONSTRATION — a juror does not type. So the first time this
+     section is actually in view, the field types its own placeholder sentence
+     and the seal redraws live as it goes — determinism witnessed, not merely
+     offered — then clears and hands the cursor back. Any real focus or
+     keystroke, at any point before, during or after, wins immediately: this
+     must never fight a visitor for their own input. Runs once. */
+  (function(){
+    var sec=document.getElementById('contact');
+    if(!sec) return;
+    var interacted=false;
+    inp.addEventListener('focus',function(){
+      if(interacted) return;
+      interacted=true;
+      inp.value=''; draw(DEFAULT);
+    },{once:true});
+    inp.addEventListener('input',function(){ interacted=true; },{once:true});
+    function run(){
+      if(interacted||inp.value) return;
+      var str=inp.getAttribute('placeholder')||'cyber:cyber';
+      if(matchMedia('(prefers-reduced-motion:reduce)').matches){
+        inp.value=str; draw(str);
+        setTimeout(function(){ if(!interacted){ inp.value=''; draw(DEFAULT); } },1400);
+        return;
+      }
+      var i=0;
+      (function step(){
+        if(interacted) return;
+        i++;
+        var partial=str.slice(0,i);
+        inp.value=partial; draw(partial);
+        if(i<str.length){ setTimeout(step,110+Math.random()*90); }
+        else { setTimeout(function(){ if(!interacted){ inp.value=''; draw(DEFAULT); } },1800); }
+      })();
+    }
+    var obs=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ obs.unobserve(sec); setTimeout(run,300); } });
+    },{threshold:.5});
+    obs.observe(sec);
+  })();
+
+})();</script>
 <script>
 (function(){
   ['granite','frame'].forEach(function(k){
