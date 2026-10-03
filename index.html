@@ -37,7 +37,7 @@
 <a class="skip" href="#top">Skip to content</a>
 <style>
 @font-face{font-family:"Raveo";src:url("RaveoVF.woff2") format("woff2");font-weight:100 900;font-stretch:normal;font-display:block;}
-:root{--t-art:clamp(38px,7.5vw,104px);--k-card:#222731;--k-fg:#F6F4EF;--k-muted:#B9BFCA;--k-divider:#454D5B;--k-lime:#D5F784;--k-ink:#171B24;--k-body:14px;--k-small:12px;--k-label:11px;
+:root{--glyph-neon:#38EDD1;--t-art:clamp(38px,7.5vw,104px);--k-card:#222731;--k-fg:#F6F4EF;--k-muted:#B9BFCA;--k-divider:#454D5B;--k-lime:#D5F784;--k-ink:#171B24;--k-body:14px;--k-small:12px;--k-label:11px;
   --ground:#0B0B0D; --paper:#F2ECEF; --paper70:#C3BEC6; --paper45:#9E9BA6;
   --accent:#EA4E32;--acc-kaido:#38EDD1;--acc-granite:#38EDD1;--acc-frame:#7B3AEB;--acc-frame2:#B18CF2;--ik-void:#0B0B0A;--ik-lbl:#8a7d63;--fr-mut:#6B655D;--fr-track:#EFEBE6;--gr-dash:#2A2A2D;--fr-ground:#F7F5F3;--fr-ink:#141217;--fr-red:#c0524a;--gr-ground:#0E1214;--kc-bg:#131316;--acc-ikarao:#A8341F; --accent-ink:var(--ground); --cyan:#22D3EE;--lift:#100F14;--ink-mut:#8F8A83;--e-wipe:cubic-bezier(.7,0,.2,1);/* the About inversion wipe *//* muted ink on the paper panel *//* the surface an interactive row lifts to on hover */ --cool:#22D3EE;
   --violet:#A855F7; --magenta:#FF4D8D; --lime:#C6F24E; --blue:#2E8BFF; --coral:#FF6B4A;
@@ -824,33 +824,7 @@ section.reveal>.wrap{position:relative;}
 .wkn{font-size:var(--t-art);font-variation-settings:"wght" 560,"opsz" 32;}
 .wktext{text-align:left;align-items:flex-start;gap:12px;}.wkd{font-family:var(--raveo);font-variation-settings:"wght" 420,"opsz" 32;font-size:var(--t-mid);line-height:1.15;color:var(--paper);max-width:25ch;}
 .wkm{justify-content:flex-start;letter-spacing:.04em;line-height:1.7;}
-.portfolio-plate{width:100%;overflow:hidden;position:relative;}
-.portfolio-plate img{display:block;height:auto;max-width:100%;}
-.plate-kaido{background:var(--portfolio-ground);padding:clamp(18px,3vw,42px);}.plate-kaido img{width:100%;border-radius:9px;box-shadow:0 20px 55px rgba(0,0,0,.18);}
-.plate-granite{background:var(--portfolio-ground);padding:clamp(28px,4vw,56px) 24px;}
-.plate-frame{background:var(--portfolio-ground);padding:clamp(28px,4vw,56px) 24px;}
-.phone-set{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:clamp(18px,3vw,42px);max-width:900px;margin:0 auto;}
-.phone-set img{width:100%;height:auto;max-width:100%;aspect-ratio:680/1478;object-fit:contain;object-position:center;background:var(--phone-ground);border-radius:16px;}
-.plate-ikarao{background:var(--portfolio-ground);padding:clamp(18px,3vw,42px);}.plate-ikarao img{width:100%;}.plate-ikarao .identity-strip{margin-top:14px;}
-.proof-caption{margin-top:16px;}
-#notforyou .shd .h2{grid-column:1/-1;white-space:nowrap;}
-@media(max-width:819px){.wkhead{grid-template-columns:1fr;gap:22px;align-items:start;}.wktext{align-items:flex-start;text-align:left;}.phone-set{grid-template-columns:repeat(2,minmax(0,1fr));max-width:500px;gap:16px;}.phone-set .phone-tertiary{display:none;}.phone-set img{max-width:100%;}.plate-kaido{padding:16px;}.plate-kaido img{width:170%;max-width:none;}.plate-kaido{max-height:560px;}.proof-caption{font-size:var(--t-cap);}}
-@media(max-width:460px){.phone-set{gap:14px;}.plate-granite,.plate-frame{padding:28px 14px;}.phone-set img{max-width:100%;border-radius:10px;}.plate-kaido img{width:220%;}.plate-kaido{height:380px;}.wkhead{margin-bottom:24px;}.wkn{font-size:var(--t-title);}.proof-caption{flex-wrap:wrap;}}
-
-
-/* Native captures: padded overview and a clean exercise-only crop. */
-.plate-kaido{display:block;padding:0;aspect-ratio:1.6;min-height:0;max-height:none;height:auto;}
-.kaido-overview-frame,.kaido-detail-frame{position:absolute;overflow:hidden;border-radius:10px;box-shadow:0 24px 60px rgba(0,0,0,.3);}
-.kaido-overview-frame{left:5%;top:8%;width:72%;padding:clamp(16px,2vw,28px);background:var(--kaido-ui);}
-.plate-kaido .kaido-overview{position:static;width:100%;max-width:100%;height:auto;aspect-ratio:1280/720;border-radius:0;box-shadow:none;object-fit:contain;}
-.kaido-detail-frame{right:5%;bottom:8%;width:50%;}
-.plate-kaido .kaido-detail{position:static;width:100%;max-width:100%;height:auto;aspect-ratio:800/486;object-fit:cover;object-position:top;border-radius:0;box-shadow:none;}
-@media(max-width:600px){.plate-kaido{aspect-ratio:auto;padding:24px 18px;display:grid;gap:18px;}.kaido-overview-frame,.kaido-detail-frame{position:static;width:100%;max-width:100%;border-radius:7px;}.kaido-overview-frame{padding:16px;}}
-/* Commercial hierarchy: the proposition and next step share the first viewport. */
-.hero{min-height:0;padding-bottom:clamp(36px,5vw,72px);}
-.hero .inner{flex:none;padding-top:clamp(100px,11vw,156px);padding-bottom:0;}
-.hero .hanchor{position:relative;bottom:auto;left:auto;margin:34px auto 0;width:min(var(--maxw),calc(100% - 2*clamp(20px,5vw,64px)));order:2;}
-.hero .hanchor .hmark{display:block;width:48px;height:48px;margin:0;}.hero .hanchor{display:flex;align-items:center;gap:20px;}
+/* Introduction and engagement hierarchy. */
 .hero-intro{margin-top:clamp(28px,4vw,56px);max-width:920px;}
 .hero-proposition{font-family:var(--raveo);font-size:var(--t-sub);font-variation-settings:"wght" 470,"opsz" 32;line-height:1.12;letter-spacing:-.025em;max-width:34ch;}
 .hero-support{font-size:var(--t-lead);color:var(--paper70);margin-top:22px;max-width:48ch;line-height:1.5;}
@@ -862,15 +836,6 @@ section.reveal>.wrap{position:relative;}
 .intro-note{font-size:var(--t-body);line-height:1.65;color:var(--grey);margin-top:20px;}
 .reveal,.offers .offer{opacity:1!important;transform:none!important;}
 #about{min-height:0;height:auto;background:var(--ground);color:var(--paper);padding-block:clamp(44px,7vw,88px);}
-.portfolio-plate{aspect-ratio:1.6;display:flex;align-items:center;justify-content:center;}
-.phone-set{width:100%;max-width:900px;align-items:center;}
-.phone-set img{height:auto;object-fit:contain;}
-.plate-kaido{padding:clamp(24px,4vw,60px);height:auto;max-height:none;}
-.kaido-overview-frame{position:static;width:100%;padding:clamp(14px,2vw,28px);max-width:1050px;background:var(--kaido-ui);}
-.plate-kaido .kaido-overview{width:100%;max-width:100%;height:auto;object-fit:contain;}
-.plate-ikarao{display:block;padding:clamp(24px,4vw,60px);}
-.plate-ikarao .identity-strip{display:none;}
-.plate-ikarao img{height:100%;width:100%;object-fit:contain;}
 #notforyou .shd .h2{font-size:var(--t-title);white-space:normal;}
 .offer .os a{display:inline-block;margin-top:12px;color:var(--paper);border-bottom:1px solid var(--cyan);}
 .contact-intro{font-size:var(--t-lead);color:var(--paper70);max-width:48ch;line-height:1.55;margin:28px 0 18px;}
@@ -893,6 +858,46 @@ section.reveal>.wrap{position:relative;}
 #about .hero-experience{color:var(--ink-mut);}
 #about .hero-actions a{color:var(--ground);border-color:var(--ground);}
 @media(max-width:819px){.hero .hanchor{margin:0;left:clamp(20px,5vw,64px);}.hero .inner{padding-bottom:140px;}#about .intro-title{max-width:28ch;}}
+
+/* Editorial house: quiet chrome, clear reading hierarchy. */
+.reticle,.coord,.vf{display:none!important;}
+body.cursor-on{cursor:auto;}body.cursor-on a,body.cursor-on button,body.cursor-on summary,body.cursor-on [role=button]{cursor:pointer;}
+body.cursor-on .capture-link{cursor:zoom-in;}
+@media(prefers-reduced-motion:reduce){::view-transition-group(*){animation:none!important;}}
+
+/* Directed work compositions. Shared mats; project-specific scale and rhythm. */
+#work>.wrap::before,#offerings>.wrap::before,#notforyou>.wrap::before,#journal>.wrap::before,#faq .faqhead::before{display:none;}
+.shd .h2,#notforyou .shd .h2{font-size:var(--t-title);line-height:1.06;text-transform:none;}
+.shd{margin-bottom:clamp(28px,4vw,56px);}
+.hero .hanchor{display:flex;align-items:center;left:auto;right:clamp(20px,5vw,64px);bottom:8%;gap:24px;}
+.hero .hanchor .hmark{display:block;width:100px;height:100px;margin:0;}
+.hero .hanchor .hcap{display:flex;align-items:center;gap:10px;letter-spacing:.1em;}
+.hw{border:0;background:transparent;padding:10px 0;color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit;}
+.hw[aria-pressed=true]{color:var(--cyan);}.hw:focus-visible{outline:1px solid var(--cyan);outline-offset:5px;}
+.project-crest{width:52px;height:52px;display:block;margin-bottom:20px;fill:var(--paper45);transition:fill .25s var(--e-settle);}
+.wkrow:hover .project-crest,.wkrow:focus-visible .project-crest{fill:var(--cyan);}
+.wkrow{padding-block:clamp(36px,6vw,80px);}.wkn{font-size:var(--t-art);line-height:1;}.wkhead{align-items:end;margin-bottom:30px;}
+.portfolio-plate{width:100%;position:relative;overflow:hidden;aspect-ratio:auto;min-height:0;height:auto;max-height:none;display:block;padding:clamp(24px,4vw,56px);background:var(--portfolio-ground);}
+.plate-label,.plate-foot,.phone-set figcaption,.kaido-primary figcaption,.kaido-context>span,.plate-kicker{font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.1em;text-transform:uppercase;color:var(--paper45);}
+.plate-label{display:flex;justify-content:space-between;gap:20px;margin-bottom:32px;}.plate-foot{margin-top:32px;}
+.plate-ikarao img{width:100%;height:auto;object-fit:contain;}
+.plate-granite{display:grid;grid-template-columns:.72fr 1.28fr;gap:clamp(24px,4vw,64px);align-items:center;}
+.plate-story h3,.kaido-context h3{font-family:var(--raveo);font-size:var(--t-sub);line-height:1.1;letter-spacing:-.025em;margin-top:22px;}
+.plate-story p,.kaido-context p{font-size:var(--t-body);line-height:1.6;color:var(--paper70);margin-top:24px;max-width:30ch;}
+.phone-set{display:grid;width:100%;max-width:none;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,3vw,36px);align-items:start;}
+.plate-granite .phone-set{grid-template-columns:repeat(2,minmax(0,1fr));}
+.phone-set figure{margin:0;min-width:0;}.phone-set figure img{display:block;width:100%;height:auto;aspect-ratio:1320/2868;object-fit:contain;border-radius:18px;box-shadow:none;}
+.phone-set figcaption{margin-top:20px;}.glyph-preview{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:220px;margin-top:36px;}.glyph-preview svg{width:100%;height:auto;}
+.kaido-composition{display:grid;grid-template-columns:1.4fr .6fr;gap:clamp(24px,3vw,44px);align-items:center;}.kaido-primary{margin:0;min-width:0;}.kaido-primary img,.kaido-context img{width:100%;height:auto;object-fit:contain;border-radius:0;box-shadow:none;}.kaido-primary figcaption{margin-top:20px;}.kaido-context img{margin-top:30px;}.kaido-context>span{display:block;margin-top:14px;}.kaido-context h3{margin-top:0;font-size:var(--t-mid);}
+@media(max-width:819px){.hero .hanchor{left:clamp(20px,5vw,64px);right:auto;}.hero .hanchor .hmark{width:72px;height:72px;}.plate-granite{grid-template-columns:1fr;}.plate-story{max-width:100%;}.plate-story h3 br,.plate-story p br{display:none;}.glyph-preview{display:none;}.plate-label{flex-wrap:wrap;margin-bottom:24px;}.kaido-composition{grid-template-columns:1fr;}.kaido-context img{max-width:520px;}.phone-set figcaption{letter-spacing:0;}.phone-set figure img{border-radius:10px;}}
+@media(max-width:460px){.hero .hanchor .hcap{gap:6px;}.hero .hanchor{gap:12px;}.portfolio-plate{padding:24px 16px;}.plate-frame .phone-set{gap:10px;}.plate-frame .phone-set figcaption{font-size:var(--t-cap);}}
+.glyph-preview .gl-neon{stroke:var(--glyph-neon);fill:none;stroke-width:2;}.glyph-preview .gl-faint{stroke:var(--paper45);fill:none;stroke-width:1;}.glyph-preview circle.gl-neon{fill:var(--glyph-neon);}.faq .h2{font-size:var(--t-title);text-transform:none;}
+
+.glyph-preview .gl-fg{stroke:var(--paper70);fill:none;stroke-width:1.5;}.glyph-preview .gl-fg.fill{fill:var(--paper70);}
+.hero .hanchor .hmark circle{fill:currentColor;}.hero .hanchor .hmark{color:var(--paper45);}
+@media(max-width:819px){.wkhead{grid-template-columns:1fr;gap:24px;}.wktext{text-align:left;}.phone-set{margin:0;}}
+@media(max-width:600px){.plate-frame .phone-set{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:min(68vw,240px);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:18px;}.plate-frame .phone-set figure{scroll-snap-align:start;}.plate-frame .plate-label::after{content:"Swipe to explore →";color:var(--paper45);}}
+.wkrow[id]{scroll-margin-top:80px;}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -928,7 +933,7 @@ section.reveal>.wrap{position:relative;}
   <section class="hero" style="border-top:0;padding-top:0" id="hero">
     <div class="fold-bg" aria-hidden="true"><div class="grid" id="hgrid"></div></div>
     <div class="vf" aria-hidden="true"><i></i><i></i><i></i><i></i><span class="tl a">51.5074&deg; N</span><span class="tl b">00.1278&deg; W</span></div>
-    <div class="hanchor" aria-hidden="true"><svg class="hmark" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"></svg><span class="hcap"><span class="hw" data-seed="brand">Brand</span> &middot; <span class="hw" data-seed="interface">interface</span> &middot; <span class="hw" data-seed="code">code</span></span></div>
+    <div class="hanchor"><svg class="hmark" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"></svg><span class="hcap"><button type="button" class="hw" data-seed="brand" aria-pressed="false">Brand</button> &middot; <button type="button" class="hw" data-seed="interface" aria-pressed="false">interface</button> &middot; <button type="button" class="hw" data-seed="code" aria-pressed="false">code</button></span></div>
     <div class="wrap inner">
       <h1 class="word" id="word" aria-label="cyber:cyber">CYBER:CYBER</h1>
 <p class="heroline" id="herobar" hidden aria-hidden="true"></p>
@@ -950,10 +955,10 @@ section.reveal>.wrap{position:relative;}
      instrument panel, not four stacked banners. Uniform rows on rules; the proof
      paragraphs live in the case studies where they belong. -->
     <div class="ledger">
-<a class="wkrow" href="work-ikarao.html"><div class="wkhead"><div><span class="wkissue">01 &middot; Commissioned &middot; Delivered</span><div class="wkn" style="view-transition-name:t-ikarao">Bittensor</div></div><div class="wktext"><div class="wkd">A generative identity system for a growing network.</div><div class="wkm">Art direction &middot; Identity &middot; Generative code</div><span class="wkopen">View case study &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-ikarao"><div class="portfolio-plate plate-ikarao"><img class="" src="media/shots/i-hero2.webp" width="1600" height="780" alt="IKARAO: eight distinct generated marks in one family." loading="lazy"><img class="identity-strip" src="media/shots/i-print.webp" width="1600" height="546" alt="IKARAO specimen sheet on contrasting paper and dark grounds." loading="lazy"></div></div></a>
-<a class="wkrow" href="work-granite.html"><div class="wkhead"><div><span class="wkissue">02 &middot; Owned product &middot; Alpha</span><div class="wkn" style="view-transition-name:t-granite">Granite</div></div><div class="wktext"><div class="wkd">A strength programme that fits around another sport.</div><div class="wkm">Brand &middot; Product design &middot; iOS</div><span class="wkopen">View case study &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-granite"><div class="portfolio-plate plate-granite"><div class="phone-set"><img class="" src="media/shots/g-native-week.png" width="1320" height="2868" alt="Granite week view: lifting sessions and training days." loading="lazy"><img class="phone-secondary" src="media/shots/g-coach-separated-20261002.webp" width="680" height="1478" alt="Granite native coach screen: voice input for training changes." loading="lazy"><img class="phone-tertiary" src="media/shots/g-native-session.png" width="1320" height="2868" alt="Granite training session: exercises, working weights and sets." loading="lazy"></div></div></div></a>
-<a class="wkrow" href="work-kaido.html"><div class="wkhead"><div><span class="wkissue">03 &middot; Owned product &middot; Pilot</span><div class="wkn" style="view-transition-name:t-kaido">Kaido</div></div><div class="wktext"><div class="wkd">A clinical workspace connecting patients and rehabilitation plans.</div><div class="wkm">Product design &middot; Web + iOS</div><span class="wkopen">View case study &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-kaido"><div class="portfolio-plate plate-kaido"><div class="kaido-overview-frame"><img class="kaido-overview" src="media/shots/k-current-caseload-20261002.png" width="1280" height="720" alt="Kaido clinic caseload: fictional patients, conditions, assigned clinicians and criteria status." loading="lazy"></div></div></div></a>
-<a class="wkrow" href="work-frame.html"><div class="wkhead"><div><span class="wkissue">04 &middot; Owned product &middot; Alpha</span><div class="wkn" style="view-transition-name:t-frame">Frame</div></div><div class="wktext"><div class="wkd">Turn a short training log into a record worth returning to.</div><div class="wkm">Brand &middot; Product design &middot; iOS</div><span class="wkopen">View case study &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-frame"><div class="portfolio-plate plate-frame"><div class="phone-set"><img class="" src="media/shots/f-native-log.png" width="1320" height="2868" alt="Frame native Log screen: session history and recorded training." loading="lazy"><img class="phone-secondary" src="media/shots/f-native-game.png" width="1320" height="2868" alt="Frame native Game screen: positions, techniques and flows." loading="lazy"><img class="phone-tertiary" src="media/shots/f-native-onboarding.png" width="1320" height="2868" alt="Frame native onboarding screen: quick session logging." loading="lazy"></div></div></div></a>
+<a class="wkrow" id="project-ikarao" href="work-ikarao.html"><div class="wkhead"><div><span class="wkissue">01 &middot; Commissioned &middot; Delivered</span><svg class="project-crest" data-issue="ikarao" viewBox="0 0 100 100" aria-hidden="true" style="view-transition-name:mk-ikarao"><path/></svg><div class="wkn" style="view-transition-name:t-ikarao">Bittensor</div></div><div class="wktext"><div class="wkd">A generative identity system for a growing network.</div><div class="wkm">Art direction &middot; Identity &middot; Generative code</div><span class="wkopen">View case study &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-ikarao"><div class="portfolio-plate plate-ikarao"><div class="plate-label"><span>A family from one drawing rule</span><span>Bittensor / identity</span></div><img src="media/shots/i-print.webp" width="1600" height="546" alt="Bittensor generated identity marks on contrasting specimen sheets." loading="lazy"><div class="plate-foot">One seed. One mark. A system built to extend.</div></div></div></a>
+<a class="wkrow" id="project-granite" href="work-granite.html"><div class="wkhead"><div><span class="wkissue">02 &middot; Owned product &middot; Alpha</span><svg class="project-crest" data-issue="granite" viewBox="0 0 100 100" aria-hidden="true" style="view-transition-name:mk-granite"><path/></svg><div class="wkn" style="view-transition-name:t-granite">Granite</div></div><div class="wktext"><div class="wkd">A strength programme that fits around another sport.</div><div class="wkm">Brand &middot; Product design &middot; iOS</div><span class="wkopen">View case study &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-granite"><div class="portfolio-plate plate-granite"><div class="plate-story"><span class="plate-kicker">Granite / on-device strength</span><h3>One programme.<br>Two ways in.</h3><p>A week of training.<br>A conversation that changes it.</p><div class="glyph-preview" aria-hidden="true"><svg viewBox="0 0 72 72" class="glyph"><line x1="36" y1="54" x2="36" y2="14" class="gl-faint" stroke-dasharray="2,3"/><line x1="36" y1="54" x2="36" y2="32" class="gl-neon"/><circle cx="36" cy="32" r="2.6" class="gl-neon fill"/><line x1="16" y1="54" x2="56" y2="54" class="gl-fg"/></svg><svg viewBox="0 0 72 72" class="glyph"><line x1="26" y1="30" x2="26" y2="10" class="gl-faint" stroke-dasharray="2,3"/><line x1="26" y1="30" x2="52" y2="16" class="gl-neon"/><circle cx="52" cy="16" r="2.6" class="gl-neon fill"/><circle cx="26" cy="30" r="2" class="gl-fg fill"/><line x1="26" y1="30" x2="26" y2="54" class="gl-fg"/><line x1="16" y1="54" x2="56" y2="54" class="gl-fg"/></svg><svg viewBox="0 0 72 72" class="glyph"><rect x="10" y="32" width="8" height="8" class="gl-fg fill"/><line x1="14" y1="36" x2="34" y2="36" class="gl-faint"/><line x1="34" y1="36" x2="60" y2="36" class="gl-neon"/><circle cx="60" cy="36" r="2.6" class="gl-neon fill"/></svg></div></div><div class="phone-set"><figure><img src="media/shots/g-native-week.png" width="1320" height="2868" alt="Granite native weekly programme." loading="lazy"><figcaption>01 / The week</figcaption></figure><figure><img src="media/shots/g-coach-separated-20261002.webp" width="680" height="1478" alt="Granite native coach prompt above the waveform." loading="lazy"><figcaption>02 / The coach</figcaption></figure></div></div></div></a>
+<a class="wkrow" id="project-kaido" href="work-kaido.html"><div class="wkhead"><div><span class="wkissue">03 &middot; Owned product &middot; Pilot</span><svg class="project-crest" data-issue="kaido" viewBox="0 0 100 100" aria-hidden="true" style="view-transition-name:mk-kaido"><path/></svg><div class="wkn" style="view-transition-name:t-kaido">Kaido</div></div><div class="wktext"><div class="wkd">A clinical workspace connecting patients and rehabilitation plans.</div><div class="wkm">Product design &middot; Web + iOS</div><span class="wkopen">View case study &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-kaido"><div class="portfolio-plate plate-kaido"><div class="plate-label"><span>From caseload to care plan</span><span>Kaido / current app</span></div><div class="kaido-composition"><figure class="kaido-primary"><img src="media/shots/k-current-protocol-20261002.png" width="1280" height="720" alt="Kaido actual protocol window: dosage, exercise and programme guidance, shown in full." loading="lazy"><figcaption>Protocol detail / current app</figcaption></figure><div class="kaido-context"><h3>The detail behind<br>the plan.</h3><p>Exercises, dosage and guidance in one clinical workspace.</p><img src="media/shots/k-current-caseload-20261002.png" width="1280" height="720" alt="Supporting full Kaido caseload with fictional demo patients." loading="lazy"><span>Caseload / fictional demo patients</span></div></div></div></div></a>
+<a class="wkrow" id="project-frame" href="work-frame.html"><div class="wkhead"><div><span class="wkissue">04 &middot; Owned product &middot; Alpha</span><svg class="project-crest" data-issue="frame" viewBox="0 0 100 100" aria-hidden="true" style="view-transition-name:mk-frame"><path/></svg><div class="wkn" style="view-transition-name:t-frame">Frame</div></div><div class="wktext"><div class="wkd">Turn a short training log into a record worth returning to.</div><div class="wkm">Brand &middot; Product design &middot; iOS</div><span class="wkopen">View case study &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-frame"><div class="portfolio-plate plate-frame"><div class="plate-label"><span>A session becomes a training record</span><span>Frame / native iOS</span></div><div class="phone-set"><figure><img class="phone-tertiary" src="media/shots/f-native-onboarding.png" width="1320" height="2868" alt="Frame native onboarding screen: quick session logging." loading="lazy"><figcaption>01 / Capture</figcaption></figure><figure><img class="" src="media/shots/f-native-log.png" width="1320" height="2868" alt="Frame native Log screen: session history and recorded training." loading="lazy"><figcaption>02 / Record</figcaption></figure><figure><img class="phone-secondary" src="media/shots/f-native-game.png" width="1320" height="2868" alt="Frame native Game screen: positions, techniques and flows." loading="lazy"><figcaption>03 / Connect</figcaption></figure></div></div></div></a>
     </div>
   </div>
   </section>
@@ -1148,7 +1153,7 @@ section.reveal>.wrap{position:relative;}
   mob.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){mob.classList.remove("open");burger.setAttribute("aria-expanded","false");document.body.style.overflow="";});});
 
   
-  if(!coarse&&!reduce){
+  if(!coarse&&!reduce&&getComputedStyle(document.getElementById("ret")).display!=="none"){
     var ret=document.getElementById("ret"),verb=document.getElementById("verb"),coord=document.getElementById("coord");
     document.body.classList.add("cursor-on");
     var rx=innerWidth/2,ry=innerHeight/2,tx=rx,ty=ry;
@@ -1175,8 +1180,8 @@ section.reveal>.wrap{position:relative;}
   }
 
   document.querySelectorAll(".define w").forEach(function(w,i){w.style.transitionDelay=(i*0.028).toFixed(3)+"s";});
-  if(!coarse&&!reduce){document.querySelectorAll(".mag").forEach(function(el){el.addEventListener("mousemove",function(e){var r=el.getBoundingClientRect();el.style.transform="translate("+((e.clientX-(r.left+r.width/2))*.22).toFixed(1)+"px,"+((e.clientY-(r.top+r.height/2))*.28).toFixed(1)+"px)";});el.addEventListener("mouseleave",function(){el.style.transform="";});});}
-  if(!coarse&&!reduce){var spot=document.getElementById("spot");if(spot){addEventListener("mousemove",function(e){spot.style.transform="translate("+e.clientX+"px,"+e.clientY+"px) translate(-50%,-50%)";spot.style.opacity="1";},{passive:true});addEventListener("mouseleave",function(){spot.style.opacity="0";});}}
+  if(!coarse&&!reduce&&getComputedStyle(document.getElementById("ret")).display!=="none"){document.querySelectorAll(".mag").forEach(function(el){el.addEventListener("mousemove",function(e){var r=el.getBoundingClientRect();el.style.transform="translate("+((e.clientX-(r.left+r.width/2))*.22).toFixed(1)+"px,"+((e.clientY-(r.top+r.height/2))*.28).toFixed(1)+"px)";});el.addEventListener("mouseleave",function(){el.style.transform="";});});}
+  if(!coarse&&!reduce&&getComputedStyle(document.getElementById("ret")).display!=="none"){var spot=document.getElementById("spot");if(spot){addEventListener("mousemove",function(e){spot.style.transform="translate("+e.clientX+"px,"+e.clientY+"px) translate(-50%,-50%)";spot.style.opacity="1";},{passive:true});addEventListener("mouseleave",function(){spot.style.opacity="0";});}}
   (function(){var media=document.querySelectorAll(".media[data-reel]");if(!media.length)return;
     function ensure(m){var v=m.querySelector(".rv");if(!v)return;if(v.dataset.src&&!v.getAttribute("src")){v.setAttribute("preload","auto");v.addEventListener("loadeddata",function(){m.classList.add("playing");},{once:true});v.setAttribute("src",v.dataset.src);v.load();}}
     // preload + show the first frame well before the tile scrolls into view (kills the placeholder flash)
@@ -1198,7 +1203,7 @@ section.reveal>.wrap{position:relative;}
 })();
 </script>
 
-<script>history.scrollRestoration="manual";addEventListener("load",function(){var h=location.hash;if(h.length>1){var t=document.getElementById(h.slice(1));if(t){var b=t.getBoundingClientRect().bottom+window.scrollY;document.querySelectorAll(".reveal").forEach(function(s){if(s.getBoundingClientRect().top+window.scrollY<b)s.classList.add("in");});setTimeout(function(){t.scrollIntoView();},240);}}});setTimeout(function(){var l=document.getElementById("loader");if(l&&!l.classList.contains("done")){l.classList.add("done");var hb=document.getElementById("herobar");if(hb)hb.classList.add("in");document.querySelectorAll(".reveal").forEach(function(s){if(s.id!=="about")s.classList.add("in");});/* The wordmark rests at CSS wght 100 and only the boot loop lifts it. If that loop never advanced -- a backgrounded tab, a throttled/paused rAF, an early script error -- this safety net used to reveal the hero with the mark still hairline-thin. Settle the weight and the held mark here too, so the fallback produces the finished state rather than a half-booted one. *//* set unconditionally: this block only runs when the loader never reached "done", i.e. boot did not finish, so any weight already inline is a half-played frame (phase 1 leaves ~120) rather than a finished state. A !value guard silently skipped exactly that case. */document.querySelectorAll(".word span").forEach(function(sp){sp.style.fontVariationSettings="'wght' 650,'opsz' 32";});}},2600);</script>
+<script>history.scrollRestoration="auto";addEventListener("load",function(){var h=location.hash;if(h.length>1){var t=document.getElementById(h.slice(1));if(t){var b=t.getBoundingClientRect().bottom+window.scrollY;document.querySelectorAll(".reveal").forEach(function(s){if(s.getBoundingClientRect().top+window.scrollY<b)s.classList.add("in");});setTimeout(function(){t.scrollIntoView();},240);}}});setTimeout(function(){var l=document.getElementById("loader");if(l&&!l.classList.contains("done")){l.classList.add("done");var hb=document.getElementById("herobar");if(hb)hb.classList.add("in");document.querySelectorAll(".reveal").forEach(function(s){if(s.id!=="about")s.classList.add("in");});/* The wordmark rests at CSS wght 100 and only the boot loop lifts it. If that loop never advanced -- a backgrounded tab, a throttled/paused rAF, an early script error -- this safety net used to reveal the hero with the mark still hairline-thin. Settle the weight and the held mark here too, so the fallback produces the finished state rather than a half-booted one. *//* set unconditionally: this block only runs when the loader never reached "done", i.e. boot did not finish, so any weight already inline is a half-played frame (phase 1 leaves ~120) rather than a finished state. A !value guard silently skipped exactly that case. */document.querySelectorAll(".word span").forEach(function(sp){sp.style.fontVariationSettings="'wght' 650,'opsz' 32";});}},2600);</script>
 <script src="mark.js"></script>
 <script>
 (function(){
@@ -1363,15 +1368,10 @@ section.reveal>.wrap{position:relative;}
     // into that word's crest, proving the same engine draws a different mark
     // for a different name; leaving the caption settles it back to the studio's.
     var hcap=document.querySelector('.hero .hanchor .hcap');
-    if(hcap && matchMedia('(hover:hover) and (pointer:fine)').matches){
-      hcap.querySelectorAll('.hw').forEach(function(w){
-        w.addEventListener('mouseenter', function(){
-          drawTo(window.ccMark(w.getAttribute('data-seed'), 6));
-        });
-      });
-      var anchor=hmSvg.closest('.hanchor');
-      anchor.addEventListener('mouseenter',function(){drawTo(window.ccMark('brand',6));});
-      anchor.addEventListener('mouseleave',function(){drawTo(base);});
+    if(hcap){
+      var words=hcap.querySelectorAll('.hw');
+      function choose(w){hmSvg.style.color="var(--cyan)";drawTo(window.ccMark(w.getAttribute('data-seed'),6));words.forEach(function(x){x.setAttribute('aria-pressed',String(x===w));});}
+      words.forEach(function(w){['mouseenter','focus','click'].forEach(function(event){w.addEventListener(event,function(){choose(w);});});});
     }
   })();
 })();
@@ -1400,5 +1400,6 @@ section.reveal>.wrap{position:relative;}
   addEventListener('resize',function(){if(getComputedStyle(b).display==='none'&&m.classList.contains('open'))b.click();});
 })();
 </script>
+<script>(function(){document.querySelectorAll('[data-issue]').forEach(function(svg){svg.querySelector('path').setAttribute('d',ccMark(svg.dataset.issue,6).d);});})();</script>
 </body>
 </html>

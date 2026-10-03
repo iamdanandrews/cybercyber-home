@@ -57,6 +57,12 @@ h1 i{font-style:normal;color:var(--paper);}
 @media(prefers-reduced-motion:reduce){.home{transition:none;}}
 .reveal{opacity:1!important;transform:none!important;}
 @media(max-width:600px){header .statl{display:none;}.cshtext,.cshmedia{min-width:0;}.cshtext .eyebrow{flex-wrap:wrap;row-gap:10px;}.cshtext .eyebrow .ix{margin-left:0;}.irow .iv{max-width:44%;white-space:normal;text-align:right;}.irow .il{min-width:0;white-space:normal;}.sf{overflow-wrap:anywhere;}}
+
+/* Editorial house: quiet chrome, clear reading hierarchy. */
+.reticle,.coord,.vf{display:none!important;}
+body.cursor-on{cursor:auto;}body.cursor-on a,body.cursor-on button,body.cursor-on summary,body.cursor-on [role=button]{cursor:pointer;}
+body.cursor-on .capture-link{cursor:zoom-in;}
+@media(prefers-reduced-motion:reduce){::view-transition-group(*){animation:none!important;}}
 </style></head><body>
 <a class="brand" href="./">cyber:cyber</a>
 <span class="co a">51.5074&deg; N</span>

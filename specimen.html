@@ -127,6 +127,12 @@ footer{border-top:1px solid var(--line);padding:26px 0;margin-top:clamp(64px,10v
 .fchk{color:var(--dim);letter-spacing:.14em;margin-left:14px;cursor:help;}
 .reveal{opacity:1!important;transform:none!important;}
 @media(max-width:600px){header .statl{display:none;}.cshtext,.cshmedia{min-width:0;}.cshtext .eyebrow{flex-wrap:wrap;row-gap:10px;}.cshtext .eyebrow .ix{margin-left:0;}.irow .iv{max-width:44%;white-space:normal;text-align:right;}.irow .il{min-width:0;white-space:normal;}.srow .sf{overflow-wrap:anywhere;white-space:normal;min-width:0;}}
+
+/* Editorial house: quiet chrome, clear reading hierarchy. */
+.reticle,.coord,.vf{display:none!important;}
+body.cursor-on{cursor:auto;}body.cursor-on a,body.cursor-on button,body.cursor-on summary,body.cursor-on [role=button]{cursor:pointer;}
+body.cursor-on .capture-link{cursor:zoom-in;}
+@media(prefers-reduced-motion:reduce){::view-transition-group(*){animation:none!important;}}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
