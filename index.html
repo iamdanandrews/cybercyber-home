@@ -930,6 +930,10 @@ body.cursor-on .capture-link{cursor:zoom-in;}
 #contact .eyebrow,#contact .eyebrow .ix{color:var(--ground);}
 #contact .contact-primary:hover{color:var(--ground);border-bottom-width:2px;}
 #contact .contact-primary:focus-visible{outline:2px solid var(--ground);outline-offset:8px;}
+
+#about .hero-actions a:hover,#about .hero-actions a:focus-visible{color:var(--accent);border-color:var(--accent);background:var(--ground);color:var(--paper);}
+#about .hero-actions a{padding:10px 12px;transition:background .2s,color .2s,border-color .2s;}
+@media(prefers-reduced-motion:reduce){#about .hero-actions a{transition:none;}}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -1032,7 +1036,7 @@ body.cursor-on .capture-link{cursor:zoom-in;}
   <section id="journal" class="reveal"><div class="wrap">
     <div class="shd solo rev"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Journal<span class="ix">05 / NOTES</span></div>
     <h2 class="h2" style="--c:var(--paper)">Journal</h2></div>
-    <div class="jrnl"><a href="journal-undocumented.html"><span class="jt">Nobody wrote it down</span><span class="jk">Product decisions</span><span class="jd">Jul 10, 2026</span></a><a href="journal-six-things.html"><span class="jt">Six things native AI features get right</span><span class="jk">Interaction design</span><span class="jd">Mar 4, 2026</span></a><a href="journal-hardest-client.html"><span class="jt">The hardest client was us</span><span class="jk">Designing the studio</span><span class="jd">Jul 29, 2026</span></a></div>
+    <div class="jrnl"><a href="journal-undocumented.html"><span class="jt">Nobody wrote it down</span><span class="jk">Product decisions</span><span class="jd">Jul 10, 2026</span></a><a href="journal-six-things.html"><span class="jt">Six things native AI features get right</span><span class="jk">Interaction design</span><span class="jd">Mar 4, 2026</span></a><a href="journal-hardest-client.html"><span class="jt">The hardest client was us</span><span class="jk">Designing the studio</span><span class="jd">Jul 29, 2026</span></a><a href="journal-building.html"><span class="jt">Building cyber:cyber</span><span class="jk">Inside the studio</span><span class="jd">May 10, 2026</span></a></div>
     <a class="jall" href="journal.html">All notes &rarr;</a>
   </div></section>
 
@@ -1239,76 +1243,6 @@ body.cursor-on .capture-link{cursor:zoom-in;}
 <script src="mark.js"></script>
 <script>
 (function(){
-  var inp=document.getElementById('mkin'), p=document.getElementById('mkpath'),
-      ref=document.getElementById('mkref'), sr=document.getElementById('mksr'),
-      ttl=document.getElementById('mksealt'),
-      send=document.getElementById('mksend');
-  if(!inp||!p||!window.ccMark) return;
-  var DEFAULT='cyber:cyber';
-
-  function draw(seed){
-    var m=window.ccMark(seed||DEFAULT, 7);
-    p.setAttribute('d', m.d);
-    var fig=document.querySelector('.mk .mkfig');
-    if(fig){ fig.classList.remove('reissue'); void fig.offsetWidth; fig.classList.add('reissue'); }
-    if(ref) ref.textContent=m.serial;
-    if(sr) sr.textContent=m.serial;
-    if(ttl) ttl.textContent='A seal generated from your sentence, reference '+m.serial;
-    return m;
-  }
-
-  var t=null;
-  inp.addEventListener('input', function(){
-    clearTimeout(t);
-    t=setTimeout(function(){
-      var v=inp.value.trim();
-      draw(v);
-      send.href='mailto:hello@cybercyber.ai?subject='+encodeURIComponent('One sentence')+
-                '&body='+encodeURIComponent(v);
-    },110);
-  });
-  draw(DEFAULT);
-
-  /* THE CONTACT DEMONSTRATION — a juror does not type. So the first time this
-     section is actually in view, the field types its own placeholder sentence
-     and the seal redraws live as it goes — determinism witnessed, not merely
-     offered — then clears and hands the cursor back. Any real focus or
-     keystroke, at any point before, during or after, wins immediately: this
-     must never fight a visitor for their own input. Runs once. */
-  (function(){
-    var sec=document.getElementById('contact');
-    if(!sec) return;
-    var interacted=false;
-    inp.addEventListener('focus',function(){
-      if(interacted) return;
-      interacted=true;
-      inp.value=''; draw(DEFAULT);
-    },{once:true});
-    inp.addEventListener('input',function(){ interacted=true; },{once:true});
-    function run(){
-      if(interacted||inp.value) return;
-      var str=inp.getAttribute('placeholder')||'cyber:cyber';
-      if(matchMedia('(prefers-reduced-motion:reduce)').matches){
-        inp.value=str; draw(str);
-        setTimeout(function(){ if(!interacted){ inp.value=''; draw(DEFAULT); } },1400);
-        return;
-      }
-      var i=0;
-      (function step(){
-        if(interacted) return;
-        i++;
-        var partial=str.slice(0,i);
-        inp.value=partial; draw(partial);
-        if(i<str.length){ setTimeout(step,110+Math.random()*90); }
-        else { setTimeout(function(){ if(!interacted){ inp.value=''; draw(DEFAULT); } },1800); }
-      })();
-    }
-    var obs=new IntersectionObserver(function(es){
-      es.forEach(function(e){ if(e.isIntersecting){ obs.unobserve(sec); setTimeout(run,300); } });
-    },{threshold:.5});
-    obs.observe(sec);
-  })();
-
   ['granite','frame'].forEach(function(k){
     var el=document.getElementById('smark-'+k); if(!el) return;
     var m=window.ccMark(k, 6);
