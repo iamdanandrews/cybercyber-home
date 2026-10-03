@@ -205,3 +205,10 @@ Content remains readable without JavaScript; animation classes are removed by a
 bounded timer to avoid frozen embedded-browser animations. Reduced motion skips
 entrance animation. Do not restore idle decorative loops or repeated colourful
 marks to every surface.
+
+
+## Project titles (3 October 2026)
+Dan finds small coloured house crests beside project titles detached from the work.
+Homepage project headers and case eyebrows now use typography and metadata alone.
+Keep the hero and contact mark interactions; do not reintroduce decorative house
+crests beside project names or confuse them with client logos.
