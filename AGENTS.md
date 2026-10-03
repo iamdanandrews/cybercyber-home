@@ -184,3 +184,10 @@ three-colour Brand/Interface/Code grammar.
 
 Review artifacts and responsive check results live outside this repository in the
 Codex task outputs. This release is reviewed locally before a single production push.
+
+## Contact refinement (3 October 2026)
+Dan requested the typing demonstration restored and the contact section simplified.
+Use one labelled input, the generated seal and one email action. The one-time typing
+demonstration changes placeholder text only; focus, pointer input or typing cancels
+it immediately. Never overwrite the visitor's value. Reduced motion skips the demo.
+This request supersedes the earlier note retiring automatic demonstration typing.
