@@ -16,8 +16,11 @@
       "k-light-plans-20261002-v2.png",
       "k-light-caseload-20261002-v2.png",
       "k-light-protocol-20261002-v2.png",
-      "k-plan-builder-20261002-v3.png"
+      "k-plan-builder-20261002-v3.png",
+      "kaido-caseload-dark-v4.png",
+      "kaido-acl-dark-v4.png"
     ],
-    "homepage": "Fresh native plan-builder capture with selected Ankle & foot region, retained at source proportions; no enlarged list crop"
+    "homepage": "Two unmodified native dark-theme captures, composed with CSS: clinic caseload and ACL exercise protocol; no anatomical selector.",
+    "demo_fixture": "A manual plan with one exercise and one unrecorded criterion was added via the normal UI to fictional K. Sato in the isolated test clinic; no patient outcomes recorded. Catalogue clinical review restrictions were retained."
   }
 }
