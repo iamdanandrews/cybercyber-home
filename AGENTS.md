@@ -154,3 +154,6 @@ Dan requested three-colour mark interactions on 3 October: Brand uses vermilion,
 Dan requested a simpler contact close on 3 October: one short invitation and one email link, with dark text on vermilion. The optional contact mark generator and duplicated email action are removed. Keep mark interaction in the identity areas rather than the enquiry flow.
 
 Dan requested the contact mark generator restored on 3 October. Keep it below the short contact invitation, in dark ink on vermilion. Its initialisation must remain independent from the hero mark so removing either component never disables the other.
+
+## Proposition and case argument (3 October 2026)
+The proposition is making complex software clear, distinctive and usable. Services explain the buyer situation, scope and deliverables. Each case states its challenge and design response before the screen walkthrough; the closing evidence distinguishes delivered scope from adoption. Preserve current native imagery and full-screen intro. Do not equate craft quality with verified product-market fit or an award.
