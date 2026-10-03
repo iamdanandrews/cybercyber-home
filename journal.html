@@ -175,6 +175,26 @@ body.cursor-on,body.cursor-on a,body.cursor-on button,body.cursor-on summary{cur
 body.cursor-on{cursor:auto;}body.cursor-on a,body.cursor-on button,body.cursor-on summary,body.cursor-on [role=button]{cursor:pointer;}
 body.cursor-on .capture-link{cursor:zoom-in;}
 @media(prefers-reduced-motion:reduce){::view-transition-group(*){animation:none!important;}}
+
+/* Complete editorial release — readable without motion or script. */
+.reveal{opacity:1;transform:none;filter:none;}
+.menu a:focus-visible{color:var(--paper);}
+.ahero .frame{aspect-ratio:3/1;margin-top:40px;background:var(--s2);}
+.ahero .frame::before{opacity:.25;}
+.ahero .frame .jmark{width:170px;max-width:36%;opacity:.8;}
+.ahero .frame .jmark path{fill:var(--accent);}
+.ahero .ah1{max-width:16ch;font-size:var(--t-title);line-height:1.04;}
+.prose{max-width:76ch;}.prose p{line-height:1.8;}.prose h2{margin-top:56px;}
+.next a:focus-visible .n,.next a:hover .n{color:var(--cyan);}
+@media(max-width:640px){.ahero .frame{aspect-ratio:2/1;}.ahero .ah1{font-size:var(--t-art);}.prose{margin-top:48px;}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important;}}
+
+/* Editorial index — issued notes, calm hierarchy. */
+.jhero .seal{display:none;}.jintro{max-width:48ch;font-size:var(--t-lead);}
+.jrow{padding:32px 0;}.jrow .frame{background:var(--s2);}.jrow .frame::before{opacity:.25;}
+.jrow:focus-visible .jt,.jrow:hover .jt{color:var(--cyan);}
+.jrow .jx{color:var(--paper70);max-width:48ch;}
+@media(min-width:840px){.jrow{grid-template-columns:210px 1fr auto;}}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -197,7 +217,7 @@ body.cursor-on .capture-link{cursor:zoom-in;}
     <div>
       <div class="eyebrow"><span class="tick"></span>Journal<span class="ix">05 / NOTES</span></div>
       <h1 class="jh1">Journal</h1>
-      <p class="jintro">Working notes on product decisions, interaction design and building software. Historical articles retain their publication dates; updates are labelled in the text.</p>
+      <p class="jintro">Notes on product decisions, interaction design and the practice of building software.</p>
     </div>
     <svg class="seal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="arc9" d="M22,60 A38,38 0 0,1 98,60"/></defs><circle cx="60" cy="60" r="53" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/><text text-anchor="middle"><textPath href="#arc9" startOffset="50%">CYBER:CYBER</textPath></text><circle cx="60" cy="53" r="5" fill="currentColor"/><circle cx="60" cy="67" r="5" fill="currentColor"/><text class="stb" x="60" y="102" text-anchor="middle">MMXXVI</text></svg>
   </div></section>

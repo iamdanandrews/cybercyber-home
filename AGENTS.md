@@ -161,3 +161,26 @@ The proposition is making complex software clear, distinctive and usable. Servic
 Dan corrected the product relationship on 3 October: Kaido does not use Granite. Do not restore claims that Granite powers, spun off, or supplies the engine for Kaido. Cases now distinguish the business opportunity, design contribution and delivered capability from measured adoption.
 
 Homepage Kaido now shows the complete current caseload at lead scale, with a separate complete protocol window below; no overlapping panels. Frame leads with native Log and Game screens; onboarding remains within its case. Business-value sections explain opportunity, contribution and delivered capability, with stages retained.
+
+## Complete release review (3 October 2026)
+This local release supersedes earlier composition notes. The homepage has four equal
+16:10 dark mats on desktop, with natural-height mobile compositions. Kaido leads
+with one complete current caseload capture; its protocol belongs in the case rather
+than an overlapping homepage panel. Granite and Frame show equal-sized native phone
+captures. The Granite coach transcript and waveform are separate; do not describe
+the transcript as above the waveform when the source shows it below.
+
+Cases use the `.r-*` editorial structure: title and premise, native lead, scope and
+stage, brief, selectable captured screens, three artifact-backed chapters, delivered
+value and enquiry. Granite retains its actual exercise glyph system and labelled
+concept film. `check.mjs` recognises `.r-art` figures as chapter evidence.
+
+The manifesto presents working commitments. Journal hierarchy and margins are
+consistent across the index and nine notes; original publication dates and the next
+cycle are retained. Screenshot dimensions reserve layout space. The hero and contact
+mark have initial static geometry. The contact generator responds to actual visitor
+input; it does not automatically type into the field. Hover, focus and click keep the
+three-colour Brand/Interface/Code grammar.
+
+Review artifacts and responsive check results live outside this repository in the
+Codex task outputs. This release is reviewed locally before a single production push.
