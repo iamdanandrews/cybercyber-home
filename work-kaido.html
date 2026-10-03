@@ -521,6 +521,10 @@ body.cursor-on .capture-link{cursor:zoom-in;}
 .walk-panel:not([hidden]){animation:evidence-arrive .3s var(--e-settle) both;}
 @keyframes evidence-arrive{from{opacity:.6;clip-path:inset(0 2% 0 0);}to{opacity:1;clip-path:inset(0);}}
 @media(prefers-reduced-motion:reduce){.walk-panel:not([hidden]){animation:none;}}
+
+/* The complete native modal, including all four edges; background app stays available in the enlarged capture. */
+.protocol-window{position:relative;overflow:hidden;aspect-ratio:840/580;width:100%;}
+.protocol-window img,.protocol-window .capture-link img{position:absolute;left:-26.190476%;top:-12.068966%;width:152.380952%;height:124.137931%;max-width:none;object-fit:fill;}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -546,7 +550,7 @@ body.cursor-on .capture-link{cursor:zoom-in;}
       <p class="premise">A clinical workspace, built around the caseload.</p>
       <p class="studylabel">Current app &middot; local demo data</p><div class="csmeta"><div><b>Services</b><span>SaaS &middot; B2B</span></div><div><b>Site</b><span><a href="https://www.kaidohealth.co/" target="_blank" rel="noopener">kaidohealth.co &nearr;</a></span></div><div><b>Role</b><span>Design + build</span></div><div><b>Status</b><span>Piloting</span></div><div><b>Year</b><span>2026</span></div><div><b>Engine</b><span><a href="work-granite.html">Granite</a></span></div><div><b>Accent</b><span><i class="acc" aria-hidden="true"></i>#D5F784</span></div></div>
     </div>
-    <figure class="cshmedia"><div class="spec"><div class="device device-lg dv-wide" style="view-transition-name:m-kaido;aspect-ratio:1280/720"><img src="media/shots/k-current-protocol-20261002.png" width="1280" height="720" loading="eager" alt="Complete current Kaido protocol detail window, with exercise dosage and programme guidance."></div></div><figcaption class="cshcap">Protocol detail / current app / isolated demo</figcaption></figure>
+    <figure class="cshmedia"><div class="spec"><div class="device device-lg dv-wide protocol-window" style="view-transition-name:m-kaido;aspect-ratio:840/580"><img src="media/shots/k-current-protocol-20261002.png" width="1280" height="720" loading="eager" alt="Complete current Kaido protocol detail window, with exercise dosage and programme guidance."></div></div><figcaption class="cshcap">Protocol detail / current app / isolated demo</figcaption></figure>
   </div>
   </section>
   <section class="case-summary" aria-label="Engagement summary"><p class="summary-stage">Owned product · Pilot</p><dl><div><dt>Scope</dt><dd>Clinical workflow, interface and implementation.</dd></div><div><dt>Delivered</dt><dd>A caseload workspace, protocol library and patient-plan flows.</dd></div></dl><p class="summary-role">Designed and built by Dan Andrews. Current captures use fictional local demo patients.</p></section>
