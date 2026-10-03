@@ -882,6 +882,17 @@ section.reveal>.wrap{position:relative;}
 .reveal{opacity:1!important;transform:none!important;}
 .hero .inner{opacity:1!important;transform:none!important;}.loader{display:none!important;}
 @media(max-width:600px){header .statl{display:none;}.cshtext,.cshmedia{min-width:0;}.cshtext .eyebrow{flex-wrap:wrap;row-gap:10px;}.cshtext .eyebrow .ix{margin-left:0;}.irow .iv{max-width:44%;white-space:normal;text-align:right;}.irow .il{min-width:0;white-space:normal;}.sf{overflow-wrap:anywhere;}}
+
+/* Spacious identity opening; the proposition lives on the paper break. */
+.hero{min-height:calc(100svh - 42px);padding-bottom:0;}
+.hero .inner{flex:1;padding-top:100px;padding-bottom:150px;justify-content:center;}
+.hero .hanchor{position:absolute;bottom:10%;left:var(--fold);margin:0;width:auto;order:initial;}
+#about{background:var(--paper);color:var(--ground);padding-block:clamp(64px,10vw,144px);}
+#about .intro-title{font-size:var(--t-title);max-width:25ch;}
+#about .lead{color:var(--ground);margin-top:0;max-width:30ch;}
+#about .hero-experience{color:var(--ink-mut);}
+#about .hero-actions a{color:var(--ground);border-color:var(--ground);}
+@media(max-width:819px){.hero .hanchor{margin:0;left:clamp(20px,5vw,64px);}.hero .inner{padding-bottom:140px;}#about .intro-title{max-width:28ch;}}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -920,13 +931,13 @@ section.reveal>.wrap{position:relative;}
     <div class="hanchor" aria-hidden="true"><svg class="hmark" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"></svg><span class="hcap"><span class="hw" data-seed="brand">Brand</span> &middot; <span class="hw" data-seed="interface">interface</span> &middot; <span class="hw" data-seed="code">code</span></span></div>
     <div class="wrap inner">
       <h1 class="word" id="word" aria-label="cyber:cyber">CYBER:CYBER</h1>
-      <div class="hero-intro"><p class="hero-proposition">cyber:cyber is a product design lab turning complex ideas into distinctive digital products.</p><p class="hero-support">Brand, product design and development. From working prototype to first release.</p><div class="hero-actions"><a href="#work">View the work &darr;</a><a href="#contact">Discuss a project &nearr;</a></div><p class="hero-experience">Led by Dan Andrews &middot; London<br>Previous experience includes Spotify, Epic Games and Dell.</p></div><p class="heroline" id="herobar" hidden aria-hidden="true"></p>
+<p class="heroline" id="herobar" hidden aria-hidden="true"></p>
     </div>
   </section>
 
   <a class="foldbreak" href="#work"><div class="wrap"><span class="fa"><span class="tk"></span>Client work &amp; lab products</span><span class="fb">Explore &darr;</span></div></a>
 
-  <section id="about" class="reveal"><div class="wrap"><div class="intro-grid"><h2 class="intro-title">Your technology works.<br>Now the product needs to come together.</h2><div><p class="lead">I work with founders and product teams on the identity, core workflows and implementation of a first release or a substantial redesign.</p><p class="intro-note">Client engagements sit alongside independently developed products. The work below shows both, with the scope and stage of each made clear.</p></div></div></div></section>
+  <section id="about" class="reveal"><div class="wrap"><div class="intro-grid"><h2 class="intro-title">cyber:cyber is a product design lab turning complex ideas into distinctive digital products.</h2><div><p class="lead">Brand, product design and development. From working prototype to first release.</p><div class="hero-actions"><a href="#work">View the work &darr;</a><a href="#contact">Discuss a project &nearr;</a></div><p class="hero-experience">Led by Dan Andrews &middot; London<br>Previous experience includes Spotify, Epic Games and Dell.</p></div></div></div></section>
 
   <section id="work"><div class="wrap">
     <div class="shd"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Selected work<span class="ix">01 / INDEX</span></div>

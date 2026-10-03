@@ -132,7 +132,7 @@ Granite and Frame specimens use unmodified native screenshot sets from their pro
 Cases explain project-specific interface decisions and distinguish delivered scope from market evidence. Do not publish invented customer quotes or product outcomes. Neutral specimen mats preserve original pixels; screenshots open in a keyboard-accessible native dialog. The internal market-evidence register is maintained separately from public case copy.
 
 ## Commercial site pass (3 October 2026)
-The homepage states the product-design-lab proposition in the first viewport. Commissioned Bittensor work precedes the owned alpha/pilot products. Services are Product Direction, Product Release and Design Partnership; delivery is scoped rather than promised as an unlimited complete product.
+The homepage uses a full-height identity hero, orange strip and paper introduction. The product-design-lab proposition lives in that introduction, as requested by Dan on 3 October. Commissioned Bittensor work precedes the owned alpha/pilot products. Services are Product Direction, Product Release and Design Partnership; delivery is scoped rather than promised as an unlimited complete product.
 
 The homepage loading gate is retired. Keep the loader DOM for existing script references, but do not block reading with it. Content stays visible independently of intersection animation. All homepage specimen mats use the same dark grey and desktop proportions. Kaido uses one complete native caseload window, not overlapping cropped panels. Its case uses the existing full dark-theme capture set with fictional demo data.
 
