@@ -953,6 +953,38 @@ body.cursor-on .capture-link{cursor:zoom-in;}
 #contact .mkin{font-size:var(--t-mid);font-weight:400;}
 #contact .mksend{margin-top:24px;}
 @media(max-width:819px){#contact .mk{grid-template-columns:1fr;}.mk .mkfig{width:180px;}}
+
+/* Journal as an editorial list; each issue responds once to the reader. */
+.jrnl{display:block;border:0;border-top:1px solid var(--line);background:none;}
+.jrnl a{display:grid;grid-template-columns:.8fr 2fr auto 64px!important;align-items:center;gap:24px;min-height:0;padding:30px 0;border-bottom:1px solid var(--line);background:transparent;}
+.jrnl a::before{display:none;}.jrnl a:hover,.jrnl a:focus-visible{background:transparent;}
+.jrnl a .jt{grid-column:2;grid-row:1;order:0;font-size:var(--t-mid);font-variation-settings:"wght" 520,"opsz" 24;transition:font-variation-settings .3s var(--e-settle);}
+.jrnl a .jk{grid-column:1;grid-row:1;order:0;color:var(--grey);line-height:1.6;}
+.jrnl a .jd{grid-column:3;grid-row:1;order:0;padding:0;white-space:nowrap;}
+.jrnl .journal-issue{position:static;grid-column:4;grid-row:1;order:0;width:64px;height:64px;opacity:1;}
+.jrnl .journal-issue circle{--dot-delay:0ms;fill:var(--dim);opacity:.5;transform:scale(.78);transform-origin:50px 50px;transition:transform .45s var(--e-settle),opacity .3s,fill .3s;transition-delay:var(--dot-delay,0ms);}
+.jrnl a{--note-colour:var(--accent);}.jrnl a:nth-child(2){--note-colour:var(--cyan);}.jrnl a:nth-child(3){--note-colour:var(--mark-code);}.jrnl a:nth-child(4){--note-colour:var(--paper);}
+.jrnl a:hover circle,.jrnl a:focus-visible circle{fill:var(--note-colour);opacity:1;transform:scale(1);}
+.jrnl a:hover .jt,.jrnl a:focus-visible .jt{font-variation-settings:"wght" 640,"opsz" 24;}
+@media(max-width:819px){.jrnl a{grid-template-columns:1fr 52px!important;gap:12px 20px;padding:24px 0;}.jrnl a .jk{display:block;grid-column:1;grid-row:1;}.jrnl a .jt{grid-column:1;grid-row:2;}.jrnl a .jd{grid-column:1;grid-row:3;}.jrnl .journal-issue{grid-column:2;grid-row:1/4;width:52px;height:52px;}}
+@media(prefers-reduced-motion:reduce){.jrnl .journal-issue circle{transform:none;transition:none;}.jrnl a .jt{transition:none;}}
+
+/* The homepage changes pace rather than repeating a chapter fixture. */
+.working-note{padding-block:32px 56px;}.working-note .wrap{display:grid;grid-template-columns:.45fr 1.25fr .7fr;align-items:start;gap:32px;}.working-note .eyebrow{margin:0;}.working-note p{font-size:var(--t-body);color:var(--paper70);max-width:55ch;line-height:1.65;}.working-note a{font-family:var(--mono);font-size:var(--t-cap);text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid var(--line);padding-bottom:10px;justify-self:end;}.working-note a:hover{color:var(--cyan);}
+#journal .shd{grid-template-columns:.7fr 1.3fr;}#journal .shd .h2{font-size:var(--t-title);text-transform:none;}.jrnl{margin-top:24px;}
+@media(max-width:819px){.working-note .wrap{grid-template-columns:1fr;gap:16px;}.working-note a{justify-self:start;}}
+
+/* A shared motion grammar, with content available before enhancement. */
+@keyframes specimen-wipe{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0)}}
+@keyframes issue-settle{from{transform:scale(.76)}to{transform:scale(1)}}
+@keyframes reading-rule{from{transform:scaleX(.15)}to{transform:scaleX(1)}}
+.motion-enter .r-mat,.motion-enter .portfolio-plate,.motion-enter .walk-evidence,.motion-enter .frame{animation:specimen-wipe .65s var(--e-settle) both;}
+.motion-enter .ehmark,.motion-enter .project-crest,.motion-enter .jmark{animation:issue-settle .55s var(--e-settle) both;}
+.r-chapter,.belief{position:relative;}.r-chapter::before,.belief::before{content:"";position:absolute;top:0;left:0;width:100%;height:1px;background:var(--line);transform-origin:left;pointer-events:none;}.motion-enter.r-chapter::before,.motion-enter.belief::before{animation:reading-rule .7s var(--e-settle);}
+.capture-link{transition:background .2s var(--e-settle);}.capture-link:hover,.capture-link:focus-visible{background:var(--line);}
+.walk-controls button{transition:background .2s,color .2s,border-color .2s;}.walk-controls button:hover,.walk-controls button:focus-visible{border-color:var(--cyan);}
+.project-crest{transition:transform .4s var(--e-settle);transform-origin:center;}.wkrow:hover .project-crest,.wkrow:focus-visible .project-crest{transform:scale(1.15);}
+@media(prefers-reduced-motion:reduce){.motion-enter *,.motion-enter::before{animation:none!important;clip-path:none!important;}.project-crest{transition:none;}}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -1044,7 +1076,7 @@ body.cursor-on .capture-link{cursor:zoom-in;}
     </div>
   </div></section>
 
-  <section id="notforyou" class="reveal"><div class="wrap"><div class="shd solo"><div class="eyebrow"><span class="tick"></span>The working relationship<span class="ix">03 / WORKING</span></div><h2 class="h2">Working together</h2></div><div class="nfy2"><div class="ref"><b>Direct collaboration.</b><span>You work with Dan from the first conversation through delivery. The person making the work is in the room.</span></div><div class="ref"><b>Clear scope.</b><span>Core workflows, milestones and responsibilities are agreed up front. New requirements are discussed and priced before they are added.</span></div><div class="ref"><b>Visible progress.</b><span>Prototypes and implementation are shared as the work develops. Existing engineers can stay involved throughout.</span></div><div class="ref"><b>A usable handover.</b><span>Source files, implementation and the support period are defined in the scope. Specialist requirements are identified before committing to delivery.</span></div></div></div></section>
+  <section id="notforyou" class="working-note"><div class="wrap"><span class="eyebrow">How we work</span><p>Direct collaboration with Dan. Clear scope and milestones. Working prototypes throughout. Source files and handover agreed before delivery.</p><a href="manifesto.html">The working commitments &nearr;</a></div></section>
 
   <section id="faq" class="reveal"><div class="wrap faqwrap"><div class="faqhead">
     <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>In short<span class="ix">04 / QUESTIONS</span></div>
@@ -1061,17 +1093,7 @@ body.cursor-on .capture-link{cursor:zoom-in;}
 
 
 
-<section class="index reveal"><div class="wrap">
-    <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Index<span class="ix">06 / SITE</span></div>
-    <div class="idx">
-      <a class="irow" href="#work"><span class="in">01</span><span class="il">Work</span><span class="dots"></span><span class="iv">Selected proof</span></a><a class="irow sub" href="work-kaido.html"><span class="in">&mdash;</span><span class="il">Kaido</span><span class="dots"></span><span class="iv">Rehab platform &middot; criteria-based</span></a><a class="irow sub" href="work-granite.html"><span class="in">&mdash;</span><span class="il">Granite</span><span class="dots"></span><span class="iv">Strength coach &middot; on-device</span></a><a class="irow sub" href="work-frame.html"><span class="in">&mdash;</span><span class="il">Frame</span><span class="dots"></span><span class="iv">BJJ journal &middot; spaced recall</span></a><a class="irow sub" href="work-ikarao.html"><span class="in">&mdash;</span><span class="il">Bittensor</span><span class="dots"></span><span class="iv">Generative identity &middot; client</span></a>
-      <a class="irow" href="#offerings"><span class="in">02</span><span class="il">Studio</span><span class="dots"></span><span class="iv">Rate card &middot; from &pound;5k</span></a>
-      <a class="irow" href="manifesto.html"><span class="in">03</span><span class="il">Manifesto</span><span class="dots"></span><span class="iv">Working commitments</span></a>
-      <a class="irow" href="journal.html"><span class="in">04</span><span class="il">Journal</span><span class="dots"></span><span class="iv">Nine notes</span></a>
-      <a class="irow" href="specimen.html"><span class="in">05</span><span class="il">Specimen</span><span class="dots"></span><span class="iv">The register &middot; type as law</span></a>
-      <a class="irow" href="#contact"><span class="in">06</span><span class="il">Contact</span><span class="dots"></span><span class="iv" id="ivq">Project enquiries</span></a>
-    </div>
-  </div></section>
+
 
 
   <section id="contact" class="reveal cta"><div class="wrap">
@@ -1444,6 +1466,10 @@ body.cursor-on .capture-link{cursor:zoom-in;}
 </script>
 <script>(function(){document.querySelectorAll('[data-issue]').forEach(function(svg){svg.querySelector('path').setAttribute('d',ccMark(svg.dataset.issue,6).d);});})();</script>
 <script>(function(){var section=document.getElementById('about'),title=section.querySelector('.intro-title');if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches)return;var entrance=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){section.classList.add('intro-entering');entrance.disconnect();}});},{threshold:.3,rootMargin:'0px 0px -10% 0px'});entrance.observe(title);})();</script>
-<script>(function(){document.querySelectorAll('svg[data-issue],svg.ehmark').forEach(function(svg){var seed=svg.dataset.issue||location.pathname.replace('work-','').replace('.html','');var mark=ccMark(seed,6);svg.setAttribute('viewBox',mark.vb);svg.replaceChildren();mark.pts.forEach(function(point,i){var dot=document.createElementNS('http://www.w3.org/2000/svg','circle');dot.setAttribute('cx',point.cx);dot.setAttribute('cy',point.cy);dot.setAttribute('r',point.r);dot.setAttribute('class','issue-colour-'+(i%3));svg.appendChild(dot);});});})();</script>
-<script>(function(){var links=document.querySelectorAll('.work-selector a');if(!links.length||!('IntersectionObserver' in window))return;var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){links.forEach(function(link){if(link.hash==='#'+entry.target.id)link.setAttribute('aria-current','true');else link.removeAttribute('aria-current');});}});},{rootMargin:'-20% 0px -50% 0px',threshold:0});document.querySelectorAll('.wkrow').forEach(function(row){observer.observe(row);});})();</script></body>
+<script>(function(){document.querySelectorAll('svg[data-issue],svg.ehmark').forEach(function(svg){var seed=svg.dataset.issue||location.pathname.replace('work-','').replace('.html','');var mark=ccMark(seed,6);svg.setAttribute('viewBox',mark.vb);svg.replaceChildren();mark.pts.forEach(function(point,i){var dot=document.createElementNS('http://www.w3.org/2000/svg','circle');dot.setAttribute('cx',point.cx);dot.setAttribute('cy',point.cy);dot.setAttribute('r',point.r);dot.setAttribute('class','issue-colour-'+(i%3));dot.style.setProperty('--dot-delay',(i%7)*18+'ms');svg.appendChild(dot);});});})();</script>
+<script>(function(){var links=document.querySelectorAll('.work-selector a');if(!links.length||!('IntersectionObserver' in window))return;var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){links.forEach(function(link){if(link.hash==='#'+entry.target.id)link.setAttribute('aria-current','true');else link.removeAttribute('aria-current');});}});},{rootMargin:'-20% 0px -50% 0px',threshold:0});document.querySelectorAll('.wkrow').forEach(function(row){observer.observe(row);});})();</script><script>(function(){
+ if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+ var io=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(!entry.isIntersecting)return;var el=entry.target;io.unobserve(el);el.classList.add('motion-enter');setTimeout(function(){el.classList.remove('motion-enter');},850);});},{threshold:.12});
+ document.querySelectorAll('.wkrow,.r-open,.r-chapter,.walkthrough,.jrow,.belief,.ahero').forEach(function(el){io.observe(el);});
+})();</script></body>
 </html>

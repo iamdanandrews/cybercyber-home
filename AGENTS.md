@@ -191,3 +191,17 @@ Use one labelled input, the generated seal and one email action. The one-time ty
 demonstration changes placeholder text only; focus, pointer input or typing cancels
 it immediately. Never overwrite the visitor's value. Reduced motion skips the demo.
 This request supersedes the earlier note retiring automatic demonstration typing.
+
+## Site-wide rhythm (3 October 2026)
+Dan clarified that repetition and static presentation concern the whole site. The
+homepage now uses a compact working note and removes the duplicated full directory.
+Manifesto and all notes remain linked through working commitments and Journal.
+The journal preview is a reading list rather than four identical cards; marks are
+quiet at rest and settle in one accent per note on hover or focus. Product cases
+alternate a text-led chapter with larger image-led chapters.
+
+Intersection enhancement plays specimen wipes, rule draws and dot settles once.
+Content remains readable without JavaScript; animation classes are removed by a
+bounded timer to avoid frozen embedded-browser animations. Reduced motion skips
+entrance animation. Do not restore idle decorative loops or repeated colourful
+marks to every surface.

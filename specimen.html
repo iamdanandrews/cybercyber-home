@@ -133,6 +133,18 @@ footer{border-top:1px solid var(--line);padding:26px 0;margin-top:clamp(64px,10v
 body.cursor-on{cursor:auto;}body.cursor-on a,body.cursor-on button,body.cursor-on summary,body.cursor-on [role=button]{cursor:pointer;}
 body.cursor-on .capture-link{cursor:zoom-in;}
 @media(prefers-reduced-motion:reduce){::view-transition-group(*){animation:none!important;}}
+
+/* A shared motion grammar, with content available before enhancement. */
+@keyframes specimen-wipe{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0)}}
+@keyframes issue-settle{from{transform:scale(.76)}to{transform:scale(1)}}
+@keyframes reading-rule{from{transform:scaleX(.15)}to{transform:scaleX(1)}}
+.motion-enter .r-mat,.motion-enter .portfolio-plate,.motion-enter .walk-evidence,.motion-enter .frame{animation:specimen-wipe .65s var(--e-settle) both;}
+.motion-enter .ehmark,.motion-enter .project-crest,.motion-enter .jmark{animation:issue-settle .55s var(--e-settle) both;}
+.r-chapter,.belief{position:relative;}.r-chapter::before,.belief::before{content:"";position:absolute;top:0;left:0;width:100%;height:1px;background:var(--line);transform-origin:left;pointer-events:none;}.motion-enter.r-chapter::before,.motion-enter.belief::before{animation:reading-rule .7s var(--e-settle);}
+.capture-link{transition:background .2s var(--e-settle);}.capture-link:hover,.capture-link:focus-visible{background:var(--line);}
+.walk-controls button{transition:background .2s,color .2s,border-color .2s;}.walk-controls button:hover,.walk-controls button:focus-visible{border-color:var(--cyan);}
+.project-crest{transition:transform .4s var(--e-settle);transform-origin:center;}.wkrow:hover .project-crest,.wkrow:focus-visible .project-crest{transform:scale(1.15);}
+@media(prefers-reduced-motion:reduce){.motion-enter *,.motion-enter::before{animation:none!important;clip-path:none!important;}.project-crest{transition:none;}}
 </style>
 <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
@@ -321,5 +333,9 @@ body.cursor-on .capture-link{cursor:zoom-in;}
   addEventListener('resize',function(){if(getComputedStyle(b).display==='none'&&m.classList.contains('open'))b.click();});
 })();
 </script>
-</body>
+<script>(function(){
+ if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+ var io=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(!entry.isIntersecting)return;var el=entry.target;io.unobserve(el);el.classList.add('motion-enter');setTimeout(function(){el.classList.remove('motion-enter');},850);});},{threshold:.12});
+ document.querySelectorAll('.wkrow,.r-open,.r-chapter,.walkthrough,.jrow,.belief,.ahero').forEach(function(el){io.observe(el);});
+})();</script></body>
 </html>
