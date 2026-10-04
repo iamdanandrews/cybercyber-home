@@ -262,3 +262,10 @@ so local review servers do not generate unavailable telemetry requests. Existing
 hosted telemetry behavior is preserved. Native-current films, actual phone and
 screen-reader coverage, full performance/state review and independent buyer/peer
 critique remain required before accepting the complete release.
+
+## Studio language correction (4 October 2026)
+Dan rejects describing the studio itself as a product or reducing its ambition to
+usable software. The hero introduces one studio and three disciplines: Brand,
+Interface and Code. Its descriptions express the practice, not a product feature
+menu. The paper statement and metadata identify an independent studio shaping
+brands and building distinctive digital products; this supersedes lab wording.
