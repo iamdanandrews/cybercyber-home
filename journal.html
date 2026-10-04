@@ -220,11 +220,13 @@ html{scroll-behavior:auto;}
 @media(max-width:819px){.jhero{min-height:55svh;}.jrow{grid-template-columns:32px 1fr;gap:16px;padding-block:32px;}.jrow .date{grid-column:2;margin-top:8px;padding:0;}.jrow .jt{font-size:32px;}.jrow .jx{margin-top:20px;}.jrow .note-number{padding-top:6px;}}
 
 </style>
-<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
-  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+/* Vercel telemetry belongs to the hosted site, not local review servers. */
+if(location.hostname==='www.cybercyber.ai'||location.hostname==='cybercyber.ai'||location.hostname.endsWith('.vercel.app')){
+ window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments);};
+ ['https://cdn.vercel-insights.com/v1/script.js','/_vercel/speed-insights/script.js'].forEach(function(src){var script=document.createElement('script');script.src=src;script.defer=true;document.head.appendChild(script);});
+}
 </script>
-<script defer src="/_vercel/speed-insights/script.js"></script>
 </head>
 <body><noscript><style>#burger{display:none!important;}.fallback-nav{display:none;}@media(max-width:819px){.fallback-nav{display:block;position:fixed;right:20px;top:14px;z-index:101;background:var(--ground);color:var(--paper);font:12px/1.5 var(--mono);}.fallback-nav summary{min-height:44px;padding:8px;cursor:pointer;}.fallback-nav nav{padding:12px 20px;border:1px solid var(--paper);}.fallback-nav a{display:block;color:inherit;padding:10px 0;min-height:44px;}}</style><details class="fallback-nav"><summary>Navigation</summary><nav aria-label="Site navigation"><a href="./">Home</a><a href="./#work">Work</a><a href="manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a></nav></details></noscript>
 <a class="skip" href="#c">Skip to content</a>

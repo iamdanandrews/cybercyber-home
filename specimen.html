@@ -145,11 +145,13 @@ body.cursor-on [role=button]{cursor:pointer;}
 
 @media(prefers-reduced-motion:reduce){.motion-enter *,.motion-enter::before{animation:none!important;clip-path:none!important;}}
 </style>
-<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
-  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+/* Vercel telemetry belongs to the hosted site, not local review servers. */
+if(location.hostname==='www.cybercyber.ai'||location.hostname==='cybercyber.ai'||location.hostname.endsWith('.vercel.app')){
+ window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments);};
+ ['https://cdn.vercel-insights.com/v1/script.js','/_vercel/speed-insights/script.js'].forEach(function(src){var script=document.createElement('script');script.src=src;script.defer=true;document.head.appendChild(script);});
+}
 </script>
-<script defer src="/_vercel/speed-insights/script.js"></script>
 <meta property="og:image" content="https://www.cybercyber.ai/media/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">

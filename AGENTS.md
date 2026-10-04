@@ -239,3 +239,26 @@ project description into a word-per-line column.
 Responsive geometry, interaction checks and static audits do not establish actual
 Safari/Firefox, assistive-technology or hardware coverage. Current continuous
 Granite/Frame films and customer outcome evidence remain external release gates.
+
+## Candidate verification pass (4 October 2026)
+The SOTD candidate remains on `sotd-candidate`, separate from production. Native
+Chrome and Safari became available for review. Route/state smoke tests and three
+isolated homepage Lighthouse runs are recorded in the task outputs; these do not
+establish the full browser, hardware, assistive-technology or independent-review
+acceptance matrix. Do not describe the candidate as SOTD-ready or fully accepted.
+
+The live Bittensor engine preserves composing input, bounds drawing cleanup to one
+timer, labels the generated/exported SVG, clears stale downloads after failure and
+revokes Blob URLs on page exit. Its initial static specimen uses the existing
+source SVG rather than duplicating that drawing inline. Drawing motion follows
+visitor input, not initial page load. Screenshot dimensions explicitly reserve
+space before lazy image decode. Walkthrough entrance motion follows selection.
+Historical concept films use source-frame posters and preload none; they remain
+labelled concept films, not current native product footage. Poster provenance is
+in media/shots/concept-film-posters-provenance.json.
+
+Vercel telemetry loads only on the production domains and Vercel preview domains,
+so local review servers do not generate unavailable telemetry requests. Existing
+hosted telemetry behavior is preserved. Native-current films, actual phone and
+screen-reader coverage, full performance/state review and independent buyer/peer
+critique remain required before accepting the complete release.

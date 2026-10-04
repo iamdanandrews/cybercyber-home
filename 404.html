@@ -8,11 +8,13 @@
 <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
-<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
-  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+/* Vercel telemetry belongs to the hosted site, not local review servers. */
+if(location.hostname==='www.cybercyber.ai'||location.hostname==='cybercyber.ai'||location.hostname.endsWith('.vercel.app')){
+ window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments);};
+ ['https://cdn.vercel-insights.com/v1/script.js','/_vercel/speed-insights/script.js'].forEach(function(src){var script=document.createElement('script');script.src=src;script.defer=true;document.head.appendChild(script);});
+}
 </script>
-<script defer src="/_vercel/speed-insights/script.js"></script>
 <style>
 :root{--ink:#0B0B0D;--ground:#0B0B0D;--paper:#F2ECEF;--paper70:#C3BEC6;--accent:#EA4E32;--dim:#8C8996;
   --grey:#C9C4D1;--line:#211F27;--line2:#2C2A33;

@@ -1,0 +1,18 @@
+{
+  "derived_on": "2026-10-04",
+  "status": "Historical concept films; not current product footage",
+  "posters": [
+    {
+      "source": "media/granite-concept.mp4",
+      "poster": "media/shots/granite-concept-poster-20261004.webp",
+      "timestamp_seconds": 2,
+      "processing": "Unmodified frame, scaled to 1280 pixels wide, WebP"
+    },
+    {
+      "source": "media/frame-concept.mp4",
+      "poster": "media/shots/frame-concept-poster-20261004.webp",
+      "timestamp_seconds": 2,
+      "processing": "Unmodified frame, scaled to 1280 pixels wide, WebP"
+    }
+  ]
+}

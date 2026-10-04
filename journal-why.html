@@ -218,11 +218,13 @@ body.cursor-on{cursor:auto;}body.cursor-on a,body.cursor-on button,body.cursor-o
 .prose{max-width:720px;}.prose h2{margin-top:clamp(48px,6vw,80px);}.prose a{text-decoration-thickness:1px;text-underline-offset:5px;}.prose p.reveal{opacity:1;transform:none;filter:none;}.article-cases{display:flex;gap:20px;flex-wrap:wrap;margin-top:40px;padding-top:24px;border-top:1px solid var(--line2);font-family:var(--mono);font-size:var(--t-note);}.article-cases a{border-bottom:1px solid var(--cyan);padding:10px 0;}.article-cases a:hover{color:var(--cyan);}
 @media(max-width:640px){.editorial-flow{flex-direction:column;gap:22px;}.editorial-flow div{display:grid;grid-template-columns:36px 1fr;gap:16px;}.editorial-flow b{margin:0;}.editorial-flow span{font-size:var(--t-mid);}.editorial-figure .diagram-title{margin-bottom:28px;}.diagram-practice .editorial-flow div{grid-template-columns:36px 1fr;}.prose{padding-inline:24px;}.editorial-figure{padding:24px;}}
 </style>
-<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
-  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+/* Vercel telemetry belongs to the hosted site, not local review servers. */
+if(location.hostname==='www.cybercyber.ai'||location.hostname==='cybercyber.ai'||location.hostname.endsWith('.vercel.app')){
+ window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments);};
+ ['https://cdn.vercel-insights.com/v1/script.js','/_vercel/speed-insights/script.js'].forEach(function(src){var script=document.createElement('script');script.src=src;script.defer=true;document.head.appendChild(script);});
+}
 </script>
-<script defer src="/_vercel/speed-insights/script.js"></script>
 </head>
 <body><noscript><style>#burger{display:none!important;}.fallback-nav{display:none;}@media(max-width:819px){.fallback-nav{display:block;position:fixed;right:20px;top:14px;z-index:101;background:var(--ground);color:var(--paper);font:12px/1.5 var(--mono);}.fallback-nav summary{min-height:44px;padding:8px;cursor:pointer;}.fallback-nav nav{padding:12px 20px;border:1px solid var(--paper);}.fallback-nav a{display:block;color:inherit;padding:10px 0;min-height:44px;}}</style><details class="fallback-nav"><summary>Navigation</summary><nav aria-label="Site navigation"><a href="./">Home</a><a href="./#work">Work</a><a href="manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a></nav></details></noscript>
 <div class="rprog" id="rprog" aria-hidden="true"></div>
