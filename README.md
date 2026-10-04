@@ -24,3 +24,12 @@ That is the finished position, not a staging post — an earlier note here propo
 ## Before you change anything
 
 Read [AGENTS.md](AGENTS.md). It documents the shared type ladder, the no-dead-even-grid rule, the deliberately-literal exceptions, and a list of traps that have each already cost real time — hidden-not-deleted elements the JS still dereferences, the reticle's two ids, the seal geometry that exists in two places, and the journal renumbering cascade.
+
+## Native product evidence
+
+Granite and Frame include recordings from the current native app repositories,
+captured on 4 October 2026 with isolated demo data. Playback is visitor-controlled
+and each recording has a text walkthrough. Frame’s lead and technique-detail
+images use full source frames with responsive delivery copies. Capture provenance,
+source commits and editing ranges are in
+`media/shots/native-walkthrough-provenance-20261004.json`.

@@ -1,0 +1,84 @@
+[
+  {
+    "product": "granite",
+    "sourceCommit": "58690abfc0771cb34b10eaef509939bc9cd0a98f",
+    "recorded": "2026-10-04",
+    "platform": "iOS 26.5 / iPhone 17 Pro Max simulator / Xcode Device Hub native screen recording",
+    "sourceFile": "granite-native-original-20261004.mp4",
+    "sourceSha256": "243ee1631a128fd555bb5dad064e13907e4882dd3cbc565d0ef7aeeeed6e337d",
+    "sourceDimensions": [
+      1320,
+      2868
+    ],
+    "sourceRangesSeconds": [
+      [
+        103,
+        109
+      ],
+      [
+        131,
+        174
+      ]
+    ],
+    "delivery": "media/granite-native-walkthrough-20261004.mp4",
+    "deliverySha256": "4e30a920bb74b6c34827d30d8666d2c4d308e351323b6e940cc58f44add8d5f9",
+    "edits": "Source ranges retained in order at original timing; H.264 720px wide, 30fps, CRF20, no audio. No recreated UI. Variable-rate source normalized to 30fps before cutting.",
+    "demo": "Isolated seeded demo data. Granite coach transcript and parsed intent supplied by GRANITE_COACH_DEMO; confirmation, response and block rebuild use application code.",
+    "frames": [
+      {
+        "file": "media/shots/granite-native-week-20261004.webp",
+        "sourceTimeSeconds": 105,
+        "sha256": "f20cd9441cb88067a080758bc73772557413a7678d724546ed502e032ecb037a",
+        "format": "Full uncropped source video frame, lossless WebP encoding; 560/840px q90 display derivatives."
+      }
+    ],
+    "deliveryDurationSeconds": 49.0
+  },
+  {
+    "product": "frame",
+    "sourceCommit": "b02e077b96820215b01b389fc280e6a866b0a38e",
+    "recorded": "2026-10-04",
+    "platform": "iOS 26.5 / iPhone 17 Pro Max simulator / Xcode Device Hub native screen recording",
+    "sourceFile": "frame-native-original-20261004.mp4",
+    "sourceSha256": "3d0ce779dc182c0951f169580d744bcc26f6c08892a8c3816cfe1fc2b75e2488",
+    "sourceDimensions": [
+      1320,
+      2868
+    ],
+    "sourceRangesSeconds": [
+      [
+        0,
+        5
+      ],
+      [
+        25,
+        39.271667
+      ]
+    ],
+    "delivery": "media/frame-native-walkthrough-20261004.mp4",
+    "deliverySha256": "f9dc07dbc89cceb04c53d6d5b5fa335701b30e3ce8996b834dcbe827f9e035e4",
+    "edits": "Source ranges retained in order at original timing; session-detail detour omitted. H.264 720px wide, 30fps, CRF20, no audio. No recreated UI. Variable-rate source normalized to 30fps before cutting.",
+    "demo": "Isolated seeded in-memory demo data via FRAME_SEED and FRAME_FORCE_EPHEMERAL. All displayed statistics are sample values, not customer outcomes.",
+    "frames": [
+      {
+        "file": "media/shots/frame-native-log-20261004.webp",
+        "sourceTimeSeconds": 3,
+        "sha256": "549bd223471e247cf97120581bae9ea84176d81fb2584623f8d25bd19b97d077",
+        "format": "Full uncropped source video frame, lossless WebP encoding; 560/840px q90 display derivatives."
+      },
+      {
+        "file": "media/shots/frame-native-game-20261004.webp",
+        "sourceTimeSeconds": 34,
+        "sha256": "f18b68134afcc61c40a76ac9b68a9aaa84f69e7d8d9b5e2d3b0f884a8546c3ae",
+        "format": "Full uncropped source video frame, lossless WebP encoding; 560/840px q90 display derivatives."
+      },
+      {
+        "file": "media/shots/frame-native-position-20261004.webp",
+        "sourceTimeSeconds": 38.5,
+        "sha256": "5ded3ae792cd87714d9834c52f458c66b632f79fc4a9af61d0df9ce26f463e0a",
+        "format": "Full uncropped source video frame, lossless WebP encoding; 560/840px q90 display derivatives."
+      }
+    ],
+    "deliveryDurationSeconds": 19.233333
+  }
+]

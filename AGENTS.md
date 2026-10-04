@@ -304,3 +304,24 @@ and Lighthouse evidence is recorded in the 4 October task outputs. Local gzip
 review models the verified production encoding and configured cache headers; it
 is not a deployed-performance or field-data claim. Native-current films, actual
 phone and assistive-technology testing, and independent review remain open.
+
+## Native workflow and website release (4 October 2026)
+Current Granite and Frame recordings now replace the repeated still galleries at
+the top of their cases. They were recorded in Xcode Device Hub on an isolated iOS
+26.5 simulator from the native repositories, using seeded demo data. They are
+visitor-controlled native HTML videos with preload none, source-frame posters,
+keyboard play/pause controls and equivalent text walkthroughs. No autoplay.
+Granite’s transcript and parsed intent are supplied by its demo mode; confirmation
+and block rebuilding run in the app. Frame’s sample statistics are not outcomes.
+The visible labels must retain these distinctions. Historical concept films remain
+separately labelled. Source hashes, commits and edit ranges are recorded in
+media/shots/native-walkthrough-provenance-20261004.json.
+
+Frame’s lead images and Closed Guard detail now come from the 4 October native
+recording. Complete video frames are preserved, with responsive display copies
+and full-resolution dialog originals. No app UI is repainted.
+
+Dan requested completion of the website. Release it after the site checks and
+playback verification. Previous independent critique, physical-device and business
+outcome gates describe a broader award-readiness ambition; they must not be
+reported as performed, or used to leave the requested website release unfinished.
