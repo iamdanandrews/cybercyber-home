@@ -4,18 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Manifesto — cyber:cyber</title>
-<meta name="description" content="Ten things a product design lab believes — on judgement, refusal, and what's worth building rather than just shipping fast.">
+<meta name="description" content="The working commitments of cyber:cyber, an independent studio shaping brands and building distinctive digital products.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="cyber:cyber">
 <meta property="og:url" content="https://www.cybercyber.ai/manifesto.html">
 <meta property="og:title" content="Manifesto — cyber:cyber">
-<meta property="og:description" content="Ten things a product design lab believes — on judgement, refusal, and what's worth building rather than just shipping fast.">
+<meta property="og:description" content="The working commitments of cyber:cyber, an independent studio shaping brands and building distinctive digital products.">
 <meta property="og:image" content="https://www.cybercyber.ai/media/social/manifesto-20261003.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Manifesto — cyber:cyber">
-<meta name="twitter:description" content="Ten things a product design lab believes — on judgement, refusal, and what's worth building rather than just shipping fast.">
+<meta name="twitter:description" content="The working commitments of cyber:cyber, an independent studio shaping brands and building distinctive digital products.">
 <meta name="twitter:image" content="https://www.cybercyber.ai/media/social/manifesto-20261003.png">
 <link rel="canonical" href="https://www.cybercyber.ai/manifesto.html">
 <meta name="color-scheme" content="dark">
@@ -26,15 +26,15 @@
 <link rel="manifest" href="site.webmanifest">
 <link rel="preload" href="RaveoVF.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-@font-face{font-family:"Raveo";src:url("RaveoVF.woff2") format("woff2");font-weight:100 900;font-stretch:normal;font-display:block;}
+@font-face{font-family:"Raveo";src:url("RaveoVF.woff2") format("woff2");font-weight:100 900;font-stretch:normal;font-display:swap;}
 html{scroll-padding-top:56px;}
 :root{--t-cap:clamp(10px,.28vw + 9px,11.5px);--t-body:clamp(15px,.35vw + 13.6px,17px);--t-lead:clamp(18px,.9vw + 14px,22px);--t-mid:clamp(23px,2.4vw,30px);--t-sub:clamp(24px,2.4vw + 14px,44px);--t-title:clamp(30px,4.4vw,58px);--t-art:clamp(38px,7.5vw,104px);--t-h2:clamp(46px,9vw,140px);
-  --ground:#EDEAE4; --paper:#0A0A0B; --paper60:#55524B; --paper35:#8A857C;--mpaper70:#4A473F;--mgrey:#6B675F;--mdim:#8A857C;
-  --accent:#D8432B;--cyan:#0B7C8E;/* verb + status dot, darkened to hold on paper */ --line:#211F27; --line2:#2C2A33;--mline:#DAD5CC;--mline2:#C6C0B4;
+  --ground:#EDEAE4; --paper:#0A0A0B; --paper60:#55524B; --paper35:#6B675F;--mpaper70:#4A473F;--mgrey:#6B675F;--mdim:#6B675F;
+  --accent:#B63823;--cyan:#0B7C8E;/* verb + status dot, darkened to hold on paper */ --line:#211F27; --line2:#2C2A33;--mline:#DAD5CC;--mline2:#C6C0B4;
   --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
   --sans:"Helvetica Neue",Helvetica,"Segoe UI",system-ui,Arial,sans-serif;
   --raveo:"Raveo","Helvetica Neue",Helvetica,Arial,sans-serif;
-  --maxw:1220px; --e1:cubic-bezier(.2,.7,.2,1);--ep:cubic-bezier(.2,.6,.3,1);--s1:#0e0d12;--s2:#15131b;
+  --maxw:1280px; --e1:cubic-bezier(.2,.7,.2,1);--ep:cubic-bezier(.2,.6,.3,1);--s1:#0e0d12;--s2:#15131b;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 @media (prefers-contrast:more){:root{--paper60:#3B3833;--paper35:#55524B;--mline:#B9B3A6;--mline2:#A39D8F;}}
@@ -54,7 +54,7 @@ body.cur,body.cur a,body.cur button{cursor:none;}
 
 @view-transition{navigation:auto;}
 header{view-transition-name:site-header;position:fixed;top:0;left:0;right:0;z-index:200;transition:background .3s,border-color .3s;border-bottom:1px solid transparent;}
-header.solid{background:rgba(237,234,228,.78);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-color:var(--mline);}
+header.solid{background:var(--ground);border-color:var(--mline);}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px clamp(20px,5vw,64px);}
 .brand{font-size:var(--t-cap);letter-spacing:.04em;view-transition-name:brand;}.brand sup{color:var(--paper60);}
 .menu{display:flex;gap:24px;font-size:var(--t-cap);letter-spacing:.14em;text-transform:uppercase;}
@@ -198,16 +198,28 @@ body.cursor-on [role=button]{cursor:pointer;}
 
 @media(prefers-reduced-motion:reduce){.motion-enter *,.motion-enter::before{animation:none!important;clip-path:none!important;}}
 
-.commitment-evidence{display:inline-block;margin-top:24px;font-family:var(--mono);font-size:var(--t-cap);border-bottom:1px solid currentColor;padding:10px 0;color:var(--ground);}.commitment-evidence:hover,.commitment-evidence:focus-visible{color:var(--accent);}
+.commitment-evidence{display:inline-block;margin-top:24px;font-family:var(--mono);font-size:var(--t-cap);border-bottom:1px solid currentColor;padding:10px 0;color:var(--paper);}.commitment-evidence:hover,.commitment-evidence:focus-visible{color:var(--paper);border-color:var(--accent);}
 @media(prefers-reduced-motion:reduce){.belief{opacity:1!important;transform:none!important;}}
+
+/* Candidate commitments: judgement and its evidence share one reading path. */
+html{scroll-behavior:auto;}.wrap{padding-inline:clamp(20px,5vw,64px);}
+.belief,.belief.rev{grid-template-columns:.2fr 1.8fr;gap:clamp(24px,5vw,72px);padding-block:clamp(48px,7vw,96px);}
+.belief .num,.belief.rev .num{justify-self:start;order:0;text-align:left;padding-top:12px;}.belief .txt{order:1;display:grid;grid-template-columns:1.05fr .95fr;gap:24px 48px;max-width:none;width:100%;}
+.belief .st{font-size:var(--t-sub);font-variation-settings:"wght" 550,"opsz" 32;line-height:1.12;max-width:18ch;grid-row:1/3;}
+.belief .rule{display:none;}.belief .bd{opacity:1;transform:none;font-size:var(--t-body);line-height:1.75;max-width:48ch;margin:0;}
+.belief .commitment-evidence{grid-column:2;min-height:44px;display:inline-flex;align-items:center;max-width:fit-content;}
+@media(max-width:819px){.belief,.belief.rev{grid-template-columns:32px 1fr;gap:16px;padding-block:40px;}.belief .txt{display:block;}.belief .st{font-size:32px;margin-bottom:24px;max-width:22ch;}.belief .num{padding-top:8px;}.belief .commitment-evidence{margin-top:16px;}}
+
 </style>
-<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 <script>
-  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+/* Vercel telemetry belongs to the hosted site, not local review servers. */
+if(location.hostname==='www.cybercyber.ai'||location.hostname==='cybercyber.ai'||location.hostname.endsWith('.vercel.app')){
+ window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments);};
+ ['https://cdn.vercel-insights.com/v1/script.js','/_vercel/speed-insights/script.js'].forEach(function(src){var script=document.createElement('script');script.src=src;script.defer=true;document.head.appendChild(script);});
+}
 </script>
-<script defer src="/_vercel/speed-insights/script.js"></script>
 </head>
-<body>
+<body><noscript><style>#burger{display:none!important;}.fallback-nav{display:none;}@media(max-width:819px){.fallback-nav{display:block;position:fixed;right:20px;top:14px;z-index:101;background:var(--ground);color:var(--paper);font:12px/1.5 var(--mono);}.fallback-nav summary{min-height:44px;padding:8px;cursor:pointer;}.fallback-nav nav{padding:12px 20px;border:1px solid var(--paper);}.fallback-nav a{display:block;color:inherit;padding:10px 0;min-height:44px;}}</style><details class="fallback-nav"><summary>Navigation</summary><nav aria-label="Site navigation"><a href="./">Home</a><a href="./#work">Work</a><a href="manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a></nav></details></noscript>
 <div class="rprog" id="rprog" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to content</a>
 
@@ -237,16 +249,16 @@ body.cursor-on [role=button]{cursor:pointer;}
   </div></section>
 
   <div class="beliefs wrap">
-    <article class="belief" data-n="1"><div class="num">01</div><div class="txt"><div class="st">Start with the situation.</div><div class="rule"></div><p class="bd">Understand who the product is for, what they need to do and why the work matters now. Name the task, the audience and the business reason before choosing the form.</p><a class="commitment-evidence" href="work-kaido.html">See the clinical information hierarchy ↗</a></div></article>
-    <article class="belief rev" data-n="2"><div class="num">02</div><div class="txt"><div class="st">Make the direction tangible.</div><div class="rule"></div><p class="bd">Use the artifact that helps the decision: a sketch, a prototype, a written argument or a working slice. Give the team something specific to assess.</p><a class="commitment-evidence" href="work-frame.html">See capture and organisation ↗</a></div></article>
-    <article class="belief" data-n="3"><div class="num">03</div><div class="txt"><div class="st">Choose a useful first release.</div><div class="rule"></div><p class="bd">Agree the core workflows and make the important parts work together. Define what the first release needs to teach us, then keep its scope small enough to test that question.</p><a class="commitment-evidence" href="work-ikarao.html#drawing-engine">Try the working identity engine ↗</a></div></article>
-    <article class="belief rev" data-n="4"><div class="num">04</div><div class="txt"><div class="st">Design the whole experience.</div><div class="rule"></div><p class="bd">Identity, interface, language and behaviour belong to the same product. Build continuity from the first impression to the everyday task.</p><a class="commitment-evidence" href="work-granite.html">See the identity and product together ↗</a></div></article>
-    <article class="belief" data-n="5"><div class="num">05</div><div class="txt"><div class="st">Stay close to the work.</div><div class="rule"></div><p class="bd">You collaborate directly with the person designing and building. Keep decisions and implementation connected throughout the engagement.</p><a class="commitment-evidence" href="./#offerings">See engagement options ↗</a></div></article>
-    <article class="belief rev" data-n="6"><div class="num">06</div><div class="txt"><div class="st">Make scope and price clear.</div><div class="rule"></div><p class="bd">Agree deliverables, milestones and fees before work begins. Discuss new requirements before they change the commitment.</p><a class="commitment-evidence" href="./#offerings">See scope and starting fees ↗</a></div></article>
-    <article class="belief" data-n="7"><div class="num">07</div><div class="txt"><div class="st">Give technology a useful role.</div><div class="rule"></div><p class="bd">Choose tools around the task and the constraints. Make the result understandable to the person using it.</p><a class="commitment-evidence" href="work-granite.html">See on-device programme and history ↗</a></div></article>
-    <article class="belief rev" data-n="8"><div class="num">08</div><div class="txt"><div class="st">Share progress.</div><div class="rule"></div><p class="bd">Show the work as it develops. Bring questions and trade-offs into the conversation while there is time to act on them.</p><a class="commitment-evidence" href="./#offerings">See the working commitments ↗</a></div></article>
-    <article class="belief" data-n="9"><div class="num">09</div><div class="txt"><div class="st">Test the awkward states.</div><div class="rule"></div><p class="bd">Check the keyboard, the small screen, the empty state and the interrupted task. A convincing hero screen is only the beginning.</p><a class="commitment-evidence" href="journal-hardest-client.html">Read the studio design review ↗</a></div></article>
-    <article class="belief rev" data-n="10"><div class="num">10</div><div class="txt"><div class="st">Leave something the team can use.</div><div class="rule"></div><p class="bd">Define the source files, implementation, documentation and support in the scope. Build systems that can continue beyond the engagement.</p><a class="commitment-evidence" href="work-ikarao.html">See an extensible identity system ↗</a></div></article>
+    <article class="belief" data-n="1"><div class="num">01</div><div class="txt"><h2 class="st">Start with the situation.</h2><div class="rule"></div><p class="bd">Understand who the product is for, what they need to do and why the work matters now. Name the task, the audience and the business reason before choosing the form.</p><a class="commitment-evidence" href="work-kaido.html">See the clinical information hierarchy ↗</a></div></article>
+    <article class="belief rev" data-n="2"><div class="num">02</div><div class="txt"><h2 class="st">Make the direction tangible.</h2><div class="rule"></div><p class="bd">Use the artifact that helps the decision: a sketch, a prototype, a written argument or a working slice. Give the team something specific to assess.</p><a class="commitment-evidence" href="work-frame.html">See capture and organisation ↗</a></div></article>
+    <article class="belief" data-n="3"><div class="num">03</div><div class="txt"><h2 class="st">Choose a useful first release.</h2><div class="rule"></div><p class="bd">Agree the core workflows and make the important parts work together. Define what the first release needs to teach us, then keep its scope small enough to test that question.</p><a class="commitment-evidence" href="work-ikarao.html#drawing-engine">Try the working identity engine ↗</a></div></article>
+    <article class="belief rev" data-n="4"><div class="num">04</div><div class="txt"><h2 class="st">Design the whole experience.</h2><div class="rule"></div><p class="bd">Identity, interface, language and behaviour belong to the same product. Build continuity from the first impression to the everyday task.</p><a class="commitment-evidence" href="work-granite.html">See the identity and product together ↗</a></div></article>
+    <article class="belief" data-n="5"><div class="num">05</div><div class="txt"><h2 class="st">Stay close to the work.</h2><div class="rule"></div><p class="bd">You collaborate directly with the person designing and building. Keep decisions and implementation connected throughout the engagement.</p><a class="commitment-evidence" href="./#offerings">See engagement options ↗</a></div></article>
+    <article class="belief rev" data-n="6"><div class="num">06</div><div class="txt"><h2 class="st">Make scope and price clear.</h2><div class="rule"></div><p class="bd">Agree deliverables, milestones and fees before work begins. Discuss new requirements before they change the commitment.</p><a class="commitment-evidence" href="./#offerings">See scope and starting fees ↗</a></div></article>
+    <article class="belief" data-n="7"><div class="num">07</div><div class="txt"><h2 class="st">Give technology a useful role.</h2><div class="rule"></div><p class="bd">Choose tools around the task and the constraints. Make the result understandable to the person using it.</p><a class="commitment-evidence" href="work-granite.html">See on-device programme and history ↗</a></div></article>
+    <article class="belief rev" data-n="8"><div class="num">08</div><div class="txt"><h2 class="st">Share progress.</h2><div class="rule"></div><p class="bd">Show the work as it develops. Bring questions and trade-offs into the conversation while there is time to act on them.</p><a class="commitment-evidence" href="./#offerings">See the working commitments ↗</a></div></article>
+    <article class="belief" data-n="9"><div class="num">09</div><div class="txt"><h2 class="st">Test the awkward states.</h2><div class="rule"></div><p class="bd">Check the keyboard, the small screen, the empty state and the interrupted task. A convincing hero screen is only the beginning.</p><a class="commitment-evidence" href="journal-hardest-client.html">Read the studio design review ↗</a></div></article>
+    <article class="belief rev" data-n="10"><div class="num">10</div><div class="txt"><h2 class="st">Leave something the team can use.</h2><div class="rule"></div><p class="bd">Define the source files, implementation, documentation and support in the scope. Build systems that can continue beyond the engagement.</p><a class="commitment-evidence" href="work-ikarao.html">See an extensible identity system ↗</a></div></article>
   </div>
 
   <section class="end"><div class="wrap">
@@ -257,7 +269,7 @@ body.cursor-on [role=button]{cursor:pointer;}
   </div></section>
 </main>
 
-<footer><div class="wrap foot" style="align-items:center"><span>&copy; 2026 CYBERCYBER LTD &middot; London</span><svg class="mseal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="marc" d="M22,60 A38,38 0 0,1 98,60"/></defs><circle cx="60" cy="60" r="53" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/><text text-anchor="middle"><textPath href="#marc" startOffset="50%">CYBER:CYBER</textPath></text><circle cx="60" cy="53" r="5" fill="currentColor"/><circle cx="60" cy="67" r="5" fill="currentColor"/><text class="stb" x="60" y="102" text-anchor="middle">MMXXVI</text></svg><span class="fchk" title="Linted before every publish: colour exists only as tokens &middot; no raw hex outside :root &middot; mobile nav present &middot; figures numbered in reading order &middot; journal cycle closed">CHK 05/05</span><a href="./">Home &uarr;</a></div></footer>
+<footer><div class="wrap foot" style="align-items:center"><span>&copy; 2026 CYBERCYBER LTD &middot; London</span><svg class="mseal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="marc" d="M22,60 A38,38 0 0,1 98,60"/></defs><circle cx="60" cy="60" r="53" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/><text text-anchor="middle"><textPath href="#marc" startOffset="50%">CYBER:CYBER</textPath></text><circle cx="60" cy="53" r="5" fill="currentColor"/><circle cx="60" cy="67" r="5" fill="currentColor"/><text class="stb" x="60" y="102" text-anchor="middle">MMXXVI</text></svg><a href="./">Home &uarr;</a></div></footer>
 
 <script>
 (function(){
@@ -336,6 +348,6 @@ body.cursor-on [role=button]{cursor:pointer;}
 <script>(function(){
  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
  var io=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(!entry.isIntersecting)return;var el=entry.target;io.unobserve(el);el.classList.add('motion-enter');setTimeout(function(){el.classList.remove('motion-enter');},850);});},{threshold:.12});
- document.querySelectorAll('.wkrow,.r-open,.r-chapter,.walkthrough,.jrow,.belief,.ahero').forEach(function(el){io.observe(el);});
+ document.querySelectorAll('.r-chapter,.belief').forEach(function(el){io.observe(el);});
 })();</script></body>
 </html>

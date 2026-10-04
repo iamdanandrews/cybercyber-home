@@ -1,0 +1,53 @@
+{
+  "purpose": "Responsive display derivatives. Full-resolution native source retained for screenshot enlargement. Display copies are resized and encoded as recorded per asset; they are not pixel-identical archival sources.",
+  "assets": [
+    {
+      "source": "media/shots/f-native-log.png",
+      "source_sha256": "18410dd34891b76422224e38b62912a067019f86f314b5b31acc47e140b019e9",
+      "output": "media/shots/f-native-log-display-560-20261004.webp",
+      "width": 560,
+      "bytes": 31440,
+      "process": "cwebp -q 90 -m 6 -sharp_yuv -resize WIDTH 0; complete capture resampled for display, no crop or reconstruction; original retained for enlargement"
+    },
+    {
+      "source": "media/shots/f-native-log.png",
+      "source_sha256": "18410dd34891b76422224e38b62912a067019f86f314b5b31acc47e140b019e9",
+      "output": "media/shots/f-native-log-display-840-20261004.webp",
+      "width": 840,
+      "bytes": 49804,
+      "process": "cwebp -q 90 -m 6 -sharp_yuv -resize WIDTH 0; complete capture resampled for display, no crop or reconstruction; original retained for enlargement"
+    },
+    {
+      "source": "media/shots/f-native-game.png",
+      "source_sha256": "f2884c2992d90c8b4b7bbbc11962d4d76a1a886d6044fdbd16e20b2d1f91647e",
+      "output": "media/shots/f-native-game-display-560-20261004.webp",
+      "width": 560,
+      "bytes": 30752,
+      "process": "cwebp -q 90 -m 6 -sharp_yuv -resize WIDTH 0; complete capture resampled for display, no crop or reconstruction; original retained for enlargement"
+    },
+    {
+      "source": "media/shots/f-native-game.png",
+      "source_sha256": "f2884c2992d90c8b4b7bbbc11962d4d76a1a886d6044fdbd16e20b2d1f91647e",
+      "output": "media/shots/f-native-game-display-840-20261004.webp",
+      "width": 840,
+      "bytes": 48816,
+      "process": "cwebp -q 90 -m 6 -sharp_yuv -resize WIDTH 0; complete capture resampled for display, no crop or reconstruction; original retained for enlargement"
+    },
+    {
+      "source": "media/shots/g-native-week.png",
+      "source_sha256": "943055cdef4574416ae96e0fef254217762ac8b68dcc82159752fb97795e7927",
+      "output": "media/shots/g-native-week-display-560-20261004.webp",
+      "width": 560,
+      "bytes": 50700,
+      "process": "cwebp -lossless -m 6 -resize WIDTH 0; complete capture resampled, no crop, recolouring or reconstruction"
+    },
+    {
+      "source": "media/shots/g-native-week.png",
+      "source_sha256": "943055cdef4574416ae96e0fef254217762ac8b68dcc82159752fb97795e7927",
+      "output": "media/shots/g-native-week-display-840-20261004.webp",
+      "width": 840,
+      "bytes": 116758,
+      "process": "cwebp -lossless -m 6 -resize WIDTH 0; complete capture resampled, no crop, recolouring or reconstruction"
+    }
+  ]
+}

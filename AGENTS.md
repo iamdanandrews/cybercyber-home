@@ -239,3 +239,89 @@ project description into a word-per-line column.
 Responsive geometry, interaction checks and static audits do not establish actual
 Safari/Firefox, assistive-technology or hardware coverage. Current continuous
 Granite/Frame films and customer outcome evidence remain external release gates.
+
+## Candidate verification pass (4 October 2026)
+The SOTD candidate remains on `sotd-candidate`, separate from production. Native
+Chrome and Safari became available for review. Route/state smoke tests and three
+isolated homepage Lighthouse runs are recorded in the task outputs; these do not
+establish the full browser, hardware, assistive-technology or independent-review
+acceptance matrix. Do not describe the candidate as SOTD-ready or fully accepted.
+
+The live Bittensor engine preserves composing input, bounds drawing cleanup to one
+timer, labels the generated/exported SVG, clears stale downloads after failure and
+revokes Blob URLs on page exit. Its initial static specimen uses the existing
+source SVG rather than duplicating that drawing inline. Drawing motion follows
+visitor input, not initial page load. Screenshot dimensions explicitly reserve
+space before lazy image decode. Walkthrough entrance motion follows selection.
+Historical concept films use source-frame posters and preload none; they remain
+labelled concept films, not current native product footage. Poster provenance is
+in media/shots/concept-film-posters-provenance.json.
+
+Vercel telemetry loads only on the production domains and Vercel preview domains,
+so local review servers do not generate unavailable telemetry requests. Existing
+hosted telemetry behavior is preserved. Native-current films, actual phone and
+screen-reader coverage, full performance/state review and independent buyer/peer
+critique remain required before accepting the complete release.
+
+## Studio language correction (4 October 2026)
+Dan rejects describing the studio itself as a product or reducing its ambition to
+usable software. The hero introduces one studio and three disciplines: Brand,
+Interface and Code. Its descriptions express the practice, not a product feature
+menu. The paper statement and metadata identify an independent studio shaping
+brands and building distinctive digital products; this supersedes lab wording.
+
+## Owned-product evidence pass (4 October 2026)
+Dan clarified that the website should address the studio review, with Granite,
+Kaido and Frame presented as his own products. The work introduction and author
+section state that ownership directly; selected commissions sit alongside it.
+Brand, Interface and Code controls now link to Bittensor, Kaido and Granite
+respectively, using each discipline's assigned accent. The homepage H1, paper
+statement, full-height opening and orange threshold remain the approved structure.
+
+Case chapters have project-specific labels and shorter arguments tied to their
+captures. The repeated three-step recaps and constraint/judgement blocks are
+removed. Delivered capability and product stage remain distinct; do not invent
+adoption, retention, clinical outcomes or testimonials. Kaido remains independent
+of Granite. Metadata, README and llms.txt follow the current studio language and
+visible service terms.
+
+Kaido includes a clearly labelled reading detail from the protocol Overview,
+framed with CSS alongside the complete capture. The same detail appears on the
+homepage at phone widths. Its enlargement opens the complete original. Source
+captures have not been cropped or repainted.
+
+Frame and Granite use responsive display derivatives where full-resolution phone
+captures previously loaded at small sizes. These are resized delivery copies,
+not new product captures. Their transformations and source hashes are recorded in
+media/shots/responsive-captures-provenance-20261004.json. The case dialogs use
+`data-full-src` to load the original full-resolution capture. Preserve this
+separation when adding srcset. Secondary lead images hidden on phones load lazily.
+Homepage phone dimensions reserve space before image decode. The work index
+clears stale selections and derives its reading band from viewport height.
+
+This work remains on the draft candidate. Local source, responsive, interaction
+and Lighthouse evidence is recorded in the 4 October task outputs. Local gzip
+review models the verified production encoding and configured cache headers; it
+is not a deployed-performance or field-data claim. Native-current films, actual
+phone and assistive-technology testing, and independent review remain open.
+
+## Native workflow and website release (4 October 2026)
+Current Granite and Frame recordings now replace the repeated still galleries at
+the top of their cases. They were recorded in Xcode Device Hub on an isolated iOS
+26.5 simulator from the native repositories, using seeded demo data. They are
+visitor-controlled native HTML videos with preload none, source-frame posters,
+keyboard play/pause controls and equivalent text walkthroughs. No autoplay.
+Granite’s transcript and parsed intent are supplied by its demo mode; confirmation
+and block rebuilding run in the app. Frame’s sample statistics are not outcomes.
+The visible labels must retain these distinctions. Historical concept films remain
+separately labelled. Source hashes, commits and edit ranges are recorded in
+media/shots/native-walkthrough-provenance-20261004.json.
+
+Frame’s lead images and Closed Guard detail now come from the 4 October native
+recording. Complete video frames are preserved, with responsive display copies
+and full-resolution dialog originals. No app UI is repainted.
+
+Dan requested completion of the website. Release it after the site checks and
+playback verification. Previous independent critique, physical-device and business
+outcome gates describe a broader award-readiness ambition; they must not be
+reported as performed, or used to leave the requested website release unfinished.
