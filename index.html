@@ -201,8 +201,8 @@ section{position:relative;padding:clamp(96px,17vh,210px) 0 clamp(64px,11vh,140px
 
 .reveal.in .define w{font-variation-settings:"wght" 480,"opsz" 32;transform:none;opacity:1;}
 
-.offers{border-top:1px solid var(--line);margin-top:clamp(34px,5vw,60px);}
-.offer{display:grid;grid-template-columns:1.1fr 1.4fr 188px;gap:clamp(14px,2vw,34px);align-items:baseline;padding:clamp(20px,2.6vw,34px) clamp(14px,1.6vw,20px);margin-inline:calc(-1*clamp(14px,1.6vw,20px));border-bottom:1px solid var(--line);transition:background .25s;}
+.offers{margin-top:clamp(34px,5vw,60px);}
+.offer{display:grid;grid-template-columns:1.1fr 1.4fr 188px;gap:clamp(14px,2vw,34px);align-items:baseline;padding:clamp(20px,2.6vw,34px) clamp(14px,1.6vw,20px);margin-inline:calc(-1*clamp(14px,1.6vw,20px));transition:background .25s;}
 .offer .op{white-space:nowrap;}
 .offer:hover{background:var(--lift);}
 .offer .on{font-family:var(--raveo);font-variation-settings:"wght" 580,"opsz" 32;font-size:var(--t-lead);letter-spacing:-.01em;}
@@ -1093,10 +1093,14 @@ html{scroll-behavior:auto;}
 .portfolio-plate.frame-product{grid-template-columns:1.5fr .5fr;min-height:660px;gap:clamp(24px,4vw,64px);}
 .frame-product .plate-story{order:2;}.frame-product .phone-set{order:1;}
 .who{grid-template-columns:.6fr 1.4fr;}.who p{max-width:52ch;}
-#journal .jrnl{display:grid;grid-template-columns:1.25fr .75fr;}
-#journal .jrnl a{min-height:240px;padding:clamp(24px,4vw,48px);display:flex;flex-direction:column;gap:24px;}
-#journal .jrnl a .jk{order:0;}#journal .jrnl a .jt{order:1;font-size:var(--t-sub);max-width:22ch;}#journal .jrnl a .jd{order:2;padding-top:0;margin-top:auto;}
-#journal .jrnl a::before{display:none;}#journal .jrnl a:is(:hover,:focus-visible){background:var(--portfolio-ground);}
+#journal .jrnl{display:block;border:0;background:transparent;}
+#journal .jrnl a{display:grid;grid-template-columns:minmax(0,.55fr) minmax(0,1.45fr) auto!important;align-items:baseline;justify-items:start;min-height:0;padding:32px 0;gap:24px 40px;border:0;text-align:left;background:transparent;}
+#journal .jrnl a .jk{display:block;grid-column:1;grid-row:1;order:0;color:var(--grey);}
+#journal .jrnl a .jt{grid-column:2;grid-row:1;order:0;font-size:var(--t-sub);line-height:1.15;max-width:none;min-width:0;}
+#journal .jrnl a .jd{grid-column:3;grid-row:1;order:0;padding:0;margin:0;}
+#journal .jrnl a::before{display:none;}
+#journal .jrnl a:is(:hover,:focus-visible){background:var(--portfolio-ground);}
+#journal .jrnl a:is(:hover,:focus-visible) .jt{color:var(--cyan);}
 #contact{min-height:85svh;}#contact .mk{grid-template-columns:1.35fr .65fr;}
 #contact .mkin{min-height:64px;max-width:100%;}#contact .mksend{min-height:44px;display:inline-flex;align-items:center;}
 @media(min-width:1600px){.hero .word{font-size:162px;}.hero .inner{padding-top:24svh;}}
@@ -1116,8 +1120,11 @@ html{scroll-behavior:auto;}
 .portfolio-plate .phone-set{gap:24px;}.portfolio-plate .phone-set img{max-height:560px;}
 .home-family{grid-template-columns:1fr 1fr;gap:24px;}.home-family figure:first-child{grid-column:1/-1;width:70%;justify-self:center;}
 .plate-label{flex-direction:column;gap:8px;}.home-clinic figcaption{font-size:11px;line-height:1.6;}
-.who{grid-template-columns:1fr;gap:32px;}#journal .jrnl{grid-template-columns:1fr;}
-#journal .jrnl a{min-height:0;padding:32px 24px;gap:20px;}#journal .jrnl a .jt{font-size:32px;}
+.who{grid-template-columns:1fr;gap:32px;}
+#journal .jrnl a{grid-template-columns:minmax(0,1fr) auto!important;padding:24px 0;gap:14px 20px;}
+#journal .jrnl a .jk{grid-column:1;grid-row:1;}
+#journal .jrnl a .jt{grid-column:1/-1;grid-row:2;font-size:var(--t-mid);}
+#journal .jrnl a .jd{grid-column:2;grid-row:1;}
 #contact .mk{grid-template-columns:1fr;gap:40px;}#contact .mkfig{justify-self:start;max-width:220px;}
 }
 @media(max-width:460px){
@@ -1225,7 +1232,6 @@ html{scroll-behavior:auto;}
     </div>
   </div></section>
 
-  <section id="notforyou" class="working-note"><div class="wrap"><span class="eyebrow">How we work</span><p>Direct collaboration with Dan. Clear scope and milestones. Working prototypes throughout. Source files and handover agreed before delivery.</p><a href="manifesto.html">The working commitments &nearr;</a></div></section>
 
   <section id="faq" class="reveal"><div class="wrap faqwrap"><div class="faqhead">
     <div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>In short<span class="ix">04 / QUESTIONS</span></div>
