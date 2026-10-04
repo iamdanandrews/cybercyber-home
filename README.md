@@ -1,10 +1,10 @@
 # cybercyber.ai
 
-The cyber:cyber studio site — a product design lab in London.
+The cyber:cyber studio site — an independent studio shaping brands and building distinctive digital products.
 
 **Live:** https://cybercyber.ai (Vercel; push to `main` deploys)
 
-13 hand-written, self-contained HTML pages. Vanilla CSS and JavaScript, zero dependencies, **no build step**. Each page carries its own `<style>` and `<script>`; `mark.js` and `RaveoVF.woff2` are the only shared assets.
+18 hand-written, self-contained HTML pages. Vanilla CSS and JavaScript, zero dependencies, **no build step**. Each page carries its own `<style>` and `<script>`; `mark.js` and `RaveoVF.woff2` are the only shared assets.
 
 That is the finished position, not a staging post — an earlier note here proposed migrating to Astro + GSAP and the hand-coded build replaced it. The reasoning is written up in the journal note ["The hardest client was us"](https://cybercyber.ai/journal-hardest-client.html).
 
@@ -13,9 +13,9 @@ That is the finished position, not a staging post — an earlier note here propo
 | | |
 |---|---|
 | `index.html` | Home — reactive Raveo wordmark, the offer, work, the Contact seal |
-| `manifesto.html` | Ten beliefs, in a distinct art direction |
-| `journal.html` + 7 `journal-*.html` | Working notes, numbered newest-first |
-| `work-granite.html`, `work-frame.html` | Case studies, using real screens from the shipping apps |
+| `manifesto.html` | Working commitments linked to project evidence |
+| `journal.html` + 9 `journal-*.html` | Working notes, numbered newest-first |
+| `work-ikarao.html`, `work-granite.html`, `work-kaido.html`, `work-frame.html` | One commissioned identity and three owned products, with stage-labelled evidence |
 | `404.html` | |
 | `mark.js` | The dot-matrix kamon generator — seeds a radially symmetric crest of dots plus a six-character reference, both deterministic from a name |
 | `llms.txt` | Machine-readable site summary for LLM/agent consumers |

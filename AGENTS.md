@@ -269,3 +269,38 @@ usable software. The hero introduces one studio and three disciplines: Brand,
 Interface and Code. Its descriptions express the practice, not a product feature
 menu. The paper statement and metadata identify an independent studio shaping
 brands and building distinctive digital products; this supersedes lab wording.
+
+## Owned-product evidence pass (4 October 2026)
+Dan clarified that the website should address the studio review, with Granite,
+Kaido and Frame presented as his own products. The work introduction and author
+section state that ownership directly; selected commissions sit alongside it.
+Brand, Interface and Code controls now link to Bittensor, Kaido and Granite
+respectively, using each discipline's assigned accent. The homepage H1, paper
+statement, full-height opening and orange threshold remain the approved structure.
+
+Case chapters have project-specific labels and shorter arguments tied to their
+captures. The repeated three-step recaps and constraint/judgement blocks are
+removed. Delivered capability and product stage remain distinct; do not invent
+adoption, retention, clinical outcomes or testimonials. Kaido remains independent
+of Granite. Metadata, README and llms.txt follow the current studio language and
+visible service terms.
+
+Kaido includes a clearly labelled reading detail from the protocol Overview,
+framed with CSS alongside the complete capture. The same detail appears on the
+homepage at phone widths. Its enlargement opens the complete original. Source
+captures have not been cropped or repainted.
+
+Frame and Granite use responsive display derivatives where full-resolution phone
+captures previously loaded at small sizes. These are resized delivery copies,
+not new product captures. Their transformations and source hashes are recorded in
+media/shots/responsive-captures-provenance-20261004.json. The case dialogs use
+`data-full-src` to load the original full-resolution capture. Preserve this
+separation when adding srcset. Secondary lead images hidden on phones load lazily.
+Homepage phone dimensions reserve space before image decode. The work index
+clears stale selections and derives its reading band from viewport height.
+
+This work remains on the draft candidate. Local source, responsive, interaction
+and Lighthouse evidence is recorded in the 4 October task outputs. Local gzip
+review models the verified production encoding and configured cache headers; it
+is not a deployed-performance or field-data claim. Native-current films, actual
+phone and assistive-technology testing, and independent review remain open.
