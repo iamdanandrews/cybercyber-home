@@ -34,7 +34,7 @@ if(location.hostname==='www.cybercyber.ai'||location.hostname==='cybercyber.ai'|
  ['https://cdn.vercel-insights.com/v1/script.js','/_vercel/speed-insights/script.js'].forEach(function(src){var script=document.createElement('script');script.src=src;script.defer=true;document.head.appendChild(script);});
 }
 </script>
-<noscript><style>.hcap,.register-label,#mkin,label.mkhint{display:none!important;}
+<noscript><style>#mkin,label.mkhint{display:none!important;}
 </style></noscript></head>
 <body><noscript><style>#burger{display:none!important;}.fallback-nav{display:none;}@media(max-width:819px){.fallback-nav{display:block;position:fixed;right:20px;top:14px;z-index:101;background:var(--ground);color:var(--paper);font:12px/1.5 var(--mono);}.fallback-nav summary{min-height:44px;padding:8px;cursor:pointer;}.fallback-nav nav{padding:12px 20px;border:1px solid var(--paper);}.fallback-nav a{display:block;color:inherit;padding:10px 0;min-height:44px;}}</style><details class="fallback-nav"><summary>Navigation</summary><nav aria-label="Site navigation"><a href="./">Home</a><a href="./#work">Work</a><a href="manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a></nav></details></noscript>
 <a class="skip" href="#top">Skip to content</a>
@@ -163,9 +163,6 @@ header.solid{background:var(--ground);border-color:var(--line);}
 .foldbreak:hover .fa,.foldbreak:hover .fb,.foldbreak:focus-visible .fa,.foldbreak:focus-visible .fb{color:var(--paper);opacity:1;}
 .foldbreak:hover .fa .tk,.foldbreak:focus-visible .fa .tk{background:var(--accent);}
 .hero .hanchor{position:absolute;bottom:14%;left:var(--fold);z-index:4;pointer-events:none;}
-
-
-.hero .hanchor .hcap{display:block;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.2em;text-transform:uppercase;color:var(--dim);white-space:nowrap;opacity:.75;}
 .hero .inner{position:relative;z-index:3;flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;width:100%;}
 .word{position:relative;display:inline-block;color:var(--paper);font-family:var(--raveo);font-size:var(--t-hero);line-height:1;letter-spacing:-.05em;text-transform:uppercase;white-space:nowrap;cursor:default;}
 .word span{display:inline-block;font-variation-settings:"wght" 100,"opsz" 32;transition:font-variation-settings .18s var(--ep);}
@@ -454,8 +451,7 @@ section.reveal>.wrap{position:relative;}
      caption running flush to the right edge -- no gutter at all, and the label wrapping into a
      130px column. Bring it to the page gutter so it shares the wordmark's left edge and has
      room to set both lines. */
-  .hero .hanchor{left:clamp(20px,5vw,64px);right:auto;}
-  .hero .hanchor .hcap{white-space:normal;max-width:min(78vw,42ch);line-height:1.6;}}
+  .hero .hanchor{left:clamp(20px,5vw,64px);right:auto;}}
 /* ============================================================
    SPATIAL PASS — Swiss asymmetry + Japanese ma (charged void)
    + ruptured vertical meter. Consistency had flattened the
@@ -567,11 +563,9 @@ section.reveal>.wrap{position:relative;}
    Pointer-only; reduced motion keeps the swap but drops the travel. */
 .hero .hanchor{pointer-events:auto;}
 .hero .hanchor .hmark circle{transition:fill .3s var(--e1),cx .55s var(--e-settle) var(--md,0s),cy .55s var(--e-settle) var(--md,0s);}
-.hero .hanchor .hcap .hw{cursor:default;}
 @media(hover:hover) and (pointer:fine){
   .hero .hanchor:hover .hmark{opacity:1;}
   .hero .hanchor:hover .hmark circle{fill:var(--cyan);}
-  .hero .hanchor .hcap .hw:hover{color:var(--paper);}
 }
 @media(prefers-reduced-motion:reduce){
   .hero .hanchor .hmark circle{transition:fill .3s var(--e1);}
@@ -843,7 +837,7 @@ section.reveal>.wrap{position:relative;}
 
 #contact .mk{border-top:1px solid var(--line);padding-top:32px;margin-top:48px;}
 @media(max-width:819px){.intro-grid{grid-template-columns:1fr;}.portfolio-plate{aspect-ratio:auto;min-height:0;}.phone-set{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,2vw,16px);}.plate-kaido{padding:20px 14px;}.hero .hanchor{margin-left:clamp(20px,5vw,64px);width:auto;}.plate-ikarao{aspect-ratio:1.6;}}
-@media(max-width:460px){.hero .inner{padding-top:100px;}.hero .hanchor .hcap{max-width:none;}.plate-granite,.plate-frame{padding:24px 12px;}.phone-set img{border-radius:7px;}}
+@media(max-width:460px){.hero .inner{padding-top:100px;}.plate-granite,.plate-frame{padding:24px 12px;}.phone-set img{border-radius:7px;}}
 
 .reveal{opacity:1!important;transform:none!important;}
 .hero .inner{opacity:1!important;transform:none!important;}.loader{display:none!important;}
@@ -872,9 +866,6 @@ body.cursor-on{cursor:auto;}body.cursor-on a,body.cursor-on button,body.cursor-o
 .shd{margin-bottom:clamp(28px,4vw,56px);}
 .hero .hanchor{display:flex;align-items:center;left:auto;right:clamp(20px,5vw,64px);bottom:8%;gap:24px;}
 .hero .hanchor .hmark{display:block;width:100px;height:100px;margin:0;}
-.hero .hanchor .hcap{display:flex;align-items:center;gap:10px;letter-spacing:.1em;}
-.hw{border:0;background:transparent;padding:10px 0;color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit;}
-.hw[aria-pressed=true]{color:var(--cyan);}.hw:focus-visible{outline:1px solid var(--cyan);outline-offset:5px;}
 
 .wkrow{padding-block:clamp(36px,6vw,80px);}.wkn{font-size:var(--t-art);line-height:1;}.wkhead{align-items:end;margin-bottom:30px;}
 .portfolio-plate{width:100%;position:relative;overflow:hidden;aspect-ratio:auto;min-height:0;height:auto;max-height:none;display:block;padding:clamp(24px,4vw,56px);background:var(--portfolio-ground);}
@@ -890,7 +881,7 @@ body.cursor-on{cursor:auto;}body.cursor-on a,body.cursor-on button,body.cursor-o
 .phone-set figcaption{margin-top:20px;}.glyph-preview{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:220px;margin-top:36px;}.glyph-preview svg{width:100%;height:auto;}
 
 @media(max-width:819px){.hero .hanchor{left:clamp(20px,5vw,64px);right:auto;}.hero .hanchor .hmark{width:72px;height:72px;}.plate-granite{grid-template-columns:1fr;}.plate-story{max-width:100%;}.plate-story h3 br,.plate-story p br{display:none;}.glyph-preview{display:none;}.plate-label{flex-wrap:wrap;margin-bottom:24px;}.phone-set figcaption{letter-spacing:0;}.phone-set figure img{border-radius:10px;}}
-@media(max-width:460px){.hero .hanchor .hcap{gap:6px;}.hero .hanchor{gap:12px;}.portfolio-plate{padding:24px 16px;}.plate-frame .phone-set{gap:10px;}.plate-frame .phone-set figcaption{font-size:var(--t-cap);}}
+@media(max-width:460px){.hero .hanchor{gap:12px;}.portfolio-plate{padding:24px 16px;}.plate-frame .phone-set{gap:10px;}.plate-frame .phone-set figcaption{font-size:var(--t-cap);}}
 .glyph-preview .gl-neon{stroke:var(--glyph-neon);fill:none;stroke-width:2;}.glyph-preview .gl-faint{stroke:var(--paper45);fill:none;stroke-width:1;}.glyph-preview circle.gl-neon{fill:var(--glyph-neon);}.faq .h2{font-size:var(--t-title);text-transform:none;}
 
 .glyph-preview .gl-fg{stroke:var(--paper70);fill:none;stroke-width:1.5;}.glyph-preview .gl-fg.fill{fill:var(--paper70);}
@@ -916,9 +907,6 @@ body.cursor-on{cursor:auto;}body.cursor-on a,body.cursor-on button,body.cursor-o
 @media(prefers-reduced-motion:reduce){#about.intro-entering::before{display:none;}#about.intro-entering .intro-title,#about.intro-entering .intro-grid>div{animation:none;}}
 
 :root{--mark-code:#B18CF2;}
-.hw[data-seed=brand][aria-pressed=true],.hw[data-seed=brand]:hover{color:var(--accent);}
-.hw[data-seed=interface][aria-pressed=true],.hw[data-seed=interface]:hover{color:var(--cyan);}
-.hw[data-seed=code][aria-pressed=true],.hw[data-seed=code]:hover{color:var(--mark-code);}
 .hero .hanchor:hover .hmark circle{fill:currentColor;}
 
 
@@ -1035,7 +1023,7 @@ body.cursor-on{cursor:auto;}body.cursor-on a,body.cursor-on button,body.cursor-o
 .who{padding-block:clamp(64px,9vw,128px);}.hero-actions a:hover,.hero-actions a:focus-visible{background:var(--ground);color:var(--paper);border-color:var(--ground);}.hero-actions a{padding:14px 12px;transition:background var(--dur-1),color var(--dur-1);}
 @media(max-width:819px){.plate-kaido .home-clinic{overflow:visible;}.home-family{grid-template-columns:1.15fr .85fr;}.home-family figure:last-child{display:none;}.portfolio-plate{padding:24px;}.phone-set{gap:18px;}.phone-set figcaption{font-size:var(--t-note);}.wktext{max-width:38ch;}}
 
-/* SOTD candidate / Three registers. One deliberate instrument, no ambient loops. */
+/* Studio opening. */
 :root{--letter:0;--t-register:clamp(20px,2.1vw,30px);--t-index:clamp(46px,7.5vw,112px);}
 html{scroll-behavior:auto;}
 .hero{min-height:calc(100svh - 42px);isolation:isolate;}
@@ -1046,15 +1034,6 @@ html{scroll-behavior:auto;}
 .hero .hanchor{left:50%;right:auto;bottom:clamp(56px,8svh,100px);width:min(calc(100% - 128px),1152px);transform:translateX(-50%);display:grid;grid-template-columns:.38fr .62fr;gap:clamp(24px,5vw,72px);align-items:center;}
 .hero .hanchor .hmark{width:clamp(140px,16vw,220px);height:clamp(140px,16vw,220px);opacity:1;color:var(--paper45);margin:0;justify-self:start;}
 .hero .hanchor .hmark circle{fill:currentColor;transition:transform .55s var(--e-settle),fill .24s var(--e1),opacity .24s var(--e1);transform-origin:0 0;}
-.hero .hanchor .hcap{opacity:1;display:flex;align-items:stretch;gap:clamp(18px,3vw,44px);font-size:var(--t-register);font-family:var(--raveo);letter-spacing:-.025em;line-height:1.2;text-transform:none;white-space:normal;max-width:none;}
-.register-label{display:block;font:var(--t-cap)/1.6 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--paper45);margin-bottom:24px;}
-.hero .hanchor .hw{cursor:pointer;min-height:52px;padding:0 0 14px;text-align:left;display:flex;gap:12px;align-items:baseline;border-bottom:1px solid var(--line2);color:var(--paper70);}
-.hw span{font:var(--t-cap)/1 var(--mono);letter-spacing:0;color:var(--paper45);}
-.hero .hanchor .hw[aria-pressed=true]{border-color:currentColor;}
-.hero .hanchor .hw[data-seed=brand]:is(:hover,:focus-visible,[aria-pressed=true]){color:var(--accent);}
-.hero .hanchor .hw[data-seed=interface]:is(:hover,:focus-visible,[aria-pressed=true]){color:var(--cyan);}
-.hero .hanchor .hw[data-seed=code]:is(:hover,:focus-visible,[aria-pressed=true]){color:var(--mark-code);}
-.register-description{font-size:var(--t-body);line-height:1.5;margin-top:22px;color:var(--paper70);max-width:46ch;min-height:3em;}
 .hero .hanchor:hover .hmark circle{fill:currentColor;}
 #about{min-height:100svh;display:flex;align-items:center;position:relative;overflow:hidden;}
 #about>.wrap{width:100%;}
@@ -1108,8 +1087,7 @@ html{scroll-behavior:auto;}
 @media(max-width:819px){
 .hero .inner{padding-top:clamp(144px,24svh,230px);padding-bottom:340px;}
 .hero .hanchor{width:calc(100% - 40px);grid-template-columns:.32fr .68fr;gap:20px;bottom:44px;}
-.hero .hanchor .hmark{width:130px;height:130px;}.hero .hanchor .hcap{font-size:22px;gap:20px;}
-.hero .hanchor .hw{gap:8px;}.hw span{display:none;}.register-description{font-size:15px;}
+.hero .hanchor .hmark{width:130px;height:130px;}
 #about .intro-grid{grid-template-columns:1fr;gap:44px;align-items:start;}
 #about .intro-title{font-size:clamp(38px,6.5vw,58px);max-width:24ch;}
 #about .hero-actions{gap:16px;}
@@ -1132,13 +1110,12 @@ html{scroll-behavior:auto;}
 .hero .word{font-size:clamp(36px,13vw,60px);letter-spacing:-.04em;}
 .hero .hanchor{display:flex;flex-direction:column;align-items:flex-start;gap:24px;bottom:32px;}
 .hero .hanchor .hmark{width:128px;height:128px;}
-.register-label{margin-bottom:16px;font-size:10px;}.hero .hanchor .hcap{gap:26px;font-size:22px;}.register-description{max-width:36ch;min-height:3em;margin-top:16px;}
 .hero .inner{padding-top:clamp(140px,25svh,220px);padding-bottom:330px;}
 #about{padding-block:72px;}#about .intro-title{font-size:38px;}#about .hero-actions{gap:12px;}
 .portfolio-plate .phone-set{grid-template-columns:1fr;justify-items:center;gap:16px;}.portfolio-plate .phone-set figure{width:88%;max-width:280px;}.portfolio-plate .phone-set figure+figure{display:none;}.portfolio-plate .phone-set img{max-height:620px;}.portfolio-plate .phone-set figcaption{font-size:10px;line-height:1.5;}
 .wkissue{font-size:10px;letter-spacing:.06em;}.work-selector{gap:18px;flex-wrap:wrap;padding-block:16px;}.work-selector a{min-height:32px;gap:6px;}
 }
-@media(max-height:680px) and (min-width:820px){.hero .inner{padding-top:130px;padding-bottom:220px;}.hero .hanchor{bottom:32px;}.hero .hanchor .hmark{width:130px;height:130px;}.register-label{margin-bottom:12px;}.register-description{margin-top:12px;}}
+@media(max-height:680px) and (min-width:820px){.hero .inner{padding-top:130px;padding-bottom:220px;}.hero .hanchor{bottom:32px;}.hero .hanchor .hmark{width:130px;height:130px;}}
 @media(max-height:740px) and (max-width:460px){.hero .inner{padding-top:140px;padding-bottom:300px;}.hero .hanchor .hmark{width:96px;height:96px;}.hero .hanchor{gap:12px;bottom:20px;}}
 @media(prefers-reduced-motion:reduce){.hero .word span{animation:none;}.hero .hanchor .hmark circle{transition:none;}#about.intro-entering .intro-title{animation:none;}}
 
@@ -1146,19 +1123,18 @@ html{scroll-behavior:auto;}
 
 /* Reserve phone geometry before lazy image decode. */
 .portfolio-plate .phone-set img{width:100%;max-width:276px;height:auto;}
-
-/* Studio practice: a direct route from each discipline to its evidence. */
-.register-evidence{display:inline-flex;align-items:center;min-height:44px;font:var(--t-note)/1.5 var(--mono);color:var(--paper);border-bottom:1px solid var(--line2);padding:8px 0;}
-.register-evidence:is(:hover,:focus-visible){color:var(--cyan);border-color:currentColor;}
-.register-description{min-height:3em;margin-bottom:0;}
 .work-context{font-size:var(--t-lead);line-height:1.6;color:var(--paper70);max-width:60ch;margin:0 0 40px;}
 .home-clinic-detail{display:none;margin:32px 0 0;}
 .protocol-detail{position:relative;width:100%;aspect-ratio:390/198;overflow:hidden;background:var(--evidence-mat);}
 .protocol-detail img{position:absolute;left:-71.7948718%;top:-209.5959596%;width:328.2051282%!important;height:auto!important;max-width:none!important;max-height:none!important;}
 .home-clinic-detail figcaption{font:var(--t-note)/1.7 var(--mono);color:var(--paper70);margin-top:20px;}
-@media(max-width:600px){.home-clinic-detail{display:block;}.hero .inner{padding-bottom:400px;}.hero .hanchor{bottom:30px;}.hero .hanchor .hmark{width:108px;height:108px;}.register-label{margin-bottom:16px;}.register-description{margin-top:16px;}.hero .hanchor{gap:16px;}}
+@media(max-width:600px){.home-clinic-detail{display:block;}.hero .inner{padding-bottom:240px;}.hero .hanchor{bottom:30px;}.hero .hanchor .hmark{width:108px;height:108px;}.hero .hanchor{gap:16px;}}
 @media(max-height:650px) and (min-width:601px){.hero{min-height:670px;}}
 
+
+/* The practice is one line, readable without JavaScript or interaction. */
+.hero .hanchor .practice-line{font-family:var(--raveo);font-size:var(--t-register);font-weight:400;line-height:1.4;letter-spacing:-.02em;color:var(--paper70);}
+.hero .hanchor{pointer-events:none;}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -1194,7 +1170,7 @@ html{scroll-behavior:auto;}
   <section class="hero" style="border-top:0;padding-top:0" id="hero">
     <div class="fold-bg" aria-hidden="true"><div class="grid" id="hgrid"></div></div>
     <div class="vf" aria-hidden="true"><i></i><i></i><i></i><i></i><span class="tl a">51.5074&deg; N</span><span class="tl b">00.1278&deg; W</span></div>
-    <div class="hanchor" aria-label="Explore the studio practice"><svg class="hmark" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"><circle cx="27.78" cy="50" r="3.02"/><circle cx="72.22" cy="50" r="3.02"/><circle cx="35.19" cy="35.19" r="2.97"/><circle cx="64.81" cy="64.81" r="2.97"/><circle cx="57.41" cy="27.78" r="2.91"/><circle cx="42.59" cy="72.22" r="2.91"/><circle cx="57.41" cy="20.37" r="2.74"/><circle cx="42.59" cy="79.63" r="2.74"/><circle cx="57.41" cy="42.59" r="2.68"/><circle cx="42.59" cy="57.41" r="2.68"/><circle cx="64.81" cy="35.19" r="2.6"/><circle cx="35.19" cy="64.81" r="2.6"/><circle cx="42.59" cy="35.19" r="2.56"/><circle cx="57.41" cy="64.81" r="2.56"/><circle cx="20.37" cy="50" r="2.55"/><circle cx="79.63" cy="50" r="2.55"/><circle cx="72.22" cy="35.19" r="2.5"/><circle cx="27.78" cy="64.81" r="2.5"/><circle cx="12.96" cy="50" r="2.26"/><circle cx="87.04" cy="50" r="2.26"/><circle cx="20.37" cy="20.37" r="2.08"/><circle cx="79.63" cy="79.63" r="2.08"/><circle cx="27.78" cy="42.59" r="2.07"/><circle cx="72.22" cy="57.41" r="2.07"/><circle cx="87.04" cy="42.59" r="2.02"/><circle cx="12.96" cy="57.41" r="2.02"/><circle cx="20.37" cy="42.59" r="2.02"/><circle cx="79.63" cy="57.41" r="2.02"/><circle cx="50" cy="42.59" r="2.96"/><circle cx="50" cy="57.41" r="2.96"/></svg><div class="register-copy"><span class="register-label">One studio. Three disciplines.</span><div class="hcap" role="group" aria-label="Explore our disciplines"><button type="button" class="hw" data-seed="brand" aria-pressed="false"><span>01</span>Brand</button><button type="button" class="hw" data-seed="interface" aria-pressed="false"><span>02</span>Interface</button><button type="button" class="hw" data-seed="code" aria-pressed="false"><span>03</span>Code</button></div><p class="register-description" id="register-description">Brand, interface and code. One connected practice.</p><a class="register-evidence" id="register-evidence" href="#work">Explore selected work &darr;</a></div></div>
+    <div class="hanchor"><svg class="hmark" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"><circle cx="27.78" cy="50" r="3.02"/><circle cx="72.22" cy="50" r="3.02"/><circle cx="35.19" cy="35.19" r="2.97"/><circle cx="64.81" cy="64.81" r="2.97"/><circle cx="57.41" cy="27.78" r="2.91"/><circle cx="42.59" cy="72.22" r="2.91"/><circle cx="57.41" cy="20.37" r="2.74"/><circle cx="42.59" cy="79.63" r="2.74"/><circle cx="57.41" cy="42.59" r="2.68"/><circle cx="42.59" cy="57.41" r="2.68"/><circle cx="64.81" cy="35.19" r="2.6"/><circle cx="35.19" cy="64.81" r="2.6"/><circle cx="42.59" cy="35.19" r="2.56"/><circle cx="57.41" cy="64.81" r="2.56"/><circle cx="20.37" cy="50" r="2.55"/><circle cx="79.63" cy="50" r="2.55"/><circle cx="72.22" cy="35.19" r="2.5"/><circle cx="27.78" cy="64.81" r="2.5"/><circle cx="12.96" cy="50" r="2.26"/><circle cx="87.04" cy="50" r="2.26"/><circle cx="20.37" cy="20.37" r="2.08"/><circle cx="79.63" cy="79.63" r="2.08"/><circle cx="27.78" cy="42.59" r="2.07"/><circle cx="72.22" cy="57.41" r="2.07"/><circle cx="87.04" cy="42.59" r="2.02"/><circle cx="12.96" cy="57.41" r="2.02"/><circle cx="20.37" cy="42.59" r="2.02"/><circle cx="79.63" cy="57.41" r="2.02"/><circle cx="50" cy="42.59" r="2.96"/><circle cx="50" cy="57.41" r="2.96"/></svg><p class="practice-line">Brand. Interface. Code.</p></div>
     <div class="wrap inner">
       <h1 class="word" id="word" aria-label="cyber:cyber">CYBER:CYBER</h1>
 <p class="heroline" id="herobar" hidden aria-hidden="true"></p>
@@ -1514,33 +1490,6 @@ html{scroll-behavior:auto;}
  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
  var io=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(!entry.isIntersecting)return;var el=entry.target;io.unobserve(el);el.classList.add('motion-enter');setTimeout(function(){el.classList.remove('motion-enter');},850);});},{threshold:.12});
  document.querySelectorAll('.r-chapter,.belief').forEach(function(el){io.observe(el);});
-})();</script><script>
-/* Three registers: persistent circles, deterministic geometry, bounded response.
-   Hover previews; click or keyboard focus commits. Nothing runs while idle. */
-(function(){
- var root=document.querySelector('.hanchor'),svg=root&&root.querySelector('.hmark');
- if(!svg||!window.ccMark)return;
- var modes={brand:'Brand identities with a point of view.',interface:'Digital experiences with character.',code:'Ideas carried through to working code.'};
- var evidence=document.getElementById('register-evidence'),proof={brand:['work-ikarao.html','See Bittensor’s identity ↗'],interface:['work-kaido.html','Explore Kaido’s interface ↗'],code:['work-granite.html','Inside Granite’s native product ↗']};
- var text=document.getElementById('register-description'),buttons=Array.from(root.querySelectorAll('.hw'));
- var reduce=matchMedia('(prefers-reduced-motion:reduce)'),base=ccMark('cyber:cyber',6),current=base.pts,held=null;
- svg.replaceChildren();
- var dots=base.pts.map(function(pt){var dot=document.createElementNS('http://www.w3.org/2000/svg','circle');dot.setAttribute('cx',0);dot.setAttribute('cy',0);dot.setAttribute('r',1);svg.appendChild(dot);return dot;});
- function nearest(from,to){var free=to.slice();return from.map(function(p){var best=0,dist=Infinity;free.forEach(function(q,j){var d=(q.cx-p.cx)**2+(q.cy-p.cy)**2;if(d<dist){dist=d;best=j;}});return free.splice(best,1)[0];});}
- function render(seed,commit){
-  var target=seed?ccMark(seed,6):base,field=nearest(current.slice(0,-2),target.pts.slice(0,-2));
-  current=field.concat(target.pts.slice(-2));
-  dots.forEach(function(dot,i){var p=current[i];dot.style.transform='translate('+p.cx+'px,'+p.cy+'px) scale('+p.r+')';dot.style.fill=seed?({brand:'var(--accent)',interface:'var(--cyan)',code:'var(--mark-code)'})[seed]:'var(--paper45)';});
-  text.textContent=seed?modes[seed]:'Brand, interface and code. One connected practice.';
-  if(evidence){evidence.href=seed?proof[seed][0]:'#work';evidence.textContent=seed?proof[seed][1]:'Explore selected work ↓';}
-  if(commit){held=seed;buttons.forEach(function(button){button.setAttribute('aria-pressed',String(button.dataset.seed===seed));});}
- }
- buttons.forEach(function(button){button.addEventListener('mouseenter',function(){render(button.dataset.seed,false);});button.addEventListener('focus',function(){render(button.dataset.seed,true);});button.addEventListener('click',function(){render(button.dataset.seed,true);});});
- root.addEventListener('mouseleave',function(){render(held,false);});
- reduce.addEventListener('change',function(){render(held,false);});
- document.querySelectorAll('.word span').forEach(function(span,i){span.style.setProperty('--letter',i);});
- render(null,true);
-})();
-</script>
+})();</script><script>document.querySelectorAll('.word span').forEach(function(span,i){span.style.setProperty('--letter',i);});</script>
 </body>
 </html>

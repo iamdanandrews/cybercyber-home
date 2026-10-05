@@ -325,3 +325,10 @@ Dan requested completion of the website. Release it after the site checks and
 playback verification. Previous independent critique, physical-device and business
 outcome gates describe a broader award-readiness ambition; they must not be
 reported as performed, or used to leave the requested website release unfinished.
+
+## Less is more (5 October 2026)
+Dan rejected the numbered discipline selector as overly complex. The hero now
+uses one static line: “Brand. Interface. Code.” beside the studio dot mark. Keep
+it visible without JavaScript. The eyebrow, numbering, underlines, changing
+descriptions, secondary case link and selection/morphing interaction are removed.
+Do not reintroduce those layers to explain the three words.
