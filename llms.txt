@@ -4,7 +4,7 @@
 
 cyber:cyber is Dan Andrews’s independent studio in London. Granite, Kaido and Frame are products owned, designed and built by the studio; selected commissions sit alongside them. The work connects identity, interface and implementation. Scope, deliverables and the allocation of time are agreed for each engagement.
 
-The studio's owned products are central to its practice: Kaido (clinical rehab planning), Granite and Frame (native iOS apps), all designed and built in-house, plus one delivered client engagement (IKARAO, for Bittensor). The cases show product captures and generated identity output. Kaido screens are captured from the current running app using fictional local demo patients; they do not report clinical outcomes.
+The studio's owned products are central to its practice: Kaido (clinical rehab planning), Granite and Frame (native iOS apps), all designed and built in-house, plus one delivered client engagement (Bittensor). The cases show product captures and generated identity output. Kaido screens are captured from the current running app using fictional local demo patients; they do not report clinical outcomes.
 
 The site itself is hand-coded vanilla HTML, CSS and JavaScript with no build step and no framework — one self-contained file per page. That is a deliberate position, argued in the journal note "The hardest client was us".
 
@@ -20,7 +20,7 @@ The site itself is hand-coded vanilla HTML, CSS and JavaScript with no build ste
 - [Kaido](https://www.cybercyber.ai/work-kaido.html): Criteria-based rehab planning for physiotherapy clinics. Patients, rehabilitation plans and progress in one clinic workspace. An independent owned product in a private clinic pilot, with web and native iOS surfaces. It does not use Granite's engine.
 - [Granite](https://www.cybercyber.ai/work-granite.html): A native, on-device strength coach for athletes whose sport isn't lifting. Owned product at alpha stage, connecting weekly planning, coach input, session execution and on-device history.
 - [Frame](https://www.cybercyber.ai/work-frame.html): An owned native jiu-jitsu training journal at alpha stage. Session capture, training history and a position-based technique library form the intended product loop; learning and retention outcomes are not claimed.
-- [IKARAO](https://www.cybercyber.ai/work-ikarao.html): A generative identity system for Bittensor, combining art direction, deterministic drawing code, specimen sheets and application templates. Commissioned scope delivered; application examples include labelled concepts. The other three cases are owned products.
+- [Bittensor](https://www.cybercyber.ai/work-ikarao.html): A generative identity system for Bittensor, combining art direction, deterministic drawing code, specimen sheets and application templates. Commissioned scope delivered; application examples include labelled concepts. The other three cases are owned products.
 
 ## Journal
 

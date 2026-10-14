@@ -332,3 +332,6 @@ uses one static line: “Brand. Interface. Code.” beside the studio dot mark. 
 it visible without JavaScript. The eyebrow, numbering, underlines, changing
 descriptions, secondary case link and selection/morphing interaction are removed.
 Do not reintroduce those layers to explain the three words.
+
+## Public naming correction (14 October 2026)
+Dan requires Bittensor as the sole public name of this commissioned work. IKARAO is not a separate owned product. Remove it from visible labels and copy. Existing legacy paths and asset identifiers may remain to preserve links.
