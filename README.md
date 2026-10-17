@@ -1,6 +1,6 @@
 # cybercyber.ai
 
-The cyber:cyber studio site — an independent studio shaping brands and building distinctive digital products.
+The cyber:cyber studio site — Dan Andrews’s independent product design practice, combining studio projects, embedded contracts and owned products.
 
 **Live:** https://cybercyber.ai (Vercel; push to `main` deploys)
 
@@ -25,11 +25,10 @@ That is the finished position, not a staging post — an earlier note here propo
 
 Read [AGENTS.md](AGENTS.md). It documents the shared type ladder, the no-dead-even-grid rule, the deliberately-literal exceptions, and a list of traps that have each already cost real time — hidden-not-deleted elements the JS still dereferences, the reticle's two ids, the seal geometry that exists in two places, and the journal renumbering cascade.
 
-## Native product evidence
+## Product evidence
 
-Granite and Frame include recordings from the current native app repositories,
-captured on 4 October 2026 with isolated demo data. Playback is visitor-controlled
-and each recording has a text walkthrough. Frame’s lead and technique-detail
-images use full source frames with responsive delivery copies. Capture provenance,
-source commits and editing ranges are in
-`media/shots/native-walkthrough-provenance-20261004.json`.
+The selected portfolio leads with Frame and Kaido. Frame is released on iPhone and Android; Kaido remains in private pilot. Bittensor is supporting commissioned work. Granite's existing route is retained without a homepage or primary case-navigation slot.
+
+Current-source workflow recordings and screenshots use isolated fictional demo data. Their dated provenance lives alongside the versioned assets. Videos are visitor-controlled, preload none, and have text walkthroughs. Source screenshots remain unmodified; delivery derivatives preserve their aspect ratios. Product capability and release stage are distinct from measured customer outcomes.
+
+The 17 October portfolio release leads with Frame and Kaido and records the distinct source and demonstration stages alongside the media.

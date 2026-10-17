@@ -1,0 +1,256 @@
+{
+  "recorded": "2026-10-17",
+  "sourceCommit": "934d96e28c6f1143e37bfcef4a174e0c093a8a72",
+  "source": "Isolated copy of canonical Frame source plus the included item-driven draft editor, sibling edit/remove controls, and explicit add/edit action-mode correction. Canonical repository unchanged.",
+  "productPatch": "study-draft-sheet-fix.patch",
+  "capturePlatform": "iPhone16ProMax simulator / iOS18.2 / Xcode27.1",
+  "demo": "Fictional training entered through real UI. Existing FRAME_EPHEMERAL_STORE=1 test affordance isolates SwiftData in memory and disables CloudKit; blank gym backend, no account or patient/customer data. No cross-relaunch persistence or sync demonstrated.",
+  "appSourceInstrumentation": "No diagnostic suppression remains; FrameApp.swift restored byte for byte to canonical source.",
+  "rawFile": "frame-current-action-mode-original.mp4",
+  "rawSha256": "416f64b7a6102d8477cfe0c39c458419c11e0e562581fcc1bb533a0992161116",
+  "delivery": "frame-current-workflow-20261017.mp4",
+  "deliverySha256": "d8d7536eeedbde8ffa1445e6555f215f16aa9282ba2ec225e35610042e2764d2",
+  "sourceRangeSeconds": [
+    16.0181,
+    76.2265
+  ],
+  "rawCreationEpoch": 1792240632.0,
+  "rangeSelection": "Passed final UI run selected using native recording creation_time and test proof timestamps; earlier attempts excluded.",
+  "edits": "Single continuous source range; startup and test teardown removed. Original interaction timing. H264720px30fpsCRF20,yuv420p,faststart,noaudio. No recreated UI.",
+  "durationSeconds": 60.133333,
+  "sizeBytes": 3467334,
+  "screens": [
+    {
+      "file": "frame-current-capture-20261017.webp",
+      "sha256": "0d8c87355d99e1c2bac228772af87eeddc811b4d52f88813c74802ded72b2d9d",
+      "sourcePng": "C7AE998C-B0C8-4523-8D48-9AF5439A4B8D.png",
+      "sourcePngSha256": "1fb6be2523e21efa85182e8ccbe3494ce03b212b64823864bb98753128ed1606",
+      "screenshotEpoch": 1792240652.813,
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "transformation": "Complete native screenshot. Lossless WebP, no crop/repaint.",
+      "derivatives": [
+        {
+          "file": "frame-current-capture-560-20261017.webp",
+          "sha256": "74e34d36f4b6b66392b93bcd1e2bc5ae9183f3e42dc52bdf1d15e71eeb2e6256",
+          "resizeWidth": 560,
+          "encoding": "WebP quality90; no crop or recolouring"
+        },
+        {
+          "file": "frame-current-capture-840-20261017.webp",
+          "sha256": "c892866bf56391a09df0170c982ad3f11048b4fae6edaf4ebb50ca10ccc3fee8",
+          "resizeWidth": 840,
+          "encoding": "WebP quality90; no crop or recolouring"
+        }
+      ]
+    },
+    {
+      "file": "frame-current-detail-20261017.webp",
+      "sha256": "8d038cc7d59d82625ffb6a83f2cd631ef55f5819764fceb47207cd1eb74c51af",
+      "sourcePng": "F1310D2F-FE7F-4242-8862-7C516D842CF7.png",
+      "sourcePngSha256": "9b48245d072490e5a10cb7aa052dbda39cde16506973970943d122164ea88701",
+      "screenshotEpoch": 1792240670.347,
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "transformation": "Complete native screenshot. Lossless WebP, no crop/repaint.",
+      "derivatives": [
+        {
+          "file": "frame-current-detail-560-20261017.webp",
+          "sha256": "0b79adf8acb4314367a659d90b3039c66f03194c58ff0de01caf5653fa07abf7",
+          "resizeWidth": 560,
+          "encoding": "WebP quality90; no crop or recolouring"
+        },
+        {
+          "file": "frame-current-detail-840-20261017.webp",
+          "sha256": "f537de54c311e1e8b087e9f7764a632adbcd7ea5ee365e6ebe25b0425d725443",
+          "resizeWidth": 840,
+          "encoding": "WebP quality90; no crop or recolouring"
+        }
+      ]
+    },
+    {
+      "file": "frame-current-history-20261017.webp",
+      "sha256": "086a24335777fcde06723c172bc76e52809eb63aca7786ea14a7576c33c48f5f",
+      "sourcePng": "9F05E2B5-02F9-4FAA-BE8B-0713EB2E1DF9.png",
+      "sourcePngSha256": "0d2ec4a5131b7fd8e5f293cb5af4793c8946183cabd75ecfb82f1272251cabf0",
+      "screenshotEpoch": 1792240680.044,
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "transformation": "Complete native screenshot. Lossless WebP, no crop/repaint.",
+      "derivatives": [
+        {
+          "file": "frame-current-history-560-20261017.webp",
+          "sha256": "d2adb289f4874c90ad66a932ec1bbc8a4761425a64fc8116cb2d16c759c469eb",
+          "resizeWidth": 560,
+          "encoding": "WebP quality90; no crop or recolouring"
+        },
+        {
+          "file": "frame-current-history-840-20261017.webp",
+          "sha256": "be4be52fac9368a8964fed145040fb3ed35578323f70bfef3800957b7135b089",
+          "resizeWidth": 840,
+          "encoding": "WebP quality90; no crop or recolouring"
+        }
+      ]
+    },
+    {
+      "file": "frame-current-session-20261017.webp",
+      "sha256": "20c47fcc4e8164fea8575d8c05ea06e1c51ec3a95cce98c8143daa5672d50ce6",
+      "sourcePng": "6BB59E3D-5D19-4594-914A-3A32DADB770E.png",
+      "sourcePngSha256": "a7cc3f02694d59f830fc05c522516542d684e575cee9f5af28489930aad6f5cd",
+      "screenshotEpoch": 1792240683.572,
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "transformation": "Complete native screenshot. Lossless WebP, no crop/repaint.",
+      "derivatives": [
+        {
+          "file": "frame-current-session-560-20261017.webp",
+          "sha256": "029c8a2daae945589bc9163c3f96514b9ca4619da07db0f5592078a753012ee4",
+          "resizeWidth": 560,
+          "encoding": "WebP quality90; no crop or recolouring"
+        },
+        {
+          "file": "frame-current-session-840-20261017.webp",
+          "sha256": "993e053740e6a66aa6aad36d1148fd0af0d2fa2ba46e74b9d52357d0e1823bd1",
+          "resizeWidth": 840,
+          "encoding": "WebP quality90; no crop or recolouring"
+        }
+      ]
+    },
+    {
+      "file": "frame-current-edited-20261017.webp",
+      "sha256": "b1cac64a789f8e79e8f4506681b900322d17318253f4ab6b729bd1f664e19202",
+      "sourcePng": "5D5DDA81-F5EA-4FE1-B582-68767BD3AC39.png",
+      "sourcePngSha256": "7c5449449e97a49b5f27c6218b8cd6e891a1cc27979b5cc8988522ce0721508b",
+      "screenshotEpoch": 1792240698.579,
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "transformation": "Complete native screenshot. Lossless WebP, no crop/repaint.",
+      "derivatives": [
+        {
+          "file": "frame-current-edited-560-20261017.webp",
+          "sha256": "7bccab092e46ae63b5de22fab7c82e8931f870f3aeaabb11f0d0331565c6016b",
+          "resizeWidth": 560,
+          "encoding": "WebP quality90; no crop or recolouring"
+        },
+        {
+          "file": "frame-current-edited-840-20261017.webp",
+          "sha256": "0d958af8ca7dfaa204fc90dc5d3cce2a33fc9e2c297a4d1a1b15351d90cab368",
+          "resizeWidth": 840,
+          "encoding": "WebP quality90; no crop or recolouring"
+        }
+      ]
+    },
+    {
+      "file": "frame-current-game-20261017.webp",
+      "sha256": "c69f8df1ece82914469d93a6ee8d808eb867a9610d625358642b2346d71b1725",
+      "sourcePng": "1FD81938-8FCC-4FD4-B7D3-62281195F952.png",
+      "sourcePngSha256": "63007d27cc26adc4408497d4db0fa0bf992dd24159efa0f1c1014a65d3933be1",
+      "screenshotEpoch": 1792240702.218,
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "transformation": "Complete native screenshot. Lossless WebP, no crop/repaint.",
+      "derivatives": [
+        {
+          "file": "frame-current-game-560-20261017.webp",
+          "sha256": "534fd1510a8e33c2df06eab2069209f3c1e58ec123c273b301f7b79bad8a6aac",
+          "resizeWidth": 560,
+          "encoding": "WebP quality90; no crop or recolouring"
+        },
+        {
+          "file": "frame-current-game-840-20261017.webp",
+          "sha256": "68aefd2a2cbb75e6315f1ae40d10a296716b0074d151b58b855313e3448d1ff2",
+          "resizeWidth": 840,
+          "encoding": "WebP quality90; no crop or recolouring"
+        }
+      ]
+    },
+    {
+      "file": "frame-current-position-20261017.webp",
+      "sha256": "e1f89b4dca3402bf5968b6193449af445e98a28064be5cfbd7c2d14f305ad5a8",
+      "sourcePng": "B0A544F4-50FE-4383-88BA-D394F19BD848.png",
+      "sourcePngSha256": "aee3bc812684867133c20f94463aff09c1b215e64cdcffe1b4154ed2c252ea26",
+      "screenshotEpoch": 1792240706.226,
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "transformation": "Complete native screenshot. Lossless WebP, no crop/repaint.",
+      "derivatives": [
+        {
+          "file": "frame-current-position-560-20261017.webp",
+          "sha256": "fa1ac71d47fcc409bc7e34cce72437ee4d1291a42e46db99c76e1bb59f32fb10",
+          "resizeWidth": 560,
+          "encoding": "WebP quality90; no crop or recolouring"
+        },
+        {
+          "file": "frame-current-position-840-20261017.webp",
+          "sha256": "30c6cc6dbba14e42cb623f01abd35f62c447bc414bea7b4eebcf41b5b4a5aab8",
+          "resizeWidth": 840,
+          "encoding": "WebP quality90; no crop or recolouring"
+        }
+      ]
+    }
+  ],
+  "sourceProofTimes": {
+    "01-Home": 1792240649.018142,
+    "02-Quick-capture": 1792240652.8135529,
+    "03-Optional-detail": 1792240657.1945028,
+    "04-Technique-draft": 1792240670.3470778,
+    "05-Saved-home": 1792240675.9461942,
+    "06-History": 1792240680.044404,
+    "07-Retrieved-session": 1792240683.57195,
+    "08-Edited-detail": 1792240692.77436,
+    "09-Retrieved-edited-detail": 1792240698.579283,
+    "10-Position-library": 1792240702.2182941,
+    "11-Position-retrieval": 1792240706.226466
+  },
+  "verification": {
+    "test": "LogFlowUITests/testPortfolioCurrentCaptureEditAndRetrieve",
+    "tests": 1,
+    "failures": 0,
+    "durationSeconds": 65.331,
+    "assertions": "Add appears only for a new draft; Save changes appears only for an existing draft. Original cue loaded before editing; exact complete amended cue found after save; history and position retrieval. No cross-launch persistence claim.",
+    "losslessScreens": [
+      {
+        "file": "frame-current-capture-20261017.webp",
+        "identicalPixels": true
+      },
+      {
+        "file": "frame-current-detail-20261017.webp",
+        "identicalPixels": true
+      },
+      {
+        "file": "frame-current-history-20261017.webp",
+        "identicalPixels": true
+      },
+      {
+        "file": "frame-current-session-20261017.webp",
+        "identicalPixels": true
+      },
+      {
+        "file": "frame-current-edited-20261017.webp",
+        "identicalPixels": true
+      },
+      {
+        "file": "frame-current-game-20261017.webp",
+        "identicalPixels": true
+      },
+      {
+        "file": "frame-current-position-20261017.webp",
+        "identicalPixels": true
+      }
+    ]
+  }
+}

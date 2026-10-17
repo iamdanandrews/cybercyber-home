@@ -1,0 +1,94 @@
+{
+  "capturedAt": "2026-10-17",
+  "sourceCommit": "99660981a0c9fab3c16001d8187d91f921a47a13",
+  "capture": "Actual local browser, current source, dedicated disposable database, entirely fictional clinic and patient fixtures",
+  "desktopViewport": {
+    "width": 1600,
+    "height": 1000,
+    "deviceScaleFactor": 1
+  },
+  "mobileViewport": {
+    "width": 390,
+    "height": 844,
+    "deviceScaleFactor": 2
+  },
+  "video": {
+    "mp4DurationSeconds": 30.44,
+    "webmDurationSeconds": 30.96,
+    "mp4Edit": "Initial 0.5 seconds trimmed; no internal edits, speed changes or composited interface",
+    "flow": "Caseload \u2192 consultation \u2192 criterion reading 16 to 18 \u2192 real API save \u2192 reload verifies 18 \u2192 Plans \u2192 condition catalogue \u2192 Research \u2192 Sources"
+  },
+  "imageTreatment": "Unmodified native PNG captures. Chapter 3 CSS reading detail opens complete original in inspector.",
+  "assets": [
+    {
+      "file": "caseload.png",
+      "bytes": 109235,
+      "sha256": "9263ea0dd24eba12b5502220bed18221180a63d917bd2ab1748e9f2ea8cb7560"
+    },
+    {
+      "file": "criterion-saved.png",
+      "bytes": 142902,
+      "sha256": "297c7c0d960e07c3f4acdfa076ae654715f6abeaaf38c514ac50d9f36e210915"
+    },
+    {
+      "file": "library.png",
+      "bytes": 71271,
+      "sha256": "630df4cfe30ca20ba60914112dd1b4b600309eb742261b2b2c0f0eb8db979576"
+    },
+    {
+      "file": "mobile-caseload.png",
+      "bytes": 166109,
+      "sha256": "04a9d56cae957c3ef47706ea0b45811907ac6d33696cb6158f058fb4445b36f7"
+    },
+    {
+      "file": "mobile-consultation.png",
+      "bytes": 141099,
+      "sha256": "08e5411467806beedb3e0bc2ee66956ed5df488f888bae6369092063ff25e4e4"
+    },
+    {
+      "file": "mobile-research-sources.png",
+      "bytes": 212792,
+      "sha256": "716581f24a38282b1576e15df5bc2048d5044a33380e812564e126faa5537962"
+    },
+    {
+      "file": "patient-consultation.png",
+      "bytes": 138080,
+      "sha256": "6e20fd9a20f831933a03e2c65cb1ca73d62aea31adcd705c6755dfffb99ee207"
+    },
+    {
+      "file": "patient-plan.png",
+      "bytes": 147610,
+      "sha256": "6dc1de1fffb1eadc383d2afe33c39b2560eef823efdea630ad87b80e9b40d67d"
+    },
+    {
+      "file": "patient.png",
+      "bytes": 157716,
+      "sha256": "8ba492b43a468393237a6d1e60f80dad8ccb3851cb089a1696adc747441fd9af"
+    },
+    {
+      "file": "protocol-overview.png",
+      "bytes": 194108,
+      "sha256": "5ad8aa7b5ce066b8aba3b4d925ca04ac3f00015ef7b9e968d85749394c9653ab"
+    },
+    {
+      "file": "protocol-research.png",
+      "bytes": 189214,
+      "sha256": "b49e88fc5b5c6469de70a7a92766f5efbb9ba0a6148558f37aefa322261a64fe"
+    },
+    {
+      "file": "research-sources.png",
+      "bytes": 175280,
+      "sha256": "08158ff3858d9e9c7b436782ee7a787da8486deb590bc6310d91741d8f4c12ca"
+    },
+    {
+      "file": "workflow.mp4",
+      "bytes": 865961,
+      "sha256": "3097633d48cd8fdbd0c95db6b55a259fdcdb827dd7e012f0394d501b9c0fa0c3"
+    },
+    {
+      "file": "workflow.webm",
+      "bytes": 2373222,
+      "sha256": "12b291be205e7088770d378d7191f609f1e23e38635e1daf42b5ab10bf0fc021"
+    }
+  ]
+}

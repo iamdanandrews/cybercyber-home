@@ -1,0 +1,14 @@
+{
+  "captured": "2026-10-17",
+  "file": "bittensor-engine-20261017.png",
+  "sha256": "212507dfb42cf3f416b3c2f7f81b69b963ea90edb9864300506050173de80319",
+  "dimensions": [
+    2304,
+    1604
+  ],
+  "source": "Actual .engine-lab component on the working local portfolio page, running the delivered drawing code",
+  "method": "Playwright browser element screenshot, 1440px desktop viewport, device scale factor 2; no pixel edits or UI recreation",
+  "input": "SN-01",
+  "register": "Flat line",
+  "purpose": "Replace a historical tool screenshot containing the retired public name. Caption explicitly identifies the portfolio demonstration."
+}

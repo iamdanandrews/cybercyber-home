@@ -1,0 +1,46 @@
+{
+  "created": "2026-10-17",
+  "method": "Code-native HTML typography rendered using Chromium at 1200x630. Existing house Raveo variable font. No product imagery or invented UI.",
+  "source": "work/website-polish/build-social-cards.cjs",
+  "cards": [
+    {
+      "file": "home-social.png",
+      "width": 1200,
+      "height": 630,
+      "font": "Raveo, Arial",
+      "bounds": {
+        "x": 64,
+        "y": 206.03125,
+        "width": 1072,
+        "height": 162.34375
+      },
+      "label": "Studio projects · Embedded contracts"
+    },
+    {
+      "file": "frame-social.png",
+      "width": 1200,
+      "height": 630,
+      "font": "Raveo, Arial",
+      "bounds": {
+        "x": 64,
+        "y": 206.03125,
+        "width": 1072,
+        "height": 162.34375
+      },
+      "label": "Owned product · Released on iPhone and Android"
+    },
+    {
+      "file": "kaido-social.png",
+      "width": 1200,
+      "height": 630,
+      "font": "Raveo, Arial",
+      "bounds": {
+        "x": 64,
+        "y": 206.03125,
+        "width": 1072,
+        "height": 162.34375
+      },
+      "label": "Owned product · Private pilot"
+    }
+  ]
+}

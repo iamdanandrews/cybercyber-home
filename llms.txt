@@ -2,9 +2,9 @@
 
 > End-to-end product design for founders and teams. Work directly with Dan Andrews to shape, design and build digital products, from the first direction through to release.
 
-cyber:cyber is Dan Andrews’s independent studio in London. Granite, Kaido and Frame are products owned, designed and built by the studio; selected commissions sit alongside them. The work connects identity, interface and implementation. Scope, deliverables and the allocation of time are agreed for each engagement.
+cyber:cyber is Dan Andrews’s independent product design studio in London. Dan is a Senior / Lead Product Designer and studio owner, combining deep UX practice with hands-on implementation. Clients work directly with Dan on scoped studio projects or embedded contracts. Scope, deliverables and allocation of time are agreed for each engagement.
 
-The studio's owned products are central to its practice: Kaido (clinical rehab planning), Granite and Frame (native iOS apps), all designed and built in-house, plus one delivered client engagement (Bittensor). The cases show product captures and generated identity output. Kaido screens are captured from the current running app using fictional local demo patients; they do not report clinical outcomes.
+Frame and Kaido are the flagship owned products: Frame is a jiu-jitsu training journal released on iPhone and Android; Kaido is a clinical workspace in a private pilot. Bittensor is a delivered identity commission. Granite is an earlier alpha project retained as supporting historical work, outside the selected homepage cases. Product evidence is distinct from measured adoption or clinical outcomes.
 
 The site itself is hand-coded vanilla HTML, CSS and JavaScript with no build step and no framework — one self-contained file per page. That is a deliberate position, argued in the journal note "The hardest client was us".
 
@@ -17,10 +17,9 @@ The site itself is hand-coded vanilla HTML, CSS and JavaScript with no build ste
 
 ## Work
 
-- [Kaido](https://www.cybercyber.ai/work-kaido.html): Criteria-based rehab planning for physiotherapy clinics. Patients, rehabilitation plans and progress in one clinic workspace. An independent owned product in a private clinic pilot, with web and native iOS surfaces. It does not use Granite's engine.
-- [Granite](https://www.cybercyber.ai/work-granite.html): A native, on-device strength coach for athletes whose sport isn't lifting. Owned product at alpha stage, connecting weekly planning, coach input, session execution and on-device history.
-- [Frame](https://www.cybercyber.ai/work-frame.html): An owned native jiu-jitsu training journal at alpha stage. Session capture, training history and a position-based technique library form the intended product loop; learning and retention outcomes are not claimed.
-- [Bittensor](https://www.cybercyber.ai/work-ikarao.html): A generative identity system for Bittensor, combining art direction, deterministic drawing code, specimen sheets and application templates. Commissioned scope delivered; application examples include labelled concepts. The other three cases are owned products.
+- [Frame](https://www.cybercyber.ai/work-frame.html): Released jiu-jitsu training journal on iPhone and Android. Dan owns the product and designed its identity, capture and retrieval workflows and native iOS experience. The case explains quick capture, editable detail, chronological history and a position-based technique library.
+- [Kaido](https://www.cybercyber.ai/work-kaido.html): An owned clinical workspace in a private pilot, connecting caseloads, patient rehabilitation, exercise prescriptions and inspectable evidence. Recorded physiotherapist feedback informs the design. Demo captures use fictional patients.
+- [Bittensor](https://www.cybercyber.ai/work-ikarao.html): Commissioned identity and generative system, including deterministic drawing code, specimen sheets, templates and SVG export.
 
 ## Journal
 
@@ -42,8 +41,8 @@ The site itself is hand-coded vanilla HTML, CSS and JavaScript with no build ste
 
 ## Who
 
-- Dan Andrews — designer, London. A decade across brand, interface, motion and interaction, including Spotify, Epic Games and Dell, and early-stage teams before and since. Drawn to complex domains — the kind where you have to learn the subject before you can design in it. Personal site: [iamdanandrews.com](https://iamdanandrews.com).
-- There is no bench and no account team; the person who designs it is the person who builds it.
+- Dan Andrews — Senior / Lead Product Designer and studio owner, based in London, with a background in experimental psychology. Previous client and agency engagements include Epic Games, Risika and Dell.
+- Work directly with Dan on a scoped project or embedded contract. Contract scope, commitment and day rate are agreed separately from studio package prices.
 
 ## Contact
 

@@ -335,3 +335,25 @@ Do not reintroduce those layers to explain the three words.
 
 ## Public naming correction (14 October 2026)
 Dan requires Bittensor as the sole public name of this commissioned work. IKARAO is not a separate owned product. Remove it from visible labels and copy. Existing legacy paths and asset identifiers may remain to preserve links.
+
+
+## Flagship portfolio release (17 October 2026)
+
+Dan selected Frame and Kaido as the flagship cases. Homepage and primary case
+navigation now use Frame, Kaido, Bittensor; Granite remains an earlier-work route.
+The opening is shorter and the introduction establishes Dan’s Senior / Lead role,
+studio ownership, embedded-contract route and previous client/agency engagements.
+Do not describe prior agency engagements as cyber:cyber commissions.
+
+Frame is released on iPhone and Android. Its current portfolio film and captures
+show a newer local native candidate, including a saved-detail editor correction.
+That correction is not claimed to be present in the store release. Existing debug
+store isolation means the recording establishes same-session retrieval, not
+CloudKit or relaunch durability. Kaido remains in private pilot; its current web
+workflow and desktop/mobile captures use an isolated fictional clinic. Preserve
+clinical approval boundaries and distinguish practitioner input from effectiveness.
+
+The 17 October media are genuine captures with complete originals and responsive
+delivery versions. Keep visitor controls, preload none, full-size access, focus
+return and accurate candidate/demo labels. Do not infer adoption or business
+outcomes from release, captures or software verification.
