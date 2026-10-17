@@ -377,3 +377,15 @@ and wide desktop viewports. Keep the mark subordinate to the wordmark. Header
 and colon idle pulses are removed: motion follows navigation, inspection, input
 or playback, rather than looping at rest. Preserve native shared-image page
 transitions and reduced-motion behavior.
+
+## Product interface and film refinement (17 October 2026)
+
+The product films now use concise chronological edits at real interaction speed,
+with complete continuous recordings available separately. Keep the edits labelled;
+do not describe them as continuous takes. Kaido has a genuine mobile recording,
+not a cropped or shrunken desktop film. Maintain its responsive source and poster.
+Frame captures show a local native candidate with explicit technique editor modes,
+readable personal cues and reference suggestions behind a disclosure. Kaido touch
+control refinements remain a separate local product patch unless explicitly noted.
+Website publication does not release either product app. Preserve accurate stage
+labels and never publish local capture-session tokens or private fixture files.

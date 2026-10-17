@@ -1,0 +1,95 @@
+{
+  "createdAt": "2026-10-17",
+  "source": "../kaido-current-20261017/workflow.mp4",
+  "sourceCommit": "99660981a0c9fab3c16001d8187d91f921a47a13",
+  "treatment": "Eight chronological cuts, original interaction speed, no composited or altered interface, no audio. Loading waits and idle holds shortened. Full continuous recording remains linked.",
+  "sourceIntervalsSeconds": [
+    [
+      0,
+      1.8
+    ],
+    [
+      3,
+      7.6
+    ],
+    [
+      9,
+      11.3
+    ],
+    [
+      14,
+      14.8
+    ],
+    [
+      15.5,
+      17.1
+    ],
+    [
+      17.5,
+      19.9
+    ],
+    [
+      21,
+      23.5
+    ],
+    [
+      25,
+      29
+    ]
+  ],
+  "captureContext": "Current web app, isolated local fictional demonstration clinic; no production patient data; no application changes shown",
+  "mobile": {
+    "file": "mobile-workflow.mp4",
+    "source": "mobile-workflow-full.webm",
+    "viewport": [
+      390,
+      844
+    ],
+    "treatment": "Four chronological cuts at original speed removing local loading waits; direct URL navigation used once between reopened consultation and protocol. Actual current app; no candidate patch or composited UI.",
+    "flow": "caseload to patient;16to18 reading edit; save; reload; condition protocol; Research; Sources",
+    "sourceIntervalsSeconds": [
+      [
+        0.5,
+        1.7
+      ],
+      [
+        6.3,
+        10.7
+      ],
+      [
+        14.6,
+        16.5
+      ],
+      [
+        18.6,
+        26.3
+      ]
+    ],
+    "fixture": "Dedicated fictional clinic, three patients, normal test_auth_login and test_login database roles preserving row-level security",
+    "durationSeconds": 15.24,
+    "fullRecording": "mobile-workflow-full.mp4"
+  },
+  "assets": [
+    {
+      "file": "mobile-workflow.mp4",
+      "bytes": 429200,
+      "sha256": "8408bd7032b32ff44d7be51ba3f6a636260fb5a8a071299f1bc4e404242205ac"
+    },
+    {
+      "file": "workflow-edit.mp4",
+      "bytes": 843246,
+      "sha256": "ace86dac0ee3cc1db54e65105f91d57273081501c445d5d53ec40f3920775784"
+    },
+    {
+      "file": "mobile-workflow-full.mp4",
+      "bytes": 486007,
+      "sha256": "fce820b36281650cb87221cc4d8a74ab204e3302d90995a99cd9e8a3f0892178"
+    },
+    {
+      "file": "mobile-workflow-full.webm",
+      "bytes": 803695,
+      "sha256": "1d7e52e096eabe1f9dba49f2f1e42980c78d3832109067e7d678b913b37744fd"
+    }
+  ],
+  "desktopDurationSeconds": 20.04
+}
