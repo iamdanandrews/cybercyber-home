@@ -1176,6 +1176,15 @@ html{scroll-behavior:auto;}
 .intro-proof dt span{display:block;font-size:var(--t-note);}
 .intro-proof dd{margin:0;text-align:right;flex-shrink:0;}
 @media(max-width:819px){#about .intro-grid>h2,#about .intro-grid>div:not(.intro-proof),#about .intro-grid>.intro-proof{grid-column:auto;grid-row:auto;}#about .intro-grid>.intro-proof{margin-top:12px;}.intro-proof dl>div{flex-wrap:wrap;gap:4px 12px;}.intro-proof dd{text-align:left;}}
+
+/* Product-led opening: the work carries the introduction. */
+#about .intro-grid>div:not(.intro-proof){grid-row:auto;}
+#about .intro-grid{row-gap:24px;}
+#about{padding-block:clamp(36px,4vw,60px);}
+#work{padding-top:clamp(36px,4vw,60px);}
+@media(max-width:600px){.hero{min-height:310px;}.hero .inner{padding-top:90px;padding-bottom:100px;}.hero .hanchor .hmark{width:42px;height:42px;}.hero .hanchor{bottom:26px;}#work .shd{margin-bottom:0;}.wkrow{padding-top:28px;}}
+
+.who .cv-link{margin-left:28px;}@media(max-width:460px){.who .cv-link{margin-left:0;display:table;}}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
@@ -1220,7 +1229,7 @@ html{scroll-behavior:auto;}
 
   <a class="foldbreak" href="#about"><div class="wrap"><span class="fa"><span class="tk"></span>Product design &amp; build · Independent studio</span><span class="fb">Explore &darr;</span></div></a>
 
-  <section id="about" class="reveal"><div class="wrap"><div class="intro-grid"><h2 class="intro-title">End-to-end product design.</h2><div><p class="lead">I’m Dan Andrews, Senior / Lead Product Designer and founder of cyber:cyber. I help teams define complex products, design the experience and bring it into use. Work directly with me on a studio project or an embedded contract.</p><div class="hero-actions"><a href="#work">Explore the work &darr;</a><a href="#contact">Discuss your project &nearr;</a></div></div><div class="intro-proof"><p class="proof-label">Previous client and agency engagements</p><dl><div><dt>Epic Games <span>via Actioncy</span></dt><dd>Product Design Lead</dd></div><div><dt>Risika</dt><dd>Product Design Lead</dd></div><div><dt>Dell <span>via Wunderman Thompson</span></dt><dd>Senior UX Designer</dd></div></dl></div></div></div></section>
+  <section id="about" class="reveal"><div class="wrap"><div class="intro-grid"><h2 class="intro-title">End-to-end product design.</h2><div><p class="lead">I’m Dan Andrews, Senior / Lead Product Designer and founder of cyber:cyber. I design and build web and native products, from the product model to the detail of the interface. Work directly with me on a studio project or an embedded contract.</p><div class="hero-actions"><a href="#work">Explore the work &darr;</a><a href="#contact">Discuss your project &nearr;</a></div></div></div></div></section>
 
   <section id="work"><div class="wrap">
     <div class="shd"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Products &amp; commissions<span class="ix">01 / INDEX</span></div>
@@ -1232,7 +1241,7 @@ html{scroll-behavior:auto;}
      shared hairline grid, metadata cut to a line -- the section reads as one composed
      instrument panel, not four stacked banners. Uniform rows on rules; the proof
      paragraphs live in the case studies where they belong. -->
-    <p class="work-context">Two products I own, design and build. One delivered commission.</p>
+    
     <div class="ledger">
 <a class="wkrow" id="project-frame" href="work-frame.html"><div class="wkhead"><div><span class="wkissue">01 &middot; Owned product &middot; Released</span><h3 class="wkn" style="view-transition-name:t-frame">Frame</h3></div><div class="wktext"><div class="wkd">A jiu-jitsu journal connecting training history with technique retrieval.</div><div class="wkm">Product strategy &middot; UX &middot; Native iOS</div><span class="wkopen">View case study &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-frame"><div class="portfolio-plate plate-frame frame-product"><div class="plate-story"><span class="plate-kicker">Frame / native iOS</span><h3>Record the session.<br> Find the technique later.</h3><p>Training history organised by date. Technique knowledge organised by position.</p></div><div class="phone-set"><figure><img data-full-src="frame-current-edited-20261017.webp" srcset="frame-current-edited-560-20261017.webp 560w, frame-current-edited-840-20261017.webp 840w" sizes="(max-width:600px) 75vw, 300px" src="frame-current-edited-20261017.webp" width="1320" height="2868" alt="Frame’s local native candidate: a saved session with its amended coaching cue." loading="lazy" style="aspect-ratio:1320/2868"><figcaption>01 / Saved detail · Local candidate</figcaption></figure><figure><img data-full-src="frame-current-position-20261017.webp" srcset="frame-current-position-560-20261017.webp 560w, frame-current-position-840-20261017.webp 840w" sizes="(max-width:600px) 75vw, 300px" src="frame-current-position-20261017.webp" width="1320" height="2868" alt="Frame’s local native candidate: the same amended cue retrieved through Closed Guard." loading="lazy" style="aspect-ratio:1320/2868"><figcaption>02 / Position retrieval</figcaption></figure></div></div></div></a>
 <a class="wkrow" id="project-kaido" href="work-kaido.html"><div class="wkhead"><div><span class="wkissue">02 &middot; Owned product &middot; Pilot</span><h3 class="wkn" style="view-transition-name:t-kaido">Kaido</h3></div><div class="wktext"><div class="wkd">A clinical workspace connecting the caseload to each patient’s rehabilitation plan.</div><div class="wkm">Product design &middot; Web + iOS</div><span class="wkopen">View case study &nearr;</span></div></div><div class="wkmedia" style="view-transition-name:m-kaido"><div class="portfolio-plate plate-kaido"><div class="plate-label"><span>From the clinic to the detail of care</span><span>Kaido / web product</span></div><figure class="home-clinic"><picture><source media="(max-width:600px)" srcset="kaido-current-20261017/mobile-caseload.png" width="780" height="1688"><img src="kaido-current-20261017/caseload.png" width="1600" height="1000" alt="Kaido’s current caseload with three fictional patients at different review stages." loading="lazy"></picture><figcaption>Current clinic caseload · fictional demo data · captured 17 October 2026</figcaption></figure><figure class="home-clinic-detail"><div class="protocol-detail"><img src="kaido-current-20261017/research-sources.png" alt="Kaido’s current protocol research with disclosed evidence sources. Fictional demonstration." width="1600" height="1000" loading="lazy"></div><figcaption>Inside the protocol · inspectable research and sources<br>Explore the workflow in the case study &nearr;</figcaption></figure></div></div></a>
@@ -1248,7 +1257,7 @@ html{scroll-behavior:auto;}
         <p>Senior / Lead Product Designer and studio owner, with a background in experimental psychology. Previous client and agency engagements include Epic&nbsp;Games, Risika and Dell.</p>
         <p>My work spans developer tools, financial data and clinical software. I lead product definition and detailed UX, then stay close to how the product is built.</p>
         <p>You work directly with me on a scoped project or an embedded contract. I can lead the implementation or work alongside your engineers.</p>
-        <a class="wlink" href="mailto:hello@cybercyber.ai?subject=Product%20design%20contract">Discuss a contract &nearr;</a>
+        <a class="wlink" href="mailto:hello@cybercyber.ai?subject=Product%20design%20contract">Discuss a contract &nearr;</a> <a class="wlink cv-link" href="dan-andrews-cv-20261017.pdf" download="Dan-Andrews-CV.pdf">Download CV · PDF &darr;</a>
       </div>
     </div>
   </div></section>

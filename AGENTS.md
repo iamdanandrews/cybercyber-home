@@ -357,3 +357,14 @@ The 17 October media are genuine captures with complete originals and responsive
 delivery versions. Keep visitor controls, preload none, full-size access, focus
 return and accurate candidate/demo labels. Do not infer adoption or business
 outcomes from release, captures or software verification.
+
+
+## Less is more refinement (17 October 2026)
+
+Dan wants execution, product understanding, animation and craft to lead. Three
+cases are sufficient; do not add old-client case studies, process diagrams or
+long decision inventories as a credibility requirement. The opening has no
+résumé table. Previous roles remain in the biography and CV. Cases use short
+product explanations, direct workflow actions and concise accurate stage notes.
+Keep the real product media and restrained interaction motion; do not restore
+repeated forensic QA paragraphs or lists of absent outcomes.
