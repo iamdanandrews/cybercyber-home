@@ -38,10 +38,10 @@ header.solid{background:var(--ground);border-color:var(--line);}
 .menu a{color:var(--grey);transition:color .2s;}.menu a:hover{color:var(--paper);}
 @media(max-width:760px){.menu{display:none;}}
 .status{display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:var(--t-cap);letter-spacing:.1em;white-space:nowrap;margin-left:auto;}
-.status .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);flex:none;animation:statpulse 2.4s ease-in-out infinite;}
+.status .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);flex:none;animation:none;}
 .status .statl{color:var(--grey);}.status .statl:hover{color:var(--paper);}
 .status .clock{color:var(--grey);font-variant-numeric:tabular-nums;cursor:pointer;}
-@keyframes statpulse{0%,100%{opacity:1;}50%{opacity:.45;}}
+
 @media(prefers-reduced-motion:reduce){.status .dot{animation:none;}}
 .burger{display:none;flex-direction:column;gap:7px;align-items:center;background:none;border:0;padding:8px;cursor:pointer;}
 .burger span{width:6.5px;height:6.5px;border-radius:50%;background:var(--paper);transition:transform .3s var(--e1),border-radius .3s var(--e1),width .3s var(--e1),height .3s var(--e1);}

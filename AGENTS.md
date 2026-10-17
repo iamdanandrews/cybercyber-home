@@ -368,3 +368,12 @@ résumé table. Previous roles remain in the biography and CV. Cases use short
 product explanations, direct workflow actions and concise accurate stage notes.
 Keep the real product media and restrained interaction motion; do not restore
 repeated forensic QA paragraphs or lists of absent outcomes.
+
+
+## Live craft refinement (17 October 2026)
+
+The hero now uses a bounded mark size and stable composition across short tablet
+and wide desktop viewports. Keep the mark subordinate to the wordmark. Header
+and colon idle pulses are removed: motion follows navigation, inspection, input
+or playback, rather than looping at rest. Preserve native shared-image page
+transitions and reduced-motion behavior.
