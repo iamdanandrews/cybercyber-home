@@ -1,0 +1,61 @@
+[
+  {
+    "file": "frame.mp4",
+    "source": "frame-product-20261018/frame-workflow-edit-20261018.mp4",
+    "sourceSha256": "73e2f930b9726ac63c6fe997903301dee3fe08d6bb41ee34f2cdce3cb6b3362f",
+    "rangesSeconds": [
+      [
+        0,
+        3.6
+      ],
+      [
+        4.2,
+        15.7
+      ],
+      [
+        17.3,
+        24.4
+      ]
+    ],
+    "durationSeconds": 22.2,
+    "edit": "Chronological straight cuts at original speed; loading/fade or redundant dwell omitted. Existing full continuous recordings retained. No synthetic interface or acceleration."
+  },
+  {
+    "file": "kaido-mobile.mp4",
+    "source": "kaido-product-20261018/mobile-edited.mp4",
+    "sourceSha256": "39bd70f865de450c3b9d13a29822dba82dcf0eb218a9e0f0130ddd76baefb184",
+    "rangesSeconds": [
+      [
+        0,
+        1.8
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        11,
+        19.88
+      ]
+    ],
+    "durationSeconds": 16.68,
+    "edit": "Chronological straight cuts at original speed; loading/fade or redundant dwell omitted. Existing full continuous recordings retained. No synthetic interface or acceleration."
+  },
+  {
+    "file": "kaido-desktop.mp4",
+    "source": "kaido-product-20261018/desktop-edited.mp4",
+    "sourceSha256": "ea748751d5f79d4cd5eb4e88998967e1fe47ac34984bd044caafd466e24f9442",
+    "rangesSeconds": [
+      [
+        0,
+        1.8
+      ],
+      [
+        3.2,
+        21.64
+      ]
+    ],
+    "durationSeconds": 20.24,
+    "edit": "Chronological straight cuts at original speed; loading/fade or redundant dwell omitted. Existing full continuous recordings retained. No synthetic interface or acceleration."
+  }
+]

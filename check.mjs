@@ -91,7 +91,7 @@ for (const f of PAGES) {
 
   /* ---- every mobile menu exposes the same published cases ---- */
   if (!ALLOW.noHeader.includes(f)) {
-    const expected = ['work-frame.html', 'work-kaido.html', 'work-ikarao.html'];
+    const expected = ['work-kaido.html', 'work-frame.html', 'work-ikarao.html'];
     const panel = s.match(/<div class="mobile"[^>]*>([\s\S]*?)<\/div>/)?.[1] || '';
     const routes = [...panel.matchAll(/class="msub" href="([^"]+)"/g)].map(m => m[1]);
     if (JSON.stringify(routes) !== JSON.stringify(expected)) bad(f, 'mobile case routes missing or out of order');

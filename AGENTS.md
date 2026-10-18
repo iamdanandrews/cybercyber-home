@@ -404,3 +404,6 @@ controls have 44px targets. Clinical sign-off remains required. The new fictiona
 workflow records an 18-to-19 reading change with the separate Not yet status
 preserved. Use the unique frame-product-20261018 and kaido-product-20261018 media,
 including real mobile footage and separately accessible complete recordings.
+
+## Buyer journey refinement (18 October 2026)
+Kaido leads selected work and shared case navigation, followed by Frame and Bittensor. Preserve the Kaido → Frame → Bittensor → Kaido case cycle. Positioning leads on complex products and clear experiences, with end-to-end product design as the service category. Prices remain unchanged; offer copy specifies bounded questions, release scope and agreed partnership capacity. New product-edits-20261018 films remove loading/fade dwell at original speed; full continuous originals remain accessible.
