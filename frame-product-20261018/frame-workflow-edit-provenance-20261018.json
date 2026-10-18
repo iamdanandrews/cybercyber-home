@@ -215,26 +215,30 @@
       ]
     },
     {
-      "file": "frame-craft-game-20261018.webp",
-      "sha256": "32d97f8f78776b04eed044aa3e662411a9797f510a96f0ccdd78fe42c6ca3b73",
-      "sourceAttachment": "A9C935DE-3F06-4EE5-957D-76B4A1E1F549.png",
-      "sourceSha256": "8e1de8aa14dd4806ba793627ef9017db352db2be0849b39914fb71cd61d89124",
-      "timestamp": 1792306373.527,
+      "file": "frame-craft-game-settled-20261018.webp",
+      "sha256": "da8dbe50ef35abf0a50cff957b865c6fd71a6db336a3f6233aa8be69a1660b22",
+      "sourceRecording": "frame-craft-complete-20261018.mp4",
+      "sourceSha256": "f4dce101ed45e4ce20b3472b6f836c3a81a0e7edb371bf24b20f5adf3da76c1b",
+      "sourceTimeSeconds": 64,
       "dimensions": [
-        1320,
-        2868
+        720,
+        1564
       ],
-      "edits": "Complete native screenshot, lossless WebP. No repaint, crop or composite.",
+      "edits": "Complete settled frame extracted at original recording resolution, lossless WebP. No repaint, crop, composite or enlargement.",
+      "supersedes": {
+        "file": "frame-craft-game-20261018.webp",
+        "sha256": "32d97f8f78776b04eed044aa3e662411a9797f510a96f0ccdd78fe42c6ca3b73",
+        "sourceAttachment": "A9C935DE-3F06-4EE5-957D-76B4A1E1F549.png",
+        "sourceSha256": "8e1de8aa14dd4806ba793627ef9017db352db2be0849b39914fb71cd61d89124",
+        "timestamp": 1792306373.527,
+        "reason": "Earlier still captured the Game screen during its entrance transition; content was nearly invisible."
+      },
       "derivatives": [
         {
-          "file": "frame-craft-game-560-20261018.webp",
-          "sha256": "b70e9baf92f6565043bac579c6ef5484091aec24f236da8a7985e37cb094c63b",
-          "width": 560
-        },
-        {
-          "file": "frame-craft-game-840-20261018.webp",
-          "sha256": "0ea87e0946d66291a498a3309fda02c793ca90a3a9d8718ba3e5ca40ff77ea95",
-          "width": 840
+          "file": "frame-craft-game-settled-560-20261018.webp",
+          "sha256": "53f4c55deaf7ec977ba0b239c4bcc38880b3101186ff5af84365dc943621250d",
+          "width": 560,
+          "height": 1216
         }
       ]
     },
