@@ -1,0 +1,117 @@
+{
+  "captured": "2026-10-18",
+  "product": "Kaido clinician web candidate",
+  "baseCommit": "4db19e0e14d776930a1907e4aaafcb17b5517e21",
+  "data": "Fictional clinic and patients in a dedicated local test database. Normal practitioner role and RLS. No production records.",
+  "capture": "Actual rendered product. Locally served original production font files; no UI repainting or CSS injection.",
+  "edits": "Chronological cuts and viewport detail crops only. No acceleration or invented UI. Complete videos retain continuous workflow between stated trim points.",
+  "clinicalBoundary": "Reading update remains independent from clinician Met / Not yet status. No clinical outcome claimed.",
+  "media": {
+    "desktop": {
+      "completeRangeSeconds": [
+        1.087,
+        22.756
+      ],
+      "editedRangesSeconds": [
+        {
+          "start": 1.087,
+          "end": 5.444,
+          "crop": null
+        },
+        {
+          "start": 5.444,
+          "end": 12.263,
+          "crop": [
+            800,
+            500,
+            280,
+            60
+          ]
+        },
+        {
+          "start": 12.263,
+          "end": 14.629,
+          "crop": null
+        },
+        {
+          "start": 14.629,
+          "end": 22.756,
+          "crop": [
+            880,
+            550,
+            360,
+            75
+          ]
+        }
+      ],
+      "speed": 1,
+      "nativeViewport": [
+        1600,
+        1000
+      ],
+      "screenshotPixels": [
+        1600,
+        1000
+      ],
+      "verification": {
+        "errors": [],
+        "touchHeight": 26,
+        "met": "false",
+        "sourceCount": 5,
+        "overflow": false
+      }
+    },
+    "mobile": {
+      "completeRangeSeconds": [
+        1.07,
+        23.592
+      ],
+      "editedRangesSeconds": [
+        {
+          "start": 1.07,
+          "end": 12.748000000000001
+        },
+        {
+          "start": 15.382,
+          "end": 23.592
+        }
+      ],
+      "speed": 1,
+      "nativeViewport": [
+        390,
+        844
+      ],
+      "screenshotPixels": [
+        780,
+        1688
+      ],
+      "verification": {
+        "errors": [],
+        "touchHeight": 44,
+        "met": "false",
+        "sourceCount": 5,
+        "overflow": false
+      }
+    },
+    "files": {
+      "mobile-edited.mp4": {
+        "sha256": "39bd70f865de450c3b9d13a29822dba82dcf0eb218a9e0f0130ddd76baefb184",
+        "bytes": 607605
+      },
+      "desktop-edited.mp4": {
+        "sha256": "ea748751d5f79d4cd5eb4e88998967e1fe47ac34984bd044caafd466e24f9442",
+        "bytes": 1782790
+      },
+      "mobile-complete.mp4": {
+        "sha256": "3cfb2b6d24b9551345f9a38ed21fe8908cb32301a385a1bbfc477dd3cb95438a",
+        "bytes": 708560
+      },
+      "desktop-complete.mp4": {
+        "sha256": "6324ffc7443ca5edf4738d44466440a1e2ff38c59d194df28262e79f3edd4912",
+        "bytes": 1465179
+      }
+    }
+  },
+  "productCommit": "1ff8e82dd405838e64e35b3c751fb96f92a58dca",
+  "clinicalGateVerified": "Use this plan \u2192 select fictional patient \u2192 Adapt plan reaches the existing missing Kaido clinical review warning. No template plan submitted."
+}

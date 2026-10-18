@@ -389,3 +389,18 @@ readable personal cues and reference suggestions behind a disclosure. Kaido touc
 control refinements remain a separate local product patch unless explicitly noted.
 Website publication does not release either product app. Preserve accurate stage
 labels and never publish local capture-session tokens or private fixture files.
+
+## Product craft releases (18 October 2026)
+
+Frame's new captures show the current native candidate with a flatter session
+summary, readable personal cues, a subordinate reference disclosure and session
+actions behind a menu. Preserve accurate App Store release labels: a submitted
+or TestFlight build is not automatically publicly available. The Android product
+changes were committed to Google's production track as version 1.0.2, code 32.
+
+Kaido's clinician web update is deployed: plan findings precede adjuncts,
+qualifications stay visible, complete citations wrap, and mobile reading/status
+controls have 44px targets. Clinical sign-off remains required. The new fictional
+workflow records an 18-to-19 reading change with the separate Not yet status
+preserved. Use the unique frame-product-20261018 and kaido-product-20261018 media,
+including real mobile footage and separately accessible complete recordings.
