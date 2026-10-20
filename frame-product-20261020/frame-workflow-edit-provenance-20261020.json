@@ -1,0 +1,256 @@
+{
+  "recorded": "2026-10-20",
+  "canonicalSourceCommit": "7ddbfee0bd0182d8db4bb951ace5626a8671c0fb",
+  "candidate": "Current canonical source with flat 12-point card surfaces. Real capture of saved cue, session retrieval and position recall; app store release tracked separately.",
+  "capturePlatform": "iPhone16ProMax simulator / iOS18.2",
+  "demo": "Isolated fictional training. FRAME_EPHEMERAL_STORE=1 disables CloudKit and uses in-memory data; blank gym backend. Same-session retrieval only.",
+  "rawCapture": "Native simulator recording retained privately",
+  "rawSha256": "2a7a322a328f2dc41ce43a7923e624b8507be2dc2ceb1167c2be6cf4eeb0317c",
+  "rawCreationEpoch": 1792525353.0,
+  "proofEpochs": {
+    "01-Home": 1792525370.729804,
+    "02-Quick-capture": 1792525374.333715,
+    "03-Optional-detail": 1792525378.561078,
+    "04-Technique-draft": 1792525391.615891,
+    "05-Saved-home": 1792525397.141258,
+    "06-History": 1792525401.198786,
+    "07-Retrieved-session": 1792525405.219172,
+    "08-Edited-detail": 1792525420.981169,
+    "09-Retrieved-edited-detail": 1792525426.7007818,
+    "10-Position-library": 1792525429.93997,
+    "11-Position-retrieval": 1792525434.041142,
+    "12-Other-techniques": 1792525438.734523
+  },
+  "full": {
+    "file": "frame-craft-complete-20261020.mp4",
+    "sha256": "6ad44252ff7cfea2fc777b44a96e8f85387af377a076f41b3a2258186bc9fae3",
+    "durationSeconds": 66.166667,
+    "sizeBytes": 3524950,
+    "sourceRangeSeconds": [
+      16.729804039001465,
+      83.04114198684692
+    ],
+    "edits": "One continuous source range; startup/teardown removed. Original timing."
+  },
+  "edit": {
+    "file": "frame-workflow-edit-20261020.mp4",
+    "sha256": "d0073de0147b1cf1a245faafacd04390c44a6bfe0ca38d712b09746f79beb46c",
+    "durationSeconds": 18.666667,
+    "sizeBytes": 871227,
+    "sourceRangesSeconds": [
+      [
+        18.729804039001465,
+        22.333714962005615
+      ],
+      [
+        38.21589097976685,
+        44.94125800132751
+      ],
+      [
+        48.49878602027893,
+        53.21917200088501
+      ],
+      [
+        77.3399700164795,
+        83.04114198684692
+      ]
+    ],
+    "edits": "Four chronological straight cuts at original speed. Typing and waiting shortened by omission. No synthetic UI, compositing, playback acceleration or soundtrack."
+  },
+  "screens": [
+    {
+      "file": "frame-craft-capture-20261020.webp",
+      "sha256": "43f7796d9ffb0b341a60aa8741f553499e7ec5c4b8b24e08933ebe63759495c1",
+      "sourceAttachment": "80D441A9-F293-4B73-97BD-309C5F45BB38.png",
+      "sourceSha256": "3f599a8e59873dd316116b261688e32bd9ab786ee8be3e3c7e57e8bd572d2019",
+      "timestamp": 1792525374.333,
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "edits": "Complete native screenshot, lossless WebP. No repaint, crop or composite.",
+      "derivatives": [
+        {
+          "file": "frame-craft-capture-560-20261020.webp",
+          "sha256": "a3b41897d612bc729616527567593e29cd1cdb5592ea5d2b7d94c3cc49ef94cb",
+          "width": 560
+        },
+        {
+          "file": "frame-craft-capture-840-20261020.webp",
+          "sha256": "b3c6ef471231af2a961be9491c9ddfd7d075467363a0442f21105c82e84e22cc",
+          "width": 840
+        }
+      ]
+    },
+    {
+      "file": "frame-craft-detail-20261020.webp",
+      "sha256": "f74de1c89cd3b6e213c982346207806887043b7c72b0ea1230e131406cafdd20",
+      "sourceAttachment": "32A6953F-E929-4FEF-8BFF-40AF5CDB146C.png",
+      "sourceSha256": "6f677092af7c28558f47f8b8a3430864e18d39b4bb193755ceb7350a4bcb5d07",
+      "timestamp": 1792525391.615,
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "edits": "Complete native screenshot, lossless WebP. No repaint, crop or composite.",
+      "derivatives": [
+        {
+          "file": "frame-craft-detail-560-20261020.webp",
+          "sha256": "612f2ff9ed7ec095aa47e02046c1337dc68bd51f78540fefc13875eb1edc090e",
+          "width": 560
+        },
+        {
+          "file": "frame-craft-detail-840-20261020.webp",
+          "sha256": "36ddb9c2c829e29a3e934d27984d3d962f65c61a4f5b0c88bb397daf92ee38af",
+          "width": 840
+        }
+      ]
+    },
+    {
+      "file": "frame-craft-history-20261020.webp",
+      "sha256": "b9435f426d0cdc621ec9844dda31b735a87b245852a107745536e4b506ef8c37",
+      "sourceAttachment": "FDFED161-3BDB-4E24-B7F1-B4FBAEE201DD.png",
+      "sourceSha256": "9996002e9cc3ef495ac218bece9e671d927684baf227902fc7096962cb777587",
+      "timestamp": 1792525401.198,
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "edits": "Complete native screenshot, lossless WebP. No repaint, crop or composite.",
+      "derivatives": [
+        {
+          "file": "frame-craft-history-560-20261020.webp",
+          "sha256": "0cffba739f3015fd04be8b0d7d0d682459f366d65531ef0b6c5468d9f9d9b85b",
+          "width": 560
+        },
+        {
+          "file": "frame-craft-history-840-20261020.webp",
+          "sha256": "102b39b595f90b193ccec9bcb88bb9f9ca75ad0591e9814acaf17456343dd575",
+          "width": 840
+        }
+      ]
+    },
+    {
+      "file": "frame-craft-session-20261020.webp",
+      "sha256": "6b94dfdc3aa0996fc0ee852b77a5c132db651079b37801a15682b9a240c5a7f3",
+      "sourceAttachment": "AC89F5D3-274C-4B67-BF97-268E7EF1674E.png",
+      "sourceSha256": "a91bee98dc894f310d3b16f1e9fc88a0adb2700dd5faf3ee3a18491e9f790cf8",
+      "timestamp": 1792525405.219,
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "edits": "Complete native screenshot, lossless WebP. No repaint, crop or composite.",
+      "derivatives": [
+        {
+          "file": "frame-craft-session-560-20261020.webp",
+          "sha256": "79d922d3bdc4369dd81c81e05cb6677330883eb69a4c7c4522fc9f7418220f29",
+          "width": 560
+        },
+        {
+          "file": "frame-craft-session-840-20261020.webp",
+          "sha256": "8df22955ed8fb92bc71cb48c736033536019c3adc697886a2d2e7910363533b6",
+          "width": 840
+        }
+      ]
+    },
+    {
+      "file": "frame-craft-editor-20261020.webp",
+      "sha256": "50774510ef7e2b3865ac1c56e1110cc7c5ac80e3b388255327dd7e7167b8cf4b",
+      "sourceAttachment": "52F10AB5-12B9-4E95-99C2-76A0B9FBC953.png",
+      "sourceSha256": "fb1752c884a8bbd0ca11b94675a740e6d41e9f3701a35a96af79e385c7fa231c",
+      "timestamp": 1792525420.981,
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "edits": "Complete native screenshot, lossless WebP. No repaint, crop or composite.",
+      "derivatives": [
+        {
+          "file": "frame-craft-editor-560-20261020.webp",
+          "sha256": "6f19c89748bf898b69a8ebcde5464550b4c0e78c52e474b496eb1697c64fc2b9",
+          "width": 560
+        },
+        {
+          "file": "frame-craft-editor-840-20261020.webp",
+          "sha256": "51a4375f849f57d5440c4f93199be914ae2e60b5c20164a19ecdd04078e24fff",
+          "width": 840
+        }
+      ]
+    },
+    {
+      "file": "frame-craft-edited-20261020.webp",
+      "sha256": "6629ad4527fa21780dd8261e5a573915f5ab6f6783fac9bc02e2d48bea6da574",
+      "sourceAttachment": "E903E24A-D003-490A-9AF8-3D5A7CE59813.png",
+      "sourceSha256": "cfcd655a47af2e2c81300cd896c59c36a0665c17acb08ca8e748c7c153b3b159",
+      "timestamp": 1792525426.7,
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "edits": "Complete native screenshot, lossless WebP. No repaint, crop or composite.",
+      "derivatives": [
+        {
+          "file": "frame-craft-edited-560-20261020.webp",
+          "sha256": "39dbc8393ceb167e7fba2ef74729871d8cd2acc343b5c231ae29113252a1e4c0",
+          "width": 560
+        },
+        {
+          "file": "frame-craft-edited-840-20261020.webp",
+          "sha256": "5d3e7397e2626e3ed239088fdec50fda7055683a31cbc71b906a0625cab5c1bc",
+          "width": 840
+        }
+      ]
+    },
+    {
+      "file": "frame-craft-game-20261020.webp",
+      "sha256": "a06a426d6581d8c08f00aa30a92b68c4af2296626ed2b26079c49651e5797ad4",
+      "sourceAttachment": "129BA41F-5713-42E9-8D4D-587EA52A0E21.png",
+      "sourceSha256": "f0188bfa1acf4499d80445fd7b06ec27bd9d8d8c6095c6538afa73bff5e0130e",
+      "timestamp": 1792525429.94,
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "edits": "Complete native screenshot, lossless WebP. No repaint, crop or composite.",
+      "derivatives": [
+        {
+          "file": "frame-craft-game-560-20261020.webp",
+          "sha256": "c5694bd96d61d2b17ac4c2ba431144a9514896628c8f1e63ec1665fdbb15b428",
+          "width": 560
+        },
+        {
+          "file": "frame-craft-game-840-20261020.webp",
+          "sha256": "965469ecec3556706e57d497218f6ca89e2d7180e766c6a2e530b75db6f999e5",
+          "width": 840
+        }
+      ]
+    },
+    {
+      "file": "frame-craft-position-20261020.webp",
+      "sha256": "dc23b14333bca10792fea515183b3cae4cf187c6cffad6a4627348d29a91b817",
+      "sourceAttachment": "A363B59B-4BD0-4E09-94BD-24BAFA5165A7.png",
+      "sourceSha256": "b7260e4ac6b1acc09345e9d207a0454193fe09b95606e9c135944a5b134b23c0",
+      "timestamp": 1792525434.041,
+      "dimensions": [
+        1320,
+        2868
+      ],
+      "edits": "Complete native screenshot, lossless WebP. No repaint, crop or composite.",
+      "derivatives": [
+        {
+          "file": "frame-craft-position-560-20261020.webp",
+          "sha256": "0b2fa06611ce04039d393fa4a58f929c6068d26d967a640fa840c442f0a1654f",
+          "width": 560
+        },
+        {
+          "file": "frame-craft-position-840-20261020.webp",
+          "sha256": "ea7f1865b05ad580cd7c91bfc5979c40a2dddb3f415e2461bd21c97ff168fdc1",
+          "width": 840
+        }
+      ]
+    }
+  ],
+  "verification": "Native UI capture test passed; asserts add/edit actions and corrected cue retrieved through session and Closed Guard.",
+  "productCommit": "e15bbd5"
+}

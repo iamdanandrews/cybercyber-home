@@ -1,0 +1,27 @@
+{
+  "captured": "2026-10-20",
+  "environment": "Current Kaido web source with EvidenceSources refinement; isolated fictional clinic; native browser captures. Clinical approval logic unchanged.",
+  "edits": [
+    {
+      "file": "kaido-desktop.mp4",
+      "openingSource": "product-edits-20261020/kaido-desktop.mp4",
+      "openingRange": [
+        0,
+        8.5
+      ],
+      "closing": "Two real interface still captures from 20 October: finding (2s), expanded sources (3s). Straight cuts, no invented UI. Desktop reading-detail crop 880x550 at 360,75. Mobile full viewport.",
+      "sha256": "19ca76dca5ebc5a7f54496e4776ad5c805ae672442da4b701cb77d5f2c72e756"
+    },
+    {
+      "file": "kaido-mobile.mp4",
+      "openingSource": "product-edits-20261020/kaido-mobile.mp4",
+      "openingRange": [
+        0,
+        7
+      ],
+      "closing": "Two real interface still captures from 20 October: finding (2s), expanded sources (3s). Straight cuts, no invented UI. Desktop reading-detail crop 880x550 at 360,75. Mobile full viewport.",
+      "sha256": "c8da8661c211f9a098ae45bb5410e6b573a2c3a0f9599e9a384f0ba785c6a74f"
+    }
+  ],
+  "productCommit": "3875bdb8"
+}

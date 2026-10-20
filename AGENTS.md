@@ -407,3 +407,6 @@ including real mobile footage and separately accessible complete recordings.
 
 ## Buyer journey refinement (18 October 2026)
 Kaido leads selected work and shared case navigation, followed by Frame and Bittensor. Preserve the Kaido → Frame → Bittensor → Kaido case cycle. Positioning leads on complex products and clear experiences, with end-to-end product design as the service category. Prices remain unchanged; offer copy specifies bounded questions, release scope and agreed partnership capacity. New product-edits-20261018 films remove loading/fade dwell at original speed; full continuous originals remain accessible.
+
+## Final product craft pass (20 October 2026)
+Frame uses fresh native development-build captures with flat card surfaces and a verified save/edit/retrieve journey. Its app-store release is separate. Kaido’s current evidence UI removes repeated plan wording and discloses complete, spaced citations; the closing film details are explicitly labelled real interface stills, following the recorded workflow. Keep the captions visible with the mobile player and preserve the complete original recordings.
