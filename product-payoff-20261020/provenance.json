@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-20",
+  "purpose": "Outcome-led product edits. Full original recordings remain linked.",
+  "films": [
+    {
+      "file": "frame.mp4",
+      "sha256": "22132200a14e219e105df21739c47eb5467091feac7030b368f8e56db2d51778",
+      "durationSeconds": 16.0,
+      "bytes": 407027,
+      "sources": [
+        {
+          "path": "frame-product-20261020/frame-craft-complete-20261020.mp4",
+          "sha256": "6ad44252ff7cfea2fc777b44a96e8f85387af377a076f41b3a2258186bc9fae3"
+        }
+      ],
+      "edit": {
+        "rangesSeconds": [
+          [
+            3.6,
+            6.7
+          ],
+          [
+            27.2,
+            28.8
+          ],
+          [
+            32,
+            35.2
+          ],
+          [
+            60,
+            66.1
+          ]
+        ],
+        "order": "Capture, saved cue, session recall, position recall. Chronological straight cuts at original speed. Editing forms omitted. Final frame held for 2 seconds to read the cue. No synthetic UI, audio or speed changes.",
+        "cueTimesSeconds": [
+          0,
+          4.7,
+          7.9
+        ]
+      }
+    },
+    {
+      "file": "kaido-desktop.mp4",
+      "sha256": "8773178c17916e62d47dfb3e7aa666a0d06fa056d07b7a614e580e9b72484711",
+      "durationSeconds": 12.033333,
+      "bytes": 455757,
+      "sources": [
+        {
+          "path": "kaido-product-20261018/desktop-complete.mp4",
+          "sha256": "6324ffc7443ca5edf4738d44466440a1e2ff38c59d194df28262e79f3edd4912"
+        },
+        {
+          "path": "product-craft-20261020/kaido-desktop-finding.png",
+          "sha256": "414b47e25a4a68e7e2ea20b4c79a09e689bf7cf16d18c19c88ffad579d7046b1"
+        }
+      ],
+      "edit": {
+        "sequence": [
+          {
+            "videoRangeSeconds": [
+              0,
+              2.5
+            ],
+            "purpose": "Caseload priorities"
+          },
+          {
+            "currentInterfaceStillSeconds": 2.7,
+            "purpose": "Read the finding, with citations disclosed on demand"
+          },
+          {
+            "videoRangeSeconds": [
+              4,
+              7.2
+            ],
+            "purpose": "Record 18 to 19; keep Not yet status separate"
+          },
+          {
+            "videoRangeSeconds": [
+              9,
+              10
+            ],
+            "holdFinalFrameSeconds": 2.6,
+            "purpose": "Updated progress, clinician retains the readiness judgment"
+          }
+        ],
+        "timing": "Original-speed recorded actions, editorial order, loading/refresh states removed; current interface still and final reading hold explicitly documented. No invented clinical actions or sign-off.",
+        "readingDetail": "crop=768:480:280:70,scale=1600:1000",
+        "cueTimesSeconds": [
+          0,
+          2.5,
+          5.2
+        ]
+      }
+    },
+    {
+      "file": "kaido-mobile.mp4",
+      "sha256": "a248387fe39f7f87bda1d709247163bcecf6d70dede5dca326c106324149c8dd",
+      "durationSeconds": 12.033333,
+      "bytes": 213956,
+      "sources": [
+        {
+          "path": "kaido-product-20261018/mobile-complete.mp4",
+          "sha256": "3cfb2b6d24b9551345f9a38ed21fe8908cb32301a385a1bbfc477dd3cb95438a"
+        },
+        {
+          "path": "product-craft-20261020/kaido-mobile-finding.png",
+          "sha256": "feb7c533fef820c08c8bf532bb8ec924344730b2374dcfccf7c69cb1d42fbfd6"
+        }
+      ],
+      "edit": {
+        "sequence": [
+          {
+            "videoRangeSeconds": [
+              0,
+              2.5
+            ],
+            "purpose": "Caseload priorities"
+          },
+          {
+            "currentInterfaceStillSeconds": 2.7,
+            "purpose": "Read the finding, with citations disclosed on demand"
+          },
+          {
+            "videoRangeSeconds": [
+              3.8,
+              7
+            ],
+            "purpose": "Record 18 to 19; keep Not yet status separate"
+          },
+          {
+            "videoRangeSeconds": [
+              9,
+              10
+            ],
+            "holdFinalFrameSeconds": 2.6,
+            "purpose": "Updated progress, clinician retains the readiness judgment"
+          }
+        ],
+        "timing": "Original-speed recorded actions, editorial order, loading/refresh states removed; current interface still and final reading hold explicitly documented. No invented clinical actions or sign-off.",
+        "readingDetail": "Complete mobile viewport",
+        "cueTimesSeconds": [
+          0,
+          2.5,
+          5.2
+        ]
+      }
+    }
+  ]
+}

@@ -410,3 +410,15 @@ Kaido leads selected work and shared case navigation, followed by Frame and Bitt
 
 ## Final product craft pass (20 October 2026)
 Frame uses fresh native development-build captures with flat card surfaces and a verified save/edit/retrieve journey. Its app-store release is separate. Kaido’s current evidence UI removes repeated plan wording and discloses complete, spaced citations; the closing film details are explicitly labelled real interface stills, following the recorded workflow. Keep the captions visible with the mobile player and preserve the complete original recordings.
+
+## Product payoff edits and enquiry continuity (20 October 2026)
+The featured films are editorial product demonstrations, not continuous takes.
+Kaido moves from caseload priorities through a current finding into the recorded
+progress update, ending with the separate clinical readiness judgment. Loading
+and refresh states are omitted; the current finding is a labelled real still.
+Frame omits the editing forms and emphasises saved-session and position retrieval.
+Both edits hold their final real frame briefly for reading. Complete recordings
+remain linked, and source ranges/crops are recorded in product-payoff-20261020.
+The homepage contact handoff names the next step (name and email); the enquiry
+application uses the same orange contact surface and studio typography. Existing
+enquiry saving, consent, automatic email and booking behaviour remain in place.
