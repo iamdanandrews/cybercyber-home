@@ -1,0 +1,50 @@
+[
+  {
+    "file": "frame.mp4",
+    "source": "product-edits-20261018/frame.mp4",
+    "sourceSha256": "ca4097d306802632a45af0472f3345405cb33817ad17a06c9ca16f367b92fcba",
+    "rangesSeconds": [
+      [
+        0,
+        6.8
+      ],
+      [
+        10,
+        22.2
+      ]
+    ],
+    "edit": "Chronological cuts at original speed; redundant transitions and loading omitted. Complete recordings retained. Interface pixels unchanged."
+  },
+  {
+    "file": "kaido-desktop.mp4",
+    "source": "product-edits-20261018/kaido-desktop.mp4",
+    "sourceSha256": "0c9fc13384d2925d7b1065728314f5de6039ab3798d1cf430eee3b052a69004b",
+    "rangesSeconds": [
+      [
+        0,
+        8.5
+      ],
+      [
+        12,
+        20.24
+      ]
+    ],
+    "edit": "Chronological cuts at original speed; redundant transitions and loading omitted. Complete recordings retained. Interface pixels unchanged."
+  },
+  {
+    "file": "kaido-mobile.mp4",
+    "source": "product-edits-20261018/kaido-mobile.mp4",
+    "sourceSha256": "ef9fc6364a5e0c84d913dd3beedb23d65882f43269e0d67a7aa0bec13f7bc08b",
+    "rangesSeconds": [
+      [
+        0,
+        7
+      ],
+      [
+        9,
+        16.68
+      ]
+    ],
+    "edit": "Chronological cuts at original speed; redundant transitions and loading omitted. Complete recordings retained. Interface pixels unchanged."
+  }
+]
