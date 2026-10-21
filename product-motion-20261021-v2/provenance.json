@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-21",
+  "description": "Concise motion-directed edits for the Frame and Kaido case studies. Camera movement is an eased crop within real recorded interface pixels; all shown UI state, actions and clinical decisions come from source recordings.",
+  "motionDirection": {
+    "Frame": "One continuous visual idea: hold the saved Scissor Sweep in its session, ease toward the position index, then resolve on that same cue retrieved from Closed Guard. Movement settles before each meaningful state change; no decorative transition.",
+    "Kaido": "Move from clinic-level priority into the heel-raise review, gently tighten as 18 becomes 19 while preserving the separate Not yet state, open the qualified finding and sources, then return to the clinician\u2019s saved decision.",
+    "reducedMotion": "Parallel edits keep the same source actions and editorial order with a static crop; selected from prefers-reduced-motion and respected in the no-JavaScript source fallback."
+  },
+  "sources": {
+    "Frame": "frame-product-20261020/frame-craft-complete-20261020.mp4, via product-story-20261021 extracted source frames.",
+    "Kaido": "Existing product-stories-20261021/capture recordings and marks; fictional demonstration clinic and patients."
+  },
+  "durationsSeconds": {
+    "Frame": 13,
+    "Kaido": 16
+  },
+  "formats": {
+    "desktop": "1600x1000",
+    "mobileFrame": "780x960",
+    "mobileKaido": "780x1100",
+    "fps": 30
+  },
+  "files": {
+    "frame-desktop-reduced.mp4": {
+      "bytes": 362020,
+      "sha256": "ed843689bd262ccd4a30a0bd918e1322b1708a89ba8ec64b39ea1bf6f74114d4"
+    },
+    "frame-desktop.mp4": {
+      "bytes": 553392,
+      "sha256": "a760b51b4e09a6c8c8c012a4dbb7f9ad3a175c8655f3f4c8532ae1e3021c7c00"
+    },
+    "frame-mobile-reduced.mp4": {
+      "bytes": 231647,
+      "sha256": "064d6ccf435b5b4c54a49c3990ae26dd7d8246cd4f9e203364e737b9661d3d87"
+    },
+    "frame-mobile.mp4": {
+      "bytes": 414968,
+      "sha256": "5207ddf5d62f1e40a5b65e319ba922442658264308ae9d0833f583244afc14e2"
+    },
+    "kaido-desktop-reduced.mp4": {
+      "bytes": 364769,
+      "sha256": "7e8411c00b86913a32d5fd8c3baf6d63098db45e9fb970b86f257dcf02fc39b6"
+    },
+    "kaido-desktop.mp4": {
+      "bytes": 1018825,
+      "sha256": "d1c32c6f0e6beb4d868a6a847ca6198d45fc76108a8deb43b4be06e3d5b8ebaf"
+    },
+    "kaido-mobile-reduced.mp4": {
+      "bytes": 410990,
+      "sha256": "6ce7c1d30391b5ce0f51dec58b9f33053d0634dc7eb8370002da876b7f6e1221"
+    },
+    "kaido-mobile.mp4": {
+      "bytes": 919588,
+      "sha256": "89cf0fdadd0ae404798e46bd21cde534d78a37b5d9f8fa8ad26a19a03f203d58"
+    },
+    "frame-desktop-poster.webp": {
+      "bytes": 42144,
+      "sha256": "ca100cca08d9c8ed38f0e5634eee664a3707423218599bc2293016143f76237d"
+    },
+    "frame-mobile-poster.webp": {
+      "bytes": 26344,
+      "sha256": "43b5c82489e9e412b98f0675038a4c105038bcac5a46073a94eeb9c27f22ce6f"
+    },
+    "kaido-desktop-poster.webp": {
+      "bytes": 50708,
+      "sha256": "2b3a4b1a7454c81e55ac0ca6975fb4bd2343bd45ee1bc7f333eaa8104420681e"
+    },
+    "kaido-mobile-poster.webp": {
+      "bytes": 41612,
+      "sha256": "ef4b5ea3401babfedc7ebc914166f864415e7ca62fee0c53cd45c952390ddd0b"
+    }
+  }
+}

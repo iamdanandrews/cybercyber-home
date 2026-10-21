@@ -517,3 +517,16 @@ enlargement dialogs retain full real captures. Frame's Game detail uses the
 settled 60-second native source frame. The sticky chapter bar starts at 72px;
 chapter scroll-margin is 64px in addition to the document's 72px scroll-padding.
 Do not reintroduce the doubled offset or hide the bar behind the header.
+
+## Product-film motion pass (22 October 2026)
+The new `product-motion-20261021-v2` cuts supersede the prior no-added-camera
+direction. Frame follows one saved Scissor Sweep from its session, into the
+position index, then back to that same cue. Kaido moves from clinic priorities
+into the 18→19 measure, keeps “Not yet” visible as a separate clinician decision,
+opens the qualified finding and its sources, then returns to the review.
+Movement is an eased crop inside genuine source-recording pixels. Preserve the
+real interface, readable states and concise 13/16-second edits; no simulated UI,
+decorative wipes or unsupported outcome claims. Each device edition has a
+reduced-motion version with a static crop and unchanged source actions. The
+player respects `prefers-reduced-motion` in JavaScript and native-source fallback,
+and centres the whole film when play or seek receives focus below the sticky nav.

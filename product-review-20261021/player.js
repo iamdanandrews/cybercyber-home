@@ -9,6 +9,7 @@
   var clock = toolbar.querySelector('output');
   var error = document.querySelector('.film-error');
   var mobile = matchMedia('(max-width:819px)');
+  var reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   var product = video.dataset.productFilm;
   var expectedDuration = product === 'frame' ? 13 : 16;
   var pending = false, request = 0, viewed = false;
@@ -19,9 +20,10 @@
   }
   function select() {
     var device = mobile.matches ? 'mobile' : 'desktop';
-    var prefix = 'product-review-20261021/' + product + '-' + device + (product === 'kaido' && device === 'desktop' ? '-v2' : '');
+    var prefix = 'product-motion-20261021-v2/' + product + '-' + device;
+    if (reducedMotion.matches) prefix += '-reduced';
     video.src = prefix + '.mp4';
-    video.poster = prefix + '-poster.webp';
+    video.poster = prefix.replace(/-reduced$/, '') + '-poster.webp';
     video.width = mobile.matches ? 780 : 1600;
     video.height = mobile.matches ? (product === 'frame' ? 960 : 1100) : 1000;
     if (product === 'kaido') {
@@ -41,6 +43,9 @@
     seek.disabled = video.readyState < 1 || !video.seekable.length || video.seekable.end(video.seekable.length - 1) === 0;
     seek.setAttribute('aria-valuetext', time(video.currentTime) + ' of ' + time(duration));
     clock.textContent = time(video.currentTime) + ' / ' + time(duration);
+  }
+  function centerFilm() {
+    figure.scrollIntoView({block: 'center', behavior: 'instant'});
   }
   function play() {
     if (pending || !video.paused) return;
@@ -73,7 +78,15 @@
   mobile.addEventListener('change', function () {
     if (!viewed && !pending && video.paused && video.currentTime === 0) select();
   });
-  button.addEventListener('click', toggle);
+  reducedMotion.addEventListener('change', function () {
+    if (!viewed && !pending && video.paused && video.currentTime === 0) select();
+  });
+  button.addEventListener('click', function () {
+    // Keep the whole film in view when controls receive focus; browsers otherwise
+    // scroll only to the button and can tuck the opening frame behind the header.
+    centerFilm();
+    toggle();
+  });
   video.addEventListener('click', toggle);
   seek.addEventListener('input', function () {
     if (video.readyState < 1) return;
@@ -81,6 +94,7 @@
     video.currentTime = Number(seek.value);
     sync();
   });
+  seek.addEventListener('focus', centerFilm);
   ['timeupdate', 'loadedmetadata', 'pause', 'ended', 'seeked', 'progress', 'canplay'].forEach(function (event) {
     video.addEventListener(event, sync);
   });
