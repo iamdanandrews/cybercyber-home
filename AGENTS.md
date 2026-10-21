@@ -472,3 +472,25 @@ the full-height desktop sections, reduced-motion rules and bounded cleanup.
 The header and anchor offset share one height; fragment reloads align after
 font layout and browser scroll restoration. Tablet hero elements share the
 page grid, and compact-phone heading size is fluid rather than a sudden step.
+
+## Product presentation release (21 October 2026)
+The homepage now leads with legible native interface details: Kaido's recorded
+reading and separate clinical readiness decision, and Frame's same coaching cue
+in the session and position. These are explicitly framed details, not recreated
+UI. Mobile Kaido uses its own mobile capture. Preserve the original captures in
+the cases and the crop/source record in product-focus-20261021/provenance.json.
+
+The films lead both case studies, without a duplicate screenshot gallery before
+them. Frame is 13 seconds; Kaido is 16 seconds, with separately composed desktop
+and mobile files. They contain actual recorded actions, trims and reading holds;
+there is no added camera animation or autoplay. Full source recordings remain
+linked. The shared player preserves an active/paused session on resize, exposes
+play/pause/replay and an error fallback, and centres the film on an explicit play
+request. Keep all product-stage and fictional-data qualifications.
+
+All three cases return to the main contact section. Its brief is multiline and
+preserved in sessionStorage for returning visitors; Enter inserts a newline.
+The visitor explicitly continues to the existing enquiry form, which receives
+the brief in the URL fragment and removes it after reading. No automatic enquiry
+submission or email was added. The full-height desktop opening and paper section
+remain unchanged.

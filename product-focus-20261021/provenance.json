@@ -1,0 +1,139 @@
+{
+  "date": "2026-10-21",
+  "description": "Editorial product films using original interface pixels. Source actions at recorded speed, trims and reading holds; not continuous takes. No invented interface elements or adoption claims. Mobile uses separately captured mobile Kaido UI.",
+  "frame": {
+    "source": "frame-product-20261020/frame-craft-complete-20261020.mp4",
+    "duration": 13,
+    "ranges": [
+      {
+        "out": [
+          0,
+          3
+        ],
+        "source": [
+          55.5,
+          57.1
+        ],
+        "hold": 1.4
+      },
+      {
+        "out": [
+          3,
+          13
+        ],
+        "source": [
+          59,
+          66.1
+        ],
+        "hold": 2.9
+      }
+    ],
+    "stage": "iOS development build, same-session retrieval; store release separate"
+  },
+  "kaido": {
+    "source": "product-stories-20261021/provenance.json",
+    "duration": 16,
+    "sequence": [
+      "0\u20132.5 clinic priorities",
+      "2.5\u20137 patient reading, edit and save",
+      "7\u201310.3 finding with qualification",
+      "10.3\u201313 source disclosure",
+      "13\u201316 saved reading with separate readiness"
+    ],
+    "stage": "Private pilot, fictional demonstration clinic"
+  },
+  "motion": "Native recorded actions only. No autoplay, decorative camera motion or added transitions. The same files are suitable for reduced-motion users who explicitly request playback.",
+  "homepageDetails": {
+    "frame-session-detail.webp": {
+      "source": "frame-product-20261020/frame-craft-edited-20261020.webp",
+      "cropXYXY": [
+        0,
+        160,
+        1320,
+        1760
+      ]
+    },
+    "frame-position-detail.webp": {
+      "source": "frame-product-20261020/frame-craft-position-20261020.webp",
+      "cropXYXY": [
+        0,
+        160,
+        1320,
+        1160
+      ]
+    },
+    "kaido-review-detail.webp": {
+      "source": "kaido-product-20261018/desktop-criterion-saved.png",
+      "cropXYXY": [
+        296,
+        70,
+        1036,
+        536
+      ]
+    },
+    "kaido-review-mobile-v2.webp": {
+      "source": "21 October recorded mobile interface, final saved-reading frame (source clips: product-stories-20261021/kaido-mobile-source.mp4)",
+      "captureSha256": "12a5466bfcaa9e7f7c6d612e8ec0153aa8edc5d079b888c637a7662b013da962",
+      "cropXYXY": [
+        8,
+        48,
+        382,
+        458
+      ],
+      "deliverySize": [
+        748,
+        820
+      ]
+    }
+  },
+  "files": {
+    "kaido-mobile-poster.webp": {
+      "bytes": 52178,
+      "sha256": "088089fecabe3754e30632739dc845ba92057b9640c555a14e6cb40ad2c8cd9a"
+    },
+    "kaido-review-mobile-v2.webp": {
+      "bytes": 46090,
+      "sha256": "991bc910f7f3232aff07a80cf06646b06fb712839808df6963753bf0960c3a19"
+    },
+    "frame-desktop-poster.webp": {
+      "bytes": 40784,
+      "sha256": "8c3095d9bc110c994e46f4b42548567aa570e7a28f9dd7c41cde41059aafcfb1"
+    },
+    "frame-mobile-poster.webp": {
+      "bytes": 24970,
+      "sha256": "ecd85c6b60d43daa854ab584d529ca1f82a2e12ee1e2d410019a92141d2308ea"
+    },
+    "kaido-mobile.mp4": {
+      "bytes": 538397,
+      "sha256": "58dde637967a18acb4db878cc564a4dcc41ff235daf0b347bd0de7e419540791"
+    },
+    "frame-position-detail.webp": {
+      "bytes": 35314,
+      "sha256": "aac234e61c10ee813b8849c80f21f96b7eabd45e0c85cac3ca651d6d20d8a85a"
+    },
+    "frame-desktop.mp4": {
+      "bytes": 353669,
+      "sha256": "2608ee857650c580da177f74953992c8ab02d2f76552002b27b1ce116b6b0ac0"
+    },
+    "frame-session-detail.webp": {
+      "bytes": 56140,
+      "sha256": "4dfcfa263c0afeedfb7127ee017b24351d172fd837eb4f58ebec91eb7bd0eb5b"
+    },
+    "frame-mobile.mp4": {
+      "bytes": 269063,
+      "sha256": "b49787c3da4f6f89bf72ebae144bcac8843ee593f6c57321d805ef32679e995e"
+    },
+    "kaido-desktop.mp4": {
+      "bytes": 379956,
+      "sha256": "2eda479b7d912745ab14db13a1da1bb2bb118557ca8aa1724e16a96fd757e6dd"
+    },
+    "kaido-desktop-poster.webp": {
+      "bytes": 57410,
+      "sha256": "0ec86f8524c6c960878a6b9ab38494b8cb5352e999cd87987264f3381f219fa6"
+    },
+    "kaido-review-detail.webp": {
+      "bytes": 21088,
+      "sha256": "d33e1053c790394c083555a1c11ab0a142ee681cbaedff911441aa43ce98c7ac"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+(function(){
+var v=document.querySelector('video[data-product-film]');if(!v)return;
+var product=v.dataset.productFilm,mobile=matchMedia('(max-width:819px)');
+function select(){var device=mobile.matches?'mobile':'desktop',prefix='product-focus-20261021/'+product+'-'+device;v.src=prefix+'.mp4';v.poster=prefix+'-poster.webp';v.width=mobile.matches?780:1600;v.height=mobile.matches?(product==='frame'?1100:1200):1000;var full=document.querySelector('.workflow-full');if(full)full.href='product-stories-20261021/kaido-'+device+'-source.mp4';if(product==='kaido'){var fallback=document.querySelector('.native-error a');if(fallback)fallback.href='product-stories-20261021/kaido-'+device+'-source.mp4';}}
+select();mobile.addEventListener('change',function(){if(v.paused&&v.currentTime===0)select();});
+var button=document.querySelector('.native-play'),label=button.querySelector('b'),error=document.querySelector('.native-error'),pending=false,request=0;button.hidden=false;
+function sync(){label.textContent=pending?'Cancel loading':v.ended?'Replay film':v.paused?'Play film':'Pause film';button.setAttribute('aria-pressed',String(pending||!v.paused));}
+function play(){v.scrollIntoView({block:'center',behavior:'instant'});if(pending||!v.paused)return;var id=++request;pending=true;error.hidden=true;sync();v.play().then(function(){if(id!==request)return;pending=false;sync();}).catch(function(e){if(id!==request)return;pending=false;if(e.name!=='AbortError')error.hidden=false;sync();});}
+button.addEventListener('click',function(){if(pending||!v.paused){request++;pending=false;v.pause();sync();}else play();});
+v.addEventListener('playing',function(){pending=false;error.hidden=true;sync();});v.addEventListener('pause',sync);v.addEventListener('ended',sync);v.addEventListener('error',function(){request++;pending=false;error.hidden=false;sync();});
+var jump=document.querySelector('.workflow-jump');if(jump)jump.addEventListener('click',function(e){e.preventDefault();history.replaceState(null,'','#native-walkthrough');play();});
+var cue=document.querySelector('.film-cue');function caption(){var t=v.currentTime;cue.textContent=product==='frame'?(t<3?'Saved with the session.':t<6.4?'Find the position.':'The same cue, ready for next time.'):(t<2.5?'See who needs attention.':t<7?'Record progress without automatically clearing readiness.':t<10.3?'Read the qualification behind the recommendation.':t<13?'Inspect the published sources.':'Progress recorded. Readiness remains a clinical decision.');}v.addEventListener('timeupdate',caption);caption();sync();
+})();
