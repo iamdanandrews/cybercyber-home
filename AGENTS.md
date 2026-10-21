@@ -462,3 +462,13 @@ bounded cleanup. Mobile sections remain naturally sized for reading.
 Body copy stays sharp during section entrances; supporting headings remain
 readable while their weight and underline resolve. The paper mask is desktop
 only, so mobile readers never land on an empty introduction.
+
+## Opening motion refinement (21 October 2026)
+The full-screen paper mask has now been retired on desktop too: it hid the
+introduction on entry. Keep the words and enquiry action readable throughout.
+The two headline lines resolve in sequence, supporting copy settles, and only
+the CTA underline draws. Hero dots settle in symmetric rings, once. Preserve
+the full-height desktop sections, reduced-motion rules and bounded cleanup.
+The header and anchor offset share one height; fragment reloads align after
+font layout and browser scroll restoration. Tablet hero elements share the
+page grid, and compact-phone heading size is fluid rather than a sudden step.
