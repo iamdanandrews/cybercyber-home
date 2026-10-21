@@ -634,6 +634,9 @@ header{background:var(--ground);border-bottom:1px solid var(--line);}.nav{min-he
 .native-film .native-meta{margin:0;}.native-film details{margin:0;}.native-film a{color:inherit;}.native-play{display:inline-flex;align-items:center;gap:20px;padding:14px 0;border:0;border-bottom:1px solid var(--paper70);background:none;color:var(--paper);font:var(--t-body)/1.3 var(--sans);cursor:pointer;}.native-play b{font-weight:400;}.native-play span{font:var(--t-cap)/1.4 var(--mono);color:var(--paper70);}.native-play[hidden]{display:none;}.native-play:hover{color:var(--cyan);}
 .walkthrough{padding-top:32px;}.walkthrough>.wrap>h2,.walkthrough .walk-context{display:none;}.workflow-film{margin-top:20px;}.workflow-film .film-cue,.native-film .film-cue{font:var(--t-body)/1.5 var(--sans);min-height:0;color:var(--paper);}.native-error{font-size:var(--t-body);line-height:1.6;}.native-error[hidden]{display:none;}.r-heading .workflow-jump{min-height:44px;display:inline-flex;align-items:center;}
 @media(max-width:819px){.native-film video{aspect-ratio:39/55;}.workflow-film video{aspect-ratio:13/20;}.native-film video,.workflow-film video{max-height:calc(100svh - 148px);width:auto;max-width:100%;margin-inline:auto;}.native-film-layout>div{display:block;}.native-film .native-meta,.native-film details{margin-top:18px;}.native-film-layout>figure{grid-row:auto;}.workflow-film .film-cue{min-height:0;}}
+
+/* Reserve the player before poster or metadata arrives, including inside flex mats. */
+@media(max-width:819px){.native-film video{width:100%;max-width:min(100%,calc((100svh - 148px)*.70909));aspect-ratio:39/55;}.workflow-film video{width:100%;max-width:min(100%,calc((100svh - 148px)*.65));aspect-ratio:13/20;}}
 </style>
 <script>
 /* Vercel telemetry belongs to the hosted site, not local review servers. */

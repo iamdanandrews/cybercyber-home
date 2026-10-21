@@ -487,6 +487,9 @@ there is no added camera animation or autoplay. Full source recordings remain
 linked. The shared player preserves an active/paused session on resize, exposes
 play/pause/replay and an error fallback, and centres the film on an explicit play
 request. Keep all product-stage and fictional-data qualifications.
+The mobile video width is explicit, with a height-derived maximum and reserved
+aspect ratio. Do not restore width:auto inside the flex mat: a cold or missing
+poster can otherwise collapse the player before Play computes its scroll target.
 
 All three cases return to the main contact section. Its brief is multiline and
 preserved in sessionStorage for returning visitors; Enter inserts a newline.
