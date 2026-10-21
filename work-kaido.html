@@ -736,7 +736,7 @@ header{background:var(--ground);border-bottom:1px solid var(--line);}.nav{min-he
 /* One quiet, accessible film player. Controls never cover the product. */
 .product-film{padding:24px 0 56px;}
 .film-player{margin:0 auto;width:min(100%,calc((100svh - 212px)*1.6));}
-.film-player video{display:block;width:100%;height:auto;aspect-ratio:8/5;background:var(--s2);cursor:pointer;}
+.film-player video{display:block;width:100%;height:auto;aspect-ratio:8/5;object-fit:contain;background:var(--s2);cursor:pointer;}
 .film-toolbar{display:grid;grid-template-columns:68px minmax(44px,1fr) auto;gap:16px;align-items:center;border-bottom:1px solid var(--line2);padding:4px 0;}
 .film-toolbar[hidden]{display:none;}
 .film-toggle{min-height:48px;padding:8px 0;text-align:left;background:none;border:0;color:var(--paper);font:var(--t-body)/1.4 var(--sans);cursor:pointer;}
