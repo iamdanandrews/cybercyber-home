@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-20",
+  "purpose": "Legible product details, with editorial framing separate from native UI.",
+  "frame": {
+    "recording": "First 11.5s of prior documented payoff edit; original-speed capture and retrieval.",
+    "close": "4.5s editorial close: verbatim coaching cue and unaltered crop x32 y360 w1256 h380 of the current native capture. No invented UI.",
+    "cueTimes": [
+      0,
+      4.7,
+      7.9,
+      11.5
+    ]
+  },
+  "kaido": {
+    "sequence": "0\u20132s caseload; 2\u20136.8s editorial research detail card; 6.8\u201310s recorded 18-to-19 progress change; 10\u201314s recorded result with three-second final hold.",
+    "mobileCrops": [
+      "x30 y330 w328 h82: complete finding heading and both status badges",
+      "x30 y643 w328 h52: collapsed sources disclosure"
+    ],
+    "desktopCrops": [
+      "x376 y325 w848 h70: complete finding heading and both status badges",
+      "x376 y490 w848 h56: collapsed sources disclosure"
+    ],
+    "truth": "Two separate interface crops explicitly labelled as research details. Paragraph omitted from the film, not altered. Full finding remains in the case study. No sign-off or source-opening interaction implied."
+  },
+  "sources": [
+    {
+      "path": "product-payoff-20261020/frame.mp4",
+      "sha256": "22132200a14e219e105df21739c47eb5467091feac7030b368f8e56db2d51778"
+    },
+    {
+      "path": "frame-product-20261020/frame-craft-position-20261020.webp",
+      "sha256": "dc23b14333bca10792fea515183b3cae4cf187c6cffad6a4627348d29a91b817"
+    },
+    {
+      "path": "kaido-product-20261018/mobile-complete.mp4",
+      "sha256": "3cfb2b6d24b9551345f9a38ed21fe8908cb32301a385a1bbfc477dd3cb95438a"
+    },
+    {
+      "path": "kaido-product-20261018/desktop-complete.mp4",
+      "sha256": "6324ffc7443ca5edf4738d44466440a1e2ff38c59d194df28262e79f3edd4912"
+    },
+    {
+      "path": "product-craft-20261020/kaido-mobile-finding.png",
+      "sha256": "feb7c533fef820c08c8bf532bb8ec924344730b2374dcfccf7c69cb1d42fbfd6"
+    },
+    {
+      "path": "product-craft-20261020/kaido-desktop-finding.png",
+      "sha256": "414b47e25a4a68e7e2ea20b4c79a09e689bf7cf16d18c19c88ffad579d7046b1"
+    }
+  ],
+  "films": [
+    {
+      "file": "frame.mp4",
+      "sha256": "7a6511f9daa8e30e3d01cfe86c2763430ff2ff051d254296294984e0f201a968",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 720,
+          "height": 1564
+        }
+      ],
+      "format": {
+        "duration": "16.000000",
+        "size": "455308"
+      }
+    },
+    {
+      "file": "kaido-mobile.mp4",
+      "sha256": "81ad48359fdf476b912f3edff519ee255c277a4496eab92d1fb6afa3135be483",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 390,
+          "height": 844
+        }
+      ],
+      "format": {
+        "duration": "14.000000",
+        "size": "192217"
+      }
+    },
+    {
+      "file": "kaido-desktop.mp4",
+      "sha256": "f706b1a7b9bba77986f1cc27277edd43b3550fa293324c0be6df5f462d4aac4d",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1600,
+          "height": 1000
+        }
+      ],
+      "format": {
+        "duration": "14.000000",
+        "size": "362532"
+      }
+    }
+  ]
+}

@@ -422,3 +422,13 @@ remain linked, and source ranges/crops are recorded in product-payoff-20261020.
 The homepage contact handoff names the next step (name and email); the enquiry
 application uses the same orange contact surface and studio typography. Existing
 enquiry saving, consent, automatic email and booking behaviour remain in place.
+
+## Readable film details (20 October 2026)
+The current featured edits live in product-details-20261020. Frame retains the
+16-second capture/retrieve story and ends with a 4.5-second editorial close-up:
+the exact saved coaching cue, alongside an unaltered native-interface crop.
+Kaido uses 14 seconds and gives the finding/status pair and source disclosure
+a separate 4.8-second reading card. These are explicitly labelled interface
+details, not reconstructed app screens or simulated interactions. Preserve both
+qualification badges, the separate clinical judgment and the complete recordings.
+Source hashes, crop coordinates and timings are in the media provenance file.
