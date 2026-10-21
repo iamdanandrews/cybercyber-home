@@ -19,7 +19,7 @@
   }
   function select() {
     var device = mobile.matches ? 'mobile' : 'desktop';
-    var prefix = 'product-review-20261021/' + product + '-' + device;
+    var prefix = 'product-review-20261021/' + product + '-' + device + (product === 'kaido' && device === 'desktop' ? '-v2' : '');
     video.src = prefix + '.mp4';
     video.poster = prefix + '-poster.webp';
     video.width = mobile.matches ? 780 : 1600;

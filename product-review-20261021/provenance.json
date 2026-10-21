@@ -46,7 +46,8 @@
   "changes": [
     "Frame crops focus on saved cue, position selection and retrieval; incidental chart omitted from close-up.",
     "Kaido review crops omit the unrelated empty summary panel. The mobile sources detail contains all three original citations after disclosure; qualifications remain visible in the preceding finding.",
-    "Film controls use the same below-picture play/pause/replay, keyboard-operable seek and elapsed time. Native controls remain without JavaScript."
+    "Film controls use the same below-picture play/pause/replay, keyboard-operable seek and elapsed time. Native controls remain without JavaScript.",
+    "Desktop patient-review label has a clear gap above the interface crop."
   ],
   "homepageAndCaseCrops": {
     "kaido-review-mobile.webp": {
@@ -103,13 +104,13 @@
       "bytes": 230456,
       "sha256": "f7d5169b32328eeaec88f05d75a3c735c9f0a0ac27d469f86f386effce8e5b14"
     },
-    "kaido-desktop-poster.webp": {
-      "bytes": 50932,
-      "sha256": "b8f5eba48e67675676559c792081a5f9458c576dd7b3173749b3745640d6445b"
+    "kaido-desktop-v2-poster.webp": {
+      "bytes": 51112,
+      "sha256": "8149c24963040b8a857602254e23a75591a84c2d02cd95e6f40960f9314fbcba"
     },
-    "kaido-desktop.mp4": {
-      "bytes": 364864,
-      "sha256": "5462a842b794b27554d48ac5fd1c3e9fb066f0dc15746401f93108a50a255b62"
+    "kaido-desktop-v2.mp4": {
+      "bytes": 366070,
+      "sha256": "f4bedfb392eb423aa23f7a90b68bfb978bc9ea21a1f517e4c63aa0bd93ed3812"
     },
     "kaido-mobile-poster.webp": {
       "bytes": 39558,
@@ -132,8 +133,8 @@
       "sha256": "9f9e33e49f487e368d04a3f1c475b0b9b6365165b689818ff2065f857fbfab56"
     },
     "player.js": {
-      "bytes": 4152,
-      "sha256": "005e62cefa93b1ef4e60d4f6d7ac9dc8471b7911f8289fc324d3be9874bd5b1b"
+      "bytes": 4213,
+      "sha256": "20e1d41f5fbd236168c6925e4d763e21f06345ee7231363c140bf8264c018063"
     }
   }
 }
