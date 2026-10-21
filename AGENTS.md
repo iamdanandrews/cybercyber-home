@@ -446,3 +446,19 @@ product and caption together on small screens. Full originals remain accessible.
 The current films are product-stories-20261021. Frame is 14 seconds; Kaido is 16 seconds. Both are editorial edits of actual interfaces. Frame follows the same revised cue through save and retrieval. Kaido opens current source disclosures and records a fictional measurement without changing readiness. Uncropped Kaido source clips are an edited sequence, not a continuous take. Reduced-motion files suppress added camera/reveal motion.
 
 Meta search access is explicit in robots.txt. Homepage structured data connects the studio, designer and three visible offers; case metadata describes the real films and product stages. Keep prices and scope consistent with visible copy. Search eligibility is not evidence of recommendation, ranking or enquiries. No emails were sent as part of this pass.
+
+
+## Public bio and homepage simplification (21 October 2026)
+Dan now uses “designer and founder” in the public biography and metadata. The
+introduction has one project-enquiry CTA. Public CV/PDF downloads are removed;
+private application materials remain outside the deployed site. Bittensor's
+homepage specimen grows with its content so both captions remain inside the mat
+at desktop and mobile widths; do not reinstate a fixed aspect ratio there.
+
+The desktop opening is restored to a full viewport including its 48px Explore
+strip; the paper introduction is a second full-height section. Preserve their
+one-time wordmark/dot and paper/type entrances, reduced-motion alternatives and
+bounded cleanup. Mobile sections remain naturally sized for reading.
+Body copy stays sharp during section entrances; supporting headings remain
+readable while their weight and underline resolve. The paper mask is desktop
+only, so mobile readers never land on an empty introduction.

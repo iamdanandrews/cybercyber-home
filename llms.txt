@@ -2,7 +2,7 @@
 
 > End-to-end product design for founders and teams. Work directly with Dan Andrews to shape, design and build digital products, from the first direction through to release.
 
-cyber:cyber is Dan Andrews’s independent product design studio in London. Dan is a Senior / Lead Product Designer and studio owner, combining deep UX practice with hands-on implementation. Clients work directly with Dan on scoped studio projects or embedded contracts. Scope, deliverables and allocation of time are agreed for each engagement.
+cyber:cyber is Dan Andrews’s independent product design studio in London. Dan is a designer and founder, combining deep UX practice with hands-on implementation. Clients work directly with Dan on scoped studio projects or embedded contracts. Scope, deliverables and allocation of time are agreed for each engagement.
 
 Kaido and Frame are the flagship owned products: Frame is a jiu-jitsu training journal released on iPhone and Android; Kaido is a clinical workspace in a private pilot. Bittensor is a delivered identity commission. Granite is an earlier alpha project retained as supporting historical work, outside the selected homepage cases. Product evidence is distinct from measured adoption or clinical outcomes.
 
@@ -43,7 +43,7 @@ The site itself is hand-coded vanilla HTML, CSS and JavaScript with no build ste
 
 ## Who
 
-- Dan Andrews — Senior / Lead Product Designer and studio owner, based in London, with a background in experimental psychology. Previous client and agency engagements include Epic Games, Risika and Dell.
+- Dan Andrews — designer and founder, based in London, with a background in experimental psychology. Previous client and agency engagements include Epic Games, Risika and Dell.
 - Work directly with Dan on a scoped project or embedded contract. Contract scope, commitment and day rate are agreed separately from studio package prices.
 
 ## Contact
