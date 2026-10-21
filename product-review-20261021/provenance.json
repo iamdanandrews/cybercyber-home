@@ -1,0 +1,139 @@
+{
+  "date": "2026-10-21",
+  "description": "Mobile client-review refinement. Actual interface pixels, recorded actions, trims and reading holds; no new UI or outcome evidence. Complete recordings and source images remain accessible.",
+  "sourceProvenance": "product-focus-20261021/provenance.json",
+  "frame": {
+    "source": "frame-product-20261020/frame-craft-complete-20261020.mp4",
+    "duration": 13,
+    "ranges": [
+      {
+        "out": [
+          0,
+          3
+        ],
+        "source": [
+          55.5,
+          57.1
+        ],
+        "hold": 1.4
+      },
+      {
+        "out": [
+          3,
+          13
+        ],
+        "source": [
+          59,
+          66.1
+        ],
+        "hold": 2.9
+      }
+    ],
+    "stage": "iOS development build, same-session retrieval; store release separate"
+  },
+  "kaido": {
+    "source": "product-stories-20261021/provenance.json",
+    "duration": 16,
+    "sequence": [
+      "0\u20132.5 clinic priorities",
+      "2.5\u20137 patient reading, edit and save",
+      "7\u201310.3 finding with qualification",
+      "10.3\u201313 source disclosure",
+      "13\u201316 saved reading with separate readiness"
+    ],
+    "stage": "Private pilot, fictional demonstration clinic"
+  },
+  "changes": [
+    "Frame crops focus on saved cue, position selection and retrieval; incidental chart omitted from close-up.",
+    "Kaido review crops omit the unrelated empty summary panel. The mobile sources detail contains all three original citations after disclosure; qualifications remain visible in the preceding finding.",
+    "Film controls use the same below-picture play/pause/replay, keyboard-operable seek and elapsed time. Native controls remain without JavaScript."
+  ],
+  "homepageAndCaseCrops": {
+    "kaido-review-mobile.webp": {
+      "full": "kaido-review-full-mobile.webp",
+      "cropXYXY": [
+        8,
+        222,
+        382,
+        444
+      ]
+    },
+    "kaido-review-desktop.webp": {
+      "full": "kaido-product-20261018/desktop-criterion-saved.png",
+      "cropXYXY": [
+        296,
+        312,
+        1036,
+        536
+      ]
+    },
+    "frame-game-detail.webp": {
+      "full": "product-review-20261021/frame-game-full.webp",
+      "cropXYXY": [
+        0,
+        100,
+        720,
+        520
+      ],
+      "source": "frame-product-20261020/frame-craft-complete-20261020.mp4 at 60 seconds"
+    }
+  },
+  "files": {
+    "frame-desktop-poster.webp": {
+      "bytes": 40784,
+      "sha256": "8c3095d9bc110c994e46f4b42548567aa570e7a28f9dd7c41cde41059aafcfb1"
+    },
+    "frame-desktop.mp4": {
+      "bytes": 355100,
+      "sha256": "595719be06bdf3f537c0c5958ab0e68725b41d1a423d5d5adfd9fa30833d1f1e"
+    },
+    "frame-game-detail.webp": {
+      "bytes": 11272,
+      "sha256": "dce0a3f545b01bff81e50dc549ce598a8a7f20d3c3e5a0c5021863eb21e247c5"
+    },
+    "frame-game-full.webp": {
+      "bytes": 68088,
+      "sha256": "c5d2ad9171b18e4c3c698c242f2f4d920bd1f263c7bcfa8422cf12b0c718650c"
+    },
+    "frame-mobile-poster.webp": {
+      "bytes": 24780,
+      "sha256": "ccccf2f03157e4257fad7fcb0a42cd0ce705e32a24b97135d16a9c00e93efb87"
+    },
+    "frame-mobile.mp4": {
+      "bytes": 230456,
+      "sha256": "f7d5169b32328eeaec88f05d75a3c735c9f0a0ac27d469f86f386effce8e5b14"
+    },
+    "kaido-desktop-poster.webp": {
+      "bytes": 50932,
+      "sha256": "b8f5eba48e67675676559c792081a5f9458c576dd7b3173749b3745640d6445b"
+    },
+    "kaido-desktop.mp4": {
+      "bytes": 364864,
+      "sha256": "5462a842b794b27554d48ac5fd1c3e9fb066f0dc15746401f93108a50a255b62"
+    },
+    "kaido-mobile-poster.webp": {
+      "bytes": 39558,
+      "sha256": "59c89af2182910fb18be8f4a0b41b0f70300044838ae3474c37eb0d9b0b5f8f6"
+    },
+    "kaido-mobile.mp4": {
+      "bytes": 401799,
+      "sha256": "36240a510198796d6a2d01d00eafcaacc92accdbc57048e9d18d96c71fe0da44"
+    },
+    "kaido-review-desktop.webp": {
+      "bytes": 10432,
+      "sha256": "334798190ac9525311f98de2b02b5968bd5cdc113592d28a7205cbcefa13c15b"
+    },
+    "kaido-review-full-mobile.webp": {
+      "bytes": 73040,
+      "sha256": "34f779a9c3333eb5af0d9aa577a0f4fcaae00c1596c267b97985f96da349d5a5"
+    },
+    "kaido-review-mobile.webp": {
+      "bytes": 32902,
+      "sha256": "9f9e33e49f487e368d04a3f1c475b0b9b6365165b689818ff2065f857fbfab56"
+    },
+    "player.js": {
+      "bytes": 4152,
+      "sha256": "005e62cefa93b1ef4e60d4f6d7ac9dc8471b7911f8289fc324d3be9874bd5b1b"
+    }
+  }
+}

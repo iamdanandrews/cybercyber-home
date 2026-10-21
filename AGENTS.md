@@ -497,3 +497,23 @@ The visitor explicitly continues to the existing enquiry form, which receives
 the brief in the URL fragment and removes it after reading. No automatic enquiry
 submission or email was added. The full-height desktop opening and paper section
 remain unchanged.
+
+## Mobile client review (21 October 2026)
+Current films and player are in product-review-20261021. Frame remains 13 seconds,
+Kaido 16. Mobile film compositions now focus on the relevant task: Frame omits
+the incidental chart; Kaido's final review separates the recorded 19 from the
+unchanged Not yet decision. Source citations appear as their own reading detail.
+The complete sources and recording qualifications remain in About this recording.
+
+Both players use one toolbar below the picture: play/pause/replay, elapsed time,
+and a keyboard-operable timeline. Native controls remain the no-JavaScript
+fallback. Keep the seek control disabled until a seekable media range exists.
+The local preview needs HTTP byte-range support for Safari/WebKit seeking; a
+SimpleHTTPServer without ranges can report duration but a zero-length seekable
+range. Verify seeking against a range-capable server or production.
+
+Kaido's review stills and Frame's Game/position stills are focused details; their
+enlargement dialogs retain full real captures. Frame's Game detail uses the
+settled 60-second native source frame. The sticky chapter bar starts at 72px;
+chapter scroll-margin is 64px in addition to the document's 72px scroll-padding.
+Do not reintroduce the doubled offset or hide the bar behind the header.
