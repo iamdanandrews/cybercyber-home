@@ -441,3 +441,8 @@ the captured UI. Reduced-motion files suppress editorial camera/reveal motion,
 while preserving native product actions. film-source.js selects these without
 interrupting active or paused viewing. Compact portrait compositions keep the
 product and caption together on small screens. Full originals remain accessible.
+
+## Product stories and AI discovery (21 October 2026)
+The current films are product-stories-20261021. Frame is 14 seconds; Kaido is 16 seconds. Both are editorial edits of actual interfaces. Frame follows the same revised cue through save and retrieval. Kaido opens current source disclosures and records a fictional measurement without changing readiness. Uncropped Kaido source clips are an edited sequence, not a continuous take. Reduced-motion files suppress added camera/reveal motion.
+
+Meta search access is explicit in robots.txt. Homepage structured data connects the studio, designer and three visible offers; case metadata describes the real films and product stages. Keep prices and scope consistent with visible copy. Search eligibility is not evidence of recommendation, ranking or enquiries. No emails were sent as part of this pass.

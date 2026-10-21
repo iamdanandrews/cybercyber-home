@@ -1,0 +1,144 @@
+{
+  "created": "2026-10-21",
+  "format": "Editorial edits of actual product interfaces. Real actions at recorded speed, with trims and reading holds. No UI repainting or invented interactions.",
+  "frame": {
+    "source": "frame-product-20261020/frame-craft-complete-20261020.mp4",
+    "sourceSha256": "6ad44252ff7cfea2fc777b44a96e8f85387af377a076f41b3a2258186bc9fae3",
+    "durationSeconds": 14,
+    "segments": [
+      {
+        "out": [
+          0,
+          3.2
+        ],
+        "source": [
+          49.8,
+          53.0
+        ]
+      },
+      {
+        "out": [
+          3.2,
+          6
+        ],
+        "source": [
+          54.5,
+          57.3
+        ]
+      },
+      {
+        "out": [
+          6,
+          14
+        ],
+        "source": [
+          59,
+          66.1
+        ],
+        "holdLastFrame": true
+      }
+    ],
+    "context": "Native iOS development build, fictional demo data, same-session retrieval. Store release separate."
+  },
+  "kaido": {
+    "sourceCommit": "3875bdb8",
+    "captureDate": "2026-10-21",
+    "durationSeconds": 16,
+    "segments": [
+      {
+        "out": [
+          0,
+          1.5
+        ],
+        "action": "Caseload"
+      },
+      {
+        "out": [
+          1.5,
+          5
+        ],
+        "action": "Read current research qualification"
+      },
+      {
+        "out": [
+          5,
+          9.4
+        ],
+        "action": "Open Sources (3)"
+      },
+      {
+        "out": [
+          9.4,
+          11.9
+        ],
+        "action": "Edit fictional reading from 18 to 19"
+      },
+      {
+        "out": [
+          11.9,
+          16
+        ],
+        "action": "Save; Not yet remains unchanged"
+      }
+    ],
+    "context": "Isolated fictional demonstration clinic; no clinical sign-off or outcome implied. Source clips are an edited sequence, not one continuous take.",
+    "sourceClips": [
+      "kaido-mobile-source.mp4",
+      "kaido-desktop-source.mp4"
+    ],
+    "desktopReviewCrop": {
+      "x": 296,
+      "y": 70,
+      "width": 740,
+      "height": 466,
+      "reason": "Keep complete patient header and review criteria; exclude breadcrumb and unrelated outcome form."
+    }
+  },
+  "reducedMotion": "Editorial expansion and camera movement removed; native product actions preserved.",
+  "assets": {
+    "frame-poster.png": {
+      "bytes": 87762,
+      "sha256": "15e18358f2fba7f480dd1ea89d213968a56e0fb2fdf28f561c8f093da9662740"
+    },
+    "frame-reduced.mp4": {
+      "bytes": 473114,
+      "sha256": "03799d02f525edd9868da1bf10152d7dab61174c3287ecbf9b2422e271269429"
+    },
+    "frame.mp4": {
+      "bytes": 511028,
+      "sha256": "18731fa550833c43e3d26423bb11bd98d8fbd02a5cd05b5bd5e915bf2c87470d"
+    },
+    "kaido-desktop-poster.png": {
+      "bytes": 442536,
+      "sha256": "3bb0891d97743ab4447c5ff15d82cc1d05b6ab24214ef1749cfb7143da17af98"
+    },
+    "kaido-desktop-reduced.mp4": {
+      "bytes": 313940,
+      "sha256": "516957ed7ce3a3c599516f8225c97d5fb22034daad209ec58da02d1bbadf11cd"
+    },
+    "kaido-desktop-source.mp4": {
+      "bytes": 445581,
+      "sha256": "26ba001f1712a7e442a05fb41f7a06087285fa5048bd85f83c999a536d71f1fd"
+    },
+    "kaido-desktop.mp4": {
+      "bytes": 318411,
+      "sha256": "c639ca92659fd483642cc960735032cf68444e971dd0c4b3c0b0dd0f2b0b242f"
+    },
+    "kaido-mobile-poster.png": {
+      "bytes": 680306,
+      "sha256": "04a230869cd1a8c8e0a138e7f240ee7d8d7f44a5507cb81a19d34ae51b46ba0a"
+    },
+    "kaido-mobile-reduced.mp4": {
+      "bytes": 419795,
+      "sha256": "15e2f96113446833f7364f724d956339ff41804e7e71ca67ba311e5f8c484f71"
+    },
+    "kaido-mobile-source.mp4": {
+      "bytes": 271564,
+      "sha256": "a599fbbc68caa079320a77706e0450abf1380df412ed7a6a1c20d40dae644423"
+    },
+    "kaido-mobile.mp4": {
+      "bytes": 410946,
+      "sha256": "6d8fc66404e4f6d51de5a32c6d14f805a7bb49049140bd4efbceddd17d3b31fc"
+    }
+  }
+}
