@@ -795,7 +795,7 @@ if(location.hostname==='www.cybercyber.ai'||location.hostname==='cybercyber.ai'|
   video.addEventListener('pause',sync);video.addEventListener('ended',sync);
   video.addEventListener('error',function(){++requestId;pending=false;error.hidden=false;sync();});
   var jump=document.querySelector('.workflow-jump');if(jump)jump.addEventListener('click',function(event){event.preventDefault();history.replaceState(null,'','#native-walkthrough');play();});
-  function cue(){var t=video.currentTime;if(t===0&&video.paused){section.querySelector('.film-cue').textContent='Your cue, ready for the next session.';return;}section.querySelector('.film-cue').textContent=t<4.7?'01 / Capture · Save what mattered.':t<7.9?'02 / Recall · Return to the session.':t<11.5?'03 / Retrieve · Find your coaching cue.':'04 / Return · Back before the next round.';}
+  function cue(){var t=video.currentTime;if(t===0&&video.paused){section.querySelector('.film-cue').textContent='Your cue, ready for the next session.';return;}section.querySelector('.film-cue').textContent=t<4.7?'01 / Capture · Save what mattered.':t<7.9?'02 / Recall · Return to the session.':t<11.5?'03 / Retrieve · Find your coaching cue.':'04 / Return · Ready for training.';}
   video.addEventListener('timeupdate',cue);cue();
   sync();
 });})();
