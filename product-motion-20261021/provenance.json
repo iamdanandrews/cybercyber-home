@@ -1,0 +1,309 @@
+{
+  "created": "2026-10-21",
+  "purpose": "Concise editorial films using captured product pixels; no simulated app UI or outcomes.",
+  "source_hashes": {
+    "product-payoff-20261020/frame.mp4": "22132200a14e219e105df21739c47eb5467091feac7030b368f8e56db2d51778",
+    "frame-product-20261020/frame-craft-complete-20261020.mp4": "6ad44252ff7cfea2fc777b44a96e8f85387af377a076f41b3a2258186bc9fae3",
+    "kaido-product-20261018/mobile-complete.mp4": "3cfb2b6d24b9551345f9a38ed21fe8908cb32301a385a1bbfc477dd3cb95438a",
+    "kaido-product-20261018/desktop-complete.mp4": "6324ffc7443ca5edf4738d44466440a1e2ff38c59d194df28262e79f3edd4912",
+    "product-craft-20261020/kaido-mobile-finding.png": "feb7c533fef820c08c8bf532bb8ec924344730b2374dcfccf7c69cb1d42fbfd6",
+    "product-craft-20261020/kaido-desktop-finding.png": "414b47e25a4a68e7e2ea20b4c79a09e689bf7cf16d18c19c88ffad579d7046b1"
+  },
+  "frame": {
+    "source": "product-payoff-20261020/frame.mp4",
+    "seconds": 16,
+    "shots": [
+      {
+        "range": [
+          0,
+          3.1
+        ],
+        "crop": [
+          0,
+          790,
+          720,
+          720
+        ],
+        "purpose": "Native quick log"
+      },
+      {
+        "range": [
+          3.1,
+          4.7
+        ],
+        "crop": [
+          0,
+          330,
+          720,
+          720
+        ],
+        "purpose": "Saved Today cue"
+      },
+      {
+        "range": [
+          4.7,
+          7.9
+        ],
+        "crop": [
+          0,
+          115,
+          720,
+          720
+        ],
+        "purpose": "History/session retrieval"
+      },
+      {
+        "range": [
+          7.9,
+          11.5
+        ],
+        "crop": [
+          0,
+          115,
+          720,
+          720
+        ],
+        "purpose": "Position retrieval"
+      },
+      {
+        "range": [
+          11.5,
+          16
+        ],
+        "camera_from": [
+          0,
+          115,
+          720,
+          720
+        ],
+        "camera_to": [
+          16,
+          208,
+          688,
+          220
+        ],
+        "settle_seconds": 0.85,
+        "purpose": "Exact coaching cue alongside native detail"
+      }
+    ]
+  },
+  "kaido": {
+    "seconds": 14,
+    "shots": [
+      {
+        "range": [
+          0,
+          2
+        ],
+        "source_range": [
+          0,
+          2
+        ],
+        "purpose": "Caseload priorities"
+      },
+      {
+        "range": [
+          2,
+          6.8
+        ],
+        "source": "Current captured finding still",
+        "camera_seconds": 0.8,
+        "purpose": "Finding plus both qualification badges; sources disclosure appears after 1.5 seconds"
+      },
+      {
+        "range": [
+          6.8,
+          10
+        ],
+        "mobile_source_range": [
+          3.8,
+          7
+        ],
+        "desktop_source_range": [
+          4,
+          7.2
+        ],
+        "purpose": "Recorded 18 to 19 measurement update"
+      },
+      {
+        "range": [
+          10,
+          14
+        ],
+        "source_range": [
+          9,
+          10
+        ],
+        "last_frame_hold_seconds": 3,
+        "purpose": "19 recorded against target 25, Not yet retained"
+      }
+    ],
+    "mobile_crops": {
+      "finding": [
+        30,
+        330,
+        328,
+        82
+      ],
+      "sources": [
+        30,
+        643,
+        328,
+        52
+      ],
+      "measurement": [
+        8,
+        515,
+        374,
+        230
+      ],
+      "result": [
+        16,
+        646,
+        358,
+        94
+      ]
+    },
+    "desktop_crops": {
+      "finding": [
+        376,
+        325,
+        848,
+        70
+      ],
+      "sources": [
+        376,
+        490,
+        848,
+        56
+      ],
+      "measurement": [
+        306,
+        350,
+        716,
+        180
+      ],
+      "result": [
+        306,
+        434,
+        716,
+        90
+      ]
+    }
+  },
+  "motion": {
+    "editorial": "Quintic camera settles, short surface reveals, line draws and 0.2-second scene dissolves. Recorded actions retain their original speed.",
+    "reduced": "Static editorial cameras and titles, direct scene cuts; native product interactions retained.",
+    "truth": "Text overlays are outside captured UI; Frame quote reproduces saved words; Kaido clinic data is fictional. Full original recordings stay linked."
+  },
+  "outputs": {
+    "frame-reduced.mp4": {
+      "sha256": "ec139a93d681f9722d95e881daf318e4145f8307d2eb29598854c819bafe1452",
+      "bytes": 313671,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 720,
+            "height": 1040,
+            "r_frame_rate": "30/1"
+          }
+        ],
+        "format": {
+          "duration": "16.000000"
+        }
+      }
+    },
+    "frame.mp4": {
+      "sha256": "1b5ef5b0095fb3997662ec31bd2a9013a3ec799595ebf085d3f47799d11a4801",
+      "bytes": 559648,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 720,
+            "height": 1040,
+            "r_frame_rate": "30/1"
+          }
+        ],
+        "format": {
+          "duration": "16.000000"
+        }
+      }
+    },
+    "kaido-desktop-reduced.mp4": {
+      "sha256": "8257b8a1cdd4f7d3b4807c066c307a9f9b614f8bc48c3ff265593fb30924d8a2",
+      "bytes": 254182,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1600,
+            "height": 1000,
+            "r_frame_rate": "30/1"
+          }
+        ],
+        "format": {
+          "duration": "14.000000"
+        }
+      }
+    },
+    "kaido-desktop.mp4": {
+      "sha256": "f3ea3bcdaf7fa366aeb28e5d76a62229e4fa715e7efc6445e8ffb40a039e0220",
+      "bytes": 722665,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1600,
+            "height": 1000,
+            "r_frame_rate": "30/1"
+          }
+        ],
+        "format": {
+          "duration": "14.000000"
+        }
+      }
+    },
+    "kaido-mobile-reduced.mp4": {
+      "sha256": "8c8998fbdc6398cfdf6aaaf1adf2702e123d134b60045d03f2e137d0534869ce",
+      "bytes": 253022,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 780,
+            "height": 1120,
+            "r_frame_rate": "30/1"
+          }
+        ],
+        "format": {
+          "duration": "14.000000"
+        }
+      }
+    },
+    "kaido-mobile.mp4": {
+      "sha256": "f3fb563cabeed68accc46fba5f666c26b8c16f1c4de57a4a0373ecc6fb29e43f",
+      "bytes": 696597,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 780,
+            "height": 1120,
+            "r_frame_rate": "30/1"
+          }
+        ],
+        "format": {
+          "duration": "14.000000"
+        }
+      }
+    }
+  }
+}

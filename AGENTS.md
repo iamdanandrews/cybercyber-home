@@ -432,3 +432,12 @@ a separate 4.8-second reading card. These are explicitly labelled interface
 details, not reconstructed app screens or simulated interactions. Preserve both
 qualification badges, the separate clinical judgment and the complete recordings.
 Source hashes, crop coordinates and timings are in the media provenance file.
+
+## Directed product films (21 October 2026)
+Featured films now live in product-motion-20261021: Frame 16 seconds and Kaido
+14 seconds. Restrained camera moves connect real captured context to readable
+product details; original actions stay at recorded speed. Typography sits outside
+the captured UI. Reduced-motion files suppress editorial camera/reveal motion,
+while preserving native product actions. film-source.js selects these without
+interrupting active or paused viewing. Compact portrait compositions keep the
+product and caption together on small screens. Full originals remain accessible.
