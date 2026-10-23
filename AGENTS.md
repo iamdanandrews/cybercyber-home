@@ -544,3 +544,13 @@ capture plus its mobile capture in a phone frame, 16:10 at full content width on
 desktop and square on phones. "View full size" still opens the original capture via
 data-full-src. The zoom script wraps a <picture> whole, so art direction survives.
 Captures are unmodified; only the mat, window and phone frames are added.
+
+## Frame case presentation (23 October 2026)
+Same treatment as Kaido. The Frame film (product-motion-20261023) is the complete,
+uncropped frame-workflow-edit-20261020 phone recording in a bezel on the dark Frame
+plate: 18 seconds, capture → optional cue → saved session → Closed Guard retrieval.
+No added camera motion; reduced-motion files are identical copies. Mobile is 3:4.
+Both products now load from product-motion-20261023 via player.js. Chapter figures
+(frame-case-20261023) pair two full native captures per chapter: quick log + added
+detail, History + Game, session + Closed Guard. The 18 Oct Game capture's Dynamic
+Island is painted out to match the 20 Oct captures; nothing else is altered.

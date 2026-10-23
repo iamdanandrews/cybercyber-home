@@ -11,7 +11,7 @@
   var mobile = matchMedia('(max-width:819px)');
   var reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   var product = video.dataset.productFilm;
-  var expectedDuration = product === 'frame' ? 13 : 16;
+  var expectedDuration = product === 'frame' ? 18.6 : 16;
   var pending = false, request = 0, viewed = false;
 
   function time(seconds) {
@@ -20,13 +20,12 @@
   }
   function select() {
     var device = mobile.matches ? 'mobile' : 'desktop';
-    var folder = product === 'kaido' ? 'product-motion-20261023/' : 'product-motion-20261021-v2/';
-    var prefix = folder + product + '-' + device;
+    var prefix = 'product-motion-20261023/' + product + '-' + device;
     if (reducedMotion.matches) prefix += '-reduced';
     video.src = prefix + '.mp4';
     video.poster = prefix.replace(/-reduced$/, '') + '-poster.webp';
-    video.width = mobile.matches ? (product === 'frame' ? 780 : 900) : 1600;
-    video.height = mobile.matches ? (product === 'frame' ? 960 : 1200) : 1000;
+    video.width = mobile.matches ? 900 : 1600;
+    video.height = mobile.matches ? 1200 : 1000;
     if (product === 'kaido') {
       document.querySelector('.film-original').href = 'product-stories-20261021/kaido-' + device + '-source.mp4';
       error.querySelector('a').href = 'product-stories-20261021/kaido-' + device + '-source.mp4';
