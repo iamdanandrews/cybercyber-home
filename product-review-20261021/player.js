@@ -20,12 +20,13 @@
   }
   function select() {
     var device = mobile.matches ? 'mobile' : 'desktop';
-    var prefix = 'product-motion-20261021-v2/' + product + '-' + device;
+    var folder = product === 'kaido' ? 'product-motion-20261023/' : 'product-motion-20261021-v2/';
+    var prefix = folder + product + '-' + device;
     if (reducedMotion.matches) prefix += '-reduced';
     video.src = prefix + '.mp4';
     video.poster = prefix.replace(/-reduced$/, '') + '-poster.webp';
-    video.width = mobile.matches ? 780 : 1600;
-    video.height = mobile.matches ? (product === 'frame' ? 960 : 1100) : 1000;
+    video.width = mobile.matches ? (product === 'frame' ? 780 : 900) : 1600;
+    video.height = mobile.matches ? (product === 'frame' ? 960 : 1200) : 1000;
     if (product === 'kaido') {
       document.querySelector('.film-original').href = 'product-stories-20261021/kaido-' + device + '-source.mp4';
       error.querySelector('a').href = 'product-stories-20261021/kaido-' + device + '-source.mp4';

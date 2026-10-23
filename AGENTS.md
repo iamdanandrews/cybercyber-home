@@ -530,3 +530,17 @@ decorative wipes or unsupported outcome claims. Each device edition has a
 reduced-motion version with a static crop and unchanged source actions. The
 player respects `prefers-reduced-motion` in JavaScript and native-source fallback,
 and centres the whole film when play or seek receives focus below the sticky nav.
+
+
+## Kaido case presentation (23 October 2026)
+Dan found the clipped film crops and small floating figures weak. The Kaido film now
+lives in product-motion-20261023: the uncropped product-stories-20261021 desktop and
+mobile source clips play side by side, the desktop in a window and the mobile in a
+phone frame, on the same sage plate as the homepage Kaido tile. There is no added
+camera motion, so the reduced-motion files are identical copies. Mobile is 3:4.
+player.js picks the folder per product (Frame stays on product-motion-20261021-v2).
+Chapter figures are single composed plates (kaido-case-20261023): the real desktop
+capture plus its mobile capture in a phone frame, 16:10 at full content width on
+desktop and square on phones. "View full size" still opens the original capture via
+data-full-src. The zoom script wraps a <picture> whole, so art direction survives.
+Captures are unmodified; only the mat, window and phone frames are added.
