@@ -23,6 +23,7 @@ The site itself is hand-coded vanilla HTML, CSS and JavaScript with no build ste
 
 ## Journal
 
+- [Keep the judgment](https://www.cybercyber.ai/journal-keep-the-judgment.html): Twelve patterns for human oversight in AI products, where software suggests and a person decides, in clinical and regulated work.
 - [The sea lion papers](https://www.cybercyber.ai/journal-sea-lion.html): Ninety fabricated research citations, caught by checking every one against PubMed — and what a clinical product owes a clinician after that.
 - [The word before it drifted](https://www.cybercyber.ai/journal-the-word.html): cyber comes from the Greek for helmsman, and "governor" is the same word by a different road — what that means for a studio whose products are literally feedback loops with a human at the wheel.
 - [The hardest client was us](https://www.cybercyber.ai/journal-hardest-client.html): Why the studio's own site was treated as the hardest brief of the year — hand-built, with product captures and presentation studies clearly distinguished.
