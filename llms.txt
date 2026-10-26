@@ -38,9 +38,10 @@ The site itself is hand-coded vanilla HTML, CSS and JavaScript with no build ste
 
 [Studio services and current prices](https://www.cybercyber.ai/#offerings). These are studio project prices; embedded contract scope, commitment and day rate are agreed separately.
 
-- Product Direction — £5,000 per week. One or two weeks to resolve the proposition and core workflow, with a focused prototype and scoped next step.
+- Judgment Review — £2,500 fixed. Three days scoring one critical flow, where software suggests and a person decides, against twelve published patterns, with annotated screens and prioritised fixes.
+- Judgment Sprint — £5,000 per week. One or two weeks designing and building the review, approval and override layer, with a working coded prototype tested with users.
 - Product Release — from £50,000 for a scoped release or substantial redesign. Deliverables, platforms, integrations and handover are agreed upfront.
-- Design Partnership — from £12,000 per month. An agreed allocation for product direction, interface work and implementation support.
+- Fractional Design Lead — from £6,000 per month for one day a week; two days a week from £12,000. Senior design ownership with a weekly working session.
 
 ## Who
 
