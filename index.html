@@ -841,7 +841,7 @@ section.reveal>.wrap{position:relative;}
 @media(max-width:460px){.hero .inner{padding-top:100px;}.plate-granite,.plate-frame{padding:24px 12px;}.phone-set img{border-radius:7px;}}
 
 .reveal{opacity:1!important;transform:none!important;}
-.hero .inner{opacity:1!important;transform:none!important;}.loader{display:none!important;}
+.hero .inner{opacity:1!important;transform:none!important;}
 @media(max-width:600px){header .statl{display:none;}}
 
 /* Spacious identity opening; the proposition lives on the paper break. */
@@ -1480,7 +1480,33 @@ html{scroll-behavior:auto;}
       btn.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){toggle(e);}});
     });
   })();
-  setAll(REST);booted=true;if(loader)loader.style.display="none";start();
+  /* Boot: the loader counts while the wordmark holds thin, dissolves,
+     then the wordmark resolves left to right and the colon ignites. */
+  function boot(){
+    if(reduce||!loader||!lpct){setAll(REST);if(loader)loader.style.display="none";if(herobar)herobar.classList.add("in");booted=true;start();return;}
+    var t0=performance.now(),dur=1150;
+    (function loop(t){var e=t-t0,p=Math.min(e/dur,1),ease=1-Math.pow(1-p,3);
+      lpct.textContent=Math.round(p*100);
+      if(lstat){if(p>.35)lstat.textContent="CALIBRATING";if(p>.82)lstat.textContent="READY";}
+      setAll(120+ease*80);
+      if(p<1){requestAnimationFrame(loop);return;}
+      loader.classList.add("done");
+      start();
+      setTimeout(function(){
+        var c0=performance.now(),N=spans.length,STAG=42,RAMP=520,cd=STAG*(N-1)+RAMP,colonIdx=-1,fired=false;
+        for(var ci=0;ci<N;ci++)if(spans[ci].className==="colon")colonIdx=ci;
+        (function cal(tt){
+          var el=tt-c0;
+          for(var i=0;i<N;i++){var lp=Math.min(Math.max((el-i*STAG)/RAMP,0),1),le=1-Math.pow(1-lp,3);spans[i].style.fontVariationSettings="'wght' "+(200+le*(REST-200)).toFixed(0)+",'opsz' 32";}
+          if(!fired&&colonIdx>-1&&el>=colonIdx*STAG){fired=true;if(hero){hero.classList.add("ignite");setTimeout(function(){hero.classList.remove("ignite");},780);}}
+          if(el<cd)requestAnimationFrame(cal);else{setAll(REST);booted=true;}
+        })(c0);
+        if(herobar)herobar.classList.add("in");
+        setTimeout(function(){loader.style.display="none";},900);
+      },320);
+    })(t0);
+  }
+  boot();
 })();
 </script>
 
