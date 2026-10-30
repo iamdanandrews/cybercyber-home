@@ -1,11 +1,10 @@
 // Contact form endpoint: validates an enquiry from the homepage and emails it to the studio
 // through Resend, with the visitor as reply-to. Needs RESEND_API_KEY in the Vercel project;
-// ENQUIRY_FROM is the verified sender (falls back to Resend's shared test sender, which only
-// delivers to the Resend account's own address). Without a key it answers 503 and the page
-// falls back to opening the visitor's email app.
+// cybercyber.ai is verified in Resend, so it sends from hello@cybercyber.ai. Without a key it
+// answers 503 and the page falls back to opening the visitor's email app.
 
 const TO = process.env.ENQUIRY_TO || 'hello@cybercyber.ai';
-const FROM = process.env.ENQUIRY_FROM || 'cyber:cyber <onboarding@resend.dev>';
+const FROM = process.env.ENQUIRY_FROM || 'cyber:cyber <hello@cybercyber.ai>';
 const ORIGINS = ['https://www.cybercyber.ai', 'https://cybercyber.ai'];
 const MIN_FILL_MS = 2500;
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
