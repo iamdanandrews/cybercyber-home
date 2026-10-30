@@ -1135,6 +1135,14 @@ html{scroll-behavior:auto;}
 /* The practice is one line, readable without JavaScript or interaction. */
 .hero .hanchor .practice-line{font-family:var(--raveo);font-size:var(--t-register);font-weight:400;line-height:1.4;letter-spacing:-.02em;color:var(--paper70);}
 .hero .hanchor{pointer-events:none;}
+/* Each discipline re-seeds the mark in its own colour on hover. */
+.hero .hanchor .practice-line{pointer-events:auto;}
+.hero .hanchor .hmark circle.morph{transition:cx .55s var(--e-settle),cy .55s var(--e-settle),r .55s var(--e-settle),fill .24s var(--e1);}
+@media(prefers-reduced-motion:reduce){.hero .hanchor .hmark circle.morph{transition:fill .24s var(--e1);}}
+.hero .hanchor .pw{cursor:default;transition:color .24s var(--e1);}
+.hero .hanchor .pw[data-seed=brand]:is(:hover,.on){color:var(--accent);}
+.hero .hanchor .pw[data-seed=interface]:is(:hover,.on){color:var(--cyan);}
+.hero .hanchor .pw[data-seed=code]:is(:hover,.on){color:var(--mark-code);}
 /* Keep the introduction inside narrow phone viewports. */
 #about .intro-grid>*{min-width:0;}
 #about .hero-actions{flex-wrap:wrap;}
@@ -1276,7 +1284,7 @@ html{scroll-behavior:auto;}
   <section class="hero" style="border-top:0;padding-top:0" id="hero">
     <div class="fold-bg" aria-hidden="true"><div class="grid" id="hgrid"></div></div>
     <div class="vf" aria-hidden="true"><i></i><i></i><i></i><i></i><span class="tl a">51.5074&deg; N</span><span class="tl b">00.1278&deg; W</span></div>
-    <div class="hanchor"><svg class="hmark" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"><circle cx="27.78" cy="50" r="3.02"/><circle cx="72.22" cy="50" r="3.02"/><circle cx="35.19" cy="35.19" r="2.97"/><circle cx="64.81" cy="64.81" r="2.97"/><circle cx="57.41" cy="27.78" r="2.91"/><circle cx="42.59" cy="72.22" r="2.91"/><circle cx="57.41" cy="20.37" r="2.74"/><circle cx="42.59" cy="79.63" r="2.74"/><circle cx="57.41" cy="42.59" r="2.68"/><circle cx="42.59" cy="57.41" r="2.68"/><circle cx="64.81" cy="35.19" r="2.6"/><circle cx="35.19" cy="64.81" r="2.6"/><circle cx="42.59" cy="35.19" r="2.56"/><circle cx="57.41" cy="64.81" r="2.56"/><circle cx="20.37" cy="50" r="2.55"/><circle cx="79.63" cy="50" r="2.55"/><circle cx="72.22" cy="35.19" r="2.5"/><circle cx="27.78" cy="64.81" r="2.5"/><circle cx="12.96" cy="50" r="2.26"/><circle cx="87.04" cy="50" r="2.26"/><circle cx="20.37" cy="20.37" r="2.08"/><circle cx="79.63" cy="79.63" r="2.08"/><circle cx="27.78" cy="42.59" r="2.07"/><circle cx="72.22" cy="57.41" r="2.07"/><circle cx="87.04" cy="42.59" r="2.02"/><circle cx="12.96" cy="57.41" r="2.02"/><circle cx="20.37" cy="42.59" r="2.02"/><circle cx="79.63" cy="57.41" r="2.02"/><circle cx="50" cy="42.59" r="2.96"/><circle cx="50" cy="57.41" r="2.96"/></svg><p class="practice-line">Brand. Interface. Code.</p></div>
+    <div class="hanchor"><svg class="hmark" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet"><circle cx="27.78" cy="50" r="3.02"/><circle cx="72.22" cy="50" r="3.02"/><circle cx="35.19" cy="35.19" r="2.97"/><circle cx="64.81" cy="64.81" r="2.97"/><circle cx="57.41" cy="27.78" r="2.91"/><circle cx="42.59" cy="72.22" r="2.91"/><circle cx="57.41" cy="20.37" r="2.74"/><circle cx="42.59" cy="79.63" r="2.74"/><circle cx="57.41" cy="42.59" r="2.68"/><circle cx="42.59" cy="57.41" r="2.68"/><circle cx="64.81" cy="35.19" r="2.6"/><circle cx="35.19" cy="64.81" r="2.6"/><circle cx="42.59" cy="35.19" r="2.56"/><circle cx="57.41" cy="64.81" r="2.56"/><circle cx="20.37" cy="50" r="2.55"/><circle cx="79.63" cy="50" r="2.55"/><circle cx="72.22" cy="35.19" r="2.5"/><circle cx="27.78" cy="64.81" r="2.5"/><circle cx="12.96" cy="50" r="2.26"/><circle cx="87.04" cy="50" r="2.26"/><circle cx="20.37" cy="20.37" r="2.08"/><circle cx="79.63" cy="79.63" r="2.08"/><circle cx="27.78" cy="42.59" r="2.07"/><circle cx="72.22" cy="57.41" r="2.07"/><circle cx="87.04" cy="42.59" r="2.02"/><circle cx="12.96" cy="57.41" r="2.02"/><circle cx="20.37" cy="42.59" r="2.02"/><circle cx="79.63" cy="57.41" r="2.02"/><circle cx="50" cy="42.59" r="2.96"/><circle cx="50" cy="57.41" r="2.96"/></svg><p class="practice-line"><span class="pw" data-seed="brand">Brand.</span> <span class="pw" data-seed="interface">Interface.</span> <span class="pw" data-seed="code">Code.</span></p></div>
     <div class="wrap inner">
       <h1 class="word" id="word" aria-label="cyber:cyber">CYBER:CYBER</h1>
 <p class="heroline" id="herobar" hidden aria-hidden="true"></p>
@@ -1285,7 +1293,7 @@ html{scroll-behavior:auto;}
 
   <a class="foldbreak" href="#about"><div class="wrap"><span class="fa"><span class="tk"></span>Product design &amp; build · Independent studio</span><span class="fb">Explore &darr;</span></div></a>
 
-  <section id="about" class="reveal"><div class="wrap"><div class="intro-grid"><h2 class="intro-title"><span>Software with</span> <span>a point of view.</span></h2><div><p class="lead">I’m Dan Andrews. I design and build the judgment layer of AI products: the moment software hands a decision to a person to review, approve or override. Before cyber:cyber I spent three and a half years as a Senior Product Designer at Spotify. Now I build products like Kaido, where the software proposes and the clinician decides.</p><div class="hero-actions"><a href="#contact">Discuss your project &nearr;</a></div></div></div></div></section>
+  <section id="about" class="reveal"><div class="wrap"><div class="intro-grid"><h2 class="intro-title"><span>Software with</span> <span>a point of view.</span></h2><div><p class="lead">I’m Dan Andrews. For ten years I’ve designed and built software across developer tools, financial data, clinical care and consumer apps, for start-ups, scale-ups and global platforms. Today much of that work is AI products, and the judgment layer inside them: the moment software hands a decision to a person to review, approve or override. In Kaido, the software proposes and the clinician decides.</p><div class="hero-actions"><a href="#contact">Discuss your project &nearr;</a></div></div></div></div></section>
 
   <section id="work"><div class="wrap">
     <div class="shd"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Products &amp; commissions<span class="ix">01 / INDEX</span></div>
@@ -1478,6 +1486,28 @@ html{scroll-behavior:auto;}
 
 <script>history.scrollRestoration="auto";addEventListener("load",function(){var h=location.hash,t=h.length>1?document.getElementById(h.slice(1)):null;if(!t)return;function align(){requestAnimationFrame(function(){if(location.hash===h)t.scrollIntoView({block:"start"});});}if(document.fonts)document.fonts.ready.then(align);else align();});</script>
 <script src="mark.js"></script>
+<script>
+/* Hovering Brand, Interface or Code morphs the mark to that word's seed and colour. */
+(function(){
+ var root=document.querySelector('.hanchor'),svg=root&&root.querySelector('.hmark');
+ if(!svg||!window.ccMark||!matchMedia('(hover:hover) and (pointer:fine)').matches)return;
+ var colour={brand:'var(--accent)',interface:'var(--cyan)',code:'var(--mark-code)'};
+ var base=ccMark('cyber:cyber',6),current=base.pts,words=Array.from(root.querySelectorAll('.pw'));
+ var dots=Array.from(svg.querySelectorAll('circle'));
+ if(dots.length!==base.pts.length)return;
+ dots.forEach(function(d){d.classList.add('morph');});
+ function nearest(from,to){var free=to.slice();return from.map(function(p){var best=0,dist=Infinity;free.forEach(function(q,j){var d=(q.cx-p.cx)**2+(q.cy-p.cy)**2;if(d<dist){dist=d;best=j;}});return free.splice(best,1)[0];});}
+ function render(seed){
+  var target=seed?ccMark(seed,6):base;
+  current=nearest(current.slice(0,-2),target.pts.slice(0,-2)).concat(target.pts.slice(-2));
+  dots.forEach(function(dot,i){var p=current[i];dot.style.cx=p.cx+'px';dot.style.cy=p.cy+'px';dot.style.r=p.r+'px';dot.style.fill=seed?colour[seed]:'';});
+  words.forEach(function(w){w.classList.toggle('on',w.dataset.seed===seed);});
+ }
+ words.forEach(function(w){w.addEventListener('mouseenter',function(){render(w.dataset.seed);});});
+ root.querySelector('.practice-line').addEventListener('mouseleave',function(){render(null);});
+ render(null);
+})();
+</script>
 <script>(function(){
   var inp=document.getElementById('mkin'), p=document.getElementById('mkpath'),
       ref=document.getElementById('mkref'), sr=document.getElementById('mksr'),
