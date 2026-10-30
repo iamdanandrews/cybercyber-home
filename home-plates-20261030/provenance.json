@@ -1,0 +1,5 @@
+{
+  "date": "2026-10-30",
+  "description": "Homepage Kaido plate rebuilt from real captures of the current React clinician app (webapp/) against an isolated local database (kaido_site_capture_20261030) with fictional demo data: clinic 'Harbour Lane Physiotherapy', clinician 'Elin Hartley', patient 'Sam Taylor'. Original interface pixels; composition (mat, window, phone frame, status bar) added by the studio.",
+  "sources": ["work/kaido-capture-20261030/kaido-desktop-patient-consultation.png", "work/kaido-capture-20261030/kaido-mobile-patient-criteria.png"]
+}
