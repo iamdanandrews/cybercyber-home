@@ -1,12 +1,22 @@
 # cyber:cyber
 
-> End-to-end product design for founders and teams. Work directly with Dan Andrews to shape, design and build digital products, from the first direction through to release.
+> Dan Andrews's independent product design and build studio in London. Ten years designing and building software across developer tools, financial data, clinical care and consumer apps, for start-ups, scale-ups and global platforms. Today much of that work is AI products and the judgment layer inside them: the moment software hands a decision to a person to review, approve or override.
 
-cyber:cyber is Dan Andrews’s independent product design studio in London. Dan is a designer and founder, combining deep UX practice with hands-on implementation. Clients work directly with Dan on scoped studio projects or embedded contracts. Scope, deliverables and allocation of time are agreed for each engagement.
+Dan Andrews is a product designer and founder who designs and builds: interface, product direction and working code. Clients work with him directly on fixed reviews, scoped sprints, fractional design leadership, product releases or embedded contracts.
 
-Kaido and Frame are the flagship owned products: Frame is a jiu-jitsu training journal released on iPhone and Android; Kaido is a clinical workspace in a private pilot. Bittensor is a delivered identity commission. Granite is an earlier alpha project retained as supporting historical work, outside the selected homepage cases. Product evidence is distinct from measured adoption or clinical outcomes.
+Signature work: [Keep the judgment](https://www.cybercyber.ai/journal-keep-the-judgment.html), twelve published patterns for human oversight in AI products, where software suggests and a person decides. The Judgment Review scores a product against them.
 
-The site itself is hand-coded vanilla HTML, CSS and JavaScript with no build step and no framework — one self-contained file per page. That is a deliberate position, argued in the journal note "The hardest client was us".
+Owned products: Kaido, a clinical workspace in a private pilot (the software proposes, the clinician decides), and Frame, a jiu-jitsu training journal released on iPhone and Android. Bittensor is a delivered identity commission. Product evidence is kept distinct from measured adoption or clinical outcomes.
+
+## Work with Dan
+
+- [Free: three observations](https://www.cybercyber.ai/#offerings): send an AI product and get three specific observations on how people review, approve or override what it does, mapped to the twelve patterns, within 48 hours.
+- [Judgment Review](https://www.cybercyber.ai/#judgment-review): £2,500 fixed, three days on one critical flow, scored against the twelve patterns, with annotated screens and a prioritised list of fixes.
+- [Judgment Sprint](https://www.cybercyber.ai/#product-direction): £5,000 per week, one or two weeks designing and building the review layer, ending in a coded prototype tested with real users.
+- [Fractional Design Lead](https://www.cybercyber.ai/#design-partnership): from £6,000 per month, one or two days a week of senior design ownership with hands-on build.
+- [Product Release](https://www.cybercyber.ai/#product-release): from £50,000, a defined release taken through design and implementation.
+- Embedded contracts: scope, commitment and day rate agreed separately.
+- Contact: the form at https://www.cybercyber.ai/#contact or hello@cybercyber.ai.
 
 ## Core
 
@@ -33,23 +43,3 @@ The site itself is hand-coded vanilla HTML, CSS and JavaScript with no build ste
 - [Shipping got commoditised](https://www.cybercyber.ai/journal-shipping.html): Anyone can ship a product in a weekend now. What's actually scarce once production is free.
 - [Six things native AI features get right](https://www.cybercyber.ai/journal-six-things.html): The six decisions that separate native AI from a chat bubble in the corner.
 - [Why cyber:cyber exists](https://www.cybercyber.ai/journal-why.html): The founding note on independent product work and design judgement.
-
-## The offer
-
-[Studio services and current prices](https://www.cybercyber.ai/#offerings). These are studio project prices; embedded contract scope, commitment and day rate are agreed separately.
-
-- Judgment Review — £2,500 fixed. Three days scoring one critical flow, where software suggests and a person decides, against twelve published patterns, with annotated screens and prioritised fixes.
-- Judgment Sprint — £5,000 per week. One or two weeks designing and building the review, approval and override layer, with a working coded prototype tested with users.
-- Product Release — from £50,000 for a scoped release or substantial redesign. Deliverables, platforms, integrations and handover are agreed upfront.
-- Fractional Design Lead — from £6,000 per month for one day a week; two days a week from £12,000. Senior design ownership with a weekly working session.
-
-## Who
-
-- Dan Andrews — designer and founder, based in London, with a background in experimental psychology. Previous client and agency engagements include Epic Games, Risika and Dell.
-- Work directly with Dan on a scoped project or embedded contract. Contract scope, commitment and day rate are agreed separately from studio package prices.
-
-## Contact
-
-- [Project enquiry](https://start.cybercyber.ai/#enquire): Share a short brief, name and email. Dan reads the brief and replies personally. A booking link follows when there is a fit. No account is needed to enquire.
-
-- Email: hello@cybercyber.ai — one sentence about what you're trying to ship is enough. Enquiries go directly to Dan.
