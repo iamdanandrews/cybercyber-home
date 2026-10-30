@@ -1297,6 +1297,9 @@ html{scroll-behavior:auto;}
 #work .wkhead{align-items:start;}
 .wkrow:hover .wkopen,.wkrow:focus-visible .wkopen{text-decoration:none;}
 #work .wkrow,#work .wkrow+.wkrow{border-top:0;border-bottom:0;}
+/* Contact email reads as a link at rest and inverts on hover. */
+#contact-next a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;padding:1px 3px;margin:0 -3px;transition:background .2s,color .2s;}
+#contact-next a:is(:hover,:focus-visible){background:var(--ground);color:var(--paper);text-decoration-color:transparent;}
 </style>
 
 <div class="loader" id="loader" aria-hidden="true">
