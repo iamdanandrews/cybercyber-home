@@ -222,8 +222,18 @@ body.cursor-on{cursor:auto;}body.cursor-on a,body.cursor-on button,body.cursor-o
 /* Vercel telemetry belongs to the hosted site, not local review servers. */
 if(location.hostname==='www.cybercyber.ai'||location.hostname==='cybercyber.ai'||location.hostname.endsWith('.vercel.app')){
  window.si=window.si||function(){(window.siq=window.siq||[]).push(arguments);};
- ['https://cdn.vercel-insights.com/v1/script.js','/_vercel/speed-insights/script.js'].forEach(function(src){var script=document.createElement('script');script.src=src;script.defer=true;document.head.appendChild(script);});
+ window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};
+ ['/_vercel/insights/script.js','/_vercel/speed-insights/script.js'].forEach(function(src){var script=document.createElement('script');script.src=src;script.defer=true;document.head.appendChild(script);});
 }
+/* Key actions as analytics events: offer, case, store, email and CV clicks. The form reports its own send. */
+window.ccTrack=function(name,data){if(window.va)window.va('event',{name:name,data:data||{}});};
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'';
+ if(a.dataset.track)ccTrack(a.dataset.track);
+ else if(a.dataset.brief)ccTrack('offer_click',{offer:a.dataset.brief.slice(0,60)});
+ else if(a.classList.contains('wkrow'))ccTrack('case_open',{case:a.id||h});
+ else if(a.classList.contains('obs-cta'))ccTrack('observations_click');
+ else if(h.indexOf('mailto:')===0)ccTrack('email_click',{subject:(h.split('subject=')[1]||'').slice(0,60)});
+},true);
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Shipping got commoditised","description":"Anyone with a laptop can ship a product in a weekend now. A working theory of what's actually scarce once production is free — and why so much of it is B+.","url":"https://www.cybercyber.ai/journal-shipping.html","mainEntityOfPage":"https://www.cybercyber.ai/journal-shipping.html","datePublished":"2026-05-06","inLanguage":"en-GB","author":{"@type":"Person","@id":"https://www.cybercyber.ai/#dan-andrews","name":"Dan Andrews","url":"https://www.cybercyber.ai/"},"publisher":{"@type":"Organization","@id":"https://www.cybercyber.ai/#studio","name":"cyber:cyber","url":"https://www.cybercyber.ai/"},"isPartOf":{"@type":"Blog","name":"cyber:cyber Journal","url":"https://www.cybercyber.ai/journal.html"},"image":"https://www.cybercyber.ai/media/social/journal-shipping-20261003.png"}</script>
 <meta name="author" content="Dan Andrews">
