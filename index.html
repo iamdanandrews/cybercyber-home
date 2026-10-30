@@ -465,6 +465,14 @@ section.reveal>.wrap{position:relative;}
 #offerings .shd{display:block;}
 #offerings .shd .h2{display:inline-block;}
 #offerings .shd .lead{margin-top:clamp(18px,2vw,28px);max-width:46ch;padding:0;}
+/* The free first step, set apart as its own block rather than a closing footnote. */
+.obs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);align-items:end;margin-top:clamp(48px,6vw,88px);padding:clamp(28px,4vw,56px);border:1px solid var(--line2);background:var(--lift);}
+.obs-tag{display:inline-block;font:var(--t-cap)/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ground);background:var(--cyan);padding:6px 8px;margin-bottom:20px;}
+.obs h3{font-family:var(--raveo);font-variation-settings:"wght" 600,"opsz" 32;font-size:var(--t-sub);line-height:1.08;letter-spacing:-.02em;color:var(--paper);max-width:16ch;margin:0;}
+.obs p{font-size:var(--t-body);line-height:1.55;color:var(--paper70);max-width:44ch;margin:0;}
+.obs-cta{display:inline-flex;align-items:center;min-height:48px;margin-top:24px;padding:0 20px;background:var(--paper);color:var(--ground);font:var(--t-note)/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;transition:background .2s,color .2s;}
+.obs-cta:is(:hover,:focus-visible){background:var(--cyan);color:var(--ground);}
+@media(max-width:819px){.obs{grid-template-columns:1fr;gap:20px;}}
 #faq{padding-top:clamp(58px,9vh,120px);}
 /* no two margins equal (Muller-Brockmann's one explicit prohibition), and the
    interval tightens toward the close rather than holding a metronome (jo-ha-kyu) */
@@ -1363,7 +1371,7 @@ html{scroll-behavior:auto;}
       <div class="offer" id="design-partnership"><div class="oi">03</div><div class="ob"><h3 class="on">Fractional Design Lead</h3><div class="os"><span class="sub">Senior design ownership, without a full-time hire.</span>One or two days a week, with a weekly working session and hands-on build where it helps. Two days a week from &pound;12,000 per month. <a class="octa" href="https://start.cybercyber.ai/#enquire?brief=I%20would%20like%20to%20discuss%20a%20fractional%20design%20lead.">Discuss a fractional role &nearr;</a></div></div><div class="op">&pound;<span>6,000</span><small>from &middot; per month</small></div></div>
       <div class="offer" id="product-release"><div class="oi">04</div><div class="ob"><h3 class="on">Product Release</h3><div class="os"><span class="sub">Take a defined release through design and implementation.</span>For a first release or major redesign. I lead direction and design; the proposal names who builds, the scope, timeline and handover. <a class="octa" href="https://start.cybercyber.ai/#enquire?brief=I%20would%20like%20to%20discuss%20Product%20Release.">Discuss a release &nearr;</a></div></div><div class="op">&pound;<span>50,000</span><small>from &middot; scoped release</small></div></div>
     </div>
-    <p class="work-context">Building an AI product? I&rsquo;ll send three specific observations on how people review, approve or override what it does, mapped to the twelve patterns, free, within 48 hours. <a href="mailto:hello@cybercyber.ai?subject=Three%20observations">Ask for three observations &nearr;</a></p>
+    <aside class="obs" aria-labelledby="obs-title"><div class="obs-head"><span class="obs-tag">Free &middot; 48 hours</span><h3 id="obs-title">Three observations on your AI product</h3></div><div class="obs-body"><p>Send me your product. I&rsquo;ll reply with three specific observations on how people review, approve or override what it does, mapped to the twelve patterns.</p><a class="obs-cta" href="mailto:hello@cybercyber.ai?subject=Three%20observations">Ask for three observations &nearr;</a></div></aside>
   </div></section>
 
 
