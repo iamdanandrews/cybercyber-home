@@ -1105,6 +1105,8 @@ html{scroll-behavior:auto;}
 #journal .jrnl a::before{display:none;}
 #journal .jrnl a:is(:hover,:focus-visible){background:var(--portfolio-ground);}
 #journal .jrnl a:is(:hover,:focus-visible) .jt{color:var(--cyan);}
+/* Journal titles: a size that sets two balanced lines instead of one long line and a widow. */
+#journal .jrnl a .jt{font-size:clamp(24px,2.5vw,38px);line-height:1.12;max-width:20ch;text-wrap:balance;}
 #contact{min-height:85svh;}#contact .mk{grid-template-columns:1.35fr .65fr;}
 #contact .mkin{min-height:64px;max-width:100%;}#contact .mksend{min-height:44px;display:inline-flex;align-items:center;}
 @media(min-width:1600px){.hero .word{font-size:162px;}.hero .inner{padding-top:24svh;}}
