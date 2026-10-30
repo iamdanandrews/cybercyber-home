@@ -554,3 +554,18 @@ Both products now load from product-motion-20261023 via player.js. Chapter figur
 (frame-case-20261023) pair two full native captures per chapter: quick log + added
 detail, History + Game, session + Closed Guard. The 18 Oct Game capture's Dynamic
 Island is painted out to match the 20 Oct captures; nothing else is altered.
+
+## Homepage identity pass (30 October 2026)
+Dan asked for these on 30 Oct; they supersede the 3 Oct "loading gate is retired" note and the
+5 Oct one-line practice simplification.
+- The boot loader is back, once per visit (sessionStorage `cc-booted`). Its field is the mark's own
+  13x13 disc grid, drawn big and centred; the mark's dots light from the colon outward on a stepped
+  counter (~3s), hold, then the mark settles into the hero mark's exact rect before the loader
+  dissolves. Reduced motion and repeat visits skip it; repeat visits build the hero mark in instead.
+  Without JS the loader is hidden via `<noscript>`.
+- "Brand. Interface. Code." words re-seed and recolour the hero mark on hover (pointer devices only):
+  Brand mint `--mark-brand`, Interface `--cyan`, Code `--mark-code`.
+- The intro does not mention Spotify; it covers ten years across developer tools, financial data,
+  clinical care and consumer apps. The intro title resolves word by word, thin to bold.
+- Offers: CTAs sit on their own line, rows have more room and hairline dividers, copy kept short.
+  "Work together" uses the standard left lockup (no `.rev`).
