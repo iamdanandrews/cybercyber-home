@@ -1145,8 +1145,8 @@ html{scroll-behavior:auto;}
 .loader .lgrid{display:none;}
 .loader .lmark{position:fixed;z-index:1;overflow:visible;pointer-events:none;}
 .loader .lpct{align-self:flex-end;text-align:right;}
-.loader .lmark .f{fill:var(--paper);opacity:.14;transition:opacity .35s var(--e1);}
-.loader .lmark .m{fill:var(--paper45);opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(.4);transition:opacity .22s var(--e1),transform .4s var(--e-settle);}
+.loader .lmark .f{fill:var(--paper);opacity:.2;transition:opacity .35s var(--e1);}
+.loader .lmark .m{fill:var(--paper45);opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(.4);transition:opacity .35s var(--e1),transform .6s var(--e-settle);}
 .loader .lmark .m.on{opacity:1;transform:none;}
 .loader.done .lmark .f{opacity:0;}
 /* Each discipline re-seeds the mark in its own colour on hover. */
@@ -1514,7 +1514,7 @@ html{scroll-behavior:auto;}
     loader.appendChild(svg);return lit;
   }
   /* Progress with holds, so the count reads as work being done, not a timer. */
-  var STEPS=[[0,0],[200,31],[430,34],[720,72],[980,91],[1240,93],[1400,100]];
+  var STEPS=[[0,0],[450,28],[900,33],[1500,68],[1950,74],[2400,92],[2750,95],[3000,100]];
   function progress(e){for(var i=1;i<STEPS.length;i++){if(e<=STEPS[i][0]){var a=STEPS[i-1],b=STEPS[i],k=(e-a[0])/(b[0]-a[0]);k=1-Math.pow(1-k,3);return(a[1]+(b[1]-a[1])*k)/100;}}return 1;}
   function boot(){
     if(reduce||!loader||!lpct||seen()){if(!reduce&&hero)hero.classList.add("mark-in");setAll(REST);if(loader)loader.style.display="none";if(herobar)herobar.classList.add("in");booted=true;start();return;}
@@ -1525,6 +1525,9 @@ html{scroll-behavior:auto;}
       if(lit){var n=Math.round(p*lit.length);for(var i=0;i<n;i++)lit[i].classList.add("on");}
       setAll(120+p*80);
       if(p<1){requestAnimationFrame(loop);return;}
+      setTimeout(finish,450);
+    })(t0);
+    function finish(){
       loader.classList.add("done");
       start();
       setTimeout(function(){
@@ -1539,7 +1542,7 @@ html{scroll-behavior:auto;}
         if(herobar)herobar.classList.add("in");
         setTimeout(function(){loader.style.display="none";},900);
       },320);
-    })(t0);
+    }
   }
   /* mark.js loads after this script; wait for it so the loader can draw the mark. */
   if(window.ccMark)boot();else document.addEventListener("DOMContentLoaded",boot);
