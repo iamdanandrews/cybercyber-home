@@ -34,7 +34,7 @@ if(location.hostname==='www.cybercyber.ai'||location.hostname==='cybercyber.ai'|
  ['https://cdn.vercel-insights.com/v1/script.js','/_vercel/speed-insights/script.js'].forEach(function(src){var script=document.createElement('script');script.src=src;script.defer=true;document.head.appendChild(script);});
 }
 </script>
-<noscript><style>#mkin,label.mkhint{display:none!important;}
+<noscript><style>#mkin,label.mkhint,.loader{display:none!important;}
 
 </style></noscript></head>
 <body><noscript><style>#burger{display:none!important;}.fallback-nav{display:none;}@media(max-width:819px){.fallback-nav{display:block;position:fixed;right:20px;top:14px;z-index:101;background:var(--ground);color:var(--paper);font:12px/1.5 var(--mono);}.fallback-nav summary{min-height:44px;padding:8px;cursor:pointer;}.fallback-nav nav{padding:12px 20px;border:1px solid var(--paper);}.fallback-nav a{display:block;color:inherit;padding:10px 0;min-height:44px;}}</style><details class="fallback-nav"><summary>Navigation</summary><nav aria-label="Site navigation"><a href="./">Home</a><a href="./#work">Work</a><a href="manifesto.html">Manifesto</a><a href="journal.html">Journal</a><a href="./#contact">Contact</a></nav></details></noscript>
@@ -1135,6 +1135,13 @@ html{scroll-behavior:auto;}
 /* The practice is one line, readable without JavaScript or interaction. */
 .hero .hanchor .practice-line{font-family:var(--raveo);font-size:var(--t-register);font-weight:400;line-height:1.4;letter-spacing:-.02em;color:var(--paper70);}
 .hero .hanchor{pointer-events:none;}
+.loader .lgrid{display:none;}
+.loader .lmark{position:fixed;z-index:1;overflow:visible;pointer-events:none;}
+.loader .lpct{align-self:flex-end;text-align:right;}
+.loader .lmark .f{fill:var(--paper);opacity:.14;transition:opacity .35s var(--e1);}
+.loader .lmark .m{fill:var(--paper45);opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(.4);transition:opacity .22s var(--e1),transform .4s var(--e-settle);}
+.loader .lmark .m.on{opacity:1;transform:none;}
+.loader.done .lmark .f{opacity:0;}
 /* Each discipline re-seeds the mark in its own colour on hover. */
 .hero .hanchor .practice-line{pointer-events:auto;}
 .hero .hanchor .hmark circle.morph{transition:cx .55s var(--e-settle),cy .55s var(--e-settle),r .55s var(--e-settle),fill .24s var(--e1);}
@@ -1293,7 +1300,7 @@ html{scroll-behavior:auto;}
 
   <a class="foldbreak" href="#about"><div class="wrap"><span class="fa"><span class="tk"></span>Product design &amp; build · Independent studio</span><span class="fb">Explore &darr;</span></div></a>
 
-  <section id="about" class="reveal"><div class="wrap"><div class="intro-grid"><h2 class="intro-title"><span>Software with</span> <span>a point of view.</span></h2><div><p class="lead">I’m Dan Andrews. For ten years I’ve designed and built software across developer tools, financial data, clinical care and consumer apps, for start-ups, scale-ups and global platforms. Today much of that work is AI products, and the judgment layer inside them: the moment software hands a decision to a person to review, approve or override. In Kaido, the software proposes and the clinician decides.</p><div class="hero-actions"><a href="#contact">Discuss your project &nearr;</a></div></div></div></div></section>
+  <section id="about" class="reveal"><div class="wrap"><div class="intro-grid"><h2 class="intro-title"><span>Software with</span> <span>a point of view.</span></h2><div><p class="lead">I’m Dan Andrews. For ten years I’ve designed and built software across developer tools, financial data, clinical care and consumer apps, for start-ups, scale-ups and global platforms. Today much of that work is AI products, and the judgment layer inside them: the moment software hands a decision to a person to review, approve or override.</p><div class="hero-actions"><a href="#contact">Discuss your project &nearr;</a></div></div></div></div></section>
 
   <section id="work"><div class="wrap">
     <div class="shd"><div class="eyebrow" style="--c:var(--paper)"><span class="tick"></span>Products &amp; commissions<span class="ix">01 / INDEX</span></div>
@@ -1482,13 +1489,32 @@ html{scroll-behavior:auto;}
   })();
   /* Boot: the loader counts while the wordmark holds thin, dissolves,
      then the wordmark resolves left to right and the colon ignites. */
+  function seen(){try{if(sessionStorage.getItem("cc-booted"))return true;sessionStorage.setItem("cc-booted","1");}catch(e){}return false;}
+  /* The loader's field is the mark's own grid: a 13x13 disc of faint dots laid
+     exactly over the hero mark. As the count runs, the mark's dots light up from
+     the colon outward; when the loader dissolves, the real mark is underneath. */
+  function buildField(){
+    var target=document.querySelector(".hero .hmark");if(!target||!window.ccMark)return null;
+    var r=target.getBoundingClientRect();if(!r.width)return null;
+    var NS="http://www.w3.org/2000/svg",svg=document.createElementNS(NS,"svg"),U=100/13.5;
+    svg.setAttribute("class","lmark");svg.setAttribute("viewBox","0 0 100 100");svg.setAttribute("aria-hidden","true");
+    svg.style.left=r.left+"px";svg.style.top=r.top+"px";svg.style.width=r.width+"px";svg.style.height=r.height+"px";
+    for(var y=0;y<13;y++)for(var x=0;x<13;x++){var dx=x-6,dy=y-6;if(dx*dx+dy*dy>38)continue;var c=document.createElementNS(NS,"circle");c.setAttribute("class","f");c.setAttribute("cx",((x+.75)*U).toFixed(2));c.setAttribute("cy",((y+.75)*U).toFixed(2));c.setAttribute("r","0.9");svg.appendChild(c);}
+    var pts=ccMark("cyber:cyber",6).pts.slice().sort(function(a,b){return Math.hypot(a.cx-50,a.cy-50)-Math.hypot(b.cx-50,b.cy-50);});
+    var lit=pts.map(function(p){var c=document.createElementNS(NS,"circle");c.setAttribute("class","m");c.setAttribute("cx",p.cx);c.setAttribute("cy",p.cy);c.setAttribute("r",p.r);svg.appendChild(c);return c;});
+    loader.appendChild(svg);return lit;
+  }
+  /* Progress with holds, so the count reads as work being done, not a timer. */
+  var STEPS=[[0,0],[200,31],[430,34],[720,72],[980,91],[1240,93],[1400,100]];
+  function progress(e){for(var i=1;i<STEPS.length;i++){if(e<=STEPS[i][0]){var a=STEPS[i-1],b=STEPS[i],k=(e-a[0])/(b[0]-a[0]);k=1-Math.pow(1-k,3);return(a[1]+(b[1]-a[1])*k)/100;}}return 1;}
   function boot(){
-    if(reduce||!loader||!lpct){setAll(REST);if(loader)loader.style.display="none";if(herobar)herobar.classList.add("in");booted=true;start();return;}
-    var t0=performance.now(),dur=1150;
-    (function loop(t){var e=t-t0,p=Math.min(e/dur,1),ease=1-Math.pow(1-p,3);
+    if(reduce||!loader||!lpct||seen()){setAll(REST);if(loader)loader.style.display="none";if(herobar)herobar.classList.add("in");booted=true;start();return;}
+    var t0=performance.now(),lit=buildField();
+    (function loop(t){var e=t-t0,p=progress(e);
       lpct.textContent=Math.round(p*100);
-      if(lstat){if(p>.35)lstat.textContent="CALIBRATING";if(p>.82)lstat.textContent="READY";}
-      setAll(120+ease*80);
+      if(lstat){if(p>.3)lstat.textContent="CALIBRATING";if(p>.9)lstat.textContent="READY";}
+      if(lit){var n=Math.round(p*lit.length);for(var i=0;i<n;i++)lit[i].classList.add("on");}
+      setAll(120+p*80);
       if(p<1){requestAnimationFrame(loop);return;}
       loader.classList.add("done");
       start();
@@ -1506,7 +1532,8 @@ html{scroll-behavior:auto;}
       },320);
     })(t0);
   }
-  boot();
+  /* mark.js loads after this script; wait for it so the loader can draw the mark. */
+  if(window.ccMark)boot();else document.addEventListener("DOMContentLoaded",boot);
 })();
 </script>
 
