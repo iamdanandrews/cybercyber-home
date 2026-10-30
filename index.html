@@ -34,7 +34,7 @@ if(location.hostname==='www.cybercyber.ai'||location.hostname==='cybercyber.ai'|
  ['https://cdn.vercel-insights.com/v1/script.js','/_vercel/speed-insights/script.js'].forEach(function(src){var script=document.createElement('script');script.src=src;script.defer=true;document.head.appendChild(script);});
 }
 </script>
-<noscript><style>#mkin,label.mkhint,.loader{display:none!important;}
+<noscript><style>#mkform,.loader{display:none!important;}
 
 
 </style></noscript></head>
@@ -1297,6 +1297,19 @@ html{scroll-behavior:auto;}
 #work .wkhead{align-items:start;}
 .wkrow:hover .wkopen,.wkrow:focus-visible .wkopen{text-decoration:none;}
 #work .wkrow,#work .wkrow+.wkrow{border-top:0;border-bottom:0;}
+/* Contact: brief, name and email on one page; it sends from here. */
+#contact .mkrow{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px);margin-top:clamp(28px,3vw,40px);}
+#contact .mkfield{display:block;}
+#contact .mkfield .mkhint{display:block;margin:0 0 6px;}
+#contact input.mkin{font-size:var(--t-body);font-weight:400;padding:10px 0;min-height:48px;border-radius:0;}
+#contact .mkin[aria-invalid=true]{border-bottom-color:var(--accent-ink);border-bottom-width:3px;}
+#contact .mkhp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;}
+#contact button.mksend{background:var(--accent-ink);color:var(--accent);border:0;padding:0 22px;min-height:52px;margin-top:32px;cursor:pointer;transition:background .2s,color .2s;}
+#contact button.mksend:is(:hover,:focus-visible){background:var(--ground);color:var(--paper);}
+#contact button.mksend[disabled]{opacity:.6;cursor:progress;}
+#contact .mkstatus{margin:16px 0 0;min-height:1.5em;font-size:var(--t-body);color:var(--accent-ink);}
+#contact .mkdone{font-family:var(--raveo);font-variation-settings:"wght" 560,"opsz" 32;font-size:var(--t-mid);line-height:1.2;color:var(--accent-ink);max-width:24ch;}
+@media(max-width:600px){#contact .mkrow{grid-template-columns:1fr;}}
 /* Contact email reads as a link at rest and inverts on hover. */
 #contact-next a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;padding:1px 3px;margin:0 -3px;transition:background .2s,color .2s;}
 #contact-next a:is(:hover,:focus-visible){background:var(--ground);color:var(--paper);text-decoration-color:transparent;}
@@ -1412,7 +1425,7 @@ html{scroll-behavior:auto;}
   <section id="contact" class="reveal cta"><div class="wrap">
     <div class="eyebrow"><span class="tick"></span>Contact</div>
     <h2 class="big">Let’s talk.</h2>
-    <div class="mk"><div><label class="mkhint" for="mkin" style="display:block;margin:0 0 14px">What are you building or improving?</label><textarea class="mkin" id="mkin" maxlength="500" rows="3" autocomplete="off" placeholder="A few lines about the product and what needs to change…" aria-describedby="contact-next"></textarea><div class="mkhint" id="mkhint">Seal &middot; <span id="mkref">7IPIGQ</span></div><a class="mksend" id="mksend" href="https://start.cybercyber.ai/#enquire">Continue to contact details &nearr;</a><p class="lead" id="contact-next">Your brief carries through to the next step. Add your name and email, then I’ll reply personally. Prefer email? <a href="mailto:hello@cybercyber.ai">hello@cybercyber.ai</a>.</p></div><div class="mkfig"><svg class="mkseal" id="mksvg" viewBox="0 0 120 120" role="img" aria-labelledby="mksealt"><title id="mksealt">A seal generated from your sentence</title><rect class="mkframe" x="6" y="6" width="108" height="108"/><g class="mkart" transform="translate(22 22) scale(0.76)"><path id="mkpath" d="M24.76 50a3.02 3.02 0 1 0 6.04 0a3.02 3.02 0 1 0 -6.04 0M69.20 50a3.02 3.02 0 1 0 6.04 0a3.02 3.02 0 1 0 -6.04 0M32.20 35.19a2.99 2.99 0 1 0 5.98 0a2.99 2.99 0 1 0 -5.98 0M61.82 64.81a2.99 2.99 0 1 0 5.98 0a2.99 2.99 0 1 0 -5.98 0M54.47 27.78a2.94 2.94 0 1 0 5.88 0a2.94 2.94 0 1 0 -5.88 0M39.65 72.22a2.94 2.94 0 1 0 5.88 0a2.94 2.94 0 1 0 -5.88 0M54.59 20.37a2.82 2.82 0 1 0 5.64 0a2.82 2.82 0 1 0 -5.64 0M39.77 79.63a2.82 2.82 0 1 0 5.64 0a2.82 2.82 0 1 0 -5.64 0M54.63 42.59a2.78 2.78 0 1 0 5.56 0a2.78 2.78 0 1 0 -5.56 0M39.81 57.41a2.78 2.78 0 1 0 5.56 0a2.78 2.78 0 1 0 -5.56 0M62.09 35.19a2.72 2.72 0 1 0 5.44 0a2.72 2.72 0 1 0 -5.44 0M32.47 64.81a2.72 2.72 0 1 0 5.44 0a2.72 2.72 0 1 0 -5.44 0M39.90 35.19a2.69 2.69 0 1 0 5.38 0a2.69 2.69 0 1 0 -5.38 0M54.72 64.81a2.69 2.69 0 1 0 5.38 0a2.69 2.69 0 1 0 -5.38 0M17.69 50a2.68 2.68 0 1 0 5.36 0a2.68 2.68 0 1 0 -5.36 0M76.95 50a2.68 2.68 0 1 0 5.36 0a2.68 2.68 0 1 0 -5.36 0M69.58 35.19a2.64 2.64 0 1 0 5.28 0a2.64 2.64 0 1 0 -5.28 0M25.14 64.81a2.64 2.64 0 1 0 5.28 0a2.64 2.64 0 1 0 -5.28 0M10.49 50a2.47 2.47 0 1 0 4.94 0a2.47 2.47 0 1 0 -4.94 0M84.57 50a2.47 2.47 0 1 0 4.94 0a2.47 2.47 0 1 0 -4.94 0M18.03 20.37a2.34 2.34 0 1 0 4.68 0a2.34 2.34 0 1 0 -4.68 0M77.29 79.63a2.34 2.34 0 1 0 4.68 0a2.34 2.34 0 1 0 -4.68 0M25.45 42.59a2.33 2.33 0 1 0 4.66 0a2.33 2.33 0 1 0 -4.66 0M69.89 57.41a2.33 2.33 0 1 0 4.66 0a2.33 2.33 0 1 0 -4.66 0M84.74 42.59a2.3 2.3 0 1 0 4.60 0a2.3 2.3 0 1 0 -4.60 0M10.66 57.41a2.3 2.3 0 1 0 4.60 0a2.3 2.3 0 1 0 -4.60 0M18.08 42.59a2.29 2.29 0 1 0 4.58 0a2.29 2.29 0 1 0 -4.58 0M77.34 57.41a2.29 2.29 0 1 0 4.58 0a2.29 2.29 0 1 0 -4.58 0M18.12 27.78a2.25 2.25 0 1 0 4.50 0a2.25 2.25 0 1 0 -4.50 0M77.38 72.22a2.25 2.25 0 1 0 4.50 0a2.25 2.25 0 1 0 -4.50 0M40.34 50a2.25 2.25 0 1 0 4.50 0a2.25 2.25 0 1 0 -4.50 0M55.16 50a2.25 2.25 0 1 0 4.50 0a2.25 2.25 0 1 0 -4.50 0M69.97 42.59a2.25 2.25 0 1 0 4.50 0a2.25 2.25 0 1 0 -4.50 0M25.53 57.41a2.25 2.25 0 1 0 4.50 0a2.25 2.25 0 1 0 -4.50 0M62.79 27.78a2.02 2.02 0 1 0 4.04 0a2.02 2.02 0 1 0 -4.04 0M33.17 72.22a2.02 2.02 0 1 0 4.04 0a2.02 2.02 0 1 0 -4.04 0M47.04 42.59a2.96 2.96 0 1 0 5.92 0a2.96 2.96 0 1 0 -5.92 0M47.04 57.41a2.96 2.96 0 1 0 5.92 0a2.96 2.96 0 1 0 -5.92 0"/></g><text class="mkwm" x="60" y="16.4" text-anchor="middle">CYBER:CYBER</text><text class="mksr" id="mksr" x="60" y="107.9" text-anchor="middle">7IPIGQ</text><circle class="mkdot" cx="14" cy="56.4" r="1.4"/><circle class="mkdot" cx="14" cy="63.6" r="1.4"/><circle class="mkdot" cx="106" cy="56.4" r="1.4"/><circle class="mkdot" cx="106" cy="63.6" r="1.4"/></svg></div></div>
+    <div class="mk"><div><form id="mkform" novalidate><label class="mkhint" for="mkin" style="display:block;margin:0 0 14px">What are you building or improving?</label><textarea class="mkin" id="mkin" name="brief" maxlength="2000" rows="3" autocomplete="off" placeholder="A few lines about the product and what needs to change…" aria-describedby="contact-next"></textarea><div class="mkhint" id="mkhint">Seal &middot; <span id="mkref">7IPIGQ</span></div><div class="mkrow"><label class="mkfield"><span class="mkhint">Name</span><input class="mkin" id="mkname" name="name" type="text" autocomplete="name" maxlength="120" required></label><label class="mkfield"><span class="mkhint">Email</span><input class="mkin" id="mkemail" name="email" type="email" autocomplete="email" maxlength="254" required></label></div><input class="mkhp" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="mksend" id="mksend" type="submit">Send &nearr;</button><p class="mkstatus" id="mkstatus" role="status" aria-live="polite"></p></form><p class="lead" id="contact-next">I’ll reply personally, usually within a day. Prefer email? <a href="mailto:hello@cybercyber.ai">hello@cybercyber.ai</a>.</p></div><div class="mkfig"><svg class="mkseal" id="mksvg" viewBox="0 0 120 120" role="img" aria-labelledby="mksealt"><title id="mksealt">A seal generated from your sentence</title><rect class="mkframe" x="6" y="6" width="108" height="108"/><g class="mkart" transform="translate(22 22) scale(0.76)"><path id="mkpath" d="M24.76 50a3.02 3.02 0 1 0 6.04 0a3.02 3.02 0 1 0 -6.04 0M69.20 50a3.02 3.02 0 1 0 6.04 0a3.02 3.02 0 1 0 -6.04 0M32.20 35.19a2.99 2.99 0 1 0 5.98 0a2.99 2.99 0 1 0 -5.98 0M61.82 64.81a2.99 2.99 0 1 0 5.98 0a2.99 2.99 0 1 0 -5.98 0M54.47 27.78a2.94 2.94 0 1 0 5.88 0a2.94 2.94 0 1 0 -5.88 0M39.65 72.22a2.94 2.94 0 1 0 5.88 0a2.94 2.94 0 1 0 -5.88 0M54.59 20.37a2.82 2.82 0 1 0 5.64 0a2.82 2.82 0 1 0 -5.64 0M39.77 79.63a2.82 2.82 0 1 0 5.64 0a2.82 2.82 0 1 0 -5.64 0M54.63 42.59a2.78 2.78 0 1 0 5.56 0a2.78 2.78 0 1 0 -5.56 0M39.81 57.41a2.78 2.78 0 1 0 5.56 0a2.78 2.78 0 1 0 -5.56 0M62.09 35.19a2.72 2.72 0 1 0 5.44 0a2.72 2.72 0 1 0 -5.44 0M32.47 64.81a2.72 2.72 0 1 0 5.44 0a2.72 2.72 0 1 0 -5.44 0M39.90 35.19a2.69 2.69 0 1 0 5.38 0a2.69 2.69 0 1 0 -5.38 0M54.72 64.81a2.69 2.69 0 1 0 5.38 0a2.69 2.69 0 1 0 -5.38 0M17.69 50a2.68 2.68 0 1 0 5.36 0a2.68 2.68 0 1 0 -5.36 0M76.95 50a2.68 2.68 0 1 0 5.36 0a2.68 2.68 0 1 0 -5.36 0M69.58 35.19a2.64 2.64 0 1 0 5.28 0a2.64 2.64 0 1 0 -5.28 0M25.14 64.81a2.64 2.64 0 1 0 5.28 0a2.64 2.64 0 1 0 -5.28 0M10.49 50a2.47 2.47 0 1 0 4.94 0a2.47 2.47 0 1 0 -4.94 0M84.57 50a2.47 2.47 0 1 0 4.94 0a2.47 2.47 0 1 0 -4.94 0M18.03 20.37a2.34 2.34 0 1 0 4.68 0a2.34 2.34 0 1 0 -4.68 0M77.29 79.63a2.34 2.34 0 1 0 4.68 0a2.34 2.34 0 1 0 -4.68 0M25.45 42.59a2.33 2.33 0 1 0 4.66 0a2.33 2.33 0 1 0 -4.66 0M69.89 57.41a2.33 2.33 0 1 0 4.66 0a2.33 2.33 0 1 0 -4.66 0M84.74 42.59a2.3 2.3 0 1 0 4.60 0a2.3 2.3 0 1 0 -4.60 0M10.66 57.41a2.3 2.3 0 1 0 4.60 0a2.3 2.3 0 1 0 -4.60 0M18.08 42.59a2.29 2.29 0 1 0 4.58 0a2.29 2.29 0 1 0 -4.58 0M77.34 57.41a2.29 2.29 0 1 0 4.58 0a2.29 2.29 0 1 0 -4.58 0M18.12 27.78a2.25 2.25 0 1 0 4.50 0a2.25 2.25 0 1 0 -4.50 0M77.38 72.22a2.25 2.25 0 1 0 4.50 0a2.25 2.25 0 1 0 -4.50 0M40.34 50a2.25 2.25 0 1 0 4.50 0a2.25 2.25 0 1 0 -4.50 0M55.16 50a2.25 2.25 0 1 0 4.50 0a2.25 2.25 0 1 0 -4.50 0M69.97 42.59a2.25 2.25 0 1 0 4.50 0a2.25 2.25 0 1 0 -4.50 0M25.53 57.41a2.25 2.25 0 1 0 4.50 0a2.25 2.25 0 1 0 -4.50 0M62.79 27.78a2.02 2.02 0 1 0 4.04 0a2.02 2.02 0 1 0 -4.04 0M33.17 72.22a2.02 2.02 0 1 0 4.04 0a2.02 2.02 0 1 0 -4.04 0M47.04 42.59a2.96 2.96 0 1 0 5.92 0a2.96 2.96 0 1 0 -5.92 0M47.04 57.41a2.96 2.96 0 1 0 5.92 0a2.96 2.96 0 1 0 -5.92 0"/></g><text class="mkwm" x="60" y="16.4" text-anchor="middle">CYBER:CYBER</text><text class="mksr" id="mksr" x="60" y="107.9" text-anchor="middle">7IPIGQ</text><circle class="mkdot" cx="14" cy="56.4" r="1.4"/><circle class="mkdot" cx="14" cy="63.6" r="1.4"/><circle class="mkdot" cx="106" cy="56.4" r="1.4"/><circle class="mkdot" cx="106" cy="63.6" r="1.4"/></svg></div></div>
   </div></section>
 </main><footer><div class="wrap foot" style="align-items:center"><span>&copy; 2026 CYBERCYBER LTD &middot; Registered in England &amp; Wales, no. 12037371 &middot; London &middot; <a href="https://start.cybercyber.ai/privacy">Privacy</a></span><svg class="footseal" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="arcF" d="M22,60 A38,38 0 0,1 98,60"/></defs><circle cx="60" cy="60" r="53" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/><text text-anchor="middle"><textPath href="#arcF" startOffset="50%">CYBER:CYBER</textPath></text><circle cx="60" cy="53" r="5" fill="currentColor"/><circle cx="60" cy="67" r="5" fill="currentColor"/><text class="stb" x="60" y="102" text-anchor="middle">MMXXVI</text></svg><a href="#top" id="recal">Back to top &uarr;</a></div></footer>
 
@@ -1598,6 +1611,46 @@ html{scroll-behavior:auto;}
 <script>history.scrollRestoration="auto";addEventListener("load",function(){var h=location.hash,t=h.length>1?document.getElementById(h.slice(1)):null;if(!t)return;function align(){requestAnimationFrame(function(){if(location.hash===h)t.scrollIntoView({block:"start"});});}if(document.fonts)document.fonts.ready.then(align);else align();});</script>
 <script src="mark.js"></script>
 <script>
+/* Contact sends from this page. If the endpoint can't send, the visitor's email app opens
+   with everything they wrote, so nothing is lost. */
+(function(){
+ var form=document.getElementById('mkform');if(!form)return;
+ var started=Date.now(),status=document.getElementById('mkstatus'),btn=document.getElementById('mksend');
+ var f={brief:document.getElementById('mkin'),name:document.getElementById('mkname'),email:document.getElementById('mkemail')};
+ function bad(el,msg){el.setAttribute('aria-invalid','true');status.textContent=msg;el.focus();return false;}
+ function check(){
+  Object.keys(f).forEach(function(k){f[k].removeAttribute('aria-invalid');});
+  if(f.brief.value.trim().length<10)return bad(f.brief,'Add a line or two about what you’re building.');
+  if(!f.name.value.trim())return bad(f.name,'Add your name.');
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email.value.trim()))return bad(f.email,'Add an email I can reply to.');
+  return true;
+ }
+ function mailto(d){
+  var body=d.brief+'\n\n'+d.name+'\n'+d.email+(d.ref?'\nRef '+d.ref:'');
+  location.href='mailto:hello@cybercyber.ai?subject='+encodeURIComponent('Project enquiry — '+d.name)+'&body='+encodeURIComponent(body);
+ }
+ form.addEventListener('submit',function(e){
+  e.preventDefault();
+  if(!check())return;
+  var ref=(document.getElementById('mkref')||{}).textContent||'';
+  var d={brief:f.brief.value.trim(),name:f.name.value.trim(),email:f.email.value.trim(),website:form.website.value,startedAt:started,ref:ref};
+  btn.disabled=true;status.textContent='Sending…';
+  fetch('/api/enquire',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
+   .then(function(r){return r.json().catch(function(){return {};}).then(function(j){return {ok:r.ok,j:j};});})
+   .then(function(res){
+    if(res.ok){
+     try{sessionStorage.removeItem('cybercyber-brief');}catch(_){}
+     form.innerHTML='<p class="mkdone">Thanks, '+d.name.replace(/[<>&]/g,'')+'. Your brief is with me and I’ll reply to '+d.email.replace(/[<>&]/g,'')+' personally.</p><p class="mkstatus">Reference '+ref+'</p>';
+     return;
+    }
+    if(res.j&&res.j.field&&f[res.j.field]){btn.disabled=false;bad(f[res.j.field],res.j.error||'Please check this field.');return;}
+    throw new Error('send');
+   })
+   .catch(function(){btn.disabled=false;status.textContent='Couldn’t send from here, so I’ve opened your email app with your message ready.';mailto(d);});
+ });
+})();
+</script>
+<script>
 /* Hovering Brand, Interface or Code morphs the mark to that word's seed and colour. */
 (function(){
  var root=document.querySelector('.hanchor'),svg=root&&root.querySelector('.hmark');
@@ -1644,8 +1697,7 @@ html{scroll-behavior:auto;}
   function update(){
     var v=inp.value.trim();
     draw(v);
-    send.href='https://start.cybercyber.ai/#enquire'+
-              (v?'?brief='+encodeURIComponent(v):'');
+
   }
   function takeOver(){
     if(touched) return;
