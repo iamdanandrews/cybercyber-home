@@ -905,7 +905,7 @@ body.cursor-on{cursor:auto;}body.cursor-on a,body.cursor-on button,body.cursor-o
 @keyframes intro-support{from{opacity:.85;transform:translateY(6px);}to{opacity:1;transform:none;}}
 @media(prefers-reduced-motion:reduce){#about.intro-entering .intro-title>span,#about.intro-entering .intro-grid>div{animation:none;}}
 
-:root{--mark-code:#B18CF2;}
+:root{--mark-code:#B18CF2;--mark-brand:#B6F23D;}
 .hero .hanchor:hover .hmark circle{fill:currentColor;}
 
 
@@ -1140,7 +1140,7 @@ html{scroll-behavior:auto;}
 .hero .hanchor .hmark circle.morph{transition:cx .55s var(--e-settle),cy .55s var(--e-settle),r .55s var(--e-settle),fill .24s var(--e1);}
 @media(prefers-reduced-motion:reduce){.hero .hanchor .hmark circle.morph{transition:fill .24s var(--e1);}}
 .hero .hanchor .pw{cursor:default;transition:color .24s var(--e1);}
-.hero .hanchor .pw[data-seed=brand]:is(:hover,.on){color:var(--accent);}
+.hero .hanchor .pw[data-seed=brand]:is(:hover,.on){color:var(--mark-brand);}
 .hero .hanchor .pw[data-seed=interface]:is(:hover,.on){color:var(--cyan);}
 .hero .hanchor .pw[data-seed=code]:is(:hover,.on){color:var(--mark-code);}
 /* Keep the introduction inside narrow phone viewports. */
@@ -1491,7 +1491,7 @@ html{scroll-behavior:auto;}
 (function(){
  var root=document.querySelector('.hanchor'),svg=root&&root.querySelector('.hmark');
  if(!svg||!window.ccMark||!matchMedia('(hover:hover) and (pointer:fine)').matches)return;
- var colour={brand:'var(--accent)',interface:'var(--cyan)',code:'var(--mark-code)'};
+ var colour={brand:'var(--mark-brand)',interface:'var(--cyan)',code:'var(--mark-code)'};
  var base=ccMark('cyber:cyber',6),current=base.pts,words=Array.from(root.querySelectorAll('.pw'));
  var dots=Array.from(svg.querySelectorAll('circle'));
  if(dots.length!==base.pts.length)return;
