@@ -10,6 +10,7 @@ Owned products: Kaido, a clinical workspace in a private pilot (the software pro
 
 ## Work with Dan
 
+- [AI approval flow in five days](https://www.cybercyber.ai/approval-flow.html): £5,000 fixed. One screen where users review, approve or override what the AI did, designed and built in the client's codebase in five days, handed over as a pull request. Written updates, no meetings needed.
 - [Free: three observations](https://www.cybercyber.ai/#offerings): send an AI product and get three specific observations on how people review, approve or override what it does, mapped to the twelve patterns, within 48 hours.
 - [Judgment Review](https://www.cybercyber.ai/#judgment-review): £2,500 fixed, three days on one critical flow, scored against the twelve patterns, with annotated screens and a prioritised list of fixes.
 - [Judgment Sprint](https://www.cybercyber.ai/#product-direction): £5,000 per week, one or two weeks designing and building the review layer, ending in a coded prototype tested with real users.
