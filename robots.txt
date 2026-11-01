@@ -3,5 +3,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /cv/
 
 Sitemap: https://www.cybercyber.ai/sitemap.xml
