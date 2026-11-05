@@ -1,0 +1,8 @@
+{
+  "captured": "2026-11-05",
+  "file": "bittensor-tool-20261105.webp",
+  "source": "The delivered tool, index.html from the Shipibo repo at commit ff11ea2, running locally",
+  "method": "Browser screenshot at 1600x769, device scale factor 2, resized to 2400px wide. No pixel edits or UI recreation.",
+  "input": "SN-01, Circuit, default settings",
+  "note": "The control rail is scrolled so its heading, which carries the retired engagement name, sits out of frame. The uncommitted working copy of index.html was not used because it renders a blank canvas."
+}

@@ -569,3 +569,6 @@ Dan asked for these on 30 Oct; they supersede the 3 Oct "loading gate is retired
   clinical care and consumer apps. The intro title resolves word by word, thin to bold.
 - Offers: CTAs sit on their own line, rows have more room and hairline dividers, copy kept short.
   "Work together" uses the standard left lockup (no `.rev`).
+
+## Bittensor motion and live controls (5 November 2026)
+The Bittensor case adds a self-drawing mark to chapter 1. Its SVG, `media/motion/bittensor-mark-draws-20261105.svg`, comes unchanged from the commission's motion board apart from its label. The file's finished drawing is the base state: the page animates it only after loading it inline, once when seen and on Replay, and reduced motion or a failed load keeps the static image. The live engine exposes density, line weight, void, asymmetry, ground and symmetry; each was measured to change the output in both registers, so don't add a setting without repeating that check. Default settings must keep returning the original SN-01 mark.
