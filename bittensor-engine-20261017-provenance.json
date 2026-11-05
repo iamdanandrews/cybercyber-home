@@ -10,5 +10,9 @@
   "method": "Playwright browser element screenshot, 1440px desktop viewport, device scale factor 2; no pixel edits or UI recreation",
   "input": "SN-01",
   "register": "Flat line",
-  "purpose": "Replace a historical tool screenshot containing the retired public name. Caption explicitly identifies the portfolio demonstration."
+  "purpose": "Replace a historical tool screenshot containing the retired public name. Caption explicitly identifies the portfolio demonstration.",
+  "delivery": {
+    "file": "bittensor-engine-20261017.webp",
+    "method": "Lossless WebP of the PNG (cwebp -lossless -z 9), added 2026-11-05. Decoded pixels are identical to the PNG; the PNG stays as the archived original."
+  }
 }
