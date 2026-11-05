@@ -1,7 +1,0 @@
-{
-  "added": "2026-11-05",
-  "file": "bittensor-mark-draws-20261105.svg",
-  "source": "Shipibo repo, motion/build/index.html, piece captioned 'the mark draws itself' (commit ff11ea2 checkout)",
-  "edits": "Artwork paths, timings and colours unchanged. aria-label reworded to remove the seed name. The source's one-time breath and stage glow were not carried over, to stay within the site's motion grammar.",
-  "seed": "YUMA (not shown publicly)"
-}

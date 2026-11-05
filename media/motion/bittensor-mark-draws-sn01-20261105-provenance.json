@@ -1,0 +1,7 @@
+{
+  "added": "2026-11-05",
+  "file": "bittensor-mark-draws-sn01-20261105.svg",
+  "source": "Shipibo repo at commit ff11ea2, motion/gen.mjs, piece MO-05 'the mark draws itself'",
+  "method": "Regenerated in a scratch copy with WEAVE_SEED changed to SN-01. A control run with the original seed reproduced the board's artwork byte for byte, so the seed is the only change.",
+  "edits": "aria-label reworded. The source's one-time breath and stage glow were not carried over, to stay within the site's motion grammar."
+}
